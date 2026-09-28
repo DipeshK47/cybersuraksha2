@@ -1,0 +1,77 @@
+{
+  "duration": 115.58,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "A happy mix",
+      "mood": "happy",
+      "caption": "Kabir's evening routine: homework, then twenty minutes of videos. His feed is usually a happy mix. Science experiments from his favourite channel, How It Works. Cricket highlights. A cooking video his dad sent him. Some music. He likes that it always seems to know what he enjoys, and he never really wonders how.",
+      "dialogue": "Twenty minutes, then bed. Promise!",
+      "status": "Winding down",
+      "start": 0.0,
+      "duration": 18.176
+    },
+    {
+      "id": "hole",
+      "label": "The rabbit hole",
+      "title": "Scarier and angrier",
+      "mood": "sad",
+      "caption": "But after the fake fair clip, his feed changes. He replayed that clip again and again while checking it for clues. Now there are more fair cancelled videos, then scarier ones: shocking truth, you won't believe this. Angry faces, red arrows. His science videos have vanished. Kabir keeps scrolling, and he feels more and more anxious.",
+      "dialogue": "Why is my whole feed about this now?",
+      "status": "Stuck in the scroll",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.826,
+      "duration": 18.219
+    },
+    {
+      "id": "signals",
+      "label": "How feeds learn",
+      "title": "Every tap is a signal.",
+      "mood": "thinking",
+      "caption": "Kabir looks up how feeds work. The app records every signal: clicks, replays, pauses, how long you watch. A recommendation algorithm uses those signals to predict what will keep you watching. This is called engagement. Shocking, angry videos grab attention, so they get pushed further. Less and less variety gets through. That's a filter bubble.",
+      "dialogue": "My fact-checking replays taught it I loved rumours!",
+      "status": "Figuring out the feed",
+      "start": 37.695,
+      "duration": 19.52
+    },
+    {
+      "id": "steer",
+      "label": "Steer the feed",
+      "title": "Send better signals.",
+      "mood": "thinking",
+      "caption": "Your turn. Help Kabir steer his feed back to variety. Use Not interested on the rumour videos, search for topics he actually enjoys, and follow a reliable news source. Watch the topic variety meter. Careful: tapping one more shocking video, even just to check it, teaches the algorithm to send even more.",
+      "dialogue": "Every tap is a signal. Let's send better ones.",
+      "status": "Steering his feed",
+      "start": 57.865,
+      "duration": 18.56
+    },
+    {
+      "id": "control",
+      "label": "Back in control",
+      "title": "Attention isn't truth.",
+      "mood": "happy",
+      "caption": "The meter climbs back up. Science, cricket, music, and real news from the fair's official page. The algorithm isn't evil, and it can't read minds. It just follows your signals and rewards attention, not truth. So Kabir steers on purpose: he turns off autoplay, and when a feed makes him anxious, he takes a break and talks to someone.",
+      "dialogue": "It rewards attention, not truth. I steer it.",
+      "status": "Back in control",
+      "start": 77.075,
+      "duration": 18.816
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "His feed, his choices",
+      "mood": "happy",
+      "caption": "A week later, Kabir's feed feels like his again. He even films a short video about his water tester for his favourite channel's viewer challenge. At dinner, he shows his parents how to reset a feed, and his dad laughs: so that's why I only see cricket! Your turn: help Kabir spot how feeds shift, one click at a time.",
+      "dialogue": "My feed, my choices, one signal at a time.",
+      "status": "Feed feels like his",
+      "tone": "resolved",
+      "start": 96.541,
+      "duration": 18.389
+    }
+  ]
+}
