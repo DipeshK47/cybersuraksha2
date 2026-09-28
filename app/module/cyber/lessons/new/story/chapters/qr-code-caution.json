@@ -1,0 +1,83 @@
+{
+  "duration": 105.916,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Twelve storybooks for sale",
+      "mood": "happy",
+      "caption": "Meet Tara. She and Mum are selling her old storybooks online, twelve books for ₹500. The money will go toward a telescope! Within minutes a buyer messages: I'll take them all, and I'll pay right now by QR code. Tara can't believe her luck.",
+      "speech": "Meet Tara. She and Mum are selling her old storybooks online, twelve books for five hundred rupees. The money will go toward a telescope! Within minutes a buyer messages: I'll take them all, and I'll pay right now by Q R code. Tara can't believe her luck.",
+      "dialogue": "A telescope, here I come!",
+      "status": "Selling old books",
+      "start": 0.0,
+      "duration": 16.064
+    },
+    {
+      "id": "scan",
+      "label": "Scan to receive?",
+      "title": "“Receive”? The screen says Pay.",
+      "mood": "sad",
+      "caption": "The buyer sends a QR code: scan this to receive ₹500. Tara scans it on Mum's phone. But the screen says Pay ₹500, and it asks for the UPI PIN. The buyer keeps typing: hurry, it's only verification! Tara's finger stops just above the keypad.",
+      "speech": "The buyer sends a Q R code: scan this to receive five hundred rupees. Tara scans it on Mum's phone. But the screen says Pay five hundred rupees, and it asks for the U P I pin. The buyer keeps typing: hurry, it's only verification! Tara's finger stops just above the keypad.",
+      "dialogue": "Receive? But the screen says Pay!",
+      "status": "Something's off",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 16.714,
+      "duration": 18.261
+    },
+    {
+      "id": "how",
+      "label": "How UPI works",
+      "title": "A PIN is only for paying.",
+      "mood": "thinking",
+      "caption": "Tara shows Mum. Mum explains how UPI, the Unified Payments Interface, works. A UPI PIN is only ever used to pay or send money. You never need a PIN, or a scan, to receive money. To get paid, you share your own QR code, and the buyer scans it.",
+      "speech": "Tara shows Mum. Mum explains how U P I, the Unified Payments Interface, works. A U P I pin is only ever used to pay or send money. You never need a pin, or a scan, to receive money. To get paid, you share your own Q R code, and the buyer scans it.",
+      "dialogue": "So a PIN always means money leaves?",
+      "status": "Learning how UPI works",
+      "start": 35.625,
+      "duration": 17.301
+    },
+    {
+      "id": "stop",
+      "label": "Stop and choose",
+      "title": "Read the screen, then decide.",
+      "mood": "thinking",
+      "caption": "Your turn. First, read the pretend payment screen and stop the payment without a PIN. Then choose the safe way for Tara to get paid. Remember what Mum said about who scans whose code. Careful: entering the PIN to receive is exactly the trick.",
+      "speech": "Your turn. First, read the pretend payment screen and stop the payment without a pin. Then choose the safe way for Tara to get paid. Remember what Mum said about who scans whose code. Careful: entering the pin to receive is exactly the trick.",
+      "dialogue": "Read the screen, then decide.",
+      "status": "Reading the screen",
+      "start": 53.577,
+      "duration": 15.317
+    },
+    {
+      "id": "rules",
+      "label": "The UPI rules",
+      "title": "Pay means money goes out.",
+      "mood": "happy",
+      "caption": "Tara cancels, and not a single rupee leaves. The rules are simple. Read the screen before you tap: Pay means money goes out. Never enter your PIN to receive. And if a buyer rushes you, stop and ask an adult. If money is lost, call 1930 and report at cybercrime.gov.in.",
+      "speech": "Tara cancels, and not a single rupee leaves. The rules are simple. Read the screen before you tap: Pay means money goes out. Never enter your pin to receive. And if a buyer rushes you, stop and ask an adult. If money is lost, call nineteen thirty and report at cybercrime dot gov dot in.",
+      "dialogue": "Pay means money goes out!",
+      "status": "Knows the UPI rules",
+      "start": 69.544,
+      "duration": 18.091
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "₹500, and no PIN at all",
+      "mood": "happy",
+      "caption": "The pushy buyer vanishes, and Mum reports the account to the website. The next day, a real buyer scans Mum's QR code, and ₹500 arrives, with no PIN at all. The telescope fund grows! Your turn: help Tara check payment screens and keep PINs private!",
+      "speech": "The pushy buyer vanishes, and Mum reports the account to the website. The next day, a real buyer scans Mum's Q R code, and five hundred rupees arrives, with no pin at all. The telescope fund grows! Your turn: help Tara check payment screens and keep pins private!",
+      "dialogue": "Paid, and our PIN stayed private!",
+      "status": "Telescope fund growing",
+      "tone": "resolved",
+      "start": 88.285,
+      "duration": 16.981
+    }
+  ]
+}

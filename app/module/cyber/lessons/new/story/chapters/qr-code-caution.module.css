@@ -1,0 +1,91 @@
+/* Tara's storybook-sale chapter only: bookshop art, the buyer's chat + QR, the pretend UPI pay screen, the two directions card, the task and the rules. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.chat,.msg,.phoneWrap,.callout,.dir,.rule,.saved,.help{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].chat,[data-on="false"].msg,[data-on="false"].phoneWrap,[data-on="false"].callout,[data-on="false"].dir,[data-on="false"].rule,[data-on="false"].saved,[data-on="false"].help{opacity:0;transform:translateY(6px)}
+
+/* Scenes 1 and 6: Tara's book desk */
+.shop{background-image:url('/cyber-missions/bookshop-payment.webp');background-position:70% 55%}
+.chat{position:absolute;right:16px;bottom:16px;display:grid;gap:3px;max-width:250px;margin:0;padding:10px 12px;border-radius:14px 14px 4px 14px;background:#fffcf3;color:#1f3d40;font-size:.76rem;line-height:1.35;box-shadow:0 8px 20px #14223855}
+.chat b{font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:#2f7ab0}
+.fund{flex:1;min-width:60px;max-width:140px;height:8px;overflow:hidden;border-radius:4px;background:#e8d6b1}
+.fund span{display:block;height:100%;background:#2f7369;transform-origin:left}
+.fund+b{background:none;padding:0;font-family:inherit}
+
+/* Scene 2: the buyer's chat and the pay screen */
+.split{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:16px;border:8px solid #28474d;border-radius:18px;background:linear-gradient(160deg,#1f3a4a,#14283a 70%);box-shadow:0 18px 30px #19342e24}
+.thread{display:grid;gap:8px;align-content:start}
+.threadHead{display:flex;align-items:center;gap:7px;color:#e8f0ec}
+.threadHead svg{width:16px;height:16px;color:#9fd8c8}
+.threadHead strong{font-size:.8rem}
+.threadHead small{font-size:.6rem;color:#b9c7c3}
+.msg{justify-self:start;max-width:230px;padding:9px 12px;border-radius:14px 14px 14px 4px;background:#fffcf3;color:#1f3d40;font-size:.78rem;line-height:1.35;box-shadow:0 8px 18px #0a152444}
+.msg b{color:#2f7369}
+.msg[data-qr="true"]{padding:8px}
+.qr{display:block;width:92px;height:92px;fill:#1f2a33;shape-rendering:crispEdges}
+.phoneWrap{position:relative;display:grid;gap:8px;justify-items:center}
+.pay{display:grid;justify-items:center;gap:4px;width:210px;padding:12px 14px 16px;border:5px solid #2a3440;border-radius:24px;background:#f5f2ea;color:#1f3d40;box-shadow:0 0 0 1px #3c4a58,0 14px 30px #0008;text-align:center}
+.payTop{display:flex;align-items:center;gap:5px;align-self:stretch;justify-content:center;padding-bottom:6px;border-bottom:1px solid #e6e0cf;font-size:.6rem;font-weight:800;color:#5d7169}
+.payTop svg{width:12px;height:12px}
+.direction{margin-top:4px;padding:2px 14px;border-radius:8px;background:#f7e2d8;color:#b4543a;font-family:var(--font-display),sans-serif;font-size:1.3rem}
+.amount{font-family:var(--font-display),sans-serif;font-size:2rem;line-height:1.1}
+.pay small{font-size:.6rem;color:#5d7169}
+.pin{display:grid;gap:5px;margin-top:6px;padding:8px 12px;border-radius:10px;background:#fff}
+.pin span{font-size:.62rem;font-weight:800;color:#4d5d5a}
+.pin div{display:flex;gap:8px;justify-content:center}
+.pin i{width:10px;height:10px;border:2px solid #9aa7a3;border-radius:50%}
+.pay[data-cancelled="true"] .direction{background:#dceecf;color:#284c37;font-size:1rem}
+.pay[data-cancelled="true"] .amount{font-size:1.5rem;color:#3c7447}
+.callout{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fffcf3;color:#8a3b25;font-size:.7rem;font-weight:800}
+.callout svg{width:15px;height:15px}
+
+/* Scene 3: Mum + the two directions */
+.mum{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f3d9b1;color:#826137}
+.avatar svg{width:20px;height:20px}
+.mum small{font-size:.72rem;font-weight:850;color:#826137}
+.mum>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.directions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dir{display:grid;gap:6px;align-content:start;padding:12px;border-radius:12px}
+.dir[data-kind="pay"]{background:#fbeee8;color:#8a3b25}
+.dir[data-kind="receive"]{background:#e3f3de;color:#284c37}
+.dir>svg{width:24px;height:24px}
+.dir strong{font-family:var(--font-display),sans-serif;font-size:1.05rem}
+.dir span{display:flex;align-items:center;gap:6px;font-size:.72rem}
+.dir span svg{flex:none;width:14px;height:14px}
+.dir b{margin-top:2px;padding:4px 8px;justify-self:start;border-radius:6px;background:#fffcf3;font-size:.68rem}
+.panel .rule,.rule{display:flex;align-items:center;gap:8px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#e8e1f3;color:#3d3266;font-size:.76rem;font-weight:800}
+.rule svg{flex:none;width:16px;height:16px}
+
+/* Scene 4: stop the payment, then choose how to receive */
+.task h2{margin-bottom:12px}
+.taskGrid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
+.taskGrid .pay{width:196px;border-color:#28474d;box-shadow:0 8px 18px #19342e33}
+.payActions{display:grid;gap:6px;width:196px}
+.payActions button,.receive button{display:flex;align-items:center;gap:7px;width:100%;padding:8px 10px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.72rem;text-align:left}
+.payActions button svg{flex:none;width:15px;height:15px}
+.payActions button[data-trap="true"]{border-color:#dcc4a0;color:#805633}
+.payActions .cancel{border-color:#2f6f63;background:#e6f2ec;color:#1f5a50;font-weight:800}
+.payActions button:not(:disabled):hover,.receive button:not(:disabled):hover{transform:translateY(-2px)}
+.receive{display:grid;gap:6px;align-content:start;padding:10px;border-radius:12px;background:#f4f1e4;transition:opacity .25s ease-out}
+.receive[data-ready="false"]{opacity:.5}
+.receive small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+
+/* Scene 5: rules + where to report */
+.panel .saved,.saved{display:flex;align-items:center;gap:8px;margin:0 0 6px;padding:9px 12px;border-radius:9px;background:#e3edda;color:#284c37;font-size:.78rem;font-weight:800}
+.saved svg{flex:none;width:17px;height:17px}
+.help{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.help>div{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#f4f1e4;color:#284c37}
+.help strong{font-family:var(--font-display),sans-serif;font-size:1.6rem;line-height:1}
+.help span{font-size:.68rem;line-height:1.35}
+.help b{display:block;font-size:.78rem}
+.help svg{flex:none;width:20px;height:20px}
+
+@media(max-width:600px){
+  .chat{left:10px;right:10px;bottom:10px;max-width:none;font-size:.7rem}
+  .split{grid-template-columns:1fr;gap:12px;padding:12px;border-width:6px;border-radius:12px}
+  .msg{max-width:none}
+  .mum>div>p{font-size:1.05rem}
+  .directions,.help{grid-template-columns:1fr}
+  .taskGrid{grid-template-columns:1fr;justify-items:center}
+  .receive{width:100%}
+}
