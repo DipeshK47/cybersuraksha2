@@ -12,7 +12,7 @@
 .ground{position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(#72b451,#5a9a40)}
 .moat{position:absolute;inset:auto 0 7%;height:9%;background:linear-gradient(#63b3de,#3a86b8);box-shadow:inset 0 3px #ffffff55}
 .bridge{position:absolute;left:50%;bottom:5%;width:min(11%,56px);height:15%;transform:translateX(-50%);border-inline:3px solid #6e4424;background:repeating-linear-gradient(0deg,#b07845 0 5px,#8b5a30 5px 7px)}
-.castle{position:absolute;left:50%;bottom:19%;width:min(56%,300px);aspect-ratio:5/3;transform:translateX(-50%)}
+.castle{position:absolute;left:50%;bottom:19%;width:min(60%,320px);aspect-ratio:5/3;transform:translateX(-50%)}
 .wall,.tower{position:absolute;bottom:0;background-color:#e2d9c5;background-image:linear-gradient(0deg,#b9ad94 2px,transparent 2px),linear-gradient(90deg,#b9ad94 2px,transparent 2px);background-size:18px 12px;box-shadow:inset -7px 0 #00000014}
 .wall{left:12%;right:12%;height:46%}
 .wall:before,.tower:before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:repeating-linear-gradient(90deg,#e2d9c5 0 8px,transparent 8px 14px)}

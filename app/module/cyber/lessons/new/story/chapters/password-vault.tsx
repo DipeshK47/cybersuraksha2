@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor, BellRing, Check, Cloud, Copy, Drum, Feather, Flower2, Gamepad2, GraduationCap, House, KeyRound, Link2, Mail, NotebookPen, Play, RotateCcw, Rocket, Shell, ShieldAlert, ShieldCheck, Smartphone, Sparkles, Sprout, TreeDeciduous, Umbrella, UserRound, Vault } from "lucide-react";
+import { Anchor, BellRing, Bird, Check, Cloud, Copy, Drum, Feather, Flower2, Gamepad2, GraduationCap, House, KeyRound, Link2, LockKeyhole, Mail, NotebookPen, Play, RotateCcw, Rocket, Shell, ShieldAlert, ShieldCheck, Smartphone, Sparkles, Sprout, TreeDeciduous, Umbrella, UserRound } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -36,7 +36,9 @@ function Dominoes({ fall, links, labels, light }: { fall: Fall[]; links: (boolea
 }
 
 const garden = <>
+  <span className={r.cloudSea} />
   <span className={r.sun} />
+  <Bird className={r.bird} aria-hidden="true" />
   <Cloud className={r.cloud} data-i="1" aria-hidden="true" />
   <Cloud className={r.cloud} data-i="2" aria-hidden="true" />
   <span className={r.island} data-i="1"><TreeDeciduous aria-hidden="true" /><Flower2 aria-hidden="true" /></span>
@@ -130,7 +132,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         <Dominoes light fall={taskFall} links={result ? [result[1], result[2]] : [null, null]} labels={result ? ["Leaked", result[1] ? "Opened too" : "Still safe", result[2] ? "Opened too" : "Still safe"] : ["Ready", "Ready", "Ready"]} />
         <p className={k.hint} aria-live="polite">{hint || (solved ? "Breach replayed: only the game account was affected." : ready === 3 ? "All three are ready. Replay the breach to test them." : `${ready} of 3 accounts have a passphrase.`)}</p>
       </div>
-      <div className={k.actions}>
+      <div className={`${k.actions} ${r.taskActions}`}>
         <button type="button" onClick={() => edit(phrases.map((p, i) => i === active ? [] : p))} disabled={done || !phrases[active].length}><RotateCcw />Clear card</button>
         <button className={r.trap} data-trap="true" type="button" onClick={copyAll} disabled={done || phrases[0].length < 3}><Copy />Copy game’s words to all</button>
         <button className={k.primary} type="button" onClick={replay} disabled={done || ready < 3}><Play />Replay the breach</button>
@@ -142,7 +144,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <h2>Many keys, one safe place</h2>
       <div className={r.keys}>{accounts.map(({ name, Icon }, i) => <div className={r.keyRow} key={name}><Icon aria-hidden="true" /><strong>{name}</strong><span>{shown[i].join(" · ")}</span><KeyRound aria-hidden="true" /></div>)}</div>
       <div className={r.helpers}>
-        <div className={r.helper} {...on(.3)}><Vault aria-hidden="true" /><strong>Password manager</strong><span>An app that locks every password behind one strong main password.</span></div>
+        <div className={r.helper} {...on(.3)}><LockKeyhole aria-hidden="true" /><strong>Password manager</strong><span>An app that locks every password behind one strong main password.</span></div>
         <div className={r.helper} {...on(.55)}><NotebookPen aria-hidden="true" /><strong>Paper list</strong><span>Kept safe at home by a parent, never in a school bag.</span></div>
       </div>
       <div className={r.twoStep} {...on(.74)}><Smartphone aria-hidden="true" /><div><strong>Two-step verification</strong><span>A second check at sign-in, like a code on Mum’s phone. Never share that code.</span></div><Check aria-hidden="true" /></div>
