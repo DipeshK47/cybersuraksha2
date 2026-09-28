@@ -1,0 +1,77 @@
+{
+  "duration": 115.857,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "The scholarship form",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's twelve, and he's built a water tester that checks how cloudy the lake near his school is. Now he's applying for the Cyberpur Young Scientists scholarship. His form is almost done. Then he reads the last line: the panel may look at applicants' public profiles for respect and integrity.",
+      "dialogue": "My water tester could win this scholarship!",
+      "status": "Finishing his application",
+      "start": 0.0,
+      "duration": 18.347
+    },
+    {
+      "id": "public",
+      "label": "The public view",
+      "title": "What a stranger would see",
+      "mood": "sad",
+      "caption": "Kabir opens his profile the way a stranger would see it. His water-tester post looks great. But further down is a comment he wrote two years ago, mocking a classmate's drawing. And a photo of his friend Aarav asleep on the bus, posted without asking. Forty people laughed at it. Kabir's stomach drops.",
+      "dialogue": "I forgot these were still public.",
+      "status": "Seeing his old posts",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.997,
+      "duration": 18.624
+    },
+    {
+      "id": "footprint",
+      "label": "Digital footprint",
+      "title": "Public posts leave footprints.",
+      "mood": "thinking",
+      "caption": "His sister Meera, who's at college, sits with him. Everything you share publicly becomes your digital footprint, she says. It's searchable, anyone can screenshot it, and it can last for years. So check each post against the panel's criteria: respect and integrity. And ask one more question: did everyone in it agree to be posted?",
+      "dialogue": "So it's not just what I meant, it's what they see.",
+      "status": "Learning about footprints",
+      "start": 38.271,
+      "duration": 19.008
+    },
+    {
+      "id": "audit",
+      "label": "Audit the posts",
+      "title": "Every choice needs a reason.",
+      "mood": "thinking",
+      "caption": "Your turn. Audit Kabir's three public posts before Friday's deadline. For each one, choose keep, edit, delete and apologise, or hide it and ask. Base every choice on the evidence: respect, integrity and consent. Careful: deleting everything hides his best work too, and keeping the mocking comment fails the respect test.",
+      "dialogue": "Every choice needs a reason, not a guess.",
+      "status": "Auditing his profile",
+      "start": 57.929,
+      "duration": 19.371
+    },
+    {
+      "id": "settings",
+      "label": "Before you post",
+      "title": "A good footprint isn't an empty one.",
+      "mood": "happy",
+      "caption": "The audit is done. Kabir also changes his privacy settings so new posts reach friends only. But settings shrink the audience; they can't stop screenshots. So before posting, he'll ask: who could see this, could it hurt someone, and did everyone agree? A good footprint isn't an empty one. It shows your best work.",
+      "dialogue": "A good footprint shows your best work.",
+      "status": "Thinking before posting",
+      "start": 77.949,
+      "duration": 17.6
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Shortlisted!",
+      "mood": "happy",
+      "caption": "Kabir messages Rahul to say sorry, and Rahul writes back: thanks, that means a lot. Aarav asks him to keep the bus photo private, so it stays down. On Friday, the panel asks Kabir all about his water tester. He's shortlisted! His profile now tells a story he's proud of. Your turn: help Kabir review more posts before they go public.",
+      "dialogue": "Shortlisted! And my profile shows the real me.",
+      "status": "Shortlisted!",
+      "tone": "resolved",
+      "start": 96.199,
+      "duration": 19.008
+    }
+  ]
+}
