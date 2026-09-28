@@ -1,0 +1,79 @@
+{
+  "duration": 108.262,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Our pet finder works!",
+      "mood": "happy",
+      "caption": "Meet Tara. Her coding club has built a lost pet finder for her lane. It's a camera that learned to spot dogs from photos. Today it spots Bruno, a golden retriever, in a second! Tara hopes it will help keep Kittu safe. He's the friendly lane dog everyone feeds.",
+      "dialogue": "Look! It found Bruno in one second!",
+      "status": "Proud of her club",
+      "start": 0.0,
+      "duration": 17.591
+    },
+    {
+      "id": "problem",
+      "label": "Kittu is missing",
+      "title": "It walked right past him.",
+      "mood": "sad",
+      "caption": "One evening, Kittu doesn't come for his dinner. Tara checks the finder's camera log. There he is, trotting right past the gate! But the finder says: not a dog. No alert went out, so nobody knew where to look. Tara feels worried and upset. How could it miss him?",
+      "dialogue": "He was right there! Why didn't it see him?",
+      "status": "Worried about Kittu",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.241,
+      "duration": 16.585
+    },
+    {
+      "id": "why",
+      "label": "Find out why",
+      "title": "What did it learn from?",
+      "mood": "thinking",
+      "caption": "Tara and Mr Das, her club teacher, open the photos the finder learned from. These examples are called training data. Almost every photo shows a golden retriever. So the finder learned that dogs are big, golden and fluffy. Kittu is a slim, brown indie dog, so it guessed wrong.",
+      "speech": "Tara and Mister Das, her club teacher, open the photos the finder learned from. These examples are called training data. Almost every photo shows a golden retriever. So the finder learned that dogs are big, golden and fluffy. Kittu is a slim, brown indie dog, so it guessed wrong.",
+      "dialogue": "Almost every photo is a golden retriever!",
+      "status": "Checking the photos",
+      "start": 35.475,
+      "duration": 18.479
+    },
+    {
+      "id": "fix",
+      "label": "Fix the data",
+      "title": "Teach it every kind of dog.",
+      "mood": "thinking",
+      "caption": "Your turn! Help Tara fix the training data. Label every dog as Dog: golden retrievers, pugs, and indie dogs like Kittu. Label the cat, the crow and the squirrel as Not dog. Then retrain the finder and test it on Kittu's photo. Will it spot him now?",
+      "dialogue": "Let's show it all kinds of dogs.",
+      "status": "Fixing the data",
+      "start": 54.605,
+      "duration": 16.682
+    },
+    {
+      "id": "lesson",
+      "label": "Better data",
+      "title": "Better data, better answers.",
+      "mood": "happy",
+      "caption": "It works! The finder says Kittu is a dog. An AI learns only from the examples it's given. If some kinds are missing, it makes more mistakes about them. Good training data is varied and labelled correctly. People still need to test it, because even a better finder can get things wrong.",
+      "speech": "It works! The finder says Kittu is a dog. An A I learns only from the examples it's given. If some kinds are missing, it makes more mistakes about them. Good training data is varied and labelled correctly. People still need to test it, because even a better finder can get things wrong.",
+      "dialogue": "It's only as good as its examples.",
+      "status": "Understanding why",
+      "start": 71.937,
+      "duration": 18.057
+    },
+    {
+      "id": "ending",
+      "label": "Kittu is home",
+      "title": "Found by the tea stall!",
+      "mood": "happy",
+      "caption": "That night, the finder spots Kittu near the tea stall. Tara and her dad hurry over, and there he is, wagging his tail! Meena Aunty brings his dinner. Now the club tests their finder on many kinds of dogs. Your turn: help Tara label and test more dog photos!",
+      "dialogue": "Kittu! We found you!",
+      "status": "Kittu is safe",
+      "tone": "resolved",
+      "start": 90.644,
+      "duration": 16.968
+    }
+  ]
+}
