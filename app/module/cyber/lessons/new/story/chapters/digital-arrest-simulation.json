@@ -1,24 +1,24 @@
 {
-  "duration": 114.556,
+  "duration": 114.321,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Kabir",
+      "label": "Meet Meera",
       "title": "Pizza night plans",
       "mood": "happy",
-      "caption": "Sunday evening. Kabir is finishing his science homework while Mum answers emails at the desk beside him. They're arguing happily about pizza toppings for dinner. Then Mum's phone lights up: a video call from a number she doesn't know. She answers, and a man in a uniform appears on the screen.",
+      "caption": "Sunday evening. Meera is finishing her science homework while Mum answers emails at the desk beside her. They're arguing happily about pizza toppings for dinner. Then Mum's phone lights up: a video call from a number she doesn't know. She answers, and a man in a uniform appears on the screen.",
       "dialogue": "Mushroom and corn. That's final!",
       "status": "Pizza night plans",
       "start": 0.0,
-      "duration": 17.515
+      "duration": 17.344
     },
     {
       "id": "call",
       "label": "The video call",
       "title": "“You are under digital arrest.”",
       "mood": "sad",
-      "caption": "He shows a badge that says CBI. A parcel in your name had illegal items, he says. You are under digital arrest. Stay on camera, tell no one, and pay ₹50,000 within the hour to clear your name. Mum's hands start to shake. Kabir can see she's frightened, and his heart is pounding too.",
-      "speech": "He shows a badge that says C B I. A parcel in your name had illegal items, he says. You are under digital arrest. Stay on camera, tell no one, and pay fifty thousand rupees within the hour to clear your name. Mum's hands start to shake. Kabir can see she's frightened, and his heart is pounding too.",
+      "caption": "He shows a badge that says CBI. A parcel in your name had illegal items, he says. You are under digital arrest. Stay on camera, tell no one, and pay ₹50,000 within the hour to clear your name. Mum's hands start to shake. Meera can see Mum is frightened, and her heart is pounding too.",
+      "speech": "He shows a badge that says C B I. A parcel in your name had illegal items, he says. You are under digital arrest. Stay on camera, tell no one, and pay fifty thousand rupees within the hour to clear your name. Mum's hands start to shake. Meera can see Mum is frightened, and her heart is pounding too.",
       "dialogue": "Mum looks so scared. Something's wrong here.",
       "status": "Worried for Mum",
       "tone": "trouble",
@@ -26,31 +26,31 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 18.165,
-      "duration": 18.048
+      "start": 17.994,
+      "duration": 18.005
     },
     {
       "id": "note",
       "label": "Stay calm",
       "title": "Digital arrest isn't real.",
       "mood": "thinking",
-      "caption": "Then Kabir remembers his school's cyber-safety talk. Digital arrest isn't a real legal procedure. Police and the CBI never arrest anyone over a video call, never demand secrecy, and never ask for money to clear a case. Fake uniforms, badges and backgrounds are easy to set up. He quietly slides Mum a note: this is a scam.",
-      "speech": "Then Kabir remembers his school's cyber-safety talk. Digital arrest isn't a real legal procedure. Police and the C B I never arrest anyone over a video call, never demand secrecy, and never ask for money to clear a case. Fake uniforms, badges and backgrounds are easy to set up. He quietly slides Mum a note: this is a scam.",
+      "caption": "Then Meera remembers her school's cyber-safety talk. Digital arrest isn't a real legal procedure. Police and the CBI never arrest anyone over a video call, never demand secrecy, and never ask for money to clear a case. Fake uniforms, badges and backgrounds are easy to set up. She quietly slides Mum a note: this is a scam.",
+      "speech": "Then Meera remembers her school's cyber-safety talk. Digital arrest isn't a real legal procedure. Police and the C B I never arrest anyone over a video call, never demand secrecy, and never ask for money to clear a case. Fake uniforms, badges and backgrounds are easy to set up. She quietly slides Mum a note: this is a scam.",
       "dialogue": "Police don't arrest people over video calls.",
       "status": "Staying calm",
-      "start": 36.863,
-      "duration": 19.712
+      "start": 36.649,
+      "duration": 19.776
     },
     {
       "id": "respond",
       "label": "Respond calmly",
       "title": "Spot the signs, then act.",
       "mood": "thinking",
-      "caption": "Your turn. Help Kabir and Mum respond calmly. First, tap the warning signs on the call. Then choose what the family should do next. Take your time; the caller's rush is part of the trick. Careful: paying to clear your name, or staying on the call because he says so, is exactly what the scammer wants.",
+      "caption": "Your turn. Help Meera and Mum respond calmly. First, tap the warning signs on the call. Then choose what the family should do next. Take your time; the caller's rush is part of the trick. Careful: paying to clear your name, or staying on the call because he says so, is exactly what the scammer wants.",
       "dialogue": "Spot the signs. Then end it, together.",
       "status": "Helping Mum",
-      "start": 57.225,
-      "duration": 17.643
+      "start": 57.075,
+      "duration": 17.685
     },
     {
       "id": "report",
@@ -61,7 +61,7 @@
       "speech": "Mum ends the call and blocks the number. She calls Dad, and together they report it at cybercrime dot gov dot in. If any money had been paid, they would call nineteen thirty straight away. Real police send official notices and never collect money over a call. And being targeted isn't anyone's fault. Scammers call thousands of people.",
       "dialogue": "End it, tell family, report it. Done.",
       "status": "Reporting it",
-      "start": 75.517,
+      "start": 75.411,
       "duration": 19.157
     },
     {
@@ -69,12 +69,12 @@
       "label": "A happier ending",
       "title": "Pizza, finally",
       "mood": "happy",
-      "caption": "Later, over pizza, Mum's hands are steady again. She warns Nani and the family group so nobody else gets fooled. Kabir feels proud: he stayed calm, spotted the signs and helped his family act. Remember: a real officer never keeps you on camera. Your turn: help Kabir spot more fake official calls!",
+      "caption": "Later, over pizza, Mum's hands are steady again. She warns Nani and the family group so nobody else gets fooled. Meera feels proud: she stayed calm, spotted the signs and helped her family act. Remember: a real officer never keeps you on camera. Your turn: help Meera spot more fake official calls!",
       "dialogue": "Mushroom and corn, and no more scary calls!",
       "status": "Pizza, finally",
       "tone": "resolved",
-      "start": 95.325,
-      "duration": 18.581
+      "start": 95.218,
+      "duration": 18.453
     }
   ]
 }

@@ -1,4 +1,4 @@
-// QA hooks for scripts/story-qa.cjs: how a learner fixes and tests Kabir's report-card pseudocode.
+// QA hooks for scripts/story-qa.cjs: how a learner fixes and tests Meera's report-card pseudocode.
 module.exports = {
   async solve(page) {
     await page.getByRole('button', { name: 'Comparison: greater than or equal to 40', exact: true }).click();

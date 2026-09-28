@@ -1,4 +1,4 @@
-/* Kabir's scholarship chapter only: the application form, public feed posts, footprint facts, the audit task and the privacy settings card. Shared pieces live in ../story-player.module.css. */
+/* Meera's scholarship chapter only: the application form, public feed posts, footprint facts, the audit task and the privacy settings card. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .field,.notice,.reveal,.term,.facts>span,.criteria>span,.settings,.warn,.good{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].field,[data-on="false"].notice,[data-on="false"].reveal,[data-on="false"].term,.facts>span[data-on="false"],.criteria>span[data-on="false"],[data-on="false"].settings,[data-on="false"].warn,[data-on="false"].good{opacity:0;transform:translateY(6px)}

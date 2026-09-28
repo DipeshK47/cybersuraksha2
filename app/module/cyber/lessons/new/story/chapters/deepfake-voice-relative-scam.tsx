@@ -62,7 +62,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
           <div className={r.msg} {...show(.46)}><small>Dad</small><p>Safe travels, Sameer. Call when you reach the hotel.</p></div>
         </> : <>
           <div className={r.callTile}><Video aria-hidden="true" /><div><strong>Chacha · video call</strong><span>“I’m fine! Nobody’s sending anyone money.”</span></div></div>
-          <div className={r.msg} data-me="true"><small>Kabir</small><p>Nani, here’s how we check: passphrase, then call back on the saved number.</p></div>
+          <div className={r.msg} data-me="true"><small>Meera</small><p>Nani, here’s how we check: passphrase, then call back on the saved number.</p></div>
           <div className={r.setting}><Lock aria-hidden="true" /><span>Chacha’s travel videos: <b>friends only</b></span></div>
         </>}
       </div>
@@ -109,13 +109,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir and the cloned voice",
+  title: "Meera and the cloned voice",
   icon: AudioLines,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Verify the voice note before anyone pays.",
-  lockedHint: "Help Kabir and Dad verify the voice note first.",
+  lockedHint: "Help Meera and Dad verify the voice note first.",
   World,
 };
 export default chapter;

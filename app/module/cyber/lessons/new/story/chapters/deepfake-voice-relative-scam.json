@@ -1,16 +1,16 @@
 {
-  "duration": 116.049,
+  "duration": 115.751,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Kabir",
+      "label": "Meet Meera",
       "title": "The family passphrase",
       "mood": "happy",
-      "caption": "Saturday morning at Kabir's house. The family chat is full of Sameer Chacha's travel videos: he's filming street food and train rides on his work trip. Last month, after a news report about voice scams, Kabir's parents set up a secret family passphrase. Only the family knows it. Kabir thought it sounded like a spy movie.",
+      "caption": "Saturday morning at Meera's house. The family chat is full of Sameer Chacha's travel videos: he's filming street food and train rides on his work trip. Last month, after a news report about voice scams, Meera's parents set up a secret family passphrase. Only the family knows it. Meera thought it sounded like a spy movie.",
       "dialogue": "A secret passphrase? Like real spies!",
       "status": "Saturday with family",
       "start": 0.0,
-      "duration": 19.157
+      "duration": 19.029
     },
     {
       "id": "voice",
@@ -26,7 +26,7 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.807,
+      "start": 19.679,
       "duration": 18.923
     },
     {
@@ -34,11 +34,11 @@
       "label": "Voice cloning",
       "title": "A familiar voice isn't proof.",
       "mood": "thinking",
-      "caption": "Kabir touches Dad's arm. At school they learned that AI can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
-      "speech": "Kabir touches Dad's arm. At school they learned that A I can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
+      "caption": "Meera touches Dad's arm. At school they learned that AI can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
+      "speech": "Meera touches Dad's arm. At school they learned that A I can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
       "dialogue": "Dad, wait. A voice can be copied now.",
       "status": "Remembering the plan",
-      "start": 39.38,
+      "start": 39.252,
       "duration": 18.645
     },
     {
@@ -46,11 +46,11 @@
       "label": "Verify first",
       "title": "Passphrase first. Then call back.",
       "mood": "thinking",
-      "caption": "Your turn. Help Kabir and Dad verify before anyone pays. First, choose a reply to the voice note. Then decide what to do if the answer doesn't check out. Careful: it's his voice, send the money, is exactly what the scammer is counting on. A real relative can wait two minutes while you check.",
+      "caption": "Your turn. Help Meera and Dad verify before anyone pays. First, choose a reply to the voice note. Then decide what to do if the answer doesn't check out. Careful: it's his voice, send the money, is exactly what the scammer is counting on. A real relative can wait two minutes while you check.",
       "dialogue": "Passphrase first. Then call his saved number.",
       "status": "Verifying together",
-      "start": 58.675,
-      "duration": 17.451
+      "start": 58.547,
+      "duration": 17.344
     },
     {
       "id": "safe",
@@ -61,7 +61,7 @@
       "speech": "Chacha picks up on the first ring, completely fine and having breakfast at his hotel. The voice was a clone. Dad blocks the number and reports it at cybercrime dot gov dot in; if they had paid, they'd call nineteen thirty at once. The rule: a familiar voice isn't proof. Ask for the passphrase, and call back on a number you saved yourself.",
       "dialogue": "A familiar voice isn't proof. The passphrase is.",
       "status": "Chacha is safe",
-      "start": 76.776,
+      "start": 76.541,
       "duration": 19.435
     },
     {
@@ -69,12 +69,12 @@
       "label": "A happier ending",
       "title": "The family plan works",
       "mood": "happy",
-      "caption": "That evening, Chacha video-calls the whole family, laughing and a little shaken. He makes his travel videos visible to friends only. Kabir teaches Nani the passphrase and how to call back. Dad hugs him: you kept us calm. Your turn: help Kabir spot more cloned-voice tricks and verify before anyone pays!",
+      "caption": "That evening, Chacha video-calls the whole family, laughing and a little shaken. He makes his travel videos visible to friends only. Meera teaches Nani the passphrase and how to call back. Dad hugs her: you kept us calm. Your turn: help Meera spot more cloned-voice tricks and verify before anyone pays!",
       "dialogue": "Passphrase, call back, then relax. Deal?",
       "status": "Family plan works",
       "tone": "resolved",
-      "start": 96.861,
-      "duration": 18.539
+      "start": 96.626,
+      "duration": 18.475
     }
   ]
 }

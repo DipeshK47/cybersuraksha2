@@ -1,4 +1,4 @@
-/* Kabir's deepfake chapter only: fair art + chat, the illustrated clip (CSS drawing, no real face), clue cards, the frame-by-frame task and the official post. Shared pieces live in ../story-player.module.css. */
+/* Meera's deepfake chapter only: fair art + chat, the illustrated clip (CSS drawing, no real face), clue cards, the frame-by-frame task and the official post. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .chat p,.reactions p,.forwardBtn,.term,.clues>span,.nuance,.official{transition:opacity .25s ease-out,transform .25s var(--ease)}
 .chat p[data-on="false"],.reactions p[data-on="false"],[data-on="false"].forwardBtn,[data-on="false"].term,.clues>span[data-on="false"],[data-on="false"].nuance,[data-on="false"].official{opacity:0;transform:translateY(6px)}

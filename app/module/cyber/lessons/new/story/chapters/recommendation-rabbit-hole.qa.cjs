@@ -1,4 +1,4 @@
-// QA hooks for scripts/story-qa.cjs: how a learner steers Kabir's feed back to variety.
+// QA hooks for scripts/story-qa.cjs: how a learner steers Meera's feed back to variety.
 async function clickIfEnabled(button) { if (await button.count() && await button.isEnabled()) { await button.click(); return true; } return false; }
 module.exports = {
   async solve(page) {

@@ -55,13 +55,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function after(next: { hidden?: string[]; found?: string[]; followed?: boolean }, message: string) {
     const h = next.hidden ?? hidden, f = next.found ?? found, fo = next.followed ?? followed;
     const value = 20 + h.length * 12 + f.length * 8 + (fo ? 12 : 0) - Math.min(watched, 3) * 8;
-    if (value >= GOAL) { setHint("Topic variety is back above 80%. The feed now reflects what Kabir really enjoys."); setPassing(true); window.setTimeout(markSolved, reduced ? 0 : 700); return; }
+    if (value >= GOAL) { setHint("Topic variety is back above 80%. The feed now reflects what Meera really enjoys."); setPassing(true); window.setTimeout(markSolved, reduced ? 0 : 700); return; }
     setHint(message);
   }
   function watch(video: Video) {
     if (done) return;
     setWatched(value => value + 1);
-    setHint(`Watching “${video.title}” is one more signal that this keeps Kabir watching, so the algorithm sends even more. Variety drops.`);
+    setHint(`Watching “${video.title}” is one more signal that this keeps Meera watching, so the algorithm sends even more. Variety drops.`);
   }
   function notInterested(video: Video) {
     if (done || hidden.includes(video.title)) return;
@@ -71,7 +71,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function search(video: Video) {
     if (done || found.includes(video.topic)) return;
     const next = [...found, video.topic]; setFound(next);
-    after({ found: next }, `Searching for ${video.topic} adds a new signal: Kabir wants variety.`);
+    after({ found: next }, `Searching for ${video.topic} adds a new signal: Meera wants variety.`);
   }
   function follow() {
     if (done || followed) return;
@@ -83,14 +83,14 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 1 || scene === 4 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Tv size={16} /> VIDSTREAM</span><span>Kabir’s feed · pretend app</span></div>
+      <div className={k.deviceBar}><span><Tv size={16} /> VIDSTREAM</span><span>Meera’s feed · pretend app</span></div>
       <div className={`${k.deviceArt} ${r.feed}`} data-bad={scene === 1}>
         <div className={r.grid}>
           {(scene === 1 ? rumours : scene === 0 ? mix : [official, ...mix.slice(0, 3)]).map((video, i) => <div key={video.title} {...show(scene === 1 ? .3 + i * .1 : .04 + i * .06)} className={r.reveal}><Tile video={video} /></div>)}
         </div>
         <Meter value={scene === 1 ? (cue(.62) ? 18 : 46) : scene === 0 ? 86 : 90} />
         {scene === 1 && <span className={r.autoplay} {...show(.8)}><Timer aria-hidden="true" />Autoplay: next in 3…</span>}
-        {scene === 5 && <div className={r.upload}><FlaskConical aria-hidden="true" /><div><strong>Kabir’s upload: “My lake water tester”</strong><span>Viewer challenge · 212 views</span></div></div>}
+        {scene === 5 && <div className={r.upload}><FlaskConical aria-hidden="true" /><div><strong>Meera’s upload: “My lake water tester”</strong><span>Viewer challenge · 212 views</span></div></div>}
       </div>
       <div className={k.deviceFoot}>{scene === 0 ? <><Timer /><span>20 minutes, then bed</span></>
         : scene === 1 ? <><TriangleAlert /><span>More of the same, and angrier each time</span></>
@@ -100,9 +100,9 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     {scene === 2 && <div className={k.panel}>
       <h2>How the feed learned</h2>
       <div className={r.flow}>
-        <div className={r.col} {...show(.1)}><small>Kabir’s signals</small><span><Repeat aria-hidden="true" />Replayed 6 times</span><span><Pause aria-hidden="true" />Paused 14 times</span><span><Play aria-hidden="true" />Watched to the end</span></div>
+        <div className={r.col} {...show(.1)}><small>Meera’s signals</small><span><Repeat aria-hidden="true" />Replayed 6 times</span><span><Pause aria-hidden="true" />Paused 14 times</span><span><Play aria-hidden="true" />Watched to the end</span></div>
         <ArrowRight className={r.arrow} aria-hidden="true" />
-        <div className={r.col} data-kind="algo" {...show(.36)}><small>The algorithm predicts</small><span><BrainCircuit aria-hidden="true" />“This keeps him watching”</span></div>
+        <div className={r.col} data-kind="algo" {...show(.36)}><small>The algorithm predicts</small><span><BrainCircuit aria-hidden="true" />“This keeps her watching”</span></div>
         <ArrowRight className={r.arrow} aria-hidden="true" />
         <div className={r.col} data-kind="feed" {...show(.62)}><small>So the feed shows</small><span><TriangleAlert aria-hidden="true" />More rumours, angrier each time</span></div>
       </div>
@@ -113,7 +113,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Steer Kabir’s feed</h2>
+      <h2>Steer Meera’s feed</h2>
       <Meter value={score} />
       <div className={r.list}>{feed.map(video => <div className={r.row} key={video.title}>
         <Tile video={video} small />
@@ -126,7 +126,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         <div className={r.searches}><small><Search aria-hidden="true" />Search for</small>{searches.map(v => <button key={v.topic} type="button" aria-pressed={solved || found.includes(v.topic)} disabled={done || found.includes(v.topic)} onClick={() => search(v)}><v.Icon aria-hidden="true" />{v.topic}</button>)}</div>
         <button type="button" className={r.follow} aria-pressed={solved || followed} disabled={done || followed} onClick={follow}><UserPlus />{followed || solved ? "Following Cyberpur News" : "Follow Cyberpur News · official"}</button>
       </div>
-      <p className={k.hint} aria-live="polite">{hint || (done ? "Topic variety is back above 80%. The feed now reflects what Kabir really enjoys." : `Goal: topic variety of ${GOAL}% or more.`)}</p>
+      <p className={k.hint} aria-live="polite">{hint || (done ? "Topic variety is back above 80%. The feed now reflects what Meera really enjoys." : `Goal: topic variety of ${GOAL}% or more.`)}</p>
       <small>Pretend app and channels. The meter is a simple model, not a real app’s formula.</small>
     </div>}
   </SceneSwap>;
@@ -134,13 +134,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir’s runaway feed",
+  title: "Meera’s runaway feed",
   icon: Tv,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Raise the topic variety meter to 80% to continue.",
-  lockedHint: "Help Kabir steer his feed back to variety first.",
+  lockedHint: "Help Meera steer her feed back to variety first.",
   World,
 };
 export default chapter;

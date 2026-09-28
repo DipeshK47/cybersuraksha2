@@ -1,4 +1,4 @@
-/* Kabir's cloned-voice chapter only: the family chat, the voice note, the voice-cloning card, the verify-first task and the call-back card. Shared pieces live in ../story-player.module.css. */
+/* Meera's cloned-voice chapter only: the family chat, the voice note, the voice-cloning card, the verify-first task and the call-back card. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .pinned,.msg,.lines p,.payPeek,.term,.clone,.clues span,.plan,.calling{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].pinned,[data-on="false"].msg,.lines p[data-on="false"],[data-on="false"].payPeek,[data-on="false"].term,[data-on="false"].clone,.clues span[data-on="false"],[data-on="false"].plan,[data-on="false"].calling{opacity:0;transform:translateY(6px)}

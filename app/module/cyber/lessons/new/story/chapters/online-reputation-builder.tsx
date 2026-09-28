@@ -18,7 +18,7 @@ const actions: { id: Action; label: string; spoken: string }[] = [
 ];
 const posts: { id: PostId; short: string; when: string; correct: Action; ok: string; why: Partial<Record<Action, string>> }[] = [
   { id: "project", short: "water-tester post", when: "3 days ago", correct: "keep", ok: "Keep: it’s accurate, respectful and shows real work. The panel should see this.",
-    why: { edit: "Nothing here breaks the criteria. It’s accurate and respectful, so there’s nothing to edit. Keep it.", delete: "Deleting this hides Kabir’s best evidence. It’s accurate, respectful and his own work. Keep it.", ask: "It’s Kabir’s own work and nobody else is in it, so there’s no one to ask. Keep it." } },
+    why: { edit: "Nothing here breaks the criteria. It’s accurate and respectful, so there’s nothing to edit. Keep it.", delete: "Deleting this hides Meera’s best evidence. It’s accurate, respectful and her own work. Keep it.", ask: "It’s Meera’s own work and nobody else is in it, so there’s no one to ask. Keep it." } },
   { id: "comment", short: "comment on Rahul’s drawing", when: "2 years ago", correct: "delete", ok: "Delete and apologise: removing it clears the page, and a direct apology repairs what it did to Rahul.",
     why: { keep: "The panel checks respect. Mocking a classmate fails that test, and Rahul can still see it. It has to go.", edit: "Editing still leaves the mockery in the history and in any screenshots. Delete it, and apologise to Rahul directly.", ask: "This isn’t about permission. The problem is disrespect. Delete it and apologise." } },
   { id: "photo", short: "photo of Aarav", when: "1 year ago", correct: "ask", ok: "Hide and ask: it’s Aarav’s face, so Aarav decides whether it stays public.",
@@ -30,19 +30,19 @@ const facts = [{ label: "Searchable", Icon: Search, at: .34 }, { label: "Screens
 /** One public post as the feed shows it; `compact` drops the picture for the audit list. */
 function Post({ id, compact }: { id: PostId; compact?: boolean }) {
   if (id === "project") return <article className={r.post} data-compact={compact ?? false}>
-    <header><span className={r.me}>K</span><div><strong>Kabir S.</strong><small><Globe aria-hidden="true" />Public · 3 days ago</small></div></header>
+    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 3 days ago</small></div></header>
     <p>Six weeks of testing: my water tester shows the lake got clearer after the clean-up drive!</p>
     {!compact && <div className={r.chart} aria-hidden="true"><Droplets />{[72, 64, 51, 40, 33, 28].map((h, i) => <span key={i} style={{ height: `${h}%` }} />)}<small>cloudiness ↓</small></div>}
     <footer><Heart aria-hidden="true" />56 likes · 9 comments</footer>
   </article>;
   if (id === "comment") return <article className={r.post} data-bad="true" data-compact={compact ?? false}>
-    <header><span className={r.me}>K</span><div><strong>Kabir S.</strong><small><Globe aria-hidden="true" />Public · 2 years ago</small></div></header>
+    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 2 years ago</small></div></header>
     <p className={r.context}><MessageSquare aria-hidden="true" />Comment on Rahul’s drawing</p>
     <blockquote>“lol this looks like a potato”</blockquote>
     <footer><Laugh aria-hidden="true" />12 laughing reactions</footer>
   </article>;
   return <article className={r.post} data-bad="true" data-compact={compact ?? false}>
-    <header><span className={r.me}>K</span><div><strong>Kabir S.</strong><small><Globe aria-hidden="true" />Public · 1 year ago</small></div></header>
+    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 1 year ago</small></div></header>
     <p>Look who fell asleep on the bus again</p>
     {compact ? <p className={r.context}><Bus aria-hidden="true" />Photo: Aarav, asleep</p> : <div className={r.photo} aria-hidden="true"><Bus /><span>zzz</span><small>Photo: Aarav, asleep</small></div>}
     <footer><Laugh aria-hidden="true" />40 laughing reactions</footer>
@@ -71,7 +71,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <div className={`${k.deviceArt} ${r.form}`}>
         {scene === 0 ? <>
           <div className={r.fields}>
-            <div className={r.field}><small>Applicant</small><span>Kabir S. · Class 7</span></div>
+            <div className={r.field}><small>Applicant</small><span>Meera S. · Class 7</span></div>
             <div className={r.field}><small>Project</small><span>Lake water clarity tester</span></div>
             <div className={r.field} {...show(.3)}><small>Evidence</small><span><Paperclip aria-hidden="true" />test-results.pdf · 3 photos</span></div>
             <div className={r.progress}><span style={{ transform: "scaleX(.9)" }} /><small>90% complete</small></div>
@@ -84,7 +84,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         </div>}
       </div>
       <div className={k.deviceFoot}>{scene === 0
-        ? <><Droplets /><span>Kabir’s project: a clearer lake after the clean-up drive</span></>
+        ? <><Droplets /><span>Meera’s project: a clearer lake after the clean-up drive</span></>
         : <><span className={r.chip}><Check aria-hidden="true" />Apology sent</span><span className={r.chip}><Shield aria-hidden="true" />Photo private · Aarav’s choice</span><span className={r.chip}><ShieldCheck aria-hidden="true" />Profile audited</span></>}</div>
     </div>}
 
@@ -99,7 +99,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Meera · Kabir’s sister</small><p>“Read it the way the panel would.”</p></div></div>
+      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Arjun · Meera’s brother</small><p>“Read it the way the panel would.”</p></div></div>
       <div className={r.term} {...show(.14)}><Footprints aria-hidden="true" /><div><strong>Digital footprint</strong><span>Everything you share publicly, and what others share about you.</span></div></div>
       <div className={r.facts}>{facts.map(({ label, Icon, at }) => <span key={label} {...show(at)}><Icon aria-hidden="true" />{label}</span>)}</div>
       <h2>The panel’s test</h2>
@@ -111,7 +111,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Audit Kabir’s public posts</h2>
+      <h2>Audit Meera’s public posts</h2>
       <p>Choose an action for each post, based on respect, integrity and consent.</p>
       <div className={r.audit}>{posts.map(post => { const pick = chosen(post.id); return <div className={r.auditRow} key={post.id} data-done={Boolean(pick)}>
         <Post id={post.id} compact />
@@ -136,13 +136,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir’s scholarship profile",
+  title: "Meera’s scholarship profile",
   icon: GraduationCap,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Audit all three posts to continue.",
-  lockedHint: "Help Kabir audit his public posts first.",
+  lockedHint: "Help Meera audit her public posts first.",
   World,
 };
 export default chapter;

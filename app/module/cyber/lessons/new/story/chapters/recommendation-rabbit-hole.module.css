@@ -1,4 +1,4 @@
-/* Kabir's feed chapter only: the video feed, topic-variety meter, signal flow, the steering task and the recovered feed. Shared pieces live in ../story-player.module.css. */
+/* Meera's feed chapter only: the video feed, topic-variety meter, signal flow, the steering task and the recovered feed. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .reveal,.autoplay,.col,.terms>div{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].reveal,[data-on="false"].autoplay,[data-on="false"].col,.terms>div[data-on="false"]{opacity:0;transform:translateY(6px)}
@@ -30,7 +30,7 @@
 .meter[data-level="low"] .track span{background:#d65a4a}
 .meter[data-level="low"] b{color:#b4543a}
 
-/* Scenes 1, 2, 5 and 6: the feed on Kabir's phone */
+/* Scenes 1, 2, 5 and 6: the feed on Meera's phone */
 .feed{display:grid;align-content:start;gap:10px;padding:12px;background-color:#eef1f4;background-image:none}
 .feed[data-bad="true"]{background-color:#2b1f28}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}

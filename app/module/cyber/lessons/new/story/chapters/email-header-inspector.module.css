@@ -1,4 +1,4 @@
-/* Kabir's award-email chapter only: the inbox, the open email, the name-vs-address demo, the raw header task and the verify card. Shared pieces live in ../story-player.module.css. */
+/* Meera's award-email chapter only: the inbox, the open email, the name-vs-address demo, the raw header task and the verify card. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .mail,.timer,.body,.formRow,.payRow,.doubt,.nameDemo,.glossary>div,.evidence,.never{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].mail,[data-on="false"].timer,[data-on="false"].body,[data-on="false"].formRow,[data-on="false"].payRow,[data-on="false"].doubt,[data-on="false"].nameDemo,.glossary>div[data-on="false"],[data-on="false"].evidence,[data-on="false"].never{opacity:0;transform:translateY(6px)}

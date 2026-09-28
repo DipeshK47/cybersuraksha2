@@ -25,7 +25,7 @@ const tests = [
   { name: "Yusuf · last in 7A", marks: 65, att: 88, expected: "Pass", last: true },
 ];
 
-/** The report-card pseudocode, with the two lines Kabir can change. */
+/** The report-card pseudocode, with the two lines Meera can change. */
 function Code({ cmp, end, mark }: { cmp: string; end: string; mark?: boolean }) {
   const lines: [string, ReactNode][] = [
     ["1", <>FOR each section IN [7A, 7B, 7C]</>],
@@ -107,7 +107,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <h2>Kabir’s trace table</h2>
+      <h2>Meera’s trace table</h2>
       <table className={r.trace} {...show(.08)}><thead><tr><th>Line</th><th>Values</th><th>Check</th><th>Result</th></tr></thead>
         <tbody>
           <tr {...show(.3)}><td>4</td><td>Rahul · marks 40</td><td><code>40 &gt; 40</code> → false</td><td data-bad="true">Fail ✗</td></tr>
@@ -143,13 +143,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir’s report-card bug hunt",
+  title: "Meera’s report-card bug hunt",
   icon: Bug,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Fix both bugs and make every test pass.",
-  lockedHint: "Help Kabir fix the pseudocode first.",
+  lockedHint: "Help Meera fix the pseudocode first.",
   World,
 };
 export default chapter;

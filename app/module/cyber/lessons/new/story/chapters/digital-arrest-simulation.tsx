@@ -68,18 +68,18 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Pizza size={16} /> SUNDAY EVENING</span><span>{scene === 0 ? "Kabir’s home · 7:10 pm" : "Kabir’s home · 8:30 pm"}</span></div>
+      <div className={k.deviceBar}><span><Pizza size={16} /> SUNDAY EVENING</span><span>{scene === 0 ? "Meera’s home · 7:10 pm" : "Meera’s home · 8:30 pm"}</span></div>
       <div className={`${k.deviceArt} ${r.desk}`}>
         {scene === 0 && <><div className={k.badge}><Pizza /> Mushroom and corn?</div><span className={r.incoming} {...show(.62)}><Video aria-hidden="true" />Video call · unknown number</span></>}
         {scene === 5 && <div className={k.success}><ShieldCheck /><strong>Scam stopped</strong><span>Call ended · number blocked · reported</span></div>}
       </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><UserRound /><span>Mum at the desk, Kabir beside her</span></> : <><span className={r.chip}><Users aria-hidden="true" />Family group warned</span><span className={r.chip}><Ban aria-hidden="true" />Number blocked</span><span className={r.chip}><Globe aria-hidden="true" />Reported online</span></>}</div>
+      <div className={k.deviceFoot}>{scene === 0 ? <><UserRound /><span>Mum at the desk, Meera beside her</span></> : <><span className={r.chip}><Users aria-hidden="true" />Family group warned</span><span className={r.chip}><Ban aria-hidden="true" />Number blocked</span><span className={r.chip}><Globe aria-hidden="true" />Reported online</span></>}</div>
     </div>}
 
     {scene === 1 && <Call show={show} />}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.note} {...show(.86)}><NotebookPen aria-hidden="true" /><p>Mum, this is a <b>SCAM</b>. Real police never do this. Let’s hang up. <span>— Kabir</span></p></div>
+      <div className={r.note} {...show(.86)}><NotebookPen aria-hidden="true" /><p>Mum, this is a <b>SCAM</b>. Real police never do this. Let’s hang up. <span>— Meera</span></p></div>
       <h2>What real police never do</h2>
       {["Arrest anyone over a video call", "Demand secrecy or keep you on camera", "Ask for money to clear a case"].map((fact, i) => <div className={k.step} key={fact} data-active={cue([.3, .45, .55][i])}><span><Ban /></span>{fact}</div>)}
       <p className={r.fact} {...show(.14)}><Lock aria-hidden="true" />“Digital arrest” is not a real legal procedure.</p>
@@ -107,13 +107,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir and the fake police call",
+  title: "Meera and the fake police call",
   icon: ShieldCheck,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Spot the warning signs, then choose what the family should do.",
-  lockedHint: "Help Kabir and Mum respond to the call first.",
+  lockedHint: "Help Meera and Mum respond to the call first.",
   World,
 };
 export default chapter;

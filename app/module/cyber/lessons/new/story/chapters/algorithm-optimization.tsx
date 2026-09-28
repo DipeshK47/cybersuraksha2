@@ -103,13 +103,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir’s frozen leaderboard",
+  title: "Meera’s frozen leaderboard",
   icon: Trophy,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Race the sorts on all three lists, then justify the choice.",
-  lockedHint: "Help Kabir race the two sorts first.",
+  lockedHint: "Help Meera race the two sorts first.",
   World,
 };
 export default chapter;

@@ -1,25 +1,25 @@
 {
-  "duration": 116.156,
+  "duration": 115.324,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Kabir",
+      "label": "Meet Meera",
       "title": "The report-card program",
       "mood": "happy",
-      "caption": "Kabir volunteers in the computer lab. For two weeks he's helped Mrs D'Souza write the program that prints report cards for Classes 7A, 7B and 7C. It goes through every section, checks every student, and prints Pass or Fail. Results go home tomorrow, and tonight is the final check. Kabir feels proud.",
-      "speech": "Kabir volunteers in the computer lab. For two weeks he's helped Missus D'Souza write the program that prints report cards for Classes Seven A, Seven B and Seven C. It goes through every section, checks every student, and prints Pass or Fail. Results go home tomorrow, and tonight is the final check. Kabir feels proud.",
+      "caption": "Meera volunteers in the computer lab. For two weeks she's helped Mrs D'Souza write the program that prints report cards for Classes 7A, 7B and 7C. It goes through every section, checks every student, and prints Pass or Fail. Results go home tomorrow, and tonight is the final check. Meera feels proud.",
+      "speech": "Meera volunteers in the computer lab. For two weeks she's helped Missus D'Souza write the program that prints report cards for Classes Seven A, Seven B and Seven C. It goes through every section, checks every student, and prints Pass or Fail. Results go home tomorrow, and tonight is the final check. Meera feels proud.",
       "dialogue": "Three sections, one program, zero mistakes. I hope!",
       "status": "Final check tonight",
       "start": 0.0,
-      "duration": 19.349
+      "duration": 19.307
     },
     {
       "id": "bugs",
       "label": "Wrong results",
       "title": "Rahul passed. It says Fail.",
       "mood": "sad",
-      "caption": "Then Kabir spots his friend Rahul's line: 40 marks, 82% attendance, Fail. But the rule says 40 or more is a pass! Worse, every section's list is one name short. Yusuf, the last student in 7A, isn't there at all. Neither is Zoya in 7B. If these cards go home, real families get wrong news.",
-      "speech": "Then Kabir spots his friend Rahul's line: forty marks, eighty-two percent attendance, Fail. But the rule says forty or more is a pass! Worse, every section's list is one name short. Yusuf, the last student in Seven A, isn't there at all. Neither is Zoya in Seven B. If these cards go home, real families get wrong news.",
+      "caption": "Then Meera spots her friend Rahul's line: 40 marks, 82% attendance, Fail. But the rule says 40 or more is a pass! Worse, every section's list is one name short. Yusuf, the last student in 7A, isn't there at all. Neither is Zoya in 7B. If these cards go home, real families get wrong news.",
+      "speech": "Then Meera spots her friend Rahul's line: forty marks, eighty-two percent attendance, Fail. But the rule says forty or more is a pass! Worse, every section's list is one name short. Yusuf, the last student in Seven A, isn't there at all. Neither is Zoya in Seven B. If these cards go home, real families get wrong news.",
       "dialogue": "Rahul passed! Why does it say Fail?",
       "status": "Two bugs, one night",
       "tone": "trouble",
@@ -27,43 +27,43 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.999,
-      "duration": 19.221
+      "start": 19.957,
+      "duration": 18.88
     },
     {
       "id": "trace",
       "label": "Trace the code",
       "title": "Forty isn't greater than forty.",
       "mood": "thinking",
-      "caption": "Kabir traces the pseudocode line by line, writing values in a trace table. The rule is marks of 40 or more. But line 4 says marks greater than 40, and 40 isn't greater than 40. That's a boundary error. And the inner loop stops at count minus one, so it skips the last student, in every section.",
-      "speech": "Kabir traces the pseudocode line by line, writing values in a trace table. The rule is marks of forty or more. But line four says marks greater than forty, and forty isn't greater than forty. That's a boundary error. And the inner loop stops at count minus one, so it skips the last student, in every section.",
+      "caption": "Meera traces the pseudocode line by line, writing values in a trace table. The rule is marks of 40 or more. But line 4 says marks greater than 40, and 40 isn't greater than 40. That's a boundary error. And the inner loop stops at count minus one, so it skips the last student, in every section.",
+      "speech": "Meera traces the pseudocode line by line, writing values in a trace table. The rule is marks of forty or more. But line four says marks greater than forty, and forty isn't greater than forty. That's a boundary error. And the inner loop stops at count minus one, so it skips the last student, in every section.",
       "dialogue": "Forty isn't greater than forty. There's the bug!",
       "status": "Tracing line by line",
-      "start": 39.871,
-      "duration": 18.603
+      "start": 39.487,
+      "duration": 18.624
     },
     {
       "id": "fix",
       "label": "Fix and test",
       "title": "Match the rule. Reach the end.",
       "mood": "thinking",
-      "caption": "Your turn. Fix both bugs in Kabir's pseudocode. Choose the comparison that matches the rule exactly, and the loop end that reaches the last student. Then run the test table. Careful: greater than 39 might seem to work, but the rule says 40 or more, so the code should say that too.",
-      "speech": "Your turn. Fix both bugs in Kabir's pseudocode. Choose the comparison that matches the rule exactly, and the loop end that reaches the last student. Then run the test table. Careful: greater than thirty-nine might seem to work, but the rule says forty or more, so the code should say that too.",
+      "caption": "Your turn. Fix both bugs in Meera's pseudocode. Choose the comparison that matches the rule exactly, and the loop end that reaches the last student. Then run the test table. Careful: greater than 39 might seem to work, but the rule says 40 or more, so the code should say that too.",
+      "speech": "Your turn. Fix both bugs in Meera's pseudocode. Choose the comparison that matches the rule exactly, and the loop end that reaches the last student. Then run the test table. Careful: greater than thirty-nine might seem to work, but the rule says forty or more, so the code should say that too.",
       "dialogue": "Match the rule, reach the last student, then test.",
       "status": "Debugging the code",
-      "start": 59.123,
-      "duration": 17.941
+      "start": 58.761,
+      "duration": 17.621
     },
     {
       "id": "edges",
       "label": "Test the edges",
       "title": "Below, on and above the line",
       "mood": "happy",
-      "caption": "Every test passes. Kabir learned why programmers test the boundaries: just below, exactly on, and just above the limit, like 39, 40 and 41. They test the edges of lists too: the first and last student. And in nested loops, one bug in the inner loop repeats for every section, so small mistakes multiply.",
-      "speech": "Every test passes. Kabir learned why programmers test the boundaries: just below, exactly on, and just above the limit, like thirty-nine, forty and forty-one. They test the edges of lists too: the first and last student. And in nested loops, one bug in the inner loop repeats for every section, so small mistakes multiply.",
+      "caption": "Every test passes. Meera learned why programmers test the boundaries: just below, exactly on, and just above the limit, like 39, 40 and 41. They test the edges of lists too: the first and last student. And in nested loops, one bug in the inner loop repeats for every section, so small mistakes multiply.",
+      "speech": "Every test passes. Meera learned why programmers test the boundaries: just below, exactly on, and just above the limit, like thirty-nine, forty and forty-one. They test the edges of lists too: the first and last student. And in nested loops, one bug in the inner loop repeats for every section, so small mistakes multiply.",
       "dialogue": "Test below, on and above the line.",
       "status": "Testing the boundaries",
-      "start": 77.715,
+      "start": 77.032,
       "duration": 19.029
     },
     {
@@ -71,13 +71,13 @@
       "label": "A happier ending",
       "title": "Results day",
       "mood": "happy",
-      "caption": "Results day. Rahul's card says Pass, and he grins all the way home. Yusuf and Zoya's cards are printed too. Mrs D'Souza adds boundary tests to the lab's checklist, and names it Kabir's rule: test the edges before you trust the output. Your turn: help Kabir trace more tricky pseudocode!",
-      "speech": "Results day. Rahul's card says Pass, and he grins all the way home. Yusuf and Zoya's cards are printed too. Missus D'Souza adds boundary tests to the lab's checklist, and names it Kabir's rule: test the edges before you trust the output. Your turn: help Kabir trace more tricky pseudocode!",
+      "caption": "Results day. Rahul's card says Pass, and he grins all the way home. Yusuf and Zoya's cards are printed too. Mrs D'Souza adds boundary tests to the lab's checklist, and names it Meera's rule: test the edges before you trust the output. Your turn: help Meera trace more tricky pseudocode!",
+      "speech": "Results day. Rahul's card says Pass, and he grins all the way home. Yusuf and Zoya's cards are printed too. Missus D'Souza adds boundary tests to the lab's checklist, and names it Meera's rule: test the edges before you trust the output. Your turn: help Meera trace more tricky pseudocode!",
       "dialogue": "Test the edges before you trust the output.",
       "status": "Report cards fixed",
       "tone": "resolved",
-      "start": 97.394,
-      "duration": 18.112
+      "start": 96.711,
+      "duration": 17.963
     }
   ]
 }

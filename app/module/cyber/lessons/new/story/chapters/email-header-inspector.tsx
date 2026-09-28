@@ -12,7 +12,7 @@ const REAL = "youngscientists.cyberpur.example";
 const rows = [
   { field: "Date", value: "Mon, 12 Oct 2026 21:47:03 +0530", bad: false, why: "The date only says when it was sent. Nothing odd here." },
   { field: "From", value: "Scholarship Office <awards@youngscientists-cyberpur.example>", bad: true, why: "Lookalike domain: a hyphen instead of a dot. The real office is youngscientists.cyberpur.example." },
-  { field: "To", value: "kabir.s@mail.cyberpur.example", bad: false, why: "That’s Kabir’s own address, so it’s normal." },
+  { field: "To", value: "meera.s@mail.cyberpur.example", bad: false, why: "That’s Meera’s own address, so it’s normal." },
   { field: "Reply-To", value: "claims@fast-prize-desk.example", bad: true, why: "Replies would go to a completely different domain." },
   { field: "Subject", value: "Congratulations! Award confirmed", bad: false, why: "An exciting subject isn’t a header mismatch by itself. Compare the addresses and servers." },
   { field: "Received", value: "from mail.bulk-sender.example (203.0.113.45)", bad: true, why: "It came through an unrelated bulk-mail server, not the office’s." },
@@ -29,7 +29,7 @@ const glossary = [
 
 const verifySteps = [
   { Icon: PhoneCall, text: "Call the number on the official website, not the email", at: .3 },
-  { Icon: Users, text: "Tell his parents, and warn classmates", at: .6 },
+  { Icon: Users, text: "Tell her parents, and warn classmates", at: .6 },
   { Icon: Flag, text: "Report it as phishing in the mail app", at: .66 },
 ];
 
@@ -69,12 +69,12 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Inbox size={16} /> CYBERPUR MAIL</span><span>Kabir’s inbox · pretend app</span></div>
+      <div className={k.deviceBar}><span><Inbox size={16} /> CYBERPUR MAIL</span><span>Meera’s inbox · pretend app</span></div>
       <div className={r.withBadge}>
         {inbox(scene === 0 ? "fake" : "real")}
         {scene === 5 && <div className={r.won}><Trophy aria-hidden="true" /><strong>You’ve won the scholarship!</strong><span>No fee. Headers checked: every field matches.</span></div>}
       </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><Mail /><span>Real office emails come from</span><b>{REAL}</b></> : <><Flag /><span>The fake reached 20 applicants. Kabir’s report helped warn them.</span></>}</div>
+      <div className={k.deviceFoot}>{scene === 0 ? <><Mail /><span>Real office emails come from</span><b>{REAL}</b></> : <><Flag /><span>The fake reached 20 applicants. Meera’s report helped warn them.</span></>}</div>
     </div>}
 
     {scene === 1 && <div className={k.device}>
@@ -91,7 +91,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Meera · Kabir’s sister</small><p>“Don’t trust the name. Read the headers.”</p></div></div>
+      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Arjun · Meera’s brother</small><p>“Don’t trust the name. Read the headers.”</p></div></div>
       <div className={r.nameDemo} {...show(.12)}><span className={r.label}>Scholarship Office</span><span className={r.addr}>&lt;awards@youngscientists-cyberpur.example&gt;</span><small>display name · anyone can type it</small><small>address · where it really came from</small></div>
       <div className={r.glossary}>{glossary.map(({ name, text, Icon, at }) => <div key={name} {...show(at)}><Icon aria-hidden="true" /><strong>{name}</strong><span>{text}</span></div>)}</div>
     </div>}
@@ -130,13 +130,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir and the award email",
+  title: "Meera and the award email",
   icon: MailWarning,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Flag every header clue, then submit your findings.",
-  lockedHint: "Help Kabir inspect the email headers first.",
+  lockedHint: "Help Meera inspect the email headers first.",
   World,
 };
 export default chapter;

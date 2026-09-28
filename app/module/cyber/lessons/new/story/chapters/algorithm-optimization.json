@@ -1,25 +1,25 @@
 {
-  "duration": 115.559,
+  "duration": 115.495,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Kabir",
+      "label": "Meet Meera",
       "title": "Sports day leaderboard",
       "mood": "happy",
-      "caption": "Sports day! Kabir built the live leaderboard for the school's fun run, and this year 2,000 runners have signed up: students, teachers, even grandparents. In class, he tested it with 30 names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
-      "speech": "Sports day! Kabir built the live leaderboard for the school's fun run, and this year two thousand runners have signed up: students, teachers, even grandparents. In class, he tested it with thirty names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
+      "caption": "Sports day! Meera built the live leaderboard for the school's fun run, and this year 2,000 runners have signed up: students, teachers, even grandparents. In class, she tested it with 30 names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
+      "speech": "Sports day! Meera built the live leaderboard for the school's fun run, and this year two thousand runners have signed up: students, teachers, even grandparents. In class, she tested it with thirty names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
       "dialogue": "Thirty names took no time. This will be easy!",
       "status": "Sports day, big screen",
       "start": 0.0,
-      "duration": 18.432
+      "duration": 18.368
     },
     {
       "id": "freeze",
       "label": "The freeze",
       "title": "Sorting… still sorting…",
       "mood": "sad",
-      "caption": "By noon, all 2,000 runners have finished. Kabir presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Kabir's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
-      "speech": "By noon, all two thousand runners have finished. Kabir presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Kabir's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
+      "caption": "By noon, all 2,000 runners have finished. Meera presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Meera's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
+      "speech": "By noon, all two thousand runners have finished. Meera presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Meera's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
       "dialogue": "It worked with thirty names. Why is it stuck?",
       "status": "Leaderboard frozen",
       "tone": "trouble",
@@ -27,19 +27,19 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.082,
-      "duration": 18.773
+      "start": 19.018,
+      "duration": 18.667
     },
     {
       "id": "growth",
       "label": "Count the work",
       "title": "Double the list, four times the work",
       "mood": "thinking",
-      "caption": "Mrs D'Souza helps him count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
-      "speech": "Missus D'Souza helps him count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
+      "caption": "Mrs D'Souza helps her count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
+      "speech": "Missus D'Souza helps her count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
       "dialogue": "Double the runners, four times the work!",
       "status": "Counting the work",
-      "start": 38.505,
+      "start": 38.335,
       "duration": 19.328
     },
     {
@@ -51,7 +51,7 @@
       "speech": "Your turn. Race the two sorts on three lists: eight names already in order, a hundred results in reverse, and all two thousand mixed-up results. Predict which does less work, then read the comparison counts. Finally, justify the choice for sports day. Careful: bubble sort isn't always slower. On one of these lists, it wins.",
       "dialogue": "Predict first, then let the counts decide.",
       "status": "Racing the sorts",
-      "start": 58.483,
+      "start": 58.313,
       "duration": 18.731
     },
     {
@@ -63,7 +63,7 @@
       "speech": "So the best algorithm depends on the data. For a tiny list that's already sorted, bubble sort with an early exit finishes in one quick pass. But as lists grow, n squared explodes: about two million comparisons for two thousand runners, against about twenty thousand for merge sort. Big lists need algorithms that scale.",
       "dialogue": "Choose the algorithm for the data, not by habit.",
       "status": "Choosing wisely",
-      "start": 77.864,
+      "start": 77.693,
       "duration": 19.008
     },
     {
@@ -71,13 +71,13 @@
       "label": "A happier ending",
       "title": "Medals on time",
       "mood": "happy",
-      "caption": "Kabir switches the leaderboard to merge sort. He presses Update, and all 2,000 names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Kabir compare more algorithms and pick the right one for the job!",
-      "speech": "Kabir switches the leaderboard to merge sort. He presses Update, and all two thousand names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Kabir compare more algorithms and pick the right one for the job!",
+      "caption": "Meera switches the leaderboard to merge sort. She presses Update, and all 2,000 names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Meera compare more algorithms and pick the right one for the job!",
+      "speech": "Meera switches the leaderboard to merge sort. She presses Update, and all two thousand names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Meera compare more algorithms and pick the right one for the job!",
       "dialogue": "Two thousand names in under a second!",
       "status": "Leaderboard live again",
       "tone": "resolved",
-      "start": 97.522,
-      "duration": 17.387
+      "start": 97.351,
+      "duration": 17.493
     }
   ]
 }

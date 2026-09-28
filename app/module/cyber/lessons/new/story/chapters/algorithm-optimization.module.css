@@ -1,4 +1,4 @@
-/* Kabir's leaderboard chapter only: the big-screen leaderboard, the frozen sort, bubble vs merge cards, the race task and the summary. Shared pieces live in ../story-player.module.css. */
+/* Meera's leaderboard chapter only: the big-screen leaderboard, the frozen sort, bubble vs merge cards, the race task and the summary. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .wait,.spinner,.swaps,.algo,.term,.summary>div,.scale{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].wait,[data-on="false"].spinner,[data-on="false"].swaps,[data-on="false"].algo,[data-on="false"].term,.summary>div[data-on="false"],[data-on="false"].scale{opacity:0;transform:translateY(6px)}

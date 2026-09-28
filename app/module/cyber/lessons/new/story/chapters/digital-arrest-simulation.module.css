@@ -1,4 +1,4 @@
-/* Kabir's fake-police-call chapter only: the desk art, the pretend video call (illustrated caller), Kabir's note, the signs-and-actions task and the report card. Shared pieces live in ../story-player.module.css. */
+/* Meera's fake-police-call chapter only: the desk art, the pretend video call (illustrated caller), Meera's note, the signs-and-actions task and the report card. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .incoming,.captions p,.note,.fact,.help,.fault{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].incoming,.captions p[data-on="false"],[data-on="false"].note,[data-on="false"].fact,[data-on="false"].help,[data-on="false"].fault{opacity:0;transform:translateY(6px)}
@@ -34,7 +34,7 @@
 .captions b{color:#ffc9a8}
 .pretend{position:absolute;z-index:2;left:0;right:0;bottom:6px;font-size:.58rem;text-align:center;color:#cfd8dc}
 
-/* Scene 3: Kabir's note */
+/* Scene 3: Meera's note */
 .note{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;padding:12px 14px;border-radius:4px;background:#fff8d6;color:#3b2a10;box-shadow:0 6px 14px #6b3b2a22;transform:rotate(-1deg)}
 [data-on="false"].note{transform:rotate(-1deg) translateY(6px)}
 .note svg{flex:none;width:20px;height:20px;color:#936834}

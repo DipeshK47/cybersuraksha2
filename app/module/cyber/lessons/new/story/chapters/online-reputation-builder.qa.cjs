@@ -1,4 +1,4 @@
-// QA hooks for scripts/story-qa.cjs: how a learner audits Kabir's three public posts.
+// QA hooks for scripts/story-qa.cjs: how a learner audits Meera's three public posts.
 module.exports = {
   async solve(page) {
     for (const name of [/^Keep: water-tester post/, /^Delete and apologise: comment on Rahul/, /^Hide and ask: photo of Aarav/]) {
@@ -9,6 +9,6 @@ module.exports = {
   },
   async wrongAttempt(page) {
     await page.getByRole('button', { name: /^Delete and apologise: water-tester post/ }).click();
-    return /hides Kabir.s best evidence/;
+    return /hides Meera.s best evidence/;
   },
 };

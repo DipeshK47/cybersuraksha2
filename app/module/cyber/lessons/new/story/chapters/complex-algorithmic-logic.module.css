@@ -1,4 +1,4 @@
-/* Kabir's report-card chapter only: the pseudocode console, print queue, output preview, trace table, the fix-and-test task and the boundary card. Shared pieces live in ../story-player.module.css. */
+/* Meera's report-card chapter only: the pseudocode console, print queue, output preview, trace table, the fix-and-test task and the boundary card. Shared pieces live in ../story-player.module.css. */
 /* Narration-synced reveals keep their space so nothing jumps. */
 .queue,.table tr,.also,.trace,.trace tr,.terms>div,.line,.edges,.multiply{transition:opacity .25s ease-out,transform .25s var(--ease)}
 [data-on="false"].queue,.table tr[data-on="false"],[data-on="false"].also,[data-on="false"].trace,.trace tr[data-on="false"],.terms>div[data-on="false"],[data-on="false"].line,[data-on="false"].edges,[data-on="false"].multiply{opacity:0;transform:translateY(6px)}

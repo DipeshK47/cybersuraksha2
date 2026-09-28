@@ -31,11 +31,11 @@ const frames: { t: string; artefact: boolean; clue?: string; note: string; view:
   { t: "0:11", artefact: true, clue: "Lighting mismatch", note: "The lamp is on her left, but the shadow on her face falls on the left too.", view: { shadow: "left", focus: "shadow" }, wrong: "Shadows fall away from a light, not towards it. This lighting doesn’t make sense.", right: "Clue: the shadow is on the lamp’s side." },
   { t: "0:14", artefact: false, note: "She waves with one hand as she speaks.", view: { wave: true, focus: "hand" }, wrong: "Waving while talking is ordinary. Look for things that break physics or don’t match the sound.", right: "Normal: people wave while they talk." },
 ];
-const plans = [{ who: "Riya", text: "I’m bringing samosas!", at: .35 }, { who: "Dev", text: "Giant wheel first", at: .48 }, { who: "Anu", text: "Kabir, can I test the lake water?", at: .75 }];
+const plans = [{ who: "Riya", text: "I’m bringing samosas!", at: .35 }, { who: "Dev", text: "Giant wheel first", at: .48 }, { who: "Anu", text: "Meera, can I test the lake water?", at: .75 }];
 const replies = [{ who: "Riya", text: "No way", at: .5 }, { who: "Dev", text: "My whole weekend…", at: .6 }, { who: "Anu", text: "Sharing with my cousins", at: .7 }];
 const verify = [
   { label: "Post “FAKE!” in the group right away", ok: false, why: "Clues aren’t proof. Confirm with an official source before telling everyone it’s fake." },
-  { label: "Check the fair’s official page first", ok: true, why: "The official page says the fair is on. Now Kabir can share that instead." },
+  { label: "Check the fair’s official page first", ok: true, why: "The official page says the fair is on. Now Meera can share that instead." },
   { label: "Forward it with “is this real?”", ok: false, why: "Forwarding still spreads it, even with a question. Check first, then share the official answer." },
 ];
 
@@ -72,11 +72,11 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     {(scene === 0 || scene === 5) && <div className={k.device}>
       <div className={k.deviceBar}><span><FerrisWheel size={16} /> CYBERPUR FAIR</span><span>{scene === 0 ? "Saturday & Sunday" : "Saturday night"}</span></div>
       <div className={`${k.deviceArt} ${r.fair}`}>
-        {scene === 0 && <><div className={k.badge}><Sparkles /> Stall 14 · Kabir’s water tester</div>
+        {scene === 0 && <><div className={k.badge}><Sparkles /> Stall 14 · Meera’s water tester</div>
           <div className={r.chat}>{plans.map(({ who, text, at }) => <p key={who} {...show(at)}><b>{who}</b>{text}</p>)}</div></>}
         {scene === 5 && <div className={k.success}><FerrisWheel /><strong>The fair is on!</strong><span>Stall 14 is packed</span></div>}
       </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><MessagesSquare /><span>Class 7B group · 38 new messages</span></> : <><BadgeCheck /><span>Kabir’s habit: pause, look closer, check the source</span></>}</div>
+      <div className={k.deviceFoot}>{scene === 0 ? <><MessagesSquare /><span>Class 7B group · 38 new messages</span></> : <><BadgeCheck /><span>Meera’s habit: pause, look closer, check the source</span></>}</div>
     </div>}
 
     {scene === 1 && <div className={r.phoneChat}>
@@ -111,28 +111,28 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         </div>
       </div>
       <div className={r.strip}>{frames.map((f, i) => <button key={f.t} type="button" aria-label={`Frame ${f.t}`} aria-pressed={current === i} data-done={marks[i]} data-clue={marks[i] && f.artefact} onClick={() => { setCurrent(i); setHint(""); }}>{f.t}{marks[i] && (f.artefact ? <Flag aria-hidden="true" /> : <Check aria-hidden="true" />)}</button>)}</div>
-      {tagged && <div className={r.verify}><small>Before sharing, Kabir should…</small>{verify.map(v => <button key={v.label} type="button" onClick={() => check(v)} disabled={done}>{v.label}</button>)}</div>}
-      <p className={k.hint} aria-live="polite">{hint || (done ? "The official page says the fair is on. Now Kabir can share that instead." : tagged ? "Three clues found. What should Kabir do before sharing?" : `${marks.filter(Boolean).length} of 5 frames checked.`)}</p>
+      {tagged && <div className={r.verify}><small>Before sharing, Meera should…</small>{verify.map(v => <button key={v.label} type="button" onClick={() => check(v)} disabled={done}>{v.label}</button>)}</div>}
+      <p className={k.hint} aria-live="polite">{hint || (done ? "The official page says the fair is on. Now Meera can share that instead." : tagged ? "Three clues found. What should Meera do before sharing?" : `${marks.filter(Boolean).length} of 5 frames checked.`)}</p>
       <div className={k.actions}><button type="button" className={r.trap} data-trap="true" disabled={done} onClick={() => { if (!done) setHint("Realistic fakes exist, and this clip has clues. Never forward something just because it looks convincing."); }}><Forward />Looks real. Forward it</button></div>
       <small>Illustrated clip. No real person is shown.</small>
     </div>}
 
     {scene === 4 && <div className={k.panel}>
       <div className={r.official} {...show(.02)}><div className={r.officialHead}><FerrisWheel aria-hidden="true" /><strong>Cyberpur Fair</strong><BadgeCheck aria-hidden="true" /><small>Official page</small></div><p>The fair is <b>ON</b> this weekend. A fake video is going around. Please don’t forward it.</p></div>
-      {["Shared the official post in the group", "Asked friends to stop forwarding", "Told his teacher", "Reported the video to the app"].map((step, i) => <div className={k.step} key={step} data-active={cue([.3, .4, .55, .66][i])}><span><Check /></span>{step}</div>)}
+      {["Shared the official post in the group", "Asked friends to stop forwarding", "Told her teacher", "Reported the video to the app"].map((step, i) => <div className={k.step} key={step} data-active={cue([.3, .4, .55, .66][i])}><span><Check /></span>{step}</div>)}
     </div>}
   </SceneSwap>;
 }
 
 const chapter: StoryChapter = {
   script,
-  title: "Kabir and the fake fair video",
+  title: "Meera and the fake fair video",
   icon: ScanFace,
-  character: { asset: "emotional-avatar", name: "Kabir" },
+  character: { asset: "emotional-avatar", name: "Meera" },
   interactionScene: 3,
-  beginLabel: "Practise with Kabir",
+  beginLabel: "Practise with Meera",
   waitingText: "Story paused. Check every frame, then decide what to do before sharing.",
-  lockedHint: "Help Kabir inspect the clip first.",
+  lockedHint: "Help Meera inspect the clip first.",
   World,
 };
 export default chapter;
