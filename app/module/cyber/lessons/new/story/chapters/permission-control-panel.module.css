@@ -1,6 +1,6 @@
 /* Tara chapter only: water-cycle poster, pretend phone + permission sheet, power-cut card, app/job matcher. Shared pieces live in ../story-player.module.css. */
-[data-show]{transition:opacity .25s ease,transform .25s var(--ease)}
-[data-show="false"]{opacity:.22}
+:is(.stack,.duo,.reveal) [data-show]{transition:opacity .25s ease,transform .25s var(--ease)}
+:is(.stack,.duo,.reveal) [data-show="false"]{opacity:.22}
 
 /* Scene layouts */
 .stack{display:grid;gap:14px}
@@ -13,7 +13,7 @@
 .poster figcaption{font-family:var(--font-display),sans-serif;font-size:1.45rem;font-weight:750;color:#1f4a60;letter-spacing:-.01em}
 .poster figcaption small{display:block;margin-top:2px;font-family:inherit;font-size:.7rem;font-weight:700;color:#7a7458;letter-spacing:0}
 .sticky{position:absolute;top:14px;right:18px;padding:8px 11px;background:#ffe58a;color:#6b4a0f;font-size:.7rem;font-weight:850;box-shadow:0 6px 12px #5a4a1a22;transform:rotate(4deg)}
-.cycle{display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);grid-template-rows:auto 54px auto;align-items:center;justify-items:center;margin-top:16px}
+.cycle{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);max-width:440px;margin-inline:auto;grid-template-rows:auto 54px auto;align-items:center;justify-items:center;margin-top:16px}
 .node{display:grid;justify-items:center;gap:7px;min-width:0}
 .node>span{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#fff3c4;color:#c7831c;box-shadow:inset 0 0 0 2px #f0d27c}
 .node svg{width:30px;height:30px}
@@ -27,7 +27,7 @@
 .missing{display:flex;align-items:center;gap:5px;padding:6px 9px;border:2px dashed #d9a95c;border-radius:8px;background:#fff8e6;color:#8a5a1c;font-size:.66rem;font-weight:850;white-space:nowrap}
 .missing svg{width:15px;height:15px}
 .missing[data-nudge="true"]{border-color:#c77d1f;background:#ffefc7}
-.stamp{position:absolute;right:18px;bottom:16px;display:flex;align-items:center;gap:5px;padding:7px 12px;border:2px solid #3c8a55;border-radius:999px;background:#e4f3dc;color:#2c6a3f;font-size:.78rem;font-weight:900;transform:rotate(-6deg)}
+.stamp{position:absolute;top:14px;right:18px;display:flex;align-items:center;gap:5px;padding:7px 12px;border:2px solid #3c8a55;border-radius:999px;background:#e4f3dc;color:#2c6a3f;font-size:.78rem;font-weight:900;transform:rotate(-6deg)}
 .stamp svg{width:16px;height:16px}
 .tray{display:flex;flex-wrap:wrap;gap:8px}
 .tray>span{display:flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid #d6ddcb;border-radius:999px;background:#fffcf3;color:#36564d;font-size:.72rem;font-weight:750}
@@ -67,7 +67,6 @@
 .sheetHead strong{font-size:.84rem}
 .sheetHead span{font-size:.65rem;color:#5c6d66}
 .perm{display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:center;gap:9px;width:100%;min-height:50px;padding:6px 3px;border:0;border-top:1px solid #e8e4d4;background:transparent;color:inherit;text-align:left}
-.intro .perm{font-size:.74rem;font-weight:700}
 .permIcon{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e7f0e6;color:#2f6a55}
 .permIcon svg{width:16px;height:16px}
 .permText{display:grid;gap:1px;min-width:0}
@@ -80,13 +79,12 @@
 .switch[data-on="true"]:after{transform:translateX(15px)}
 .perm[aria-checked="false"] .permIcon{background:#eeeae0;color:#8a8a7c}
 .allowAll{display:grid;place-items:center;min-height:44px;margin-top:10px;border:0;border-radius:22px;background:#f2a93b;color:#3b2503;font-size:.86rem;font-weight:900;box-shadow:0 4px 12px #c9831f44}
-.intro .allowAll{font-size:.86rem}
 .allowAll[data-nudge="true"]{box-shadow:0 0 0 4px #f2a93b55,0 4px 12px #c9831f44}
 .choices{display:grid;place-items:center;min-height:40px;margin-top:4px;border:0;background:transparent;color:#1d6a66;font-size:.74rem;font-weight:800;text-decoration:underline;text-underline-offset:3px}
-.intro .choices{font-size:.74rem}
+.sheet .choices{font-size:.74rem}
 
-.torchOn{display:grid;justify-items:center;align-content:start;gap:6px;flex:1;padding:22px 16px 16px;background:radial-gradient(circle at 50% 22%,#fff4c2 0,#f7d97a 22%,#2a4a52 58%,#132831 80%);color:#fffbe8;text-align:center}
-.beam{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:#fffdf0;color:#c7831c;box-shadow:0 0 0 10px #fff6c955,0 0 40px 18px #fff1a8aa}
+.torchOn{display:grid;justify-items:center;align-content:start;gap:6px;flex:1;padding:22px 16px 16px;background:radial-gradient(circle at 50% 61px,#fff4c2 0,#f7d97a 46px,#4a6a5c 92px,#1d3a42 140px,#132831 190px);color:#fffbe8;text-align:center}
+.beam{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:#fffdf0;color:#a8650c;box-shadow:0 0 0 10px #fff6c955,0 0 40px 18px #fff1a8aa}
 .beam svg{width:36px;height:36px}
 .torchOn strong{margin-top:14px;font-family:var(--font-display),sans-serif;font-size:1.35rem}
 .torchOn>span{font-size:.7rem;color:#dfeee8}
@@ -111,7 +109,7 @@
 .meera{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
 .meera>span{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:#7a4ea3;color:#fff;font-weight:900}
 .meera p{margin:0!important;font-family:var(--font-display),sans-serif;font-size:1.15rem!important;line-height:1.3!important;color:#375b53}
-.meera b{display:block;font-family:var(--font-body,inherit),sans-serif;font-size:.72rem;font-weight:850;color:#6d4a8f}
+.meera b{display:block;font-size:.72rem;font-weight:850;color:#6d4a8f}
 .need{margin:9px 0}
 .need>div{display:grid;gap:1px;min-width:0}
 .need strong{font-size:.84rem}
@@ -172,7 +170,7 @@
   .node i{width:60px}
   .arrow{width:22px;height:22px}
   .missing{font-size:.6rem;padding:5px 7px}
-  .stamp{right:10px;bottom:10px;font-size:.68rem}
+  .stamp{top:10px;right:10px;font-size:.68rem}
   .tray>span{font-size:.66rem;padding:6px 9px}
   .outage{order:-1;grid-template-columns:auto minmax(0,1fr);column-gap:12px;padding:16px}
   .outageIcon{grid-row:1/3;margin:0}

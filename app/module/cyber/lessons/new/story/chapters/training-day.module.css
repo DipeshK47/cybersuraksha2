@@ -60,13 +60,14 @@
 .card{display:grid;gap:6px;min-width:0;padding:6px;border:1.5px solid #d8e0cf;border-radius:11px;background:#fff;transition:border-color .2s ease,background .2s ease}
 .card[data-label="dog"]{border-color:#6aa77f;background:#f1f8ee}
 .card[data-label="not"]{border-color:#c9a07a;background:#fbf3ea}
-.thumb{display:grid;place-items:center;height:64px;overflow:hidden;border-radius:7px}
-.thumb img{width:100%;height:100%;object-fit:cover}
-.thumb[data-kind="indie"] img{object-position:center 25%}
+.thumb{position:relative;display:grid;place-items:center;height:78px;overflow:hidden;border-radius:7px}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb[data-kind="golden"] img{object-position:center 45%}
+.thumb[data-kind="indie"] img{object-position:center 36%}
 .thumb[data-kind="cat"]{background:#f1dfc6;color:#8c5a2f}
 .thumb[data-kind="crow"]{background:#dfe5ee;color:#34465c}
 .thumb[data-kind="squirrel"]{background:#eadfd2;color:#7a4f33}
-.thumb svg{width:34px;height:34px}
+.thumb svg{width:40px;height:40px;stroke-width:1.7}
 .card>strong{padding:0 2px;font-size:.72rem}
 .toggle{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 .toggle button{display:flex;align-items:center;justify-content:center;gap:3px;min-height:40px;padding:4px 2px;border:1px solid #c8d5bd;border-radius:7px;background:#faf8ef;color:#345447;font-size:.68rem;white-space:nowrap}
@@ -110,4 +111,4 @@
 @keyframes boxIn{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
 @keyframes rec{50%{opacity:.25}}
 @media(max-width:900px){.screen{grid-template-columns:1fr}.feed{min-height:230px}.side{padding:12px}}
-@media(max-width:600px){.feed{min-height:200px}.box{inset:26% 22% 8% 24%}.box b{font-size:.62rem}.side .msg{font-size:.7rem}.teacher p{font-size:1.05rem}.dataset{gap:2px}.legend{font-size:.66rem;gap:5px 12px}.match{grid-template-columns:1fr;gap:6px}.match>svg{justify-self:center;transform:rotate(90deg)}.tray{grid-template-columns:repeat(2,minmax(0,1fr))}.results{gap:5px}.results>span{width:100%}.result{padding:4px 6px 4px 4px;gap:5px}.result img{width:26px;height:26px}.result small{font-size:.58rem}.compare{grid-template-columns:1fr}.checks span{font-size:.62rem}}
+@media(max-width:600px){.feed{min-height:200px}.thumb{height:66px}.box{inset:26% 22% 8% 24%}.box b{font-size:.62rem}.side .msg{font-size:.7rem}.teacher p{font-size:1.05rem}.dataset{gap:2px}.legend{font-size:.66rem;gap:5px 12px}.match{grid-template-columns:1fr;gap:6px}.match>svg{justify-self:center;transform:rotate(90deg)}.tray{grid-template-columns:repeat(2,minmax(0,1fr))}.results{gap:5px}.results>span{width:100%}.result{padding:4px 6px 4px 4px;gap:5px}.result img{width:26px;height:26px}.result small{font-size:.58rem}.compare{grid-template-columns:1fr}.checks span{font-size:.62rem}}

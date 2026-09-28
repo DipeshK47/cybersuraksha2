@@ -42,7 +42,7 @@ function AppIcon({ small }: { small?: boolean }) {
 function Poster({ labels, done, nudge }: { labels: boolean; done: boolean; nudge?: boolean }) {
   const node = (i: number) => { const { icon: Icon, label, kind } = cycle[i]; return <div className={c.node} data-kind={kind}><span><Icon aria-hidden="true" /></span>{labels ? <b className={k.fitIn}>{label}</b> : <i aria-hidden="true" />}</div>; };
   return <figure className={c.poster} data-glow={done} aria-label={`Tara’s water cycle poster${done ? ", finished" : ", one arrow still to draw"}`}>
-    <span className={c.sticky}>Due tomorrow!</span>
+    {done ? <span className={c.stamp}><Check aria-hidden="true" />Done!</span> : <span className={c.sticky}>Due tomorrow!</span>}
     <figcaption>The Water Cycle<small>by Tara · Class 5</small></figcaption>
     <div className={c.cycle}>
       {node(0)}<ArrowRight className={c.arrow} aria-hidden="true" />{node(1)}
@@ -51,7 +51,6 @@ function Poster({ labels, done, nudge }: { labels: boolean; done: boolean; nudge
       <ArrowDown className={c.arrow} aria-hidden="true" />
       {node(3)}<ArrowLeft className={c.arrow} aria-hidden="true" />{node(2)}
     </div>
-    {done && <span className={c.stamp}><Check aria-hidden="true" />Done!</span>}
   </figure>;
 }
 
@@ -132,7 +131,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       </div>
     </div>}
 
-    {scene === 2 && <div className={k.panel}>
+    {scene === 2 && <div className={`${k.panel} ${c.reveal}`}>
       <div className={c.meera}><span aria-hidden="true">M</span><p><b>Meera</b>“What does a torch need to do its job?”</p></div>
       <h2>Each request is a permission</h2>
       {perms.map(({ id, name, icon: Icon, what }, i) => <div key={id} className={`${k.step} ${c.need}`} data-active={at([.39, .61, .71, .74][i])}>
@@ -161,7 +160,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       </div>
     </div>}
 
-    {scene === 4 && <div className={k.panel}>
+    {scene === 4 && <div className={`${k.panel} ${c.reveal}`}>
       <h2>Match the access to the job</h2>
       {apps.map(({ icon: Icon, name, job, needs, note, tone }, i) => <div key={name} className={c.app} data-show={at([0, .33, .53][i])}>
         <span className={c.appTile} data-tone={tone}><Icon aria-hidden="true" /></span>

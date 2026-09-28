@@ -1,0 +1,80 @@
+{
+  "duration": 102.336,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Saturday at the bakery",
+      "mood": "happy",
+      "caption": "Meet Tara. Every Saturday, she helps at her Aunt Meera's bakery in Cyberpur. The bakery needs a new baker. Four people came to bake a test loaf, and Aunt Meera scored each one. Now an AI helper app will pick a shortlist. Tara can't wait!",
+      "speech": "Meet Tara. Every Saturday, she helps at her Aunt Meera's bakery in Cyberpur. The bakery needs a new baker. Four people came to bake a test loaf, and Aunt Meera scored each one. Now an A I helper app will pick a shortlist. Tara can't wait!",
+      "dialogue": "I love Saturdays at the bakery!",
+      "status": "Helping at the bakery",
+      "start": 0.0,
+      "duration": 15.453
+    },
+    {
+      "id": "problem",
+      "label": "The shortlist",
+      "title": "Where is Kavya?",
+      "mood": "sad",
+      "caption": "The shortlist pops up: two names, both from Hilltop School. But where's Kavya? Her test loaf got the top score, nine out of ten! Tara tasted it, and it was amazing. So why did the app leave her out? Tara feels upset. It isn't fair to Kavya.",
+      "dialogue": "Kavya’s bread was the best. Why not her?",
+      "status": "Feeling upset",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 16.103,
+      "duration": 16.274
+    },
+    {
+      "id": "data",
+      "label": "Check the data",
+      "title": "The app copied an old pattern.",
+      "mood": "thinking",
+      "caption": "Tara and Aunt Meera open the app's training data: the bakery's old hiring records. Years ago, almost every baker hired came from Hilltop School. So the app learned a pattern: Hilltop means hire. This is called biased data. Garbage in, garbage out: flawed examples in, unfair answers out.",
+      "dialogue": "So the app copied the old pattern?",
+      "status": "Checking the data",
+      "start": 33.027,
+      "duration": 18.853
+    },
+    {
+      "id": "fix",
+      "label": "Fix the data",
+      "title": "Keep the skills. Drop the unfair clue.",
+      "mood": "thinking",
+      "caption": "Your turn! Help Tara fix the training data. Which column has nothing to do with baking? Remove it, but keep the skill columns, because the app needs those to judge bakers fairly. Then rerun the app. Does Kavya make the shortlist now?",
+      "dialogue": "Which column doesn’t belong here?",
+      "status": "Fixing the data",
+      "start": 52.531,
+      "duration": 15.066
+    },
+    {
+      "id": "lesson",
+      "label": "People check",
+      "title": "The app helps. People decide.",
+      "mood": "happy",
+      "caption": "It worked! Now the app judges skills, and Kavya is on the shortlist. But Aunt Meera knows one fix isn't enough. AI learns from examples, so people must check where the data came from and look at every result. The app only helps. Aunt Meera still decides.",
+      "speech": "It worked! Now the app judges skills, and Kavya is on the shortlist. But Aunt Meera knows one fix isn't enough. A I learns from examples, so people must check where the data came from and look at every result. The app only helps. Aunt Meera still decides.",
+      "dialogue": "People must check what the app learned.",
+      "status": "Learning why",
+      "start": 68.246,
+      "duration": 16.807
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Fresh bread, fair chance.",
+      "mood": "happy",
+      "caption": "Aunt Meera meets Kavya, and she gets the job! Her first bread sells out by lunch. Tara feels proud she spoke up. Remember: an AI is only as good as the data it learns from. Your turn: help Tara check more hiring data for hidden unfair rules!",
+      "speech": "Aunt Meera meets Kavya, and she gets the job! Her first bread sells out by lunch. Tara feels proud she spoke up. Remember: an A I is only as good as the data it learns from. Your turn: help Tara check more hiring data for hidden unfair rules!",
+      "dialogue": "Kavya’s bread is the best in Cyberpur!",
+      "status": "Proud and happy",
+      "tone": "resolved",
+      "start": 85.703,
+      "duration": 15.983
+    }
+  ]
+}
