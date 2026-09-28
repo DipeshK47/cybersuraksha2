@@ -1,0 +1,80 @@
+{
+  "duration": 111.932,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "Fair weekend!",
+      "mood": "happy",
+      "caption": "The Cyberpur fair is this weekend, and Kabir can't wait. He'll run a stall showing his water tester, right next to the giant wheel. His class group chat is buzzing with plans: who's bringing snacks, which rides come first, and whether Kabir will let everyone test the lake water themselves.",
+      "dialogue": "Stall 14, right by the giant wheel!",
+      "status": "Counting down to Saturday",
+      "start": 0.0,
+      "duration": 17.024
+    },
+    {
+      "id": "clip",
+      "label": "The clip",
+      "title": "“The fair is cancelled.”",
+      "mood": "sad",
+      "caption": "Then a video lands in the group. It shows the fair's organiser, Mrs Kulkarni, saying: the fair is cancelled this weekend. It's already been forwarded again and again. Friends start posting sad faces. Kabir's stall, the rides, the plans, all gone? His thumb hovers over Forward, ready to send it to his cousins too.",
+      "speech": "Then a video lands in the group. It shows the fair's organiser, Missus Kulkarni, saying: the fair is cancelled this weekend. It's already been forwarded again and again. Friends start posting sad faces. Kabir's stall, the rides, the plans, all gone? His thumb hovers over Forward, ready to send it to his cousins too.",
+      "dialogue": "Cancelled? But everything was ready!",
+      "status": "Upset and unsure",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 17.674,
+      "duration": 18.773
+    },
+    {
+      "id": "clues",
+      "label": "Deepfake clues",
+      "title": "A clue isn't proof.",
+      "mood": "thinking",
+      "caption": "Then Kabir pauses. In computer class, they learned that AI can now create realistic fake videos of real people, called deepfakes. They often leave clues: blinking that looks wrong, lips that don't match the words, and light or shadows that don't make sense. But a clue isn't proof. Blurry video can glitch too. So you check.",
+      "speech": "Then Kabir pauses. In computer class, they learned that A I can now create realistic fake videos of real people, called deepfakes. They often leave clues: blinking that looks wrong, lips that don't match the words, and light or shadows that don't make sense. But a clue isn't proof. Blurry video can glitch too. So you check.",
+      "dialogue": "Before I forward it, let me look closer.",
+      "status": "Looking for clues",
+      "start": 37.097,
+      "duration": 18.283
+    },
+    {
+      "id": "frames",
+      "label": "Frame by frame",
+      "title": "Look closer, frame by frame.",
+      "mood": "thinking",
+      "caption": "Your turn. Step through the clip frame by frame. Tag each real artefact, and mark ordinary details as normal. Then decide what to do before sharing. Careful: looking real isn't proof, and neither is one glitch. Forwarding it because it seems convincing is exactly how fakes spread.",
+      "dialogue": "Three clues, then one official check.",
+      "status": "Checking frame by frame",
+      "start": 56.03,
+      "duration": 17.408
+    },
+    {
+      "id": "official",
+      "label": "Check the source",
+      "title": "The official source answers.",
+      "mood": "happy",
+      "caption": "The fair's official page says the fair is on, and warns about a fake video. Kabir shares that post in the group instead, asks everyone to stop forwarding the clip, and tells his teacher. He also reports the video to the app. Clues made him suspicious, but the official source gave the answer.",
+      "dialogue": "Clues raise questions. Official sources answer them.",
+      "status": "Stopping the spread",
+      "start": 74.088,
+      "duration": 17.621
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "The fair is on!",
+      "mood": "happy",
+      "caption": "On Saturday night the fair glows, and Kabir's stall is packed. Friends who almost stayed home take turns testing lake water. Mrs Kulkarni stops by to thank the students who shared the real announcement. Kabir's new habit: pause, look closer, and check the source before forwarding. Your turn: help Kabir spot more deepfake clues!",
+      "speech": "On Saturday night the fair glows, and Kabir's stall is packed. Friends who almost stayed home take turns testing lake water. Missus Kulkarni stops by to thank the students who shared the real announcement. Kabir's new habit: pause, look closer, and check the source before forwarding. Your turn: help Kabir spot more deepfake clues!",
+      "dialogue": "The fair is on, and so is my stall!",
+      "status": "At his fair stall",
+      "tone": "resolved",
+      "start": 92.359,
+      "duration": 18.923
+    }
+  ]
+}
