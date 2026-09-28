@@ -1,5 +1,5 @@
 {
-  "duration": 0,
+  "duration": 115.454,
   "scenes": [
     {
       "id": "meet",
@@ -9,8 +9,8 @@
       "caption": "Meet Kabir. He's twelve, and he's been counting the days to the Cyberpur fair. He's saved his pocket money for the giant wheel and the ring toss. His class group chat is buzzing with plans: everyone's meeting at the gate on Saturday at five. Then, on Wednesday evening, a video pops up in the group.",
       "dialogue": "Giant wheel first, then the ring toss!",
       "status": "Counting the days",
-      "start": 0,
-      "duration": 0
+      "start": 0.0,
+      "duration": 18.228
     },
     {
       "id": "problem",
@@ -25,8 +25,8 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 0,
-      "duration": 0
+      "start": 18.878,
+      "duration": 19.014
     },
     {
       "id": "help",
@@ -37,8 +37,8 @@
       "speech": "Kabir doesn't forward it. He shows his dad instead. Papa says it might be a deepfake: a video or audio made or changed with A I, so a real person seems to say things they never said. “Before we believe it,” Papa says, “let's look closely at the clip. Then we'll check the fair's own channel.”",
       "dialogue": "Papa, is this real? Everyone’s already sharing it.",
       "status": "Checking with Papa",
-      "start": 0,
-      "duration": 0
+      "start": 38.542,
+      "duration": 18.007
     },
     {
       "id": "inspect",
@@ -49,8 +49,8 @@
       "speech": "Now, help Kabir inspect the clip. Move through the frames one by one and tag the artefacts, the glitches that A I editing can leave behind: strange blinking, lips that don't match the words, or shadows that don't fit the light. Careful, though. Some odd things happen in real videos too. Then check the official channel.",
       "dialogue": "Let’s go frame by frame, like real detectives.",
       "status": "Inspecting the clip",
-      "start": 0,
-      "duration": 0
+      "start": 57.199,
+      "duration": 18.838
     },
     {
       "id": "lesson",
@@ -60,8 +60,8 @@
       "caption": "The fair's official channel says it clearly: the fair is on this weekend, and a fake video is going around. Kabir's clues pointed the right way, but clues alone can't prove it. Real videos can glitch on a bad connection, and a good deepfake may look perfect. Artefacts are clues, not proof. An official source confirms the truth.",
       "dialogue": "The fair’s on! Good thing we checked the source.",
       "status": "Relieved and wiser",
-      "start": 0,
-      "duration": 0
+      "start": 76.686,
+      "duration": 19.336
     },
     {
       "id": "ending",
@@ -72,8 +72,8 @@
       "dialogue": "Checked first, shared the truth. See you Saturday!",
       "status": "Back to fair plans",
       "tone": "resolved",
-      "start": 0,
-      "duration": 0
+      "start": 96.672,
+      "duration": 18.131
     }
   ]
 }

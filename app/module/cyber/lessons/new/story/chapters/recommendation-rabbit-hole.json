@@ -1,0 +1,77 @@
+{
+  "duration": 123.412,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "A feed full of favourites",
+      "mood": "happy",
+      "caption": "Meet Kabir. After homework, he loves his video app. His feed is usually a happy mix: cricket catches, a science experiment, a sketching tutorial. But yesterday, that fake fair clip was everywhere. Kabir watched it twice, just to check. He paused on the angry comments. It felt like nothing. But the app was paying attention.",
+      "dialogue": "Cricket, volcanoes, dragons… my feed really gets me.",
+      "status": "Relaxing after homework",
+      "start": 0.0,
+      "duration": 19.505
+    },
+    {
+      "id": "problem",
+      "label": "The rabbit hole",
+      "title": "Why is it all the same?",
+      "mood": "sad",
+      "caption": "The next evening, Kabir opens the app. One video says “Fair cancelled!” Then three more say the same. Then the titles get angrier and scarier: “Parents furious!” “Ride unsafe?” Kabir knows the official channel said the fair is on. But after ten videos like this, doubt creeps in. His stomach feels tight. Where did his cricket and science videos go?",
+      "dialogue": "Wait… why is my whole feed about this?",
+      "status": "Feeling anxious",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 20.155,
+      "duration": 20.125
+    },
+    {
+      "id": "help",
+      "label": "Ask Papa",
+      "title": "The feed learns from clicks.",
+      "mood": "thinking",
+      "caption": "Kabir tells Papa how anxious he feels. Together, they check his watch history. The feed is run by a recommendation algorithm. It learns from signals, like every click, replay and pause, then serves more of whatever holds attention. Angry, scary videos hold attention well. So the loop repeats, and it builds a filter bubble: other topics quietly fade away.",
+      "dialogue": "Papa, why does my feed keep scaring me?",
+      "status": "Asking Papa why",
+      "start": 40.93,
+      "duration": 20.809
+    },
+    {
+      "id": "rebalance",
+      "label": "Rebalance the feed",
+      "title": "Widen the mix.",
+      "mood": "thinking",
+      "caption": "Now, help Kabir rebalance his feed. Keep an eye on the topic diversity meter. Pick different topics he enjoys, tap Not interested on the rumour videos, and follow a reliable source. One more shocking video will feel tempting. Tapping it only teaches the feed to send more. Get the meter into the green, then refresh the feed.",
+      "dialogue": "Let’s widen my feed, one choice at a time.",
+      "status": "Rebalancing the feed",
+      "start": 62.388,
+      "duration": 19.581
+    },
+    {
+      "id": "lesson",
+      "label": "The bigger picture",
+      "title": "Attention isn’t the same as truth.",
+      "mood": "happy",
+      "caption": "Here's the bigger picture. Many apps rank videos by engagement: watch time, replays, comments and shares. Content that makes people shocked or angry often gets lots of engagement, so it can spread faster than calm facts. The ranking mostly measures attention, not whether a video is true or kind. Your attention is a signal. Spend it on purpose.",
+      "dialogue": "My clicks are votes. I’ll choose what I vote for.",
+      "status": "Seeing the pattern",
+      "start": 82.619,
+      "duration": 20.353
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "The fair is on!",
+      "mood": "happy",
+      "caption": "On Saturday, Kabir's feed is a mix again: cricket, an experiment, and fair updates from the official channel. The fair is on! He meets his friends at the gate at five. When a feed starts to feel angry or scary, pause, notice the pull, choose something different, and talk to someone you trust. Your turn: help Kabir run a feed experiment.",
+      "dialogue": "The fair’s on, and my feed feels like mine again!",
+      "status": "Back in balance",
+      "tone": "resolved",
+      "start": 103.622,
+      "duration": 19.14
+    }
+  ]
+}
