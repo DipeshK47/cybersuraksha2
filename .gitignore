@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.vinext/
+.next/
+.wrangler/
+.playwright-cli/
+
+.env
+.env.local
+.env.*.local
+
+*.tsbuildinfo
+next-env.d.ts
+
+.DS_Store
+
+# Local-only: story-rollout QA output, backups, tool caches, private chat exports
+.story-qa/
+_backup-*.tgz
+.claude/
+.impeccable/
+:memory:.ses
+codex-*chat*.md

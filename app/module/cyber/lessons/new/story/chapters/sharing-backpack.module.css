@@ -1,0 +1,116 @@
+/* Sharing Backpack chapter only: drawing-club screens, Mum's note, sort cards, two illustrated bags. Shared pieces live in ../story-player.module.css. */
+/* Club app body inside the kit device. */
+.screen{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:14px;min-height:270px;padding:15px;background:#fbf6ea;color:#24413f}
+.art{display:grid;gap:7px;margin:0;padding:9px;border-radius:12px;background:#fff;box-shadow:0 6px 16px #2a3f3517}
+.art svg{width:100%;height:132px}
+.art figcaption{display:flex;align-items:center;gap:6px;font-size:.66rem;font-weight:800;color:#4f6a5f}
+.art figcaption svg{width:15px;height:15px}
+.gallery svg{height:175px}
+.gallery figcaption{color:#2f7045}
+
+/* Scene 1: the profile form filling in with the narration. */
+.form{display:grid;gap:7px}
+.form>strong{font-family:var(--font-display),sans-serif;font-size:1rem}
+.field{display:grid;grid-template-columns:20px minmax(0,1fr);column-gap:9px;align-items:center;padding:5px 10px;border:1px solid #dcdccb;border-radius:9px;background:#fff}
+.field>svg{grid-row:1/3;width:17px;height:17px;color:#7b8f82}
+.field span{font-size:.58rem;color:#6b7a70}
+.field b{min-height:1.2em;font-size:.76rem;font-weight:750;overflow-wrap:anywhere}
+.field[data-filled="true"]{border-color:#c9d9c2}
+.field[data-filled="true"] b{animation:typeIn .25s var(--ease)}
+
+/* Scenes 2 and 6: the public page preview. */
+.public{grid-column:1/-1;display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:9px;background:#fde1c0;color:#7a3c10;font-size:.72rem;font-weight:800}
+.public[data-safe="true"]{background:#d9eed3;color:#245a38}
+.public svg{width:17px;height:17px}
+.info{display:grid;gap:4px;min-width:0}
+.head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.head>div{display:grid;gap:2px;min-width:0}
+.head strong{font-size:.95rem}
+.head span{font-size:.62rem;color:#62756b}
+.avatar{display:grid;place-items:center;flex:none;width:50px;height:50px;overflow:hidden;border-radius:50%;background:linear-gradient(160deg,#bcd8ea,#efc89b);color:#fff}
+.avatar svg{width:30px;height:30px}
+.avatar[data-kind="tiger"]{background:#fffaf0;box-shadow:inset 0 0 0 2px #f2b55f}
+.avatar[data-kind="tiger"] svg{width:62px;height:62px}
+.row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px dashed #dcd5c0;font-size:.72rem;line-height:1.3}
+.row>svg{width:16px;height:16px;color:#5b776b}
+.row em{display:flex;align-items:center;gap:3px;margin-left:auto;padding:3px 7px;border-radius:99px;background:#eee8d8;color:#8a806a;font-size:.56rem;font-style:normal;font-weight:800;transition:background .25s ease,color .25s ease}
+.row em[data-on="true"]{background:#fbd4a6;color:#7a3c10}
+.row em svg{width:11px;height:11px}
+.swatch{display:inline-block;width:11px;height:11px;margin:0 3px 0 5px;border-radius:3px;background:#f08a24;vertical-align:-1px}
+.post{display:grid;gap:8px;min-width:0}
+.comment{display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border-radius:12px 12px 12px 4px;background:#fff;box-shadow:0 8px 18px #2a3f3524}
+.comment>span{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:#cdbff0;color:#3e2f6b;font-size:.62rem;font-weight:850}
+.comment strong{display:block;font-size:.72rem}
+.comment small{display:block;font-size:.58rem;font-weight:650;color:#8a5a2c}
+.comment>div>p{margin:3px 0 0;font-size:.74rem;line-height:1.35}
+
+/* Scene 3: Mum's note. */
+.mum{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
+.mum>span{font-size:.75rem;font-weight:850;color:#826137}
+div.mum>p{margin:5px 0 0;font-family:var(--font-display),sans-serif;font-size:1.3rem;color:#375b53}
+
+/* Scene 4: sort cards and two illustrated backpacks (.cards/.bags prefix beats the shell's ".intro button"). */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.cards .card{display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #c8d5bd;border-radius:10px;background:#fffaf0;color:#2f4d43;font-size:.74rem;text-align:left;box-shadow:0 2px 0 #d6dac7}
+.cards .card svg{width:18px;height:18px;color:#527854}
+.cards .card[aria-pressed="true"]{border-color:#155f63;background:#e2efe6;box-shadow:0 0 0 2px #155f63;transform:translateY(-2px)}
+.cards .card[data-placed="true"]{background:#eef0e4;box-shadow:none}
+.cards .tick{margin-left:auto;color:#3c7447}
+.bags{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.bags .bag{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:150px;padding:16px 22px 12px;border:0;border-radius:28px 28px 14px 14px;text-align:center;box-shadow:inset 0 -7px 0 #00000022,0 9px 18px #2a3f3526}
+.bags .bag:disabled{opacity:1}
+.bags .bag[data-bag="private"]{background:#2f5d73;color:#f4fbff}
+.bags .bag[data-bag="share"]{background:#f3b35c;color:#4a2a0c}
+.bags .bag[data-ready="true"]:not(:disabled){outline:3px dashed #7a8f59;outline-offset:3px}
+.bag:before,.bag:after{content:"";position:absolute;top:22px;bottom:34px;width:6px;border-radius:3px;background:#00000020}
+.bag:before{left:9px}
+.bag:after{right:9px}
+.handle{position:absolute;top:-15px;left:50%;width:46px;height:20px;border:5px solid #1f4254;border-bottom:0;border-radius:14px 14px 0 0;transform:translateX(-50%)}
+.bag[data-bag="share"] .handle{border-color:#c9832f}
+.bags .bag>svg{width:22px;height:22px}
+.bag strong{font-size:.92rem}
+.bag small{font-size:.64rem;font-weight:650;opacity:.88}
+.pocket{display:flex;flex-wrap:wrap;justify-content:center;align-content:flex-start;gap:4px;width:100%;min-height:50px;margin-top:8px;padding:7px;border-top:2px dashed #ffffff70;border-radius:12px;background:#ffffff26}
+.pocket span{padding:3px 8px;border-radius:99px;background:#fffdf6;color:#24413f;font-size:.62rem;font-weight:800}
+
+/* Scene 5: the two lists and the ask-first photo rule. */
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lists>div{padding:12px 13px;border-radius:12px}
+.lists>div[data-bag="private"]{background:#e2ebef;color:#23485a}
+.lists>div[data-bag="share"]{background:#fcecd3;color:#6f3f0e}
+.lists strong{display:flex;align-items:center;gap:7px;margin-bottom:5px;font-size:.84rem}
+.lists svg{width:17px;height:17px}
+.li{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:.76rem;opacity:.3;transition:opacity .25s ease}
+.li[data-active="true"]{opacity:1}
+.ask{display:flex;align-items:center;gap:12px;margin-top:12px;padding:12px 13px;border-radius:10px;background:#e3edda;opacity:.3;transition:opacity .25s ease}
+.ask[data-active="true"]{opacity:1}
+.ask>svg{width:22px;height:22px;color:#3c7447}
+.ask>svg:last-child{margin-left:auto}
+.ask>div{display:grid;gap:3px}
+.ask strong{font-size:.83rem}
+.ask span{font-size:.71rem;color:#4d645b}
+
+@keyframes typeIn{from{opacity:0;transform:translateX(-4px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:600px){
+  .screen{grid-template-columns:1fr;gap:10px;padding:11px;min-height:0}
+  .art{grid-template-columns:auto minmax(0,1fr);align-items:center;padding:7px}
+  .art svg,.gallery svg{width:96px;height:80px}
+  .public{font-size:.65rem;padding:7px 9px}
+  .head strong{font-size:.86rem}
+  .avatar{width:42px;height:42px}
+  .row{font-size:.67rem;padding:6px 0}
+  .form>strong{font-size:.9rem}
+  .field b{font-size:.7rem}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .cards .card{font-size:.7rem;padding:6px 8px}
+  .bags{gap:10px}
+  .bags .bag{min-height:140px;padding:15px 14px 10px}
+  .bag strong{font-size:.8rem}
+  .bag small{font-size:.58rem}
+  .pocket span{font-size:.56rem;padding:3px 6px}
+  .lists{gap:8px}
+  .lists>div{padding:10px}
+  .lists strong{font-size:.74rem}
+  .li{font-size:.67rem;gap:6px}
+  div.mum>p{font-size:1.1rem}
+}

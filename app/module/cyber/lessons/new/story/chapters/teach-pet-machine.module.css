@@ -1,0 +1,117 @@
+/* Pet machine chapter only: the UI-built fruit stall machine, fruit/rock tokens, memory slots, trays and meters. Shared pieces live in ../story-player.module.css. */
+.stall{display:grid;align-content:start;gap:10px;padding:26px 14px 14px;background-image:linear-gradient(180deg,#f8e7c4 0%,#f3dcae 66%,#c8965d 66%,#b7844f 100%)}
+.stall:before{content:"";position:absolute;inset:0 0 auto;height:14px;background:repeating-linear-gradient(90deg,#d6604b 0 24px,#fff3dc 24px 48px);box-shadow:0 3px 0 #0000001a}
+
+.head{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) 112px;align-items:center;gap:11px;padding:9px 11px;border-radius:12px;background:#1d5a60;box-shadow:inset 0 -4px 0 #174a4f,0 6px 14px #3b2a1030;color:#fff4db}
+.face{position:relative;width:54px;height:40px;border-radius:10px;background:#0f2f35}
+.face i{position:absolute;top:12px;left:13px;width:9px;height:9px;border-radius:50%;background:#9ff0da}
+.face i+i{left:auto;right:13px}
+.face b{position:absolute;bottom:8px;left:50%;width:14px;height:3px;border-radius:3px;background:#9ff0da;transform:translateX(-50%)}
+.face[data-face="happy"] i{top:14px;height:6px;border-radius:9px 9px 2px 2px}
+.face[data-face="happy"] b{width:18px;height:6px;border-radius:0 0 10px 10px}
+.face[data-face="confused"] i,.face[data-face="confused"] b{background:#ffc39a}
+.face[data-face="confused"] i+i{top:15px;width:6px;height:6px}
+.face[data-face="confused"] b{transform:translateX(-50%) rotate(-14deg)}
+.screen{display:grid;gap:2px;min-width:0}
+.screen small,.meter small{font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:#bfe1d9}
+.screen strong{font-family:var(--font-mono),monospace;font-size:.8rem;line-height:1.25;color:#fff4d8;overflow-wrap:anywhere}
+.meter{display:grid;gap:4px}
+.meter small:last-child{letter-spacing:0;text-transform:none;font-size:.62rem;color:#fff4db}
+.meter span{height:7px;border-radius:9px;background:#0f2f35;overflow:hidden}
+.meter b,.learnMeter b{display:block;height:100%;transform-origin:left;transition:transform .3s var(--ease)}
+.meter b{background:#f2c360}
+
+.belt{position:relative;display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 40px 10px 12px;border-radius:10px;background:linear-gradient(#3d4d52,#2b393d);box-shadow:inset 0 2px 0 #5a6c71}
+.belt:after{content:"";position:absolute;left:10px;right:10px;bottom:3px;height:4px;border-radius:2px;background:repeating-linear-gradient(90deg,#7c8f94 0 8px,transparent 8px 18px)}
+.belt>svg{position:absolute;right:11px;top:50%;width:20px;height:20px;color:#9ff0da;transform:translateY(-55%)}
+.belt em{font-size:.7rem;font-style:normal;font-weight:700;color:#dbe7e3}
+
+.bins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.bin{display:grid;align-content:start;gap:6px;min-width:0;min-height:88px;padding:8px 10px 10px;border:3px solid #c48a48;border-radius:12px;background:#fff6e3}
+.bin[data-bin="rock"]{border-color:#999b94;background:#efeee8}
+.bin>span{display:flex;align-items:center;gap:6px;font-size:.66rem;font-weight:850;color:#6a4b28}
+.bin[data-bin="rock"]>span{color:#4f5652}
+.bin>span>svg{width:15px;height:15px}
+.bin>div{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:34px}
+.bin em{font-size:.64rem;font-style:normal;font-weight:600;opacity:.6}
+
+/* Fruit icons and CSS-built rocks. */
+.thing{display:inline-grid;place-items:center;flex:none;width:30px;height:30px}
+.thing svg{width:26px;height:26px}
+.rock{display:block;width:24px;height:24px;border-radius:50%}
+.rock[data-rock="grey-rock"]{width:27px;height:20px;border-radius:45% 55% 40% 60%/55% 45% 55% 45%;background:radial-gradient(circle at 35% 30%,#c3c6bf,#7c807b 72%);box-shadow:inset -2px -3px 0 #62665f}
+.rock[data-rock="red-rock"]{background:radial-gradient(circle at 62% 64%,#6f2c22 0 1.6px,transparent 2px),radial-gradient(circle at 34% 58%,#6f2c22 0 1.3px,transparent 1.8px),radial-gradient(circle at 52% 34%,#6f2c22 0 1.2px,transparent 1.7px),radial-gradient(circle at 35% 30%,#dc7a63,#a8412f 72%);box-shadow:inset -2px -3px 0 #7d2e22}
+.rock[data-rock="pebble"]{width:28px;height:14px;background:radial-gradient(circle at 40% 30%,#eadabb,#b59c74 76%);box-shadow:inset -2px -2px 0 #957e59}
+.token{position:relative;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#ffffffb8}
+.token[data-mark="wrong"]{background:#ffe2d8;box-shadow:0 0 0 2px #d4553f}
+.token[data-mark="right"]{background:#dff1d6;box-shadow:0 0 0 2px #4e9a5e}
+.markIcon{position:absolute;top:-7px;right:-7px;width:17px;height:17px;padding:2px;border-radius:50%;background:#d4553f;color:#fff;stroke-width:3}
+.token[data-mark="right"] .markIcon{background:#3f8a51}
+.belt .token{background:#ffffffd9}
+
+/* People in the UI: Meera Aunty's message and Nani's question. */
+.chat{display:flex;align-items:center;gap:9px;width:100%;min-width:0}
+.chat.chat>p{margin:0;min-width:0;font-size:.76rem;line-height:1.35}
+.chat>p{flex:1}
+.chat>p>strong{display:block;font-size:.66rem;color:#7a5530}
+.chat.chat>small{flex:none;width:auto;margin-left:auto;padding-left:0}
+.avatar{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#f0c9a0;color:#6b3f1c;font-weight:850}
+.avatar[data-person="N"]{background:#d5e8d4;color:#2f6448}
+.nani{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
+.nani .chat.chat>p{font-family:var(--font-display),sans-serif;font-size:1.22rem;color:#375b53}
+.nani .chat>p>strong{font-size:.72rem;color:#826137}
+
+.memory{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:0 0 8px}
+.memory>span{display:grid;place-items:center;align-content:center;gap:1px;min-height:58px;border:1px dashed #9ead95;border-radius:9px;background:#f1f2e6;color:#99a893;font-weight:850}
+.memory>span[data-filled="true"]{border:2px solid #d4553f;background:#fde8df}
+.memory small{font-size:.6rem;color:#8c2c24}
+
+/* The mid-story task. */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:12px}
+.examples button{padding:5px 10px 5px 5px;gap:5px}
+.examples .thing{width:26px;height:26px}
+.examples .thing svg{width:22px;height:22px}
+.examples .rock{transform:scale(.85)}
+.examples.examples button[aria-pressed="true"]{opacity:1;background:#fff0c7;border-color:#c07a2c;box-shadow:0 0 0 2px #e7b25c}
+.trays{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0 11px}
+.tray{display:grid;align-content:start;gap:7px;min-width:0;min-height:88px;padding:9px 10px;border:2px dashed #c48a48;border-radius:12px;background:#fff6e3;color:#6a4b28;text-align:left}
+.tray[data-tray="Rock"]{border-color:#999b94;background:#efeee8;color:#4f5652}
+.tray[aria-disabled="true"]{border-style:solid;cursor:default}
+.tray>span{display:flex;align-items:center;gap:6px;font-size:.76rem;font-weight:850}
+.tray>span>svg{width:17px;height:17px}
+.tray>div{display:flex;flex-wrap:wrap;gap:6px}
+.tray em{font-size:.66rem;font-style:normal;font-weight:600;opacity:.7}
+.learnMeter{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:9px;font-size:.7rem;font-weight:800;color:#4a6258}
+.learnMeter i{height:9px;border-radius:9px;background:#e1e6d6;overflow:hidden}
+.learnMeter b{background:linear-gradient(90deg,#2f7b6f,#62a86b)}
+.learnMeter small{font-size:.66rem;font-weight:700;color:#6a644e}
+
+/* Test results after the task. */
+.result{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #dbe2d2;opacity:.3;transition:opacity .25s ease}
+.result .thing{width:40px;height:40px;border-radius:9px;background:#f1f2e6}
+.result>div{display:grid;gap:3px}
+.result strong,.check strong{font-size:.83rem}
+.result span,.check span{font-size:.71rem;line-height:1.4;color:#4d645b}
+.result>svg:last-child{margin-left:auto;width:20px;height:20px;color:#3c7447}
+.result+.learnMeter{margin-top:16px}
+.check{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px;border-radius:8px;background:#e3edda;opacity:.3;transition:opacity .25s ease}
+.check>div{display:grid;gap:3px}
+.check>svg{width:22px;height:22px;color:#3c7447}
+.check>svg:last-child{margin-left:auto}
+.result[data-active="true"],.check[data-active="true"]{opacity:1}
+
+@media(max-width:600px){
+  .stall{gap:8px;padding:22px 9px 10px}
+  .head{grid-template-columns:auto minmax(0,1fr);gap:6px 9px;padding:8px 9px}
+  .meter{grid-column:1/-1;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px}
+  .face{width:46px;height:36px}.face i{top:11px;left:10px}.face i+i{left:auto;right:10px}
+  .screen strong{font-size:.72rem}
+  .belt{min-height:46px}.bins{gap:7px}.bin{min-height:80px;padding:7px 8px 8px}
+  .bin>div,.tray>div{gap:5px}.token{width:32px;height:32px}
+  .chat.chat>p{font-size:.7rem}.chat.chat>small{max-width:64px;text-align:right}.nani .chat.chat>p{font-size:1.05rem}
+  .memory{gap:4px}.memory>span{min-height:50px}
+  .examples button{font-size:.7rem;padding:4px 8px 4px 4px}
+  .trays{gap:7px}.tray{min-height:80px;padding:8px}
+  .result{gap:9px}.result span,.check span{font-size:.66rem}
+}

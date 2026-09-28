@@ -1,0 +1,362 @@
+[
+  {
+    "id": "cyber-lower-security-can-i-tell-this",
+    "slug": "can-i-tell-this",
+    "title": "Can I Tell This?",
+    "band": "lower",
+    "grades": [3],
+    "strand": "Cybersecurity",
+    "summary": "Pack a safe information backpack before joining an online game club.",
+    "primaryMechanic": "backpack",
+    "openingPattern": "packing-call",
+    "completionPattern": "zipped-backpack-postcard",
+    "accent": "mint",
+    "durationMinutes": 7,
+    "assessmentIds": [
+      "can-i-tell-this-check-1",
+      "can-i-tell-this-check-2",
+      "can-i-tell-this-transfer"
+    ],
+    "familyAction": "Ask a grown-up which family details should always stay private."
+  },
+  {
+    "id": "cyber-lower-security-someone-new-in-my-game",
+    "slug": "someone-new-in-my-game",
+    "title": "Someone New in My Game",
+    "band": "lower",
+    "grades": [4],
+    "strand": "Cybersecurity",
+    "summary": "Help Moti respond safely when a new game player asks personal questions.",
+    "primaryMechanic": "branching-chat",
+    "openingPattern": "avatar-doorbell",
+    "completionPattern": "shield-story-replay",
+    "accent": "sky",
+    "durationMinutes": 7,
+    "assessmentIds": [
+      "someone-new-in-my-game-check-1",
+      "someone-new-in-my-game-check-2",
+      "someone-new-in-my-game-transfer"
+    ],
+    "familyAction": "Choose one trusted adult the child can tell about an uncomfortable message."
+  },
+  {
+    "id": "cyber-lower-ai-smart-helper-or-normal-tool",
+    "slug": "smart-helper-or-normal-tool",
+    "title": "Smart Helper or Normal Tool?",
+    "band": "lower",
+    "grades": [3],
+    "strand": "Artificial Intelligence",
+    "summary": "Explore familiar home tools and test whether they calculate, follow rules, or make guesses.",
+    "primaryMechanic": "home-lab",
+    "openingPattern": "mystery-power-cut",
+    "completionPattern": "capability-fridge-magnet",
+    "accent": "yellow",
+    "durationMinutes": 6,
+    "assessmentIds": [
+      "smart-helper-or-normal-tool-check-1",
+      "smart-helper-or-normal-tool-check-2",
+      "smart-helper-or-normal-tool-transfer"
+    ],
+    "familyAction": "Find one smart helper and one normal tool at home and explain the difference."
+  },
+  {
+    "id": "cyber-lower-ai-teach-moti-to-sort",
+    "slug": "teach-moti-to-sort",
+    "title": "Teach Moti to Sort",
+    "band": "lower",
+    "grades": [4],
+    "strand": "Artificial Intelligence",
+    "summary": "Give Moti clear examples, test his sorting, and repair mistakes caused by confusing examples.",
+    "primaryMechanic": "training-conveyor",
+    "openingPattern": "school-fair-delivery",
+    "completionPattern": "tested-toy-label-sheet",
+    "accent": "coral",
+    "durationMinutes": 8,
+    "assessmentIds": [
+      "teach-moti-to-sort-check-1",
+      "teach-moti-to-sort-check-2",
+      "teach-moti-to-sort-transfer"
+    ],
+    "familyAction": "Sort five household objects using one clear rule and test a sixth object."
+  },
+  {
+    "id": "cyber-lower-fraud-free-coins-tap-now",
+    "slug": "free-coins-tap-now",
+    "title": "Free Coins! Tap Now!",
+    "band": "lower",
+    "grades": [3],
+    "strand": "Cyber Fraud",
+    "summary": "Clear fake reward pop-ups without losing control of the game screen.",
+    "primaryMechanic": "popup-escape",
+    "openingPattern": "game-screen-interruption",
+    "completionPattern": "restored-coin-jar",
+    "accent": "lime",
+    "durationMinutes": 6,
+    "assessmentIds": [
+      "free-coins-tap-now-check-1",
+      "free-coins-tap-now-check-2",
+      "free-coins-tap-now-transfer"
+    ],
+    "familyAction": "Practise closing one pretend prize message and telling a grown-up what appeared."
+  },
+  {
+    "id": "cyber-lower-fraud-the-grown-ups-phone",
+    "slug": "the-grown-ups-phone",
+    "title": "The Grown-Up's Phone",
+    "band": "lower",
+    "grades": [4],
+    "strand": "Cyber Fraud",
+    "summary": "Know when to stop and return a borrowed phone after a payment, OTP, install, or unknown-link screen appears.",
+    "primaryMechanic": "phone-handoff",
+    "openingPattern": "borrowed-video-pause",
+    "completionPattern": "three-step-handoff-ribbon",
+    "accent": "indigo",
+    "durationMinutes": 6,
+    "assessmentIds": [
+      "the-grown-ups-phone-check-1",
+      "the-grown-ups-phone-check-2",
+      "the-grown-ups-phone-transfer"
+    ],
+    "familyAction": "Agree on a family handoff rule for unexpected screens on a borrowed phone."
+  },
+  {
+    "id": "cyber-middle-security-save-my-game-account",
+    "slug": "save-my-game-account",
+    "title": "Save My Game Account",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Cybersecurity",
+    "summary": "Repair a game account with a memorable passphrase, safe recovery, and firm password boundaries.",
+    "primaryMechanic": "passphrase-forge",
+    "openingPattern": "locked-avatar-alarm",
+    "completionPattern": "account-gate-blueprint",
+    "accent": "violet",
+    "durationMinutes": 9,
+    "assessmentIds": [
+      "save-my-game-account-check-1",
+      "save-my-game-account-check-2",
+      "save-my-game-account-transfer"
+    ],
+    "familyAction": "Review one game account recovery method with a parent without sharing the password."
+  },
+  {
+    "id": "cyber-middle-security-trouble-in-the-class-group",
+    "slug": "trouble-in-the-class-group",
+    "title": "Trouble in the Class Group",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Cybersecurity",
+    "summary": "Stop harmful forwarding, preserve useful evidence, and support a classmate in a group chat.",
+    "primaryMechanic": "group-chat-intervention",
+    "openingPattern": "notification-storm",
+    "completionPattern": "two-meter-action-plan",
+    "accent": "coral",
+    "durationMinutes": 10,
+    "assessmentIds": [
+      "trouble-in-the-class-group-check-1",
+      "trouble-in-the-class-group-check-2",
+      "trouble-in-the-class-group-transfer"
+    ],
+    "familyAction": "Name the school adult who can help when a class group becomes harmful."
+  },
+  {
+    "id": "cyber-middle-ai-can-the-chatbot-be-wrong",
+    "slug": "can-the-chatbot-be-wrong",
+    "title": "Can the Chatbot Be Wrong?",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Artificial Intelligence",
+    "summary": "Compare chatbot claims with evidence and repair an answer that sounds confident but contains mistakes.",
+    "primaryMechanic": "fact-check-desk",
+    "openingPattern": "school-news-deadline",
+    "completionPattern": "corrected-news-card",
+    "accent": "sky",
+    "durationMinutes": 9,
+    "assessmentIds": [
+      "can-the-chatbot-be-wrong-check-1",
+      "can-the-chatbot-be-wrong-check-2",
+      "can-the-chatbot-be-wrong-transfer"
+    ],
+    "familyAction": "Check one surprising online fact against a trusted book, teacher, or official source."
+  },
+  {
+    "id": "cyber-middle-ai-why-does-my-feed-repeat",
+    "slug": "why-does-my-feed-repeat",
+    "title": "Why Does My Feed Repeat?",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Artificial Intelligence",
+    "summary": "Experiment with watching, skipping, liking, and searching to see why a video feed becomes narrow or balanced.",
+    "primaryMechanic": "feed-sandbox",
+    "openingPattern": "same-video-loop",
+    "completionPattern": "balanced-feed-receipt",
+    "accent": "mint",
+    "durationMinutes": 10,
+    "assessmentIds": [
+      "why-does-my-feed-repeat-check-1",
+      "why-does-my-feed-repeat-check-2",
+      "why-does-my-feed-repeat-transfer"
+    ],
+    "familyAction": "Use skip or intentional search once to change an unhelpfully repetitive feed."
+  },
+  {
+    "id": "cyber-middle-fraud-upi-paying-or-receiving",
+    "slug": "upi-paying-or-receiving",
+    "title": "UPI: Paying or Receiving?",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Cyber Fraud",
+    "summary": "Read the direction of a fictional UPI transaction before deciding whether money will leave or arrive.",
+    "primaryMechanic": "upi-direction-simulator",
+    "openingPattern": "shop-counter-split-screen",
+    "completionPattern": "money-direction-ticket",
+    "accent": "lime",
+    "durationMinutes": 10,
+    "assessmentIds": [
+      "upi-paying-or-receiving-check-1",
+      "upi-paying-or-receiving-check-2",
+      "upi-paying-or-receiving-transfer"
+    ],
+    "familyAction": "Ask an adult to point out where their payment app shows money leaving or arriving."
+  },
+  {
+    "id": "cyber-middle-fraud-the-gaming-giveaway-trap",
+    "slug": "the-gaming-giveaway-trap",
+    "title": "The Gaming Giveaway Trap",
+    "band": "middle",
+    "grades": [5],
+    "strand": "Cyber Fraud",
+    "summary": "Collect sender, address, urgency, login, OTP, and reward clues before judging a gaming giveaway.",
+    "primaryMechanic": "giveaway-clue-lens",
+    "openingPattern": "tournament-invite-drop",
+    "completionPattern": "evidence-case-folder",
+    "accent": "yellow",
+    "durationMinutes": 10,
+    "assessmentIds": [
+      "the-gaming-giveaway-trap-check-1",
+      "the-gaming-giveaway-trap-check-2",
+      "the-gaming-giveaway-trap-transfer"
+    ],
+    "familyAction": "Compare a game event notice with the same event inside the official game or app."
+  },
+  {
+    "id": "cyber-upper-security-what-did-this-photo-reveal",
+    "slug": "what-did-this-photo-reveal",
+    "title": "What Did This Photo Reveal?",
+    "band": "upper",
+    "grades": [6],
+    "strand": "Cybersecurity",
+    "summary": "Inspect a photograph for location, identity, timetable, reflection, and consent clues before posting it.",
+    "primaryMechanic": "photo-evidence-scanner",
+    "openingPattern": "post-preview-freeze",
+    "completionPattern": "audience-ring-report",
+    "accent": "sky",
+    "durationMinutes": 12,
+    "assessmentIds": [
+      "what-did-this-photo-reveal-check-1",
+      "what-did-this-photo-reveal-check-2",
+      "what-did-this-photo-reveal-transfer"
+    ],
+    "familyAction": "Review one old photograph together and identify details worth cropping or hiding."
+  },
+  {
+    "id": "cyber-upper-security-the-almost-real-login-page",
+    "slug": "the-almost-real-login-page",
+    "title": "The Almost-Real Login Page",
+    "band": "upper",
+    "grades": [7],
+    "strand": "Cybersecurity",
+    "summary": "Inspect page addresses and behavior, then recover through a known app instead of a message link.",
+    "primaryMechanic": "browser-inspector",
+    "openingPattern": "password-expiry-message",
+    "completionPattern": "safe-route-map",
+    "accent": "indigo",
+    "durationMinutes": 12,
+    "assessmentIds": [
+      "the-almost-real-login-page-check-1",
+      "the-almost-real-login-page-check-2",
+      "the-almost-real-login-page-transfer"
+    ],
+    "familyAction": "Practise opening one important service from a saved app or typed address instead of a link."
+  },
+  {
+    "id": "cyber-upper-ai-use-ai-without-losing-your-thinking",
+    "slug": "use-ai-without-losing-your-thinking",
+    "title": "Use AI Without Losing Your Thinking",
+    "band": "upper",
+    "grades": [6],
+    "strand": "Artificial Intelligence",
+    "summary": "Use an AI study helper for explanation and critique while keeping personal thinking, verification, and privacy visible.",
+    "primaryMechanic": "ai-thinking-map",
+    "openingPattern": "unfinished-assignment-desk",
+    "completionPattern": "authorship-layer-map",
+    "accent": "violet",
+    "durationMinutes": 13,
+    "assessmentIds": [
+      "use-ai-without-losing-your-thinking-check-1",
+      "use-ai-without-losing-your-thinking-check-2",
+      "use-ai-without-losing-your-thinking-transfer"
+    ],
+    "familyAction": "Explain one useful AI study action and one part of schoolwork that must stay yours."
+  },
+  {
+    "id": "cyber-upper-ai-real-edited-or-ai-made",
+    "slug": "real-edited-or-ai-made",
+    "title": "Real, Edited or AI-Made?",
+    "band": "upper",
+    "grades": [7],
+    "strand": "Artificial Intelligence",
+    "summary": "Build an evidence-based verdict for a viral image, video frame, and voice transcript without trusting one clue.",
+    "primaryMechanic": "media-evidence-board",
+    "openingPattern": "viral-forward-count",
+    "completionPattern": "uncertainty-verdict-card",
+    "accent": "coral",
+    "durationMinutes": 14,
+    "assessmentIds": [
+      "real-edited-or-ai-made-check-1",
+      "real-edited-or-ai-made-check-2",
+      "real-edited-or-ai-made-transfer"
+    ],
+    "familyAction": "Pause before forwarding one dramatic media post and check who first published it."
+  },
+  {
+    "id": "cyber-upper-fraud-my-friend-suddenly-needs-money",
+    "slug": "my-friend-suddenly-needs-money",
+    "title": "My Friend Suddenly Needs Money",
+    "band": "upper",
+    "grades": [6],
+    "strand": "Cyber Fraud",
+    "summary": "Break an urgent impersonation scam by checking the request through a separate contact channel.",
+    "primaryMechanic": "second-channel-roleplay",
+    "openingPattern": "urgent-chat-timeline",
+    "completionPattern": "verified-contact-chain",
+    "accent": "mint",
+    "durationMinutes": 12,
+    "assessmentIds": [
+      "my-friend-suddenly-needs-money-check-1",
+      "my-friend-suddenly-needs-money-check-2",
+      "my-friend-suddenly-needs-money-transfer"
+    ],
+    "familyAction": "Choose a second way to verify urgent money requests from family or friends."
+  },
+  {
+    "id": "cyber-upper-fraud-the-influencer-shop-and-giveaway",
+    "slug": "the-influencer-shop-and-giveaway",
+    "title": "The Influencer Shop and Giveaway",
+    "band": "upper",
+    "grades": [7],
+    "strand": "Cyber Fraud",
+    "summary": "Spend a limited investigation budget on seller, policy, image, payment, comment, and domain evidence.",
+    "primaryMechanic": "shop-investigation-budget",
+    "openingPattern": "limited-drop-countdown",
+    "completionPattern": "purchase-risk-brief",
+    "accent": "yellow",
+    "durationMinutes": 14,
+    "assessmentIds": [
+      "the-influencer-shop-and-giveaway-check-1",
+      "the-influencer-shop-and-giveaway-check-2",
+      "the-influencer-shop-and-giveaway-transfer"
+    ],
+    "familyAction": "Check the seller and return policy together before considering one unfamiliar online shop."
+  }
+]

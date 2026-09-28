@@ -1,0 +1,77 @@
+{
+  "duration": 93.955,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "A tiger for the drawing club",
+      "mood": "happy",
+      "caption": "Meet Rohan. He loves drawing tigers, and he's just posted his best one to an online drawing club for kids. Now the club wants him to make a profile. It asks lots of questions. Rohan starts typing fast. He can't wait!",
+      "dialogue": "My tiger is ready to share!",
+      "status": "Excited to draw",
+      "start": 0.0,
+      "duration": 15.305
+    },
+    {
+      "id": "problem",
+      "label": "The surprise",
+      "title": "Who can see my page?",
+      "mood": "sad",
+      "caption": "Before saving, Rohan taps Preview. A comment pops up on his tiger from someone he's never met. The page says it's public, so anyone can see it. Rohan stops. People he doesn't know could see his full name, home address, school and selfie too.",
+      "dialogue": "Wait… who can see this?",
+      "status": "Feeling unsure",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 15.955,
+      "duration": 16.008
+    },
+    {
+      "id": "help",
+      "label": "Ask Mum",
+      "title": "Public means anyone.",
+      "mood": "thinking",
+      "caption": "Rohan doesn't press Save. He asks Mum to look with him. Mum smiles. “You did the right thing by stopping,” she says. “A public page isn't just for friends. Anyone online can see it, even people we don't know.”",
+      "dialogue": "Mum, can you check this with me?",
+      "status": "Asking Mum",
+      "start": 32.613,
+      "duration": 13.993
+    },
+    {
+      "id": "sort",
+      "label": "Sort the bags",
+      "title": "Pack the sharing backpack",
+      "mood": "thinking",
+      "caption": "Let's help Rohan sort his details into two bags. Things you like, such as a favourite colour, are safe to share. Things that show who you are or where you live stay private. Tap a card, then tap the right bag.",
+      "dialogue": "Which bag does each one go in?",
+      "status": "Sorting with you",
+      "start": 47.256,
+      "duration": 13.685
+    },
+    {
+      "id": "lesson",
+      "label": "Private or public",
+      "title": "Share your likes. Keep your details.",
+      "mood": "happy",
+      "caption": "Private information shows who you are or where to find you: your full name, home address, school, phone number and photos of you. Ask a grown-up before sharing any photo. Your favourite colour, animal or drawings are usually fine to share.",
+      "dialogue": "Likes are fine. My details stay private.",
+      "status": "Feeling more confident",
+      "start": 61.591,
+      "duration": 15.619
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "A tiger everyone can enjoy",
+      "mood": "happy",
+      "caption": "Rohan saves his profile with a club nickname, his favourite colour and his tiger. He feels proud. Kids everywhere can enjoy his drawing, and his private details stay at home. Your turn: help Rohan pack more details into the right bags!",
+      "dialogue": "Everyone sees my tiger, not my address!",
+      "status": "Proud and safe",
+      "tone": "resolved",
+      "start": 77.86,
+      "duration": 15.445
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+/* Pattern Detective only: station art, the tile track, Nani's note, the track-fixer task and the trick card. Shared pieces live in ../story-player.module.css. */
+div.station{min-height:300px;background-image:url('/cyber-missions/pattern-station.webp');background-position:30% 40%}
+/* Keep the kit's alert/success overlays clear of the track screen at the bottom of the art. */
+.aboveTrack.aboveTrack{bottom:104px}
+.trackScreen{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:grid;justify-items:center;gap:6px;padding:8px 11px 10px;border-radius:12px;background:#0f2530e0;box-shadow:0 10px 24px #0a1a2255}
+.trackScreen>span{display:flex;align-items:center;gap:6px;justify-self:start;color:#dcebe5;font-size:.6rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.trackScreen[data-state="gaps"]>span{color:#f6cd79}
+.trackScreen[data-state="done"]>span{color:#bff0bd}
+.trackScreen>span svg{width:14px;height:14px}
+.trackScreen .track{width:100%;max-width:420px}
+
+/* A rail bed with two steel rails; every tile is a sleeper sitting across them. */
+.track{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:5px;padding:7px 6px;border-radius:9px;background:linear-gradient(#0000 22%,#b9c7c1 22% 27%,#0000 27% 73%,#b9c7c1 73% 78%,#0000 78%),#34504f}
+.track>*{display:grid;place-items:center;min-width:0;aspect-ratio:1;padding:0;border:0;border-radius:7px;background:#fff6e2;box-shadow:inset 0 -3px 0 #e1cda2;transition:opacity .25s ease}
+.track svg{width:66%;height:66%}
+.track>[data-on="false"]{opacity:.28}
+.track>[data-fixed="true"]{box-shadow:inset 0 -3px 0 #e1cda2,0 0 0 2px #f3c265}
+.track>.gap{border:2px dashed #f3c265;background:#f3c26514;box-shadow:none;color:#f7d48b;font-size:.95rem;font-weight:900}
+
+.nani{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:15px;border-bottom:1px solid #dce3d4}
+.nani>span{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f1d7b4;color:#7a4f25;font-family:var(--font-display),sans-serif;font-weight:800}
+.nani small{font-size:.72rem;font-weight:850;color:#826137}
+.nani p{margin:3px 0 0!important;font-family:var(--font-display),sans-serif;font-size:1.2rem!important;color:#375b53}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:6px 6px 4px}
+.groups>span{padding-top:5px;border-top:3px solid #e39a45;color:#7a5530;font-size:.66rem;font-weight:800;text-align:center;opacity:0;transition:opacity .25s ease}
+.groups>span:last-child{border-top-style:dashed}
+.groups>span[data-on="true"]{opacity:1}
+
+.screenTag{display:flex;align-items:center;gap:7px;margin-bottom:9px;color:#2e6a66;font-size:.64rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.screenTag svg{width:16px;height:16px}
+.taskTrack>*{aspect-ratio:auto;height:52px}
+.track.taskTrack button{cursor:pointer}
+.track.taskTrack button:disabled{opacity:1;cursor:default}
+.taskTrack>[data-placed="true"]{box-shadow:inset 0 -3px 0 #e1cda2,0 0 0 2px #f3c265;animation:tileIn .25s var(--ease)}
+.taskTrack>[data-wrong="true"]{border-color:#f09a7b;background:#f09a7b24}
+div.tray{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
+div.tray button{justify-content:flex-start}
+div.tray button svg{width:21px;height:21px}
+
+.everywhere{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:16px;opacity:.3;transition:opacity .25s ease}
+.everywhere[data-on="true"]{opacity:1}
+.everywhere>small{grid-column:1/-1;color:#6a644e;font-size:.68rem;font-weight:800}
+.everywhere>div{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#e5eddb}
+.everywhere>div>svg{width:22px;height:22px;color:#2f7369}
+.everywhere span{display:grid;gap:2px;font-size:.69rem;color:#4d645b}
+.everywhere strong{font-size:.8rem;color:#264c48}
+
+@keyframes tileIn{from{transform:translateY(-6px);opacity:.5}to{transform:translateY(0);opacity:1}}
+@media(max-width:600px){
+  div.station{min-height:250px}
+  .aboveTrack.aboveTrack{bottom:84px}
+  .trackScreen{left:9px;right:9px;bottom:9px;padding:7px 8px 8px}
+  .track{gap:4px;padding:6px 5px}
+  .track>*{border-radius:5px}
+  .taskTrack>*{height:44px}
+  .groups{gap:4px;margin:6px 5px 2px}
+  .groups>span{font-size:.58rem}
+  .nani p{font-size:1.05rem!important}
+  div.tray button{flex-direction:column;gap:4px;padding:7px 4px;font-size:.66rem;text-align:center;justify-content:center}
+  .everywhere{gap:7px}
+  .everywhere>div{padding:9px;gap:7px}
+}

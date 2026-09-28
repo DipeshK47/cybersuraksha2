@@ -1,0 +1,137 @@
+/* Rohan's robot chapter only: bedroom art, the CSS-built toy robot and its speech screen, Nani's program card, sorting bins and the compare card. Shared pieces live in ../story-player.module.css. */
+.room{overflow:hidden;background-image:url('/cyber-missions/morning-room.webp');background-position:25% 70%}
+.room[data-reduced="true"] *{animation:none!important}
+
+/* Tiko, the toy robot */
+.toy{position:absolute;left:12%;bottom:9%;width:112px;height:152px;transform-origin:0 100%}
+.toy:before{content:"";position:absolute;left:12px;bottom:-5px;width:88px;height:12px;border-radius:50%;background:#10263f55}
+.bot{position:absolute;inset:0;transform-origin:50% 100%}
+.toy[data-dance="true"] .bot{animation:sway 1.6s ease-in-out infinite alternate}
+.antenna{position:absolute;left:54px;top:4px;width:4px;height:16px;border-radius:2px;background:#28474d}
+.antenna:after{content:"";position:absolute;left:-5px;top:-8px;width:14px;height:14px;border-radius:50%;background:#7ff0d0;box-shadow:0 0 12px #7ff0d0}
+.head{position:absolute;left:8px;top:18px;width:96px;height:66px;border:3px solid #28474d;border-radius:20px;background:#e9f0ee;box-shadow:inset 0 -5px #c9d8d4}
+.head:before,.head:after{content:"";position:absolute;top:20px;width:9px;height:20px;border:3px solid #28474d;border-radius:6px;background:#efbb5d}
+.head:before{left:-13px}.head:after{right:-13px}
+.face{position:absolute;inset:7px 7px 9px;display:flex;align-items:center;justify-content:center;gap:16px;padding-bottom:9px;border-radius:12px;background:#10263f}
+.face i{width:12px;height:16px;border-radius:7px;background:#7ff0d0;box-shadow:0 0 9px #7ff0d099}
+.face b{position:absolute;left:50%;bottom:6px;width:22px;height:9px;margin-left:-11px;border:3px solid #7ff0d0;border-top:0;border-radius:0 0 14px 14px}
+.arm{position:absolute;top:90px;left:3px;width:13px;height:40px;border:3px solid #28474d;border-radius:9px;background:#e9f0ee;transform:rotate(25deg);transform-origin:50% 6px}
+.arm+.arm{left:auto;right:3px;transform:rotate(-25deg)}
+.toy[data-dance="true"] .arm{animation:waveL .9s ease-in-out infinite alternate}
+.toy[data-dance="true"] .arm+.arm{animation-name:waveR;animation-delay:-.45s}
+.body{position:absolute;left:20px;top:86px;width:72px;height:48px;border:3px solid #28474d;border-radius:14px;background:#efbb5d;box-shadow:inset 0 -5px #d9a142}
+.body>span{position:absolute;inset:6px 11px 10px;display:grid;place-items:center;border-radius:7px;background:#fffbef}
+.body svg{width:24px;height:24px;color:#2f8a5f}
+.feet{position:absolute;left:26px;bottom:2px;width:60px;height:17px;border:3px solid #28474d;border-radius:10px;background:#3c6a70}
+.note{position:absolute;left:-16px;top:16px;width:22px;height:22px;color:#fff3c4;filter:drop-shadow(0 2px 3px #10263f88);animation:floatNote 1.8s ease-in-out infinite alternate}
+.note+.note{left:auto;right:-20px;top:40px;width:18px;animation-delay:-.9s}
+/* Low battery: sleepy amber face, drooping arms. */
+.toy[data-low="true"] .antenna:after{background:#ffae5c;box-shadow:0 0 12px #ffae5c}
+.toy[data-low="true"] .face i{height:5px;background:#ffae5c;box-shadow:0 0 9px #ffae5c99}
+.toy[data-low="true"] .face b{bottom:9px;height:7px;border:3px solid #ffae5c;border-bottom:0;border-radius:14px 14px 0 0}
+.toy[data-low="true"] .body svg{color:#c4512f}
+.toy[data-low="true"] .arm{transform:rotate(6deg)}
+.toy[data-low="true"] .arm+.arm{transform:rotate(-6deg)}
+
+/* Tiko's speech screen */
+.say{position:absolute;right:7%;top:16%;display:grid;gap:5px;max-width:215px;padding:11px 15px 12px;border:3px solid #28474d;border-radius:14px 14px 14px 4px;background:#10263f;color:#7ff0d0;box-shadow:0 12px 26px #0b1a2a55}
+.say small{font-size:.58rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#9cc3be}
+.say strong{font-family:var(--font-mono),monospace;font-size:1.2rem;line-height:1.15;letter-spacing:.02em;text-transform:uppercase}
+.say>span{display:flex;align-items:flex-end;gap:3px;height:14px}
+.say>span i{width:4px;height:6px;border-radius:2px;background:currentColor;opacity:.75}
+.say>span i:nth-child(2){height:12px}.say>span i:nth-child(3){height:9px}.say>span i:nth-child(4){height:14px}
+.say[data-low="true"]{color:#ffbf7a}
+
+/* Bedtime biscuits and crumbs */
+.snack{position:absolute;left:calc(12% + 124px);bottom:8%;width:84px;height:44px}
+.snack:before{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;border-radius:50%;background:#f7ecd6;box-shadow:0 4px 10px #0006}
+.snack svg{position:absolute;left:12px;bottom:8px;width:30px;height:30px;color:#7a4a1c;fill:#e0a45a;transform:rotate(-12deg)}
+.snack svg+svg{left:38px;bottom:11px;transform:none}
+.snack i{position:absolute;bottom:3px;width:5px;height:5px;border-radius:50%;background:#e0a45a}
+.snack i:nth-of-type(1){left:-26px}.snack i:nth-of-type(2){left:-48px;bottom:10px}.snack i:nth-of-type(3){left:-14px;bottom:14px;width:4px;height:4px}.snack i:nth-of-type(4){left:92px;bottom:6px}
+
+/* Moti, the neighbour's puppy */
+.pic{flex:none;display:block;width:58px;height:58px;border:2px solid #fff;border-radius:50%;background:#d9a26c url('/cyber-missions/dog-indie.jpg') 18% 28%/170% auto no-repeat}
+.moti{position:absolute;right:7%;bottom:10%;display:flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border-radius:40px;background:#fffdf6;box-shadow:0 10px 22px #0b1a2a40}
+.moti>span:last-child{display:flex;align-items:center;gap:5px;font-family:var(--font-display),sans-serif;font-size:1rem;font-weight:800;color:#7a4a1c}
+.moti svg{width:16px;height:16px}
+
+/* Scene 3: Nani and Tiko's instruction card */
+.nani{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #dce3d4}
+.nani>span{font-size:.75rem;font-weight:850;color:#826137}
+.nani p{margin:5px 0 0;font-family:var(--font-display),sans-serif;font-size:1.3rem;color:#375b53}
+.card{margin-bottom:6px;padding:13px 15px;border:1px solid #d9dfcc;border-radius:12px;background:#f5f3e6;opacity:.25;transition:opacity .3s ease}
+.card[data-show="true"]{opacity:1}
+.cardHead{display:flex;align-items:center;gap:10px;margin-bottom:6px;padding-bottom:10px;border-bottom:1px dashed #c9cfb9}
+.cardHead>svg{width:24px;height:24px;color:#936834}
+.cardHead div{display:grid;gap:2px}
+.cardHead strong{font-size:.86rem}
+.cardHead span{font-size:.68rem;color:#6a644e}
+.rule{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:5px 0;padding:7px 9px;border-radius:8px;font-size:.78rem;color:#264c48;transition:background .25s ease}
+.rule code{padding:3px 6px;border-radius:5px;background:#e3eadb;font-family:var(--font-mono),monospace;font-size:.7rem;font-weight:800;color:#18545c}
+.rule svg{width:15px;height:15px;color:#8a9a86}
+.rule[data-key="true"]{background:#ffe9c7;box-shadow:inset 3px 0 #d98b2b}
+.rule[data-key="true"] code:last-of-type{background:#f7cf8f;color:#6d3f12}
+.stamp{display:flex;align-items:center;gap:7px;margin-top:9px;font-size:.74rem;font-weight:800;color:#6d4a22;opacity:0;transition:opacity .3s ease}
+.stamp[data-show="true"]{opacity:1}
+.stamp svg{width:16px;height:16px}
+
+/* Scene 4: the sorting task */
+.tray{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;min-height:76px;margin:2px 0 12px}
+.tray button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:9px 4px;border:1px solid #c8d5bd;border-radius:10px;background:#fffaf0;color:#345447;font-size:.72rem;line-height:1.2;text-align:center}
+.tray button svg{width:22px;height:22px;color:#527854}
+.tray button[aria-pressed="true"]{border-color:#155f63;background:#155f63;color:#fff9e9;box-shadow:0 6px 14px #155f6333;transform:translateY(-2px)}
+.tray button[aria-pressed="true"] svg{color:#f9d58a}
+.trayDone{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;background:#e3edda;color:#2f6a3f;font-size:.82rem;font-weight:800}
+.trayDone svg{width:18px;height:18px}
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bins .bin{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:9px;min-height:128px;padding:11px;border:2px dashed #b9c9b1;border-radius:12px;background:#f3f5e8;color:#264c48;text-align:left}
+.bin[data-bin="Machine"]{border-color:#b4c4c8;background:#edf1f2}
+.bin[data-ready="true"]{border-style:solid;border-color:#155f63;background:#e5f0ea}
+.bins .bin:disabled{opacity:1;border-style:solid}
+.binHead{display:grid;grid-template-columns:auto 1fr;column-gap:9px;align-items:center}
+.binHead svg{grid-row:1/3;width:32px;height:32px;padding:6px;border-radius:9px;background:#dcebd5;color:#356441}
+.bin[data-bin="Machine"] .binHead svg{background:#dce6ea;color:#2e5d6a}
+.binHead strong{font-size:.92rem}
+.binHead small{font-size:.66rem;font-weight:700;color:#5b6d63}
+.binItems{display:flex;flex-wrap:wrap;gap:5px}
+.binItems>span{display:flex;align-items:center;gap:5px;padding:5px 8px;border-radius:7px;background:#fffdf6;box-shadow:0 2px 6px #243c3014;font-size:.68rem;font-weight:800}
+.binItems svg{width:14px;height:14px;color:#527854}
+.binItems em{flex:1;padding:9px;border:1px dashed #c3cdb9;border-radius:8px;font-size:.66rem;font-style:normal;font-weight:700;color:#7a8a80;text-align:center}
+
+/* Scene 5: alive vs machine */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.compare section{padding:12px 13px 4px;border-radius:12px;background:#eef3e5}
+.compare section[data-kind="machine"]{background:#e9eff1}
+.compare header{display:flex;align-items:center;gap:9px;padding-bottom:9px;border-bottom:1px solid #d5dccc}
+.compare header div{display:grid;gap:2px;min-width:0}
+.compare header strong{font-size:.92rem}
+.compare header span{font-size:.64rem;color:#5b6d63}
+.compare header>svg{margin-left:auto;width:19px;height:19px;color:#527854}
+.compare .pic{width:40px;height:40px}
+.compare section>div{margin:10px 0;font-size:.76rem;line-height:1.3}
+.compare section>div>span{width:24px;height:24px}
+.miniBot{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#10263f;color:#7ff0d0}
+.miniBot svg{width:22px;height:22px}
+.quote{margin-top:14px;padding:12px 14px;border-radius:10px;background:#10263f;color:#e6fbf4;font-family:var(--font-display),sans-serif;font-size:1.02rem;text-align:center;opacity:.25;transition:opacity .3s ease}
+.quote[data-show="true"]{opacity:1}
+.quote b{color:#7ff0d0}
+
+@keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+@keyframes waveL{from{transform:rotate(25deg)}to{transform:rotate(120deg)}}
+@keyframes waveR{from{transform:rotate(-25deg)}to{transform:rotate(-120deg)}}
+@keyframes floatNote{from{transform:translateY(4px);opacity:.4}to{transform:translateY(-8px);opacity:1}}
+@media(max-width:600px){
+  .toy{left:6%;bottom:8%;transform:scale(.72)}
+  .say{right:5%;top:22%;max-width:48%;padding:8px 10px 9px}
+  .say strong{font-size:.9rem}
+  .snack{left:calc(6% + 88px);bottom:6%;transform:scale(.8);transform-origin:0 100%}
+  .moti{right:5%;bottom:8%;padding-right:10px}
+  .moti .pic{width:42px;height:42px}
+  .moti>span:last-child{font-size:.82rem}
+  .nani p{font-size:1.1rem}
+  .tray{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .bins .bin{min-height:112px;padding:9px}
+  .binHead small{font-size:.6rem}
+  .compare{grid-template-columns:1fr}
+}

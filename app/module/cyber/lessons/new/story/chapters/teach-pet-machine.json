@@ -1,0 +1,77 @@
+{
+  "duration": 91.688,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "Nani’s new helper",
+      "mood": "happy",
+      "caption": "Meet Rohan. Every Sunday, he helps Nani at her fruit stall. Today, she has a toy sorting machine. Rohan calls it his pet machine! He shows it one shiny red apple and says, \"Fruit!\" The machine beeps. Rohan thinks it's ready to help.",
+      "dialogue": "One apple. Now it knows fruit!",
+      "status": "Helping Nani",
+      "start": 0.0,
+      "duration": 15.929
+    },
+    {
+      "id": "problem",
+      "label": "The mix-up",
+      "title": "A rock in the fruit basket!",
+      "mood": "sad",
+      "caption": "Then Rohan tests it with a round red rock. Beep! The machine drops it in the fruit basket. Next, a green apple lands on the rock pile! Meera Aunty nearly buys the rock! Rohan feels embarrassed.",
+      "dialogue": "Oh no! That’s a rock!",
+      "status": "Feeling embarrassed",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 16.579,
+      "duration": 13.582
+    },
+    {
+      "id": "why",
+      "label": "Find out why",
+      "title": "What did it learn from?",
+      "mood": "thinking",
+      "caption": "Nani asks, \"What did it learn from?\" Just one red apple! So it guessed that red and round means fruit. Rohan understands now. This machine learns from examples. With only one example, it makes silly guesses. It needs more examples, and different ones too.",
+      "dialogue": "It only saw one red apple!",
+      "status": "Working it out",
+      "start": 30.811,
+      "duration": 16.479
+    },
+    {
+      "id": "teach",
+      "label": "Teach the machine",
+      "title": "Teach it with better examples",
+      "mood": "thinking",
+      "caption": "Your turn! Help Rohan teach the machine. Put different fruits on the Fruit tray and different rocks on the Rock tray. Then press Test. Careful! Lots of red apples may look helpful, but they're all the same.",
+      "dialogue": "Let’s give it better examples.",
+      "status": "Teaching the machine",
+      "start": 47.939,
+      "duration": 12.98
+    },
+    {
+      "id": "learned",
+      "label": "It learned!",
+      "title": "Different examples. Better sorting.",
+      "mood": "happy",
+      "caption": "The machine gets it right now! The red rock goes to the rocks. The green apple goes to the fruit. Machines like this learn from examples, and different examples help. But they still make mistakes, so a person checks too. Nani checks every basket.",
+      "dialogue": "Red rock? Rock! Green apple? Fruit!",
+      "status": "Proud of his work",
+      "start": 61.569,
+      "duration": 15.863
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Only fruit in the basket",
+      "mood": "happy",
+      "caption": "Meera Aunty gets only fruit in her bag, and Nani gives Rohan a big hug. He learned that a machine is only as good as its examples. Your turn: help Rohan feed the pet machine new fruits and new objects!",
+      "dialogue": "Thanks for helping me teach it!",
+      "status": "Happy and proud",
+      "tone": "resolved",
+      "start": 78.083,
+      "duration": 12.955
+    }
+  ]
+}

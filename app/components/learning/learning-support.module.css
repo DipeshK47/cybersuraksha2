@@ -1,0 +1,1804 @@
+.helpButton {
+  min-height: 50px;
+  padding: 7px 14px 7px 11px;
+  border: 2px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.helpButton:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 var(--sl-shadow);
+}
+
+.helpButton:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--sl-shadow);
+}
+
+.helpButton svg {
+  width: 21px;
+}
+
+.helpButton span {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.helpButton small {
+  margin-bottom: 4px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dialogBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  padding: 22px;
+  background: rgb(2 4 3 / 0.68);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  animation: backdropIn 180ms ease-out both;
+}
+
+.dialog {
+  position: relative;
+  width: min(520px, 100%);
+  max-height: calc(100svh - 44px);
+  overflow-y: auto;
+  padding: clamp(24px, 4vw, 38px);
+  border: 3px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 24px;
+  box-shadow: 10px 10px 0 var(--sl-shadow);
+  animation: dialogIn 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.closeButton {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.dialog > .closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.closeButton svg {
+  width: 18px;
+}
+
+.dialogSignal {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 19px;
+  border: 2px solid #171e19;
+  color: #171e19;
+  background: var(--sl-coral);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+  display: grid;
+  place-items: center;
+}
+
+.dialogSignal svg {
+  width: 31px;
+}
+
+.dialog > p {
+  margin: 0 0 7px;
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dialog h2 {
+  margin: 0;
+  padding-right: 44px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.dialogExplanation {
+  margin-top: 18px;
+  color: var(--sl-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.workedPath {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.workedPath span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workedPath strong {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 9px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono), monospace;
+  animation: workedStep 420ms calc(var(--step, 0) * 130ms) ease-out both;
+}
+
+.workedPath svg {
+  width: 16px;
+  color: var(--sl-indigo);
+}
+
+.ruleCard {
+  margin-top: 14px;
+  padding: 13px 14px;
+  border: 2px dashed var(--sl-line);
+  background: color-mix(in srgb, var(--sl-yellow) 38%, var(--sl-surface));
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.ruleCard svg {
+  width: 21px;
+  flex: none;
+  color: var(--sl-indigo);
+}
+
+.ruleCard span {
+  display: flex;
+  flex-direction: column;
+}
+
+.ruleCard small {
+  margin-bottom: 3px;
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dialogActions {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dialogActions button,
+.hintActions button {
+  min-height: 48px;
+  padding: 0 14px;
+  border: 2px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-lime);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dialogActions button:last-child,
+.hintActions button:last-child:not(:first-child) {
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+}
+
+.dialogActions svg,
+.hintActions svg {
+  width: 17px;
+}
+
+.hintDrawer {
+  position: fixed;
+  right: 24px;
+  bottom: 86px;
+  z-index: 350;
+  width: min(410px, calc(100vw - 32px));
+  max-height: calc(100svh - 112px);
+  overflow-y: auto;
+  padding: 20px;
+  border: 3px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 var(--sl-shadow);
+  animation: drawerIn 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hintDrawer > header,
+.hintDrawer > header > div,
+.hintDrawer > header span {
+  display: flex;
+}
+
+.hintDrawer > header {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.hintDrawer > header > div {
+  align-items: center;
+  gap: 10px;
+}
+
+.hintDrawer > header > div > svg {
+  width: 28px;
+  color: var(--sl-indigo);
+}
+
+.hintDrawer > header span {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hintDrawer > header small {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hintDrawer > header strong {
+  margin-top: 3px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.hintPrompt {
+  margin: 15px 0 0;
+  color: var(--sl-muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.hintProgress {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.hintProgress i {
+  height: 7px;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+  border-radius: 99px;
+}
+
+.hintProgress i.hintProgressActive {
+  background: var(--sl-lime);
+}
+
+.hintCard {
+  padding: 18px;
+  border: 2px solid var(--sl-line);
+  background: color-mix(in srgb, var(--sl-yellow) 28%, var(--sl-surface));
+  border-radius: 14px;
+  animation: hintIn 240ms ease-out both;
+}
+
+.hintCard > span {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hintCard h3 {
+  margin: 7px 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.08;
+}
+
+.hintCard p {
+  margin: 0;
+  color: var(--sl-muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.hintCard > strong {
+  margin-top: 13px;
+  padding: 10px 12px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 9px;
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.hintActions {
+  margin-top: 14px;
+  display: grid;
+  gap: 9px;
+}
+
+.animationCard {
+  margin: -9px 0 22px;
+  padding: 17px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: color-mix(in srgb, var(--sl-indigo) 8%, var(--sl-surface-soft));
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+}
+
+.animationCard > header {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.animationCard > header > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.animationCard > header span,
+.animationCard small {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.animationCard > header strong {
+  margin-top: 3px;
+  font-size: 0.85rem;
+}
+
+.animationCard > p {
+  margin: 13px 0 0;
+  color: var(--sl-muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.animationControls {
+  display: flex;
+  gap: 7px;
+}
+
+.animationControls button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.animationControls svg {
+  width: 16px;
+}
+
+.pipelineAnimation {
+  min-height: 116px;
+  padding: 13px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.pipelineAnimation > div:first-child,
+.pipelineAnimation > div:last-child {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+}
+
+.pipelineAnimation > div > span {
+  display: flex;
+  gap: 5px;
+}
+
+.pipelineAnimation b {
+  width: 38px;
+  height: 43px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface-soft);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono), monospace;
+}
+
+.pipelineAnimation > div:first-child b {
+  animation: plainFloat 3.8s calc(var(--step) * 90ms) ease-in-out both;
+}
+
+.pipelineAnimation > div:last-child b {
+  animation: codedReveal 3.8s calc(1.4s + var(--step) * 90ms) ease-out both;
+}
+
+.keyPulse {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border: 2px solid #171e19;
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  animation: keyGlow 3.8s 900ms ease-in-out both;
+}
+
+.keyPulse strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.4rem;
+}
+
+.keyPulse svg {
+  position: absolute;
+  right: -26px;
+  width: 19px;
+}
+
+.shiftAnimation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.shiftAnimation > div {
+  min-height: 102px;
+  padding: 13px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 11px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 9px;
+}
+
+.shiftAnimation > div > span {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.shiftAnimation b {
+  width: 48px;
+  height: 52px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface-soft);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 1.25rem;
+}
+
+.shiftAnimation > div b:first-child {
+  animation: sourceMove 3.3s ease-in-out both;
+}
+
+.shiftAnimation > div b:last-child {
+  animation: targetGlow 3.3s 1.05s ease-in-out both;
+}
+
+.shiftAnimation svg {
+  width: 22px;
+  color: var(--sl-indigo);
+  animation: arrowTravel 3.3s 500ms ease-in-out both;
+}
+
+.animationPaused,
+.animationPaused * {
+  animation-play-state: paused !important;
+}
+
+.animatedPath {
+  min-height: 82px;
+  padding: 12px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.animatedPath span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: pathStep 1.8s calc(var(--step) * 260ms) ease-out both;
+}
+
+.animatedPath b {
+  min-width: 46px;
+  min-height: 48px;
+  padding: 0 10px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface-soft);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 1.05rem;
+}
+
+.animatedPath span:last-child b {
+  color: #171e19;
+  background: var(--sl-lime);
+}
+
+.animatedPath svg {
+  width: 17px;
+  color: var(--sl-indigo);
+}
+
+@keyframes practiceProgressSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  60%,
+  100% {
+    transform: translateX(280%);
+  }
+}
+
+@keyframes practiceQuestionIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px) rotate(0.35deg);
+  }
+}
+
+@keyframes practiceChoiceIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes practiceRetryOdd {
+  0%,
+  100% {
+    transform: none;
+  }
+  28% {
+    transform: translateX(-7px) rotate(-0.3deg);
+  }
+  62% {
+    transform: translateX(5px) rotate(0.2deg);
+  }
+}
+
+@keyframes practiceRetryEven {
+  0%,
+  100% {
+    transform: none;
+  }
+  28% {
+    transform: translateX(7px) rotate(0.3deg);
+  }
+  62% {
+    transform: translateX(-5px) rotate(-0.2deg);
+  }
+}
+
+@keyframes correctRevealIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes correctCheckPop {
+  from {
+    opacity: 0;
+    transform: scale(0.35) rotate(-18deg);
+  }
+  70% {
+    transform: scale(1.12) rotate(4deg);
+  }
+}
+
+@keyframes answerSpark {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.2) rotate(45deg);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.1) rotate(90deg);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(0) scale(0.78) rotate(135deg);
+  }
+}
+
+@keyframes solutionLineIn {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+}
+
+@keyframes practiceCompleteIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+}
+
+@keyframes celebrationBurst {
+  from {
+    opacity: 0;
+    transform: scale(0.25) rotate(-22deg);
+  }
+  68% {
+    transform: scale(1.12) rotate(5deg);
+  }
+}
+
+@keyframes backdropIn {
+  from { opacity: 0; }
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+}
+
+@keyframes drawerIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px) rotate(1deg);
+  }
+}
+
+@keyframes hintIn {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+}
+
+@keyframes workedStep {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.9);
+  }
+}
+
+@keyframes plainFloat {
+  0%, 15% { transform: none; box-shadow: none; }
+  32%, 52% {
+    color: #171e19;
+    background: var(--sl-yellow);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--sl-yellow) 35%, transparent);
+    transform: translateY(-9px);
+  }
+  78%, 100% { opacity: 0.42; transform: translateX(12px); }
+}
+
+@keyframes codedReveal {
+  0%, 28% { opacity: 0; transform: translateX(-18px) scale(0.84); }
+  55%, 78% {
+    opacity: 1;
+    color: #171e19;
+    background: var(--sl-lime);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--sl-lime) 28%, transparent);
+    transform: translateY(-7px) scale(1.05);
+  }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes keyGlow {
+  0%, 15%, 100% { transform: none; box-shadow: none; }
+  42%, 68% {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--sl-yellow) 32%, transparent);
+    transform: scale(1.08) rotate(-3deg);
+  }
+}
+
+@keyframes sourceMove {
+  0%, 20% { transform: none; }
+  48%, 65% {
+    color: #171e19;
+    background: var(--sl-yellow);
+    transform: translateX(16px) translateY(-5px);
+  }
+  100% { opacity: 0.48; transform: translateX(24px); }
+}
+
+@keyframes targetGlow {
+  0%, 22% { opacity: 0.25; transform: scale(0.88); }
+  48%, 78% {
+    opacity: 1;
+    color: #171e19;
+    background: var(--sl-lime);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--sl-lime) 28%, transparent);
+    transform: scale(1.08) translateY(-5px);
+  }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes arrowTravel {
+  0%, 20% { opacity: 0.3; transform: translateX(-9px); }
+  48%, 72% { opacity: 1; transform: translateX(7px); }
+  100% { opacity: 0.75; transform: none; }
+}
+
+@keyframes pathStep {
+  0% { opacity: 0.2; transform: translateY(10px) scale(0.9); }
+  38%, 68% { opacity: 1; transform: translateY(-6px) scale(1.05); }
+  100% { opacity: 1; transform: none; }
+}
+
+.practiceSet {
+  --practice-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 4px;
+  display: grid;
+  gap: 14px;
+}
+
+.practiceSetTitle {
+  margin: 0;
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.practiceSetHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.practiceSetHead > div {
+  display: grid;
+  gap: 5px;
+}
+
+.practiceSetHead strong {
+  color: var(--sl-ink);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.practiceSetHead > span {
+  min-width: 52px;
+  padding: 7px 9px;
+  border: 2px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--sl-shadow);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.practiceProgress {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 6px;
+}
+
+.practiceProgress i {
+  position: relative;
+  height: 10px;
+  overflow: hidden;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+  border-radius: 99px;
+}
+
+.practiceProgress i::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--sl-lime);
+}
+
+.practiceProgress i.practiceProgressDone::after {
+  transform: scaleX(1);
+  transition: transform 420ms var(--practice-ease);
+}
+
+.practiceProgress i.practiceProgressCurrent {
+  background: color-mix(in srgb, var(--sl-yellow) 44%, var(--sl-surface));
+}
+
+.practiceProgress i.practiceProgressCurrent::after {
+  width: 42%;
+  transform: translateX(-120%);
+  background: var(--sl-yellow);
+  animation: practiceProgressSweep 1.6s ease-in-out infinite;
+}
+
+.practiceCard {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(17px, 3vw, 26px);
+  border: 3px solid var(--sl-line);
+  background:
+    radial-gradient(circle at 96% 5%, color-mix(in srgb, var(--sl-yellow) 24%, transparent) 0 80px, transparent 82px),
+    var(--sl-surface);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--sl-shadow);
+  animation: practiceQuestionIn 420ms var(--practice-ease) both;
+}
+
+.practiceCardRetryOdd {
+  animation: practiceRetryOdd 360ms ease-out;
+}
+
+.practiceCardRetryEven {
+  animation: practiceRetryEven 360ms ease-out;
+}
+
+.practiceCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.practiceCardHead > span {
+  color: var(--sl-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.handbookBadge,
+.practiceBadge {
+  padding: 4px 10px;
+  border: 1.5px solid var(--sl-line);
+  border-radius: 999px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.56rem;
+  font-weight: 750;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.handbookBadge {
+  color: #171e19;
+  background: var(--sl-yellow);
+}
+
+.practiceBadge {
+  color: #171e19;
+  background: var(--sl-mint);
+}
+
+.practiceQuestionStage {
+  min-height: 104px;
+  padding: clamp(15px, 3vw, 22px);
+  border: 2px solid var(--sl-line);
+  background: color-mix(in srgb, var(--sl-surface) 86%, var(--sl-yellow));
+  border-radius: 14px;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+}
+
+.practiceQuestionStage h3 {
+  max-width: 72ch;
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.05rem, 2.1vw, 1.32rem);
+  font-weight: 760;
+  letter-spacing: -0.02em;
+  line-height: 1.42;
+}
+
+.practiceQuestionStage h3:focus {
+  outline: none;
+}
+
+.practiceCard .choiceRow {
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.practiceCard .choiceRow button {
+  min-height: 50px;
+  padding: 8px 13px 8px 10px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface-soft);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 720;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  animation: practiceChoiceIn 360ms calc(var(--choice, 0) * 65ms) var(--practice-ease) both;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.practiceCard .choiceRow button > span {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.practiceCard .choiceRow button > svg {
+  width: 18px;
+  margin-left: auto;
+  flex: none;
+}
+
+.practiceCard .choiceRow button:not(:disabled):hover {
+  background: color-mix(in srgb, var(--sl-yellow) 35%, var(--sl-surface));
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+}
+
+.practiceCard .choiceRow button:not(:disabled):active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--sl-shadow);
+}
+
+.practiceCard .choiceRow button:focus-visible,
+.nextQuestionButton:focus-visible {
+  outline: 3px solid var(--sl-indigo);
+  outline-offset: 3px;
+}
+
+.practiceCard .choiceRow button:disabled:not(.choiceCorrect) {
+  cursor: default;
+  opacity: 0.52;
+}
+
+.practiceCard .choiceCorrect {
+  border-color: #171e19 !important;
+  color: #171e19 !important;
+  background: var(--sl-lime) !important;
+}
+
+.practiceCard .choiceWrong {
+  border-color: #171e19 !important;
+  color: #171e19 !important;
+  background: var(--sl-coral) !important;
+}
+
+.retryNote {
+  margin-top: 13px;
+  padding: 12px 13px;
+  border: 2px dashed var(--sl-line);
+  background: color-mix(in srgb, var(--sl-coral) 24%, var(--sl-surface));
+  border-radius: 11px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--sl-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.retryNote svg {
+  width: 19px;
+  flex: none;
+  color: var(--sl-ink);
+}
+
+.retryNote span {
+  display: grid;
+  gap: 2px;
+}
+
+.retryNote strong {
+  color: var(--sl-ink);
+}
+
+.correctReveal {
+  margin-top: 15px;
+  display: grid;
+  gap: 13px;
+  animation: correctRevealIn 420ms var(--practice-ease) both;
+}
+
+.correctSignal {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 15px;
+  border: 2px solid #171e19;
+  color: #171e19;
+  background: var(--sl-lime);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.correctSignal > span {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #171e19;
+  background: var(--sl-surface);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  animation: correctCheckPop 520ms 120ms var(--practice-ease) both;
+}
+
+.correctSignal > span svg {
+  width: 21px;
+}
+
+.correctSignal > div:nth-child(2) {
+  display: grid;
+  gap: 2px;
+}
+
+.correctSignal small,
+.solutionPanel header small {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.correctSignal strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.sparkTrail {
+  position: absolute;
+  inset: 0 10px 0 auto;
+  width: 74px;
+  pointer-events: none;
+}
+
+.sparkTrail i {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #171e19;
+  background: var(--sl-yellow);
+  transform: rotate(45deg);
+  animation: answerSpark 1.3s var(--spark-delay, 0ms) ease-out both;
+}
+
+.sparkTrail i:nth-child(1) {
+  top: 17%;
+  right: 13%;
+  --spark-delay: 100ms;
+}
+
+.sparkTrail i:nth-child(2) {
+  right: 49%;
+  bottom: 14%;
+  --spark-delay: 210ms;
+}
+
+.sparkTrail i:nth-child(3) {
+  top: 41%;
+  right: 77%;
+  width: 6px;
+  height: 6px;
+  --spark-delay: 330ms;
+}
+
+.solutionPanel {
+  overflow: hidden;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+  border-radius: 14px;
+}
+
+.solutionPanel header {
+  padding: 13px 15px;
+  border-bottom: 2px solid var(--sl-line);
+  background: color-mix(in srgb, var(--sl-indigo) 8%, var(--sl-surface));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+}
+
+.solutionPanel header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.solutionPanel header svg {
+  width: 21px;
+  color: var(--sl-indigo);
+}
+
+.solutionPanel header span {
+  display: grid;
+  gap: 1px;
+}
+
+.solutionPanel header small {
+  color: var(--sl-indigo);
+}
+
+.solutionPanel header strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.98rem;
+}
+
+.solutionPanel header > b {
+  max-width: 52%;
+  padding: 6px 9px;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-yellow);
+  border-radius: 8px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.solutionPanel ol {
+  margin: 0;
+  padding: 14px;
+  display: grid;
+  gap: 9px;
+  list-style: none;
+  counter-reset: none;
+}
+
+.solutionPanel li {
+  padding: 10px 11px;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px;
+  animation: solutionLineIn 430ms calc(180ms + var(--solution-step, 0) * 280ms) var(--practice-ease) both;
+}
+
+.solutionPanel li > span {
+  width: 25px;
+  height: 25px;
+  border: 1.5px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.61rem;
+  font-weight: 800;
+}
+
+.solutionPanel li p {
+  margin: 1px 0 0;
+  color: var(--sl-ink);
+  font-size: 0.78rem;
+  font-weight: 620;
+  line-height: 1.5;
+}
+
+.nextQuestionButton {
+  min-height: 48px;
+  padding: 0 17px;
+  border: 2px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 11px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  justify-self: end;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.nextQuestionButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--sl-shadow);
+}
+
+.nextQuestionButton:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--sl-shadow);
+}
+
+.nextQuestionButton svg {
+  width: 18px;
+}
+
+.practiceComplete,
+.practiceEmpty {
+  padding: clamp(26px, 5vw, 46px);
+  border: 3px solid var(--sl-line);
+  background: color-mix(in srgb, var(--sl-lime) 48%, var(--sl-surface));
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--sl-shadow);
+  text-align: center;
+}
+
+.practiceComplete {
+  display: grid;
+  justify-items: center;
+  animation: practiceCompleteIn 520ms var(--practice-ease) both;
+}
+
+.practiceComplete:focus {
+  outline: none;
+}
+
+.celebrationBurst {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 13px;
+  border: 2px solid var(--sl-line);
+  color: #171e19;
+  background: var(--sl-yellow);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+  display: grid;
+  place-items: center;
+  animation: celebrationBurst 700ms 100ms var(--practice-ease) both;
+}
+
+.celebrationBurst svg {
+  width: 31px;
+}
+
+.practiceComplete > span {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.practiceComplete h3 {
+  margin: 7px 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  letter-spacing: -0.035em;
+}
+
+.practiceComplete p,
+.practiceEmpty {
+  color: var(--sl-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.practiceComplete p {
+  max-width: 52ch;
+  margin: 0;
+}
+
+.exampleCard {
+  margin: 4px 0 22px;
+  padding: 18px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+  border-radius: 18px;
+}
+
+.exampleCard > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.exampleCard > header > div:first-child {
+  display: grid;
+  gap: 3px;
+}
+
+.exampleCard > header span {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exampleCard > header strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.05rem;
+}
+
+.exampleControls {
+  display: flex;
+  flex: none;
+  gap: 7px;
+}
+
+.exampleControls button {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 2px solid var(--sl-line);
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.exampleControls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.exampleControls svg {
+  width: 14px;
+}
+
+.exampleStage {
+  min-height: 130px;
+  padding: 18px;
+  border: 2px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  animation: exampleStepIn 340ms ease-out both;
+}
+
+.exampleCaption {
+  min-height: 92px;
+  margin: 14px 0 0;
+  padding: 16px 18px;
+  border: 2px dashed var(--sl-line);
+  background: color-mix(in srgb, var(--sl-yellow) 28%, var(--sl-surface));
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.exampleStepLabel {
+  color: var(--sl-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.exampleCaptionText {
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.exampleCaret {
+  display: inline-block;
+  width: 3px;
+  height: 1.05em;
+  margin-left: 3px;
+  background: var(--sl-ink);
+  vertical-align: text-bottom;
+  animation: exampleCaretBlink 900ms steps(1) infinite;
+}
+
+.examplePlayCta {
+  border-color: #171e19 !important;
+  color: #171e19 !important;
+  background: var(--sl-lime) !important;
+  animation: examplePlayPulse 1200ms ease-in-out infinite;
+}
+
+.exampleStartHint {
+  width: 100%;
+  min-height: 92px;
+  margin: 14px 0 0;
+  padding: 16px 18px;
+  border: 2px dashed var(--sl-line);
+  background: color-mix(in srgb, var(--sl-yellow) 28%, var(--sl-surface));
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--sl-ink);
+  cursor: pointer;
+  text-align: center;
+}
+
+.exampleStartArrow {
+  width: 30px;
+  height: 30px;
+  color: var(--sl-indigo);
+  animation: exampleArrowBounce 900ms ease-in-out infinite;
+}
+
+.exampleStartHint span {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.exampleProgress {
+  margin-top: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.exampleProgress i {
+  position: relative;
+  flex: 1;
+  height: 9px;
+  overflow: hidden;
+  border: 1.5px solid var(--sl-line);
+  background: var(--sl-surface);
+  border-radius: 99px;
+  font-style: normal;
+}
+
+.exampleProgress i.exampleProgressDone {
+  background: var(--sl-lime);
+}
+
+.exampleProgress b {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  background: var(--sl-lime);
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--sl-lime) 70%, var(--sl-surface)),
+    var(--sl-lime)
+  );
+  animation-name: exampleLoad;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.exampleReveal {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px dashed var(--sl-line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.exampleReveal p {
+  margin: 0;
+  color: var(--sl-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.exampleRevealButton {
+  min-height: 52px;
+  padding: 0 22px;
+  border: 2px solid #171e19;
+  color: #171e19;
+  background: var(--sl-lime);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #171e19;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  animation: exampleRevealBounce 1100ms ease-in-out infinite;
+}
+
+.exampleRevealButton svg {
+  width: 20px;
+}
+
+@keyframes exampleLoad {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes examplePlayPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 4px 4px 0 var(--sl-shadow);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 6px 6px 0 var(--sl-shadow);
+  }
+}
+
+@keyframes exampleArrowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes exampleRevealBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes exampleCaretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes exampleStepIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.99);
+  }
+}
+
+@media (max-width: 700px) {
+  .dialogActions,
+  .pipelineAnimation,
+  .shiftAnimation {
+    grid-template-columns: 1fr;
+  }
+
+  .keyPulse {
+    margin: 0 auto;
+  }
+
+  .keyPulse svg {
+    right: 50%;
+    bottom: -27px;
+    transform: translateX(50%) rotate(90deg);
+  }
+
+  .pipelineAnimation b {
+    width: 33px;
+    height: 38px;
+  }
+
+  .hintDrawer {
+    right: 16px;
+    bottom: 78px;
+  }
+
+  .exampleCard > header {
+    flex-direction: column;
+  }
+
+  .exampleControls {
+    width: 100%;
+  }
+
+  .exampleControls button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .practiceCard .choiceRow {
+    grid-template-columns: 1fr;
+  }
+
+  .solutionPanel header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .solutionPanel header > b {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .nextQuestionButton {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialogBackdrop,
+  .dialog,
+  .hintDrawer,
+  .hintCard,
+  .workedPath strong,
+  .pipelineAnimation *,
+  .shiftAnimation *,
+  .animatedPath span,
+  .exampleStage,
+  .exampleCaret,
+  .examplePlayCta,
+  .exampleStartArrow,
+  .exampleRevealButton,
+  .practiceProgress i::after,
+  .practiceCard,
+  .practiceCard .choiceRow button,
+  .correctReveal,
+  .correctSignal > span,
+  .sparkTrail i,
+  .solutionPanel li,
+  .practiceComplete,
+  .celebrationBurst {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .exampleProgress b {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+}
+
+/* Same layout as .correctSignal, but for a locked WRONG answer: practice is one
+   shot, so this panel still states the real answer — it must not be dressed in
+   the lime "you got it" colour while doing so. */
+.answerSignalWrong {
+  composes: correctSignal;
+  background: #f6d7d2;
+}
+
+/* "Read to me" — speaks the text beside it with the browser's speech engine. */
+.speakButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0 8px;
+  padding: 6px 12px;
+  border: 2px solid var(--sl-ink);
+  border-radius: 999px;
+  background: var(--sl-yellow);
+  color: var(--sl-ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+  vertical-align: middle;
+  box-shadow: 2px 2px 0 var(--sl-shadow);
+}
+
+.speakButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+.speakButton[aria-pressed="true"] {
+  background: var(--sl-lime);
+}

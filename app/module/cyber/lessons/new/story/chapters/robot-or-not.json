@@ -1,0 +1,77 @@
+{
+  "duration": 92.856,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "A robot that dances!",
+      "mood": "happy",
+      "caption": "Meet Rohan. His new dancing robot, Tiko, arrived today! Tiko spins, flashes its lights and says, \"Let's dance!\" Rohan dances with it all afternoon. He thinks Tiko is his new best friend.",
+      "dialogue": "Tiko, you’re the best dancer ever!",
+      "status": "Dancing with Tiko",
+      "start": 0.0,
+      "duration": 13.775
+    },
+    {
+      "id": "problem",
+      "label": "Bedtime surprise",
+      "title": "“I’m hungry!” at bedtime",
+      "mood": "sad",
+      "caption": "At bedtime, Tiko's lights blink. \"I'm hungry!\" it says. Rohan gasps. Is Tiko sad and lonely? He holds a biscuit up to Tiko's face. Crumbs fall everywhere. But Tiko just says the same words again.",
+      "dialogue": "Oh no! Is Tiko sad and lonely?",
+      "status": "Feeling worried",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 14.425,
+      "duration": 14.763
+    },
+    {
+      "id": "help",
+      "label": "Ask Nani",
+      "title": "Nani reads Tiko’s rules.",
+      "mood": "thinking",
+      "caption": "Rohan runs to Nani. She smiles. \"What a kind heart you have.\" Then she reads Tiko's instruction card. When the battery is low, say, I'm hungry. People wrote that rule! Tiko needs charging, not biscuits.",
+      "dialogue": "Nani, why is Tiko hungry?",
+      "status": "Asking Nani",
+      "start": 29.839,
+      "duration": 14.359
+    },
+    {
+      "id": "sort",
+      "label": "Sort it out",
+      "title": "Alive or machine?",
+      "mood": "thinking",
+      "caption": "Next morning, Moti, the neighbour's puppy, visits. Nani makes up a game. Help Rohan sort five things into Alive or Machine. Moving and talking aren't enough. Ask: does it grow and need care? Or follow a program?",
+      "dialogue": "Alive or machine? Let’s sort!",
+      "status": "Sorting with you",
+      "start": 44.847,
+      "duration": 14.815
+    },
+    {
+      "id": "lesson",
+      "label": "What’s alive?",
+      "title": "It can say it. It can’t feel it.",
+      "mood": "happy",
+      "caption": "Nani explains. Living things, like Moti and the plant, grow and need care. Moti needs food. The plant needs water and sunlight. Machines, like Tiko, follow a program, the instructions people write. Tiko can say I'm hungry, but it can't feel hungry.",
+      "dialogue": "So Tiko follows its program!",
+      "status": "Understanding now",
+      "start": 60.313,
+      "duration": 16.641
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Charged up and dancing!",
+      "mood": "happy",
+      "caption": "Tiko's battery is full now. It spins and says, \"Let's dance!\" Moti wags his tail. Rohan still loves his robot. A robot can talk and dance, but it isn't alive. Your turn: help Rohan sort more things!",
+      "dialogue": "Charged up! Let’s dance, Tiko!",
+      "status": "Happy and dancing",
+      "tone": "resolved",
+      "start": 77.603,
+      "duration": 14.603
+    }
+  ]
+}

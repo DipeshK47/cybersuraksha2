@@ -1,0 +1,77 @@
+{
+  "duration": 0,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "Tikku’s very first job",
+      "mood": "happy",
+      "caption": "Meet Rohan. He has a toy helper robot called Tikku. Tonight, Rohan taps his morning steps into Tikku's screen. Tomorrow, Tikku will follow those steps and help him get ready for school. Rohan can't wait to see it work!",
+      "dialogue": "Tikku, you’ll help me tomorrow!",
+      "status": "Excited to try",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "problem",
+      "label": "The mix-up",
+      "title": "Late for the bus!",
+      "mood": "sad",
+      "caption": "Next morning, Tikku follows every step exactly. It hands Rohan his shoes before his socks! It zips his bag shut before his books go in. Rohan has to undo it all. By the time he's ready, the bus has gone. Rohan feels upset.",
+      "dialogue": "Oh no… I missed the bus!",
+      "status": "Feeling upset",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "help",
+      "label": "Ask Papa",
+      "title": "Tikku did just what the list said.",
+      "mood": "thinking",
+      "caption": "Rohan tells Papa what happened. Together, they read Tikku's step list. Tikku didn't break. It did every step in exactly the order Rohan gave. Computers work the same way. They can't guess what you meant. So the order is up to you.",
+      "dialogue": "Papa, why did Tikku do that?",
+      "status": "Working it out",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "fix",
+      "label": "Fix the order",
+      "title": "Put the steps in order.",
+      "mood": "thinking",
+      "caption": "Your turn! Help Rohan fix Tikku's steps. Drag each step onto the board, or tap them in order. Think about what has to happen before each step. Then press Run and watch Tikku try again.",
+      "dialogue": "Let’s put the steps in order!",
+      "status": "Fixing the steps",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "sequence",
+      "label": "Order matters",
+      "title": "Same steps. Different order.",
+      "mood": "happy",
+      "caption": "A list of steps in order is called a sequence. A computer does step one, then step two, then step three, exactly as written. Change the order, and you change what happens. So Rohan checks his steps before pressing Run.",
+      "dialogue": "Order matters. I’ll check first!",
+      "status": "Feeling confident",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Right on time!",
+      "mood": "happy",
+      "caption": "The next morning, Tikku runs the fixed steps. Socks, then shoes. Books, then zip. Rohan catches the bus with time to spare! Computers do steps in exactly the order you give. Your turn: help Rohan and Tikku build more routines!",
+      "dialogue": "We made it! Thanks, Tikku.",
+      "status": "Happy and on time",
+      "tone": "resolved",
+      "start": 0,
+      "duration": 0
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "duration": 92.613,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "Off to the fair!",
+      "mood": "happy",
+      "caption": "Meet Rohan. He's riding the Cyberpur trolley with his Nani, all the way to the fair! Rohan loves the little screen by his seat. It shows the track ahead: coloured tiles, circle, square, triangle, again and again.",
+      "speech": "Meet Rohan. He's riding the Cyberpur trolley with his Naani, all the way to the fair! Rohan loves the little screen by his seat. It shows the track ahead: coloured tiles, circle, square, triangle, again and again.",
+      "dialogue": "Nani, the tiles make a pattern!",
+      "status": "Excited to ride",
+      "start": 0.0,
+      "duration": 14.343
+    },
+    {
+      "id": "problem",
+      "label": "The stop",
+      "title": "The trolley won’t move!",
+      "mood": "sad",
+      "caption": "Suddenly, the trolley stops. Two track tiles are missing! The screen says the trolley can only roll on tiles that keep the pattern. Rohan feels worried. Will they miss the fair? Nani squeezes his hand. \"Let's work it out together.\"",
+      "speech": "Suddenly, the trolley stops. Two track tiles are missing! The screen says the trolley can only roll on tiles that keep the pattern. Rohan feels worried. Will they miss the fair? Naani squeezes his hand. \"Let's work it out together.\"",
+      "dialogue": "Oh no! Are we stuck here?",
+      "status": "Feeling worried",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 14.993,
+      "duration": 15.217
+    },
+    {
+      "id": "help",
+      "label": "Find the group",
+      "title": "What keeps repeating?",
+      "mood": "thinking",
+      "caption": "Nani points at the screen. \"Read the tiles from the start.\" Orange circle, blue square, green triangle. Then the same three come again! That's the group that repeats. Rohan says it out loud, like a real pattern detective.",
+      "speech": "Naani points at the screen. \"Read the tiles from the start.\" Orange circle, blue square, green triangle. Then the same three come again! That's the group that repeats. Rohan says it out loud, like a real pattern detective.",
+      "dialogue": "Circle, square, triangle… again!",
+      "status": "Spotting the group",
+      "start": 30.859,
+      "duration": 15.299
+    },
+    {
+      "id": "fix",
+      "label": "Fix the track",
+      "title": "Colour and shape must match.",
+      "mood": "thinking",
+      "caption": "Your turn, detective! Two tiles are missing. Start at the first tile and say the group as you go. What belongs in each gap? Be careful: a tile must match the colour and the shape. Then roll the trolley!",
+      "dialogue": "Which tile fits each gap?",
+      "status": "Solving with you",
+      "start": 46.808,
+      "duration": 13.945
+    },
+    {
+      "id": "lesson",
+      "label": "The trick",
+      "title": "Find the group. Then continue it.",
+      "mood": "happy",
+      "caption": "The trolley rolls on! Nani is so proud. Rohan found a pattern: a group that repeats. His detective trick has three steps. Look from the start. Find the group. Then continue it. Computers find patterns too, in pictures and songs.",
+      "speech": "The trolley rolls on! Naani is so proud. Rohan found a pattern: a group that repeats. His detective trick has three steps. Look from the start. Find the group. Then continue it. Computers find patterns too, in pictures and songs.",
+      "dialogue": "Look, find, continue. Easy!",
+      "status": "Feeling proud",
+      "start": 61.403,
+      "duration": 16.049
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Next stop: the fair!",
+      "mood": "happy",
+      "caption": "The trolley pulls into Fair Station, right on time! Rohan grins. He didn't guess. He found the group and kept it going. Patterns help us predict what comes next. Your turn: help Rohan fix more gaps on the track!",
+      "dialogue": "We made it! Thanks, detective!",
+      "status": "Happy and on time",
+      "tone": "resolved",
+      "start": 78.103,
+      "duration": 13.861
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+.lab {
+  --lab-paper: #fffdf5;
+  --lab-ink: #18201b;
+  --lab-muted: #667069;
+  --lab-yellow: #f7d75a;
+  --lab-lime: #b9ec5c;
+  --lab-coral: #c73e1d;
+  --lab-green: #2e7d32;
+  --lab-indigo: #4747cc;
+  overflow: hidden;
+  color: var(--lab-ink);
+  border: 2px solid color-mix(in oklab, var(--lab-ink) 88%, transparent);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 8% 12%, rgb(247 215 90 / 24%), transparent 24%),
+    radial-gradient(circle at 90% 18%, rgb(71 71 204 / 11%), transparent 24%),
+    var(--lab-paper);
+  box-shadow: 0 18px 45px rgb(24 32 27 / 10%);
+}
+
+.labHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 26px 28px 22px;
+}
+
+.kicker,
+.teacherBeat > span {
+  display: block;
+  color: var(--lab-indigo);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.labHeader h4 {
+  max-width: 680px;
+  margin: 5px 0 5px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.labHeader p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--lab-muted);
+  font-size: 0.94rem;
+}
+
+.tourControls {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.tourControls button,
+.presets button,
+.stepDots button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1.5px solid var(--lab-ink);
+  border-radius: 12px;
+  background: rgb(255 253 245 / 90%);
+  color: var(--lab-ink);
+  font: 800 0.84rem/1 var(--font-body), sans-serif;
+  cursor: pointer;
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), background 180ms ease;
+}
+
+.tourControls button:hover,
+.presets button:hover {
+  transform: translateY(-2px);
+  background: var(--lab-yellow);
+}
+
+.tourControls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+  transform: none;
+}
+
+.tourControls .primaryControl {
+  display: inline-flex;
+  min-width: 148px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--lab-lime);
+}
+
+.stageGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 14px;
+  padding: 0 14px;
+}
+
+.geometryStage {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle, rgb(24 32 27 / 9%) 1px, transparent 1.2px) 0 0 / 22px 22px,
+    #f5f0df;
+}
+
+.geometryStage :global(.MafsView) {
+  background: transparent;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+  padding: 4px 14px 15px;
+  color: var(--lab-muted);
+  font: 750 0.75rem/1.2 var(--font-body), sans-serif;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.oppositeDot { background: var(--lab-coral); }
+.adjacentDot { background: var(--lab-green); }
+.hypotenuseDot { background: var(--lab-indigo); }
+
+.reasoningRail {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 17px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #ebe8ff;
+}
+
+.angleReadout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.angleReadout span {
+  color: var(--lab-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.angleReadout strong {
+  color: var(--lab-indigo);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.ratioReadout {
+  display: grid;
+  gap: 8px;
+}
+
+.ratioReadout > div {
+  display: grid;
+  grid-template-columns: minmax(70px, auto) 1fr;
+  align-items: baseline;
+  column-gap: 14px;
+  padding: 11px 13px;
+  border-radius: 14px;
+  background: rgb(255 253 245 / 80%);
+}
+
+.ratioReadout span {
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.ratioReadout b {
+  justify-self: end;
+  font-family: var(--font-mono), monospace;
+  font-size: 1.2rem;
+}
+
+.ratioReadout small {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+  color: var(--lab-muted);
+  font-size: 0.72rem;
+}
+
+.sinRow { color: var(--lab-coral); }
+.cosRow { color: var(--lab-green); }
+.tanRow { color: var(--lab-indigo); }
+
+.ratioReadout .tanWarning {
+  background: #ffe3dc;
+  color: #a92810;
+  box-shadow: inset 0 0 0 1.5px #cf4b31;
+}
+
+.teacherBeat {
+  margin-top: auto;
+  padding: 16px 17px;
+  border-radius: 16px;
+  background: var(--lab-paper);
+  box-shadow: 0 8px 22px rgb(71 71 204 / 10%);
+}
+
+.teacherBeat strong {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.12;
+}
+
+.teacherCaption {
+  margin: 7px 0 0;
+  color: var(--lab-ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.teacherNote {
+  margin: 7px 0 0;
+  padding-left: 10px;
+  border-left: 3px solid var(--lab-yellow);
+  color: var(--lab-muted);
+  font-size: 0.76rem;
+  line-height: 1.42;
+}
+
+.teachingMath {
+  display: grid;
+  gap: 7px;
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teachingMath li {
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid rgb(24 32 27 / 12%);
+  border-radius: 10px;
+  background: #f3f1e7;
+  color: var(--lab-muted);
+}
+
+.teachingMath li > span {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(71 71 204 / 11%);
+  color: var(--lab-indigo);
+  font: 850 0.67rem/1 var(--font-mono), monospace;
+}
+
+.teachingMath li > b {
+  overflow-wrap: anywhere;
+  color: inherit;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.teachingMath .currentMathLine {
+  border-color: color-mix(in oklab, var(--lab-indigo) 48%, transparent);
+  background: #e5e3ff;
+  color: var(--lab-indigo);
+  box-shadow: 0 5px 14px rgb(71 71 204 / 10%);
+}
+
+.answerReveal {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--lab-green);
+  border-radius: 11px;
+  background: #e4f8c7;
+  color: #215e28;
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.narrationProgress {
+  padding: 12px 13px;
+  border: 1px solid rgb(24 32 27 / 13%);
+  border-radius: 14px;
+  background: rgb(255 253 245 / 78%);
+}
+
+.narrationProgress > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+  color: var(--lab-muted);
+  font-size: 0.69rem;
+  font-weight: 800;
+}
+
+.narrationProgress time {
+  flex: 0 0 auto;
+  color: var(--lab-ink);
+  font-family: var(--font-mono), monospace;
+}
+
+.narrationProgress input {
+  display: block;
+  width: 100%;
+  accent-color: var(--lab-indigo);
+}
+
+.labFooter {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 24px;
+}
+
+.labFooter label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  color: var(--lab-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.labFooter input[type="range"] {
+  width: 100%;
+  accent-color: var(--lab-indigo);
+}
+
+.labFooter output {
+  min-width: 44px;
+  color: var(--lab-ink);
+  font-family: var(--font-mono), monospace;
+}
+
+.presets,
+.stepDots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.presets button {
+  min-width: 48px;
+  min-height: 38px;
+}
+
+.presets button[aria-pressed="true"] {
+  background: var(--lab-yellow);
+}
+
+.stepDots button {
+  min-width: 10px;
+  width: 10px;
+  min-height: 10px;
+  height: 10px;
+  padding: 0;
+  border-width: 0;
+  border-radius: 50%;
+  background: #b8b1a0;
+}
+
+.stepDots .activeStep {
+  width: 26px;
+  border-radius: 99px;
+  background: var(--lab-indigo);
+}
+
+.voiceNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 0;
+  padding: 0 22px 18px;
+  color: var(--lab-muted);
+  font-size: 0.72rem;
+}
+
+.lab button:focus-visible,
+.lab input:focus-visible {
+  outline: 3px solid var(--lab-indigo);
+  outline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+  .labHeader {
+    flex-direction: column;
+  }
+
+  .stageGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reasoningRail {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .ratioReadout,
+  .teacherBeat {
+    grid-column: 1 / -1;
+  }
+
+  .labFooter {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .labHeader {
+    padding: 22px 18px 18px;
+  }
+
+  .tourControls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .tourControls .primaryControl {
+    flex: 1 1 180px;
+  }
+
+  .stageGrid {
+    padding: 0 8px;
+  }
+
+  .reasoningRail {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 17px;
+  }
+
+  .ratioReadout,
+  .teacherBeat {
+    grid-column: auto;
+  }
+
+  .labFooter {
+    padding: 16px;
+  }
+
+  .presets {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .presets button {
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab *,
+  .lab *::before,
+  .lab *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

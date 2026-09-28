@@ -1,0 +1,106 @@
+.backpackExperience,
+.homeExperience,
+.gameExperience,
+.trainingExperience,
+.handoffExperience { min-width: 0; display: grid; gap: 18px; }
+
+.backpackHeader { min-height: 82px; padding: 10px 16px; border: 3px solid #26334c; border-radius: 20px; background: #fff3c7; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.backpackHeader div { display: flex; align-items: center; gap: 9px; }
+.backpackHeader span { font-size: 3rem; }
+.backpackHeader b { font-size: 1.4rem; }
+.backpackHeader p { margin: 0; font-weight: 850; }
+.bigAction,
+.finishAction,
+.reportAction { min-height: 54px; padding: 0 18px; border: 3px solid #26334c; border-radius: 16px; background: #ffd84d; box-shadow: 4px 5px 0 rgb(24 34 56 / .2); display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 950; cursor: pointer; justify-self: center; }
+.finishAction { color: white; background: #16825d; }
+.reportAction { color: white; background: #b34442; }
+.bigAction svg,
+.finishAction svg,
+.reportAction svg { width: 20px; }
+
+.homeGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.homeGrid article { min-height: 255px; padding: 16px; border: 4px solid #26334c; border-radius: 22px; background: white; box-shadow: 6px 7px 0 rgb(24 34 56 / .16); display: grid; place-items: center; align-content: center; gap: 10px; text-align: center; }
+.homeGrid article > span { font-size: 3.4rem; }
+.homeGrid h2 { margin: 0; font-size: 1.05rem; }
+.homeGrid article > button { min-height: 46px; padding: 0 12px; border: 2px solid #26334c; border-radius: 12px; background: #fff1a9; display: inline-flex; align-items: center; gap: 6px; font-weight: 900; cursor: pointer; }
+.homeGrid button svg { width: 17px; }
+.deviceResult { min-height: 40px; padding: 8px; border-radius: 10px; background: #edf2f8; font-weight: 800; }
+.deviceLabels { display: flex; gap: 7px; }
+.deviceLabels button { min-height: 44px; padding: 5px 9px; border: 2px solid #26334c; border-radius: 10px; background: white; font-weight: 850; cursor: pointer; }
+.deviceDone { background: #e2f8ec !important; }
+.checked { color: #126b4d; display: inline-flex; align-items: center; gap: 5px; }
+.checked svg { width: 17px; }
+
+.coinRoad span { position: absolute; top: 50%; font-size: 2rem; transition: opacity 160ms ease, transform 160ms ease; }
+.coinTaken { opacity: .15; transform: scale(.4); }
+.gameObstacles i { width: 42px; height: 56px; position: absolute; bottom: 0; border: 4px solid #26334c; background: #dc8f45; }
+.gameObstacles i:nth-child(1) { left: 34%; }.gameObstacles i:nth-child(2) { left: 62%; }.gameObstacles i:nth-child(3) { right: 4%; }
+.gamePopup { width: min(350px, calc(100% - 24px)); padding: 20px; border: 5px solid #26334c; border-radius: 18px; background: #fff14f; box-shadow: 9px 10px 0 rgb(24 34 56 / .28); position: absolute; inset: 36px 12px auto auto; z-index: 10; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; text-align: center; }
+.gamePopup b,
+.gamePopup p { grid-column: 1 / -1; }
+.gamePopup > span { grid-column: 1 / -1; font-size: 4rem; }
+.gamePopup button { min-height: 48px; border: 3px solid #26334c; border-radius: 12px; background: white; font-weight: 950; cursor: pointer; }
+.gamePopup button:first-of-type { background: #ef5f78; color: white; }
+.blockWorld > span { position: absolute; font-size: 3rem; }
+.blockWorld > span:nth-child(1) { left: 8%; bottom: 0; }.blockWorld > span:nth-child(2) { left: 32%; top: 28%; }.blockWorld > span:nth-child(3) { left: 64%; top: 52%; }
+.blockWorld > div { position: absolute; left: 35%; right: 8%; bottom: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.blockWorld i { height: 34px; border: 3px solid #26334c; background: #b7bdc9; opacity: .25; }
+.blockWorld .bridgeBuilt i { background: #cb8242; opacity: 1; }
+.gameChat { width: min(390px, calc(100% - 20px)); padding: 14px; border: 5px solid #26334c; border-radius: 18px; background: white; box-shadow: 8px 9px 0 rgb(24 34 56 / .25); position: absolute; top: 14px; right: 10px; z-index: 9; display: grid; gap: 10px; }
+.gameChat header { display: flex; align-items: center; gap: 9px; }.gameChat header span { font-size: 2rem; }.gameChat header div { display: grid; }.gameChat header small { color: #687387; }
+.gameChat p { margin: 0; padding: 10px; border-radius: 14px 14px 4px 14px; background: #e8efff; }
+.gameChat > button { min-height: 44px; border: 2px solid #8a3440; border-radius: 10px; color: #8a3440; background: #fff0f2; font-weight: 900; cursor: pointer; }
+.gameChat > div { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.gameChat > div button { min-height: 48px; border: 2px solid #26334c; border-radius: 10px; background: white; display: grid; place-items: center; gap: 2px; font-weight: 850; cursor: pointer; }
+.gameChat button:disabled { opacity: .46; cursor: not-allowed; }
+.gameChat svg { width: 17px; }
+
+.trainingMachine { min-height: 120px; padding: 15px 24px; border: 4px solid #26334c; border-radius: 24px; background: #344159; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; color: white; }
+.trainingMachine > svg { width: 70px; height: 70px; color: #6ee1d0; }
+.trainingMachine > span { font-size: 3rem; }
+.trainingMachine > div { display: grid; place-items: center; gap: 8px; }
+.trainingMachine i { width: 100%; height: 16px; border: 2px solid white; border-radius: 99px; background: #68758c; position: relative; overflow: hidden; }
+.trainingMachine i::after { content: ""; position: absolute; inset: 0; background: #6ee1d0; transform: scaleX(.12); transform-origin: left; }
+.trainingMachine .machineActive::after { transform: scaleX(1); transition: transform 500ms cubic-bezier(.23, 1, .32, 1); }
+.testBay,
+.repairBay { min-height: 300px; padding: 30px; border: 4px solid #26334c; border-radius: 24px; background: white; display: grid; place-items: center; align-content: center; gap: 12px; text-align: center; }
+.testBay > span,
+.repairBay > span { font-size: 5rem; }
+.testBay h2,
+.repairBay h2,
+.repairBay p { margin: 0; }
+.testBay button,
+.repairBay button { min-height: 50px; padding: 0 16px; border: 3px solid #26334c; border-radius: 14px; background: #ffd84d; display: inline-flex; align-items: center; gap: 7px; font-weight: 950; cursor: pointer; }
+
+.handoffExperience { grid-template-columns: minmax(0, 1fr) minmax(160px, .6fr); align-items: center; }
+.handoffExperience > div { display: grid; place-items: center; }
+.videoScreen,
+.paymentInterrupt,
+.lockedScreen { min-height: 470px; padding: 24px; display: grid; place-items: center; align-content: center; gap: 14px; text-align: center; }
+.videoScreen > div { width: 230px; height: 180px; border-radius: 20px; background: linear-gradient(#bce7ff 0 70%, #93c56a 70%); display: grid; place-items: center; font-size: 6rem; }
+.videoScreen button,
+.paymentInterrupt button { min-height: 50px; padding: 0 16px; border: 3px solid #26334c; border-radius: 14px; background: #ffd84d; display: inline-flex; align-items: center; gap: 7px; font-weight: 950; cursor: pointer; }
+.paymentInterrupt > span { width: 74px; height: 74px; border-radius: 50%; background: #e0f4ec; display: grid; place-items: center; font-size: 2.5rem; }
+.paymentInterrupt h2,
+.paymentInterrupt p { margin: 0; }
+.paymentInterrupt button:first-of-type { color: white; background: #b34442; }
+.lockedScreen { color: white; background: linear-gradient(145deg, #202b44, #4b5f83); }
+.lockedScreen svg { width: 90px; height: 90px; }.lockedScreen b { font-size: 1.4rem; }
+.adultStation { min-height: 250px; border: 5px dashed #4169e1; border-radius: 32px; background: #e9f0ff; display: grid; place-items: center; align-content: center; gap: 7px; cursor: pointer; }
+.adultStation span { font-size: 6rem; }.adultStation b { font-size: 1.2rem; }.adultStation small { color: #5d687d; }
+.adultReady { background: #fff1a9; transform: scale(1.03); }
+.handoffExperience .bigAction,
+.handoffExperience .finishAction { grid-column: 1 / -1; }
+
+@media (max-width: 680px) {
+  .homeGrid { grid-template-columns: 1fr; }
+  .handoffExperience { grid-template-columns: 1fr; }
+  .adultStation { min-height: 150px; }
+  .gameChat > div { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coinRoad span,
+  .trainingMachine .machineActive::after,
+  .adultReady { transition-duration: 1ms; transform: none; }
+}

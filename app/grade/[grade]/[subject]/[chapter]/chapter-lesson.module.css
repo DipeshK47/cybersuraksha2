@@ -1,0 +1,1040 @@
+/* Chapter lesson shell — same layout language as the Class 3 mission modules
+   (outlined topbar, 270px lesson rail, gated main column), in the CyberSuraksha
+   light palette. Kept as a CSS module so it can't leak into other routes. */
+
+.page {
+  position: relative;
+  min-height: 100svh;
+  color: var(--sl-ink);
+  background: var(--sl-canvas);
+  background-image: radial-gradient(var(--sl-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.skipLink {
+  position: absolute;
+  left: -9999px;
+}
+.skipLink:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 20;
+  padding: 10px 14px;
+  background: var(--sl-yellow);
+  border: 2px solid var(--sl-line);
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+/* ── topbar ─────────────────────────────────────────────────────────────── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 12px clamp(14px, 2vw, 28px);
+  border-bottom: 2px solid var(--sl-line);
+  background: var(--sl-canvas);
+}
+.missionIdentity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.missionIdentity span {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--sl-muted);
+}
+.missionIdentity strong {
+  display: block;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.05rem;
+}
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.topProgress {
+  min-width: 190px;
+}
+.topProgress span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sl-muted);
+}
+.topProgress i {
+  display: block;
+  height: 8px;
+  margin-top: 5px;
+  border: 2px solid var(--sl-line);
+  border-radius: 999px;
+  background: var(--sl-surface);
+  overflow: hidden;
+}
+.topProgress i b {
+  display: block;
+  height: 100%;
+  background: var(--sl-lime);
+  transition: width 0.35s var(--sl-ease);
+}
+.iconButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--sl-line);
+  border-radius: 10px;
+  color: var(--sl-ink);
+  background: var(--sl-surface);
+  cursor: pointer;
+}
+.iconButton:hover {
+  background: var(--sl-yellow);
+}
+.iconButton svg {
+  width: 18px;
+}
+
+/* ── shell ──────────────────────────────────────────────────────────────── */
+.lessonShell {
+  width: min(1480px, 100%);
+  margin: 0 auto;
+  padding: clamp(14px, 2vw, 28px);
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+/* ── rail ───────────────────────────────────────────────────────────────── */
+.lessonRail {
+  position: sticky;
+  top: 88px;
+  padding: 16px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+  max-height: calc(100svh - 110px);
+  overflow-y: auto;
+}
+.lessonRail > div:first-child span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--sl-muted);
+}
+.lessonRail > div:first-child strong {
+  display: block;
+  margin: 4px 0 12px;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+.lessonRail nav {
+  display: grid;
+  gap: 4px;
+}
+.lessonRail nav button {
+  min-height: 46px;
+  padding: 7px 9px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--sl-ink);
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+.lessonRail nav button:hover:not(:disabled) {
+  background: var(--sl-surface-soft);
+}
+.lessonRail nav button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.lessonRail nav button > i {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--sl-line);
+  border-radius: 50%;
+  background: var(--sl-surface-soft);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.lessonRail nav button > i svg {
+  width: 13px;
+}
+.lessonRail nav button > span small {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sl-muted);
+}
+.lessonRail nav button > span strong {
+  display: block;
+  font-size: 0.79rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.railActive {
+  border-color: var(--sl-line) !important;
+  background: var(--sl-yellow) !important;
+  box-shadow: 3px 3px 0 var(--sl-shadow);
+}
+.railActive > i {
+  background: var(--sl-surface);
+}
+.railNote {
+  margin-top: 14px;
+  padding: 11px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius-sm);
+  background: var(--sl-surface-soft);
+}
+.railNote strong {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+.railNote p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--sl-muted);
+}
+
+/* ── main ───────────────────────────────────────────────────────────────── */
+.lessonMain {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.stage {
+  padding: 20px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+}
+.stageHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.stageHead p {
+  margin: 0;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--sl-muted);
+}
+.stageHead h2 {
+  margin: 3px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+}
+.stageHead span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--sl-muted);
+}
+.stage video {
+  width: 100%;
+  display: block;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius-sm);
+  background: #000;
+}
+.locked {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  min-height: 300px;
+  padding: 30px;
+  border: 2px dashed var(--sl-line);
+  border-radius: var(--sl-radius-sm);
+  background: var(--sl-surface-soft);
+  text-align: center;
+}
+.locked strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.15rem;
+}
+.locked p {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--sl-muted);
+}
+
+.lessonNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.lessonNavigation button {
+  min-height: 44px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--sl-line);
+  border-radius: 12px;
+  background: var(--sl-surface);
+  color: var(--sl-ink);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--sl-shadow);
+}
+.lessonNavigation button:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 var(--sl-shadow);
+}
+.lessonNavigation button:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--sl-shadow);
+}
+.lessonNavigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.nextButton {
+  background: var(--sl-lime) !important;
+}
+.lessonNavigation svg {
+  width: 16px;
+}
+
+@media (max-width: 900px) {
+  .lessonShell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lessonRail {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topProgress i b,
+  .lessonNavigation button {
+    transition: none;
+  }
+}
+
+/* ── interactive topic teaching, below the video ─────────────────────────── */
+.topicPanel { display: grid; gap: 18px; margin-top: 18px; }
+.concept {
+  padding: 20px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+}
+.kicker {
+  margin: 0;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--sl-muted);
+}
+.concept h3 {
+  margin: 6px 0 10px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+}
+.concept p { margin: 0 0 12px; line-height: 1.6; }
+.aside {
+  padding: 11px 13px;
+  border-left: 4px solid var(--sl-yellow);
+  background: var(--sl-surface-soft);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.88rem !important;
+  color: var(--sl-muted);
+}
+.steps { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 9px; }
+.steps li { line-height: 1.55; }
+.wordSplit { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }
+.wordSplit div {
+  flex: 1 1 120px;
+  padding: 11px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius-sm);
+  background: var(--sl-yellow);
+  text-align: center;
+}
+.wordSplit strong {
+  display: block;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.2rem; color: #171e19;
+}
+.wordSplit span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; color: #3d463f;
+}
+.topicSvg {
+  width: 100%; height: auto; display: block;
+  background: var(--sl-surface);
+  border-radius: var(--sl-radius-sm);
+}
+.supportBar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; padding: 14px 18px;
+  border: 2px solid var(--sl-line); border-radius: var(--sl-radius);
+  background: var(--sl-surface-soft);
+}
+.supportBar span {
+  font-family: var(--font-mono), monospace; font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.07em; text-transform: uppercase; color: var(--sl-muted);
+}
+.supportBar strong { display: block; margin-top: 3px; font-size: 0.88rem; }
+
+/* One chapter video, one strip: which slice of it this topic is. */
+.segments { display: flex; gap: 3px; margin-top: 8px; }
+.segments i {
+  height: 9px; flex-basis: 0; border: 2px solid var(--sl-line);
+  border-radius: 999px; background: var(--sl-surface-soft);
+}
+.segments i.segOn { background: var(--sl-lime); }
+
+/* ── three-dimensional figures, and the section headings around them ─────── */
+.sectionHeading {
+  margin: 34px 0 6px;
+  padding: 16px 20px;
+  border: 3px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-yellow);
+  box-shadow: 5px 5px 0 var(--sl-shadow);
+}
+.sectionHeading span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #3d463f;
+}
+.sectionHeading h3 {
+  margin: 4px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.72rem; color: #171e19;
+}
+.sectionHeading p {
+  margin: 7px 0 0; font-size: 0.9rem; line-height: 1.5; color: #3d463f;
+}
+
+.turntable {
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+  overflow: hidden;
+}
+.turntableStage { cursor: grab; touch-action: pan-y; }
+.turntableStage:active { cursor: grabbing; }
+.turntableBar {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 10px 14px; border-top: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+}
+.turntableBar span {
+  font-family: var(--font-mono), monospace; font-size: 0.63rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--sl-muted);
+}
+.turntableBar label { flex: 1 1 160px; display: flex; }
+.turntableBar input[type="range"] { width: 100%; accent-color: var(--sl-lime); }
+.turntableBar button {
+  min-height: 36px; padding: 0 14px; border: 2px solid var(--sl-line);
+  border-radius: 10px; background: var(--sl-surface); color: var(--sl-ink);
+  font: inherit; font-weight: 800; font-size: 0.82rem; cursor: pointer;
+}
+.turntableBar button:hover { background: var(--sl-yellow); }
+.turntableNote {
+  margin: 0; padding: 11px 14px; border-top: 2px solid var(--sl-line);
+  font-size: 0.86rem; line-height: 1.5; color: var(--sl-muted);
+}
+.sourceNote {
+  margin: 0 0 14px; padding: 11px 14px;
+  border-left: 4px solid var(--sl-line); background: var(--sl-surface-soft);
+  border-radius: 0 10px 10px 0; font-size: 0.85rem; color: var(--sl-muted);
+}
+
+/* ── the three big sections each topic is built from ─────────────────────── */
+.sectionHeading {
+  margin: 34px 0 4px;
+  padding: 18px 22px;
+  border: 3px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-yellow);
+  box-shadow: 5px 5px 0 var(--sl-shadow);
+}
+.sectionHeading span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #3d463f;
+}
+.sectionHeading h3 {
+  margin: 5px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.85rem; line-height: 1.15; color: #171e19;
+}
+.sectionHeading p {
+  margin: 8px 0 0; font-size: 0.9rem; line-height: 1.5; color: #3d463f;
+}
+
+/* ── the drag-to-turn 3D figure ──────────────────────────────────────────── */
+.turntable {
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+  overflow: hidden;
+}
+.turntableStage { cursor: grab; touch-action: pan-y; }
+.turntableStage:active { cursor: grabbing; }
+.turntableBar {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 10px 16px;
+  border-top: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+}
+.turntableBar span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--sl-muted);
+}
+.turntableBar label { flex: 1 1 160px; display: flex; }
+.turntableBar input[type="range"] { width: 100%; accent-color: var(--sl-lime); }
+.turntableBar button {
+  min-height: 36px; padding: 0 14px;
+  border: 2px solid var(--sl-line); border-radius: 10px;
+  background: var(--sl-surface); color: var(--sl-ink);
+  font: inherit; font-size: 0.8rem; font-weight: 800; cursor: pointer;
+}
+.turntableBar button:hover { background: var(--sl-yellow); }
+.turntableNote {
+  margin: 0; padding: 12px 16px 14px;
+  font-size: 0.86rem; line-height: 1.55; color: var(--sl-muted);
+}
+
+/* a worked example inside the Solved Examples section */
+.solved {
+  padding: 18px 20px;
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+}
+.solvedHead {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.solvedHead b {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #ffffff;
+  background: var(--sl-line); padding: 3px 9px; border-radius: 999px;
+}
+.solvedHead h4 {
+  margin: 0; font-family: var(--font-display), sans-serif; font-size: 1.1rem;
+}
+.answerStrip {
+  margin-top: 12px; padding: 11px 15px;
+  border: 2px solid var(--sl-line); border-radius: var(--sl-radius-sm);
+  background: var(--sl-lime);
+  font-weight: 800; color: #171e19;
+}
+.swapPair { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+.stepDots { display: flex; gap: 5px; align-items: center; }
+.stepDots i {
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 2px solid var(--sl-line); background: var(--sl-surface);
+}
+.stepDots i.stepOn { background: var(--sl-lime); }
+
+/* ── solved examples: one at a time, with a labelled tab per example ─────── */
+.examples {
+  border: 2px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background: var(--sl-surface);
+  box-shadow: var(--sl-shadow-sm);
+  overflow: hidden;
+}
+.exampleTabs {
+  display: flex; gap: 0; flex-wrap: wrap;
+  border-bottom: 2px solid var(--sl-line);
+  background: var(--sl-surface-soft);
+}
+.exampleTabs button {
+  flex: 1 1 190px; min-height: 58px;
+  padding: 9px 14px;
+  border: 0; border-right: 2px solid var(--sl-line);
+  background: transparent; color: var(--sl-ink);
+  font: inherit; text-align: left; cursor: pointer;
+}
+.exampleTabs button:last-child { border-right: 0; }
+.exampleTabs button:hover { background: var(--sl-surface); }
+.exampleTabs button b {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--sl-muted);
+}
+.exampleTabs button span {
+  display: block; margin-top: 3px;
+  font-size: 0.84rem; font-weight: 700; line-height: 1.3;
+}
+.exampleTabs button.exampleTabOn { background: var(--sl-yellow); }
+.exampleTabs button.exampleTabOn b,
+.exampleTabs button.exampleTabOn span { color: #171e19; }
+.exampleBody { padding: 16px 18px 18px; }
+.exampleNow {
+  margin: 0 0 12px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--sl-muted);
+}
+.questionFirst {
+  position: relative;
+  margin: 0 0 14px;
+  padding: 15px 16px 14px 20px;
+  overflow: hidden;
+  border: 2px solid var(--sl-line);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, var(--sl-yellow) 0 7px, transparent 7px),
+    color-mix(in srgb, var(--sl-yellow) 18%, var(--sl-surface));
+  box-shadow: 4px 4px 0 rgba(23, 30, 25, 0.15);
+}
+.questionFirstTopline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.questionFirstTopline span,
+.questionFirstTopline small {
+  font-family: var(--font-mono), monospace;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.questionFirstTopline span { color: #4c7900; font-size: 0.64rem; }
+.questionFirstTopline small { color: var(--sl-muted); font-size: 0.54rem; }
+.questionFirst h3 {
+  margin: 8px 0 2px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--sl-muted);
+}
+.questionExpression {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.05rem, 2.4vw, 1.48rem);
+  font-weight: 850;
+  line-height: 1.25;
+  color: var(--sl-ink);
+}
+.questionTranslation {
+  max-width: 78ch;
+  margin: 8px 0 0;
+  color: var(--sl-ink);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.thinkingHintButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  margin-top: 11px;
+  padding: 6px 10px;
+  border: 1.5px solid var(--sl-line);
+  border-radius: 9px;
+  background: var(--sl-surface);
+  color: var(--sl-ink);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.thinkingHintButton > span {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sl-lime);
+  color: #171e19;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.thinkingHintButton:hover { background: var(--sl-yellow); }
+.thinkingHintButton:focus-visible {
+  outline: 3px solid var(--sl-lime);
+  outline-offset: 2px;
+}
+.thinkingHint {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  overflow: hidden;
+  border-left: 5px solid var(--sl-lime);
+  border-radius: 0 9px 9px 0;
+  background: var(--sl-surface);
+  color: var(--sl-ink);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+.thinkingHint strong { color: #4c7900; }
+
+/* ── narrated teaching player ─────────────────────────────────────────────
+   The audio clock and the scene share one progress value. Motion itself is
+   handled by Motion for React; these rules provide stage geometry, focus and
+   the tactile transport surface. */
+.turntable:focus-visible {
+  outline: 4px solid color-mix(in srgb, var(--sl-lime) 72%, white);
+  outline-offset: 4px;
+}
+.explainerStage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(124, 181, 24, 0.13), transparent 28%),
+    var(--sl-surface);
+  isolation: isolate;
+}
+.teachingStage {
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  left: 12px;
+  max-width: min(56%, 340px);
+  margin: 0;
+  padding: 7px 11px 8px;
+  border: 2px solid var(--sl-line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--sl-yellow) 92%, white);
+  box-shadow: 3px 3px 0 rgba(23, 30, 25, 0.82);
+  pointer-events: none;
+}
+.teachingStage span,
+.teachingStage strong { display: block; }
+.teachingStage span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #4a514b;
+}
+.teachingStage strong {
+  margin-top: 2px;
+  font-size: 0.76rem;
+  line-height: 1.25;
+  color: #171e19;
+}
+.sceneBeat { width: 100%; transform-origin: 50% 55%; }
+.sceneBeat > svg { width: 100%; }
+.sceneImage,
+.sceneShape,
+.sceneStroke,
+.sceneWord,
+.sceneMathCard,
+.sceneAnswer,
+.sceneCaption {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.sceneStroke { vector-effect: non-scaling-stroke; }
+.sceneMathLine { paint-order: stroke; stroke: rgba(255, 253, 245, 0.3); stroke-width: 1px; }
+.sceneAnswer { filter: drop-shadow(0 8px 8px rgba(23, 30, 25, 0.18)); }
+
+.recallCheckpoint {
+  position: absolute;
+  z-index: 8;
+  inset: 18px;
+  width: min(620px, calc(100% - 36px));
+  height: fit-content;
+  max-height: calc(100% - 36px);
+  margin: auto;
+  padding: clamp(16px, 3vw, 24px);
+  overflow-y: auto;
+  border: 3px solid var(--sl-line);
+  border-radius: var(--sl-radius);
+  background:
+    radial-gradient(circle at 92% 4%, rgba(124, 181, 24, 0.2), transparent 34%),
+    #fffdf5;
+  box-shadow: 9px 9px 0 rgba(23, 30, 25, 0.78);
+}
+.recallKicker {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4c7900;
+}
+.recallCheckpoint h3 {
+  margin: 7px 0 14px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  line-height: 1.25;
+}
+.recallCheckpoint h3:focus { outline: none; }
+.recallOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 9px;
+}
+.recallOptions button,
+.recallFeedback button {
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 2px solid var(--sl-line);
+  border-radius: 10px;
+  background: var(--sl-surface);
+  color: var(--sl-ink);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.recallOptions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--sl-yellow);
+  box-shadow: 0 3px 0 var(--sl-line);
+}
+.recallOptions button[aria-pressed="true"] { background: var(--sl-yellow); }
+.recallOptions button:disabled { cursor: default; opacity: 0.72; }
+.recallOptions button[aria-pressed="true"]:disabled { opacity: 1; }
+.recallOptions button:focus-visible,
+.recallFeedback button:focus-visible {
+  outline: 3px solid var(--sl-lime);
+  outline-offset: 2px;
+}
+.recallHint {
+  margin: 12px 0 0;
+  color: var(--sl-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+.recallFeedback {
+  margin-top: 13px;
+  padding: 12px;
+  border: 2px solid var(--sl-line);
+  border-radius: 12px;
+}
+.recallFeedback strong { display: block; font-size: 0.86rem; }
+.recallFeedback p { margin: 5px 0 10px; font-size: 0.78rem; line-height: 1.5; }
+.recallCorrect { background: color-mix(in srgb, var(--sl-lime) 24%, white); }
+.recallWrong { background: color-mix(in srgb, var(--sl-yellow) 38%, white); }
+.recallFeedback .recallContinue { background: var(--sl-lime); }
+
+.turntableBar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 18px;
+  padding: 12px 16px 14px;
+}
+.transportButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.transportButtons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 40px;
+  transition: transform 160ms var(--sl-ease), box-shadow 160ms var(--sl-ease), background 160ms var(--sl-ease);
+}
+.transportButtons button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 0 var(--sl-line);
+}
+.transportButtons button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.transportButtons button:focus-visible,
+.stepProgress input:focus-visible,
+.exampleTabs button:focus-visible {
+  outline: 3px solid var(--sl-lime);
+  outline-offset: 2px;
+}
+.transportButtons button:disabled { opacity: 0.36; cursor: not-allowed; }
+.transportButtons .playButton {
+  min-width: 104px;
+  background: var(--sl-yellow);
+  box-shadow: 0 3px 0 var(--sl-line);
+}
+.playButton > span { font-size: 0.72rem; }
+.buttonText { color: inherit !important; font: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
+.paceControl {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1.5px solid var(--sl-line);
+  border-radius: 10px;
+  background: var(--sl-surface);
+}
+.paceControl > span {
+  padding: 0 5px;
+  color: var(--sl-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.paceControl button {
+  min-width: 39px;
+  min-height: 30px;
+  padding: 0 6px;
+  border-width: 1.5px;
+  font-size: 0.7rem;
+}
+.paceControl button.paceActive {
+  background: var(--sl-lime);
+  box-shadow: inset 0 0 0 1px var(--sl-line);
+}
+
+.stepProgress {
+  min-width: min(100%, 260px);
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+}
+.stepProgress label { display: flex; min-width: 0; }
+.stepProgress input[type="range"] {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--sl-lime);
+  cursor: pointer;
+}
+.turntableBar .timecode {
+  min-width: 78px;
+  color: var(--sl-ink);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.stepStatus {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.stepStatus .stepDots {
+  flex: 1 1 150px;
+  flex-wrap: wrap;
+}
+.stepDots i {
+  transition: width 280ms var(--sl-ease), background 280ms var(--sl-ease), transform 280ms var(--sl-ease);
+}
+.stepDots i.stepDone { background: color-mix(in srgb, var(--sl-lime) 52%, var(--sl-surface)); }
+.stepDots i.stepOn {
+  width: 20px;
+  border-radius: 999px;
+  transform: scaleY(1.08);
+}
+.voiceDisclosure {
+  justify-self: end;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1.5px solid var(--sl-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--sl-lime) 16%, var(--sl-surface));
+  color: var(--sl-ink);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+}
+.voiceDisclosure > span { margin-right: 5px; color: #4c7900; }
+.srOnly {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 720px) {
+  .questionFirstTopline { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .questionTranslation { font-size: 0.75rem; }
+  .turntableBar { grid-template-columns: minmax(0, 1fr); }
+  .stepProgress { width: 100%; }
+  .voiceDisclosure { justify-self: start; }
+  .buttonText { display: none; }
+  .transportButtons .playButton .buttonText { display: inline; }
+  .teachingStage { max-width: 72%; }
+  .recallCheckpoint { inset: 10px; width: calc(100% - 20px); max-height: calc(100% - 20px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sceneBeat,
+  .sceneImage,
+  .sceneShape,
+  .sceneStroke,
+  .sceneWord,
+  .sceneMathCard,
+  .sceneMathLine,
+  .sceneAnswer,
+  .sceneCaption,
+  .thinkingHint,
+  .recallCheckpoint,
+  .recallOptions button,
+  .transportButtons button,
+  .stepDots i {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

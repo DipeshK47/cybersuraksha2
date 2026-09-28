@@ -1,0 +1,488 @@
+{
+  "headings": {
+    "ed": {
+      "id": "heading-ed",
+      "title": "Yesterday words",
+      "say": "Some words tell us about things that already happened. They wear two little letters at the end: e, d. Lived, loved, played, gathered, thanked. All of these are over and done.",
+      "spoken": "Yesterday words. Some words tell us about things that already happened. They wear two little letters at the end: E and D. Lived, loved, played, gathered, and thanked. All of these are over and done.",
+      "src": "/audio/badal-and-moti/heading-ed.mp3"
+    },
+    "marks": {
+      "id": "heading-marks",
+      "title": "Asking or telling?",
+      "say": "Every sentence ends with a little mark. When Badal asks Maa something, the sentence ends with a question mark. When Maa tells him something, it ends with a full stop.",
+      "spoken": "Asking or telling? Every sentence ends with a little mark. When Badal asks Maa something, the sentence ends with a question mark. When Maa tells him something, it ends with a full stop.",
+      "src": "/audio/badal-and-moti/heading-marks.mp3"
+    },
+    "pairs": {
+      "id": "heading-pairs",
+      "title": "Best-friend words",
+      "say": "Badal and Moti go everywhere together. Some words are best friends too, like paper and pencil. We join them with the little word: and.",
+      "spoken": "Best-friend words. Badal and Moti go everywhere together. Some words are best friends too, like paper and pencil. We join them with the little word, and.",
+      "src": "/audio/badal-and-moti/heading-pairs.mp3"
+    },
+    "recall": {
+      "id": "heading-recall",
+      "title": "Show what you know",
+      "say": "Answer these on your own, no looking back! Yesterday words, end marks, best-friend words, and the story of Badal and Moti.",
+      "spoken": "Show what you know. Answer these on your own, with no looking back! Yesterday words, end marks, best-friend words, and the story of Badal and Moti.",
+      "src": "/audio/badal-and-moti/heading-recall.mp3"
+    }
+  },
+  "examples": {
+    "ed": [
+      {
+        "id": "ed-01",
+        "text": "Meet Badal and his puppy Moti! Today, Moti PLAYS in the garden with Badal.",
+        "spoken": "Meet Badal and his puppy Moti! Today, Moti plays in the garden with Badal.",
+        "src": "/audio/badal-and-moti/ed-01.mp3"
+      },
+      {
+        "id": "ed-02",
+        "text": "Now think about YESTERDAY. The sun has gone down, the moon is up. Moti played then too — but that is already over. It is finished!",
+        "spoken": "Now think about yesterday. The sun has gone down, and the moon is up. Moti played then too, but that is already over. It is finished!",
+        "src": "/audio/badal-and-moti/ed-02.mp3"
+      },
+      {
+        "id": "ed-03",
+        "text": "To show an action already happened, we add two little letters to the end of the word. Here they come: e and d!",
+        "spoken": "To show that an action already happened, we add two little letters to the end of the word. Here they come: E, and D!",
+        "src": "/audio/badal-and-moti/ed-03.mp3"
+      },
+      {
+        "id": "ed-04",
+        "text": "play plus e-d makes played. Yesterday, Moti PLAYED with Badal.",
+        "spoken": "Play, plus E D, makes played. Yesterday, Moti played with Badal.",
+        "src": "/audio/badal-and-moti/ed-04.mp3"
+      },
+      {
+        "id": "ed-05",
+        "text": "The story is full of -ed words: lived, loved, played, gathered, thanked. Every one of them already happened!",
+        "spoken": "The story is full of E D words: lived, loved, played, gathered, and thanked. Every one of them already happened!",
+        "src": "/audio/badal-and-moti/ed-05.mp3"
+      }
+    ],
+    "marks": [
+      {
+        "id": "marks-01",
+        "text": "One rainy evening, Badal found a little puppy shivering in the cold. He took him home. Now he wants to ASK Maa something.",
+        "spoken": "One rainy evening, Badal found a little puppy shivering in the cold. He took him home. Now he wants to ask Maa something.",
+        "src": "/audio/badal-and-moti/marks-01.mp3"
+      },
+      {
+        "id": "marks-02",
+        "text": "“Can this puppy stay with us, Maa” — Badal is asking. An asking sentence is a QUESTION.",
+        "spoken": "Can this puppy stay with us, Maa? Badal is asking. An asking sentence is a question.",
+        "src": "/audio/badal-and-moti/marks-02.mp3"
+      },
+      {
+        "id": "marks-03",
+        "text": "A question ends with a question mark. Watch it hop in!",
+        "spoken": "A question ends with a question mark. Watch it hop in!",
+        "src": "/audio/badal-and-moti/marks-03.mp3"
+      },
+      {
+        "id": "marks-04",
+        "text": "Maa answers: “Yes beta, but only if you promise to take care of the puppy” — Maa is TELLING, not asking.",
+        "spoken": "Maa answers, Yes, beta, but only if you promise to take care of the puppy. Maa is telling, not asking.",
+        "src": "/audio/badal-and-moti/marks-04.mp3"
+      },
+      {
+        "id": "marks-05",
+        "text": "A telling sentence ends with a full stop. Here it comes!",
+        "spoken": "A telling sentence ends with a full stop. Here it comes!",
+        "src": "/audio/badal-and-moti/marks-05.mp3"
+      },
+      {
+        "id": "marks-06",
+        "text": "Asking words often start a question: What, Where, Who, Whose, Can, May. Telling sentences just tell.",
+        "spoken": "Asking words often start a question: What, Where, Who, Whose, Can, and May. Telling sentences just tell.",
+        "src": "/audio/badal-and-moti/marks-06.mp3"
+      }
+    ],
+    "pairs": [
+      {
+        "id": "pairs-01",
+        "text": "Badal and Moti are best friends. They go everywhere together!",
+        "spoken": "Badal and Moti are best friends. They go everywhere together!",
+        "src": "/audio/badal-and-moti/pairs-01.mp3"
+      },
+      {
+        "id": "pairs-02",
+        "text": "Some WORDS are best friends too. Think of a bat. What does it need?",
+        "spoken": "Some words are best friends too. Think of a bat. What does it need?",
+        "src": "/audio/badal-and-moti/pairs-02.mp3"
+      },
+      {
+        "id": "pairs-03",
+        "text": "A ball! Here it comes rolling. We join best-friend words with the little word “and”: bat and ball.",
+        "spoken": "A ball! Here it comes rolling. We join best-friend words with the little word, and: bat and ball.",
+        "src": "/audio/badal-and-moti/pairs-03.mp3"
+      },
+      {
+        "id": "pairs-04",
+        "text": "A lock is no use without its key: lock and key. And idli tastes best with sambar: idli and sambar!",
+        "spoken": "A lock is no use without its key: lock and key. And idli tastes best with sambar: idli and sambar!",
+        "src": "/audio/badal-and-moti/pairs-04.mp3"
+      },
+      {
+        "id": "pairs-05",
+        "text": "Now you find the pairs. Tap a word on the left, then tap its best friend on the right.",
+        "spoken": "Now you find the pairs. Tap a word on the left, then tap its best friend on the right.",
+        "src": "/audio/badal-and-moti/pairs-05.mp3"
+      }
+    ]
+  },
+  "clips": {
+    "prompt-ed": {
+      "id": "prompt-ed",
+      "spoken": "Read each sentence. Is the action already over, or happening now? Pick the word that fits. When -ed is needed, watch the machine stamp it on!",
+      "src": "/audio/badal-and-moti/prompt-ed.mp3"
+    },
+    "prompt-marks": {
+      "id": "prompt-marks",
+      "spoken": "These six sentences are from your book. Say each one out loud. Is it asking or telling? Post the right mark on the end.",
+      "src": "/audio/badal-and-moti/prompt-marks.mp3"
+    },
+    "prompt-pairs": {
+      "id": "prompt-pairs",
+      "spoken": "Tap a word on the left, then tap its best friend on the right. A matched pair gets its own colour, just like in your book.",
+      "src": "/audio/badal-and-moti/prompt-pairs.mp3"
+    },
+    "machine-walk": {
+      "id": "machine-walk",
+      "spoken": "Yesterday, Badal blank, to school. Is it walk, or walked?",
+      "src": "/audio/badal-and-moti/machine-walk.mp3"
+    },
+    "machine-play": {
+      "id": "machine-play",
+      "spoken": "Today, Badal and Moti blank, in the garden. Is it play, or played?",
+      "src": "/audio/badal-and-moti/machine-play.mp3"
+    },
+    "machine-talk": {
+      "id": "machine-talk",
+      "spoken": "Last night, Maa blank, to Badal about the puppy. Is it talk, or talked?",
+      "src": "/audio/badal-and-moti/machine-talk.mp3"
+    },
+    "machine-ask": {
+      "id": "machine-ask",
+      "spoken": "Yesterday, Badal blank, Maa a question. Is it ask, or asked?",
+      "src": "/audio/badal-and-moti/machine-ask.mp3"
+    },
+    "machine-touch": {
+      "id": "machine-touch",
+      "spoken": "Yesterday, Badal gently blank, the wet puppy. Is it touch, or touched?",
+      "src": "/audio/badal-and-moti/machine-touch.mp3"
+    },
+    "post-sun": {
+      "id": "post-sun",
+      "spoken": "The sun rises in the east",
+      "src": "/audio/badal-and-moti/post-sun.mp3"
+    },
+    "post-name": {
+      "id": "post-name",
+      "spoken": "What is your name",
+      "src": "/audio/badal-and-moti/post-name.mp3"
+    },
+    "post-mango": {
+      "id": "post-mango",
+      "spoken": "I like to eat mangoes",
+      "src": "/audio/badal-and-moti/post-mango.mp3"
+    },
+    "post-borrow": {
+      "id": "post-borrow",
+      "spoken": "May I borrow your English textbook",
+      "src": "/audio/badal-and-moti/post-borrow.mp3"
+    },
+    "post-friends": {
+      "id": "post-friends",
+      "spoken": "Brinda and Namrata are good friends",
+      "src": "/audio/badal-and-moti/post-friends.mp3"
+    },
+    "post-shoes": {
+      "id": "post-shoes",
+      "spoken": "Whose shoes are these",
+      "src": "/audio/badal-and-moti/post-shoes.mp3"
+    },
+    "q-ed-book-walk": {
+      "id": "q-ed-book-walk",
+      "spoken": "Add ed and write: walk + ed = ? Your choices are: walked, or walking, or walks, or walkes.",
+      "src": "/audio/badal-and-moti/q-ed-book-walk.mp3"
+    },
+    "q-ed-fresh-already": {
+      "id": "q-ed-fresh-already",
+      "spoken": "Which word tells us the action ALREADY happened? Your choices are: jump, or jumped, or jumps, or jumping.",
+      "src": "/audio/badal-and-moti/q-ed-fresh-already.mp3"
+    },
+    "q-ed-fresh-follow": {
+      "id": "q-ed-fresh-follow",
+      "spoken": "Yesterday, Moti blank Badal's scent and found him. Which word fits? Your choices are: follow, or followed, or follows.",
+      "src": "/audio/badal-and-moti/q-ed-fresh-follow.mp3"
+    },
+    "q-marks-fresh-question": {
+      "id": "q-marks-fresh-question",
+      "spoken": "Which of these is a QUESTION? Your choices are: Moti is a brown puppy, or Where does Moti sleep, or Badal loves Moti, or The pit was deep.",
+      "src": "/audio/badal-and-moti/q-marks-fresh-question.mp3"
+    },
+    "q-marks-fresh-who": {
+      "id": "q-marks-fresh-who",
+      "spoken": "Pick the end mark: Who pulled Badal out of the pit blank Your choices are: a question mark, or a full stop.",
+      "src": "/audio/badal-and-moti/q-marks-fresh-who.mp3"
+    },
+    "q-marks-book-mangoes": {
+      "id": "q-marks-book-mangoes",
+      "spoken": "Add a ? or a . — I like to eat mangoes blank Your choices are: a full stop, or a question mark.",
+      "src": "/audio/badal-and-moti/q-marks-book-mangoes.mp3"
+    },
+    "q-pairs-book-needle": {
+      "id": "q-pairs-book-needle",
+      "spoken": "Match the pair: needle and blank Your choices are: thread, or table, or ball, or key.",
+      "src": "/audio/badal-and-moti/q-pairs-book-needle.mp3"
+    },
+    "q-pairs-fresh-which": {
+      "id": "q-pairs-fresh-which",
+      "spoken": "Which pair goes together? Your choices are: chair and sambar, or bat and ball, or lock and pencil.",
+      "src": "/audio/badal-and-moti/q-pairs-fresh-which.mp3"
+    },
+    "q-pairs-fresh-badal": {
+      "id": "q-pairs-fresh-badal",
+      "spoken": "Complete the best-friend pair from the story: Badal and blank Your choices are: Moti, or the pit, or the rope.",
+      "src": "/audio/badal-and-moti/q-pairs-fresh-badal.mp3"
+    },
+    "q-recall-ed-lived": {
+      "id": "q-recall-ed-lived",
+      "spoken": "Which word tells about something that already happened? Your choices are: live, or lived, or living.",
+      "src": "/audio/badal-and-moti/q-recall-ed-lived.mp3"
+    },
+    "q-recall-ed-pulled": {
+      "id": "q-recall-ed-pulled",
+      "spoken": "Yesterday, the neighbours blank Badal out of the pit. Your choices are: pull, or pulled, or pulls.",
+      "src": "/audio/badal-and-moti/q-recall-ed-pulled.mp3"
+    },
+    "q-recall-marks-whose": {
+      "id": "q-recall-marks-whose",
+      "spoken": "Pick the end mark: Whose puppy is this blank Your choices are: a question mark, or a full stop.",
+      "src": "/audio/badal-and-moti/q-recall-marks-whose.mp3"
+    },
+    "q-recall-marks-gate": {
+      "id": "q-recall-marks-gate",
+      "spoken": "Pick the end mark: Moti waited at the gate blank Your choices are: a full stop, or a question mark.",
+      "src": "/audio/badal-and-moti/q-recall-marks-gate.mp3"
+    },
+    "q-recall-pairs-idli": {
+      "id": "q-recall-pairs-idli",
+      "spoken": "Which pair is right? Your choices are: idli and sambar, or idli and key, or idli and thread.",
+      "src": "/audio/badal-and-moti/q-recall-pairs-idli.mp3"
+    },
+    "q-recall-story-first": {
+      "id": "q-recall-story-first",
+      "spoken": "What happened FIRST in the story? Your choices are: Badal fell into a deep pit, or Badal came across a puppy by the side of the road, or Moti went near the pit and barked.",
+      "src": "/audio/badal-and-moti/q-recall-story-first.mp3"
+    },
+    "m-is-it-happening-now": {
+      "id": "m-is-it-happening-now",
+      "spoken": "Is it happening now?. Try a smaller one: “Today, Moti JUMP for joy.” Today means it is happening right now, not finished — so no -ed. We say jump. Remember: -ed is only for actions that are already over.",
+      "src": "/audio/badal-and-moti/m-is-it-happening-now.mp3"
+    },
+    "m-look-for-the-time-word-first": {
+      "id": "m-look-for-the-time-word-first",
+      "spoken": "Look for the time word first. Try a smaller one: “Yesterday, Moti WAIT at the gate.” Yesterday is over, so the waiting already happened — we say waited. Remember: If the action already happened, the word wears its -ed.",
+      "src": "/audio/badal-and-moti/m-look-for-the-time-word-first.mp3"
+    },
+    "m-just-add-the-two-letters": {
+      "id": "m-just-add-the-two-letters",
+      "spoken": "Just add the two letters. Take a smaller word: jump. Put e and d on the end and nothing else changes: jump + ed = jumped. Remember: Add e-d to the end of the word. Do not change the rest.",
+      "src": "/audio/badal-and-moti/m-just-add-the-two-letters.mp3"
+    },
+    "m-look-at-the-last-two-letters": {
+      "id": "m-look-at-the-last-two-letters",
+      "spoken": "Look at the last two letters. Compare cook and cooked. Only cooked ends in -ed, so only cooked is already over — like the food Maa cooked yesterday. Remember: The word ending in -ed is the one that already happened.",
+      "src": "/audio/badal-and-moti/m-look-at-the-last-two-letters.mp3"
+    },
+    "m-yesterday-is-over": {
+      "id": "m-yesterday-is-over",
+      "spoken": "Yesterday is over. Try: “Yesterday, Moti BARK at the pit.” Yesterday is finished, so the barking already happened: barked. Remember: Yesterday, last night, last week → the word needs -ed.",
+      "src": "/audio/badal-and-moti/m-yesterday-is-over.mp3"
+    },
+    "m-this-one-wants-an-answer": {
+      "id": "m-this-one-wants-an-answer",
+      "spoken": "This one wants an answer. Try a smaller sentence: “Where is Moti” — it is asking, it needs someone to answer. So it ends with a question mark: Where is Moti? Remember: An asking sentence ends with a question mark.",
+      "src": "/audio/badal-and-moti/m-this-one-wants-an-answer.mp3"
+    },
+    "m-this-one-is-only-telling": {
+      "id": "m-this-one-is-only-telling",
+      "spoken": "This one is only telling. Try a smaller sentence: “Moti is a puppy” — nobody is asking anything, it just tells us. So it ends with a full stop: Moti is a puppy. Remember: A telling sentence ends with a full stop.",
+      "src": "/audio/badal-and-moti/m-this-one-is-only-telling.mp3"
+    },
+    "m-listen-for-the-asking-word": {
+      "id": "m-listen-for-the-asking-word",
+      "spoken": "Listen for the asking word. Compare “The rope is long” with “How long is the rope”. Only the second one wants an answer, and it starts with an asking word: How. Remember: A question wants an answer and often starts with an asking word.",
+      "src": "/audio/badal-and-moti/m-listen-for-the-asking-word.mp3"
+    },
+    "m-who-is-an-asking-word": {
+      "id": "m-who-is-an-asking-word",
+      "spoken": "Who is an asking word. Try: “Who is barking” — it wants a name as an answer, so it is asking: Who is barking? Remember: Sentences that begin with Who, What, Where or Whose are questions.",
+      "src": "/audio/badal-and-moti/m-who-is-an-asking-word.mp3"
+    },
+    "m-nobody-is-asking-here": {
+      "id": "m-nobody-is-asking-here",
+      "spoken": "Nobody is asking here. Try: “Moti likes bones” — it simply tells us something Moti likes. No answer is needed, so it ends with a full stop. Remember: A sentence that tells ends with a full stop.",
+      "src": "/audio/badal-and-moti/m-nobody-is-asking-here.mp3"
+    },
+    "m-ask-what-it-is-used-with": {
+      "id": "m-ask-what-it-is-used-with",
+      "spoken": "Ask what it is used with. Try a smaller pair: salt and … pepper! Salt and pepper sit together on every table. Ask yourself what your left word is always used with. Remember: Best-friend words are the ones we use together.",
+      "src": "/audio/badal-and-moti/m-ask-what-it-is-used-with.mp3"
+    },
+    "m-what-does-it-work-with": {
+      "id": "m-what-does-it-work-with",
+      "spoken": "What does it work with?. Think of a smaller pair: brush and … paint! A brush needs paint to work. Ask what a needle needs to sew. Remember: A pair is two things that work together.",
+      "src": "/audio/badal-and-moti/m-what-does-it-work-with.mp3"
+    },
+    "m-picture-the-two-things-together": {
+      "id": "m-picture-the-two-things-together",
+      "spoken": "Picture the two things together. Picture “shoes and socks”. You can see them together. Now picture “shoes and sambar” — that does not fit! Only real pairs make a picture. Remember: A real pair is easy to picture together.",
+      "src": "/audio/badal-and-moti/m-picture-the-two-things-together.mp3"
+    },
+    "m-who-is-always-together": {
+      "id": "m-who-is-always-together",
+      "spoken": "Who is always together?. In the story, one friend followed Badal wherever he went, ate with him and played with him. That friend is his pair. Remember: Best friends make the best pairs.",
+      "src": "/audio/badal-and-moti/m-who-is-always-together.mp3"
+    },
+    "m-look-for-the-ed": {
+      "id": "m-look-for-the-ed",
+      "spoken": "Look for the -ed. Compare hop and hopped. Only hopped ends in -ed, so only hopped is already over. Remember: -ed at the end means it already happened.",
+      "src": "/audio/badal-and-moti/m-look-for-the-ed.mp3"
+    },
+    "m-yesterday-is-over-2": {
+      "id": "m-yesterday-is-over-2",
+      "spoken": "Yesterday is over. Try: “Yesterday, Moti WAIT at the gate.” Yesterday is finished, so it is waited. Remember: Already happened → add -ed.",
+      "src": "/audio/badal-and-moti/m-yesterday-is-over-2.mp3"
+    },
+    "m-whose-is-an-asking-word": {
+      "id": "m-whose-is-an-asking-word",
+      "spoken": "Whose is an asking word. Try: “Whose bag is that” — it wants a name as an answer, so it is asking: Whose bag is that? Remember: Asking sentences end with a question mark.",
+      "src": "/audio/badal-and-moti/m-whose-is-an-asking-word.mp3"
+    },
+    "m-this-one-only-tells": {
+      "id": "m-this-one-only-tells",
+      "spoken": "This one only tells. Try: “The rope was strong” — nobody is asking, it just tells. So it ends with a full stop. Remember: Telling sentences end with a full stop.",
+      "src": "/audio/badal-and-moti/m-this-one-only-tells.mp3"
+    },
+    "m-think-of-your-plate": {
+      "id": "m-think-of-your-plate",
+      "spoken": "Think of your plate. Picture “bread and butter” — you eat them together. Ask what you eat idli with. Remember: Pairs are things used together.",
+      "src": "/audio/badal-and-moti/m-think-of-your-plate.mp3"
+    },
+    "m-start-at-the-very-beginning": {
+      "id": "m-start-at-the-very-beginning",
+      "spoken": "Start at the very beginning. Think of a smaller story: first you find a seed, then you plant it, then it grows. Badal had to MEET Moti before Moti could help him. Remember: Ask: what had to happen before anything else could?",
+      "src": "/audio/badal-and-moti/m-start-at-the-very-beginning.mp3"
+    },
+    "sol-ed-book-walk": {
+      "id": "sol-ed-book-walk",
+      "spoken": "Why this works. Start with walk. Add e and d to the end. walk + ed = walked. Remember: Add -ed to show the action already happened.",
+      "src": "/audio/badal-and-moti/sol-ed-book-walk.mp3"
+    },
+    "sol-ed-fresh-already": {
+      "id": "sol-ed-fresh-already",
+      "spoken": "Why this works. Look at the end of each word. Only one word ends in -ed. jumped is the yesterday word. Remember: -ed at the end means already happened.",
+      "src": "/audio/badal-and-moti/sol-ed-fresh-already.mp3"
+    },
+    "sol-ed-fresh-follow": {
+      "id": "sol-ed-fresh-follow",
+      "spoken": "Why this works. The sentence says Yesterday. So the action is already over. follow + ed = followed. Remember: Already happened → add -ed.",
+      "src": "/audio/badal-and-moti/sol-ed-fresh-follow.mp3"
+    },
+    "sol-marks-fresh-question": {
+      "id": "sol-marks-fresh-question",
+      "spoken": "Why this works. Read each sentence. Only one wants an answer. Where does Moti sleep? starts with Where — it asks. Remember: Asking sentences are questions.",
+      "src": "/audio/badal-and-moti/sol-marks-fresh-question.mp3"
+    },
+    "sol-marks-fresh-who": {
+      "id": "sol-marks-fresh-who",
+      "spoken": "Why this works. The sentence starts with Who. It wants an answer: the neighbours! So it ends with ? Remember: Asking → question mark.",
+      "src": "/audio/badal-and-moti/sol-marks-fresh-who.mp3"
+    },
+    "sol-marks-book-mangoes": {
+      "id": "sol-marks-book-mangoes",
+      "spoken": "Why this works. The sentence tells what I like. It does not want an answer. So it ends with a full stop. Remember: Telling → full stop.",
+      "src": "/audio/badal-and-moti/sol-marks-book-mangoes.mp3"
+    },
+    "sol-pairs-book-needle": {
+      "id": "sol-pairs-book-needle",
+      "spoken": "Why this works. A needle is used for sewing. Thread goes through the needle. needle and thread. Remember: Best-friend words work together.",
+      "src": "/audio/badal-and-moti/sol-pairs-book-needle.mp3"
+    },
+    "sol-pairs-fresh-which": {
+      "id": "sol-pairs-fresh-which",
+      "spoken": "Why this works. Picture each pair. A bat and a ball are used together in a game. bat and ball. Remember: Pairs are things used together.",
+      "src": "/audio/badal-and-moti/sol-pairs-fresh-which.mp3"
+    },
+    "sol-pairs-fresh-badal": {
+      "id": "sol-pairs-fresh-badal",
+      "spoken": "Why this works. Badal's best friend is his puppy. They ate, played and went everywhere together. Badal and Moti. Remember: and joins two friends.",
+      "src": "/audio/badal-and-moti/sol-pairs-fresh-badal.mp3"
+    },
+    "hint-3-2": {
+      "id": "hint-3-2",
+      "spoken": "Three small rules. Over → -ed. Asking → ?. Telling → . . Best friends → and.",
+      "src": "/audio/badal-and-moti/hint-3-2.mp3"
+    },
+    "hint-3-1": {
+      "id": "hint-3-1",
+      "spoken": "Yesterday, Badal thanked Moti. Yesterday means it already happened, so thank became thanked. A telling sentence, so it ends with a full stop. For example: thank + ed = thanked ..",
+      "src": "/audio/badal-and-moti/hint-3-1.mp3"
+    },
+    "hint-3-0": {
+      "id": "hint-3-0",
+      "spoken": "Which rule is it?. Is the question about -ed, about ? and ., or about word pairs?",
+      "src": "/audio/badal-and-moti/hint-3-0.mp3"
+    },
+    "hint-2-2": {
+      "id": "hint-2-2",
+      "spoken": "Join the pair with and. Two best-friend words are joined by the little word and.",
+      "src": "/audio/badal-and-moti/hint-2-2.mp3"
+    },
+    "hint-2-1": {
+      "id": "hint-2-1",
+      "spoken": "Salt and …. Salt is nearly always with pepper on the table. So the pair is salt and pepper. For example: salt and pepper.",
+      "src": "/audio/badal-and-moti/hint-2-1.mp3"
+    },
+    "hint-2-0": {
+      "id": "hint-2-0",
+      "spoken": "Ask what it is used with. Pick a word on the left. What do you always use it with?",
+      "src": "/audio/badal-and-moti/hint-2-0.mp3"
+    },
+    "hint-1-2": {
+      "id": "hint-1-2",
+      "spoken": "Ask → ? · Tell → .. Asking sentences end with a question mark. Telling sentences end with a full stop.",
+      "src": "/audio/badal-and-moti/hint-1-2.mp3"
+    },
+    "hint-1-1": {
+      "id": "hint-1-1",
+      "spoken": "Where is my bag. This sentence wants an answer, so it is a question. It ends with a question mark. For example: Where is my bag?.",
+      "src": "/audio/badal-and-moti/hint-1-1.mp3"
+    },
+    "hint-1-0": {
+      "id": "hint-1-0",
+      "spoken": "Does it want an answer?. If the sentence needs someone to answer it, it is asking.",
+      "src": "/audio/badal-and-moti/hint-1-0.mp3"
+    },
+    "hint-0-2": {
+      "id": "hint-0-2",
+      "spoken": "Already happened? Add -ed. If the action is over, add -ed. If it is happening now, leave the word alone.",
+      "src": "/audio/badal-and-moti/hint-0-2.mp3"
+    },
+    "hint-0-1": {
+      "id": "hint-0-1",
+      "spoken": "Yesterday, Moti waited. Yesterday is finished. So the waiting already happened, and the word becomes wait + ed. For example: wait + ed = waited.",
+      "src": "/audio/badal-and-moti/hint-0-1.mp3"
+    },
+    "hint-0-0": {
+      "id": "hint-0-0",
+      "spoken": "Look for Yesterday or Today. Read the sentence again. Does it say yesterday, last night, or today?",
+      "src": "/audio/badal-and-moti/hint-0-0.mp3"
+    }
+  }
+}
