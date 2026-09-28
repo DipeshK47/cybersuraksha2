@@ -59,7 +59,7 @@ export function StoryCharacter({ asset, name, mood, playing }: { asset: Characte
     const timer = !playing ? window.setTimeout(() => rive.pause(), 450) : undefined;
     return () => { window.clearTimeout(timer); };
   }, [mood, playing, loaded, spec]);
-  return <div className={s.character} role="img" aria-label={`${name} looks ${moodWords[mood] ?? mood}`} data-character-mood={mood} data-rive-loaded={loaded}>
+  return <div className={s.character} role="img" aria-label={`${name} looks ${moodWords[mood] ?? mood}`} data-character-mood={mood} data-character-asset={asset} data-rive-loaded={loaded}>
     {/* These static frames come from the same licensed Rive file. */}
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img src={`${spec.frames}/${mood}.png`} alt="" hidden={loaded && !failed && !reduced} />
