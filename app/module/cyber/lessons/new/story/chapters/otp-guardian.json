@@ -1,0 +1,81 @@
+{
+  "duration": 110.676,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Homework at Nani’s",
+      "mood": "happy",
+      "caption": "Meet Tara. After school, she does her homework at Nani's house. Nani makes ginger tea, and they share stories about Nani's village. Today, Nani's phone buzzes. A text message arrives with a six-digit code. Then, straight away, the phone starts ringing. The number is one they don't know.",
+      "dialogue": "Nani’s ginger tea makes homework fun!",
+      "status": "Happy at Nani’s",
+      "start": 0.0,
+      "duration": 18.296
+    },
+    {
+      "id": "problem",
+      "label": "The first call",
+      "title": "“Your card will be blocked!”",
+      "mood": "sad",
+      "caption": "A man says, “I'm a bank officer. Your card will be blocked today! Read me the OTP that just arrived. Quickly!” Nani's face falls. She pays for her medicines with that card. She reaches for her glasses. Tara feels her heart thump. Everything is happening so fast.",
+      "speech": "A man says, I'm a bank officer. Your card will be blocked today! Read me the O T P that just arrived. Quickly! Nani's face falls. She pays for her medicines with that card. She reaches for her glasses. Tara feels her heart thump. Everything is happening so fast.",
+      "dialogue": "Nani, wait… something feels wrong.",
+      "status": "Feeling worried",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.946,
+      "duration": 17.296
+    },
+    {
+      "id": "pattern",
+      "label": "Spot the pattern",
+      "title": "Two callers, one trick",
+      "mood": "thinking",
+      "caption": "Then a second call beeps in. “Electricity office. Your power will be cut tonight. Tell me the code!” Nani covers the phone. Tara spots the pattern. Both callers rush. Both use an official title. Both want the code. That code is called a one-time password, or OTP.",
+      "speech": "Then a second call beeps in. Electricity office. Your power will be cut tonight. Tell me the code! Nani covers the phone. Tara spots the pattern. Both callers rush. Both use an official title. Both want the code. That code is called a one-time password, or O T P.",
+      "dialogue": "Both callers want the same secret code!",
+      "status": "Spotting the pattern",
+      "start": 36.892,
+      "duration": 17.875
+    },
+    {
+      "id": "task",
+      "label": "Your turn",
+      "title": "Answer each call safely",
+      "mood": "thinking",
+      "caption": "Your turn. Help Tara and Nani answer each pretend call. The callers sound official and very sure. Remember the pattern: a rush, a title, and a request for the code. Choose the safe response for the bank call, then for the electricity call. Think about which number Nani can trust.",
+      "dialogue": "Let’s choose the safe answer together.",
+      "status": "Deciding together",
+      "start": 55.417,
+      "duration": 17.719
+    },
+    {
+      "id": "lesson",
+      "label": "Why it’s private",
+      "title": "A key code stays private",
+      "mood": "happy",
+      "caption": "Nani says no and hangs up on both. An OTP works like a key code. It can unlock one thing, like a payment from Nani's card. Whoever has it can use it. No real bank or office will ever ask for it. If money is lost, an adult should call 1930 quickly.",
+      "speech": "Nani says no and hangs up on both. An O T P works like a key code. It can unlock one thing, like a payment from Nani's card. Whoever has it can use it. No real bank or office will ever ask for it. If money is lost, an adult should call nineteen thirty quickly.",
+      "dialogue": "The code is a key. It stays with us.",
+      "status": "Feeling proud",
+      "start": 73.786,
+      "duration": 17.424
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Safe, and still smiling",
+      "mood": "happy",
+      "caption": "Nani calls the number printed on her bank card. Her card is fine! Then she calls the number on her electricity bill. No power cut tonight! The callers were pretending. Nani hugs Tara, and they finish their tea. Your turn: help Tara practise spotting OTP callers and keeping the code private!",
+      "speech": "Nani calls the number printed on her bank card. Her card is fine! Then she calls the number on her electricity bill. No power cut tonight! The callers were pretending. Nani hugs Tara, and they finish their tea. Your turn: help Tara practise spotting O T P callers and keeping the code private!",
+      "dialogue": "We kept the code secret, Nani!",
+      "status": "Proud and happy",
+      "tone": "resolved",
+      "start": 91.86,
+      "duration": 18.167
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+/* Tara chapter only: desk art + SMS notice, the pretend call screen, the two-caller pattern board, the call task and the key-code card. Shared pieces live in ../story-player.module.css. */
+.desk{background-image:url('/cyber-missions/safe-call-desk.webp')}
+.notice{position:absolute;right:14px;bottom:14px;display:grid;gap:3px;width:min(270px,64%);padding:10px 12px;border-radius:12px;background:#fffcf3f2;color:#183b40;font-size:.7rem;line-height:1.35;box-shadow:0 10px 26px #0d1a2a66}
+.notice>span:first-child{display:flex;align-items:center;gap:6px;font-size:.62rem;font-weight:800;color:#5b6d63}
+.notice svg{width:14px;height:14px}
+.notice strong{font-size:.8rem}
+.notice b,.bubble b{padding:1px 5px;border-radius:4px;background:#e8d6b1;font-family:var(--font-mono),monospace;letter-spacing:.06em}
+.ring{animation:ring 1.2s ease-out infinite}
+
+.callScene{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:18px;align-items:center}
+.phone{display:flex;flex-direction:column;gap:12px;min-height:370px;padding:10px 14px 16px;border:7px solid #28474d;border-radius:28px;background:linear-gradient(180deg,#22495a,#122b3a);color:#fff5e4;box-shadow:0 18px 30px #19342e2e}
+.status{display:flex;justify-content:space-between;align-items:center;font-size:.66rem;font-weight:800}
+.status>span:last-child{display:flex;gap:4px}
+.status svg{width:13px;height:13px}
+.caller{display:grid;justify-items:center;gap:4px;margin-top:4px;text-align:center}
+.avatar{display:grid;place-items:center;flex:none;width:58px;height:58px;border-radius:50%;background:#3d6670;color:#ffe2b0}
+.avatar svg{width:28px;height:28px}
+.caller strong{margin-top:4px;font-family:var(--font-display),sans-serif;font-size:1.2rem}
+.caller small{font-size:.7rem;color:#cfe1dc}
+.caller em{font-style:normal;font-size:.64rem;color:#ffbe92}
+.lines{flex:1;display:grid;align-content:start;gap:6px}
+.lines>span{justify-self:start;max-width:92%;padding:7px 10px;border-radius:12px 12px 12px 4px;background:#fffcf3;color:#183b40;font-size:.74rem;font-weight:750;line-height:1.3}
+.controls{display:flex;justify-content:space-between}
+.controls>span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff1f}
+.controls>span[data-end]{background:#c9523f}
+.controls svg{width:17px;height:17px}
+.sms{padding:18px;border-radius:16px;background:#fffcf3;box-shadow:0 12px 32px #253c3014}
+.smsHead{display:flex;align-items:center;gap:10px}
+.smsHead>svg{width:36px;height:36px;padding:8px;border-radius:50%;background:#dcebd5;color:#2f7369}
+.smsHead>div{display:grid;gap:2px}
+.smsHead strong{font-size:.86rem}
+.smsHead small{font-size:.66rem;color:#5b6d63}
+.bubble{margin:14px 0;padding:12px 14px;border-radius:14px 14px 14px 4px;background:#e9eee3;font-size:.8rem;line-height:1.5}
+.bubble mark{padding:1px 3px;border-radius:3px;background:#ffe0a3;color:#183b40;font-weight:750}
+.clash,.term,.keyFlow,.help{opacity:.28;transition:opacity .25s ease}
+.clash[data-on="true"],.term[data-on="true"],.keyFlow[data-on="true"],.help[data-on="true"]{opacity:1}
+.clash{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border-radius:10px;background:#fbe6d6;color:#6b3f22;font-size:.74rem;line-height:1.4}
+.clash svg{width:18px;height:18px;color:#b4671e}
+
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.mini{display:grid;align-content:start;gap:4px;padding:12px;border-radius:12px;background:#1f4450;color:#fff5e4}
+.mini[data-state="hold"]{background:#3a5a61}
+.mini>span{display:flex;align-items:center;gap:6px;font-size:.64rem;color:#cfe1dc}
+.mini svg{width:14px;height:14px}
+.mini strong{font-family:var(--font-display),sans-serif;font-size:.9rem}
+.mini em{font-style:normal;font-size:.72rem;line-height:1.35;color:#ffe2b0}
+.term{display:flex;align-items:center;gap:9px;margin-top:12px;padding:10px 12px;border-radius:10px;background:#e3edda;color:#284c37;font-size:.8rem}
+.term svg{width:20px;height:20px;color:#3c7447}
+
+.queue{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 10px;padding:0;list-style:none}
+.queue li{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #d8e2d8;border-radius:10px;background:#faf8ef;font-size:.72rem;transition:background .2s ease}
+.queue li>span{display:grid;gap:1px;min-width:0}
+.queue small{font-size:.62rem;color:#5b6d63}
+.queue svg{width:18px;height:18px;color:#2f7369}
+.queue li>svg:last-child:not(:first-child){margin-left:auto;color:#3c7447}
+.queue li[data-state="live"]{border-color:#d69a5a;background:#fff1dc}
+.queue li[data-state="done"]{border-color:#9dc3a0;background:#e3edda}
+.live{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:#1f4450;color:#fff5e4;animation:fitIn .25s ease-out}
+.live .avatar{width:46px;height:46px}
+.live .avatar svg{width:22px;height:22px}
+.live>div{display:grid;gap:3px;min-width:0}
+.live strong{font-family:var(--font-display),sans-serif;font-size:.98rem}
+.live small{font-size:.66rem;color:#cfe1dc}
+.live span{font-size:.78rem;line-height:1.35;color:#ffe2b0}
+.live b{font-family:var(--font-mono),monospace;font-weight:700;color:#fff5e4}
+.ended{background:#2c6450}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.choices button[type]{display:flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #c8d5bd;border-radius:10px;background:#fffaf0;color:#345447;font-size:.76rem;line-height:1.3;text-align:left}
+.choices svg{width:18px;height:18px;color:#527854}
+.choices button[data-trap]{color:#805633}
+.choices button[data-trap] svg{color:#b4671e}
+.choices button[aria-pressed="true"]{border-color:#589578;background:#dceecf;color:#284c37;opacity:1}
+
+.hungUp{display:inline-flex;align-items:center;gap:7px;margin-bottom:12px;padding:5px 11px;border-radius:999px;background:#e3edda;color:#284c37;font-size:.7rem;font-weight:800}
+.hungUp svg{width:15px;height:15px}
+.keyFlow{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:4px 0 6px;padding:12px 14px;border-radius:12px;background:#183944;color:#fff5e4}
+.keyFlow>svg{width:20px;height:20px;color:#f9d58a}
+.code{padding:5px 10px;border-radius:8px;background:#fffcf3;color:#183b40;font-family:var(--font-mono),monospace;font-size:1.15rem;font-weight:800;letter-spacing:.18em}
+.lock{display:flex;align-items:center;gap:7px;font-size:.82rem;font-weight:800}
+.lock svg{width:18px;height:18px;color:#ffbe92}
+.help{display:flex;align-items:center;gap:11px;margin-top:14px;padding:12px 14px;border-radius:10px;background:#fbe6d6}
+.help>svg{width:22px;height:22px;color:#b4671e}
+.help>div{display:grid;gap:3px}
+.help strong{font-size:.8rem}
+.help span{font-size:.72rem;line-height:1.4;color:#5a4a3a}
+
+@keyframes ring{0%,60%,100%{transform:rotate(0)}15%{transform:rotate(-14deg)}30%{transform:rotate(14deg)}45%{transform:rotate(-8deg)}}
+@keyframes fitIn{from{transform:translateY(-7px);opacity:.5}to{transform:translateY(0);opacity:1}}
+@media(max-width:600px){
+  .notice{right:10px;bottom:10px;width:min(235px,80%);padding:8px 10px;font-size:.64rem}.notice strong{font-size:.72rem}
+  .callScene{grid-template-columns:1fr;gap:12px}
+  .phone{min-height:0;gap:10px;padding:9px 12px 12px;border-width:6px;border-radius:22px}
+  .avatar{width:46px;height:46px}.caller strong{font-size:1.05rem}.lines>span{font-size:.7rem}.controls>span{width:36px;height:36px}
+  .sms{padding:15px}.bubble{font-size:.76rem}
+  .pair{gap:7px}.mini{padding:10px}.mini strong{font-size:.8rem}.mini em{font-size:.67rem}
+  .queue{gap:6px}.queue li{padding:7px 8px;font-size:.66rem;gap:6px}
+  .live{padding:11px 12px;gap:10px}.live span{font-size:.74rem}
+  .choices{grid-template-columns:1fr;gap:6px}.choices button[type]{font-size:.73rem}
+  .code{font-size:1rem}
+}
