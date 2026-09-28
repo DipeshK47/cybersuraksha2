@@ -1,0 +1,77 @@
+{
+  "duration": 119.232,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "A project worth showing",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's spent a month building a solar water filter for his science project, and it actually works. Now he's applying for the Cyberpur Young Scientists scholarship. His report is done, and his teacher's letter is ready. Only one box is left: a link to his public profile. Easy, he thinks. The deadline is Friday.",
+      "dialogue": "My filter actually works! Now for the scholarship form.",
+      "status": "Proud of his project",
+      "start": 0.0,
+      "duration": 19.485
+    },
+    {
+      "id": "problem",
+      "label": "The public view",
+      "title": "What can the panel see?",
+      "mood": "sad",
+      "caption": "Then Kabir reads the rules. The panel may look at applicants' public profiles for respect and integrity. He taps View as public. His project post is there. So is a comment he wrote last year, mocking his classmate Tanvi's singing. And a photo of his friend Ishaan asleep on the bus, posted without asking. Kabir's stomach sinks.",
+      "dialogue": "Wait… I forgot that comment was still up there.",
+      "status": "Feeling uneasy",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 20.135,
+      "duration": 19.597
+    },
+    {
+      "id": "help",
+      "label": "Call Aunt Zoya",
+      "title": "Public means anyone.",
+      "mood": "thinking",
+      "caption": "Kabir video-calls his aunt Zoya, who helps students with applications. She explains that public means anyone, not just friends. Someone may have taken a screenshot, so a deleted post can still survive as a copy. Privacy settings help, but they're not a hiding place. The real test is simple: is each post fair to the people in it?",
+      "dialogue": "If I delete it, is it really gone?",
+      "status": "Talking it through",
+      "start": 40.382,
+      "duration": 19.006
+    },
+    {
+      "id": "audit",
+      "label": "Audit the feed",
+      "title": "Keep, edit, delete or ask?",
+      "mood": "thinking",
+      "caption": "Your turn. Check each post against the scholarship rules. For every one, choose keep, edit, delete, or ask permission. Think about who could see it, who's in it, and how it might read years from now. Deleting everything isn't the answer, though. Some posts show exactly the kind of person the panel hopes to find.",
+      "dialogue": "Help me check each post against the rules.",
+      "status": "Auditing his profile",
+      "start": 60.038,
+      "duration": 18.43
+    },
+    {
+      "id": "repair",
+      "label": "Make it right",
+      "title": "Repair, then protect.",
+      "mood": "happy",
+      "caption": "Everything Kabir posts adds to his digital footprint, and together it shapes his online reputation. Deleting the comment was a start, but Tanvi had already seen it, so he sent her a real apology. Ishaan said no to the bus photo, so it's gone. Finally, Kabir checks his privacy settings: tag review on, and friends only for everyday posts.",
+      "dialogue": "Deleting was step one. Saying sorry was step two.",
+      "status": "Making it right",
+      "start": 79.118,
+      "duration": 19.765
+    },
+    {
+      "id": "ending",
+      "label": "Submitted!",
+      "title": "Ready for the panel.",
+      "mood": "happy",
+      "caption": "Kabir submits his application on Thursday, a day early. His public profile now shows his filter, and a team photo everyone agreed to share. Whatever the panel decides, he's proud of what they'll see. Before you post, pause: who's the audience, who's in it, and how will it read later? Your turn: help Kabir review more posts!",
+      "dialogue": "Sent a day early. I’m proud of what they’ll see.",
+      "status": "Application sent",
+      "tone": "resolved",
+      "start": 99.532,
+      "duration": 19.05
+    }
+  ]
+}

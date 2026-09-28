@@ -1,0 +1,82 @@
+{
+  "duration": 110.062,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "A buyer for our books!",
+      "mood": "happy",
+      "caption": "Meet Tara. She and her mum sell old storybooks online. Tara writes the listings and, with Mum close by, answers buyers on Mum's phone. Today, someone wants her favourite adventure set for ₹500! Tara grins. That money is going towards new paints.",
+      "speech": "Meet Tara. She and her mum sell old storybooks online. Tara writes the listings and, with Mum close by, answers buyers on Mum's phone. Today, someone wants her favourite adventure set for five hundred rupees! Tara grins. That money is going towards new paints.",
+      "dialogue": "Someone wants my adventure books!",
+      "status": "Excited to sell",
+      "start": 0.0,
+      "duration": 17.726
+    },
+    {
+      "id": "problem",
+      "label": "The mix-up",
+      "title": "Receive… or pay?",
+      "mood": "sad",
+      "caption": "The buyer sends a QR code: “Scan to receive ₹500.” Tara scans it. But wait. The screen says “Pay ₹500” and asks for a UPI PIN! The buyer keeps typing: “It's only verification. Hurry!” Tara's tummy feels tight. Something doesn't match.",
+      "speech": "The buyer sends a Q R code. Scan to receive five hundred rupees. Tara scans it. But wait. The screen says, Pay five hundred rupees, and asks for a U P I pin! The buyer keeps typing. It's only verification. Hurry! Tara's tummy feels tight. Something doesn't match.",
+      "dialogue": "Pay? But I'm supposed to get money!",
+      "status": "Feeling worried",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.376,
+      "duration": 18.94
+    },
+    {
+      "id": "help",
+      "label": "Ask Mum",
+      "title": "Pay means money goes out.",
+      "mood": "thinking",
+      "caption": "Tara stops and types nothing. She shows Mum, and they read the screen together. Pay means money leaves your account. A UPI PIN is your secret yes to send money. You never need a PIN, or a scan, to receive money. This trick is called a QR code scam.",
+      "speech": "Tara stops and types nothing. She shows Mum, and they read the screen together. Pay means money leaves your account. A U P I pin is your secret yes to send money. You never need a pin, or a scan, to receive money. This trick is called a Q R code scam.",
+      "dialogue": "Mum, can you read this with me?",
+      "status": "Checking with Mum",
+      "start": 37.966,
+      "duration": 16.933
+    },
+    {
+      "id": "task",
+      "label": "Your turn",
+      "title": "Read the screen, not the message.",
+      "mood": "thinking",
+      "caption": "Your turn. Help Tara with this pretend payment screen. First, read which way the money would go. Then decide what to do with the payment. Last, choose a safe way for the buyer to pay Tara and Mum. Remember, the buyer's words and the screen don't match.",
+      "dialogue": "Which way is the money really going?",
+      "status": "Reading the screen",
+      "start": 55.549,
+      "duration": 16.019
+    },
+    {
+      "id": "lesson",
+      "label": "The safe way",
+      "title": "To receive, share yours.",
+      "mood": "happy",
+      "caption": "Mum sends the shop's own QR code and UPI ID. That's the safe way to receive. A real buyer scans it and types their own PIN. Tara and Mum type nothing. They just wait for a “Received” message. Remember: scanning a QR code is for paying, not for getting paid.",
+      "speech": "Mum sends the shop's own Q R code and U P I I D. That's the safe way to receive. A real buyer scans it and types their own pin. Tara and Mum type nothing. They just wait for a Received message. Remember: scanning a Q R code is for paying, not for getting paid.",
+      "dialogue": "We share our QR. The buyer does the paying.",
+      "status": "Getting it now",
+      "start": 72.217,
+      "duration": 18.116
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Sold, the safe way!",
+      "mood": "happy",
+      "caption": "The tricky buyer goes quiet. Mum blocks them and reports the chat at cybercrime.gov.in. The next day, a real buyer scans the shop's QR, and ₹500 arrives. No PIN needed! Tara feels proud she read the screen. Your turn: help Tara check more payment screens!",
+      "speech": "The tricky buyer goes quiet. Mum blocks them and reports the chat at cybercrime dot gov dot in. The next day, a real buyer scans the shop's Q R, and five hundred rupees arrives. No pin needed! Tara feels proud she read the screen. Your turn: help Tara check more payment screens!",
+      "dialogue": "₹500 received, and no PIN needed!",
+      "status": "Proud and safe",
+      "tone": "resolved",
+      "start": 90.983,
+      "duration": 18.429
+    }
+  ]
+}
