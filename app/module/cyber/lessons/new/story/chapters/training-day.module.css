@@ -1,0 +1,118 @@
+/* Tara's Pet Finder chapter only: camera feed + event log, the old and new training data, the labelling task. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.box,.tag,.event,.friend,.poster,.found,.bar,.rule,.chip,.fair,.human{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].box,[data-on="false"].tag,[data-on="false"].event,[data-on="false"].friend,[data-on="false"].poster,[data-on="false"].found,[data-on="false"].bar,[data-on="false"].rule,[data-on="false"].chip,[data-on="false"].fair,[data-on="false"].human{opacity:0;transform:translateY(6px)}
+
+/* Photo crops: three source photos framed several ways, plus two drawn non-dogs */
+.pic{display:block;width:100%;height:100%;background-color:#d8dccf;background-size:cover;background-position:center;background-repeat:no-repeat}
+.pic[data-kind="golden"]{background-image:url('/cyber-missions/dog-golden.jpg');background-position:45% 45%}
+.pic[data-kind="golden"][data-v="1"]{background-size:160%;background-position:42% 40%}
+.pic[data-kind="golden"][data-v="2"]{transform:scaleX(-1)}
+.pic[data-kind="golden"][data-v="3"]{background-size:210%;background-position:38% 52%}
+.pic[data-kind="golden"][data-v="4"]{transform:scaleX(-1);background-size:140%;background-position:50% 65%}
+.pic[data-kind="indie"]{background-image:url('/cyber-missions/dog-indie.jpg')}
+.pic[data-kind="indie"][data-v="1"]{background-size:250%;background-position:17% 26%}
+.pic[data-kind="indie"][data-v="2"]{background-position:50% 70%}
+.pic[data-kind="indie"][data-v="4"]{background-position:50% 42%}
+.pic[data-kind="pug"]{background-image:url('/cyber-missions/dog-pug.jpg')}
+.pic[data-kind="pug"][data-v="1"]{background-size:250%;background-position:20% 50%}
+.pic[data-kind="pug"][data-v="3"]{background-size:200%;background-position:86% 80%}
+.pic[data-kind="cat"],.pic[data-kind="bird"]{display:grid;place-items:center}
+.pic[data-kind="cat"]{background-image:radial-gradient(circle at 50% 38%,#eceff1,#b0bec5);color:#4b5963}
+.pic[data-kind="bird"]{background-image:linear-gradient(#bfe3f0,#e9f4d6);color:#3b3f2e}
+.pic svg{width:46%;height:46%}
+
+/* Scenes 1, 2 and 6: the Pet Finder app */
+.feed{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;padding:12px;background-image:linear-gradient(160deg,#16304a,#10263f 65%,#1f2b3f)}
+.cam{position:relative;overflow:hidden;min-height:246px;border-radius:10px;background:#0b1626}
+.cam .pic{position:absolute;inset:0;filter:saturate(.85) contrast(1.05)}
+.cam:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#00000014 0 2px,transparent 2px 4px),radial-gradient(circle,transparent 55%,#0006);pointer-events:none}
+.rec{position:absolute;z-index:1;top:8px;left:8px;display:flex;align-items:center;gap:5px;padding:3px 7px;border-radius:5px;background:#0009;color:#fff;font-family:var(--font-mono),monospace;font-size:.6rem}
+.rec span{width:7px;height:7px;border-radius:50%;background:#ff5a4a}
+.box{position:absolute;z-index:1;left:16%;top:14%;width:66%;height:72%;border:2px solid #7ee0a0;border-radius:6px;box-shadow:0 0 0 1px #0004}
+.box[data-miss="true"]{border:2px dashed #ff9b7a}
+.tag{position:absolute;z-index:1;left:16%;bottom:6px;display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:6px;background:#2f8f5f;color:#fff;font-size:.68rem;font-weight:800}
+.tag[data-miss="true"]{background:#b4543a}
+.tag svg{width:14px;height:14px}
+.log{display:grid;align-content:start;gap:8px;min-width:0}
+.event{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:#fffcf3f2;color:#1f3d40;font-size:.72rem;line-height:1.3;box-shadow:0 8px 18px #0a152444}
+.event svg{flex:none;width:16px;height:16px;color:#2f7369}
+.event[data-bad="true"] svg{color:#b4543a}
+.event b{color:#8a3b25}
+.friend,.poster{display:flex;align-items:center;gap:10px;padding:8px;border-radius:12px;background:#fffcf3;color:#1f3d40;box-shadow:0 8px 18px #0a152444}
+.poster{border:2px dashed #d9a066;background:#fff4e0}
+.friend>div,.poster>div{display:grid;gap:2px;min-width:0}
+.friend strong,.poster strong{font-size:.82rem}
+.friend span,.poster span{font-size:.66rem;color:#4d645b}
+.friend>svg{flex:none;margin-left:auto;width:18px;height:18px;color:#d0603f;fill:#f3a58a}
+.friend .pic,.poster .pic,.test .pic{flex:none;width:46px;height:46px;border-radius:8px}
+.found{display:grid;justify-items:center;gap:3px;padding:14px;border-radius:12px;background:#e3f3de;color:#284c37;text-align:center;box-shadow:0 8px 18px #0a152444}
+.found svg{width:24px;height:24px;color:#d0603f;fill:#f3a58a}
+.found strong{font-family:var(--font-display),sans-serif;font-size:1.35rem}
+.found span{font-size:.7rem}
+
+/* Scene 3: Ms Fernandes + the old training data */
+.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
+.avatar svg{width:20px;height:20px}
+.teacher small{font-size:.72rem;font-weight:850;color:#826137}
+.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.thumbs{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;margin-bottom:12px}
+.thumbs .pic{aspect-ratio:1;border-radius:6px}
+.more{display:grid;place-items:center;aspect-ratio:1;border-radius:6px;background:#e8d6b1;color:#5a3f22;font-size:.68rem;font-weight:850}
+.bars{display:grid;gap:6px;margin:4px 0 12px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;align-items:center;gap:9px;font-size:.72rem;color:#264c48}
+.track{height:10px;overflow:hidden;border-radius:5px;background:#ece6d4}
+.track span{display:block;height:100%;background:#2f7369;transform-origin:left;transition:transform .3s var(--ease)}
+.bar b{text-align:right}
+.bar[data-zero="true"] b{color:#b4543a}
+.rule{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:9px;background:#f7e2d8;color:#8a3b25;font-size:.76rem}
+.rule svg{flex:none;width:18px;height:18px}
+
+/* Scene 4: labelling task */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.photo{position:relative;overflow:hidden;aspect-ratio:1/.86;padding:0;border:2px solid #dbe2d2;border-radius:10px;background:#eee}
+.photo .pic{position:absolute;inset:0}
+.photo[aria-pressed="true"]{border-color:#2f8f5f;box-shadow:0 0 0 3px #2f8f5f33}
+.grid .photo:disabled{opacity:1}
+.label{position:absolute;left:5px;bottom:5px;display:flex;align-items:center;gap:3px;padding:2px 7px;border-radius:6px;background:#fffcf3e6;color:#6a644e;font-size:.62rem;font-weight:800}
+.label[data-on="true"]{background:#2f8f5f;color:#fff}
+.label svg{width:12px;height:12px}
+.tests{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.test{display:flex;align-items:center;gap:9px;padding:7px;border:1.5px solid #dbe2d2;border-radius:10px;background:#fffaf0}
+.test>div{display:grid;min-width:0}
+.test small{font-size:.58rem;font-weight:800;color:#826137;text-transform:uppercase;letter-spacing:.06em}
+.test strong{font-size:.78rem}
+.test span{font-size:.68rem;color:#5d7169}
+.test[data-result="true"]{border-color:#7fbf8f;background:#e3f3de}
+.test[data-result="true"] span{color:#284c37;font-weight:800}
+.test[data-result="false"]{border-color:#e5b6a4;background:#fbeee8}
+.test[data-result="false"] span{color:#8a3b25;font-weight:800}
+
+/* Scene 5: varied data + a human check */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#dceecf;color:#284c37;font-size:.7rem;font-weight:800}
+.chip svg{width:14px;height:14px}
+.fair{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:9px;background:#fbeee8;color:#8a3b25;font-size:.74rem}
+.fair svg{flex:none;width:18px;height:18px}
+.human{display:flex;align-items:center;gap:11px;margin-top:10px;padding:11px 12px;border-radius:9px;background:#e3edda}
+.human>div{display:grid;gap:3px}
+.human strong{font-size:.8rem}
+.human span{font-size:.69rem;line-height:1.4;color:#4d645b}
+.human>svg{flex:none;width:22px;height:22px;color:#3c7447}
+.human>svg:last-child{margin-left:auto}
+
+@media(max-width:600px){
+  .feed{grid-template-columns:1fr;padding:10px;gap:8px}
+  .cam{min-height:170px}
+  .event{font-size:.66rem;padding:7px 9px}
+  .found strong{font-size:1.1rem}
+  .teacher>div>p{font-size:1.05rem}
+  .thumbs{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .bar{grid-template-columns:96px minmax(0,1fr) 26px;font-size:.66rem;gap:6px}
+  .grid{gap:6px}
+  .label{font-size:.56rem;padding:2px 5px;left:3px;bottom:3px}
+  .tests{grid-template-columns:1fr}
+}
