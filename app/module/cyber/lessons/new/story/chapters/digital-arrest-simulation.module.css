@@ -1,0 +1,109 @@
+/* Kabir chapter only: desk art, incoming-call card, the pretend video call, notes, evidence list, family plan and fact card. Shared pieces live in ../story-player.module.css. */
+.desk{background-image:url('/cyber-missions/safe-call-desk.webp')}
+
+/* Scene 1: incoming call toast over the desk art. */
+.incoming{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:10px;width:min(290px,calc(100% - 32px));padding:10px 12px;border-radius:14px;background:#0f2530e6;color:#fff4df;box-shadow:0 10px 26px #0a141f66;opacity:0;transform:translateY(8px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.incoming[data-show="true"]{opacity:1;transform:translateY(0)}
+.incoming>div{display:grid;gap:2px;min-width:0;flex:1}
+.incoming strong{font-size:.8rem}
+.incoming small{font-size:.64rem;color:#bcd3cf}
+.incoming svg{width:17px;height:17px}
+.ring{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:#2b5560;color:#cdeee6}
+.decline,.accept{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;color:#fff}
+.decline{background:#c4513f}
+.accept{background:#3f8d5c}
+
+/* Scene 2 + task: the pretend video call. */
+.call{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);background:#122c35}
+.feed{position:relative;min-height:275px;overflow:hidden;background:linear-gradient(#35606a,#23434d 70%,#1c3840)}
+.office{position:absolute;inset:0}
+.shelf{position:absolute;left:7%;top:16%;display:grid;gap:9px;width:25%;padding:6px;border-radius:3px;background:#4c3b28}
+.shelf i{display:block;height:28px;border-radius:2px;background:repeating-linear-gradient(90deg,#d8c08c 0 7px,#a8844c 7px 10px,#c9a86a 10px 17px,#8e6f45 17px 19px)}
+.crest{position:absolute;right:9%;top:13%;display:grid;place-items:center;width:52px;height:52px;border:3px solid #d9b964;border-radius:50%;background:#2c4a55;color:#e9cf82}
+.crest svg{width:22px;height:22px}
+.officer{position:absolute;left:52%;bottom:0;width:150px;height:200px;transform:translateX(-50%)}
+.cap{position:absolute;left:50%;top:0;z-index:2;width:84px;height:30px;border-radius:40px 40px 5px 5px;background:#5e5a38;transform:translateX(-50%)}
+.cap:after{content:"";position:absolute;left:-6px;right:-6px;bottom:-5px;height:8px;border-radius:5px;background:#2f2d1e}
+.head{position:absolute;left:50%;top:18px;z-index:1;width:72px;height:80px;border-radius:44%;background:radial-gradient(circle at 34% 50%,#2b1d15 0 3.5px,transparent 4.5px),radial-gradient(circle at 66% 50%,#2b1d15 0 3.5px,transparent 4.5px),#b98559;transform:translateX(-50%)}
+.head:after{content:"";position:absolute;left:30%;right:30%;top:66%;height:6px;border-radius:0 0 8px 8px;background:#3b2a1f}
+.body{position:absolute;left:0;right:0;bottom:0;height:106px;border-radius:62px 62px 0 0;background:linear-gradient(90deg,transparent 48%,#9c8350 48% 52%,transparent 52%),#b89b62}
+.body:before{content:"";position:absolute;left:50%;top:0;width:38px;height:24px;background:#b98559;clip-path:polygon(0 0,100% 0,50% 100%);transform:translateX(-50%)}
+.body i{position:absolute;top:12px;width:34px;height:10px;border-radius:3px;background:radial-gradient(circle,#f1d77e 0 2.5px,transparent 3px) center/11px 10px repeat-x,#6d5a32}
+.body i:first-of-type{left:14px;transform:rotate(-14deg)}
+.body i:last-of-type{right:14px;transform:rotate(14deg)}
+.fakeBadge{position:absolute;left:6%;bottom:14%;z-index:3;display:grid;justify-items:center;gap:1px;width:118px;padding:8px 6px;border:2px solid #9b8a55;border-radius:8px;background:#ece4c9;color:#3a3a2a;text-align:center;box-shadow:0 8px 16px #0b161e55;filter:blur(.35px);transform:rotate(-8deg)}
+.fakeBadge svg{width:20px;height:20px;color:#7b6a3a}
+.fakeBadge strong{font-size:.8rem;letter-spacing:.08em}
+.fakeBadge small{font-size:.42rem;font-weight:800;letter-spacing:.02em;line-height:1.25}
+.live,.callerTag,.self{position:absolute;z-index:4;display:flex;align-items:center;gap:6px;border-radius:6px;background:#0c1d24c9;color:#f9eedb;font-size:.62rem;font-weight:800}
+.live{top:10px;left:10px;padding:4px 8px}
+.live i{width:7px;height:7px;border-radius:50%;background:#ef6b5a}
+.callerTag{top:36px;left:10px;padding:4px 8px;font-weight:700;color:#d8e6e2}
+.self{right:10px;bottom:10px;flex-direction:column;justify-content:center;width:70px;height:56px;border:2px solid #fff4df8c;background:#40656d;gap:2px}
+.self svg{width:20px;height:20px}
+.chat{display:flex;flex-direction:column;justify-content:center;gap:8px;margin:0;padding:12px;list-style:none}
+.chat li{display:flex;align-items:flex-start;gap:8px;padding:9px 10px;border-radius:4px 12px 12px 12px;background:#fff1dc;color:#4f341c;font-size:.74rem;font-weight:750;line-height:1.3;opacity:0;transform:translateY(6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.chat li[data-show="true"]{opacity:1;transform:translateY(0)}
+.chat svg{width:16px;height:16px;margin-top:1px;color:#b0562f}
+.controls{display:flex;justify-content:center;gap:14px;padding:10px;background:#0e2229}
+.controls span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#2c4750;color:#dce9e5}
+.controls svg{width:18px;height:18px}
+.controls .hang{background:#c4513f;color:#fff}
+
+/* Scene 3: Kabir's note and Papa. */
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
+.sticky,.papa{opacity:.25;transition:opacity .25s ease}
+.sticky[data-show="true"],.papa[data-show="true"]{opacity:1}
+.sticky{padding:11px 13px;border-radius:3px;background:#fbe7a1;box-shadow:0 6px 14px #6b5a2a24;transform:rotate(-2deg)}
+.sticky span,.papa span{display:flex;align-items:center;gap:5px;font-size:.72rem;font-weight:850;color:#826137}
+.sticky svg{width:14px;height:14px}
+.notes .sticky p{margin:5px 0 0;font-family:var(--font-display),sans-serif;font-size:1.05rem;line-height:1.25;color:#4a3a18}
+.papa{align-self:center}
+.notes .papa p{margin:5px 0 0;font-family:var(--font-display),sans-serif;font-size:1.15rem;line-height:1.25;color:#375b53}
+
+/* Task. */
+.eyebrow{display:block;margin-bottom:6px;font-size:.7rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:#826137}
+.clues{display:grid;gap:7px}
+.clues button{display:flex;align-items:center;gap:11px;width:100%;padding:7px 10px;border:1px solid #cfdac6;border-radius:10px;background:#fffaf0;color:#264c48;text-align:left}
+.clues button>span:nth-child(2){display:grid;gap:2px;min-width:0;flex:1}
+.clues strong{font-size:.8rem;line-height:1.25}
+.clues small{font-size:.68rem;font-weight:600;color:#5d6f67}
+.clueIcon{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:8px;background:#e6eee0;color:#3d6b57}
+.clueIcon svg{width:17px;height:17px}
+.tick{display:grid;place-items:center;flex:none;width:22px;height:22px;border:1.5px solid #b4c5bb;border-radius:50%;color:transparent}
+.tick svg{width:14px;height:14px}
+.clues button[aria-pressed="true"]{border-color:#c07a3c;background:#fdf0dc}
+.clues button[aria-pressed="true"] .clueIcon{background:#f6d9b3;color:#8a4f1f}
+.clues button[aria-pressed="true"] .tick{border-color:#b4671e;background:#b4671e;color:#fff}
+.found{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.found span{display:flex;align-items:center;gap:5px;padding:4px 9px;border-radius:20px;background:#dceecf;color:#284c37;font-size:.68rem;font-weight:800}
+.found svg{width:13px;height:13px}
+.plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.plan li{display:flex;align-items:center;gap:7px;min-height:44px;padding:6px 8px;border:1px dashed #9ead95;border-radius:8px;background:#f1f2e6;color:#899a82;font-size:.72rem;font-weight:850}
+.plan li span{display:grid;place-items:center;flex:none;width:20px;height:20px;border-radius:50%;background:#dfe5d6;font-size:.62rem}
+.plan li[data-filled="true"]{border-style:solid;border-color:#589578;background:#dceecf;color:#284c37;animation:fitIn .25s var(--ease)}
+.plan li[data-filled="true"] span{background:#3f7a5b;color:#fff}
+
+/* Scene 5: fact card and the scam's tools. */
+.fact{display:flex;gap:12px;padding:13px 14px;border-radius:10px;background:#16505a;color:#f6f0dd}
+.fact>svg{width:26px;height:26px;color:#f3cf7c}
+.fact>div{display:grid;gap:4px}
+.fact strong{font-size:.9rem;line-height:1.3}
+.fact span{font-size:.72rem;line-height:1.4;color:#cfe3de}
+.levers{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 16px;opacity:.25;transition:opacity .25s ease}
+.levers[data-show="true"]{opacity:1}
+.levers span{font-size:.72rem;font-weight:800;color:#665235}
+.levers b{padding:4px 10px;border-radius:20px;background:#f6e2c4;color:#7a4418;font-size:.7rem}
+@keyframes fitIn{from{transform:translateY(-7px);opacity:.5}to{transform:translateY(0);opacity:1}}
+
+@media(max-width:900px){.call{grid-template-columns:1fr}.chat{padding:10px}}
+@media(max-width:600px){
+  .incoming{left:10px;right:10px;bottom:10px;width:auto;padding:8px 10px}
+  .feed{min-height:230px}.officer{width:124px;height:170px}.body{height:90px}.shelf{width:24%}.shelf i{height:22px}.crest{width:42px;height:42px}
+  .fakeBadge{width:100px;left:4%}.fakeBadge small{font-size:.38rem}
+  .chat li{font-size:.7rem;padding:8px 9px}
+  .notes{grid-template-columns:1fr;gap:10px}
+  .clues button{gap:9px}.clues strong{font-size:.76rem}.clues small{font-size:.64rem}
+  .plan li{font-size:.64rem;padding:5px 6px;gap:5px}
+  .fact{padding:11px 12px}.fact strong{font-size:.82rem}.fact span{font-size:.68rem}
+}

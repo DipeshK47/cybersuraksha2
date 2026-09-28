@@ -1,0 +1,80 @@
+{
+  "duration": 120.007,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "A sweet Sunday plan",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's twelve, and on Sunday evenings he sits with his mum to plan the week. Tonight they're secretly choosing a cake for Dadi's seventieth birthday. Chocolate, obviously. Then Mum's phone buzzes. It's a video call from a number she doesn't know. She answers, and a man in a uniform fills the screen.",
+      "dialogue": "Chocolate cake for Dadi. She's going to love it!",
+      "status": "Planning a surprise",
+      "start": 0.0,
+      "duration": 18.807
+    },
+    {
+      "id": "call",
+      "label": "The scary call",
+      "title": "“You are under digital arrest.”",
+      "mood": "sad",
+      "caption": "The man says he's from the CBI and holds up a badge. He says a parcel in Mum's name was full of illegal items. “You are under digital arrest,” he says. “Stay on camera. Tell no one. Pay ₹50,000 now to clear your name.” Mum's voice goes quiet. Kabir's heart is pounding.",
+      "speech": "The man says he's from the C B I and holds up a badge. He says a parcel in Mum's name was full of illegal items. “You are under digital arrest,” he says. “Stay on camera. Tell no one. Pay fifty thousand rupees now to clear your name.” Mum's voice goes quiet. Kabir's heart is pounding.",
+      "dialogue": "Mum looks so scared. Is this even real?",
+      "status": "Feeling scared",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 19.457,
+      "duration": 19.087
+    },
+    {
+      "id": "notice",
+      "label": "Kabir notices",
+      "title": "Real officers don't work like this.",
+      "mood": "thinking",
+      "caption": "Kabir remembers a cyber safety lesson from school. He writes a note and slides it to Mum: “This looks like a scam. Don't pay.” Then he fetches Papa, who sits calmly beside Mum. “Real police and CBI officers never arrest anyone on a video call,” Papa says. “They don't demand secrecy, and they never ask for money to close a case.”",
+      "speech": "Kabir remembers a cyber safety lesson from school. He writes a note and slides it to Mum: “This looks like a scam. Don't pay.” Then he fetches Papa, who sits calmly beside Mum. “Real police and C B I officers never arrest anyone on a video call,” Papa says. “They don't demand secrecy, and they never ask for money to close a case.”",
+      "dialogue": "Mum, I think this is a scam. Let's get Papa.",
+      "status": "Spotting the signs",
+      "start": 39.195,
+      "duration": 19.697
+    },
+    {
+      "id": "task",
+      "label": "Spot the signs",
+      "title": "Spot the signs. Then act.",
+      "mood": "thinking",
+      "caption": "Now it's your turn. Study the call and find the three strongest warning signs. Careful: a uniform or office background is easy to fake, so it proves nothing. Watch what he demands, and whether you could check who he is. Then choose the family's next moves. Paying might feel like the quick way out. Is it?",
+      "dialogue": "Help me check the call, then choose what we do.",
+      "status": "Checking with you",
+      "start": 59.541,
+      "duration": 18.429
+    },
+    {
+      "id": "report",
+      "label": "Report it",
+      "title": "Digital arrest isn't real.",
+      "mood": "happy",
+      "caption": "Mum ends the call. Here's the truth: digital arrest isn't a real legal procedure. It's a scam that uses fear, secrecy and a deadline to rush people into paying. Papa saves a screenshot of the number, then helps Mum report it at cybercrime.gov.in. If money had been sent, they'd call 1930, the National Cyber Crime Helpline, straight away.",
+      "speech": "Mum ends the call. Here's the truth: digital arrest isn't a real legal procedure. It's a scam that uses fear, secrecy and a deadline to rush people into paying. Papa saves a screenshot of the number, then helps Mum report it at cybercrime dot gov dot in. If money had been sent, they'd call nineteen thirty, the National Cyber Crime Helpline, straight away.",
+      "dialogue": "So nobody can arrest you over a video call!",
+      "status": "Feeling calmer",
+      "start": 78.62,
+      "duration": 20.387
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Cake, not cash.",
+      "mood": "happy",
+      "caption": "No money was sent, and Mum feels safe again. She hugs Kabir. “You stayed calm and got help. That was brave.” On Saturday, Dadi gets her chocolate cake, and Kabir teaches her the warning signs too. A surprise party is a happy secret. A caller who says “tell no one” is a warning sign. Your turn: practise pressure calls with Kabir.",
+      "dialogue": "Surprises are good secrets. Scary ones, we share.",
+      "status": "Safe and proud",
+      "tone": "resolved",
+      "start": 99.657,
+      "duration": 19.699
+    }
+  ]
+}
