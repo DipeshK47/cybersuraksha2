@@ -11,7 +11,7 @@
 - **Done so far:** every `chapters/<slug>.tsx` that exists. Check `ls app/module/cyber/lessons/new/story/chapters/`. A chapter is finished when its browser QA ends `ALL PASSED`.
 
 ## Heroes
-Class 3–4: Rohan (`boy-emotions`). Class 5: Meera. Class 6–7: Ananya / Kabir. Nani for Nani's Secret Code, if a grandmother character is installed. New characters live in `public/animations/characters/<id>/` and are registered in `characters.ts`.
+Class 3–4: Rohan (`boy-emotions`; Nani appears in the UI). Class 5: Tara (`girl-expressions`). Class 6–7: Kabir (`emotional-avatar`). Stories follow Codex's story plan for Classes 5 and 6–7. New characters live in `public/animations/characters/<id>/` and are registered in `characters.ts`.
 
 ## Tools on a new machine
 ```bash

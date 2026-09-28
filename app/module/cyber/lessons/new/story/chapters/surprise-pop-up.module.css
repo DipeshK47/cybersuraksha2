@@ -1,0 +1,129 @@
+/* Rohan's pop-up chapter only: a CSS-built game castle, the fake prize window, the trash dock and the ad-or-trick cards. Shared pieces live in ../story-player.module.css. */
+.sky,.arena{background-image:linear-gradient(#8fd0ee,#d9f1f8 64%)}
+
+/* ── The castle world ── */
+.land{position:absolute;inset:0;overflow:hidden}
+.sun{position:absolute;top:13%;right:9%;width:40px;height:40px;border-radius:50%;background:#ffd76a;box-shadow:0 0 0 9px #ffd76a3d}
+.cloud{position:absolute;top:17%;left:40%;width:70px;height:20px;border-radius:20px;background:#fff;opacity:.92}
+.cloud:before{content:"";position:absolute;left:14px;top:-12px;width:32px;height:28px;border-radius:50%;background:inherit}
+.cloud[data-b]{top:30%;left:auto;right:26%;transform:scale(.7)}
+.hill{position:absolute;bottom:20%;left:-12%;width:62%;height:36%;border-radius:50% 50% 0 0;background:#a3d37f}
+.hill[data-b]{left:auto;right:-14%;width:68%;height:29%;background:#8fc76c}
+.ground{position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(#72b451,#5a9a40)}
+.moat{position:absolute;inset:auto 0 7%;height:9%;background:linear-gradient(#63b3de,#3a86b8);box-shadow:inset 0 3px #ffffff55}
+.bridge{position:absolute;left:50%;bottom:5%;width:min(11%,56px);height:15%;transform:translateX(-50%);border-inline:3px solid #6e4424;background:repeating-linear-gradient(0deg,#b07845 0 5px,#8b5a30 5px 7px)}
+.castle{position:absolute;left:50%;bottom:19%;width:min(56%,300px);aspect-ratio:5/3;transform:translateX(-50%)}
+.wall,.tower{position:absolute;bottom:0;background-color:#e2d9c5;background-image:linear-gradient(0deg,#b9ad94 2px,transparent 2px),linear-gradient(90deg,#b9ad94 2px,transparent 2px);background-size:18px 12px;box-shadow:inset -7px 0 #00000014}
+.wall{left:12%;right:12%;height:46%}
+.wall:before,.tower:before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:repeating-linear-gradient(90deg,#e2d9c5 0 8px,transparent 8px 14px)}
+.tower{width:17%;height:70%;transition:opacity .3s ease}
+.tower[data-t="0"]{left:0}
+.tower[data-t="3"]{right:0}
+.tower[data-t="1"],.tower[data-t="2"]{width:14%;height:84%}
+.tower[data-t="1"]{left:24%}
+.tower[data-t="2"]{right:24%}
+.tower[data-t="1"]:before,.tower[data-t="2"]:before{display:none}
+.tower[data-t="1"]:after,.tower[data-t="2"]:after{content:"";position:absolute;left:-14%;right:-14%;bottom:100%;height:30%;background:linear-gradient(90deg,#d5654a 50%,#b84d36 50%);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.tower i{position:absolute;left:50%;top:24%;width:32%;height:15%;min-height:7px;transform:translateX(-50%);border-radius:6px 6px 0 0;background:#3b4a5c}
+.gate{position:absolute;left:50%;bottom:0;width:17%;height:34%;transform:translateX(-50%);border:3px solid #a39578;border-bottom:0;border-radius:40px 40px 0 0;background:repeating-linear-gradient(90deg,#2f2a26 0 3px,#6a4c33 3px 9px);transition:opacity .3s ease}
+.bridge{transition:opacity .3s ease}
+.tower[data-on="false"],.gate[data-on="false"],.bridge[data-on="false"]{opacity:.22}
+.flag{position:absolute;left:50%;bottom:calc(46% + 8px);width:3px;height:40%;background:#5b4a3a;animation:rise .3s var(--ease)}
+.flag:after{content:"";position:absolute;left:3px;top:0;width:34px;height:22px;background:linear-gradient(#ff9a3c,#e8742a);clip-path:polygon(0 0,100% 0,78% 50%,100% 100%,0 100%)}
+.flagSlot{position:absolute;left:50%;bottom:calc(46% + 12px);display:grid;place-items:center;width:30px;height:30px;transform:translateX(-50%);border:2px dashed #fff;border-radius:8px;background:#ffffff47;color:#fff}
+.flagSlot svg{width:16px;height:16px}
+.hotbar{position:absolute;right:10px;bottom:10px;display:flex;gap:4px;padding:4px;border-radius:9px;background:#1e3440cc}
+.hotbar span,.slots span{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;background:#ffffff1c;color:#e9f3f0}
+.hotbar svg,.slots svg{width:16px;height:16px}
+.hotbar span[data-pick]{background:#ffd76a40;box-shadow:inset 0 0 0 2px #ffd76a}
+.dim{position:absolute;inset:0;background:#142033a8}
+
+/* ── The fake prize window ── */
+.overlay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:14px}
+.popup{position:relative;z-index:2;width:min(100%,330px);border-radius:12px;background:#fff8e6;color:#3a2a1f;box-shadow:0 18px 40px #0b1a2a70}
+.popup:after{content:"";position:absolute;inset:-6px;border:3px solid #ffd23f;border-radius:16px;pointer-events:none;animation:popFlash 1s linear infinite}
+.popup[data-flash="false"]:after{animation:none}
+.arena .popup{cursor:grab;touch-action:none}
+.popTop{display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:12px 12px 0 0;background:linear-gradient(90deg,#d6336c,#f0822a);color:#fff;font-size:.66rem;font-weight:900;letter-spacing:.08em}
+.popTop svg{width:15px;height:15px}
+.popTop b{display:flex;align-items:center;gap:4px;margin-left:auto;padding:2px 7px;border-radius:99px;background:#fff;color:#c2255c;font-family:var(--font-mono),monospace;letter-spacing:0}
+.popTop b svg{width:13px;height:13px}
+.popBody{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px 12px;padding:12px}
+.prize{display:grid;place-items:center;width:54px;height:54px;border-radius:12px;background:linear-gradient(145deg,#7a5ce7,#3b82c4);color:#fff;box-shadow:inset 0 -4px #00000026}
+.prize svg{width:30px;height:30px}
+.popBody strong{display:block;font-family:var(--font-display),sans-serif;font-size:1.08rem;line-height:1.15;color:#2a1d3f}
+.popBody div>span{display:block;margin-top:4px;font-size:.72rem;font-weight:850;color:#b3261e}
+.claimRow{grid-column:1/-1;display:flex;gap:8px}
+.popup .field{flex:1;display:flex;align-items:center;gap:6px;min-width:0;min-height:42px;padding:0 10px;border:1.5px solid #cbb89a;border-radius:8px;background:#fff;color:#8a7a66;font-size:.72rem;font-weight:650;text-align:left;transition:opacity .3s ease}
+.popup .field svg{width:15px;height:15px;color:#b19f84}
+.popup .field[data-on="false"]{opacity:0}
+.popup .claim{display:grid;place-items:center;min-width:86px;min-height:42px;padding:0 16px;border:0;border-radius:8px;background:#23a44a;color:#fff;font-size:.86rem;font-weight:900;letter-spacing:.07em;box-shadow:0 4px 0 #177a35}
+
+/* ── Task: game screen with a trash dock ── */
+.game{overflow:hidden;border:6px solid #28474d;border-radius:14px;background:#28474d}
+.arena{position:relative;display:grid;place-items:center;min-height:228px;padding:14px;border-radius:6px 6px 0 0;background-color:#10263f}
+.arena>div:not(.land):not(.popup){z-index:2}
+.dock{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 2px}
+.slots{display:flex;gap:4px}
+.game .bin{display:flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;border:2px dashed #9fc4bd;border-radius:10px;background:#1f3b41;color:#fff4db;font-size:.8rem}
+.game .bin svg{width:26px;height:26px;padding:4px;border-radius:7px;background:#e8f2ea;color:#28474d}
+.game .bin[data-over="true"]{border-style:solid;border-color:#ffd76a;background:#3b5b52;transform:scale(1.05)}
+.game .bin[data-full="true"]{opacity:1;border-style:solid;border-color:#8fd19b;background:#2d5a45}
+.game .bin[data-full="true"] svg{background:#c9f5cf;color:#24603a}
+
+/* ── Dad's clues ── */
+.talk{display:grid;gap:7px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #dce3d4}
+.talk p{display:flex;align-items:center;gap:9px;width:fit-content;max-width:100%;margin:0;padding:6px 13px 6px 6px;border-radius:14px;background:#e3eee0;color:#24463f;font-size:.84rem;font-weight:700;transition:opacity .3s ease}
+.talk p[data-who="rohan"]{margin-left:auto;flex-direction:row-reverse;padding:6px 6px 6px 13px;background:#f6e7c3}
+.talk p[data-on="false"]{opacity:0}
+.talk b{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:#2f6f68;color:#fff;font-size:.6rem}
+.talk p[data-who="rohan"] b{background:#b9803a}
+
+/* ── Ad or trick? ── */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.mini{overflow:hidden;border:1px solid #e1d9c6;border-radius:10px;background:#fff;box-shadow:0 6px 16px #2a3d3414;transition:opacity .3s ease}
+.mini[data-on="false"]{opacity:.18}
+.mini header{display:flex;align-items:center;gap:5px;padding:5px 9px;background:#3a7ca5;color:#fff;font-size:.6rem;font-weight:900;letter-spacing:.08em}
+.mini[data-kind="trick"] header{background:linear-gradient(90deg,#d6336c,#f0822a)}
+.mini header svg{width:13px;height:13px}
+.mini>div{display:flex;align-items:center;gap:9px;padding:10px 9px}
+.mini>div>span{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:9px;background:#dcebf5;color:#2f6f99}
+.mini[data-kind="trick"]>div>span{background:linear-gradient(145deg,#7a5ce7,#3b82c4);color:#fff}
+.mini>div svg{width:21px;height:21px}
+.sceneContent .mini p,.mini p{display:grid;justify-items:start;gap:5px;margin:0;font-size:.78rem}
+.mini strong{line-height:1.2}
+.mini em{padding:2px 8px;border-radius:5px;background:#3a7ca5;color:#fff;font-size:.6rem;font-style:normal;font-weight:900;letter-spacing:.05em}
+.mini[data-kind="trick"] em{background:#23a44a}
+.mini footer{padding:7px 9px;background:#f4efe2;color:#3d5850;font-size:.68rem;font-weight:750;line-height:1.35}
+.rule{padding:10px 14px 4px;border-radius:10px;background:#e8efdf}
+.rule>span{font-size:.7rem;font-weight:850;color:#3c6a47}
+.rule>div{margin:9px 0}
+
+@keyframes popFlash{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes rise{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:600px){
+  .sun{width:28px;height:28px;box-shadow:0 0 0 6px #ffd76a3d}
+  .cloud{width:50px;height:15px}.cloud:before{left:9px;top:-9px;width:24px;height:21px}
+  .castle{width:min(62%,300px)}
+  .wall,.tower{background-size:13px 9px}
+  .wall:before,.tower:before{top:-6px;height:6px;background:repeating-linear-gradient(90deg,#e2d9c5 0 6px,transparent 6px 10px)}
+  .flag:after{width:22px;height:15px}
+  .flagSlot{width:24px;height:24px}.flagSlot svg{width:13px;height:13px}
+  .hotbar{right:7px;bottom:7px;gap:3px;padding:3px}
+  .hotbar span,.slots span{width:24px;height:24px}.hotbar svg,.slots svg{width:13px;height:13px}
+  .overlay{padding:10px}
+  .popTop{font-size:.58rem;padding:6px 8px}
+  .popBody{gap:8px 10px;padding:10px}
+  .prize{width:44px;height:44px}.prize svg{width:24px;height:24px}
+  .popBody strong{font-size:.95rem}
+  .popBody div>span{font-size:.66rem}
+  .popup .field{font-size:.64rem;padding:0 7px;gap:4px}
+  .popup .claim{min-width:70px;padding:0 10px;font-size:.78rem}
+  .arena{min-height:210px;padding:10px}
+  .game{border-width:5px}
+  .game .bin{font-size:.74rem;padding:5px 11px 5px 6px}
+  .compare{gap:8px}
+  .mini>div{flex-direction:column;align-items:flex-start;gap:7px}
+  .mini footer{font-size:.64rem}
+  .talk p{font-size:.78rem}
+}

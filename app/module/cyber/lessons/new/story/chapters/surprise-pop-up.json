@@ -1,5 +1,5 @@
 {
-  "duration": 85.916,
+  "duration": 88.357,
   "scenes": [
     {
       "id": "meet",
@@ -27,42 +27,41 @@
         "seconds": 3
       },
       "start": 12.059,
-      "duration": 15.256
+      "duration": 15.266
     },
     {
       "id": "help",
       "label": "Ask Dad",
       "title": "Did you enter a contest?",
       "mood": "thinking",
-      "caption": "Rohan doesn't tap. He calls Dad. “Did you enter a contest?” asks Dad. “No.” “Then it's not a real prize. Surprise prizes you never entered are tricks. The timer rushes you, and the trick wants Mum's phone number.”",
+      "caption": "Rohan doesn't tap anything. He shows Dad the screen. “Did you enter a contest?” asks Dad. “No,” says Rohan. “Then it's not a real prize. Surprise prizes you never entered are tricks. The timer rushes you, and the trick wants Mum's number.”",
       "dialogue": "Dad, is this prize real?",
       "status": "Asking Dad",
-      "start": 27.965,
-      "duration": 14.723
+      "start": 27.975,
+      "duration": 16.539
     },
     {
       "id": "trash",
-      "label": "Bin the pop-up",
+      "label": "Into the trash",
       "title": "Send it to the trash.",
       "mood": "thinking",
-      "caption": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright CLAIM button. That's exactly what the trick wants you to do.",
-      "speech": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright claim button. That's exactly what the trick wants you to do.",
+      "caption": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright CLAIM button, and don't type a number. That's exactly what the trick wants.",
+      "speech": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright claim button, and don't type a number. That's exactly what the trick wants.",
       "dialogue": "Into the trash it goes!",
       "status": "Learning with you",
-      "start": 43.338,
-      "duration": 11.277
+      "start": 45.164,
+      "duration": 11.841
     },
     {
       "id": "rule",
       "label": "Dad’s rule",
       "title": "Prizes you never entered are tricks.",
       "mood": "happy",
-      "caption": "A pop-up is a window that jumps onto your screen. Some are ads, and some are tricks. Dad's rule: a prize you never entered is a trick. Don't tap CLAIM, and never type a phone number or code. Close it, and tell a grown-up.",
-      "speech": "A pop up is a window that jumps onto your screen. Some are ads, and some are tricks. Dad's rule: a prize you never entered is a trick. Don't tap claim, and never type a phone number or code. Close it, and tell a grown-up.",
+      "caption": "A pop-up is a window that jumps onto your screen. Some are ads that want you to buy things. Some are tricks. Dad's rule: a prize you never entered is a trick. Never type a phone number or code. Close it and tell a grown-up.",
       "dialogue": "Surprise prize? It’s a trick!",
       "status": "Knows the rule",
-      "start": 55.265,
-      "duration": 14.771
+      "start": 57.655,
+      "duration": 14.822
     },
     {
       "id": "ending",
@@ -73,7 +72,7 @@
       "dialogue": "My castle is done! Thanks, Dad!",
       "status": "Proud and happy",
       "tone": "resolved",
-      "start": 70.686,
+      "start": 73.127,
       "duration": 14.58
     }
   ]
