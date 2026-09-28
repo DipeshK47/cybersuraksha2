@@ -2,7 +2,7 @@
 const tap = async (page, steps) => { for (const step of steps) await page.getByRole('button', { name: step, exact: true }).click(); };
 module.exports = {
   async solve(page) {
-    const reset = page.getByRole('button', { name: 'Start over' });
+    const reset = page.getByRole('button', { name: 'Clear board', exact: true });
     if (await reset.isEnabled()) await reset.click();
     await tap(page, ['Wake up', 'Brush teeth', 'Put on socks', 'Put on shoes', 'Put books in bag', 'Zip the bag']);
     await page.getByRole('button', { name: 'Run Tikku' }).click();

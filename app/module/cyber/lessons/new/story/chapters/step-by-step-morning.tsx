@@ -75,9 +75,9 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       </div>
       <div className={k.bank}>{program.map(step => { const Icon = stepIcons[step]; const used = board.includes(step); return <button key={step} draggable={!used && !solved} onDragStart={event => event.dataTransfer.setData("text/plain", step)} onClick={() => addStep(step)} disabled={solved || used} aria-pressed={used} type="button"><Icon aria-hidden="true" />{step}</button>; })}</div>
       <p className={k.hint} aria-live="polite">{solved ? "Tikku’s steps work! Socks, then shoes. Books, then zip." : hint || (placed.length === 6 ? "All six steps are on the board. Press Run to test them." : "Think: what has to happen before each step?")}</p>
-      <div className={k.actions}>
+      <div className={`${k.actions} ${m.runRow}`}>
         <button onClick={() => change(placed.slice(0, -1))} disabled={!placed.length || solved} type="button"><Undo2 />Undo</button>
-        <button onClick={() => change([])} disabled={!placed.length || solved} type="button"><RotateCcw />Start over</button>
+        <button onClick={() => change([])} disabled={!placed.length || solved} type="button"><RotateCcw />Clear board</button>
         <button className={k.primary} disabled={placed.length !== 6 || solved} onClick={run} type="button"><Play />Run Tikku</button>
       </div>
       <small>Pretend robot. Your own morning can have a different order.</small>

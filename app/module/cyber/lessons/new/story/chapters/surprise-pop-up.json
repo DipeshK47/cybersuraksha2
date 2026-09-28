@@ -1,0 +1,80 @@
+{
+  "duration": 85.916,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Rohan",
+      "title": "One last flag!",
+      "mood": "happy",
+      "caption": "It's Saturday, and Rohan is building a castle in his favourite game. He has made four towers, a bridge and a gate. Just one flag is left to add. He can't wait to show Dad!",
+      "dialogue": "Just one more flag on top!",
+      "status": "Building his castle",
+      "start": 0.0,
+      "duration": 11.409
+    },
+    {
+      "id": "problem",
+      "label": "The pop-up",
+      "title": "“You won a free tablet!”",
+      "mood": "thinking",
+      "caption": "Suddenly, a flashing window covers his castle: “You won a free tablet! Claim in 10 seconds!” Rohan's heart jumps. But the big CLAIM button asks for Mum's phone number. And the timer is ticking. Something feels strange.",
+      "speech": "Suddenly, a flashing window covers his castle. You won a free tablet! Claim in ten seconds! Rohan's heart jumps. But the big claim button asks for Mum's phone number. And the timer is ticking. Something feels strange.",
+      "dialogue": "A free tablet? For me?",
+      "status": "Surprised and unsure",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 12.059,
+      "duration": 15.256
+    },
+    {
+      "id": "help",
+      "label": "Ask Dad",
+      "title": "Did you enter a contest?",
+      "mood": "thinking",
+      "caption": "Rohan doesn't tap. He calls Dad. “Did you enter a contest?” asks Dad. “No.” “Then it's not a real prize. Surprise prizes you never entered are tricks. The timer rushes you, and the trick wants Mum's phone number.”",
+      "dialogue": "Dad, is this prize real?",
+      "status": "Asking Dad",
+      "start": 27.965,
+      "duration": 14.723
+    },
+    {
+      "id": "trash",
+      "label": "Bin the pop-up",
+      "title": "Send it to the trash.",
+      "mood": "thinking",
+      "caption": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright CLAIM button. That's exactly what the trick wants you to do.",
+      "speech": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright claim button. That's exactly what the trick wants you to do.",
+      "dialogue": "Into the trash it goes!",
+      "status": "Learning with you",
+      "start": 43.338,
+      "duration": 11.277
+    },
+    {
+      "id": "rule",
+      "label": "Dad’s rule",
+      "title": "Prizes you never entered are tricks.",
+      "mood": "happy",
+      "caption": "A pop-up is a window that jumps onto your screen. Some are ads, and some are tricks. Dad's rule: a prize you never entered is a trick. Don't tap CLAIM, and never type a phone number or code. Close it, and tell a grown-up.",
+      "speech": "A pop up is a window that jumps onto your screen. Some are ads, and some are tricks. Dad's rule: a prize you never entered is a trick. Don't tap claim, and never type a phone number or code. Close it, and tell a grown-up.",
+      "dialogue": "Surprise prize? It’s a trick!",
+      "status": "Knows the rule",
+      "start": 55.265,
+      "duration": 14.771
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "The castle is finished!",
+      "mood": "happy",
+      "caption": "Rohan adds the last flag. His castle is finished, and Mum's number stayed private! Dad is proud that Rohan stopped to ask. Surprise prizes are tricks, so don't claim them. Your turn: help Rohan clear more pop-ups!",
+      "dialogue": "My castle is done! Thanks, Dad!",
+      "status": "Proud and happy",
+      "tone": "resolved",
+      "start": 70.686,
+      "duration": 14.58
+    }
+  ]
+}
