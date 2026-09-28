@@ -1,0 +1,80 @@
+{
+  "duration": 96.7,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Tara is on robot duty.",
+      "mood": "happy",
+      "caption": "Meet Tara. This week she's on robot duty for Class 5B. After lunch, Sweepy, the class robot cleaner, sweeps under every desk in the front row. Tara writes the program that tells Sweepy what to do, one command at a time. Today she's very proud of it.",
+      "speech": "Meet Tara. This week she's on robot duty for Class Five B. After lunch, Sweepy, the class robot cleaner, sweeps under every desk in the front row. Tara writes the program that tells Sweepy what to do, one command at a time. Today she's very proud of it.",
+      "dialogue": "Sweepy, time to clean the front row!",
+      "status": "On robot duty",
+      "start": 0.0,
+      "duration": 16.171
+    },
+    {
+      "id": "long",
+      "label": "The long list",
+      "title": "One line lost in a long list",
+      "mood": "sad",
+      "caption": "But now the front row has five desks. Tara's program is a long list: move forward, sweep, move forward, sweep, again and again. Sweepy stops early, and the last desk is still dusty! One line is missing somewhere in the list, and it's really hard to spot.",
+      "dialogue": "Which line did I miss?",
+      "status": "Lost in the list",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 16.821,
+      "duration": 16.043
+    },
+    {
+      "id": "pattern",
+      "label": "Spot the pattern",
+      "title": "Same steps? Write them once.",
+      "mood": "thinking",
+      "caption": "Mr Iyer points at the list. Every desk needs the same two steps. Instead of copying them five times, write them once and repeat them. A block that repeats steps a set number of times is called a loop. The count must match the desks.",
+      "speech": "Mister Iyer points at the list. Every desk needs the same two steps. Instead of copying them five times, write them once and repeat them. A block that repeats steps a set number of times is called a loop. The count must match the desks.",
+      "dialogue": "Same steps? Then I only need them once!",
+      "status": "Spotting the pattern",
+      "start": 33.513,
+      "duration": 15.125
+    },
+    {
+      "id": "loop",
+      "label": "Use a loop",
+      "title": "One loop. The right count.",
+      "mood": "thinking",
+      "caption": "Your turn. Replace Tara's long list with one loop. Then set the repeat count and run Sweepy. Count the desks carefully: too few repeats stops short, and too many sends Sweepy into the bin! Check your count before you run.",
+      "dialogue": "One loop. The right count.",
+      "status": "Setting the count",
+      "start": 49.289,
+      "duration": 13.867
+    },
+    {
+      "id": "shorter",
+      "label": "Shorter code",
+      "title": "Ten lines became three.",
+      "mood": "happy",
+      "caption": "Sweepy cleans all five desks! The loop turned ten lines into three, and there's no line to lose. Loops make programs shorter and easier to check. And if the row gets longer, Tara changes just one number. But the count must always match the job.",
+      "dialogue": "Ten lines became three!",
+      "status": "Program fixed",
+      "start": 63.805,
+      "duration": 15.851
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Eight desks, one number",
+      "mood": "happy",
+      "caption": "The next day, Mr Iyer adds three more desks to the row. Tara just changes five to eight, and Sweepy cleans every desk while the class cheers. One loop, the right count, no copying. Your turn: help Tara shorten more robot programs with loops!",
+      "speech": "The next day, Mister Iyer adds three more desks to the row. Tara just changes five to eight, and Sweepy cleans every desk while the class cheers. One loop, the right count, no copying. Your turn: help Tara shorten more robot programs with loops!",
+      "dialogue": "Five to eight. Just one number!",
+      "status": "Proud programmer",
+      "tone": "resolved",
+      "start": 80.306,
+      "duration": 15.744
+    }
+  ]
+}
