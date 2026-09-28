@@ -1,0 +1,83 @@
+{
+  "duration": 115.052,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "Report cards print tomorrow.",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's in Class 7, and he loves the computer club. This week, his teacher, Mrs Rao, asked him to help check the school's report-card program. The rule is clear: pass with 40 marks or more, and at least 75 percent attendance. Tomorrow, report cards print for all three sections.",
+      "speech": "Meet Kabir. He's in Class seven, and he loves the computer club. This week, his teacher, Missus Rao, asked him to help check the school's report-card program. The rule is clear: pass with forty marks or more, and at least seventy-five percent attendance. Tomorrow, report cards print for all three sections.",
+      "dialogue": "Three sections, one program. Report cards print tomorrow!",
+      "status": "Proud to help",
+      "start": 0.0,
+      "duration": 18.209
+    },
+    {
+      "id": "problem",
+      "label": "The wrong result",
+      "title": "40 marks… and a Fail?",
+      "mood": "sad",
+      "caption": "Then Mrs Rao runs a trial. One classmate has exactly 40 marks and great attendance, but the program says Fail. Worse, the last student in every section is missing from the list. Kabir's stomach drops. He helped with this program. Tomorrow, a hard-working student could open a report card that's simply wrong.",
+      "speech": "Then Missus Rao runs a trial. One classmate has exactly forty marks and great attendance, but the program says Fail. Worse, the last student in every section is missing from the list. Kabir's stomach drops. He helped with this program. Tomorrow, a hard-working student could open a report card that's simply wrong.",
+      "dialogue": "Forty should pass! And who's missing from the list?",
+      "status": "Feeling responsible",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 18.859,
+      "duration": 19.101
+    },
+    {
+      "id": "trace",
+      "label": "Trace the code",
+      "title": "Don’t guess. Trace it.",
+      "mood": "thinking",
+      "caption": "Mrs Rao says, don't guess. Trace it. Kabir reads the nested loops line by line. The outer loop picks each section. The inner loop counts students from 1 to count minus 1, so it stops one short. Then the condition checks marks greater than 40. But 40 isn't greater than 40, so it fails.",
+      "speech": "Missus Rao says, don't guess. Trace it. Kabir reads the nested loops line by line. The outer loop picks each section. The inner loop counts students from one to count minus one, so it stops one short. Then the condition checks marks greater than forty. But forty isn't greater than forty, so it fails.",
+      "dialogue": "Two boundaries. Both are off by one.",
+      "status": "Tracing line by line",
+      "start": 38.61,
+      "duration": 18.459
+    },
+    {
+      "id": "fix",
+      "label": "Fix the bugs",
+      "title": "Fix both boundaries.",
+      "mood": "thinking",
+      "caption": "Your turn. Fix both lines so they match the rule exactly. The inner loop must reach the last student. The marks check must include exactly 40. Then run the test cases and read every result. Careful: a change that looks fine on today's tests can still break the written rule.",
+      "speech": "Your turn. Fix both lines so they match the rule exactly. The inner loop must reach the last student. The marks check must include exactly forty. Then run the test cases and read every result. Careful: a change that looks fine on today's tests can still break the written rule.",
+      "dialogue": "Match the rule exactly, then run the tests.",
+      "status": "Debugging with you",
+      "start": 57.719,
+      "duration": 17.748
+    },
+    {
+      "id": "edges",
+      "label": "Test the edges",
+      "title": "Bugs hide at the edges.",
+      "mood": "happy",
+      "caption": "Every test passes! Kabir learns two real terms. A boundary value sits right on the edge of a rule, like 40 marks or 75 percent. An off-by-one error is a loop that runs one time too few, or one time too many. Good testers check just below, right on, and just above every boundary.",
+      "speech": "Every test passes! Kabir learns two real terms. A boundary value sits right on the edge of a rule, like forty marks or seventy-five percent. An off-by-one error is a loop that runs one time too few, or one time too many. Good testers check just below, right on, and just above every boundary.",
+      "dialogue": "Test just below, right on, and just above.",
+      "status": "Thinking like a tester",
+      "start": 76.117,
+      "duration": 18.885
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Every student, the right result.",
+      "mood": "happy",
+      "caption": "Mrs Rao reruns the program. Every student is listed, and the classmate with 40 marks now passes. Before printing, she still reviews the results herself, because people should check what a program decides. Kabir feels relieved, and proud. Your turn: help Kabir test the grade processor at every boundary!",
+      "speech": "Missus Rao reruns the program. Every student is listed, and the classmate with forty marks now passes. Before printing, she still reviews the results herself, because people should check what a program decides. Kabir feels relieved, and proud. Your turn: help Kabir test the grade processor at every boundary!",
+      "dialogue": "Every student counted. Every result checked.",
+      "status": "Relieved and proud",
+      "tone": "resolved",
+      "start": 95.652,
+      "duration": 18.751
+    }
+  ]
+}
