@@ -1,0 +1,80 @@
+{
+  "duration": 121.894,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "Is this my big break?",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's twelve, and he loves building things. Last month he entered the Cyberpur science fair with his solar water heater, and he's been checking his inbox ever since. Today, a new email lands from the Scholarship Office, complete with the school logo. Kabir's heart jumps. Could this be the award he's been hoping for?",
+      "dialogue": "An email from the Scholarship Office? For me?",
+      "status": "Hoping for news",
+      "start": 0.0,
+      "duration": 19.27
+    },
+    {
+      "id": "problem",
+      "label": "The email",
+      "title": "Pay now, or lose it?",
+      "mood": "sad",
+      "caption": "The email says: Congratulations! You have won an award. Submit your Aadhaar number and a ₹500 processing fee within 24 hours. Kabir's excitement turns to worry. Why would an award ask him for money first? And why the rush? The logo and name look right, though. Pressure like this is a warning sign.",
+      "speech": "The email says: Congratulations! You have won an award. Submit your Aadhaar number and a five hundred rupee processing fee within twenty-four hours. Kabir's excitement turns to worry. Why would an award ask him for money first? And why the rush? The logo and name look right, though. Pressure like this is a warning sign.",
+      "dialogue": "Aadhaar and ₹500 in 24 hours? Something feels off.",
+      "status": "Feeling pressured",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 19.92,
+      "duration": 19.271
+    },
+    {
+      "id": "help",
+      "label": "Ask for help",
+      "title": "Look beneath the name.",
+      "mood": "thinking",
+      "caption": "Kabir doesn't click or reply. Instead, he shows the email to his aunt, Meera. She explains that the friendly name at the top is called the display name, and anyone can type any name there. The real clues hide in the email headers, a record of where the message actually came from. Together, they click Show original.",
+      "dialogue": "Meera Aunty, can you check this with me?",
+      "status": "Asking for help",
+      "start": 39.841,
+      "duration": 18.832
+    },
+    {
+      "id": "inspect",
+      "label": "Inspect headers",
+      "title": "Flag what doesn’t match.",
+      "mood": "thinking",
+      "caption": "Here are the raw headers. The school's real domain is cyberpurschool.example. Help Kabir flag every line that doesn't match it, and leave the ordinary lines alone. Look closely at From, Reply-To, the server the message came from, and the SPF and DKIM checks. One clue alone doesn't prove a scam. Several together tell a story.",
+      "speech": "Here are the raw headers. The school's real domain is cyberpur school dot example. Help Kabir flag every line that doesn't match it, and leave the ordinary lines alone. Look closely at From, Reply to, the server the message came from, and the S P F and D K I M checks. One clue alone doesn't prove a scam. Several together tell a story.",
+      "dialogue": "Let’s see where this email really came from.",
+      "status": "Reading the headers",
+      "start": 59.322,
+      "duration": 19.935
+    },
+    {
+      "id": "verify",
+      "label": "Verify & report",
+      "title": "Check it the official way.",
+      "mood": "happy",
+      "caption": "It adds up: a lookalike sender, replies routed elsewhere, an unrelated server, and failed SPF and DKIM checks. This is phishing. Kabir types the school's website himself, and Meera calls the number printed in his school diary. There's no fee and no such award. They report the email as phishing. If money is ever lost, call 1930 quickly.",
+      "speech": "It adds up: a lookalike sender, replies routed elsewhere, an unrelated server, and failed S P F and D K I M checks. This is phishing. Kabir types the school's website himself, and Meera calls the number printed in his school diary. There's no fee and no such award. They report the email as phishing. If money is ever lost, call nineteen thirty quickly.",
+      "dialogue": "No fee, no such award. Glad we checked first!",
+      "status": "Verifying the facts",
+      "start": 79.908,
+      "duration": 20.586
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "A real win, safely.",
+      "mood": "happy",
+      "caption": "A week later, a real email arrives from the school's genuine address. Kabir's solar heater has won a certificate, to be collected at Monday's assembly. No fee, no rush. Kabir grins. A display name is just a label, not proof. Now he checks where an email really came from. Your turn: help Kabir inspect three more suspicious emails!",
+      "dialogue": "The name looked right. The headers told the truth.",
+      "status": "Proud and careful",
+      "tone": "resolved",
+      "start": 101.144,
+      "duration": 20.1
+    }
+  ]
+}

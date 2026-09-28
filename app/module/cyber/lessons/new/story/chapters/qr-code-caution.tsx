@@ -9,7 +9,8 @@ import script from "./qr-code-caution.json";
 import k from "../story-player.module.css";
 import r from "./qr-code-caution.module.css";
 
-const SHOP_ID = "taramum.books@cyberpur";
+// Zero-width space lets narrow screens wrap the ID before "@".
+const SHOP_ID = "taramum.books\u200B@cyberpur";
 const BUYER_ID = "bookbuyer.77@cyberpur";
 
 type Option = { id: string; label: string; Icon: typeof Check; trap?: boolean; why?: string };
@@ -35,14 +36,14 @@ const receiveSteps = [[Share2, "Mum sends the shop’s own QR code or UPI ID", 0
 
 /** Decorative and deliberately unscannable: scattered dots plus three corner squares. */
 function FakeQr({ seed, label }: { seed: number; label: string }) {
-  return <span className={r.qr} role="img" aria-label={label}>
+  return <div className={r.qr} role="img" aria-label={label}>
     {Array.from({ length: 225 }, (_, i) => {
       const x = i % 15, y = Math.floor(i / 15);
       const corner = (y < 5 && (x < 5 || x > 9)) || (x < 5 && y > 9);
       return <i key={i} data-on={!corner && (x * 31 + y * 17 + x * y * seed) % 5 < 2} />;
     })}
     <b /><b /><b />
-  </span>;
+  </div>;
 }
 
 function Phone({ label, children }: { label: string; children: ReactNode }) {

@@ -110,15 +110,15 @@
 .summary svg{width:16px;height:16px}
 
 /* Scene 5: the shop's own QR and how receiving works. */
-.receive{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;align-items:center}
+.receive{display:grid;grid-template-columns:172px minmax(0,1fr);gap:22px;align-items:center}
 .shopQr{display:grid;justify-items:center;gap:6px;padding:13px 12px;border-radius:14px;background:#123a43;color:#fff4db;text-align:center}
 .shopQr>span{display:flex;align-items:center;gap:5px;font-size:.64rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
 .shopQr svg{width:14px;height:14px}
-.shopQr .qr{width:116px}
-.shopQr b{font-size:.84rem}
+.shopQr .qr{width:136px}
+.shopQr>b{font-size:.84rem}
 .shopQr small{font-size:.58rem;color:#cfe3dd;overflow-wrap:anywhere}
 
-@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr) 210px;gap:14px}.taskGrid{grid-template-columns:190px minmax(0,1fr);gap:14px}.taskGrid .phone{max-width:190px}.receive{grid-template-columns:130px minmax(0,1fr);gap:14px}}
+@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr) 210px;gap:14px}.taskGrid{grid-template-columns:190px minmax(0,1fr);gap:14px}.taskGrid .phone{max-width:190px}.receive{grid-template-columns:130px minmax(0,1fr);gap:14px}.shopQr .qr{width:104px}}
 @media(max-width:600px){
   .notice{left:10px;bottom:10px;max-width:210px;gap:8px;padding:8px 10px}
   .notice .avatar{width:28px;height:28px;font-size:.6rem}
@@ -142,4 +142,5 @@
   .shopQr{padding:10px 8px}
   .shopQr>span{font-size:.55rem}
   .shopQr .qr{width:86px}
+  .shopQr>b{font-size:.7rem}
 }
