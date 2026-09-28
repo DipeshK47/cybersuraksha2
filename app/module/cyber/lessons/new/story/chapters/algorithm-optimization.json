@@ -1,5 +1,5 @@
 {
-  "duration": 0,
+  "duration": 120.158,
   "scenes": [
     {
       "id": "meet",
@@ -10,8 +10,8 @@
       "speech": "Meet Kabir. For Cyberpur School's sports day, he's built a live leaderboard. Each time a runner crosses the line, their time goes in, and the list sorts itself again, fastest first. He tested it with his class's thirty runners, and it was instant. Today, two thousand runners from twelve schools will race, and Kabir can't wait.",
       "dialogue": "Every finish time, sorted in a blink!",
       "status": "Proud of his app",
-      "start": 0,
-      "duration": 0
+      "start": 0.0,
+      "duration": 19.492
     },
     {
       "id": "freeze",
@@ -26,8 +26,8 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 0,
-      "duration": 0
+      "start": 20.142,
+      "duration": 18.628
     },
     {
       "id": "why",
@@ -38,8 +38,8 @@
       "speech": "Kabir calls Miss Iyer, his computer teacher. Together they read the code. His bubble sort compares neighbours and swaps them, pass after pass. For two thousand runners, that's about two million comparisons, and it re-sorts after every new time. Merge sort splits the list into halves, sorts each half, then merges them in order. Its work grows roughly like n log n.",
       "dialogue": "So both sorts are right, but one works much harder?",
       "status": "Finding the reason",
-      "start": 0,
-      "duration": 0
+      "start": 39.42,
+      "duration": 20.216
     },
     {
       "id": "race",
@@ -50,8 +50,8 @@
       "speech": "Your turn. Help Kabir race the two sorts on three test lists: eight results already in order, a hundred in reverse, and all two thousand mixed up. Before each race, predict which sort will make fewer comparisons, then run it and read the counters. Watch out: the winner can change with the list. Then choose the sort for sports day.",
       "dialogue": "Let's measure the work, not guess.",
       "status": "Testing both sorts",
-      "start": 0,
-      "duration": 0
+      "start": 60.286,
+      "duration": 18.532
     },
     {
       "id": "complexity",
@@ -62,8 +62,8 @@
       "speech": "The counters show a pattern called time complexity: how an algorithm's work grows as its input grows. Bubble sort's comparisons grow like n squared, so twice the runners means about four times the work. Merge sort grows like n log n, just over double. On a tiny, tidy list, bubble sort's early stop can win. On big mixed lists, merge sort wins easily.",
       "dialogue": "Double the runners, and bubble sort does four times the work!",
       "status": "It all clicks",
-      "start": 0,
-      "duration": 0
+      "start": 79.468,
+      "duration": 20.234
     },
     {
       "id": "ending",
@@ -74,8 +74,8 @@
       "dialogue": "Merge sort for big lists. Measure before you guess!",
       "status": "Proud and relieved",
       "tone": "resolved",
-      "start": 0,
-      "duration": 0
+      "start": 100.352,
+      "duration": 19.156
     }
   ]
 }
