@@ -1,0 +1,105 @@
+/* Tara's bakery chapter only: CSS bakery, the shortlist tool, old hiring records, the column-cleaning task and the bias card. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.pill,.applicant,.heading,.priya,.skills span,.table,.more,.why,.pattern,.shortlisted,.bias{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].pill,[data-on="false"].applicant,[data-on="false"].heading,[data-on="false"].priya,.skills span[data-on="false"],[data-on="false"].table,[data-on="false"].more,[data-on="false"].why,[data-on="false"].pattern,[data-on="false"].shortlisted,[data-on="false"].bias{opacity:0;transform:translateY(6px)}
+
+/* Scenes 1 and 6: a bakery built from CSS and icons */
+.shop{overflow:hidden;background-image:linear-gradient(180deg,#f7e6c9 0%,#f3dcb8 64%,#c98f5e 64% 68%,#a8744a 68%)}
+.awning{position:absolute;left:0;right:0;top:0;height:34px;background:repeating-linear-gradient(90deg,#d65a4a 0 30px,#fff4e4 30px 60px);border-radius:0 0 12px 12px;box-shadow:0 6px 10px #6b3b2a33}
+.shelf{position:absolute;left:6%;display:flex;align-items:flex-end;gap:14px;padding:0 12px 4px;border-bottom:7px solid #a8744a;border-radius:0 0 3px 3px}
+.shelf[data-i="1"]{top:26%}
+.shelf[data-i="2"]{top:47%}
+.shelf svg{width:34px;height:34px;color:#8a5a33;fill:#f0c27c}
+.shelf svg:nth-child(2){color:#b0485e;fill:#f7b7c4}
+.shelf svg:nth-child(3){color:#7a4b2c;fill:#d9a066}
+.sign{position:absolute;right:7%;top:24%;display:grid;gap:2px;padding:12px 16px;border-radius:4px;background:#fffdf6;color:#3b2a10;text-align:center;box-shadow:0 8px 16px #6b3b2a33;transform:rotate(3deg)}
+.sign:before{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#d65a4a}
+.sign small{font-size:.6rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#b4543a}
+.sign strong{font-family:var(--font-display),sans-serif;font-size:1.1rem}
+.sign span{font-size:.66rem;color:#6a644e}
+.counter{position:absolute;left:14px;right:14px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#fffcf3;color:#31514a;font-size:.72rem;font-weight:800;box-shadow:0 6px 14px #6b3b2a33}
+.pill[data-tool="true"]{background:#28474d;color:#fff4db}
+.pill svg{width:15px;height:15px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;background:#dceecf;color:#284c37;font-size:.68rem;font-weight:800}
+.chip svg{width:14px;height:14px}
+
+/* Scene 2: the shortlist tool */
+.list{display:grid;align-content:start;gap:7px;padding:12px 14px;background-color:#f5f2ea;background-image:none}
+.heading{font-size:.62rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+.applicant{display:flex;align-items:center;gap:10px;padding:7px 10px;border:1px solid #dbe2d2;border-radius:10px;background:#fff;color:#1f3d40}
+.applicant>div{display:grid;min-width:0}
+.applicant strong{font-size:.78rem}
+.applicant small{font-size:.64rem;color:#5d7169}
+.applicant>b{display:inline-flex;align-items:center;gap:4px;margin-left:auto;padding:3px 8px;border-radius:6px;background:#dceecf;color:#284c37;font-size:.6rem;white-space:nowrap}
+.applicant>b svg{width:12px;height:12px}
+.applicant[data-picked="false"]>b{background:#f7e2d8;color:#8a3b25}
+.initial{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#e8d6b1;color:#5a3f22;font-size:.74rem;font-weight:850}
+.priya{display:grid;gap:6px;padding:6px;border:2px dashed #e5b6a4;border-radius:12px;background:#fbeee8}
+.priya .applicant{border-color:#e5b6a4}
+.skills{display:flex;flex-wrap:wrap;gap:5px;padding:0 4px 2px}
+.skills span{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:6px;background:#fff4e0;color:#805633;font-size:.62rem;font-weight:800}
+.skills svg{width:12px;height:12px}
+
+/* Scene 3: Aunt Meena + the old records */
+.aunt{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f7d6de;color:#b0485e}
+.avatar svg{width:20px;height:20px}
+.aunt small{font-size:.72rem;font-weight:850;color:#826137}
+.aunt>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.table{width:100%;border-collapse:collapse;font-size:.7rem;color:#264c48}
+.table th{padding:5px 8px;background:#28474d;color:#fff4db;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-align:left;text-transform:uppercase}
+.table th:first-child{border-radius:6px 0 0 0}
+.table th:last-child{border-radius:0 6px 0 0}
+.table td{padding:5px 8px;border-bottom:1px solid #e6e0cf;font-family:var(--font-mono),monospace}
+.table td[data-hot="true"]{background:#f7e2d8;color:#8a3b25;font-weight:800;transition:background .25s ease-out}
+.panel .more,.more{margin:6px 0 10px;font-size:.66rem;color:#6a644e}
+.why,.pattern{display:flex;align-items:center;gap:9px;margin-top:8px;padding:9px 12px;border-radius:9px;font-size:.74rem}
+.why{background:#f4f1e4;color:#4d645b}
+.pattern{background:#f7e2d8;color:#8a3b25}
+.why svg,.pattern svg{flex:none;width:18px;height:18px}
+
+/* Scene 4: remove the unfair column */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:12px}
+.columns{display:grid;gap:6px}
+.column{display:flex;align-items:center;gap:10px;padding:7px 8px 7px 11px;border:1px solid #dbe2d2;border-radius:10px;background:#fffaf0;color:#264c48}
+.column>svg{flex:none;width:18px;height:18px;color:#936834}
+.column>div{display:grid;min-width:0}
+.column strong{font-size:.76rem}
+.column small{font-size:.64rem;color:#5d7169}
+.column button{display:inline-flex;align-items:center;gap:5px;margin-left:auto;padding:6px 10px;border:1px solid #dcc4a0;border-radius:8px;background:#fffcf3;color:#805633;font-size:.68rem;font-weight:800}
+.column button svg{width:14px;height:14px}
+.column[data-gone="true"]{background:#f1efe6;border-style:dashed}
+.column[data-gone="true"] strong,.column[data-gone="true"] small{text-decoration:line-through;color:#8a8f86}
+.column[data-gone="true"] button{border-color:#7fbf8f;background:#dceecf;color:#284c37;opacity:1}
+.preview{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;padding:9px 10px;border-radius:10px;background:#f4f1e4}
+.preview small{width:100%;font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+.mini{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border-radius:7px;background:#f7e2d8;color:#8a3b25;font-size:.7rem;font-weight:800}
+.mini[data-picked="true"]{background:#dceecf;color:#284c37}
+.mini svg{width:13px;height:13px}
+.mini em{font-style:normal;font-weight:600;font-size:.6rem;opacity:.8}
+
+/* Scene 5: Priya shortlisted + what bias means */
+.shortlisted{margin-bottom:10px}
+.bias{display:flex;align-items:center;gap:11px;margin-bottom:6px;padding:11px 12px;border-radius:9px;background:#e8e1f3}
+.bias>svg{flex:none;width:22px;height:22px;color:#5b4a8a}
+.bias>div{display:grid;gap:2px}
+.bias strong{font-size:.8rem;color:#3d3266}
+.bias span{font-size:.7rem;color:#4d4866}
+
+@media(max-width:600px){
+  .awning{height:24px;background-size:auto}
+  .shelf{gap:8px;padding:0 8px 3px;border-bottom-width:5px}
+  .shelf svg{width:24px;height:24px}
+  .sign{right:5%;top:22%;padding:8px 10px}
+  .sign strong{font-size:.86rem}
+  .pill{font-size:.64rem;padding:5px 9px}
+  .list{padding:10px}
+  .applicant{flex-wrap:wrap;gap:4px 8px}
+  .applicant>b{margin-left:36px}
+  .aunt>div>p{font-size:1.05rem}
+  .table th,.table td{padding:4px 5px}
+  .column{gap:8px;padding:7px 7px 7px 9px}
+  .column button{padding:5px 8px;font-size:.64rem}
+}
