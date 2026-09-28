@@ -48,6 +48,7 @@ const sources = [
 ];
 const GOAL = 75;
 const TRAP_WATCH = "That tap is a signal: “more like this.” Another rumour joined the feed and the meter dropped. Try Not interested instead.";
+const TRAP_FULL = "That’s another “more like this” signal, and the feed is already packed with rumours. Try Not interested instead.";
 const TRAP_FOLLOW = "That channel only posts fair rumours, and a name with “truth” in it isn’t proof. Following it would narrow the feed even more. Pick a source that checks facts.";
 
 function Thumb({ clip, children }: { clip: Clip; children?: ReactNode }) {
@@ -84,7 +85,8 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   const good = topics.length + follows.length;
   const total = good + feed.length;
-  const meter = Math.round((total ? good / total : 1) * 60 + Math.min(4, good + (feed.length ? 1 : 0)) * 10);
+  // Share of non-rumour clips, plus how many topics are in the mix, minus a pull for every rumour on screen.
+  const meter = Math.max(5, Math.min(100, Math.round((total ? good / total : 1) * 60 + Math.min(4, good + (feed.length ? 1 : 0)) * 10 + 15 - feed.length * 5)));
   const checks = [
     { label: "2+ new topics", done: topics.length >= 2 },
     { label: "Not interested on a rumour", done: hidden >= 1 },
@@ -94,11 +96,10 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   function moreRumours(message: string) {
     if (solved) return;
-    setFeed(value => {
-      const next = pool.findIndex((_, i) => !value.includes(i));
-      return value.length >= 4 || next < 0 ? value : [...value, next];
-    });
-    setHint(message);
+    const next = pool.findIndex((_, i) => !feed.includes(i));
+    const room = feed.length < 4 && next >= 0;
+    if (room) setFeed([...feed, next]);
+    setHint(room ? message : TRAP_FULL);
   }
   function notInterested(index: number) {
     if (solved) return;
@@ -231,7 +232,6 @@ const chapter: StoryChapter = {
   beginLabel: "Practise with Kabir",
   waitingText: "Story paused. Get the meter into the green to see what happens next.",
   lockedHint: "Help Kabir rebalance his feed first.",
-  credits: <p>Fair illustration: a Cyberpur fair at night, from this project’s mission art.</p>,
   World,
 };
 export default chapter;

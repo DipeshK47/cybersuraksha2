@@ -90,7 +90,7 @@
 .watch.watch{flex:1;font-weight:500;display:flex;align-items:center;gap:8px;min-width:0;padding:5px;border:1px solid #eed3c7;border-radius:9px;background:#fff;color:inherit;text-align:left}
 .watch>span{display:grid;gap:2px;min-width:0}
 .watch small{color:#8a5a45}
-.nope.nope{flex:none;display:grid;place-items:center;gap:1px;width:64px;min-height:48px;padding:4px;border:1px solid #c8d5bd;border-radius:9px;background:#f1f5ea;color:#2f5d4b;font-size:.54rem;line-height:1.1}
+.nope.nope{flex:none;display:grid;place-items:center;gap:1px;width:64px;min-height:48px;padding:4px;border:1px solid #c8d5bd;border-radius:9px;background:#f1f5ea;color:#2f5d4b;font-size:.6rem;line-height:1.1}
 .nope svg{width:16px;height:16px}
 .added{display:flex;flex-wrap:wrap;gap:4px}
 .added span{display:flex;align-items:center;gap:3px;padding:3px 8px;border-radius:999px;background:#dcecd3;color:#2c5e3e;font-size:.6rem;font-weight:800}

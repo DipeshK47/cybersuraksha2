@@ -62,7 +62,7 @@
 .strip .tagDot{position:absolute;top:-6px;right:-6px;width:17px;height:17px;padding:2px;border-radius:50%;background:#d08a26;color:#fff}
 .tools h3{margin:0 0 9px;font-size:.8rem;color:#264c48}
 .tools .bank{display:grid}
-.tools .bank button{justify-content:flex-start;padding:9px 12px}
+.tools .bank button{width:100%;justify-content:flex-start;padding:9px 12px}
 .tools .actions>*{flex:1 1 auto}
 .log{display:grid;gap:5px;margin:14px 0 0;padding:0;list-style:none}
 .log li{display:flex;align-items:center;gap:7px;min-height:32px;padding:5px 9px;border:1px dashed #c3cfbd;border-radius:7px;font-size:.7rem;color:#7a8a80}
@@ -93,5 +93,5 @@
 .compare ul{margin:0;padding-left:17px;font-size:.73rem;line-height:1.55;color:#34544b}
 .compare small{font-size:.64rem;line-height:1.35;color:#6a644e}
 
-@container (max-width:560px){.taskGrid{grid-template-columns:1fr;gap:14px}.tools h3{margin-top:2px}.tools .bank{display:flex}.tools .bank button{justify-content:center;padding:8px 11px}}
+@container (max-width:560px){.taskGrid{grid-template-columns:1fr;gap:14px}.tools h3{margin-top:2px}.tools .bank{display:flex}.tools .bank button{width:auto;justify-content:center;padding:8px 11px}}
 @media(max-width:600px){.chat{min-height:0;padding:11px 10px 12px;gap:7px}.msg{max-width:88%;font-size:.73rem}.quote p{font-size:1.15rem}.define{font-size:.75rem}.subtitle{font-size:.64rem}.strip{gap:3px}.task .strip button{padding:2px;font-size:.6rem}.compare{gap:7px}.compare>div{padding:10px}.compare ul{padding-left:14px;font-size:.68rem}.siteBar{font-size:.6rem}.siteBody strong{font-size:1.12rem}.siteBody span{font-size:.72rem}}
