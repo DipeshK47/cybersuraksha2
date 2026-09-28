@@ -1,7 +1,7 @@
 "use client";
 
 import { AlarmClock, ArrowRight, Backpack, BookOpen, Bot, BusFront, Check, CircleCheck, Footprints, ListOrdered, Play, RotateCcw, Shirt, Sparkles, TriangleAlert, Undo2, X } from "lucide-react";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
 import script from "./step-by-step-morning.json";
@@ -55,7 +55,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <div className={`${k.deviceArt} ${m.room}`}>
         {scene === 0 && <><div className={k.badge}><Check /> Steps saved for tomorrow</div><Tikku face="ok" label="6 steps" /></>}
         {scene === 1 && <div className={k.alert}><BusFront /><strong>Missed the bus!</strong><span>Tikku did every step, in the order it was given.</span></div>}
-        {scene === 5 && <><Tikku face="happy" label="Done!" /><div className={k.success}><CircleCheck /><strong>Ready on time!</strong><span>All 6 steps, in an order that works</span></div></>}
+        {scene === 5 && <><div className={k.success}><CircleCheck /><strong>Ready on time!</strong><span>All 6 steps, in an order that works</span></div><Tikku face="happy" label="Done!" /></>}
       </div>
       <div className={k.deviceFoot}>{scene === 0 ? <><ListOrdered /><span>Tikku’s program: <b>6 steps</b></span><small>Pretend robot · example routine</small></> : scene === 1 ? <><TriangleAlert /><span className={m.mixups}><b>Shoes → socks</b><b>Zip → books</b></span></> : <><BusFront /><span>Rohan caught the school bus.</span><small>Socks → shoes · Books → zip</small></>}</div>
     </div>}
@@ -71,7 +71,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <p>Drag steps onto the board, or tap them in order.</p>
       <div className={m.board} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); addStep(event.dataTransfer.getData("text/plain")); }}>
         <div className={m.boardBar}><span><Bot aria-hidden="true" /> TIKKU · STEP BOARD</span><span>{board.length} of 6</span></div>
-        <ol aria-label={`${board.length} of 6 steps on Tikku’s board`}>{Array.from({ length: 6 }, (_, i) => { const state = slotState(i); return <li key={i} data-filled={Boolean(board[i])} data-state={state} style={{ "--i": i } as React.CSSProperties}><b>{i + 1}</b><span>{board[i] ?? "Empty"}</span>{state === "ok" && <Check aria-label="works" />}{state === "bad" && <X aria-label="stuck here" />}</li>; })}</ol>
+        <ol aria-label={`${board.length} of 6 steps on Tikku’s board`}>{Array.from({ length: 6 }, (_, i) => { const state = slotState(i); return <li key={i} data-filled={Boolean(board[i])} data-state={state} style={{ "--i": i } as CSSProperties}><b>{i + 1}</b><span>{board[i] ?? "Empty"}</span>{state === "ok" && <Check aria-hidden="true" />}{state === "bad" && <X aria-hidden="true" />}</li>; })}</ol>
       </div>
       <div className={k.bank}>{program.map(step => { const Icon = stepIcons[step]; const used = board.includes(step); return <button key={step} draggable={!used && !solved} onDragStart={event => event.dataTransfer.setData("text/plain", step)} onClick={() => addStep(step)} disabled={solved || used} aria-pressed={used} type="button"><Icon aria-hidden="true" />{step}</button>; })}</div>
       <p className={k.hint} aria-live="polite">{solved ? "Tikku’s steps work! Socks, then shoes. Books, then zip." : hint || (placed.length === 6 ? "All six steps are on the board. Press Run to test them." : "Think: what has to happen before each step?")}</p>
@@ -85,10 +85,10 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
     {scene === 4 && <div className={k.panel}>
       <h2>Same steps. Different order.</h2>
-      <div className={m.term} data-show={shown(0)}><ListOrdered /><div><strong>Sequence</strong><span>A list of steps in order. A computer follows it exactly, one step at a time.</span></div></div>
+      <div className={m.term}><ListOrdered /><div><strong>Sequence</strong><span>A list of steps in order. A computer follows it exactly, one step at a time.</span></div></div>
       <div className={m.compare}>
-        <div data-show={shown(7)}><h3>Rohan’s first list</h3><p className={m.pair}><span>Shoes</span><ArrowRight aria-hidden="true" /><span>Socks</span><X aria-hidden="true" /></p><p className={m.pair}><span>Zip</span><ArrowRight aria-hidden="true" /><span>Books</span><X aria-hidden="true" /></p><small>Stuck, then late</small></div>
-        <div data-show={shown(8.5)} data-good="true"><h3>The fixed list</h3><p className={m.pair}><span>Socks</span><ArrowRight aria-hidden="true" /><span>Shoes</span><Check aria-hidden="true" /></p><p className={m.pair}><span>Books</span><ArrowRight aria-hidden="true" /><span>Zip</span><Check aria-hidden="true" /></p><small>Ready on time</small></div>
+        <div data-show={shown(8)}><h3>Rohan’s first list</h3><div className={m.pair}><span>Shoes</span><ArrowRight aria-hidden="true" /><span>Socks</span><X aria-hidden="true" /></div><div className={m.pair}><span>Zip</span><ArrowRight aria-hidden="true" /><span>Books</span><X aria-hidden="true" /></div><small>Stuck, then late</small></div>
+        <div data-show={shown(10)} data-good="true"><h3>The fixed list</h3><div className={m.pair}><span>Socks</span><ArrowRight aria-hidden="true" /><span>Shoes</span><Check aria-hidden="true" /></div><div className={m.pair}><span>Books</span><ArrowRight aria-hidden="true" /><span>Zip</span><Check aria-hidden="true" /></div><small>Ready on time</small></div>
       </div>
       <small>Check your steps before you press Run.</small>
     </div>}

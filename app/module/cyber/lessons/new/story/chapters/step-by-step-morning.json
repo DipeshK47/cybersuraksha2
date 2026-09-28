@@ -1,5 +1,5 @@
 {
-  "duration": 0,
+  "duration": 92.043,
   "scenes": [
     {
       "id": "meet",
@@ -9,8 +9,8 @@
       "caption": "Meet Rohan. He has a toy helper robot called Tikku. Tonight, Rohan taps his morning steps into Tikku's screen. Tomorrow, Tikku will follow those steps and help him get ready for school. Rohan can't wait to see it work!",
       "dialogue": "Tikku, you’ll help me tomorrow!",
       "status": "Excited to try",
-      "start": 0,
-      "duration": 0
+      "start": 0.0,
+      "duration": 14.374
     },
     {
       "id": "problem",
@@ -25,8 +25,8 @@
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 0,
-      "duration": 0
+      "start": 15.024,
+      "duration": 15.978
     },
     {
       "id": "help",
@@ -36,8 +36,8 @@
       "caption": "Rohan tells Papa what happened. Together, they read Tikku's step list. Tikku didn't break. It did every step in exactly the order Rohan gave. Computers work the same way. They can't guess what you meant. So the order is up to you.",
       "dialogue": "Papa, why did Tikku do that?",
       "status": "Working it out",
-      "start": 0,
-      "duration": 0
+      "start": 31.652,
+      "duration": 15.153
     },
     {
       "id": "fix",
@@ -47,8 +47,8 @@
       "caption": "Your turn! Help Rohan fix Tikku's steps. Drag each step onto the board, or tap them in order. Think about what has to happen before each step. Then press Run and watch Tikku try again.",
       "dialogue": "Let’s put the steps in order!",
       "status": "Fixing the steps",
-      "start": 0,
-      "duration": 0
+      "start": 47.455,
+      "duration": 12.551
     },
     {
       "id": "sequence",
@@ -58,8 +58,8 @@
       "caption": "A list of steps in order is called a sequence. A computer does step one, then step two, then step three, exactly as written. Change the order, and you change what happens. So Rohan checks his steps before pressing Run.",
       "dialogue": "Order matters. I’ll check first!",
       "status": "Feeling confident",
-      "start": 0,
-      "duration": 0
+      "start": 60.657,
+      "duration": 14.184
     },
     {
       "id": "ending",
@@ -70,8 +70,8 @@
       "dialogue": "We made it! Thanks, Tikku.",
       "status": "Happy and on time",
       "tone": "resolved",
-      "start": 0,
-      "duration": 0
+      "start": 75.491,
+      "duration": 15.903
     }
   ]
 }
