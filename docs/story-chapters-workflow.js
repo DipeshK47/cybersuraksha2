@@ -175,7 +175,7 @@ function heroFor(role, cast) {
 }
 
 // Chapters whose builder was cut off mid-way by the usage limit: continue their files instead of rebuilding.
-const RESUME = new Set(['surprise-pop-up', 'password-vault'])
+const RESUME = new Set(['surprise-pop-up', 'password-vault', 'email-header-inspector'])
 
 function buildPrompt(c, hero) {
   return `You build ONE CyberSuraksha story chapter. Another agent builds a different chapter at the same time. Working copy: ${ROOT} (cd there). Dev server http://localhost:3200 (running; never start/stop it).

@@ -1,0 +1,79 @@
+{
+  "duration": 0,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Kabir",
+      "title": "Three days to the fair!",
+      "mood": "happy",
+      "caption": "Meet Kabir. He's twelve, and he's been counting the days to the Cyberpur fair. He's saved his pocket money for the giant wheel and the ring toss. His class group chat is buzzing with plans: everyone's meeting at the gate on Saturday at five. Then, on Wednesday evening, a video pops up in the group.",
+      "dialogue": "Giant wheel first, then the ring toss!",
+      "status": "Counting the days",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "problem",
+      "label": "The clip",
+      "title": "“The fair is cancelled!”",
+      "mood": "sad",
+      "caption": "It shows the fair's organiser saying, “The fair is cancelled this weekend.” Within minutes, friends are forwarding it to other groups. Everyone's upset, and Kabir's heart sinks too. His thumb hovers over Forward. Then he notices something. The clip came from an unknown number, and nobody has shared a link to an official notice.",
+      "dialogue": "No way… Should I forward this to everyone?",
+      "status": "Feeling let down",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "help",
+      "label": "Ask Papa",
+      "title": "Could this be a deepfake?",
+      "mood": "thinking",
+      "caption": "Kabir doesn't forward it. He shows his dad instead. Papa says it might be a deepfake: a video or audio made or changed with AI, so a real person seems to say things they never said. “Before we believe it,” Papa says, “let's look closely at the clip. Then we'll check the fair's own channel.”",
+      "speech": "Kabir doesn't forward it. He shows his dad instead. Papa says it might be a deepfake: a video or audio made or changed with A I, so a real person seems to say things they never said. “Before we believe it,” Papa says, “let's look closely at the clip. Then we'll check the fair's own channel.”",
+      "dialogue": "Papa, is this real? Everyone’s already sharing it.",
+      "status": "Checking with Papa",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "inspect",
+      "label": "Inspect the clip",
+      "title": "Frame by frame.",
+      "mood": "thinking",
+      "caption": "Now, help Kabir inspect the clip. Move through the frames one by one and tag the artefacts, the glitches that AI editing can leave behind: strange blinking, lips that don't match the words, or shadows that don't fit the light. Careful, though. Some odd things happen in real videos too. Then check the official channel.",
+      "speech": "Now, help Kabir inspect the clip. Move through the frames one by one and tag the artefacts, the glitches that A I editing can leave behind: strange blinking, lips that don't match the words, or shadows that don't fit the light. Careful, though. Some odd things happen in real videos too. Then check the official channel.",
+      "dialogue": "Let’s go frame by frame, like real detectives.",
+      "status": "Inspecting the clip",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "lesson",
+      "label": "Clues vs proof",
+      "title": "Clues point. Sources confirm.",
+      "mood": "happy",
+      "caption": "The fair's official channel says it clearly: the fair is on this weekend, and a fake video is going around. Kabir's clues pointed the right way, but clues alone can't prove it. Real videos can glitch on a bad connection, and a good deepfake may look perfect. Artefacts are clues, not proof. An official source confirms the truth.",
+      "dialogue": "The fair’s on! Good thing we checked the source.",
+      "status": "Relieved and wiser",
+      "start": 0,
+      "duration": 0
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "See you at the gate!",
+      "mood": "happy",
+      "caption": "Kabir posts the official link in the group and asks everyone to stop forwarding the clip. He reports the video, and his class teacher removes it from the group. On Saturday, the friends meet at the gate at five. Pause, look closely, and check the source before you share. Your turn: help Kabir check more clips at the media desk.",
+      "dialogue": "Checked first, shared the truth. See you Saturday!",
+      "status": "Back to fair plans",
+      "tone": "resolved",
+      "start": 0,
+      "duration": 0
+    }
+  ]
+}
