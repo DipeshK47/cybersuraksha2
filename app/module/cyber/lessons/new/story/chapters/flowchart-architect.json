@@ -1,0 +1,78 @@
+{
+  "duration": 101.479,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Science fair day!",
+      "mood": "happy",
+      "caption": "Meet Tara. It's science fair day, and her project is ready: an automatic hand-wash station. Put your hands under the sensor, and it gives you soap, with no touching. The judges arrive at ten o'clock. Tara does one last test before they come.",
+      "dialogue": "No touching, no mess. Just clean hands!",
+      "status": "Ready for the judges",
+      "start": 0.0,
+      "duration": 15.125
+    },
+    {
+      "id": "squirt",
+      "label": "Soap everywhere",
+      "title": "Soap for an empty sink",
+      "mood": "sad",
+      "caption": "But something's wrong. Nobody is at the sink, and the station squirts soap anyway. Squirt. Wait. Squirt again! Every few seconds, soap splashes into an empty sink. The puddle grows, and the judges are already walking over. Tara's station can't tell whether anyone is there.",
+      "dialogue": "Stop! There aren't any hands there!",
+      "status": "Soap everywhere",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 15.775,
+      "duration": 16.789
+    },
+    {
+      "id": "plan",
+      "label": "Draw the plan",
+      "title": "The plan never asks a question.",
+      "mood": "thinking",
+      "caption": "Her teacher, Mr Iyer, helps her draw the plan the station follows. Start, give soap, wait, repeat. It never asks a question! A plan drawn with shapes and arrows is called a flowchart. Ovals start and end it, rectangles are actions, and diamonds are decisions.",
+      "speech": "Her teacher, Mister Iyer, helps her draw the plan the station follows. Start, give soap, wait, repeat. It never asks a question! A plan drawn with shapes and arrows is called a flowchart. Ovals start and end it, rectangles are actions, and diamonds are decisions.",
+      "dialogue": "It needs to ask a question first!",
+      "status": "Drawing the plan",
+      "start": 33.215,
+      "duration": 16.555
+    },
+    {
+      "id": "build",
+      "label": "Build the flowchart",
+      "title": "Ask first, then act.",
+      "mood": "thinking",
+      "caption": "Your turn. Rebuild Tara's flowchart. Tap the blocks in order, from the top. First the station must ask a question. Then choose what happens when hands are there. Then test both paths. Careful: giving soap before asking is exactly the old mistake.",
+      "dialogue": "Ask first, then act.",
+      "status": "Building the flowchart",
+      "start": 50.419,
+      "duration": 15.872
+    },
+    {
+      "id": "paths",
+      "label": "Test every path",
+      "title": "A decision has two paths.",
+      "mood": "happy",
+      "caption": "Both paths work! Hands under the sensor: yes, give soap, done. Empty sink: no, wait and ask again. A decision always has at least two paths, so good testers try every one. Drawing a flowchart first lets you find mistakes before you build anything.",
+      "dialogue": "Yes path, no path. Both tested!",
+      "status": "Testing every path",
+      "start": 66.941,
+      "duration": 15.509
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "A dry sink for the judges",
+      "mood": "happy",
+      "caption": "Tara updates the station's program just in time. When the judges arrive, the sink stays dry until someone holds out their hands. Squirt! The judges love it, and Tara's rule is clear: ask first, then act. Your turn: help Tara build and test more flowcharts, one block at a time!",
+      "dialogue": "It only gives soap when hands are there!",
+      "status": "Proud inventor",
+      "tone": "resolved",
+      "start": 83.101,
+      "duration": 17.728
+    }
+  ]
+}

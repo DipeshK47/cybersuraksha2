@@ -1,0 +1,99 @@
+/* Tara's hand-wash chapter only: lab art, the soap counter, flowchart shapes, the build-and-test task and the two-path review. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.sensor,.judges,.oldPlan,.repeat,.warning,.legend>div,.result,.tip{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].sensor,[data-on="false"].judges,[data-on="false"].oldPlan,[data-on="false"].repeat,[data-on="false"].warning,.legend>div[data-on="false"],[data-on="false"].result,[data-on="false"].tip{opacity:0;transform:translateY(6px)}
+
+/* Scenes 1, 2 and 6: the school lab with the hand-wash station on the right */
+.lab{background-image:url('/cyber-missions/engineering-lab.webp');background-position:88% 45%}
+.sensor{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#fffcf3;color:#2f7369;font-size:.72rem;font-weight:800;box-shadow:0 7px 20px #14223844}
+.sensor svg{width:15px;height:15px}
+.meter{position:absolute;z-index:1;right:14px;bottom:14px;display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;padding:10px 12px;border-radius:12px;background:#fffcf3f2;color:#284747;box-shadow:0 10px 24px #0a152466}
+.meter>div{display:grid;justify-items:center;gap:1px;padding:2px 10px}
+.meter>div svg{width:18px;height:18px;color:#2f7ab0}
+.meter strong{font-family:var(--font-display),sans-serif;font-size:1.7rem;line-height:1;color:#b4543a}
+.meter>div:nth-child(2) strong{color:#2f7369}
+.meter>div span{font-size:.6rem;font-weight:800;color:#5d7169}
+.judges{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:5px;margin:4px 0 0;padding-top:6px;border-top:1px solid #e6e0cf;font-size:.66rem;font-weight:800;color:#805633}
+.judges svg{width:14px;height:14px}
+
+/* Flowchart shapes (standard notation: oval, rectangle, diamond) */
+.node{display:grid;place-items:center;min-height:34px;padding:6px 14px;border:2px solid #9ead95;background:#fffaf0;color:#264c48;font-size:.7rem;font-weight:800;line-height:1.15;text-align:center;transition:background .2s ease-out,border-color .2s ease-out}
+.node[data-shape="oval"]{min-width:90px;border-radius:999px}
+.node[data-shape="rect"]{min-width:118px;border-radius:3px}
+.node[data-shape="slot"]{min-width:150px;min-height:38px;border:2px dashed #c8bfa6;border-radius:8px;background:#f4f1e4;color:#9a927c}
+.node[data-shape="diamond"]{position:relative;width:176px;height:70px;padding:0;border:none;background:#9ead95;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.node[data-shape="diamond"]>span{position:absolute;inset:3px 5px;display:grid;place-items:center;padding:0 36px;background:#fffaf0;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.node[data-lit="true"]{border-color:#2f8f5f;background:#e3f3de;color:#284c37}
+.node[data-shape="diamond"][data-lit="true"]{background:#2f8f5f}
+.node[data-shape="diamond"][data-lit="true"]>span{background:#e3f3de}
+.down{display:flex;align-items:center;gap:3px;height:18px;color:#9ead95}
+.down svg{width:16px;height:16px}
+.down em{font-size:.6rem;font-style:normal;font-weight:850;color:#2f7369}
+.down[data-lit="true"]{color:#2f8f5f}
+.chart{display:grid;grid-template-columns:minmax(0,1fr) 112px;justify-items:center;align-items:center;row-gap:2px;padding:12px 10px;border-radius:12px;background-color:#f7f4ea;background-image:linear-gradient(#ebe5d4 1px,transparent 1px),linear-gradient(90deg,#ebe5d4 1px,transparent 1px);background-size:16px 16px}
+.chart>*{grid-column:1}
+.chart>.noPath{position:relative;grid-column:2;grid-row:3;justify-self:stretch;display:grid;justify-items:center;gap:2px;margin-left:12px;padding:6px;border:1.5px dashed #c8bfa6;border-radius:8px;background:#fffaf0;color:#6a644e;font-size:.6rem;line-height:1.25;text-align:center;transition:opacity .2s ease-out}
+.noPath:before{content:"";position:absolute;right:100%;top:50%;width:14px;border-top:2px solid #9ead95}
+.noPath em{font-style:normal;font-weight:850;color:#8a3b25}
+.noPath svg{width:14px;height:14px}
+.noPath[data-ready="false"]{opacity:.4}
+.noPath[data-lit="true"]{border-color:#2f8f5f;border-style:solid;background:#e3f3de;color:#284c37}
+.mini{flex:none;display:inline-block;width:22px;height:13px;border:2px solid currentColor}
+.mini[data-shape="oval"]{border-radius:999px}
+.mini[data-shape="rect"]{border-radius:2px}
+.mini[data-shape="diamond"]{width:13px;height:13px;margin:0 4px;transform:rotate(45deg)}
+
+/* Scene 3: Mr Iyer + the old plan + the shape legend */
+.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
+.avatar svg{width:20px;height:20px}
+.teacher small{font-size:.72rem;font-weight:850;color:#826137}
+.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.oldPlan{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:14px 12px 10px;border-radius:12px;background-color:#f7f4ea;background-image:linear-gradient(#ebe5d4 1px,transparent 1px),linear-gradient(90deg,#ebe5d4 1px,transparent 1px);background-size:16px 16px}
+.oldPlan>svg{width:16px;height:16px;color:#9ead95}
+.repeat{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;margin-top:4px;padding-top:6px;border-top:2px dashed #e5b6a4;color:#b4543a;font-size:.66rem;font-weight:800}
+.repeat svg{width:14px;height:14px}
+.panel .warning,.warning{display:flex;align-items:center;gap:9px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#f7e2d8;color:#8a3b25;font-size:.76rem;line-height:1.35}
+.warning svg{flex:none;width:18px;height:18px}
+.legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.legend>div{display:flex;align-items:center;gap:9px;padding:10px;border-radius:9px;background:#f4f1e4;color:#264c48;font-size:.74rem;font-weight:800}
+.legend .mini{color:#2f7369}
+
+/* Scene 4: build and test */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:12px}
+.bench{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start}
+.side{display:grid;gap:7px}
+.side>small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+.blocks,.tests{display:grid;gap:6px}
+.blocks button,.tests button{display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.74rem;text-align:left}
+.blocks button:not(:disabled):hover,.tests button:not(:disabled):hover{transform:translateY(-2px)}
+.blocks button[aria-pressed="true"]{background:#e1ead5;opacity:.45}
+.blocks button[data-trap="true"]{color:#805633}
+.tests button svg{flex:none;width:16px;height:16px;color:#2f7369}
+.tests button[aria-pressed="true"]{border-color:#7fbf8f;background:#e3f3de;color:#284c37;opacity:1}
+.tests .tick{margin-left:auto;color:#2f8f5f}
+
+/* Scene 5: both paths tested */
+.review .bench{align-items:center}
+.result,.tip{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:.72rem}
+.result{background:#e3f3de;color:#284c37}
+.result>div{display:grid;gap:2px}
+.result strong{font-size:.78rem}
+.result svg{flex:none;width:18px;height:18px}
+.result>svg:last-child{margin-left:auto;color:#2f8f5f}
+.tip{background:#f4f1e4;color:#4d645b}
+.tip svg{flex:none;width:18px;height:18px;color:#936834}
+
+@media(max-width:600px){
+  .meter{right:10px;bottom:10px;padding:8px}
+  .meter strong{font-size:1.25rem}
+  .bench{grid-template-columns:1fr}
+  .chart{grid-template-columns:minmax(0,1fr) 92px;padding:10px 6px}
+  .node[data-shape="diamond"]{width:150px;height:64px}
+  .node[data-shape="diamond"]>span{padding:0 30px}
+  .node[data-shape="slot"]{min-width:126px}
+  .chart>.noPath{margin-left:8px;font-size:.56rem}
+  .legend{grid-template-columns:1fr}
+  .teacher>div>p{font-size:1.05rem}
+}
