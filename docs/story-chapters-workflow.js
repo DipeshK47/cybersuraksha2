@@ -174,6 +174,9 @@ function heroFor(role, cast) {
   return { name: boy, pronoun: 'he/him', age: ROLE[role].age, ...ROHAN, look: ROHAN.description, fallback: true }
 }
 
+// Chapters whose builder was cut off mid-way by the usage limit: continue their files instead of rebuilding.
+const RESUME = new Set(['surprise-pop-up', 'password-vault'])
+
 function buildPrompt(c, hero) {
   return `You build ONE CyberSuraksha story chapter. Another agent builds a different chapter at the same time. Working copy: ${ROOT} (cd there). Dev server http://localhost:3200 (running; never start/stop it).
 Read ${BRIEF} first and follow it exactly, including §10 (use the usage budget efficiently). The approved template is "password-vault-builder" (Class 3, Rohan): study it, but NEVER edit it or any shared file.
@@ -198,7 +201,7 @@ Before reporting, SELF-REVIEW as a strict reviewer would and fix what fails (the
 6. Task: the tempting wrong answer gets a why-hint; it can't be solved by random tapping; keyboard/tap accessible; works on mobile.
 7. Visuals: as polished as Rohan's; nothing clipped, overlapping, cramped or empty on desktop or mobile; believable fictional UI; .example domains / fictional numbers; reduced motion respected.
 8. Contract: only your chapter's files changed; kit reused; no external assets or new deps.
-Report honestly in the schema: qaPassed = last QA run; selfReview = one line per item; practiceArc = 4 lines continuing your story into the existing practice steps.`
+Report honestly in the schema: qaPassed = last QA run; selfReview = one line per item; practiceArc = 4 lines continuing your story into the existing practice steps.${RESUME.has(c.slug) ? `\n\nNOTE: a previous agent building this chapter was cut off by a usage limit after writing chapters/${c.slug}.{json,tsx,module.css,qa.cjs} and the narration. Don't start over: read those files, run QA, then finish, fix and polish them. Regenerate the narration only if you change captions.` : ''}`
 }
 
 // Pool of at most 2 concurrent agents: the caster + one builder, then two builders.
