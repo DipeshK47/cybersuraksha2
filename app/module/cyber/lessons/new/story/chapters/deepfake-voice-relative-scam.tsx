@@ -93,7 +93,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     {scene === 1 && <ChatPhone scene={1} foot={<><Mic /><span>New voice note from an unknown number</span><small>Pretend number · example only</small></>}>
       <ol className={r.msgs}>
         <li data-from="sys" data-tone="warn"><TriangleAlert />This number isn’t saved in your contacts</li>
-        <li className={r.wide}><VoiceNote progress={voiceProgress} live={playing && !reduced} /></li>
+        <li><VoiceNote progress={voiceProgress} live={playing && !reduced} /></li>
         <li data-on={at(.3)} className={r.transcript}><small>Auto-transcript</small><em>“Didi, it’s me, Vikram… there’s been an accident. My phone broke. I’m on a friend’s phone.”</em></li>
         <li data-on={at(.52)}>Send <b>₹20,000</b> to this number now. Don’t tell anyone. Please hurry 🙏</li>
       </ol>
@@ -121,7 +121,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <ol className={r.progress} aria-label="Task steps">{["Reply", "Next move", "Call"].map((label, i) => <li key={label} data-state={i < view ? "done" : i === view ? "now" : "todo"} aria-current={i === view ? "step" : undefined}><span>{i < view ? <Check /> : i + 1}</span>{label}</li>)}</ol>
       {view < 2 ? <>
         <ol className={r.mini} aria-label={`Chat with ${SCAM}`}>
-          <li className={r.wide}><VoiceNote progress={1} live={false} /></li>
+          <li><VoiceNote progress={1} live={false} /></li>
           <li>Send <b>₹20,000</b> now. Don’t tell anyone 🙏</li>
           {view >= 1 && <li data-from="out" className={k.fitIn}>What’s our family passphrase?</li>}
           {view >= 1 && <li className={k.fitIn}>No time for games, Didi! Just send it, please!<em className={r.dodge}><TriangleAlert />Dodged the passphrase</em></li>}
