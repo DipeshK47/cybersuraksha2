@@ -8,6 +8,7 @@
 - Shared story player: `app/module/cyber/lessons/new/story/` (`StoryPlayer.tsx`, `StoryCharacter.tsx`, `characters.ts`, `types.ts`, `story-player.module.css`, `registry.tsx`).
 - Template chapter: `app/module/cyber/lessons/new/story/chapters/password-vault-builder.{tsx,json,module.css,qa.cjs}`.
 - Chapters register themselves: any `chapters/<lesson-slug>.tsx` is picked up automatically.
+- **Status (Sept 28, 2026):** all 24 chapters are built and pass browser QA; the integration steps below are done (storyArcs, credits, lint/tsc/tests/build).
 - **Done so far:** every `chapters/<slug>.tsx` that exists. Check `ls app/module/cyber/lessons/new/story/chapters/`. A chapter is finished when its browser QA ends `ALL PASSED`.
 
 ## Heroes
