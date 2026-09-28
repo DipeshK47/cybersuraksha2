@@ -177,7 +177,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         <path d="M30 15V150H310" className={a.axis} />
         {[1000, 2000].map(n => <text key={n} x={X(n)} y="164" textAnchor="middle">{fmt(n)}</text>)}
         <text x="24" y={Y(2e6) + 3} textAnchor="end">2M</text><text x="24" y={Y(1e6) + 3} textAnchor="end">1M</text>
-        <text x="310" y="171" textAnchor="end" className={a.axisName}>runners →</text>
+        <text x={X(500)} y="164" textAnchor="middle" className={a.axisName}>runners →</text><text x="34" y="9" className={a.axisName}>comparisons</text>
         <g data-show={at("Bubble sort's")}>
           <path d={nSquared} className={a.bubbleLine} />
           <line x1={X(1000)} y1={Y(5e5)} x2={X(1000)} y2="150" className={a.guide} /><line x1={X(2000)} y1={Y(2e6)} x2={X(2000)} y2="150" className={a.guide} />
