@@ -1,0 +1,140 @@
+/* Tara's torch chapter only: hanging solar-system model, power-cut phone, permission keys, the switch task and the right-access card. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.todo,.store,.sheet,.sheet li,.allowAll,.thought,.keyRow,.keyRow em,.job,.appRow,.settings{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].todo,[data-on="false"].store,[data-on="false"].sheet,.sheet li[data-on="false"],[data-on="false"].allowAll,[data-on="false"].thought,[data-on="false"].keyRow,.keyRow em[data-on="false"],[data-on="false"].job,[data-on="false"].appRow,[data-on="false"].settings{opacity:0;transform:translateY(6px)}
+
+/* Scenes 1 and 6: the model hanging above Tara's desk */
+.desk{overflow:hidden;background-image:radial-gradient(circle at 88% 12%,#ffd99466 0 60px,transparent 150px),linear-gradient(180deg,#2c4461 0%,#34506b 70%,#6b4b34 70% 74%,#8a6243 74%)}
+.desk[data-lit="true"]{background-image:linear-gradient(180deg,#1b2a40 0%,#22344c 70%,#4a3526 70% 74%,#5e4431 74%)}
+.model{position:absolute;inset:0}
+.sun{position:absolute;left:-46px;top:58px;width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 60% 40%,#ffe69a,#f7a23c 70%,#e07b2a);box-shadow:0 0 30px #f7a23c66}
+.rod{position:absolute;left:14%;right:5%;top:52px;height:6px;border-radius:3px;background:#b98a5a;box-shadow:0 2px 0 #7a5537}
+.row{position:absolute;left:17%;right:7%;top:56px;display:flex;justify-content:space-between;align-items:flex-start}
+.hang{display:flex;flex-direction:column;align-items:center}
+.string{width:1px;background:#e8dcc0aa}
+.planet{position:relative;border-radius:50%;box-shadow:inset -3px -3px 0 #00000026}
+.planet[data-saturn="true"]:after{content:"";position:absolute;left:-60%;right:-60%;top:38%;bottom:38%;border:3px solid #d9b56a;border-radius:50%;transform:rotate(-14deg)}
+.planet[data-painted="false"]{background:#eef0f2;outline:2px dashed #ffffffaa;outline-offset:3px;box-shadow:none}
+.planet[data-painted="false"]:after{border-color:#d7dbe0}
+.todo{position:absolute;right:14px;bottom:14px;padding:6px 10px;border-radius:8px;background:#fffcf3;color:#805633;font-size:.7rem;font-weight:800;box-shadow:0 7px 20px #14223844}
+.beam{position:absolute;right:-30px;bottom:-40px;width:78%;height:130%;background:conic-gradient(from 245deg at 100% 100%,transparent 0deg,#fff4c466 10deg,#fff4c433 34deg,transparent 46deg);pointer-events:none}
+.desk[data-lit="true"] .planet{box-shadow:inset -3px -3px 0 #00000026,0 0 12px #fff4c455}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;background:#e8d6b1;color:#5a3f22;font-size:.68rem;font-weight:800}
+.chip svg{width:14px;height:14px}
+.chip[data-done="true"]{background:#dceecf;color:#284c37}
+
+/* Scene 2: power cut, a phone and the greedy permission request */
+.room{overflow:hidden;border:8px solid #28474d;border-radius:18px;background:linear-gradient(160deg,#172a40,#0e1b2c 65%,#1d1b33);color:#e8f0ec;box-shadow:0 18px 30px #19342e24}
+.roomTop{display:flex;align-items:center;gap:8px;padding:9px 13px;background:#28474d;color:#fff4db;font-size:.68rem}
+.roomTop svg{width:16px;height:16px;color:#ffbe92}
+.roomTop strong{letter-spacing:.1em;text-transform:uppercase}
+.roomTop span{margin-left:auto;color:#d4e6e2}
+.roomBody{position:relative;display:flex;justify-content:center;align-items:center;gap:22px;min-height:300px;padding:16px}
+.window{position:absolute;left:18px;top:18px;width:92px;height:112px;border:5px solid #2d4257;border-radius:8px;background:linear-gradient(#0b1626,#1a2a45)}
+.window:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:#2d4257}
+.window svg{position:absolute;color:#f3e7b4}
+.window>svg:first-child{top:12px;left:10px;width:22px;height:22px;fill:#f3e7b4}
+.window svg[data-i]{width:8px;height:8px;fill:#f3e7b4}
+.window svg[data-i="1"]{top:48px;left:60px}
+.window svg[data-i="2"]{top:72px;left:18px}
+.window svg[data-i="3"]{top:22px;left:64px}
+.phone{position:relative;z-index:1;display:grid;gap:9px;align-content:start;width:250px;min-height:270px;padding:10px 12px 14px;border:5px solid #2a3440;border-radius:24px;background:#f5f2ea;color:#1f3d40;box-shadow:0 0 0 1px #3c4a58,0 14px 30px #0008}
+.status{display:flex;justify-content:space-between;font-size:.62rem;font-weight:800;color:#4d5d5a}
+.status span{display:flex;gap:4px;align-items:center}
+.status svg{width:13px;height:13px}
+.store{display:flex;align-items:center;gap:9px;padding:8px;border-radius:12px;background:#fff}
+.store>div{display:grid;min-width:0}
+.store strong{font-size:.78rem}
+.store small{font-size:.6rem;color:#5d7169}
+.store b{margin-left:auto;padding:3px 7px;border-radius:6px;background:#dceecf;color:#284c37;font-size:.58rem}
+.appIcon{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:9px;background:#f0b44c;color:#3b2a10}
+.appIcon svg{width:18px;height:18px}
+.sheet{display:grid;gap:7px;justify-items:center;padding:12px;border-radius:14px;background:#fff;box-shadow:0 8px 18px #1f3d4022;text-align:center}
+.sheetIcon{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#f7e2d8;color:#b4543a}
+.sheetIcon svg{width:16px;height:16px}
+.sheet>strong{font-size:.76rem;line-height:1.25}
+.sheet ul{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:0;padding:0;list-style:none}
+.sheet li{display:flex;align-items:center;gap:4px;padding:4px 7px;border-radius:6px;background:#f4ecdf;font-size:.64rem;font-weight:800;color:#805633}
+.sheet li svg{width:12px;height:12px}
+.sheetButtons{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%}
+.sheetButtons span{padding:7px;border-radius:8px;background:#eef0ea;font-size:.68rem;font-weight:800;color:#4d5d5a}
+.sheetButtons .allowAll{background:#2f6fd0;color:#fff;box-shadow:0 0 0 3px #2f6fd044}
+.sheet>small{font-size:.58rem;color:#6a644e}
+.thought{position:relative;z-index:1;align-self:flex-start;max-width:150px;margin:6px 0 0;padding:10px 12px;border-radius:14px 14px 14px 4px;background:#fffcf3;color:#805633;font-family:var(--font-display),sans-serif;font-size:.95rem;line-height:1.25;box-shadow:0 10px 22px #0a152455}
+
+/* Scene 3: cousin Ishaan + what each permission unlocks */
+.cousin{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f7dfb0;color:#c4672c}
+.avatar svg{width:20px;height:20px}
+.cousin small{font-size:.72rem;font-weight:850;color:#826137}
+.cousin>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.keys{display:grid;gap:6px}
+.keyRow{display:flex;align-items:center;gap:10px;padding:8px 11px;border-radius:10px;background:#f4f1e4}
+.keyRow>div{display:grid;gap:1px;min-width:0}
+.keyRow strong{font-size:.78rem}
+.keyRow div>span{font-size:.68rem;color:#4d645b}
+.keyRow em{margin-left:auto;padding:3px 8px;border-radius:6px;background:#f7e2d8;color:#8a3b25;font-size:.6rem;font-style:normal;font-weight:800;white-space:nowrap}
+.keyIcon{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:8px;background:#fff;color:#936834}
+.keyIcon svg{width:16px;height:16px}
+.job{display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 12px;border-radius:9px;background:#e3edda;font-size:.76rem;color:#284c37}
+.job svg{flex:none;width:20px;height:20px;color:#3c7447}
+
+/* Scene 4: the permission switches */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:12px}
+.setup{display:grid;gap:6px;padding:10px;border:1px solid #dbe2d2;border-radius:14px;background:#f7f4ea}
+.setupHead{display:flex;align-items:center;gap:10px;padding:2px 4px 6px}
+.setupHead>div{display:grid}
+.setupHead strong{font-size:.8rem}
+.setupHead small{font-size:.66rem;color:#5d7169}
+.torch{position:relative;display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:10px;background:#3a4450;color:#c3cad2;transition:background .25s ease-out,color .25s ease-out,box-shadow .25s ease-out}
+.torch svg{width:19px;height:19px}
+.torch[data-lit="true"]{background:#f0b44c;color:#3b2a10;box-shadow:0 0 0 5px #f0b44c44,0 0 22px #f7d27a}
+.count{margin-left:auto;padding:3px 8px;border-radius:6px;background:#f7e2d8;color:#8a3b25;font-size:.64rem;font-weight:800;white-space:nowrap}
+.count[data-zero="true"]{background:#dceecf;color:#284c37}
+.switchRow{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:1px solid #dbe2d2;border-radius:10px;background:#fffcf3;color:#264c48;text-align:left}
+.switchRow>svg{flex:none;width:18px;height:18px;color:#936834}
+.switchRow>span:first-of-type{display:grid;min-width:0}
+.switchRow strong{font-size:.76rem}
+.switchRow small{font-size:.64rem;color:#5d7169}
+.toggle{position:relative;flex:none;width:40px;height:22px;margin-left:auto;border-radius:999px;background:#c9cfc5;transition:background .2s ease-out}
+.toggle:after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0003;transition:transform .2s var(--ease)}
+.switchRow[aria-checked="true"] .toggle{background:#2f6fd0}
+.switchRow[aria-checked="true"] .toggle:after{transform:translateX(18px)}
+.switchRow:disabled{opacity:.75}
+.task .trap{border-color:#dcc4a0;color:#805633}
+
+/* Scene 5: the right access for each job */
+.apps{display:grid;gap:7px}
+.appRow{display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid #dbe2d2;border-radius:10px;background:#fffaf0}
+.appRow>div{display:grid;min-width:0}
+.appRow strong{font-size:.78rem}
+.appRow small{font-size:.66rem;color:#5d7169}
+.appBadge{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:9px;background:#e3edda;color:#2f7369}
+.appBadge svg{width:17px;height:17px}
+.needs{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px;margin-left:auto}
+.needs b{display:inline-flex;align-items:center;gap:4px;padding:3px 7px;border-radius:6px;background:#dde9f7;color:#244d7a;font-size:.6rem;white-space:nowrap}
+.needs b[data-none="true"]{background:#dceecf;color:#284c37}
+.needs svg{width:12px;height:12px}
+.settings{display:flex;align-items:flex-start;gap:11px;margin-top:12px;padding:11px 12px;border-radius:9px;background:#e3edda}
+.settings>svg{flex:none;width:21px;height:21px;color:#3c7447}
+.settings>div{display:grid;gap:3px}
+.settings strong{font-size:.78rem}
+.settings span{font-size:.68rem;line-height:1.4;color:#4d645b}
+
+@media(max-width:600px){
+  .sun{width:80px;height:80px;left:-38px;top:52px}
+  .rod{left:10%;top:40px}
+  .row{left:12%;right:5%;top:44px}
+  .row .hang:nth-child(odd) .string{max-height:52px}
+  .todo{font-size:.62rem;right:10px;bottom:10px}
+  .roomBody{min-height:0;padding:14px 10px;flex-direction:column;gap:10px}
+  .window{display:none}
+  .phone{width:100%;max-width:260px;min-height:0}
+  .thought{align-self:center;max-width:none;font-size:.85rem}
+  .cousin>div>p{font-size:1.05rem}
+  .keyRow{display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px 10px}
+  .keyRow em{grid-column:2;justify-self:start;margin-left:0}
+  .appRow{flex-wrap:wrap;gap:6px 10px}
+  .needs{width:100%;justify-content:flex-start;padding-left:42px}
+}
