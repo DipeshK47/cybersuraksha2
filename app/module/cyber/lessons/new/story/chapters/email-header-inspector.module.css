@@ -1,0 +1,97 @@
+/* Kabir's award-email chapter only: the inbox, the open email, the name-vs-address demo, the raw header task and the verify card. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.mail,.timer,.body,.formRow,.payRow,.doubt,.nameDemo,.glossary>div,.evidence,.never{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].mail,[data-on="false"].timer,[data-on="false"].body,[data-on="false"].formRow,[data-on="false"].payRow,[data-on="false"].doubt,[data-on="false"].nameDemo,.glossary>div[data-on="false"],[data-on="false"].evidence,[data-on="false"].never{opacity:0;transform:translateY(6px)}
+
+.logo{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#58a6c9,#1f5f86);color:#fff4db;font-family:var(--font-display),sans-serif;font-size:.72rem;box-shadow:inset 0 0 0 2px #ffffff55}
+
+/* Scenes 1 and 6: the inbox */
+.withBadge{position:relative}
+.inbox{display:grid;align-content:start;gap:6px;padding:12px;background-color:#eef1f4;background-image:none}
+.mail{display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid #d7dee4;border-radius:10px;background:#fff;color:#1f3d40}
+.mail>div{display:grid;gap:1px;min-width:0}
+.mail strong{font-size:.78rem}
+.mail span{font-size:.72rem;color:#4d645b}
+.mail em{font-family:var(--font-mono),monospace;font-size:.6rem;font-style:normal;color:#6a7d76;overflow-wrap:anywhere}
+.mail small{margin-left:auto;font-size:.62rem;color:#6a7d76}
+.mail[data-new="true"]{border-color:#2f7ab0;box-shadow:0 0 0 3px #2f7ab022}
+.mail[data-new="true"] strong,.mail[data-new="true"] span{font-weight:850;color:#1f3d40}
+.mail[data-real="true"]{opacity:.85}
+.won{position:absolute;left:12px;right:12px;bottom:12px;display:grid;justify-items:center;gap:2px;padding:12px;border-radius:12px;background:#e3f3de;color:#284c37;text-align:center;box-shadow:0 10px 24px #19342e33}
+.won svg{width:26px;height:26px;color:#b8860b}
+.won strong{font-family:var(--font-display),sans-serif;font-size:1.3rem}
+.won span{font-size:.72rem}
+
+/* Scene 2: the open email */
+.open{display:grid;align-content:start;gap:8px;padding:14px 16px;background-color:#fff;background-image:none;color:#1f3d40}
+.openHead{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:1px solid #e6eaee}
+.openHead>div{display:grid}
+.openHead strong{font-size:.82rem}
+.openHead small{font-size:.62rem;color:#6a7d76}
+.timer{display:flex;align-items:center;gap:4px;margin-left:auto;padding:3px 8px;border-radius:6px;background:#fbeee8;color:#b4543a;font-family:var(--font-mono),monospace;font-size:.66rem;font-weight:800}
+.timer svg{width:13px;height:13px}
+.sceneContent .subject,.subject{margin:0;font-family:var(--font-display),sans-serif;font-size:1.05rem;line-height:1.25}
+.open .body{margin:0;font-size:.74rem;line-height:1.4}
+.formRow{display:flex;align-items:center;gap:10px;padding:7px 10px;border:1px solid #d7dee4;border-radius:8px;font-size:.72rem}
+.formRow i{font-family:var(--font-mono),monospace;font-style:normal;color:#9aa7a3}
+.payRow{display:flex}
+.fakePay{padding:8px 14px;border-radius:8px;background:#d65a4a;color:#fff;font-size:.76rem;font-weight:800;box-shadow:0 4px 12px #d65a4a55}
+.open .doubt{display:flex;align-items:center;gap:7px;margin:2px 0 0;padding:8px 10px;border-radius:8px;background:#fff4e0;color:#805633;font-size:.72rem;font-weight:800}
+.doubt svg{width:16px;height:16px}
+
+/* Scene 3: Meera + name vs address + glossary */
+.sister{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#e8e1f3;color:#5b4a8a}
+.avatar svg{width:20px;height:20px}
+.sister small{font-size:.72rem;font-weight:850;color:#826137}
+.sister>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.nameDemo{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 8px;align-items:center;margin-bottom:10px;padding:10px 12px;border-radius:10px;background:#183944;color:#e6f2ec}
+.label{justify-self:start;padding:3px 8px;border-radius:6px;background:#fff4db;color:#1f3d40;font-size:.78rem;font-weight:850}
+.addr{font-family:var(--font-mono),monospace;font-size:.68rem;color:#ffc9a8;overflow-wrap:anywhere}
+.nameDemo small{font-size:.58rem;color:#9fd8c8}
+.glossary{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.glossary>div{display:grid;grid-template-columns:18px minmax(0,1fr);gap:1px 8px;align-items:center;padding:8px 10px;border-radius:9px;background:#f4f1e4}
+.glossary svg{grid-row:span 2;width:17px;height:17px;color:#936834}
+.glossary strong{font-family:var(--font-mono),monospace;font-size:.74rem;color:#264c48}
+.glossary span{font-size:.66rem;line-height:1.3;color:#4d645b}
+
+/* Scene 4: raw headers */
+.task h2{margin-bottom:10px}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:10px;align-items:start}
+.raw{display:grid;align-content:start;gap:3px;padding:8px;border-radius:10px;background:#183944}
+.row{display:flex;align-items:center;gap:6px;width:100%;padding:5px 8px;border:1px solid transparent;border-radius:6px;background:transparent;color:#e6f2ec;text-align:left}
+.row code{min-width:0;font-family:var(--font-mono),monospace;font-size:.64rem;line-height:1.35;overflow-wrap:anywhere}
+.row b{color:#9fd8c8}
+.row:not(:disabled):hover{background:#ffffff12}
+.row[aria-pressed="true"]{border-color:#ff9b7a;background:#b4543a33}
+.row[aria-pressed="true"] b{color:#ffc9a8}
+.raw .row:disabled{opacity:1}
+.flag{display:grid;place-items:center;flex:none;margin-left:auto;width:20px;height:20px;border-radius:50%;background:#d65a4a;color:#fff}
+.flag svg{width:11px;height:11px}
+.reference{display:grid;align-content:start;gap:6px;padding:10px;border-radius:10px;background:#e3edda;color:#284c37}
+.reference small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+.reference span{display:flex;align-items:center;gap:6px;font-family:var(--font-mono),monospace;font-size:.6rem;overflow-wrap:anywhere}
+.reference span svg{flex:none;width:13px;height:13px}
+.count{margin-top:4px;padding:5px 8px;border-radius:6px;background:#fffcf3;font-size:.68rem;text-align:center}
+.task .trap{border-color:#dcc4a0;color:#805633}
+
+/* Scene 5: verify + report */
+.evidence{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.evidence span{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;background:#fbeee8;color:#8a3b25;font-size:.66rem;font-weight:800}
+.evidence svg{width:13px;height:13px}
+.panel .never,.never{display:flex;align-items:center;gap:8px;margin:8px 0 0;padding:9px 12px;border-radius:9px;background:#f7e2d8;color:#8a3b25;font-size:.74rem;font-weight:800}
+.never svg{flex:none;width:16px;height:16px}
+
+@media(max-width:600px){
+  .inbox{padding:8px}
+  .mail{padding:7px 9px;gap:8px}
+  .won{left:8px;right:8px;bottom:8px;padding:10px}
+  .won strong{font-size:1.05rem}
+  .open{padding:10px 12px}
+  .openHead{flex-wrap:wrap}
+  .sister>div>p{font-size:1.05rem}
+  .nameDemo{grid-template-columns:1fr}
+  .nameDemo small:nth-of-type(1){order:-1}
+  .glossary{grid-template-columns:1fr}
+  .bench{grid-template-columns:1fr}
+}
