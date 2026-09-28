@@ -1,0 +1,102 @@
+/* Kabir's leaderboard chapter only: the big-screen leaderboard, the frozen sort, bubble vs merge cards, the race task and the summary. Shared pieces live in ../story-player.module.css. */
+/* Narration-synced reveals keep their space so nothing jumps. */
+.wait,.spinner,.swaps,.algo,.term,.summary>div,.scale{transition:opacity .25s ease-out,transform .25s var(--ease)}
+[data-on="false"].wait,[data-on="false"].spinner,[data-on="false"].swaps,[data-on="false"].algo,[data-on="false"].term,.summary>div[data-on="false"],[data-on="false"].scale{opacity:0;transform:translateY(6px)}
+
+/* Scenes 1, 2 and 6: the finish-line screen */
+.screen{display:grid;align-content:center;padding:16px 16px 16px 30%;background-color:#12304a;background-image:radial-gradient(circle at 12% 80%,#2f7ab055,transparent 40%),repeating-linear-gradient(90deg,#ffffff08 0 2px,transparent 2px 60px)}
+.screen:before{content:"";position:absolute;left:5%;top:34%;width:19%;height:26px;border-radius:4px;background:repeating-conic-gradient(#fff 0 25%,#1b2638 0 50%) 0 0/13px 13px;box-shadow:0 0 0 3px #e8a23a}
+.screen:after{content:"FINISH";position:absolute;left:5%;top:calc(34% + 34px);width:19%;color:#ffe39a;font-family:var(--font-display),sans-serif;font-size:1rem;letter-spacing:.2em;text-align:center}
+.board{display:grid;gap:3px;padding:8px;border-radius:10px;background:#0b1f33;color:#e6f2ec;font-family:var(--font-mono),monospace;font-size:.72rem;transition:filter .25s ease-out}
+.board[data-frozen="true"]{filter:blur(2px) saturate(.6);opacity:.7}
+.boardHead,.boardRow{display:grid;grid-template-columns:26px minmax(0,1fr) 60px;gap:8px;padding:5px 8px;border-radius:6px}
+.boardHead{color:#9fd8c8;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.boardRow{background:#ffffff0d}
+.boardRow:first-of-type{background:#e8a23a33}
+.boardRow span:last-child{text-align:right}
+.wait{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#fffcf3;color:#2f7369;font-size:.7rem;font-weight:800}
+.wait svg{width:14px;height:14px}
+.spinner{position:absolute;left:50%;top:50%;display:grid;justify-items:center;gap:3px;padding:14px 22px;border-radius:14px;background:#fffcf3;color:#1f3d40;box-shadow:0 12px 30px #0008;transform:translate(-50%,-60%)}
+[data-on="false"].spinner{transform:translate(-50%,-50%)}
+.spinner svg{width:26px;height:26px;color:#2f7ab0}
+.spinner strong{font-family:var(--font-display),sans-serif;font-size:1.2rem}
+.spinner span{font-family:var(--font-mono),monospace;font-size:.7rem;color:#b4543a}
+.swaps{position:absolute;left:14px;bottom:14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px;max-width:44%;padding:8px;border-radius:10px;background:#fffcf3f2}
+.swaps>span{display:grid;place-items:center;width:22px;height:22px;border-radius:5px;background:#e6f2ec;color:#1f3d40;font-family:var(--font-mono),monospace;font-size:.72rem;font-weight:800}
+.swaps>span[data-pair="true"]{background:#e8a23a;color:#fff}
+.swaps small{display:flex;align-items:center;gap:4px;width:100%;font-size:.58rem;color:#5d7169}
+.swaps small svg{width:12px;height:12px}
+.done{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:7px;padding:8px 12px;border-radius:10px;background:#e3f3de;color:#284c37;font-size:.74rem;font-weight:800}
+.done svg{width:18px;height:18px;color:#b8860b}
+
+/* Scene 3: bubble vs merge */
+.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
+.avatar svg{width:20px;height:20px}
+.teacher small{font-size:.72rem;font-weight:850;color:#826137}
+.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.algos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.algo{display:grid;gap:6px;align-content:start;padding:11px;border-radius:10px;background:#f4f1e4;color:#264c48}
+.algo strong{display:flex;align-items:center;gap:6px;font-size:.84rem}
+.algo strong svg{width:16px;height:16px;color:#936834}
+.algo b{justify-self:start;padding:3px 8px;border-radius:6px;background:#28474d;color:#fff4db;font-family:var(--font-mono),monospace;font-size:.7rem}
+.algo small{font-size:.66rem;color:#5d7169}
+.pairs{display:flex;gap:4px}
+.pairs i,.tree i{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:5px;background:#fff;font-family:var(--font-mono),monospace;font-size:.68rem;font-style:normal;font-weight:800}
+.pairs i:nth-child(1),.pairs i:nth-child(2){background:#e8a23a;color:#fff}
+.tree{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.tree i:first-child,.tree i:last-child{grid-column:1/-1;justify-self:center}
+.tree i:last-child{background:#dceecf;color:#284c37}
+.term{display:flex;align-items:center;gap:11px;margin-top:10px;padding:10px 12px;border-radius:9px;background:#e8e1f3}
+.term>svg{flex:none;width:21px;height:21px;color:#5b4a8a}
+.term>div{display:grid;gap:2px}
+.term strong{font-size:.8rem;color:#3d3266}
+.term span{font-size:.7rem;color:#4d4866}
+
+/* Scene 4: the race task */
+.task h2{margin-bottom:6px}
+.task>p{margin-bottom:10px}
+.races{display:grid;gap:7px}
+.race{display:grid;gap:7px;padding:9px 11px;border:1px solid #dbe2d2;border-radius:10px;background:#fffaf0}
+.race[data-done="true"]{background:#f7f9f2}
+.raceHead{display:flex;align-items:center;gap:8px}
+.raceHead strong{font-size:.78rem;color:#264c48}
+.predict{display:flex;gap:5px;margin-left:auto}
+.predict button{padding:5px 12px;border:1px solid #c8d5bd;border-radius:7px;background:#fffcf3;color:#345447;font-size:.7rem;font-weight:800}
+.predict button:not(:disabled):hover{transform:translateY(-2px)}
+.bars{display:grid;gap:4px}
+.bar{display:grid;grid-template-columns:52px minmax(0,1fr) 96px;align-items:center;gap:8px;font-size:.68rem;color:#5d7169}
+.bar .track{height:10px;overflow:hidden;border-radius:5px;background:#ece6d4}
+.bar .track span{display:block;height:100%;border-radius:5px;background:#c9a27a;transform-origin:left;animation:grow .3s var(--ease)}
+.bar[data-win="true"]{color:#284c37;font-weight:800}
+.bar[data-win="true"] .track span{background:#3c7447}
+.bar b{font-family:var(--font-mono),monospace;font-size:.66rem;text-align:right}
+@keyframes grow{from{transform:scaleX(0)}}
+.justify{display:grid;gap:5px;margin-top:10px;padding:10px;border-radius:10px;background:#f4f1e4}
+.justify small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+.justify button{padding:8px 10px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.74rem;text-align:left}
+.justify button:not(:disabled):hover{transform:translateY(-2px)}
+
+/* Scene 5: summary */
+.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.summary>div{display:grid;gap:5px;align-content:start;padding:11px;border-radius:10px;background:#f4f1e4}
+.summary strong{font-size:.74rem;color:#264c48}
+.summary span{justify-self:start;padding:3px 8px;border-radius:6px;background:#dceecf;color:#284c37;font-size:.68rem;font-weight:800}
+.summary span[data-win="bubble"]{background:#fff4e0;color:#805633}
+.summary small{font-family:var(--font-mono),monospace;font-size:.6rem;color:#5d7169}
+.panel .scale,.scale{display:flex;align-items:flex-start;gap:9px;margin:12px 0 0;padding:10px 12px;border-radius:9px;background:#e8e1f3;color:#3d3266;font-size:.76rem;line-height:1.4}
+.scale svg{flex:none;width:18px;height:18px;margin-top:1px}
+
+@media (prefers-reduced-motion:reduce){.bar .track span{animation:none}}
+@media(max-width:600px){
+  .screen{padding:12px}
+  .board{font-size:.64rem}
+  .screen:before,.screen:after,.wait{display:none}
+  .done{position:static;margin-top:8px;justify-self:start}
+  .swaps{left:10px;right:10px;bottom:10px;max-width:none}
+  .teacher>div>p{font-size:1.05rem}
+  .algos,.summary{grid-template-columns:1fr}
+  .raceHead{flex-wrap:wrap}
+  .predict{margin-left:0}
+  .bar{grid-template-columns:44px minmax(0,1fr) 82px;gap:6px}
+}
