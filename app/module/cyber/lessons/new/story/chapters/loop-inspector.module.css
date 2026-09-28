@@ -1,110 +1,89 @@
-/* Tara's robot-cleaner chapter only: lab art, the front row with Sweepy, code listings, the loop block and the loop task. Shared pieces live in ../story-player.module.css. */
-/* Narration-synced reveals keep their space so nothing jumps. */
-.mini,.console,.bad,.pairs>span,.reveal,.term,.rule,.after,.change{transition:opacity .25s ease-out,transform .25s var(--ease)}
-[data-on="false"].mini,[data-on="false"].console,[data-on="false"].bad,.pairs>span[data-on="false"],[data-on="false"].reveal,[data-on="false"].term,[data-on="false"].rule,[data-on="false"].after,[data-on="false"].change{opacity:0;transform:translateY(6px)}
+/* Tara chapter only: lab art overlays, Dusty's tile row, the loop builder and lesson cards. Shared pieces live in ../story-player.module.css. */
+.lab{background-image:url('/cyber-missions/engineering-lab.webp')}
 
-/* Scenes 1 and 6: the school lab, with Sweepy on the bench */
-.lab{background-image:url('/cyber-missions/engineering-lab.webp');background-position:center 62%}
-.mini{position:absolute;right:16px;bottom:16px;display:grid;gap:1px;padding:8px 12px;border-radius:10px;background:#183944f0;color:#e6f2ec;box-shadow:0 7px 20px #14223844}
-.mini svg{position:absolute;top:9px;right:10px;width:14px;height:14px;color:#9fd8c8}
-.mini span{font-size:.6rem;font-weight:800;color:#9fd8c8;padding-right:22px}
-.mini b{font-family:var(--font-mono),monospace;font-size:.7rem;font-weight:600}
+/* Scene 1: Tara's long program floating over the lab wall. */
+.codeWin{position:absolute;left:16px;top:58px;width:196px;padding:9px 11px 10px;border:1px solid #3d6b72;border-radius:10px;background:#0f2a33e8;color:#e3f3ee;box-shadow:0 10px 24px #0a1a2255;font-family:var(--font-mono),monospace}
+.codeWin>strong{display:flex;align-items:center;gap:6px;margin-bottom:5px;font-size:.6rem;letter-spacing:.06em;color:#f9d58a}
+.codeWin svg{width:13px;height:13px}
+.codeWin>span{display:flex;gap:8px;padding:2px 0;font-size:.62rem;line-height:1.45;white-space:nowrap}
+.codeWin>span b{min-width:32px;color:#86aead;font-weight:600}
 
-/* Code: numbered listing + loop block */
-.listing{display:grid;grid-auto-flow:column;grid-template-rows:repeat(5,auto);gap:3px 14px;margin:0;padding:0;list-style:none}
-.listing li{display:flex;align-items:center;gap:7px;font-family:var(--font-mono),monospace;font-size:.68rem}
-.listing li span{width:16px;color:#7f9c95;text-align:right}
-.listing li[data-missing="true"] code{padding:0 8px;border:1px dashed #ff9b7a;border-radius:4px;color:#ff9b7a}
-.listing li[data-missing="true"] span{color:#ff9b7a;font-weight:800}
-.loop{overflow:hidden;border-radius:10px;background:#2f6f63;box-shadow:0 6px 14px #14223833}
-.loopHead{display:flex;align-items:center;gap:7px;padding:8px 11px;color:#fff4db;font-family:var(--font-mono),monospace;font-size:.76rem}
-.loopHead svg{width:16px;height:16px}
-.loopHead b{display:inline-grid;place-items:center;min-width:26px;padding:1px 6px;border-radius:6px;background:#fff4db;color:#2f6f63}
-.loopBody{display:grid;gap:4px;margin:0 0 8px 20px;padding:8px 10px;border-radius:8px 0 0 8px;background:#e6f2ec}
-.loopBody code{font-family:var(--font-mono),monospace;font-size:.72rem;color:#1f3d40}
+/* Dusty's row: start, five tiles, the bin. The robot slides over the cells. */
+.track{--gap:6px;position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--gap);width:100%;max-width:430px}
+.cell{position:relative;display:grid;place-items:center;aspect-ratio:1;border:1px solid #d6c79f;border-radius:9px;background:#efe6cf;color:#7a6645}
+.cell>small{position:absolute;top:3px;left:6px;font-size:.58rem;font-weight:850}
+.cell>svg{width:44%;height:44%}
+.cell[data-kind="start"]{border-style:dashed;border-color:#9fb8ae;background:#e1ebe5;color:#4d6a62}
+.cell[data-kind="start"]>small{position:static;align-self:end;margin-bottom:4px;font-size:.52rem;letter-spacing:.04em;text-transform:uppercase}
+.cell[data-dusty="true"]{background-color:#e7d8b8;background-image:radial-gradient(circle at 28% 36%,#9c7e50 0 2px,transparent 2.6px),radial-gradient(circle at 70% 58%,#a3855a 0 2.5px,transparent 3.1px),radial-gradient(circle at 42% 78%,#b0916a 0 1.6px,transparent 2.2px),radial-gradient(circle at 78% 26%,#b0916a 0 1.4px,transparent 2px)}
+.cell[data-kind="tile"][data-dusty="false"]{border-color:#8fbf93;background:#dcefd8;color:#2f6a45}
+.cell[data-kind="bin"]{border-color:#b7bfcd;background:#e4e7ee;color:#56627a}
+.cell[data-kind="bin"][data-hit="true"]{border-color:#d9876b;background:#f6dcd2;color:#a2462a;animation:wobble .3s ease-out}
+.robot{position:absolute;top:0;left:0;display:grid;place-items:center;width:calc((100% - 6 * var(--gap)) / 7);aspect-ratio:1;transform:translateX(calc(var(--pos) * (100% + var(--gap))));transition:transform .22s var(--ease);pointer-events:none}
+.robot>span{display:grid;place-items:center;width:76%;height:76%;border:2px solid #fffcf3;border-radius:50%;background:#155f63;color:#fff;box-shadow:0 4px 10px #11353a44}
+.robot[data-bump="true"]>span{background:#b4532f}
+.robot svg{width:58%;height:58%}
+.sweep{animation:sweep .24s ease-out}
 
-/* The front row: dock · five desks · bin, with Sweepy driving along it */
-.row{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;gap:0;padding:40px 0 4px;border-radius:10px;background:linear-gradient(transparent 62%,#d9c9a3 62%)}
-.dock,.desk,.bin{display:grid;justify-items:center;align-content:end;gap:3px;min-height:64px}
-.dock{align-content:center;margin:0 6px 8px;border:1.5px dashed #9ead95;border-radius:8px;color:#5d7169;font-size:.58rem;font-weight:800}
-.desk{position:relative}
-.desk:before{content:"";width:74%;height:10px;border-radius:3px;background:#b98a5a;box-shadow:0 3px 0 #8a6243}
-.desk:after{content:"";position:absolute;top:calc(100% - 38px);left:22%;right:22%;height:18px;border-left:3px solid #8a6243;border-right:3px solid #8a6243}
-.desk small{position:relative;z-index:1;margin-top:18px;font-size:.58rem;font-weight:850;color:#5a3f22}
-.dust{position:absolute;bottom:22px;width:34%;height:8px;border-radius:50%;background:radial-gradient(circle,#8f8a7d 20%,transparent 22%) 0 0/6px 6px;opacity:1;transition:opacity .2s ease-out}
-.shine{position:absolute;bottom:18px;width:15px;height:15px;color:#e0a92c;opacity:0;transition:opacity .2s ease-out}
-.desk[data-clean="true"] .dust{opacity:0}
-.desk[data-clean="true"] .shine{opacity:1}
-.bin{align-content:center;margin-bottom:8px;color:#5d7169}
-.bin svg{width:26px;height:26px;transition:transform .2s ease-out,color .2s ease-out}
-.bin[data-bump="true"] svg{color:#b4543a;transform:rotate(-16deg)}
-.robot{position:absolute;left:0;top:3px;display:grid;place-items:center;width:calc(100% / 7);height:36px;transition-property:transform;transition-timing-function:linear}
-.robot svg{width:30px;height:30px;padding:4px;border-radius:50%;background:#28474d;color:#9fd8c8;box-shadow:0 4px 10px #14223844}
+/* Scene 3: Mr Rao and the shrink from list to loop. */
+.teacher{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;align-items:center;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
+.avatar{grid-row:1/3;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#f1d6a4;color:#744b1d;font-size:.8rem;font-weight:850}
+.teacher>span:nth-child(2){font-size:.72rem;color:#826137}
+.teacher p{margin:0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
+.shrink{display:flex;align-items:center;gap:10px;margin-top:18px;padding:12px 14px;border-radius:10px;background:#e3edda;color:#2f5f55;opacity:.3;transition:opacity .25s ease}
+.shrink[data-active="true"]{opacity:1}
+.shrink>svg{width:20px;height:20px}
+.shrink>svg:nth-of-type(2){color:#8a6a3c}
+.shrink>div{display:grid;gap:2px}
+.shrink strong{font-size:.8rem}
+.shrink span{font-size:.7rem;color:#4d645b}
 
-/* Scene 2: the long list and the dusty desk */
-.floor{display:grid;align-content:space-between;gap:10px;padding:12px;background-color:#f4efe2;background-image:none}
-.problem{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:10px}
-.console{padding:10px 12px;border-radius:10px;background:#183944;color:#e6f2ec}
-.console small,.code small,.controls small,.before small,.after small{display:block;margin-bottom:6px;font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
-.console small{color:#9fd8c8}
-.side{display:grid;align-content:start;gap:6px}
-.bad{display:flex;align-items:center;gap:7px;margin:0;padding:7px 10px;border-radius:9px;background:#fbeee8;color:#8a3b25;font-size:.7rem;font-weight:800}
-.bad svg{flex:none;width:15px;height:15px}
+/* Scene 4: the loop builder. ".task" prefix beats the shell's generic ".intro button". */
+.task h2{margin-bottom:12px}
+.builder{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px;margin-bottom:10px}
+.oldList{display:grid;align-content:start;gap:1px;padding:9px 10px;border:1px solid #ddd6bd;border-radius:10px;background:#f3f0e2}
+.oldList>strong{margin-bottom:4px;font-size:.6rem;color:#6a644e}
+.oldList>span{display:flex;align-items:center;gap:5px;font-size:.62rem;color:#4b6159}
+.oldList>span b{min-width:10px;font-weight:700;color:#8a8a74}
+.oldList>span svg{width:12px;height:12px}
+.oldList>span[data-extra="true"]{color:#a2462a}
+.oldList>span[data-extra="true"]>svg{opacity:.45}
+.oldList em{margin-left:auto;padding:0 5px;border-radius:4px;background:#f6dcd2;font-size:.55rem;font-style:normal;font-weight:800}
+.loop{position:relative;padding:11px 13px 12px;border-radius:12px;background:#173c44;color:#fff4db;font-family:var(--font-mono),monospace}
+.loopHead{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+.loopHead b{display:inline-grid;place-items:center;min-width:28px;height:26px;padding:0 6px;border-radius:6px;background:#f9d58a;color:#173c44}
+.loopHead svg{width:16px;height:16px;color:#f9d58a}
+.loopBody{display:grid;gap:5px;margin:9px 0 0 8px;padding-left:12px;border-left:3px solid #f9d58a88}
+.loopBody code{padding:5px 8px;border-radius:6px;background:#244f58;color:#c9f0e2;font-size:.72rem}
+.loopBody code[data-now="true"]{background:#f9d58a;color:#173c44}
+.loopBody>span{padding:9px 8px;border:1px dashed #5d8a8f;border-radius:6px;color:#9fbcb8;font-size:.68rem}
+.round{position:absolute;top:12px;right:12px;font-size:.58rem;color:#bfe0d8}
+.pickRow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:7px 0}
+.pickRow>span{width:50px;font-size:.6rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase;color:#6a644e}
+.task .pickRow button{display:flex;align-items:center;gap:5px;padding:8px 11px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.76rem}
+.task .pickRow button svg{width:15px;height:15px;color:#527854}
+.task .pickRow button[aria-pressed="true"]{border-color:#155f63;background:#155f63;color:#fff9e9}
+.task .pickRow button[aria-pressed="true"] svg{color:#f9d58a}
+.task .pickRow .count{min-width:48px;justify-content:center;font-family:var(--font-mono),monospace;font-size:.9rem}
+.task .track{margin-top:12px}
+.task .actions .primary{min-width:140px}
 
-/* Scene 3: Mr Iyer + the pattern */
-.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
-.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
-.avatar svg{width:20px;height:20px}
-.teacher small{font-size:.72rem;font-weight:850;color:#826137}
-.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
-.pattern{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
-.pairs{display:grid;gap:4px}
-.pairs>span{display:flex;gap:8px;padding:5px 9px;border-radius:7px;background:#f4f1e4;font-family:var(--font-mono),monospace;font-size:.66rem;color:#264c48}
-.pairs b{font-family:var(--font-body,inherit),sans-serif;font-size:.6rem;color:#826137}
-.arrow{width:20px;height:20px;color:#9ead95}
-.term{display:flex;align-items:center;gap:11px;margin-top:12px;padding:10px 12px;border-radius:9px;background:#e8e1f3}
-.term>svg{flex:none;width:21px;height:21px;color:#5b4a8a}
-.term>div{display:grid;gap:2px}
-.term strong{font-size:.8rem;color:#3d3266}
-.term span{font-size:.7rem;color:#4d4866}
-.panel .rule,.rule{display:flex;align-items:center;gap:8px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#e3edda;color:#284c37;font-size:.74rem}
-.rule svg{flex:none;width:16px;height:16px}
+/* Scene 5: Dusty's new program and why it is better. */
+.card{display:grid;gap:3px;margin-bottom:4px;padding:12px 15px;border-radius:12px;background:#173c44;color:#c9f0e2;font-family:var(--font-mono),monospace}
+.card>span{margin-bottom:4px;font-family:var(--font-body),sans-serif;font-size:.64rem;font-weight:800;color:#f9d58a}
+.card code,.pocket code{font-size:.8rem;white-space:pre}
+.card code:first-of-type{color:#fff4db;font-weight:700}
+.why{display:grid;gap:2px}
+.why strong{font-size:.84rem}
+.why small{font-size:.7rem;color:#4d645b}
 
-/* Scene 4: the loop task */
-.task h2{margin-bottom:6px}
-.task>p{margin-bottom:12px}
-.bench{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:12px;margin-bottom:10px}
-.code{padding:10px 12px;border-radius:10px;background:#183944;color:#e6f2ec}
-.code small{color:#9fd8c8}
-.controls{display:grid;align-content:start;gap:8px}
-.controls small{margin:4px 0 0;color:#5d7169}
-.replace{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 12px;border:1px solid #2f6f63;border-radius:8px;background:#e6f2ec;color:#1f5a50;font-size:.76rem;font-weight:800}
-.replace svg{width:16px;height:16px}
-.controls .replace:disabled{opacity:.6}
-.counts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
-.counts button{padding:9px 0;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-family:var(--font-mono),monospace;font-size:.9rem;font-weight:800}
-.counts button[aria-pressed="true"]{border-color:#2f6f63;background:#2f6f63;color:#fff4db;opacity:1}
-.counts button:not(:disabled):hover{transform:translateY(-2px)}
+/* Scenes 2 and 6: the tile row inside the alert, and the pocket card. */
+.lab .track{width:min(86%,340px);margin-top:8px}
+.pocket{position:absolute;z-index:1;top:16px;left:16px;display:grid;gap:2px;padding:10px 14px 11px;border-radius:8px;background:#fffaf0;color:#183b40;box-shadow:0 10px 22px #0a1a2255;font-family:var(--font-mono),monospace;transform:rotate(-2deg)}
+.pocket>span{margin-bottom:3px;font-family:var(--font-body),sans-serif;font-size:.56rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase;color:#936834}
+.pocket code{font-size:.68rem}
+.pocket code:first-of-type{font-weight:700}
 
-/* Scene 5: before and after */
-.compare{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:10px}
-.before{padding:10px 12px;border-radius:10px;background:#f1efe6;color:#8a8f86}
-.before small{color:#8a8f86}
-.before .listing li span{color:#b3b8ad}
-.after small{color:#2f7369}
-.change{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px;padding:7px 10px;border-radius:8px;background:#fff4e0;color:#805633;font-size:.7rem}
-.change b{padding:0 6px;border-radius:5px;background:#e8d6b1;font-family:var(--font-mono),monospace}
-.change svg{width:13px;height:13px}
-
-@media(max-width:600px){
-  .problem{grid-template-columns:1fr}
-  .dock{font-size:.5rem;margin:0 2px 8px}
-  .robot svg{width:24px;height:24px}
-  .bin svg{width:20px;height:20px}
-  .teacher>div>p{font-size:1.05rem}
-  .pattern{grid-template-columns:1fr;justify-items:stretch}
-  .arrow{justify-self:center;transform:rotate(90deg)}
-  .bench,.compare{grid-template-columns:1fr}
-  .listing{gap:3px 8px}
-  .listing li{font-size:.62rem}
-}
+@keyframes wobble{0%{transform:translateX(0)}30%{transform:translateX(-3px)}65%{transform:translateX(3px)}100%{transform:translateX(0)}}
+@keyframes sweep{from{transform:scale(.86)}to{transform:scale(1)}}
+@media(max-width:600px){.codeWin{left:10px;top:48px;width:158px;padding:7px 8px}.codeWin>span{font-size:.52rem;gap:5px;padding:1px 0}.codeWin>span b{min-width:26px}.codeWin>strong{font-size:.52rem}.track{--gap:4px}.cell{border-radius:7px}.cell>small{font-size:.5rem;left:4px;top:2px}.cell[data-kind="start"]>small{font-size:.42rem}.builder{grid-template-columns:92px minmax(0,1fr);gap:8px}.oldList{padding:7px}.oldList>strong{font-size:.54rem}.oldList em{font-size:.5rem;padding:0 3px}.loop{padding:10px}.loopHead{font-size:.68rem;gap:5px}.loopHead b{min-width:24px;height:24px}.loopBody{margin-left:4px;padding-left:9px}.loopBody code{font-size:.64rem}.round{position:static;display:block;margin-top:7px}.pickRow>span{width:100%}.task .pickRow button{font-size:.72rem;padding:7px 9px}.teacher p{font-size:1.05rem}.lab .track{width:92%}.pocket{top:10px;left:10px;padding:8px 10px}.pocket code{font-size:.58rem}.card code{font-size:.72rem}}

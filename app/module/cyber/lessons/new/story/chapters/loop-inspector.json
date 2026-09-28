@@ -1,80 +1,79 @@
 {
-  "duration": 96.7,
+  "duration": 105.559,
   "scenes": [
     {
       "id": "meet",
       "label": "Meet Tara",
-      "title": "Tara is on robot duty.",
+      "title": "Dusty’s big day",
       "mood": "happy",
-      "caption": "Meet Tara. This week she's on robot duty for Class 5B. After lunch, Sweepy, the class robot cleaner, sweeps under every desk in the front row. Tara writes the program that tells Sweepy what to do, one command at a time. Today she's very proud of it.",
-      "speech": "Meet Tara. This week she's on robot duty for Class Five B. After lunch, Sweepy, the class robot cleaner, sweeps under every desk in the front row. Tara writes the program that tells Sweepy what to do, one command at a time. Today she's very proud of it.",
-      "dialogue": "Sweepy, time to clean the front row!",
-      "status": "On robot duty",
+      "caption": "Meet Tara. Her class built a robot cleaner called Dusty, and she's writing its program for Open Day. Move right, sweep. Move right, sweep. She copies the same two lines again and again, one pair for each tile in the row. The list keeps growing, and she's proud of it.",
+      "dialogue": "Dusty will make our lab shine on Open Day!",
+      "status": "Excited to code",
       "start": 0.0,
-      "duration": 16.171
+      "duration": 16.914
     },
     {
-      "id": "long",
-      "label": "The long list",
-      "title": "One line lost in a long list",
+      "id": "problem",
+      "label": "The bump",
+      "title": "Bump! Right into the bin.",
       "mood": "sad",
-      "caption": "But now the front row has five desks. Tara's program is a long list: move forward, sweep, move forward, sweep, again and again. Sweepy stops early, and the last desk is still dusty! One line is missing somewhere in the list, and it's really hard to spot.",
-      "dialogue": "Which line did I miss?",
-      "status": "Lost in the list",
+      "caption": "At the test run, Dusty sweeps every tile, then rolls on and bumps into the bin! Scraps spill across the floor. Tara's cheeks go hot, and Open Day is tomorrow. Somewhere in her long list is one extra pair. But the list is so long, she can't spot it.",
+      "dialogue": "Oh no! Which line did I get wrong?",
+      "status": "Feeling upset",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
-        "seconds": 3
+        "seconds": 2.5
       },
-      "start": 16.821,
-      "duration": 16.043
+      "start": 17.564,
+      "duration": 16.523
     },
     {
-      "id": "pattern",
-      "label": "Spot the pattern",
-      "title": "Same steps? Write them once.",
+      "id": "help",
+      "label": "Ask Mr Rao",
+      "title": "Say it once. Say how many.",
       "mood": "thinking",
-      "caption": "Mr Iyer points at the list. Every desk needs the same two steps. Instead of copying them five times, write them once and repeat them. A block that repeats steps a set number of times is called a loop. The count must match the desks.",
-      "speech": "Mister Iyer points at the list. Every desk needs the same two steps. Instead of copying them five times, write them once and repeat them. A block that repeats steps a set number of times is called a loop. The count must match the desks.",
-      "dialogue": "Same steps? Then I only need them once!",
-      "status": "Spotting the pattern",
-      "start": 33.513,
-      "duration": 15.125
+      "caption": "Mr Rao, the lab teacher, sits beside her. Copy slips happen to every coder. Together they count: six pairs, but only five tiles. “When steps repeat,” he says, “write them once, and say how many times.” This is called a loop. Her list could shrink to three lines.",
+      "speech": "Mister Rao, the lab teacher, sits beside her. Copy slips happen to every coder. Together they count: six pairs, but only five tiles. “When steps repeat,” he says, “write them once, and say how many times.” This is called a loop. Her list could shrink to three lines.",
+      "dialogue": "So I write it once, then count once?",
+      "status": "Working it out",
+      "start": 34.737,
+      "duration": 17.315
     },
     {
-      "id": "loop",
-      "label": "Use a loop",
-      "title": "One loop. The right count.",
+      "id": "build",
+      "label": "Build the loop",
+      "title": "Build the loop. Count it right.",
       "mood": "thinking",
-      "caption": "Your turn. Replace Tara's long list with one loop. Then set the repeat count and run Sweepy. Count the desks carefully: too few repeats stops short, and too many sends Sweepy into the bin! Check your count before you run.",
-      "dialogue": "One loop. The right count.",
-      "status": "Setting the count",
-      "start": 49.289,
-      "duration": 13.867
+      "caption": "Your turn. Help Tara build the loop. First, choose the steps that repeat. Then set the count: one repeat for each tile. Run it and watch Dusty. With the wrong count, Dusty stops short or bumps the bin again. Count the tiles carefully!",
+      "dialogue": "One repeat for every tile. Let’s count!",
+      "status": "Building the loop",
+      "start": 52.701,
+      "duration": 15.695
     },
     {
-      "id": "shorter",
-      "label": "Shorter code",
-      "title": "Ten lines became three.",
+      "id": "lesson",
+      "label": "Why loops win",
+      "title": "Shorter, clearer, easier to change.",
       "mood": "happy",
-      "caption": "Sweepy cleans all five desks! The loop turned ten lines into three, and there's no line to lose. Loops make programs shorter and easier to check. And if the row gets longer, Tara changes just one number. But the count must always match the job.",
-      "dialogue": "Ten lines became three!",
-      "status": "Program fixed",
-      "start": 63.805,
-      "duration": 15.851
+      "caption": "REPEAT 5 TIMES: Dusty cleans every tile and stops right before the bin. Three lines now replace her long list. A loop is easier to read, easier to check, and easier to change. If the row grows to eight tiles, Tara changes just one number. The count must match the work.",
+      "speech": "Repeat five times: Dusty cleans every tile and stops right before the bin. Three lines now replace her long list. A loop is easier to read, easier to check, and easier to change. If the row grows to eight tiles, Tara changes just one number. The count must match the work.",
+      "dialogue": "Three lines, and not a single copy slip!",
+      "status": "Feeling proud",
+      "start": 69.047,
+      "duration": 18.128
     },
     {
       "id": "ending",
-      "label": "A happier ending",
-      "title": "Eight desks, one number",
+      "label": "Open Day",
+      "title": "One small card. One clean row.",
       "mood": "happy",
-      "caption": "The next day, Mr Iyer adds three more desks to the row. Tara just changes five to eight, and Sweepy cleans every desk while the class cheers. One loop, the right count, no copying. Your turn: help Tara shorten more robot programs with loops!",
-      "speech": "The next day, Mister Iyer adds three more desks to the row. Tara just changes five to eight, and Sweepy cleans every desk while the class cheers. One loop, the right count, no copying. Your turn: help Tara shorten more robot programs with loops!",
-      "dialogue": "Five to eight. Just one number!",
-      "status": "Proud programmer",
+      "caption": "Open Day! Dusty rolls down the row, sweeps each tile, and stops neatly before the bin. The parents clap, and Tara beams. Her program now fits on one small card. A loop says it once, with the right count. Your turn: help Tara inspect more robot programs!",
+      "dialogue": "Dusty did it, and my code fits on a card!",
+      "status": "Proud and happy",
       "tone": "resolved",
-      "start": 80.306,
-      "duration": 15.744
+      "start": 87.825,
+      "duration": 17.085
     }
   ]
 }

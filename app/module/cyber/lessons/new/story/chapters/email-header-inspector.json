@@ -1,81 +1,80 @@
 {
-  "duration": 119.804,
+  "duration": 121.894,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Meera",
-      "title": "Waiting for the result",
+      "label": "Meet Kabir",
+      "title": "Is this my big break?",
       "mood": "happy",
-      "caption": "Meera's scholarship interview went well, and now she checks her inbox every hour. Every real message so far has come from the Young Scientists office, youngscientists.cyberpur.example: the interview time, then a thank-you note. Today, a new email arrives with the office's logo and a subject that makes his heart jump.",
-      "speech": "Meera's scholarship interview went well, and now she checks her inbox every hour. Every real message so far has come from the Young Scientists office, youngscientists dot cyberpur dot example: the interview time, then a thank-you note. Today, a new email arrives with the office's logo and a subject that makes his heart jump.",
-      "dialogue": "Maybe it's the result!",
-      "status": "Waiting for results",
+      "caption": "Meet Kabir. He's twelve, and he loves building things. Last month he entered the Cyberpur science fair with his solar water heater, and he's been checking his inbox ever since. Today, a new email lands from the Scholarship Office, complete with the school logo. Kabir's heart jumps. Could this be the award he's been hoping for?",
+      "dialogue": "An email from the Scholarship Office? For me?",
+      "status": "Hoping for news",
       "start": 0.0,
-      "duration": 19.349
+      "duration": 19.27
     },
     {
-      "id": "email",
-      "label": "The award email",
-      "title": "“Pay within 24 hours.”",
-      "mood": "thinking",
-      "caption": "Congratulations, it says. You have won an award! Submit your Aadhaar number and a ₹500 processing fee within 24 hours, or the award goes to someone else. The display name says Scholarship Office, and the logo looks right. Meera's finger hovers over Pay fee. But the real office never mentioned fees. Why the rush?",
-      "speech": "Congratulations, it says. You have won an award! Submit your Aadhaar number and a five hundred rupee processing fee within twenty-four hours, or the award goes to someone else. The display name says Scholarship Office, and the logo looks right. Meera's finger hovers over Pay fee. But the real office never mentioned fees. Why the rush?",
-      "dialogue": "Wait. Why would a scholarship charge a fee?",
-      "status": "Something feels off",
+      "id": "problem",
+      "label": "The email",
+      "title": "Pay now, or lose it?",
+      "mood": "sad",
+      "caption": "The email says: Congratulations! You have won an award. Submit your Aadhaar number and a ₹500 processing fee within 24 hours. Kabir's excitement turns to worry. Why would an award ask him for money first? And why the rush? The logo and name look right, though. Pressure like this is a warning sign.",
+      "speech": "The email says: Congratulations! You have won an award. Submit your Aadhaar number and a five hundred rupee processing fee within twenty-four hours. Kabir's excitement turns to worry. Why would an award ask him for money first? And why the rush? The logo and name look right, though. Pressure like this is a warning sign.",
+      "dialogue": "Aadhaar and ₹500 in 24 hours? Something feels off.",
+      "status": "Feeling pressured",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.999,
-      "duration": 19.392
+      "start": 19.92,
+      "duration": 19.271
     },
     {
-      "id": "headers",
-      "label": "Show original",
-      "title": "The name can lie.",
+      "id": "help",
+      "label": "Ask for help",
+      "title": "Look beneath the name.",
       "mood": "thinking",
-      "caption": "Her brother Arjun shows her a trick. A display name is just a label; anyone can type Scholarship Office. The truth is in the raw headers, under Show original. From shows the full address behind the name. Reply-To is where answers go. Received lists the servers it passed through. And SPF and DKIM checks show whether the sending domain vouches for it.",
-      "speech": "Her brother Arjun shows her a trick. A display name is just a label; anyone can type Scholarship Office. The truth is in the raw headers, under Show original. From shows the full address behind the name. Reply-To is where answers go. Received lists the servers it passed through. And S P F and D K I M checks show whether the sending domain vouches for it.",
-      "dialogue": "So the name can lie. The headers can't hide as easily.",
-      "status": "Learning to read headers",
-      "start": 40.041,
-      "duration": 20.075
+      "caption": "Kabir doesn't click or reply. Instead, he shows the email to his aunt, Meera. She explains that the friendly name at the top is called the display name, and anyone can type any name there. The real clues hide in the email headers, a record of where the message actually came from. Together, they click Show original.",
+      "dialogue": "Meera Aunty, can you check this with me?",
+      "status": "Asking for help",
+      "start": 39.841,
+      "duration": 18.832
     },
     {
       "id": "inspect",
-      "label": "Flag the clues",
-      "title": "Look for several clues.",
+      "label": "Inspect headers",
+      "title": "Flag what doesn’t match.",
       "mood": "thinking",
-      "caption": "Your turn. Open the raw headers and flag every field that doesn't match the real office. Leave ordinary fields like the date alone. One clue alone doesn't prove a scam, so look for several, and let each flag have a reason. Careful: the display name matching isn't evidence. Anyone can type a name.",
-      "dialogue": "Four clues, not one. Then I'm sure.",
-      "status": "Inspecting the headers",
-      "start": 60.766,
-      "duration": 18.432
+      "caption": "Here are the raw headers. The school's real domain is cyberpurschool.example. Help Kabir flag every line that doesn't match it, and leave the ordinary lines alone. Look closely at From, Reply-To, the server the message came from, and the SPF and DKIM checks. One clue alone doesn't prove a scam. Several together tell a story.",
+      "speech": "Here are the raw headers. The school's real domain is cyberpur school dot example. Help Kabir flag every line that doesn't match it, and leave the ordinary lines alone. Look closely at From, Reply to, the server the message came from, and the S P F and D K I M checks. One clue alone doesn't prove a scam. Several together tell a story.",
+      "dialogue": "Let’s see where this email really came from.",
+      "status": "Reading the headers",
+      "start": 59.322,
+      "duration": 19.935
     },
     {
       "id": "verify",
-      "label": "Verify and report",
-      "title": "Verify, then report.",
+      "label": "Verify & report",
+      "title": "Check it the official way.",
       "mood": "happy",
-      "caption": "Four clues point the same way: a lookalike domain, replies going elsewhere, an unrelated server, and failed checks. Still, Meera verifies. She calls the number on the official website, not the one in the email. No fees, the office says. She tells her parents, reports the email as phishing and warns her classmates. Never send an Aadhaar number through an email link.",
-      "dialogue": "Verified. It's phishing, and now everyone knows.",
-      "status": "Verifying, then reporting",
-      "start": 79.848,
-      "duration": 19.669
+      "caption": "It adds up: a lookalike sender, replies routed elsewhere, an unrelated server, and failed SPF and DKIM checks. This is phishing. Kabir types the school's website himself, and Meera calls the number printed in his school diary. There's no fee and no such award. They report the email as phishing. If money is ever lost, call 1930 quickly.",
+      "speech": "It adds up: a lookalike sender, replies routed elsewhere, an unrelated server, and failed S P F and D K I M checks. This is phishing. Kabir types the school's website himself, and Meera calls the number printed in his school diary. There's no fee and no such award. They report the email as phishing. If money is ever lost, call nineteen thirty quickly.",
+      "dialogue": "No fee, no such award. Glad we checked first!",
+      "status": "Verifying the facts",
+      "start": 79.908,
+      "duration": 20.586
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "Real email. Real award.",
+      "title": "A real win, safely.",
       "mood": "happy",
-      "caption": "A week later, a real email arrives from youngscientists.cyberpur.example. Meera checks the headers out of habit: every field matches. She's won the scholarship, and there's no fee at all. The office thanks her for reporting the fake, which reached twenty other applicants. Your turn: help Meera inspect more email headers!",
-      "speech": "A week later, a real email arrives from youngscientists dot cyberpur dot example. Meera checks the headers out of habit: every field matches. She's won the scholarship, and there's no fee at all. The office thanks her for reporting the fake, which reached twenty other applicants. Your turn: help Meera inspect more email headers!",
-      "dialogue": "Real email, real award, and no fee!",
-      "status": "Scholarship winner",
+      "caption": "A week later, a real email arrives from the school's genuine address. Kabir's solar heater has won a certificate, to be collected at Monday's assembly. No fee, no rush. Kabir grins. A display name is just a label, not proof. Now he checks where an email really came from. Your turn: help Kabir inspect three more suspicious emails!",
+      "dialogue": "The name looked right. The headers told the truth.",
+      "status": "Proud and careful",
       "tone": "resolved",
-      "start": 100.167,
-      "duration": 18.987
+      "start": 101.144,
+      "duration": 20.1
     }
   ]
 }

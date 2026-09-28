@@ -1,77 +1,77 @@
 {
-  "duration": 104.487,
+  "duration": 105.817,
   "scenes": [
     {
       "id": "meet",
       "label": "Meet Tara",
-      "title": "Only Saturn left to paint!",
+      "title": "One arrow to go!",
       "mood": "happy",
-      "caption": "Meet Tara. She's finishing her science project, a model of the solar system, and it's due tomorrow morning. Seven planets are painted. Only Saturn and its beautiful rings are left. She follows the project steps on the family's spare phone. Almost done, and it's only eight o'clock!",
-      "dialogue": "Just Saturn's rings left to paint!",
-      "status": "Painting the planets",
+      "caption": "Meet Tara. She's ten, and she loves drawing science diagrams. Tonight, she's finishing a poster about the water cycle for school tomorrow. Her cousin Meera is visiting and helping with the labels. Tara has just one arrow left to draw. She's nearly done, and she's feeling proud!",
+      "dialogue": "Just one more arrow, then I’m done!",
+      "status": "Busy with homework",
       "start": 0.0,
-      "duration": 17.323
+      "duration": 17.509
     },
     {
-      "id": "dark",
+      "id": "problem",
       "label": "Lights out",
       "title": "A torch that wants everything",
       "mood": "sad",
-      "caption": "Suddenly, the power goes out. The whole street is dark! Tara quickly installs a free torch app. But before it turns on, it asks to access her contacts, location, camera and microphone. A big Allow all button is right there. Why would a torch need all that?",
-      "dialogue": "My project! And this app wants everything?",
+      "caption": "Suddenly, the power goes out! The flat is dark. Tara grabs the old phone she uses for homework and installs a free torch app. But before it shines, a box pops up. It wants her contacts, location, camera and microphone. A big button says Allow all. Tara just wants some light!",
+      "dialogue": "It won’t shine unless I allow everything?",
       "status": "Stuck in the dark",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 17.973,
-      "duration": 16.576
+      "start": 18.159,
+      "duration": 18.461
     },
     {
-      "id": "keys",
+      "id": "why",
       "label": "Ask why",
-      "title": "What does this app need for its job?",
+      "title": "What does a torch really need?",
       "mood": "thinking",
-      "caption": "Tara's cousin Ishaan comes in with a candle. These requests are called permissions, he explains. Each one is a key to part of the phone. Contacts holds other people's numbers. Location can show where you live. So ask one question: what does this app need to do its job?",
-      "dialogue": "Why would a torch want my contacts?",
-      "status": "Asking the right question",
-      "start": 35.199,
-      "duration": 17.152
+      "caption": "Meera asks: what does a torch need to do its job? Just light! Each request is called a permission. Contacts holds the names and numbers of Tara's friends and family. Location shows where she is. Camera and microphone let an app see and hear. A torch needs none of these.",
+      "dialogue": "Why would a torch need my contacts?",
+      "status": "Thinking it through",
+      "start": 37.27,
+      "duration": 17.703
     },
     {
-      "id": "switches",
-      "label": "Set the switches",
-      "title": "Switch off what a torch doesn't need.",
+      "id": "choose",
+      "label": "Your turn",
+      "title": "Switch off what it doesn’t need.",
       "mood": "thinking",
-      "caption": "Your turn. Help Tara set the permissions. The app has switched them all on already, a sneaky shortcut. Switch off each one a torch doesn't need. Then tap Continue with my choices. Careful: Allow all is the easy button, not the safe one.",
-      "dialogue": "Only what a torch really needs.",
-      "status": "Checking each switch",
-      "start": 53.001,
-      "duration": 15.531
+      "caption": "Your turn. Look at each permission and ask: does a torch need this to shine? Switch off every one it doesn't need, then save your choices. Careful! Allow all is the quickest button, but it would hand over far more than a torch should ever need.",
+      "dialogue": "Help me choose. What does a torch need?",
+      "status": "Choosing carefully",
+      "start": 55.623,
+      "duration": 14.766
     },
     {
-      "id": "right-access",
-      "label": "Right access",
-      "title": "The right access for each job",
+      "id": "lesson",
+      "label": "Right app, right access",
+      "title": "A different job needs different access.",
       "mood": "happy",
-      "caption": "No permissions, and the torch shines! The right access depends on the app's job. A map app needs your location, but only while you use it. A video call app needs the camera and microphone. Apps can collect what you allow, so check permissions in Settings with a grown-up.",
-      "dialogue": "A map needs location. A torch doesn't!",
-      "status": "Feeling in control",
-      "start": 69.181,
-      "duration": 16.619
+      "caption": "It worked! The torch shines with no permissions at all. But some apps do need access. A map app needs your location to show the way. A video call needs the camera and microphone. So always ask: what's this app's job? If you're unsure, check with a grown-up first.",
+      "dialogue": "So a map really does need location!",
+      "status": "Getting it now",
+      "start": 71.039,
+      "duration": 17.362
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "Saturn, painted by torchlight",
+      "title": "Finished by torchlight",
       "mood": "happy",
-      "caption": "By torchlight, Tara paints Saturn's rings, and her project is ready on time. Her family's contacts stayed private. Her rule now: give each app only the access its job needs. Before bed, she checks her other apps too. Your turn: help Tara decide what other apps really need!",
-      "dialogue": "Project done, and my contacts stayed private!",
-      "status": "Proud and prepared",
+      "caption": "Tara finishes her last arrow by torchlight, and her poster is done! Meera shows her that permissions can be changed later in the phone's settings too. Now Tara gives each app only what it needs for its job. Your turn: help Tara check three more apps!",
+      "dialogue": "Poster done, and my contacts stayed private!",
+      "status": "Proud and bright",
       "tone": "resolved",
-      "start": 86.45,
-      "duration": 17.387
+      "start": 89.051,
+      "duration": 16.116
     }
   ]
 }

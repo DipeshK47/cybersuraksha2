@@ -1,119 +1,166 @@
 "use client";
 
-import { Ban, CircleAlert, Globe, HeartHandshake, Lock, NotebookPen, PhoneCall, PhoneOff, Pizza, ShieldCheck, Timer, UserRound, Users, Video } from "lucide-react";
+import { ArrowRight, Ban, Building2, Cake, CalendarDays, Camera, Check, CircleAlert, EyeOff, Globe, IdCard, IndianRupee, Mic, Package, Phone, PhoneOff, RotateCcw, Scale, Shield, ShieldCheck, Shirt, Star, StickyNote, UserRound, Users, Video } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
-import type { StoryChapter, StoryWorldProps } from "../types";
+import type { StoryChapter, StoryScript, StoryWorldProps } from "../types";
 import script from "./digital-arrest-simulation.json";
 import k from "../story-player.module.css";
 import r from "./digital-arrest-simulation.module.css";
 
-/** A pretend video call: an illustrated (not real) caller in a uniform, with the demands captioned on screen. */
-function Call({ show, compact }: { show?: (at: number) => Record<string, boolean>; compact?: boolean }) {
-  const s = show ?? (() => ({}));
-  return <div className={r.call} data-compact={compact ?? false}>
-    <div className={r.callTop}><Video aria-hidden="true" /><span>+91 00000 66120 · not saved</span><b><Timer aria-hidden="true" />59:12</b></div>
-    <div className={r.office} aria-hidden="true"><span className={r.crest} /><span className={r.shelf} /></div>
-    <div className={r.officer} aria-hidden="true"><span className={r.cap} /><span className={r.face} /><span className={r.uniform}><span className={r.star} /></span></div>
-    <span className={r.badge}>CBI · Central Bureau of Investigaton</span>
-    <div className={r.captions}>
-      <p {...s(.3)}>“You are under <b>DIGITAL ARREST</b>.”</p>
-      <p {...s(.48)}>“Stay on camera. Tell no one.”</p>
-      <p {...s(.6)}>“Pay <b>₹50,000</b> within 1 hour to clear your name.”</p>
-    </div>
-    <span className={r.pretend}>Pretend call · example only</span>
+const story: StoryScript = script;
+/** Seconds into scene `i` when its narration reaches word `word` (keeps reveals in sync after re-narration). */
+const cue = (i: number, word: number) => { const sc = story.scenes[i]; return sc.duration * word / (sc.speech ?? sc.caption).split(" ").length; };
+
+const caller = "+91 00000 45210";
+const demands = [
+  { icon: Package, text: "A parcel in your name had illegal items.", word: 14 },
+  { icon: CircleAlert, text: "You are under DIGITAL ARREST.", word: 25 },
+  { icon: EyeOff, text: "Stay on camera. Tell no one.", word: 32 },
+  { icon: IndianRupee, text: "Pay ₹50,000 now to clear your name.", word: 38 },
+];
+const clues = [
+  { id: "badge", icon: IdCard, title: "The “CBI” badge", detail: "Misspelt, blurry, and impossible to check on a call", sign: true, why: "" },
+  { id: "uniform", icon: Shirt, title: "His uniform", detail: "Khaki shirt, cap and shoulder stars", sign: false, why: "A uniform is easy to buy or copy, so it proves nothing either way. Look at what he demands." },
+  { id: "secret", icon: EyeOff, title: "“Stay on camera. Tell no one.”", detail: "He says not to hang up or tell family", sign: true, why: "" },
+  { id: "office", icon: Building2, title: "His office background", detail: "Shelves of files and a round crest", sign: false, why: "Anyone can set up files and a crest behind them. A background proves nothing. Look at his demands." },
+  { id: "pay", icon: IndianRupee, title: "“Pay ₹50,000 to clear your name”", detail: "He wants the money now, on this call", sign: true, why: "" },
+];
+const moves = [
+  { id: "end", icon: PhoneOff, label: "End the call", short: "End the call" },
+  { id: "pay", icon: IndianRupee, label: "Pay ₹50,000 to clear her name", trap: "Paying never clears a case. Real officers don’t collect money on a call, and money sent to a scammer is hard to get back." },
+  { id: "tell", icon: Users, label: "Tell family", short: "Tell family" },
+  { id: "stay", icon: Video, label: "Stay on the call, as he says", trap: "Digital arrest isn’t a real legal procedure. Nobody has to stay on camera. It’s safe to end the call." },
+  { id: "report", icon: ShieldCheck, label: "Report it: 1930 / cybercrime.gov.in", short: "Report it" },
+];
+
+/** The pretend caller: office backdrop, uniformed figure, and a fake badge. All decorative except the caption tags. */
+function CallFeed({ small }: { small?: boolean }) {
+  return <div className={r.feed} data-small={small}>
+    <div className={r.office} aria-hidden="true"><span className={r.shelf}><i /><i /><i /></span><span className={r.crest}><Star /></span></div>
+    <div className={r.officer} aria-hidden="true"><span className={r.cap} /><span className={r.head} /><span className={r.body}><i /><i /></span></div>
+    <div className={r.fakeBadge} role="img" aria-label="Fake badge reading C.B.I., Central Bureau of Investigaton, with a spelling mistake"><Shield /><strong>C.B.I.</strong><small>CENTRAL BUREAU OF INVESTIGATON</small><small>ID 000-000</small></div>
+    <span className={r.live}><i />LIVE · 04:12</span>
+    <span className={r.callerTag}>“CBI Officer” · {caller}</span>
+    <span className={r.self}><UserRound aria-hidden="true" />Mum</span>
   </div>;
 }
 
-const clues = [
-  { id: "badge", label: "The badge: “Investigaton” is misspelled, and there’s no ID you can check", warning: true, why: "Badges and uniforms are easy to fake, and this one is even misspelled. A screen badge proves nothing." },
-  { id: "secret", label: "“Stay on camera and tell no one”", warning: true, why: "Real officers never demand secrecy or keep you on camera. Secrecy stops you from asking family for help." },
-  { id: "name", label: "He knows Mum’s full name", warning: false, why: "Knowing her name isn’t proof he’s real: names and addresses leak online. Focus on what he demands." },
-  { id: "money", label: "“Pay ₹50,000 within the hour to clear your name”", warning: true, why: "No real agency takes money to clear a case. The deadline is there to rush you." },
-];
-const actions = [
-  { label: "Pay ₹50,000 to clear her name", ok: false, why: "No real agency takes money to clear a case. Paying only leads to more demands. End the call instead." },
-  { label: "Stay on camera until he says she can go", ok: false, why: "Digital arrest isn’t a real legal procedure. Nobody has to stay on a video call. End it." },
-  { label: "End the call, tell family, and report it", ok: true, why: "Exactly. End it, tell family, and report at cybercrime.gov.in, or call 1930 quickly if any money was paid." },
-];
-
-const reportSteps = [
-  { Icon: PhoneOff, text: "End the call and block the number", at: .08 },
-  { Icon: Users, text: "Tell family: Mum calls Dad", at: .2 },
-  { Icon: Globe, text: "Report at cybercrime.gov.in", at: .3 },
-];
-
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
-  const [found, setFound] = useState<string[]>([]);
-  const [passing, setPassing] = useState(false);
-  const done = solved || passing;
-  const spotted = solved ? clues.filter(c => c.warning).map(c => c.id) : found;
-  const ready = spotted.length === clues.filter(c => c.warning).length;
-  // Reveal an item once narration reaches that fraction of the scene (everything shows while paused).
-  const cue = (at: number) => !playing || elapsed > script.scenes[scene].duration * at;
-  const show = (at: number) => ({ "data-on": cue(at), "aria-hidden": !cue(at) });
+  const [picked, setPicked] = useState<string[]>([]);
+  const [signsDone, setSignsDone] = useState(false);
+  const [plan, setPlan] = useState<string[]>([]);
+  const show = (i: number, word: number) => !playing || elapsed >= cue(i, word);
+  const step2 = signsDone || solved;
+  const planned = solved ? ["end", "tell", "report"] : plan;
 
-  function tap(clue: (typeof clues)[number]) {
-    if (done || found.includes(clue.id)) return;
-    setHint(clue.why);
-    if (clue.warning) setFound(value => [...value, clue.id]);
+  function toggleClue(id: string) {
+    if (step2) return;
+    setHint("");
+    if (picked.includes(id)) setPicked(v => v.filter(x => x !== id));
+    else if (picked.length < 3) setPicked(v => [...v, id]);
+    else setHint("You’ve picked three. Tap one again to swap it out.");
   }
-  function act(action: (typeof actions)[number]) {
-    if (done || !ready) return;
-    setHint(action.why);
-    if (!action.ok) return;
-    setPassing(true);
-    window.setTimeout(markSolved, reduced ? 0 : 700);
+  function checkSigns() {
+    const wrong = clues.find(c => picked.includes(c.id) && !c.sign);
+    if (wrong) { setHint(wrong.why); return; }
+    setSignsDone(true); setHint("");
+  }
+  function choose(id: string) {
+    if (solved || plan.includes(id)) return;
+    const move = moves.find(m => m.id === id);
+    if (!move) return;
+    if (move.trap) { setHint(move.trap); return; }
+    setPlan(v => [...v, id]); setHint("");
   }
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Pizza size={16} /> SUNDAY EVENING</span><span>{scene === 0 ? "Meera’s home · 7:10 pm" : "Meera’s home · 8:30 pm"}</span></div>
+      <div className={k.deviceBar}><span><CalendarDays size={16} /> HOME · SUNDAY</span><span>Kabir’s family</span></div>
       <div className={`${k.deviceArt} ${r.desk}`}>
-        {scene === 0 && <><div className={k.badge}><Pizza /> Mushroom and corn?</div><span className={r.incoming} {...show(.62)}><Video aria-hidden="true" />Video call · unknown number</span></>}
-        {scene === 5 && <div className={k.success}><ShieldCheck /><strong>Scam stopped</strong><span>Call ended · number blocked · reported</span></div>}
+        {scene === 0 && <>
+          <div className={k.badge}><Cake /> Dadi turns 70 on Saturday</div>
+          <div className={r.incoming} data-show={show(0, 29)} aria-hidden={!show(0, 29)}>
+            <span className={r.ring}><Video /></span>
+            <div><strong>Incoming video call</strong><small>{caller} · Unknown number</small></div>
+            <span className={r.decline}><PhoneOff /></span><span className={r.accept}><Video /></span>
+          </div>
+        </>}
+        {scene === 5 && <>
+          <div className={k.badge}><Cake /> Happy 70th, Dadi!</div>
+          <div className={k.success}><ShieldCheck /><strong>Call ended. Family safe.</strong><span>No money sent · Reported at cybercrime.gov.in</span></div>
+        </>}
       </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><UserRound /><span>Mum at the desk, Meera beside her</span></> : <><span className={r.chip}><Users aria-hidden="true" />Family group warned</span><span className={r.chip}><Ban aria-hidden="true" />Number blocked</span><span className={r.chip}><Globe aria-hidden="true" />Reported online</span></>}</div>
+      <div className={k.deviceFoot}>{scene === 0
+        ? <><Cake /><span>Sunday plan: <b>chocolate cake</b></span><small>Pretend call · example only</small></>
+        : <><ShieldCheck /><span>Surprise party: happy secret. “Tell no one”: warning sign.</span></>}</div>
     </div>}
 
-    {scene === 1 && <Call show={show} />}
+    {scene === 1 && <div className={k.device}>
+      <div className={k.deviceBar}><span><Video size={16} /> VIDEO CALL</span><span>Pretend call · example only</span></div>
+      <div className={r.call}>
+        <CallFeed />
+        <ul className={r.chat} aria-label="What the caller says">
+          {demands.map(({ icon: Icon, text, word }) => <li key={text} data-show={show(1, word)} aria-hidden={!show(1, word)}><Icon aria-hidden="true" />{text}</li>)}
+        </ul>
+      </div>
+      <div className={r.controls} aria-hidden="true"><span><Mic /></span><span><Video /></span><span className={r.hang}><PhoneOff /></span></div>
+    </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.note} {...show(.86)}><NotebookPen aria-hidden="true" /><p>Mum, this is a <b>SCAM</b>. Real police never do this. Let’s hang up. <span>— Meera</span></p></div>
-      <h2>What real police never do</h2>
-      {["Arrest anyone over a video call", "Demand secrecy or keep you on camera", "Ask for money to clear a case"].map((fact, i) => <div className={k.step} key={fact} data-active={cue([.3, .45, .55][i])}><span><Ban /></span>{fact}</div>)}
-      <p className={r.fact} {...show(.14)}><Lock aria-hidden="true" />“Digital arrest” is not a real legal procedure.</p>
+      <div className={r.notes}>
+        <div className={r.sticky} data-show={show(2, 8)}><span><StickyNote aria-hidden="true" /> Kabir’s note</span><p>This looks like a scam. Don’t pay.</p></div>
+        <div className={r.papa} data-show={show(2, 24)}><span>Papa, calm and steady</span><p>“We’ll handle this together.”</p></div>
+      </div>
+      <h2>Real police and CBI officers never…</h2>
+      {[["arrest anyone on a video call", 39], ["demand that you keep it secret", 52], ["ask for money to close a case", 57]].map(([text, word]) => <div className={k.step} key={text} data-active={show(2, Number(word))}><span><Ban /></span>{text}</div>)}
     </div>}
 
-    {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Spot the signs, then act</h2>
-      <div className={r.bench}>
-        <Call compact />
-        <div className={r.clues}><small>Tap the warning signs ({spotted.length} of 3)</small>{clues.map(clue => { const on = spotted.includes(clue.id); return <button key={clue.id} type="button" aria-pressed={on} disabled={done || on} onClick={() => tap(clue)}>{on ? <CircleAlert aria-hidden="true" /> : <span className={r.dot} />}{clue.label}</button>; })}</div>
-      </div>
-      {ready && <div className={r.actions}><small>What should the family do?</small>{actions.map(action => <button key={action.label} type="button" data-trap={!action.ok || undefined} disabled={done} onClick={() => act(action)}>{action.ok ? <PhoneOff aria-hidden="true" /> : <PhoneCall aria-hidden="true" />}{action.label}</button>)}</div>}
-      <p className={k.hint} aria-live="polite">{hint || (done ? "Exactly. End it, tell family, and report at cybercrime.gov.in, or call 1930 quickly if any money was paid." : ready ? "All three warning signs found. What should the family do?" : "Tap each warning sign you can see or hear on the call.")}</p>
-      <small>Pretend call. Illustrated caller, fictional number.</small>
+    {scene === 3 && <div className={k.panel}>
+      <span className={r.eyebrow}>{step2 ? "Step 2 of 2 · Act" : "Step 1 of 2 · Investigate"}</span>
+      {!step2 ? <>
+        <h2>Spot three warning signs</h2>
+        <p>Tap the three strongest signs from the call, then check.</p>
+        <div className={r.clues} role="group" aria-label="Details from the call">
+          {clues.map(({ id, icon: Icon, title, detail }) => <button key={id} type="button" aria-pressed={picked.includes(id)} onClick={() => toggleClue(id)}>
+            <span className={r.clueIcon}><Icon aria-hidden="true" /></span><span><strong>{title}</strong><small>{detail}</small></span><span className={r.tick}><Check aria-hidden="true" /></span>
+          </button>)}
+        </div>
+        <p className={k.hint} aria-live="polite">{hint || `${picked.length} of 3 picked. Ask: what does he want, and could you check who he is?`}</p>
+        <div className={k.actions}><button className={k.primary} disabled={picked.length !== 3} onClick={checkSigns} type="button">Check my signs <ArrowRight /></button></div>
+      </> : <>
+        <div className={r.found}>{["Fake badge", "Secrecy demand", "Payment demand"].map(text => <span key={text}><Check aria-hidden="true" />{text}</span>)}</div>
+        <h2>What should the family do?</h2>
+        <p>Choose the three safe moves.</p>
+        <ol className={r.plan} aria-label={`${planned.length} of 3 moves chosen`}>
+          {[0, 1, 2].map(i => { const move = moves.find(m => m.id === planned[i]); return <li key={i} data-filled={Boolean(move)}><span>{i + 1}</span>{move?.short ?? "…"}</li>; })}
+        </ol>
+        <div className={k.bank}>{moves.map(({ id, icon: Icon, label, trap }) => <button key={id} type="button" data-trap={trap ? "true" : undefined} aria-pressed={trap ? undefined : planned.includes(id)} disabled={solved || planned.includes(id)} onClick={() => choose(id)}><Icon aria-hidden="true" />{label}</button>)}</div>
+        <p className={k.hint} aria-live="polite">{hint || (solved ? "Done! Mum ends the call. Nobody paid, and nobody stayed silent." : planned.length === 3 ? "That’s the plan: end the call, tell family, report it." : "Some choices feel quicker. Pick the ones that keep Mum safe.")}</p>
+        <div className={k.actions}><button onClick={() => setPlan(v => v.slice(0, -1))} disabled={!plan.length || solved} type="button"><RotateCcw />Undo</button><button className={k.primary} disabled={planned.length !== 3 || solved} onClick={markSolved} type="button">{solved ? <>Plan made <Check /></> : <>Hang up and report <ArrowRight /></>}</button></div>
+      </>}
+      <small>Pretend call. Never share real details in a lesson.</small>
     </div>}
 
     {scene === 4 && <div className={k.panel}>
-      <h2>End it, tell family, report it</h2>
-      {reportSteps.map(({ Icon, text, at }) => <div className={k.step} key={text} data-active={cue(at)}><span><Icon /></span>{text}</div>)}
-      <div className={r.help} {...show(.42)}><strong>1930</strong><span>National Cyber Crime Helpline. Call straight away if any money was paid.</span></div>
-      <p className={r.fault} {...show(.8)}><HeartHandshake aria-hidden="true" />Being targeted isn’t anyone’s fault. Scammers call thousands of people.</p>
+      <div className={r.fact}><Scale aria-hidden="true" /><div><strong>Digital arrest is not a real legal procedure.</strong><span>Police and CBI never arrest anyone on a video call, never demand secrecy, and never ask for money to close a case.</span></div></div>
+      <div className={r.levers} data-show={show(4, 14)}><span>The scam’s tools:</span><b>Fear</b><b>Secrecy</b><b>A deadline</b></div>
+      <h2>What the family did</h2>
+      {[{ icon: PhoneOff, text: "Mum ended the call", word: 0 }, { icon: Camera, text: "Saved a screenshot of the number and time", word: 29 }, { icon: Globe, text: "Reported it at cybercrime.gov.in", word: 35 }, { icon: Phone, text: "Money ever sent? Call 1930 straight away", word: 47 }].map(({ icon: Icon, text, word }) => <div className={k.step} key={text} data-active={show(4, word)}><span><Icon /></span>{text}</div>)}
+      <small>1930 is India’s National Cyber Crime Helpline.</small>
     </div>}
   </SceneSwap>;
 }
 
 const chapter: StoryChapter = {
-  script,
-  title: "Meera and the fake police call",
+  script: story,
+  title: "Kabir and the fake officer",
   icon: ShieldCheck,
-  character: { asset: "emotional-avatar", name: "Meera" },
+  character: { asset: "emotional-avatar", name: "Kabir" },
   interactionScene: 3,
-  beginLabel: "Practise with Meera",
-  waitingText: "Story paused. Spot the warning signs, then choose what the family should do.",
-  lockedHint: "Help Meera and Mum respond to the call first.",
+  beginLabel: "Practise with Kabir",
+  waitingText: "Story paused. Spot the signs and make the family’s plan to continue.",
+  lockedHint: "Help Kabir check the call and choose the safe moves first.",
   World,
 };
 export default chapter;

@@ -1,15 +1,21 @@
-// QA hooks for scripts/story-qa.cjs: how a learner races the sorts and justifies merge sort.
-const picks = [['bubble', '8 names, already in order'], ['merge', '100 results, reversed'], ['merge', '2,000 results, mixed']];
+// QA hooks for scripts/story-qa.cjs: how a learner completes Kabir's sorting race.
+// solve() also runs after wrongAttempt(), so it only races the lists that have not been raced yet.
+const races = [[/^8 results/, 'Predict bubble sort'], [/^100 results/, 'Predict merge sort'], [/^2,000 results/, 'Predict merge sort']];
+async function raceAll(page, guessFor) {
+  for (const [list, guess] of races) {
+    await page.getByRole('button', { name: list }).click();
+    const predict = page.getByRole('button', { name: guessFor(guess) });
+    if (await predict.isEnabled()) { await predict.click(); await page.getByRole('button', { name: /Run race/ }).click(); }
+  }
+}
 module.exports = {
   async solve(page) {
-    for (const [sort, list] of picks) {
-      const button = page.getByRole('button', { name: `Predict ${sort} sort: ${list}`, exact: true });
-      if (await button.count() && await button.isEnabled()) await button.click();
-    }
-    await page.getByRole('button', { name: /grows like n log n/ }).click();
+    await raceAll(page, guess => guess);
+    await page.getByRole('button', { name: /far fewer comparisons/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: 'Predict merge sort: 8 names, already in order', exact: true }).click();
-    return /Not this time/;
+    await raceAll(page, () => 'Predict merge sort'); // "bubble is always slower"
+    await page.getByRole('button', { name: /won the 8-item race/ }).click();
+    return /about 2 million comparisons/;
   },
 };

@@ -48,7 +48,7 @@ function PopUp({ left = 10, field = true, onClaim, onField }: { left?: number; f
 }
 
 function TrashTask({ solved, markSolved, hint, setHint, reduced }: Pick<StoryWorldProps, "solved" | "markSolved" | "hint" | "setHint" | "reduced">) {
-  const area = useRef<HTMLDivElement>(null);
+  const box = useRef<HTMLDivElement>(null);
   const bin = useRef<HTMLButtonElement>(null);
   const dragged = useRef(false);
   const [over, setOver] = useState(false);
@@ -75,13 +75,13 @@ function TrashTask({ solved, markSolved, hint, setHint, reduced }: Pick<StoryWor
   return <div className={k.panel}>
     <h2>Help Rohan clear his castle</h2>
     <p>Drag the pop-up into the trash, or tap <b>Move to trash</b>.</p>
-    <div className={r.game}>
-      <div className={r.arena} ref={area}>
+    <div className={r.game} ref={box}>
+      <div className={r.arena}>
         <CastleScene dim={!done} />
         {done && <div className={`${k.badge} ${k.fitIn}`}><ShieldCheck /> Castle clear!</div>}
         <AnimatePresence>
           {!done && <motion.div key="popup" className={r.popup} data-flash={!reduced} role="group" aria-label="Surprise prize pop-up. Drag it to the trash."
-            drag dragConstraints={area} dragElastic={.08} dragMomentum={false} dragSnapToOrigin={!over}
+            drag dragConstraints={box} dragElastic={.08} dragMomentum={false} dragSnapToOrigin={!over}
             whileDrag={reduced ? undefined : { scale: .97 }}
             onDragStart={() => { dragged.current = true; }}
             onDrag={(_, info) => setOver(overBin(info.point))}
@@ -112,7 +112,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 1 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Castle size={16} /> CASTLE CRAFT</span><span>{scene === 1 ? "Pretend pop-up" : "Rohan’s world"}</span></div>
+      <div className={k.deviceBar}><span><Castle size={16} /> CYBERPUR CASTLES</span><span>{scene === 1 ? "Pretend pop-up" : "Rohan’s world"}</span></div>
       <div className={`${k.deviceArt} ${r.sky}`}>
         <CastleScene built={scene === 0 ? cue : undefined} flag={scene === 5} dim={scene === 1} hotbar={scene === 0} />
         {scene === 0 && <div className={k.badge}><Castle /> 4 towers · 1 bridge · 1 gate</div>}

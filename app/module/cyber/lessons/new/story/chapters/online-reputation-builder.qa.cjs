@@ -1,14 +1,11 @@
-// QA hooks for scripts/story-qa.cjs: how a learner audits Meera's three public posts.
+// QA hooks for scripts/story-qa.cjs: how a learner completes Kabir's profile audit.
 module.exports = {
   async solve(page) {
-    for (const name of [/^Keep: water-tester post/, /^Delete and apologise: comment on Rahul/, /^Hide and ask: photo of Aarav/]) {
-      const button = page.getByRole('button', { name });
-      if (await button.isEnabled()) await button.click();
-    }
-    await page.waitForTimeout(600); // the story moves on after a short pause
+    for (const name of ['Keep: project post', 'Delete: comment about Tanvi', 'Ask permission: photo of Ishaan']) await page.getByRole('button', { name, exact: true }).click();
+    await page.getByRole('button', { name: /Finish the audit/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: /^Delete and apologise: water-tester post/ }).click();
-    return /hides Meera.s best evidence/;
+    await page.getByRole('button', { name: 'Delete: project post', exact: true }).click();
+    return /best evidence/;
   },
 };

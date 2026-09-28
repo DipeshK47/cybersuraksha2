@@ -1,105 +1,128 @@
-/* Tara's bakery chapter only: CSS bakery, the shortlist tool, old hiring records, the column-cleaning task and the bias card. Shared pieces live in ../story-player.module.css. */
-/* Narration-synced reveals keep their space so nothing jumps. */
-.pill,.applicant,.heading,.priya,.skills span,.table,.more,.why,.pattern,.shortlisted,.bias{transition:opacity .25s ease-out,transform .25s var(--ease)}
-[data-on="false"].pill,[data-on="false"].applicant,[data-on="false"].heading,[data-on="false"].priya,.skills span[data-on="false"],[data-on="false"].table,[data-on="false"].more,[data-on="false"].why,[data-on="false"].pattern,[data-on="false"].shortlisted,[data-on="false"].bias{opacity:0;transform:translateY(6px)}
+/* Tara chapter only: the pretend hiring app, applicant cards, training-data table and the fixed shortlist. Shared pieces live in ../story-player.module.css. */
+div.app{display:flex;flex-direction:column;gap:12px;padding:16px;background-color:#fff6e8;background-image:radial-gradient(#efd9bb 1px,transparent 1.3px);background-size:16px 16px;color:#3b2f22}
+.shop{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:#fffdf9;box-shadow:0 4px 14px #7a4b1a14}
+.shop>svg{width:32px;height:32px;padding:6px;border-radius:9px;background:#f7d9a8;color:#8a4f16}
+.shop>div{display:grid;gap:2px;min-width:0}
+.shop strong{font-family:var(--font-display),sans-serif;font-size:1rem;color:#4a2c12}
+.shop>div>span{font-size:.68rem;color:#8a6a4b}
+.pill{margin-left:auto;display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:99px;background:#e2efe4;color:#24604f;font-size:.66rem;font-weight:800;white-space:nowrap}
+.pill svg{width:14px;height:14px}
 
-/* Scenes 1 and 6: a bakery built from CSS and icons */
-.shop{overflow:hidden;background-image:linear-gradient(180deg,#f7e6c9 0%,#f3dcb8 64%,#c98f5e 64% 68%,#a8744a 68%)}
-.awning{position:absolute;left:0;right:0;top:0;height:34px;background:repeating-linear-gradient(90deg,#d65a4a 0 30px,#fff4e4 30px 60px);border-radius:0 0 12px 12px;box-shadow:0 6px 10px #6b3b2a33}
-.shelf{position:absolute;left:6%;display:flex;align-items:flex-end;gap:14px;padding:0 12px 4px;border-bottom:7px solid #a8744a;border-radius:0 0 3px 3px}
-.shelf[data-i="1"]{top:26%}
-.shelf[data-i="2"]{top:47%}
-.shelf svg{width:34px;height:34px;color:#8a5a33;fill:#f0c27c}
-.shelf svg:nth-child(2){color:#b0485e;fill:#f7b7c4}
-.shelf svg:nth-child(3){color:#7a4b2c;fill:#d9a066}
-.sign{position:absolute;right:7%;top:24%;display:grid;gap:2px;padding:12px 16px;border-radius:4px;background:#fffdf6;color:#3b2a10;text-align:center;box-shadow:0 8px 16px #6b3b2a33;transform:rotate(3deg)}
-.sign:before{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#d65a4a}
-.sign small{font-size:.6rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#b4543a}
-.sign strong{font-family:var(--font-display),sans-serif;font-size:1.1rem}
-.sign span{font-size:.66rem;color:#6a644e}
-.counter{position:absolute;left:14px;right:14px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px}
-.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#fffcf3;color:#31514a;font-size:.72rem;font-weight:800;box-shadow:0 6px 14px #6b3b2a33}
-.pill[data-tool="true"]{background:#28474d;color:#fff4db}
-.pill svg{width:15px;height:15px}
-.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;background:#dceecf;color:#284c37;font-size:.68rem;font-weight:800}
-.chip svg{width:14px;height:14px}
+.avatar{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#dfe9f6;color:#27496d;font-size:.8rem;font-weight:850}
+.avatar[data-who="Kavya"]{background:#f6d6de;color:#8c2f4a}
+.avatar[data-who="Ishaan"]{background:#d8ecdf;color:#24604f}
+.avatar[data-who="Zoya"]{background:#e8def5;color:#5b3d86}
+.avatar[data-who="Meera"]{background:#f7d9a8;color:#7a4413}
+.school{display:inline-block;width:fit-content;padding:2px 7px;border-radius:5px;background:#e8eef3;color:#45596a;font-size:.62rem;font-weight:800;transition:background .25s ease,box-shadow .25s ease}
+.school[data-school="Hilltop"]{background:#f1e9d6;color:#77531c}
+.school[data-mark="true"]{background:#f8d27a;color:#5a3a06;box-shadow:0 0 0 2px #e7a93a}
 
-/* Scene 2: the shortlist tool */
-.list{display:grid;align-content:start;gap:7px;padding:12px 14px;background-color:#f5f2ea;background-image:none}
-.heading{font-size:.62rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
-.applicant{display:flex;align-items:center;gap:10px;padding:7px 10px;border:1px solid #dbe2d2;border-radius:10px;background:#fff;color:#1f3d40}
-.applicant>div{display:grid;min-width:0}
-.applicant strong{font-size:.78rem}
-.applicant small{font-size:.64rem;color:#5d7169}
-.applicant>b{display:inline-flex;align-items:center;gap:4px;margin-left:auto;padding:3px 8px;border-radius:6px;background:#dceecf;color:#284c37;font-size:.6rem;white-space:nowrap}
-.applicant>b svg{width:12px;height:12px}
-.applicant[data-picked="false"]>b{background:#f7e2d8;color:#8a3b25}
-.initial{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#e8d6b1;color:#5a3f22;font-size:.74rem;font-weight:850}
-.priya{display:grid;gap:6px;padding:6px;border:2px dashed #e5b6a4;border-radius:12px;background:#fbeee8}
-.priya .applicant{border-color:#e5b6a4}
-.skills{display:flex;flex-wrap:wrap;gap:5px;padding:0 4px 2px}
-.skills span{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:6px;background:#fff4e0;color:#805633;font-size:.62rem;font-weight:800}
-.skills svg{width:12px;height:12px}
+/* Scene 1: four applicant cards and the helper at work. */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 9px;align-items:center;padding:10px 11px;border:1px solid #efdcc2;border-radius:11px;background:#fffdf9}
+.card>div{display:grid;gap:3px;min-width:0}
+.card strong{font-size:.84rem}
+.meter{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:7px;font-size:.62rem;color:#7a6149}
+.meter i{height:7px;border-radius:9px;background:#f1e4d0;overflow:hidden}
+.meter b{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#e0a458,#c46e2b)}
+.meter em,.row em{font-family:var(--font-mono),monospace;font-style:normal;font-weight:850;color:#5a3616}
+.thinking{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;background:#1f4f52;color:#f5f0dc;font-size:.74rem;font-weight:750}
+.thinking svg{width:16px;height:16px;color:#f9d58a}
 
-/* Scene 3: Aunt Meena + the old records */
-.aunt{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
-.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f7d6de;color:#b0485e}
-.avatar svg{width:20px;height:20px}
-.aunt small{font-size:.72rem;font-weight:850;color:#826137}
-.aunt>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
-.table{width:100%;border-collapse:collapse;font-size:.7rem;color:#264c48}
-.table th{padding:5px 8px;background:#28474d;color:#fff4db;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-align:left;text-transform:uppercase}
-.table th:first-child{border-radius:6px 0 0 0}
-.table th:last-child{border-radius:0 6px 0 0}
-.table td{padding:5px 8px;border-bottom:1px solid #e6e0cf;font-family:var(--font-mono),monospace}
-.table td[data-hot="true"]{background:#f7e2d8;color:#8a3b25;font-weight:800;transition:background .25s ease-out}
-.panel .more,.more{margin:6px 0 10px;font-size:.66rem;color:#6a644e}
-.why,.pattern{display:flex;align-items:center;gap:9px;margin-top:8px;padding:9px 12px;border-radius:9px;font-size:.74rem}
-.why{background:#f4f1e4;color:#4d645b}
-.pattern{background:#f7e2d8;color:#8a3b25}
-.why svg,.pattern svg{flex:none;width:18px;height:18px}
+/* Scene 2: the shortlist result screen. */
+.result{display:grid;gap:7px}
+.listLabel{margin-top:3px;font-size:.62rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#8a6a4b}
+.row{display:flex;align-items:center;gap:9px;min-width:0;padding:8px 11px;border:1px solid #efdcc2;border-radius:10px;background:#fffdf9;transition:box-shadow .25s ease,border-color .25s ease}
+.row strong{min-width:50px;font-size:.82rem}
+.row em{margin-left:auto;font-size:.74rem}
+.row>svg{width:19px;height:19px}
+.row[data-kind="in"]{border-color:#cfe2c8;background:#eef6ea}
+.row[data-kind="in"]>svg{color:#2f7a4f}
+.row[data-kind="out"]>svg{color:#b0503a}
+.row[data-ring="true"]{border-color:#d9583b;box-shadow:0 0 0 3px #f6c2b3}
+.top{padding:2px 7px;border-radius:5px;background:#c8452e;color:#fff;font-size:.6rem;font-weight:850;white-space:nowrap}
 
-/* Scene 4: remove the unfair column */
-.task h2{margin-bottom:6px}
-.task>p{margin-bottom:12px}
-.columns{display:grid;gap:6px}
-.column{display:flex;align-items:center;gap:10px;padding:7px 8px 7px 11px;border:1px solid #dbe2d2;border-radius:10px;background:#fffaf0;color:#264c48}
-.column>svg{flex:none;width:18px;height:18px;color:#936834}
-.column>div{display:grid;min-width:0}
-.column strong{font-size:.76rem}
-.column small{font-size:.64rem;color:#5d7169}
-.column button{display:inline-flex;align-items:center;gap:5px;margin-left:auto;padding:6px 10px;border:1px solid #dcc4a0;border-radius:8px;background:#fffcf3;color:#805633;font-size:.68rem;font-weight:800}
-.column button svg{width:14px;height:14px}
-.column[data-gone="true"]{background:#f1efe6;border-style:dashed}
-.column[data-gone="true"] strong,.column[data-gone="true"] small{text-decoration:line-through;color:#8a8f86}
-.column[data-gone="true"] button{border-color:#7fbf8f;background:#dceecf;color:#284c37;opacity:1}
-.preview{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;padding:9px 10px;border-radius:10px;background:#f4f1e4}
-.preview small{width:100%;font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
-.mini{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border-radius:7px;background:#f7e2d8;color:#8a3b25;font-size:.7rem;font-weight:800}
-.mini[data-picked="true"]{background:#dceecf;color:#284c37}
-.mini svg{width:13px;height:13px}
-.mini em{font-style:normal;font-weight:600;font-size:.6rem;opacity:.8}
+/* Scene 3: Aunt Meera, the training-data table and what the app learned. */
+.aunt{display:flex;align-items:flex-start;gap:11px;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #eadfca}
+.aunt>div>span{font-size:.72rem;font-weight:850;color:#826137}
+.aunt p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.12rem;line-height:1.3;color:#375b53}
+.tableHead{display:flex;align-items:center;gap:7px;margin-bottom:8px;font-size:.78rem;color:#2f4f4a}
+.tableHead svg{width:17px;height:17px;color:#2f7369}
+.tableHead small{margin-left:auto;font-size:.64rem;color:#7a735c;white-space:nowrap}
+.tableWrap{overflow:hidden;border:1px solid #e3dccb;border-radius:10px;background:#fff}
+.table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.74rem;font-variant-numeric:tabular-nums}
+.table th{padding:7px 9px;background:#f4efe2;color:#5b5440;font-size:.65rem;font-weight:850;text-align:left}
+.table th:first-child{width:26%}
+.table td{padding:6px 9px;border-top:1px solid #efe9da;color:#2e433f;transition:background .25s ease,opacity .2s ease}
+.table th[data-label],.table td[data-label]{background:#f1f5ee}
+.table td[data-hired="true"]{color:#2f7a4f;font-weight:850}
+.table td[data-hired="false"]{color:#a0472f;font-weight:850}
+.table td[data-mark="true"]{background:#fdf0cf}
+.table th[data-mark="true"]{background:#f8d27a;color:#5a3a06}
+.table [data-out="true"]{opacity:.3;background:repeating-linear-gradient(135deg,#f3eee3 0 6px,#fff 6px 12px)}
+.table th[data-out="true"]{text-decoration:line-through}
+.pattern{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:12px;padding:9px 12px;border-radius:10px;background:#1f4f52;color:#f5f0dc;font-size:.74rem}
+.pattern>svg{width:16px;height:16px;color:#f9d58a}
+.pattern b{padding:2px 8px;border-radius:5px;background:#f8d27a;color:#4a2f06}
+.pattern small{margin-left:auto;padding:2px 9px;border:1px solid #f9d58a;border-radius:99px;color:#f9d58a;font-size:.64rem;font-weight:800}
+.gigo{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px;margin-top:9px}
+.gigo span{padding:8px 10px;border-radius:9px;background:#f6e3dc;color:#8d3b24;font-size:.72rem;font-weight:800;text-align:center}
+.gigo svg{width:18px;height:18px;color:#8d3b24}
 
-/* Scene 5: Priya shortlisted + what bias means */
-.shortlisted{margin-bottom:10px}
-.bias{display:flex;align-items:center;gap:11px;margin-bottom:6px;padding:11px 12px;border-radius:9px;background:#e8e1f3}
-.bias>svg{flex:none;width:22px;height:22px;color:#5b4a8a}
-.bias>div{display:grid;gap:2px}
-.bias strong{font-size:.8rem;color:#3d3266}
-.bias span{font-size:.7rem;color:#4d4866}
+/* Scene 4: the task. Removed columns fade in the table; the shortlist strip shows the latest run. */
+.columns{margin:2px 0 12px}
+.columns button>svg:last-child{width:14px;height:14px;color:#9b8a70}
+.columns button[data-out="true"]{border-color:#d7a894;background:#f6e6de;color:#8d3b24}
+.columns button[data-out="true"]>svg{color:#8d3b24}
+.run{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:10px;padding:9px 12px;border-radius:10px;background:#f3efe4;color:#4b4a3a;font-size:.72rem}
+.run>svg{width:16px;height:16px}
+.run>span{font-weight:850}
+.run b{padding:3px 8px;border:1px solid #e0d6c0;border-radius:6px;background:#fff;font-size:.7rem}
+.run em{margin-left:auto;font-style:normal;font-weight:850;color:#a0472f}
+.run[data-fair="true"]{background:#e2efdb;color:#23553b}
+.run[data-fair="true"] b{border-color:#a9cfae;background:#f6fbf2;animation:fitIn .25s var(--ease)}
+
+/* Scene 5: before/after shortlist. */
+.compare{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;margin-bottom:16px}
+.compare>div{display:grid;gap:3px;padding:11px 13px;border-radius:11px}
+.compare>div[data-kind="old"]{background:#f3ece2;color:#7a5a3a}
+.compare>div[data-kind="new"]{background:#dcecd3;color:#24553a}
+.compare span{font-size:.6rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.compare strong{font-size:.92rem}
+.compare small{font-size:.66rem}
+.compare>svg{width:20px;height:20px;color:#8a7a5c}
+
+/* Scene 6: team board with a sold-out shelf. */
+div.ending{justify-content:center;gap:13px;background-color:#fdf0dc}
+.shelf{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px;border-radius:12px;background:#8b5a32;box-shadow:inset 0 -6px 0 #6f4524}
+.shelf span{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:#fff3de;color:#b36a2a}
+.shelf svg{width:22px;height:22px}
+.shelf b{margin-left:auto;padding:6px 11px;border-radius:7px;background:#c8452e;color:#fff;font-size:.74rem;rotate:-3deg}
+.chat{display:flex;align-items:flex-end;gap:9px}
+.chat p{display:grid;gap:2px;margin:0;padding:10px 13px;border-radius:14px 14px 14px 4px;background:#fffdf9;box-shadow:0 4px 14px #7a4b1a14;font-size:.8rem;line-height:1.4}
+.chat strong{font-size:.66rem;color:#8c2f4a}
+.welcome{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:12px;background:#1f4f52;color:#fff5e4}
+.welcome>svg{width:30px;height:30px;color:#c9fac7}
+.welcome>div{display:grid;gap:3px}
+.welcome strong{font-family:var(--font-display),sans-serif;font-size:1.15rem;line-height:1.15}
+.welcome span{font-size:.72rem;color:#d4e6e2}
+
+/* Narration-synced reveals (static under reduced motion via the shell's global rule). */
+.card,.thinking,.top,.pattern,.pattern small,.gigo,.shelf b,.chat{transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.card[data-show="false"],.thinking[data-show="false"],.top[data-show="false"],.pattern[data-show="false"],.pattern small[data-show="false"],.gigo[data-show="false"],.shelf b[data-show="false"],.chat[data-show="false"]{opacity:0;transform:translateY(6px)}
+@keyframes fitIn{from{transform:translateY(-5px);opacity:.5}to{transform:translateY(0);opacity:1}}
 
 @media(max-width:600px){
-  .awning{height:24px;background-size:auto}
-  .shelf{gap:8px;padding:0 8px 3px;border-bottom-width:5px}
-  .shelf svg{width:24px;height:24px}
-  .sign{right:5%;top:22%;padding:8px 10px}
-  .sign strong{font-size:.86rem}
-  .pill{font-size:.64rem;padding:5px 9px}
-  .list{padding:10px}
-  .applicant{flex-wrap:wrap;gap:4px 8px}
-  .applicant>b{margin-left:36px}
-  .aunt>div>p{font-size:1.05rem}
-  .table th,.table td{padding:4px 5px}
-  .column{gap:8px;padding:7px 7px 7px 9px}
-  .column button{padding:5px 8px;font-size:.64rem}
+  div.app{gap:9px;padding:11px}
+  .shop{padding:8px 9px;gap:8px}.shop>svg{width:28px;height:28px;padding:5px}.shop strong{font-size:.86rem}.shop>div>span{font-size:.6rem}.pill{font-size:.58rem;padding:4px 7px}
+  .cards{gap:6px}.card{padding:8px;gap:6px 7px}.card strong{font-size:.74rem}.avatar{width:26px;height:26px;font-size:.68rem}.school{font-size:.56rem;padding:2px 5px}.meter{font-size:.56rem;gap:5px}
+  .thinking{font-size:.66rem;padding:8px 10px}
+  .row{gap:6px;padding:7px 8px}.row strong{min-width:0;font-size:.74rem}.row em{font-size:.66rem}.row>svg{width:17px;height:17px}.top{font-size:.54rem;padding:2px 5px}
+  .aunt p{font-size:.98rem}
+  .table{font-size:.66rem}.table th{padding:6px 5px;font-size:.58rem}.table td{padding:5px}
+  .pattern{font-size:.68rem}.gigo span{font-size:.64rem;padding:7px 6px}
+  .run{font-size:.66rem;padding:8px 10px}.run b{font-size:.64rem}
+  .compare{gap:6px}.compare>div{padding:9px}.compare strong{font-size:.78rem}.compare small{font-size:.6rem}.compare>svg{width:16px}
+  .shelf span{width:36px;height:36px}.shelf svg{width:18px;height:18px}.shelf b{font-size:.64rem}
+  .chat p{font-size:.72rem}.welcome strong{font-size:.98rem}.welcome>svg{width:24px;height:24px}
 }

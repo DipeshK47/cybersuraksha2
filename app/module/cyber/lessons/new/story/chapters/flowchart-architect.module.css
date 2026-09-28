@@ -1,99 +1,96 @@
-/* Tara's hand-wash chapter only: lab art, the soap counter, flowchart shapes, the build-and-test task and the two-path review. Shared pieces live in ../story-player.module.css. */
-/* Narration-synced reveals keep their space so nothing jumps. */
-.sensor,.judges,.oldPlan,.repeat,.warning,.legend>div,.result,.tip{transition:opacity .25s ease-out,transform .25s var(--ease)}
-[data-on="false"].sensor,[data-on="false"].judges,[data-on="false"].oldPlan,[data-on="false"].repeat,[data-on="false"].warning,.legend>div[data-on="false"],[data-on="false"].result,[data-on="false"].tip{opacity:0;transform:translateY(6px)}
+/* Tara chapter only: lab art overlays, Mr. Das's note, the old plan, the flowchart board and its task controls. Shared pieces live in ../story-player.module.css. */
+.lab{background-image:url('/cyber-missions/engineering-lab.webp');background-position:78% center}
+.chip{position:absolute;top:17px;right:18px;display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:#123a43e8;color:#fff4db;font-size:.72rem;font-weight:800;box-shadow:0 7px 20px #14223844}
+.chip svg{width:15px;height:15px;color:#f9d58a}
+.squirt{animation:squirt .28s var(--ease)}
+.stats{display:flex;gap:8px;margin-top:4px}
+.stats>span{padding:5px 11px;border:1px solid #fff4e255;border-radius:999px;background:#fff4e21c;font-size:.72rem}
+.stats b{font-family:var(--font-mono),monospace;color:#ffd9a8}
+.tank{display:inline-block;width:92px;height:9px;overflow:hidden;border-radius:9px;background:#e4d3b0}
+.tank>i{display:block;height:100%;background:#c46a38;transform-origin:left;transition:transform .3s ease-out}
+.judge{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:9px;max-width:250px;padding:9px 13px 9px 9px;border-radius:12px;background:#fffcf3;box-shadow:0 7px 20px #14223844}
+.judge>span,.teacher>span{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#e9dcf4;color:#573a78;font-weight:850;font-size:.85rem}
+.judge>div{display:grid;gap:2px;min-width:0}
+.judge strong{font-size:.72rem;color:#1f3f40}
+.judge em{font-style:normal;font-size:.7rem;line-height:1.3;color:#4d645b}
 
-/* Scenes 1, 2 and 6: the school lab with the hand-wash station on the right */
-.lab{background-image:url('/cyber-missions/engineering-lab.webp');background-position:88% 45%}
-.sensor{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#fffcf3;color:#2f7369;font-size:.72rem;font-weight:800;box-shadow:0 7px 20px #14223844}
-.sensor svg{width:15px;height:15px}
-.meter{position:absolute;z-index:1;right:14px;bottom:14px;display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;padding:10px 12px;border-radius:12px;background:#fffcf3f2;color:#284747;box-shadow:0 10px 24px #0a152466}
-.meter>div{display:grid;justify-items:center;gap:1px;padding:2px 10px}
-.meter>div svg{width:18px;height:18px;color:#2f7ab0}
-.meter strong{font-family:var(--font-display),sans-serif;font-size:1.7rem;line-height:1;color:#b4543a}
-.meter>div:nth-child(2) strong{color:#2f7369}
-.meter>div span{font-size:.6rem;font-weight:800;color:#5d7169}
-.judges{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:5px;margin:4px 0 0;padding-top:6px;border-top:1px solid #e6e0cf;font-size:.66rem;font-weight:800;color:#805633}
-.judges svg{width:14px;height:14px}
-
-/* Flowchart shapes (standard notation: oval, rectangle, diamond) */
-.node{display:grid;place-items:center;min-height:34px;padding:6px 14px;border:2px solid #9ead95;background:#fffaf0;color:#264c48;font-size:.7rem;font-weight:800;line-height:1.15;text-align:center;transition:background .2s ease-out,border-color .2s ease-out}
-.node[data-shape="oval"]{min-width:90px;border-radius:999px}
-.node[data-shape="rect"]{min-width:118px;border-radius:3px}
-.node[data-shape="slot"]{min-width:150px;min-height:38px;border:2px dashed #c8bfa6;border-radius:8px;background:#f4f1e4;color:#9a927c}
-.node[data-shape="diamond"]{position:relative;width:176px;height:70px;padding:0;border:none;background:#9ead95;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
-.node[data-shape="diamond"]>span{position:absolute;inset:3px 5px;display:grid;place-items:center;padding:0 36px;background:#fffaf0;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
-.node[data-lit="true"]{border-color:#2f8f5f;background:#e3f3de;color:#284c37}
-.node[data-shape="diamond"][data-lit="true"]{background:#2f8f5f}
-.node[data-shape="diamond"][data-lit="true"]>span{background:#e3f3de}
-.down{display:flex;align-items:center;gap:3px;height:18px;color:#9ead95}
-.down svg{width:16px;height:16px}
-.down em{font-size:.6rem;font-style:normal;font-weight:850;color:#2f7369}
-.down[data-lit="true"]{color:#2f8f5f}
-.chart{display:grid;grid-template-columns:minmax(0,1fr) 112px;justify-items:center;align-items:center;row-gap:2px;padding:12px 10px;border-radius:12px;background-color:#f7f4ea;background-image:linear-gradient(#ebe5d4 1px,transparent 1px),linear-gradient(90deg,#ebe5d4 1px,transparent 1px);background-size:16px 16px}
-.chart>*{grid-column:1}
-.chart>.noPath{position:relative;grid-column:2;grid-row:3;justify-self:stretch;display:grid;justify-items:center;gap:2px;margin-left:12px;padding:6px;border:1.5px dashed #c8bfa6;border-radius:8px;background:#fffaf0;color:#6a644e;font-size:.6rem;line-height:1.25;text-align:center;transition:opacity .2s ease-out}
-.noPath:before{content:"";position:absolute;right:100%;top:50%;width:14px;border-top:2px solid #9ead95}
-.noPath em{font-style:normal;font-weight:850;color:#8a3b25}
-.noPath svg{width:14px;height:14px}
-.noPath[data-ready="false"]{opacity:.4}
-.noPath[data-lit="true"]{border-color:#2f8f5f;border-style:solid;background:#e3f3de;color:#284c37}
-.mini{flex:none;display:inline-block;width:22px;height:13px;border:2px solid currentColor}
-.mini[data-shape="oval"]{border-radius:999px}
-.mini[data-shape="rect"]{border-radius:2px}
-.mini[data-shape="diamond"]{width:13px;height:13px;margin:0 4px;transform:rotate(45deg)}
-
-/* Scene 3: Mr Iyer + the old plan + the shape legend */
-.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
-.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
-.avatar svg{width:20px;height:20px}
+/* Scene 3: Mr. Das and the old plan */
+.teacher{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #dce3d4}
+.teacher>span{background:#d9ebe4;color:#1f5a55}
 .teacher small{font-size:.72rem;font-weight:850;color:#826137}
-.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
-.oldPlan{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:14px 12px 10px;border-radius:12px;background-color:#f7f4ea;background-image:linear-gradient(#ebe5d4 1px,transparent 1px),linear-gradient(90deg,#ebe5d4 1px,transparent 1px);background-size:16px 16px}
-.oldPlan>svg{width:16px;height:16px;color:#9ead95}
-.repeat{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;margin-top:4px;padding-top:6px;border-top:2px dashed #e5b6a4;color:#b4543a;font-size:.66rem;font-weight:800}
-.repeat svg{width:14px;height:14px}
-.panel .warning,.warning{display:flex;align-items:center;gap:9px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#f7e2d8;color:#8a3b25;font-size:.76rem;line-height:1.35}
-.warning svg{flex:none;width:18px;height:18px}
-.legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
-.legend>div{display:flex;align-items:center;gap:9px;padding:10px;border-radius:9px;background:#f4f1e4;color:#264c48;font-size:.74rem;font-weight:800}
-.legend .mini{color:#2f7369}
+.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.18rem;line-height:1.25;color:#375b53}
+.plan{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+.plan .planStep{margin:8px 0}
+.plan .planStep>span{width:42px;height:30px;border-radius:6px;background:transparent}
+.plan .planStep svg{color:#7a5a2c}
+.missing{grid-column:1/-1;display:flex;align-items:center;gap:11px;margin-top:10px;padding:11px 13px;border:2px dashed #c98a2e;border-radius:10px;background:#fff3da;color:#6b4516;font-size:.85rem;font-weight:800;opacity:0;transform:translateY(6px);transition:opacity .28s ease-out,transform .28s var(--ease)}
+.missing[data-show="true"]{opacity:1;transform:none}
+.missing em{margin-left:auto;padding:3px 8px;border-radius:6px;background:#c1662f;color:#fff8ea;font-style:normal;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase}
 
-/* Scene 4: build and test */
-.task h2{margin-bottom:6px}
-.task>p{margin-bottom:12px}
-.bench{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start}
-.side{display:grid;gap:7px}
-.side>small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
-.blocks,.tests{display:grid;gap:6px}
-.blocks button,.tests button{display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.74rem;text-align:left}
-.blocks button:not(:disabled):hover,.tests button:not(:disabled):hover{transform:translateY(-2px)}
-.blocks button[aria-pressed="true"]{background:#e1ead5;opacity:.45}
-.blocks button[data-trap="true"]{color:#805633}
-.tests button svg{flex:none;width:16px;height:16px;color:#2f7369}
-.tests button[aria-pressed="true"]{border-color:#7fbf8f;background:#e3f3de;color:#284c37;opacity:1}
-.tests .tick{margin-left:auto;color:#2f8f5f}
+/* Mini shape chips (oval / rectangle / diamond). Doubled class beats the kit's generic svg sizing. */
+.shape.shape{width:34px;height:22px;flex:none}
+.shape :is(rect,polygon){stroke-width:1.6}
+.shape[data-kind="terminal"] :is(rect,polygon){fill:#dcefd0;stroke:#4f8a63}
+.shape[data-kind="process"] :is(rect,polygon){fill:#d9e8f3;stroke:#3c6f93}
+.shape[data-kind="decision"] :is(rect,polygon){fill:#fbe5b8;stroke:#b27a25}
 
-/* Scene 5: both paths tested */
-.review .bench{align-items:center}
-.result,.tip{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:.72rem}
-.result{background:#e3f3de;color:#284c37}
-.result>div{display:grid;gap:2px}
-.result strong{font-size:.78rem}
-.result svg{flex:none;width:18px;height:18px}
-.result>svg:last-child{margin-left:auto;color:#2f8f5f}
-.tip{background:#f4f1e4;color:#4d645b}
-.tip svg{flex:none;width:18px;height:18px;color:#936834}
+/* Task + lesson layout: board beside controls when the panel is wide, stacked on phones. */
+.task{container-type:inline-size}
+.task h2{margin-bottom:12px}
+.split{display:grid;gap:14px}
+@container (min-width:560px){.split{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:22px;align-items:start}}
+.board{overflow:hidden;border:1px solid #cfdbe0;border-radius:12px;background-color:#f5f8fa;background-image:linear-gradient(#e3ebf0 1px,transparent 1px),linear-gradient(90deg,#e3ebf0 1px,transparent 1px);background-size:16px 16px}
+.boardBar{display:flex;align-items:center;gap:7px;padding:7px 11px;background:#1d4550;color:#eaf4f1;font-size:.66rem;font-weight:800;letter-spacing:.03em}
+.boardBar svg{width:14px;height:14px;color:#f9d58a}
+.boardBar small{display:flex;align-items:center;gap:4px;margin-left:auto;color:#bfd8d2;font-weight:700}
+.boardBar small svg{width:12px;height:12px;color:#bff0c4}
+.chart{box-sizing:border-box;display:block;width:100%;height:auto;padding:8px 6px 4px}
+.chart text{font-size:13px;font-weight:750;fill:#183b40;text-anchor:middle;dominant-baseline:central}
+.chart .base{fill:#fff;stroke:#4d6668;stroke-width:1.6}
+.chart [data-kind="terminal"]>.base{fill:#dcefd0;stroke:#4f8a63}
+.chart [data-kind="process"]>.base{fill:#d9e8f3;stroke:#3c6f93}
+.chart [data-kind="decision"]>.base{fill:#fbe5b8;stroke:#b27a25}
+.chart [data-kind="edge"]>.base{fill:none;stroke:#4d6668;stroke-width:1.8}
+.chart [data-dim="true"]{opacity:.38}
+.head{fill:#4d6668}
+.headLit{fill:#c0701a}
+.chart .glow .base{fill:#ffe39a;stroke:#c0701a;stroke-width:2.4}
+.chart [data-kind="edge"] .glow .base{fill:none;stroke:#c0701a;stroke-width:2.8}
+.glow{animation:glowIn .26s ease-out both;animation-delay:var(--d)}
+.placed{transform-box:fill-box;transform-origin:center;animation:pop .25s var(--ease)}
+.slot rect{fill:#fffdf6;stroke:#9db0a8;stroke-width:1.5;stroke-dasharray:5 4}
+.slot text{font-size:19px;fill:#8aa09a}
+.slot[data-current="true"] rect{fill:#fff2d6;stroke:#c0701a;stroke-width:2}
+.slot[data-current="true"] text{fill:#b0661a}
+.slot[data-current="true"]{animation:pulse 1.3s ease-in-out infinite alternate}
+.chart .branch{font-size:11px;font-weight:850;fill:#8a5a1c}
+.chart .loopText{font-size:10.5px;font-weight:700;font-style:italic;fill:#5f7671}
 
-@media(max-width:600px){
-  .meter{right:10px;bottom:10px;padding:8px}
-  .meter strong{font-size:1.25rem}
-  .bench{grid-template-columns:1fr}
-  .chart{grid-template-columns:minmax(0,1fr) 92px;padding:10px 6px}
-  .node[data-shape="diamond"]{width:150px;height:64px}
-  .node[data-shape="diamond"]>span{padding:0 30px}
-  .node[data-shape="slot"]{min-width:126px}
-  .chart>.noPath{margin-left:8px;font-size:.56rem}
-  .legend{grid-template-columns:1fr}
-  .teacher>div>p{font-size:1.05rem}
-}
+.controls{min-width:0}
+.controls .prompt{display:grid;gap:3px;margin:0 0 11px;font-size:.9rem;font-weight:800;line-height:1.3;color:#1f4744}
+.prompt>span{font-size:.66rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:#96652a}
+.bank.bank{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.bank.bank button{justify-content:flex-start;min-height:54px;padding:8px 10px;text-align:left;line-height:1.2}
+.bank.bank button>span{display:grid;gap:2px}
+.bank.bank button small{font-size:.62rem;font-weight:700;color:#6f7d72}
+.tests{display:grid;gap:8px}
+.tests button{display:flex;align-items:center;gap:9px;padding:9px 12px;border:1px solid #c8d5bd;border-radius:9px;background:#fffaf0;color:#2d5448;text-align:left}
+.tests button>svg{width:18px;height:18px;color:#3c6f93}
+.tests button[aria-pressed="true"]{border-color:#7fb08a;background:#e6f1dc}
+.tests em{display:flex;align-items:center;gap:4px;margin-left:auto;padding:3px 8px;border-radius:6px;background:#cfe6c4;color:#2c5a39;font-style:normal;font-size:.68rem;white-space:nowrap}
+.tests em svg{width:13px;height:13px}
+
+/* Scene 5 legend beside the finished chart */
+.legend{display:grid;align-content:start}
+.legend .legendRow{align-items:flex-start;margin:7px 0}
+.legend .legendRow>span{width:42px;height:30px;border-radius:6px;background:transparent}
+.legend .legendRow svg{color:#7a5a2c}
+.legendRow>div{display:grid;gap:2px}
+.legendRow strong{font-size:.84rem}
+.legendRow small{font-size:.72rem;line-height:1.35;color:#4d645b}
+
+@keyframes squirt{from{transform:scale(.72)}to{transform:scale(1)}}
+@keyframes glowIn{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:.35;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+@keyframes pulse{from{opacity:1}to{opacity:.55}}
+@media(max-width:600px){.chip{top:12px;right:12px;font-size:.62rem;padding:6px 9px}.judge{top:10px;left:10px;max-width:215px;padding:7px 10px 7px 7px}.judge>span{width:28px;height:28px;font-size:.75rem}.judge strong{font-size:.64rem}.judge em{font-size:.63rem}.stats>span{font-size:.64rem;padding:4px 8px}.tank{width:70px}.teacher>div>p{font-size:1.02rem}.plan{grid-template-columns:1fr}.plan .planStep{margin:5px 0;font-size:.8rem}.missing{font-size:.78rem}.bank.bank button{min-height:50px;padding:7px 8px;font-size:.7rem}.bank.bank .shape{width:28px;height:18px}.controls .prompt{font-size:.84rem}.legendRow strong{font-size:.78rem}.legendRow small{font-size:.68rem}}

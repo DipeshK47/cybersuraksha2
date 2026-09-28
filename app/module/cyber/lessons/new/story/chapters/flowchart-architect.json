@@ -1,78 +1,78 @@
 {
-  "duration": 101.479,
+  "duration": 105.863,
   "scenes": [
     {
       "id": "meet",
       "label": "Meet Tara",
-      "title": "Science fair day!",
+      "title": "Ten minutes to the judges!",
       "mood": "happy",
-      "caption": "Meet Tara. It's science fair day, and her project is ready: an automatic hand-wash station. Put your hands under the sensor, and it gives you soap, with no touching. The judges arrive at ten o'clock. Tara does one last test before they come.",
-      "dialogue": "No touching, no mess. Just clean hands!",
-      "status": "Ready for the judges",
+      "caption": "Meet Tara. She's built an automatic hand-wash station for the school science fair. There's a sensor, a small pump and a tank of soap, all wired up on her lab table. The judges arrive in ten minutes, and Tara can't wait to show them how it works!",
+      "dialogue": "The judges are going to love this!",
+      "status": "Proud of her project",
       "start": 0.0,
-      "duration": 15.125
+      "duration": 15.785
     },
     {
-      "id": "squirt",
+      "id": "problem",
       "label": "Soap everywhere",
-      "title": "Soap for an empty sink",
+      "title": "Squirt! Squirt! Nobody's there.",
       "mood": "sad",
-      "caption": "But something's wrong. Nobody is at the sink, and the station squirts soap anyway. Squirt. Wait. Squirt again! Every few seconds, soap splashes into an empty sink. The puddle grows, and the judges are already walking over. Tara's station can't tell whether anyone is there.",
-      "dialogue": "Stop! There aren't any hands there!",
-      "status": "Soap everywhere",
+      "caption": "Tara switches it on. Squirt! Soap splashes into the empty sink. A few seconds later... squirt! Again and again, even though nobody is there. The soap is running out, and the judges are almost here. Tara's heart sinks. Her machine is doing exactly what her plan says.",
+      "dialogue": "Stop! Nobody's even there!",
+      "status": "Feeling worried",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 15.775,
-      "duration": 16.789
+      "start": 16.435,
+      "duration": 17.399
     },
     {
       "id": "plan",
-      "label": "Draw the plan",
-      "title": "The plan never asks a question.",
+      "label": "Read the plan",
+      "title": "The plan never asks.",
       "mood": "thinking",
-      "caption": "Her teacher, Mr Iyer, helps her draw the plan the station follows. Start, give soap, wait, repeat. It never asks a question! A plan drawn with shapes and arrows is called a flowchart. Ovals start and end it, rectangles are actions, and diamonds are decisions.",
-      "speech": "Her teacher, Mister Iyer, helps her draw the plan the station follows. Start, give soap, wait, repeat. It never asks a question! A plan drawn with shapes and arrows is called a flowchart. Ovals start and end it, rectangles are actions, and diamonds are decisions.",
-      "dialogue": "It needs to ask a question first!",
-      "status": "Drawing the plan",
-      "start": 33.215,
-      "duration": 16.555
+      "caption": "Tara's science teacher, Mr. Das, comes over. Together, they read her plan one step at a time. Start. Dispense soap. Wait. Repeat. There's no step that checks for hands! A machine can't guess. It only follows its plan, so the plan has to ask a question.",
+      "speech": "Tara's science teacher, Mister Das, comes over. Together, they read her plan one step at a time. Start. Dispense soap. Wait. Repeat. There's no step that checks for hands! A machine can't guess. It only follows its plan, so the plan has to ask a question.",
+      "dialogue": "My plan never asks if hands are there.",
+      "status": "Reading the plan",
+      "start": 34.485,
+      "duration": 17.466
     },
     {
       "id": "build",
       "label": "Build the flowchart",
-      "title": "Ask first, then act.",
+      "title": "Question first, soap second.",
       "mood": "thinking",
-      "caption": "Your turn. Rebuild Tara's flowchart. Tap the blocks in order, from the top. First the station must ask a question. Then choose what happens when hands are there. Then test both paths. Careful: giving soap before asking is exactly the old mistake.",
-      "dialogue": "Ask first, then act.",
-      "status": "Building the flowchart",
-      "start": 50.419,
-      "duration": 15.872
+      "caption": "Now it's your turn. Help Tara redraw her plan as a flowchart. It uses standard shapes: an oval to start and end, a rectangle for an action, and a diamond for a question with two answers, yes or no. Place each block, then test both paths.",
+      "dialogue": "Let's put the question first.",
+      "status": "Building with you",
+      "start": 52.601,
+      "duration": 16.246
     },
     {
       "id": "paths",
-      "label": "Test every path",
-      "title": "A decision has two paths.",
+      "label": "Two paths",
+      "title": "One diamond, two paths.",
       "mood": "happy",
-      "caption": "Both paths work! Hands under the sensor: yes, give soap, done. Empty sink: no, wait and ask again. A decision always has at least two paths, so good testers try every one. Drawing a flowchart first lets you find mistakes before you build anything.",
-      "dialogue": "Yes path, no path. Both tested!",
-      "status": "Testing every path",
-      "start": 66.941,
-      "duration": 15.509
+      "caption": "Look at Tara's new flowchart. The diamond is called a decision. It asks a yes or no question before anything happens. Yes leads to the soap, then the end. No waits, then loops back to ask again. Because the question comes first, soap only flows when hands are really there.",
+      "dialogue": "Ask first. Then act.",
+      "status": "Seeing both paths",
+      "start": 69.497,
+      "duration": 18.011
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "A dry sink for the judges",
+      "title": "Soap only when it's needed.",
       "mood": "happy",
-      "caption": "Tara updates the station's program just in time. When the judges arrive, the sink stays dry until someone holds out their hands. Squirt! The judges love it, and Tara's rule is clear: ask first, then act. Your turn: help Tara build and test more flowcharts, one block at a time!",
-      "dialogue": "It only gives soap when hands are there!",
-      "status": "Proud inventor",
+      "caption": "The judges arrive as Tara holds out her hand. One neat squirt! She pulls away, and the station waits quietly. The judges smile and ask to see her flowchart. A machine can only choose if its plan asks a question. Your turn: help Tara choose the right shapes!",
+      "dialogue": "One squirt, just when it's needed!",
+      "status": "Ready for the judges",
       "tone": "resolved",
-      "start": 83.101,
-      "duration": 17.728
+      "start": 88.157,
+      "duration": 17.055
     }
   ]
 }

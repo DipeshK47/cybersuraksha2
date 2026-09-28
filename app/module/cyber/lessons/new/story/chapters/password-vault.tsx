@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor, BellRing, Check, Cloud, Copy, Drum, Feather, Flower2, Gamepad2, GraduationCap, House, KeyRound, Link2, Mail, NotebookPen, Play, RotateCcw, Rocket, Shell, ShieldAlert, ShieldCheck, Smartphone, Sparkles, Sprout, TreeDeciduous, Umbrella, UserRound, Vault } from "lucide-react";
+import { Anchor, BellRing, Bird, Check, Cloud, Copy, Drum, Feather, Flower2, Gamepad2, GraduationCap, House, KeyRound, Link2, LockKeyhole, Mail, NotebookPen, Play, RotateCcw, Rocket, Shell, ShieldAlert, ShieldCheck, Smartphone, Sparkles, Sprout, TreeDeciduous, Umbrella, UserRound } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -21,8 +21,8 @@ const alerts = [
 const words = ["Anchor", "Cloud", "Drum", "Feather", "Lotus", "Rocket", "Shell", "Umbrella", "Banyan"];
 const wordIcons = [Anchor, Cloud, Drum, Feather, Flower2, Rocket, Shell, Umbrella, TreeDeciduous];
 const example = [["Anchor", "Cloud", "Drum"], ["Feather", "Lotus", "Rocket"], ["Shell", "Umbrella", "Banyan"]];
-// Sharing two of three words is "almost the same" key: attackers try small changes too.
-const close = (a: string[], b: string[]) => a.filter(word => b.includes(word)).length >= 2;
+// How many words two passphrases share. 2+ counts as "almost the same" (attackers try small changes); 1 is a head start.
+const shared = (a: string[], b: string[]) => a.filter(word => b.includes(word)).length;
 
 type Fall = "up" | "lean" | "down";
 /** Three account dominoes. A link is a chain (same key) or a shield (own key); null hides it. */
@@ -36,7 +36,9 @@ function Dominoes({ fall, links, labels, light }: { fall: Fall[]; links: (boolea
 }
 
 const garden = <>
+  <span className={r.cloudSea} />
   <span className={r.sun} />
+  <Bird className={r.bird} aria-hidden="true" />
   <Cloud className={r.cloud} data-i="1" aria-hidden="true" />
   <Cloud className={r.cloud} data-i="2" aria-hidden="true" />
   <span className={r.island} data-i="1"><TreeDeciduous aria-hidden="true" /><Flower2 aria-hidden="true" /></span>
@@ -47,7 +49,7 @@ const garden = <>
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
   const [phrases, setPhrases] = useState<string[][]>([[], [], []]);
   const [active, setActive] = useState(0);
-  const [fell, setFell] = useState<boolean[] | null>(null);
+  const [fell, setFell] = useState<number[] | null>(null);
   const [passing, setPassing] = useState(false);
   const done = solved || passing;
   const shown = solved && phrases.some(p => p.length < 3) ? example : phrases;
@@ -66,23 +68,29 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function copyAll() { if (!done && phrases[0].length === 3) edit(phrases.map(() => [...phrases[0]])); }
   function replay() {
     if (done || phrases.some(p => p.length < 3)) return;
-    const result = phrases.map((p, i) => i === 0 || close(p, phrases[0]));
+    const result = phrases.map(p => shared(p, phrases[0]));
     setFell(result);
-    const hit = accounts.filter((_, i) => i > 0 && result[i]);
+    const names = (list: typeof accounts) => list.map(a => a.name).join(" and ");
+    const hit = accounts.filter((_, i) => i > 0 && result[i] >= 2);
     if (hit.length) {
-      const exact = hit.every(a => { const p = phrases[accounts.indexOf(a)]; return p.every(w => phrases[0].includes(w)); });
-      setHint(`${hit.map(a => a.name).join(" and ")} ${hit.length > 1 ? "use" : "uses"} ${exact ? "the same" : "almost the same"} words as the game, so the leaked passphrase opened ${hit.length > 1 ? "them" : "it"} too.${exact ? "" : " Attackers try small changes."} Give each account its own words.`);
+      const exact = hit.every(a => result[accounts.indexOf(a)] === 3);
+      setHint(`${names(hit)} ${hit.length > 1 ? "use" : "uses"} ${exact ? "the same" : "almost the same"} words as the game, so the leaked passphrase opened ${hit.length > 1 ? "them" : "it"} too.${exact ? "" : " Attackers try small changes."} Give each account its own words.`);
       return;
     }
-    if (close(phrases[1], phrases[2])) { setHint("The game leak stopped at the game. But School portal and Email share a passphrase, so one leak could topple both. Make them different."); return; }
+    const wobble = accounts.filter((_, i) => i > 0 && result[i] === 1);
+    if (wobble.length) { setHint(`${names(wobble)} stood, but ${wobble.length > 1 ? "they share" : "it shares"} a word with the leaked game passphrase. That gives attackers a head start. Use all-new words.`); return; }
+    if (shared(phrases[1], phrases[2])) { setHint("The game leak stopped at the game. But School portal and Email share words, so a leak from one could help attackers into the other. Make every word different."); return; }
     setHint("Only the game fell. The other dominoes stood, because each account has its own passphrase.");
     setPassing(true);
     window.setTimeout(markSolved, reduced ? 0 : 700);
   }
 
   const ready = shown.filter(p => p.length === 3).length;
-  const result = solved ? [true, false, false] : fell;
-  const taskFall: Fall[] = result ? [result[1] ? "down" : "lean", result[1] ? "down" : "up", result[2] ? "down" : "up"] : ["up", "up", "up"];
+  const result = solved ? [3, 0, 0] : fell;
+  // Game leans when the chain holds and falls onto School when School is (almost) the same key.
+  const state = (n: number): Fall => n >= 2 ? "down" : n === 1 ? "lean" : "up";
+  const taskFall: Fall[] = result ? [result[1] ? "down" : "lean", state(result[1]), state(result[2])] : ["up", "up", "up"];
+  const label = (n: number) => n >= 2 ? "Opened too" : n === 1 ? "Wobbling" : "Still safe";
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 5) && <div className={k.device}>
@@ -127,10 +135,10 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       </button>)}</div>
       <div className={k.bank}>{words.map((word, i) => { const Icon = wordIcons[i]; const used = phrases[active].includes(word); return <button key={word} type="button" onClick={() => addWord(word)} disabled={done || used || phrases[active].length === 3} aria-pressed={used}><Icon aria-hidden="true" />{word}</button>; })}</div>
       <div className={r.result}>
-        <Dominoes light fall={taskFall} links={result ? [result[1], result[2]] : [null, null]} labels={result ? ["Leaked", result[1] ? "Opened too" : "Still safe", result[2] ? "Opened too" : "Still safe"] : ["Ready", "Ready", "Ready"]} />
+        <Dominoes light fall={taskFall} links={result ? [result[1] > 0, result[2] > 0] : [null, null]} labels={result ? ["Leaked", label(result[1]), label(result[2])] : ["Ready", "Ready", "Ready"]} />
         <p className={k.hint} aria-live="polite">{hint || (solved ? "Breach replayed: only the game account was affected." : ready === 3 ? "All three are ready. Replay the breach to test them." : `${ready} of 3 accounts have a passphrase.`)}</p>
       </div>
-      <div className={k.actions}>
+      <div className={`${k.actions} ${r.taskActions}`}>
         <button type="button" onClick={() => edit(phrases.map((p, i) => i === active ? [] : p))} disabled={done || !phrases[active].length}><RotateCcw />Clear card</button>
         <button className={r.trap} data-trap="true" type="button" onClick={copyAll} disabled={done || phrases[0].length < 3}><Copy />Copy game’s words to all</button>
         <button className={k.primary} type="button" onClick={replay} disabled={done || ready < 3}><Play />Replay the breach</button>
@@ -142,7 +150,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <h2>Many keys, one safe place</h2>
       <div className={r.keys}>{accounts.map(({ name, Icon }, i) => <div className={r.keyRow} key={name}><Icon aria-hidden="true" /><strong>{name}</strong><span>{shown[i].join(" · ")}</span><KeyRound aria-hidden="true" /></div>)}</div>
       <div className={r.helpers}>
-        <div className={r.helper} {...on(.3)}><Vault aria-hidden="true" /><strong>Password manager</strong><span>An app that locks every password behind one strong main password.</span></div>
+        <div className={r.helper} {...on(.3)}><LockKeyhole aria-hidden="true" /><strong>Password manager</strong><span>An app that locks every password behind one strong main password.</span></div>
         <div className={r.helper} {...on(.55)}><NotebookPen aria-hidden="true" /><strong>Paper list</strong><span>Kept safe at home by a parent, never in a school bag.</span></div>
       </div>
       <div className={r.twoStep} {...on(.74)}><Smartphone aria-hidden="true" /><div><strong>Two-step verification</strong><span>A second check at sign-in, like a code on Mum’s phone. Never share that code.</span></div><Check aria-hidden="true" /></div>

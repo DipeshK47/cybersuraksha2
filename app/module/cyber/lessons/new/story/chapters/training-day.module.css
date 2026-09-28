@@ -1,118 +1,114 @@
-/* Tara's Pet Finder chapter only: camera feed + event log, the old and new training data, the labelling task. Shared pieces live in ../story-player.module.css. */
-/* Narration-synced reveals keep their space so nothing jumps. */
-.box,.tag,.event,.friend,.poster,.found,.bar,.rule,.chip,.fair,.human{transition:opacity .25s ease-out,transform .25s var(--ease)}
-[data-on="false"].box,[data-on="false"].tag,[data-on="false"].event,[data-on="false"].friend,[data-on="false"].poster,[data-on="false"].found,[data-on="false"].bar,[data-on="false"].rule,[data-on="false"].chip,[data-on="false"].fair,[data-on="false"].human{opacity:0;transform:translateY(6px)}
+/* Tara chapter only: camera feeds with detection boxes, lane chat, the training-data grid, the labelling tray and test results. Shared pieces live in ../story-player.module.css. */
+.screen{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);background:#fbf6ea}
+.feed{min-height:282px}
+.golden{background-image:url('/cyber-missions/dog-golden.jpg');background-position:center 35%}
+.indie{background-image:url('/cyber-missions/dog-indie.jpg');background-position:center 30%}
+.cam{position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:5px;background:#0d1d2cc9;color:#f4f1e6;font-family:var(--font-mono),monospace;font-size:.6rem;font-weight:700;letter-spacing:.06em}
+.cam i{width:7px;height:7px;border-radius:50%;background:#ff6b5a;animation:rec 1.6s ease-in-out infinite}
+/* Detection box: green = recognised, dashed orange = missed. */
+.box{position:absolute;inset:26% 17% 9% 20%;border:3px solid #7ee0a0;border-radius:8px;box-shadow:0 0 0 999px #0b18240f;animation:boxIn .28s var(--ease)}
+.box[data-miss]{border-style:dashed;border-color:#ffa47f}
+.box b{position:absolute;top:-3px;left:-3px;transform:translateY(-100%);padding:3px 8px;border-radius:6px 6px 6px 0;background:#7ee0a0;color:#0f3325;font-size:.7rem;white-space:nowrap}
+.box[data-miss] b{background:#ffa47f;color:#4a1b0c}
+.found{background:linear-gradient(0deg,#123a31f0,transparent 62%)}
+.side{display:flex;flex-direction:column;gap:9px;min-width:0;padding:14px;color:#24413f}
+.side>strong{display:flex;align-items:center;gap:6px;margin-bottom:2px;font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:#6b6450}
+.side>strong svg{width:15px;height:15px;color:#2f7369}
+.pet{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;background:#fff;box-shadow:0 2px 8px #1d3a3a12;transition:box-shadow .25s ease}
+.pet[data-fav="true"]{box-shadow:0 0 0 2px #efbb5d,0 4px 12px #b7862a30}
+.pet img{flex:none;width:42px;height:42px;border-radius:50%;object-fit:cover}
+.pet>div{display:grid;gap:2px;min-width:0}
+.pet b{font-size:.8rem}
+.pet span{font-size:.66rem;color:#5c6e66}
+.pet>svg{margin-left:auto;width:17px;height:17px;color:#2f8a5b}
+.pet[data-fav]>svg{color:#c9573f}
+.side .msg{max-width:94%;margin:0;padding:8px 11px;border-radius:4px 12px 12px 12px;background:#fff;box-shadow:0 2px 8px #1d3a3a12;font-size:.74rem;line-height:1.35}
+.msg b{display:block;margin-bottom:2px;font-size:.62rem;color:#8a5a2b}
+.msg[data-me="true"]{align-self:flex-end;border-radius:12px 4px 12px 12px;background:#dcefe2}
+.msg[data-me="true"] b{color:#2f6f5a}
+.side .sys{display:flex;align-items:center;gap:7px;margin:0;padding:8px 10px;border-radius:8px;background:#fde6dc;color:#8a3a20;font-size:.7rem;font-weight:750;line-height:1.3}
+.sys[data-ok="true"]{background:#dcefe2;color:#1f5a3c}
+.sys svg{width:16px;height:16px}
 
-/* Photo crops: three source photos framed several ways, plus two drawn non-dogs */
-.pic{display:block;width:100%;height:100%;background-color:#d8dccf;background-size:cover;background-position:center;background-repeat:no-repeat}
-.pic[data-kind="golden"]{background-image:url('/cyber-missions/dog-golden.jpg');background-position:45% 45%}
-.pic[data-kind="golden"][data-v="1"]{background-size:160%;background-position:42% 40%}
-.pic[data-kind="golden"][data-v="2"]{transform:scaleX(-1)}
-.pic[data-kind="golden"][data-v="3"]{background-size:210%;background-position:38% 52%}
-.pic[data-kind="golden"][data-v="4"]{transform:scaleX(-1);background-size:140%;background-position:50% 65%}
-.pic[data-kind="indie"]{background-image:url('/cyber-missions/dog-indie.jpg')}
-.pic[data-kind="indie"][data-v="1"]{background-size:250%;background-position:17% 26%}
-.pic[data-kind="indie"][data-v="2"]{background-position:50% 70%}
-.pic[data-kind="indie"][data-v="4"]{background-position:50% 42%}
-.pic[data-kind="pug"]{background-image:url('/cyber-missions/dog-pug.jpg')}
-.pic[data-kind="pug"][data-v="1"]{background-size:250%;background-position:20% 50%}
-.pic[data-kind="pug"][data-v="3"]{background-size:200%;background-position:86% 80%}
-.pic[data-kind="cat"],.pic[data-kind="bird"]{display:grid;place-items:center}
-.pic[data-kind="cat"]{background-image:radial-gradient(circle at 50% 38%,#eceff1,#b0bec5);color:#4b5963}
-.pic[data-kind="bird"]{background-image:linear-gradient(#bfe3f0,#e9f4d6);color:#3b3f2e}
-.pic svg{width:46%;height:46%}
+/* Scene 3: Mr Das and the lopsided training data. */
+.teacher{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #dce3d4}
+.avatar{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:50%;background:#2f6f6a;color:#fff7e6;font-size:.74rem;font-weight:850}
+.teacher span:not(.avatar){font-size:.72rem;font-weight:850;color:#826137}
+.teacher p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;color:#375b53}
+.dataset{display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:4px;margin:4px 0 12px}
+.dataset span{aspect-ratio:1;border-radius:3px;background:#e7b95e}
+.dataset span[data-kind="other"]{background:#7fa08c}
+.dataset,.legend,.match>*{transition:opacity .3s ease}
+.dataset[data-show="false"],.legend[data-show="false"],.match>[data-show="false"]{opacity:.12}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.72rem;color:#4d645b}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;background:#e7b95e}
+.legend i[data-kind="other"]{background:#7fa08c}
+.legend i[data-kind="none"]{background:transparent;border:1.5px dashed #b0694a}
+.legend span:last-child{color:#a2502f;font-weight:800}
+.match{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;margin-top:18px}
+.match>div{display:flex;align-items:center;gap:10px;min-width:0;padding:10px;border-radius:10px;background:#f3efe0}
+.match>div[data-miss]{background:#fde6dc}
+.match img{flex:none;width:46px;height:46px;border-radius:8px;object-fit:cover}
+.match>div>div{display:grid;gap:3px;min-width:0}
+.match strong{font-size:.76rem}
+.match small{font-size:.68rem;line-height:1.3;color:#5c5a4b}
+.match>svg{width:20px;height:20px;color:#b0694a}
 
-/* Scenes 1, 2 and 6: the Pet Finder app */
-.feed{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;padding:12px;background-image:linear-gradient(160deg,#16304a,#10263f 65%,#1f2b3f)}
-.cam{position:relative;overflow:hidden;min-height:246px;border-radius:10px;background:#0b1626}
-.cam .pic{position:absolute;inset:0;filter:saturate(.85) contrast(1.05)}
-.cam:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#00000014 0 2px,transparent 2px 4px),radial-gradient(circle,transparent 55%,#0006);pointer-events:none}
-.rec{position:absolute;z-index:1;top:8px;left:8px;display:flex;align-items:center;gap:5px;padding:3px 7px;border-radius:5px;background:#0009;color:#fff;font-family:var(--font-mono),monospace;font-size:.6rem}
-.rec span{width:7px;height:7px;border-radius:50%;background:#ff5a4a}
-.box{position:absolute;z-index:1;left:16%;top:14%;width:66%;height:72%;border:2px solid #7ee0a0;border-radius:6px;box-shadow:0 0 0 1px #0004}
-.box[data-miss="true"]{border:2px dashed #ff9b7a}
-.tag{position:absolute;z-index:1;left:16%;bottom:6px;display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:6px;background:#2f8f5f;color:#fff;font-size:.68rem;font-weight:800}
-.tag[data-miss="true"]{background:#b4543a}
-.tag svg{width:14px;height:14px}
-.log{display:grid;align-content:start;gap:8px;min-width:0}
-.event{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:#fffcf3f2;color:#1f3d40;font-size:.72rem;line-height:1.3;box-shadow:0 8px 18px #0a152444}
-.event svg{flex:none;width:16px;height:16px;color:#2f7369}
-.event[data-bad="true"] svg{color:#b4543a}
-.event b{color:#8a3b25}
-.friend,.poster{display:flex;align-items:center;gap:10px;padding:8px;border-radius:12px;background:#fffcf3;color:#1f3d40;box-shadow:0 8px 18px #0a152444}
-.poster{border:2px dashed #d9a066;background:#fff4e0}
-.friend>div,.poster>div{display:grid;gap:2px;min-width:0}
-.friend strong,.poster strong{font-size:.82rem}
-.friend span,.poster span{font-size:.66rem;color:#4d645b}
-.friend>svg{flex:none;margin-left:auto;width:18px;height:18px;color:#d0603f;fill:#f3a58a}
-.friend .pic,.poster .pic,.test .pic{flex:none;width:46px;height:46px;border-radius:8px}
-.found{display:grid;justify-items:center;gap:3px;padding:14px;border-radius:12px;background:#e3f3de;color:#284c37;text-align:center;box-shadow:0 8px 18px #0a152444}
-.found svg{width:24px;height:24px;color:#d0603f;fill:#f3a58a}
-.found strong{font-family:var(--font-display),sans-serif;font-size:1.35rem}
-.found span{font-size:.7rem}
+/* Scene 4: the labelling tray. */
+.tray{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.card{display:grid;gap:6px;min-width:0;padding:6px;border:1.5px solid #d8e0cf;border-radius:11px;background:#fff;transition:border-color .2s ease,background .2s ease}
+.card[data-label="dog"]{border-color:#6aa77f;background:#f1f8ee}
+.card[data-label="not"]{border-color:#c9a07a;background:#fbf3ea}
+.thumb{position:relative;display:grid;place-items:center;height:78px;overflow:hidden;border-radius:7px}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb[data-kind="golden"] img{object-position:center 45%}
+.thumb[data-kind="indie"] img{object-position:center 36%}
+.thumb[data-kind="cat"]{background:#f1dfc6;color:#8c5a2f}
+.thumb[data-kind="crow"]{background:#dfe5ee;color:#34465c}
+.thumb[data-kind="squirrel"]{background:#eadfd2;color:#7a4f33}
+.thumb svg{width:40px;height:40px;stroke-width:1.7}
+.card>strong{padding:0 2px;font-size:.72rem}
+.toggle{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.toggle button{display:flex;align-items:center;justify-content:center;gap:3px;min-height:40px;padding:4px 2px;border:1px solid #c8d5bd;border-radius:7px;background:#faf8ef;color:#345447;font-size:.68rem;white-space:nowrap}
+.toggle button svg{width:13px;height:13px}
+.toggle button[aria-pressed="true"]{border-color:#1f6b5b;background:#1f6b5b;color:#fff}
+.toggle button:last-child[aria-pressed="true"]{border-color:#9a5a2e;background:#9a5a2e}
+.toggle button:disabled{opacity:1}
+.toggle button:disabled:not([aria-pressed="true"]){opacity:.45}
+.trap{margin-top:10px}
+.results{display:flex;align-items:center;gap:7px;margin-top:12px;flex-wrap:wrap}
+.results>span{font-size:.64rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#6b6450}
+.result{display:flex;align-items:center;gap:7px;flex:1;min-width:0;padding:5px 8px 5px 5px;border-radius:9px;background:#f1efe4;color:#4d645b;transition:background .2s ease}
+.result img{flex:none;width:30px;height:30px;border-radius:6px;object-fit:cover}
+.result>div{display:grid;min-width:0}
+.result b{font-size:.72rem}
+.result small{font-size:.64rem;white-space:nowrap}
+.result[data-pass="true"]{background:#dcefe2;color:#1f5a3c}
+.result[data-pass="false"]{background:#fde6dc;color:#8a3a20}
+.result[data-pass]{animation:boxIn .25s var(--ease)}
 
-/* Scene 3: Ms Fernandes + the old training data */
-.teacher{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
-.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#d9e7f5;color:#2f5f8f}
-.avatar svg{width:20px;height:20px}
-.teacher small{font-size:.72rem;font-weight:850;color:#826137}
-.teacher>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
-.thumbs{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;margin-bottom:12px}
-.thumbs .pic{aspect-ratio:1;border-radius:6px}
-.more{display:grid;place-items:center;aspect-ratio:1;border-radius:6px;background:#e8d6b1;color:#5a3f22;font-size:.68rem;font-weight:850}
-.bars{display:grid;gap:6px;margin:4px 0 12px}
-.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 30px;align-items:center;gap:9px;font-size:.72rem;color:#264c48}
-.track{height:10px;overflow:hidden;border-radius:5px;background:#ece6d4}
-.track span{display:block;height:100%;background:#2f7369;transform-origin:left;transition:transform .3s var(--ease)}
-.bar b{text-align:right}
-.bar[data-zero="true"] b{color:#b4543a}
-.rule{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:9px;background:#f7e2d8;color:#8a3b25;font-size:.76rem}
-.rule svg{flex:none;width:18px;height:18px}
+/* Scene 5: before / after the data was fixed. */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
+.col{display:grid;gap:7px;min-width:0;padding:13px;border-radius:12px;background:#f3efe0}
+.col[data-side="after"]{background:#e3edda}
+.col>span{font-size:.64rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase;color:#826137}
+.col>small{font-size:.68rem;color:#4d645b}
+.mix{display:flex;height:14px;overflow:hidden;border-radius:7px}
+.mix i{height:100%}
+.mix i[data-kind="golden"]{background:#e7b95e}
+.mix i[data-kind="other"]{background:#7fa08c}
+.mix i[data-kind="indie"]{background:#c07a45}
+.mix i[data-kind="pug"]{background:#8d7b68}
+.mix i[data-kind="not"]{background:#9fb3c8}
+.checks{display:flex;flex-wrap:wrap;gap:5px}
+.checks span{display:flex;align-items:center;gap:4px;padding:3px 7px 3px 3px;border-radius:20px;background:#fff;font-size:.66rem;font-weight:750}
+.checks img{width:20px;height:20px;border-radius:50%;object-fit:cover}
+.checks svg{width:13px;height:13px;color:#2f8a5b}
+.checks span[data-pass="false"]{color:#8a3a20}
+.checks span[data-pass="false"] svg{color:#c9573f}
 
-/* Scene 4: labelling task */
-.task h2{margin-bottom:6px}
-.task>p{margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.photo{position:relative;overflow:hidden;aspect-ratio:1/.86;padding:0;border:2px solid #dbe2d2;border-radius:10px;background:#eee}
-.photo .pic{position:absolute;inset:0}
-.photo[aria-pressed="true"]{border-color:#2f8f5f;box-shadow:0 0 0 3px #2f8f5f33}
-.grid .photo:disabled{opacity:1}
-.label{position:absolute;left:5px;bottom:5px;display:flex;align-items:center;gap:3px;padding:2px 7px;border-radius:6px;background:#fffcf3e6;color:#6a644e;font-size:.62rem;font-weight:800}
-.label[data-on="true"]{background:#2f8f5f;color:#fff}
-.label svg{width:12px;height:12px}
-.tests{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.test{display:flex;align-items:center;gap:9px;padding:7px;border:1.5px solid #dbe2d2;border-radius:10px;background:#fffaf0}
-.test>div{display:grid;min-width:0}
-.test small{font-size:.58rem;font-weight:800;color:#826137;text-transform:uppercase;letter-spacing:.06em}
-.test strong{font-size:.78rem}
-.test span{font-size:.68rem;color:#5d7169}
-.test[data-result="true"]{border-color:#7fbf8f;background:#e3f3de}
-.test[data-result="true"] span{color:#284c37;font-weight:800}
-.test[data-result="false"]{border-color:#e5b6a4;background:#fbeee8}
-.test[data-result="false"] span{color:#8a3b25;font-weight:800}
-
-/* Scene 5: varied data + a human check */
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
-.chip{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:#dceecf;color:#284c37;font-size:.7rem;font-weight:800}
-.chip svg{width:14px;height:14px}
-.fair{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:9px;background:#fbeee8;color:#8a3b25;font-size:.74rem}
-.fair svg{flex:none;width:18px;height:18px}
-.human{display:flex;align-items:center;gap:11px;margin-top:10px;padding:11px 12px;border-radius:9px;background:#e3edda}
-.human>div{display:grid;gap:3px}
-.human strong{font-size:.8rem}
-.human span{font-size:.69rem;line-height:1.4;color:#4d645b}
-.human>svg{flex:none;width:22px;height:22px;color:#3c7447}
-.human>svg:last-child{margin-left:auto}
-
-@media(max-width:600px){
-  .feed{grid-template-columns:1fr;padding:10px;gap:8px}
-  .cam{min-height:170px}
-  .event{font-size:.66rem;padding:7px 9px}
-  .found strong{font-size:1.1rem}
-  .teacher>div>p{font-size:1.05rem}
-  .thumbs{grid-template-columns:repeat(5,minmax(0,1fr))}
-  .bar{grid-template-columns:96px minmax(0,1fr) 26px;font-size:.66rem;gap:6px}
-  .grid{gap:6px}
-  .label{font-size:.56rem;padding:2px 5px;left:3px;bottom:3px}
-  .tests{grid-template-columns:1fr}
-}
+@keyframes boxIn{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes rec{50%{opacity:.25}}
+@media(max-width:900px){.screen{grid-template-columns:1fr}.feed{min-height:230px}.side{padding:12px}}
+@media(max-width:600px){.feed{min-height:200px}.thumb{height:66px}.box{inset:26% 22% 8% 24%}.box b{font-size:.62rem}.side .msg{font-size:.7rem}.teacher p{font-size:1.05rem}.dataset{gap:2px}.legend{font-size:.66rem;gap:5px 12px}.match{grid-template-columns:1fr;gap:6px}.match>svg{justify-self:center;transform:rotate(90deg)}.tray{grid-template-columns:repeat(2,minmax(0,1fr))}.results{gap:5px}.results>span{width:100%}.result{padding:4px 6px 4px 4px;gap:5px}.result img{width:26px;height:26px}.result small{font-size:.58rem}.compare{grid-template-columns:1fr}.checks span{font-size:.62rem}}

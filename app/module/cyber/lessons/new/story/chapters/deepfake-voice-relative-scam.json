@@ -1,80 +1,80 @@
 {
-  "duration": 115.751,
+  "duration": 121.873,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Meera",
-      "title": "The family passphrase",
+      "label": "Meet Kabir",
+      "title": "A silly family secret?",
       "mood": "happy",
-      "caption": "Saturday morning at Meera's house. The family chat is full of Sameer Chacha's travel videos: he's filming street food and train rides on his work trip. Last month, after a news report about voice scams, Meera's parents set up a secret family passphrase. Only the family knows it. Meera thought it sounded like a spy movie.",
-      "dialogue": "A secret passphrase? Like real spies!",
-      "status": "Saturday with family",
+      "caption": "Meet Kabir. It's Sunday, and he's beating Mum at carrom while the family chat buzzes with jokes. Uncle Vikram has just posted another funny cooking video. Last month, after a news story about voice-cloning scams, Kabir's parents set up a family passphrase: a secret phrase only the family knows. Kabir thought it was a bit silly.",
+      "dialogue": "Mum, watch this carrom trick!",
+      "status": "Winning at carrom",
       "start": 0.0,
-      "duration": 19.029
+      "duration": 19.88
     },
     {
-      "id": "voice",
+      "id": "voice-note",
       "label": "The voice note",
-      "title": "“Send it now. Tell no one.”",
+      "title": "It sounds exactly like him.",
       "mood": "sad",
-      "caption": "Then a voice note reaches Dad from a new number. It's Sameer Chacha's voice, breathless and scared: I've had an accident. My phone is broken, this is a friend's. Send ₹20,000 right now for the hospital, and don't tell anyone. Dad goes pale and opens his payment app. It really does sound exactly like Chacha.",
-      "speech": "Then a voice note reaches Dad from a new number. It's Sameer Chacha's voice, breathless and scared: I've had an accident. My phone is broken, this is a friend's. Send twenty thousand rupees right now for the hospital, and don't tell anyone. Dad goes pale and opens his payment app. It really does sound exactly like Chacha.",
-      "dialogue": "That's Chacha's voice. But something feels wrong.",
-      "status": "Hearing Chacha's voice",
+      "caption": "Right in the middle of their game, Mum's phone buzzes. It's a voice note from an unknown number. The voice is Uncle Vikram's, shaky and scared. There's been an accident. His phone is broken. Send ₹20,000 now, and don't tell anyone. Mum's hands shake. Kabir's heart pounds. It sounds exactly like him, and every second feels urgent.",
+      "speech": "Right in the middle of their game, Mum's phone buzzes. It's a voice note from an unknown number. The voice is Uncle Vikram's, shaky and scared. There's been an accident. His phone is broken. Send twenty thousand rupees now, and don't tell anyone. Mum's hands shake. Kabir's heart pounds. It sounds exactly like him, and every second feels urgent.",
+      "dialogue": "That sounds exactly like Uncle Vikram…",
+      "status": "Scared and worried",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.679,
-      "duration": 18.923
+      "start": 20.53,
+      "duration": 19.536
     },
     {
-      "id": "clone",
-      "label": "Voice cloning",
-      "title": "A familiar voice isn't proof.",
+      "id": "clues",
+      "label": "Spot the clues",
+      "title": "Wait. Is it really him?",
       "mood": "thinking",
-      "caption": "Meera touches Dad's arm. At school they learned that AI can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
-      "speech": "Meera touches Dad's arm. At school they learned that A I can now copy a voice from just a few seconds of audio, like the clips in Chacha's travel videos. This is called voice cloning. So a familiar voice isn't proof. A new number, panic, secrecy and money: those are the real clues. Time for the passphrase.",
-      "dialogue": "Dad, wait. A voice can be copied now.",
-      "status": "Remembering the plan",
-      "start": 39.252,
-      "duration": 18.645
+      "caption": "Kabir takes a breath. A familiar voice isn't proof. With just a few seconds of a video posted online, AI tools can copy how someone sounds. That's called voice cloning. Then there's the unknown number, the rush and the secrecy. One clue alone doesn't prove a scam, but together they say: stop and check. And Kabir remembers the family passphrase.",
+      "speech": "Kabir takes a breath. A familiar voice isn't proof. With just a few seconds of a video posted online, A I tools can copy how someone sounds. That's called voice cloning. Then there's the unknown number, the rush and the secrecy. One clue alone doesn't prove a scam, but together they say: stop and check. And Kabir remembers the family passphrase.",
+      "dialogue": "Wait, Mum. Let’s ask for our passphrase.",
+      "status": "Spotting the clues",
+      "start": 40.716,
+      "duration": 20.069
     },
     {
       "id": "verify",
       "label": "Verify first",
-      "title": "Passphrase first. Then call back.",
+      "title": "Ask. Then call back.",
       "mood": "thinking",
-      "caption": "Your turn. Help Meera and Dad verify before anyone pays. First, choose a reply to the voice note. Then decide what to do if the answer doesn't check out. Careful: it's his voice, send the money, is exactly what the scammer is counting on. A real relative can wait two minutes while you check.",
-      "dialogue": "Passphrase first. Then call his saved number.",
-      "status": "Verifying together",
-      "start": 58.547,
-      "duration": 17.344
+      "caption": "Your turn. Help Kabir and Mum find out who's really asking. Choose a reply that only the real Uncle Vikram could answer. Then watch closely. If the voice dodges, think about which number you can truly trust. Don't argue with the sender, and don't send money. Remember: sounding right isn't the same as being right.",
+      "dialogue": "Let’s check before anyone pays.",
+      "status": "Checking with you",
+      "start": 61.435,
+      "duration": 18.767
     },
     {
-      "id": "safe",
-      "label": "Chacha is safe",
-      "title": "The voice was a clone.",
+      "id": "truth",
+      "label": "The real uncle",
+      "title": "The voice was a copy.",
       "mood": "happy",
-      "caption": "Chacha picks up on the first ring, completely fine and having breakfast at his hotel. The voice was a clone. Dad blocks the number and reports it at cybercrime.gov.in; if they had paid, they'd call 1930 at once. The rule: a familiar voice isn't proof. Ask for the passphrase, and call back on a number you saved yourself.",
-      "speech": "Chacha picks up on the first ring, completely fine and having breakfast at his hotel. The voice was a clone. Dad blocks the number and reports it at cybercrime dot gov dot in; if they had paid, they'd call nineteen thirty at once. The rule: a familiar voice isn't proof. Ask for the passphrase, and call back on a number you saved yourself.",
-      "dialogue": "A familiar voice isn't proof. The passphrase is.",
-      "status": "Chacha is safe",
-      "start": 76.541,
-      "duration": 19.435
+      "caption": "Uncle Vikram picks up on his saved number. He's fine, at work, and his phone was never broken. The voice note was a clone. Mum blocks the unknown number and reports it at cybercrime.gov.in. If money is ever sent, call 1930 straight away. And the passphrase stays offline: said aloud at home, never posted or typed in chats.",
+      "speech": "Uncle Vikram picks up on his saved number. He's fine, at work, and his phone was never broken. The voice note was a clone. Mum blocks the unknown number and reports it at cybercrime dot gov dot in. If money is ever sent, call nineteen thirty straight away. And the passphrase stays offline: said aloud at home, never posted or typed in chats.",
+      "dialogue": "His voice was copied. Our passphrase wasn’t.",
+      "status": "Feeling relieved",
+      "start": 80.853,
+      "duration": 20.139
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "The family plan works",
+      "title": "Rematch night!",
       "mood": "happy",
-      "caption": "That evening, Chacha video-calls the whole family, laughing and a little shaken. He makes his travel videos visible to friends only. Meera teaches Nani the passphrase and how to call back. Dad hugs her: you kept us calm. Your turn: help Meera spot more cloned-voice tricks and verify before anyone pays!",
-      "dialogue": "Passphrase, call back, then relax. Deal?",
-      "status": "Family plan works",
+      "caption": "That night, Uncle Vikram comes over for dinner and a carrom rematch. He's glad everyone checked. Kabir doesn't think the passphrase is silly anymore. A familiar voice isn't proof. Pause, tell a trusted adult, ask for the passphrase, and call back on a number you already trust. Your turn: help Kabir practise checking urgent voice notes.",
+      "dialogue": "Passphrase first, then call back. Always.",
+      "status": "Safe and smiling",
       "tone": "resolved",
-      "start": 96.626,
-      "duration": 18.475
+      "start": 101.642,
+      "duration": 19.581
     }
   ]
 }

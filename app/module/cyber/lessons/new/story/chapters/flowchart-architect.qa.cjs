@@ -1,12 +1,13 @@
-// QA hooks for scripts/story-qa.cjs: how a learner rebuilds and tests Tara's flowchart.
+// QA hooks for scripts/story-qa.cjs: how a learner completes Tara's mid-story flowchart task.
 module.exports = {
   async solve(page) {
-    for (const block of ['Hands under sensor?', 'Give soap', 'End']) await page.getByRole('button', { name: block, exact: true }).click();
-    await page.getByRole('button', { name: 'Test: hands at the sink' }).click();
+    for (const block of ['Hands under sensor?', 'Dispense soap', 'Wait a moment', 'End']) await page.getByRole('button', { name: new RegExp(`^${block.replace('?', '\\?')} \\(`) }).click();
+    await page.getByRole('button', { name: 'Test: hands under sensor' }).click();
     await page.getByRole('button', { name: 'Test: empty sink' }).click();
+    await page.getByRole('button', { name: /Save flowchart/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: 'Give soap', exact: true }).click();
-    return /Ask first: are hands there/;
+    await page.getByRole('button', { name: /^Dispense soap \(/ }).click();
+    return /old plan: soap before asking/;
   },
 };

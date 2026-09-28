@@ -1,80 +1,79 @@
 {
-  "duration": 111.825,
+  "duration": 115.454,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Meera",
-      "title": "Fair weekend!",
+      "label": "Meet Kabir",
+      "title": "Three days to the fair!",
       "mood": "happy",
-      "caption": "The Cyberpur fair is this weekend, and Meera can't wait. She'll run a stall showing her water tester, right next to the giant wheel. His class group chat is buzzing with plans: who's bringing snacks, which rides come first, and whether Meera will let everyone test the lake water themselves.",
-      "dialogue": "Stall 14, right by the giant wheel!",
-      "status": "Counting down to Saturday",
+      "caption": "Meet Kabir. He's twelve, and he's been counting the days to the Cyberpur fair. He's saved his pocket money for the giant wheel and the ring toss. His class group chat is buzzing with plans: everyone's meeting at the gate on Saturday at five. Then, on Wednesday evening, a video pops up in the group.",
+      "dialogue": "Giant wheel first, then the ring toss!",
+      "status": "Counting the days",
       "start": 0.0,
-      "duration": 16.981
+      "duration": 18.228
     },
     {
-      "id": "clip",
+      "id": "problem",
       "label": "The clip",
-      "title": "“The fair is cancelled.”",
+      "title": "“The fair is cancelled!”",
       "mood": "sad",
-      "caption": "Then a video lands in the group. It shows the fair's organiser, Mrs Kulkarni, saying: the fair is cancelled this weekend. It's already been forwarded again and again. Friends start posting sad faces. Meera's stall, the rides, the plans, all gone? Her thumb hovers over Forward, ready to send it to her cousins too.",
-      "speech": "Then a video lands in the group. It shows the fair's organiser, Missus Kulkarni, saying: the fair is cancelled this weekend. It's already been forwarded again and again. Friends start posting sad faces. Meera's stall, the rides, the plans, all gone? Her thumb hovers over Forward, ready to send it to her cousins too.",
-      "dialogue": "Cancelled? But everything was ready!",
-      "status": "Upset and unsure",
+      "caption": "It shows the fair's organiser saying, “The fair is cancelled this weekend.” Within minutes, friends are forwarding it to other groups. Everyone's upset, and Kabir's heart sinks too. His thumb hovers over Forward. Then he notices something. The clip came from an unknown number, and nobody has shared a link to an official notice.",
+      "dialogue": "No way… Should I forward this to everyone?",
+      "status": "Feeling let down",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 17.631,
-      "duration": 18.752
+      "start": 18.878,
+      "duration": 19.014
     },
     {
-      "id": "clues",
-      "label": "Deepfake clues",
-      "title": "A clue isn't proof.",
+      "id": "help",
+      "label": "Ask Papa",
+      "title": "Could this be a deepfake?",
       "mood": "thinking",
-      "caption": "Then Meera pauses. In computer class, they learned that AI can now create realistic fake videos of real people, called deepfakes. They often leave clues: blinking that looks wrong, lips that don't match the words, and light or shadows that don't make sense. But a clue isn't proof. Blurry video can glitch too. So you check.",
-      "speech": "Then Meera pauses. In computer class, they learned that A I can now create realistic fake videos of real people, called deepfakes. They often leave clues: blinking that looks wrong, lips that don't match the words, and light or shadows that don't make sense. But a clue isn't proof. Blurry video can glitch too. So you check.",
-      "dialogue": "Before I forward it, let me look closer.",
-      "status": "Looking for clues",
-      "start": 37.033,
-      "duration": 18.197
+      "caption": "Kabir doesn't forward it. He shows his dad instead. Papa says it might be a deepfake: a video or audio made or changed with AI, so a real person seems to say things they never said. “Before we believe it,” Papa says, “let's look closely at the clip. Then we'll check the fair's own channel.”",
+      "speech": "Kabir doesn't forward it. He shows his dad instead. Papa says it might be a deepfake: a video or audio made or changed with A I, so a real person seems to say things they never said. “Before we believe it,” Papa says, “let's look closely at the clip. Then we'll check the fair's own channel.”",
+      "dialogue": "Papa, is this real? Everyone’s already sharing it.",
+      "status": "Checking with Papa",
+      "start": 38.542,
+      "duration": 18.007
     },
     {
-      "id": "frames",
-      "label": "Frame by frame",
-      "title": "Look closer, frame by frame.",
+      "id": "inspect",
+      "label": "Inspect the clip",
+      "title": "Frame by frame.",
       "mood": "thinking",
-      "caption": "Your turn. Step through the clip frame by frame. Tag each real artefact, and mark ordinary details as normal. Then decide what to do before sharing. Careful: looking real isn't proof, and neither is one glitch. Forwarding it because it seems convincing is exactly how fakes spread.",
-      "dialogue": "Three clues, then one official check.",
-      "status": "Checking frame by frame",
-      "start": 55.881,
-      "duration": 17.408
+      "caption": "Now, help Kabir inspect the clip. Move through the frames one by one and tag the artefacts, the glitches that AI editing can leave behind: strange blinking, lips that don't match the words, or shadows that don't fit the light. Careful, though. Some odd things happen in real videos too. Then check the official channel.",
+      "speech": "Now, help Kabir inspect the clip. Move through the frames one by one and tag the artefacts, the glitches that A I editing can leave behind: strange blinking, lips that don't match the words, or shadows that don't fit the light. Careful, though. Some odd things happen in real videos too. Then check the official channel.",
+      "dialogue": "Let’s go frame by frame, like real detectives.",
+      "status": "Inspecting the clip",
+      "start": 57.199,
+      "duration": 18.838
     },
     {
-      "id": "official",
-      "label": "Check the source",
-      "title": "The official source answers.",
+      "id": "lesson",
+      "label": "Clues vs proof",
+      "title": "Clues point. Sources confirm.",
       "mood": "happy",
-      "caption": "The fair's official page says the fair is on, and warns about a fake video. Meera shares that post in the group instead, asks everyone to stop forwarding the clip, and tells her teacher. She also reports the video to the app. Clues made her suspicious, but the official source gave the answer.",
-      "dialogue": "Clues raise questions. Official sources answer them.",
-      "status": "Stopping the spread",
-      "start": 73.939,
-      "duration": 17.835
+      "caption": "The fair's official channel says it clearly: the fair is on this weekend, and a fake video is going around. Kabir's clues pointed the right way, but clues alone can't prove it. Real videos can glitch on a bad connection, and a good deepfake may look perfect. Artefacts are clues, not proof. An official source confirms the truth.",
+      "dialogue": "The fair’s on! Good thing we checked the source.",
+      "status": "Relieved and wiser",
+      "start": 76.686,
+      "duration": 19.336
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "The fair is on!",
+      "title": "See you at the gate!",
       "mood": "happy",
-      "caption": "On Saturday night the fair glows, and Meera's stall is packed. Friends who almost stayed home take turns testing lake water. Mrs Kulkarni stops by to thank the students who shared the real announcement. Meera's new habit: pause, look closer, and check the source before forwarding. Your turn: help Meera spot more deepfake clues!",
-      "speech": "On Saturday night the fair glows, and Meera's stall is packed. Friends who almost stayed home take turns testing lake water. Missus Kulkarni stops by to thank the students who shared the real announcement. Meera's new habit: pause, look closer, and check the source before forwarding. Your turn: help Meera spot more deepfake clues!",
-      "dialogue": "The fair is on, and so is my stall!",
-      "status": "At his fair stall",
+      "caption": "Kabir posts the official link in the group and asks everyone to stop forwarding the clip. He reports the video, and his class teacher removes it from the group. On Saturday, the friends meet at the gate at five. Pause, look closely, and check the source before you share. Your turn: help Kabir check more clips at the media desk.",
+      "dialogue": "Checked first, shared the truth. See you Saturday!",
+      "status": "Back to fair plans",
       "tone": "resolved",
-      "start": 92.423,
-      "duration": 18.752
+      "start": 96.672,
+      "duration": 18.131
     }
   ]
 }

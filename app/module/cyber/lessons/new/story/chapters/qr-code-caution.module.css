@@ -1,91 +1,146 @@
-/* Tara's storybook-sale chapter only: bookshop art, the buyer's chat + QR, the pretend UPI pay screen, the two directions card, the task and the rules. Shared pieces live in ../story-player.module.css. */
-/* Narration-synced reveals keep their space so nothing jumps. */
-.chat,.msg,.phoneWrap,.callout,.dir,.rule,.saved,.help{transition:opacity .25s ease-out,transform .25s var(--ease)}
-[data-on="false"].chat,[data-on="false"].msg,[data-on="false"].phoneWrap,[data-on="false"].callout,[data-on="false"].dir,[data-on="false"].rule,[data-on="false"].saved,[data-on="false"].help{opacity:0;transform:translateY(6px)}
+/* Tara chapter only: bookshop art, shop chat, pretend UPI phone, fake QR, task stepper. Shared pieces live in ../story-player.module.css. */
+.shop{background-image:url('/cyber-missions/bookshop-payment.webp');background-position:70% center}
+.avatar{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#f3c58a;color:#5b3a12;font-size:.68rem;font-weight:900}
+.notice{position:absolute;left:18px;bottom:18px;display:flex;align-items:center;gap:10px;max-width:260px;padding:11px 14px;border-radius:13px;background:#fffdf6;color:#1f3a3c;box-shadow:0 12px 26px #0b1d2a55}
+.notice>div{display:grid;gap:1px;min-width:0}
+.notice small{font-size:.6rem;color:#5d6f67}
+.notice strong{font-size:.8rem}
+.notice span:last-child{font-size:.76rem}
 
-/* Scenes 1 and 6: Tara's book desk */
-.shop{background-image:url('/cyber-missions/bookshop-payment.webp');background-position:70% 55%}
-.chat{position:absolute;right:16px;bottom:16px;display:grid;gap:3px;max-width:250px;margin:0;padding:10px 12px;border-radius:14px 14px 4px 14px;background:#fffcf3;color:#1f3d40;font-size:.76rem;line-height:1.35;box-shadow:0 8px 20px #14223855}
-.chat b{font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:#2f7ab0}
-.fund{flex:1;min-width:60px;max-width:140px;height:8px;overflow:hidden;border-radius:4px;background:#e8d6b1}
-.fund span{display:block;height:100%;background:#2f7369;transform-origin:left}
-.fund+b{background:none;padding:0;font-family:inherit}
+/* Fake QR: 15×15 dots and three corner squares. */
+.qr{position:relative;display:grid;grid-template-columns:repeat(15,1fr);grid-template-rows:repeat(15,1fr);width:100%;aspect-ratio:1;padding:5px;border-radius:6px;background:#fff;box-shadow:0 0 0 1px #d6ddd1}
+.qr i[data-on="true"]{background:#1d2f31}
+.qr b{position:absolute;width:calc((100% - 10px) / 3);aspect-ratio:1;background:#1d2f31}
+.qr b:before,.qr b:after{content:"";position:absolute;inset:15%;background:#fff}
+.qr b:after{inset:31%;background:#1d2f31}
+.qr b:nth-of-type(1){top:5px;left:5px}
+.qr b:nth-of-type(2){top:5px;right:5px}
+.qr b:nth-of-type(3){bottom:5px;left:5px}
 
-/* Scene 2: the buyer's chat and the pay screen */
-.split{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:16px;border:8px solid #28474d;border-radius:18px;background:linear-gradient(160deg,#1f3a4a,#14283a 70%);box-shadow:0 18px 30px #19342e24}
-.thread{display:grid;gap:8px;align-content:start}
-.threadHead{display:flex;align-items:center;gap:7px;color:#e8f0ec}
-.threadHead svg{width:16px;height:16px;color:#9fd8c8}
-.threadHead strong{font-size:.8rem}
-.threadHead small{font-size:.6rem;color:#b9c7c3}
-.msg{justify-self:start;max-width:230px;padding:9px 12px;border-radius:14px 14px 14px 4px;background:#fffcf3;color:#1f3d40;font-size:.78rem;line-height:1.35;box-shadow:0 8px 18px #0a152444}
-.msg b{color:#2f7369}
-.msg[data-qr="true"]{padding:8px}
-.qr{display:block;width:92px;height:92px;fill:#1f2a33;shape-rendering:crispEdges}
-.phoneWrap{position:relative;display:grid;gap:8px;justify-items:center}
-.pay{display:grid;justify-items:center;gap:4px;width:210px;padding:12px 14px 16px;border:5px solid #2a3440;border-radius:24px;background:#f5f2ea;color:#1f3d40;box-shadow:0 0 0 1px #3c4a58,0 14px 30px #0008;text-align:center}
-.payTop{display:flex;align-items:center;gap:5px;align-self:stretch;justify-content:center;padding-bottom:6px;border-bottom:1px solid #e6e0cf;font-size:.6rem;font-weight:800;color:#5d7169}
-.payTop svg{width:12px;height:12px}
-.direction{margin-top:4px;padding:2px 14px;border-radius:8px;background:#f7e2d8;color:#b4543a;font-family:var(--font-display),sans-serif;font-size:1.3rem}
-.amount{font-family:var(--font-display),sans-serif;font-size:2rem;line-height:1.1}
-.pay small{font-size:.6rem;color:#5d7169}
-.pin{display:grid;gap:5px;margin-top:6px;padding:8px 12px;border-radius:10px;background:#fff}
-.pin span{font-size:.62rem;font-weight:800;color:#4d5d5a}
-.pin div{display:flex;gap:8px;justify-content:center}
-.pin i{width:10px;height:10px;border:2px solid #9aa7a3;border-radius:50%}
-.pay[data-cancelled="true"] .direction{background:#dceecf;color:#284c37;font-size:1rem}
-.pay[data-cancelled="true"] .amount{font-size:1.5rem;color:#3c7447}
-.callout{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fffcf3;color:#8a3b25;font-size:.7rem;font-weight:800}
-.callout svg{width:15px;height:15px}
+/* Pretend phone with a UPI-style screen. */
+.phone{width:100%;max-width:236px;margin:0 auto;padding:8px 9px 12px;border-radius:28px;background:#17323a;box-shadow:0 18px 30px #19342e30}
+.status{display:flex;justify-content:space-between;padding:2px 12px 7px;color:#e8f1ec;font-size:.6rem;font-weight:800}
+.status>span:last-child{display:flex;gap:4px}
+.status svg{width:12px;height:12px}
+.upi{display:flex;flex-direction:column;min-height:348px;overflow:hidden;border-radius:19px;background:#fffdf7;color:#1f3a3c}
+.appBar{display:flex;align-items:center;gap:6px;padding:9px 11px;background:#e5f0e7;color:#1c4d50;font-size:.7rem}
+.appBar svg{width:15px;height:15px}
+.appBar em{margin-left:auto;padding:2px 7px;border-radius:99px;background:#fff;color:#7a5a2c;font-size:.55rem;font-style:normal;font-weight:800}
+.direction{display:flex;align-items:center;gap:5px;align-self:center;margin:13px 0 0;padding:5px 14px;border-radius:99px;background:#fbe1d3;color:#9b3a1c;font-size:.95rem;font-weight:900;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.direction svg{width:17px;height:17px}
+.direction[data-spot="true"]{transform:scale(1.08);box-shadow:0 0 0 3px #fffdf7,0 0 0 6px #e0893d}
+.direction[data-kind="in"]{background:#dceecf;color:#2c5d3a}
+.amount{display:block;margin:2px 0 8px;text-align:center;font-family:var(--font-display),sans-serif;font-size:2rem;line-height:1.1}
+.party{display:flex;align-items:center;gap:9px;margin:0 11px;padding:9px 0;border-top:1px solid #ece6d6}
+.party>span:last-child{display:grid;min-width:0;font-size:.74rem}
+.party small,.receiveScreen small{font-size:.58rem;color:#63746c;overflow-wrap:anywhere}
+.from{display:flex;align-items:center;gap:7px;margin:0 11px;padding:8px 0;border-top:1px solid #ece6d6;font-size:.66rem;color:#4c5f58}
+.from svg{width:15px;height:15px;color:#2f7369}
+.pin{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6px 7px;margin:4px 11px 11px;padding:9px 10px;border:1px solid #e6cfa9;border-radius:10px;background:#fff5e3;color:#6a4b25;font-size:.68rem;font-weight:800}
+.pin svg{width:15px;height:15px}
+.dots{grid-column:1/-1;display:flex;justify-content:center;gap:8px}
+.dots i{width:10px;height:10px;border:1.5px solid #b38b56;border-radius:50%}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:auto;padding:0 11px 11px}
+.keypad span{display:grid;place-items:center;height:23px;border-radius:6px;background:#eef1ea;font-size:.72rem;font-weight:800;color:#2c4a48}
+.keypad span:empty{background:transparent}
+.scanner{flex:1;display:grid;place-items:center;align-content:center;gap:14px;background:#0f2429;color:#cdeee3;font-size:.72rem;font-weight:800}
+.scanner>span{display:flex;align-items:center;gap:6px}
+.scanner svg{width:16px;height:16px}
+.viewfinder{width:128px;padding:12px;border-radius:14px;outline:2px dashed #7fd1b7;outline-offset:4px}
+.result{flex:1;display:grid;place-items:center;align-content:center;gap:8px;padding:18px;text-align:center}
+.result>svg{width:46px;height:46px;color:#9b3a1c}
+.result strong{font-family:var(--font-display),sans-serif;font-size:1.25rem}
+.result span{font-size:.74rem;line-height:1.45;color:#4c5f58}
+.receiveScreen{flex:1;display:grid;justify-items:center;align-content:center;gap:6px;padding:10px 16px 14px;text-align:center}
+.receiveScreen .direction{margin:0 0 4px}
+.receiveScreen .qr{width:118px}
+.receiveScreen strong{font-size:.78rem}
+.receiveScreen em{display:flex;align-items:center;gap:4px;margin-top:3px;padding:4px 9px;border-radius:99px;background:#dceecf;color:#2c5d3a;font-size:.62rem;font-style:normal;font-weight:800}
+.receiveScreen em svg{width:13px;height:13px}
 
-/* Scene 3: Mum + the two directions */
-.mum{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
-.avatar{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#f3d9b1;color:#826137}
-.avatar svg{width:20px;height:20px}
-.mum small{font-size:.72rem;font-weight:850;color:#826137}
-.mum>div>p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.2rem;line-height:1.25;color:#375b53}
-.directions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.dir{display:grid;gap:6px;align-content:start;padding:12px;border-radius:12px}
-.dir[data-kind="pay"]{background:#fbeee8;color:#8a3b25}
-.dir[data-kind="receive"]{background:#e3f3de;color:#284c37}
-.dir>svg{width:24px;height:24px}
-.dir strong{font-family:var(--font-display),sans-serif;font-size:1.05rem}
-.dir span{display:flex;align-items:center;gap:6px;font-size:.72rem}
-.dir span svg{flex:none;width:14px;height:14px}
-.dir b{margin-top:2px;padding:4px 8px;justify-self:start;border-radius:6px;background:#fffcf3;font-size:.68rem}
-.panel .rule,.rule{display:flex;align-items:center;gap:8px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#e8e1f3;color:#3d3266;font-size:.76rem;font-weight:800}
-.rule svg{flex:none;width:16px;height:16px}
+/* Scene 2: the shop chat beside the phone. */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 236px;gap:18px;align-items:center}
+.chat{overflow:hidden;border-radius:16px;background:#fffcf3;box-shadow:0 12px 32px #253c3014}
+.chatHead{display:flex;align-items:center;gap:10px;padding:12px 15px;border-bottom:1px solid #e3e6d6}
+.chatHead>div{display:grid}
+.chatHead strong{font-size:.84rem}
+.chatHead small{font-size:.62rem;color:#5d6f67}
+.thread{display:grid;justify-items:start;gap:9px;padding:15px}
+.them{max-width:94%;padding:9px 12px;border-radius:4px 14px 14px;background:#e8eee2;font-size:.8rem;line-height:1.38;color:#23413f}
+.qrMsg{display:flex;align-items:center;gap:11px}
+.qrMsg .qr{width:78px;flex:none}
+.qrMsg b{display:block;font-size:.86rem}
+.qrMsg small{font-size:.6rem;color:#5d6f67}
+.push{background:#f6e3cf;color:#6b3c14;font-weight:750}
+.clash,.term{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border-radius:10px;font-size:.76rem;line-height:1.38;opacity:0;transform:translateY(6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.clash{margin:0 15px 15px;background:#fbe4d6;color:#7a3417}
+.term{margin-top:12px;background:#e3edda;color:#284c37}
+.clash svg,.term svg{width:18px;height:18px;margin-top:1px}
+.clash[data-on="true"],.term[data-on="true"]{opacity:1;transform:none}
 
-/* Scene 4: stop the payment, then choose how to receive */
-.task h2{margin-bottom:12px}
-.taskGrid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
-.taskGrid .pay{width:196px;border-color:#28474d;box-shadow:0 8px 18px #19342e33}
-.payActions{display:grid;gap:6px;width:196px}
-.payActions button,.receive button{display:flex;align-items:center;gap:7px;width:100%;padding:8px 10px;border:1px solid #c8d5bd;border-radius:8px;background:#fffaf0;color:#345447;font-size:.72rem;text-align:left}
-.payActions button svg{flex:none;width:15px;height:15px}
-.payActions button[data-trap="true"]{border-color:#dcc4a0;color:#805633}
-.payActions .cancel{border-color:#2f6f63;background:#e6f2ec;color:#1f5a50;font-weight:800}
-.payActions button:not(:disabled):hover,.receive button:not(:disabled):hover{transform:translateY(-2px)}
-.receive{display:grid;gap:6px;align-content:start;padding:10px;border-radius:12px;background:#f4f1e4;transition:opacity .25s ease-out}
-.receive[data-ready="false"]{opacity:.5}
-.receive small{font-size:.6rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#5d7169}
+/* Scene 3: Mum and the money-direction strip. */
+.mum{margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #dce3d4}
+.mum>span{font-size:.75rem;font-weight:850;color:#826137}
+.mum>div{margin-top:4px;font-family:var(--font-display),sans-serif;font-size:1.25rem;color:#375b53}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;margin:2px 0 6px;padding:11px;border-radius:12px;background:#f3f0e2}
+.flow>span{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border-radius:9px;background:#fff;font-size:.76rem;font-weight:800;text-align:center}
+.flow>span svg{width:17px;height:17px;color:#2f7369}
+.flow em{display:grid;justify-items:center;font-size:.66rem;font-style:normal;font-weight:900;color:#9b3a1c}
+.flow em svg{width:24px;height:24px}
 
-/* Scene 5: rules + where to report */
-.panel .saved,.saved{display:flex;align-items:center;gap:8px;margin:0 0 6px;padding:9px 12px;border-radius:9px;background:#e3edda;color:#284c37;font-size:.78rem;font-weight:800}
-.saved svg{flex:none;width:17px;height:17px}
-.help{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
-.help>div{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#f4f1e4;color:#284c37}
-.help strong{font-family:var(--font-display),sans-serif;font-size:1.6rem;line-height:1}
-.help span{font-size:.68rem;line-height:1.35}
-.help b{display:block;font-size:.78rem}
-.help svg{flex:none;width:20px;height:20px}
+/* Scene 4: phone + task card. */
+.taskGrid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px;align-items:center}
+.taskGrid .phone{max-width:220px}
+.taskGrid .upi{min-height:318px}
+.taskGrid>div:last-child{padding:22px 24px}
+.stepper{display:flex;gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.stepper li{flex:1;display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:8px;background:#f1f2e6;color:#6c7a70;font-size:.7rem;font-weight:800}
+.stepper li>span{display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:50%;background:#fff;font-size:.64rem}
+.stepper li[data-state="now"]{background:#dcebe4;color:#184b4a}
+.stepper li[data-state="now"]>span{background:#145b5e;color:#fff}
+.stepper li[data-state="done"]{color:#2c5d3a}
+.stepper li[data-state="done"]>span{background:#cfe5c4}
+.stepper svg{width:13px;height:13px}
+.question{margin-bottom:10px;font-size:.88rem;font-weight:800;line-height:1.35;color:#1f4744}
+.choices{flex-direction:column;align-items:stretch}
+.choices button{justify-content:flex-start;padding:10px 12px;text-align:left;font-size:.8rem}
+.choices button[data-wrong="true"]{border-color:#d9a07f;background:#fcefe6}
+.summary{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.summary li{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:9px;background:#e3edda;color:#284c37;font-size:.8rem;font-weight:750}
+.summary svg{width:16px;height:16px}
 
+/* Scene 5: the shop's own QR and how receiving works. */
+.receive{display:grid;grid-template-columns:172px minmax(0,1fr);gap:22px;align-items:center}
+.shopQr{display:grid;justify-items:center;gap:6px;padding:13px 12px;border-radius:14px;background:#123a43;color:#fff4db;text-align:center}
+.shopQr>span{display:flex;align-items:center;gap:5px;font-size:.64rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+.shopQr svg{width:14px;height:14px}
+.shopQr .qr{width:136px}
+.shopQr>b{font-size:.84rem}
+.shopQr small{font-size:.58rem;color:#cfe3dd;overflow-wrap:anywhere}
+
+@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr) 210px;gap:14px}.taskGrid{grid-template-columns:190px minmax(0,1fr);gap:14px}.taskGrid .phone{max-width:190px}.receive{grid-template-columns:130px minmax(0,1fr);gap:14px}.shopQr .qr{width:104px}}
 @media(max-width:600px){
-  .chat{left:10px;right:10px;bottom:10px;max-width:none;font-size:.7rem}
-  .split{grid-template-columns:1fr;gap:12px;padding:12px;border-width:6px;border-radius:12px}
-  .msg{max-width:none}
-  .mum>div>p{font-size:1.05rem}
-  .directions,.help{grid-template-columns:1fr}
-  .taskGrid{grid-template-columns:1fr;justify-items:center}
-  .receive{width:100%}
+  .notice{left:10px;bottom:10px;max-width:210px;gap:8px;padding:8px 10px}
+  .notice .avatar{width:28px;height:28px;font-size:.6rem}
+  .notice strong{font-size:.72rem}
+  .notice span:last-child{font-size:.68rem}
+  .split,.taskGrid{grid-template-columns:1fr;gap:14px}
+  .phone,.taskGrid .phone{max-width:250px}
+  .upi,.taskGrid .upi{min-height:0}
+  .keypad{display:none}
+  .scanner{padding:22px 0}
+  .result{padding:26px 16px}
+  .them{font-size:.76rem}
+  .qrMsg .qr{width:66px}
+  .taskGrid>div:last-child{padding:20px 16px}
+  .stepper li{justify-content:center;padding:6px 4px;font-size:.64rem}
+  .choices button{font-size:.76rem}
+  .mum>div{font-size:1.1rem}
+  .flow{gap:6px;padding:9px}
+  .flow>span{flex-direction:column;gap:4px;font-size:.7rem}
+  .receive{grid-template-columns:108px minmax(0,1fr);gap:12px}
+  .shopQr{padding:10px 8px}
+  .shopQr>span{font-size:.55rem}
+  .shopQr .qr{width:86px}
+  .shopQr>b{font-size:.7rem}
 }

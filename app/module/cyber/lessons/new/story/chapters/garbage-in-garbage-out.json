@@ -1,77 +1,80 @@
 {
-  "duration": 101.052,
+  "duration": 102.336,
   "scenes": [
     {
       "id": "meet",
       "label": "Meet Tara",
-      "title": "Thirty bakers want the job!",
+      "title": "Saturday at the bakery",
       "mood": "happy",
-      "caption": "Meet Tara. Every Saturday she helps at Aunt Meena's bakery, piping icing onto cupcakes. The bakery is so busy that Aunt Meena needs a new baker's helper. Thirty people have applied! To save time, she tries a new computer tool that picks a shortlist for her.",
-      "dialogue": "Thirty bakers want to join us!",
-      "status": "Icing cupcakes",
+      "caption": "Meet Tara. Every Saturday, she helps at her Aunt Meera's bakery in Cyberpur. The bakery needs a new baker. Four people came to bake a test loaf, and Aunt Meera scored each one. Now an AI helper app will pick a shortlist. Tara can't wait!",
+      "speech": "Meet Tara. Every Saturday, she helps at her Aunt Meera's bakery in Cyberpur. The bakery needs a new baker. Four people came to bake a test loaf, and Aunt Meera scored each one. Now an A I helper app will pick a shortlist. Tara can't wait!",
+      "dialogue": "I love Saturdays at the bakery!",
+      "status": "Helping at the bakery",
       "start": 0.0,
-      "duration": 16.192
+      "duration": 15.453
     },
     {
-      "id": "shortlist",
+      "id": "problem",
       "label": "The shortlist",
-      "title": "The best baker was left out.",
+      "title": "Where is Kavya?",
       "mood": "sad",
-      "caption": "The tool picks three people, all from Hilltop School. Tara spots something odd. Priya isn't on the list! Priya won the Cyberpur cake contest and has baked for three years. The tool marked her: not a good match. How could the best baker be left out?",
-      "dialogue": "Priya's the best baker in Cyberpur!",
-      "status": "Something's not right",
+      "caption": "The shortlist pops up: two names, both from Hilltop School. But where's Kavya? Her test loaf got the top score, nine out of ten! Tara tasted it, and it was amazing. So why did the app leave her out? Tara feels upset. It isn't fair to Kavya.",
+      "dialogue": "Kavya’s bread was the best. Why not her?",
+      "status": "Feeling upset",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 16.842,
-      "duration": 15.36
+      "start": 16.103,
+      "duration": 16.274
     },
     {
-      "id": "records",
-      "label": "Old records",
-      "title": "What did the tool learn from?",
+      "id": "data",
+      "label": "Check the data",
+      "title": "The app copied an old pattern.",
       "mood": "thinking",
-      "caption": "Tara and Aunt Meena look at what the tool learned from: ten years of old hiring records. Nearly everyone hired came from Hilltop School, because the old manager only put job posters there. So the tool learned that Hilltop means a good baker. People call this garbage in, garbage out.",
-      "dialogue": "So it copied an old, unfair habit?",
-      "status": "Reading the records",
-      "start": 32.852,
-      "duration": 17.515
+      "caption": "Tara and Aunt Meera open the app's training data: the bakery's old hiring records. Years ago, almost every baker hired came from Hilltop School. So the app learned a pattern: Hilltop means hire. This is called biased data. Garbage in, garbage out: flawed examples in, unfair answers out.",
+      "dialogue": "So the app copied the old pattern?",
+      "status": "Checking the data",
+      "start": 33.027,
+      "duration": 18.853
     },
     {
-      "id": "columns",
-      "label": "Clean the data",
-      "title": "Which column isn't about baking?",
+      "id": "fix",
+      "label": "Fix the data",
+      "title": "Keep the skills. Drop the unfair clue.",
       "mood": "thinking",
-      "caption": "Your turn. The training data has five columns. Remove the one that has nothing to do with baking, then rerun the shortlist. Careful: removing a real skill, like years of baking or the tasting score, would make the tool worse, not fairer.",
-      "dialogue": "Which column isn't about baking at all?",
-      "status": "Hunting for unfairness",
-      "start": 51.017,
-      "duration": 15.147
+      "caption": "Your turn! Help Tara fix the training data. Which column has nothing to do with baking? Remove it, but keep the skill columns, because the app needs those to judge bakers fairly. Then rerun the app. Does Kavya make the shortlist now?",
+      "dialogue": "Which column doesn’t belong here?",
+      "status": "Fixing the data",
+      "start": 52.531,
+      "duration": 15.066
     },
     {
-      "id": "fair",
-      "label": "Fair tools",
-      "title": "The tool helps. People decide.",
+      "id": "lesson",
+      "label": "People check",
+      "title": "The app helps. People decide.",
       "mood": "happy",
-      "caption": "Now Priya is on the shortlist! When a tool learns from past choices, it can copy past unfairness too. This is called bias. So check that every input is about the job, test the tool with many kinds of people, and let a person make the final choice.",
-      "dialogue": "The tool helps. People decide.",
-      "status": "Making it fair",
-      "start": 66.813,
-      "duration": 16.085
+      "caption": "It worked! Now the app judges skills, and Kavya is on the shortlist. But Aunt Meera knows one fix isn't enough. AI learns from examples, so people must check where the data came from and look at every result. The app only helps. Aunt Meera still decides.",
+      "speech": "It worked! Now the app judges skills, and Kavya is on the shortlist. But Aunt Meera knows one fix isn't enough. A I learns from examples, so people must check where the data came from and look at every result. The app only helps. Aunt Meera still decides.",
+      "dialogue": "People must check what the app learned.",
+      "status": "Learning why",
+      "start": 68.246,
+      "duration": 16.807
     },
     {
       "id": "ending",
       "label": "A happier ending",
-      "title": "Welcome to the team, Priya!",
+      "title": "Fresh bread, fair chance.",
       "mood": "happy",
-      "caption": "Priya comes for a trial day and bakes a mango cake that makes everyone smile. Aunt Meena hires her! Tara has learned that a tool trained on unfair data gives unfair answers, so people must check it. Your turn: help Tara check who really has the right skills!",
-      "dialogue": "Welcome to the team, Priya!",
-      "status": "Happy for Priya",
+      "caption": "Aunt Meera meets Kavya, and she gets the job! Her first bread sells out by lunch. Tara feels proud she spoke up. Remember: an AI is only as good as the data it learns from. Your turn: help Tara check more hiring data for hidden unfair rules!",
+      "speech": "Aunt Meera meets Kavya, and she gets the job! Her first bread sells out by lunch. Tara feels proud she spoke up. Remember: an A I is only as good as the data it learns from. Your turn: help Tara check more hiring data for hidden unfair rules!",
+      "dialogue": "Kavya’s bread is the best in Cyberpur!",
+      "status": "Proud and happy",
       "tone": "resolved",
-      "start": 83.549,
-      "duration": 16.853
+      "start": 85.703,
+      "duration": 15.983
     }
   ]
 }

@@ -1,14 +1,19 @@
-// QA hooks for scripts/story-qa.cjs: how a learner spots the fake-police warning signs and responds.
+// QA hooks for scripts/story-qa.cjs: how a learner completes Kabir's mid-story task.
+async function spotSigns(page) {
+  const check = page.getByRole('button', { name: /Check my signs/ });
+  if (!(await check.count())) return;
+  for (const name of [/CBI.*badge/, /Stay on camera/, /Pay ₹50,000 to clear your name/]) await page.getByRole('button', { name }).click();
+  await check.click();
+}
 module.exports = {
   async solve(page) {
-    for (const sign of [/^The badge/, /^“Stay on camera/, /^“Pay ₹50,000/]) {
-      const button = page.getByRole('button', { name: sign });
-      if (await button.isEnabled()) await button.click();
-    }
-    await page.getByRole('button', { name: 'End the call, tell family, and report it' }).click();
+    await spotSigns(page);
+    for (const name of [/^End the call/, /^Tell family/, /^Report it/]) await page.getByRole('button', { name }).click();
+    await page.getByRole('button', { name: /Hang up and report/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: /^He knows Mum/ }).click();
-    return /isn.t proof he.s real/;
+    await spotSigns(page);
+    await page.getByRole('button', { name: /Pay ₹50,000 to clear her name/ }).click();
+    return /Paying never clears a case/;
   },
 };

@@ -1,83 +1,81 @@
 {
-  "duration": 115.495,
+  "duration": 120.158,
   "scenes": [
     {
       "id": "meet",
-      "label": "Meet Meera",
-      "title": "Sports day leaderboard",
+      "label": "Meet Kabir",
+      "title": "The fastest list on the field",
       "mood": "happy",
-      "caption": "Sports day! Meera built the live leaderboard for the school's fun run, and this year 2,000 runners have signed up: students, teachers, even grandparents. In class, she tested it with 30 names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
-      "speech": "Sports day! Meera built the live leaderboard for the school's fun run, and this year two thousand runners have signed up: students, teachers, even grandparents. In class, she tested it with thirty names, and the results appeared instantly. Now the big screen by the finish line shows his app, waiting for the first runners.",
-      "dialogue": "Thirty names took no time. This will be easy!",
-      "status": "Sports day, big screen",
+      "caption": "Meet Kabir. For Cyberpur School's sports day, he's built a live leaderboard. Each time a runner crosses the line, their time goes in, and the list sorts itself again, fastest first. He tested it with his class's thirty runners, and it was instant. Today, 2,000 runners from twelve schools will race, and Kabir can't wait.",
+      "speech": "Meet Kabir. For Cyberpur School's sports day, he's built a live leaderboard. Each time a runner crosses the line, their time goes in, and the list sorts itself again, fastest first. He tested it with his class's thirty runners, and it was instant. Today, two thousand runners from twelve schools will race, and Kabir can't wait.",
+      "dialogue": "Every finish time, sorted in a blink!",
+      "status": "Proud of his app",
       "start": 0.0,
-      "duration": 18.368
+      "duration": 19.492
     },
     {
       "id": "freeze",
       "label": "The freeze",
-      "title": "Sorting… still sorting…",
+      "title": "Frozen at prize time",
       "mood": "sad",
-      "caption": "By noon, all 2,000 runners have finished. Meera presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Meera's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
-      "speech": "By noon, all two thousand runners have finished. Meera presses Update. The screen freezes on a spinning wheel: sorting. One minute. Two. The prize ceremony is waiting, and the principal keeps checking her watch. Meera's leaderboard uses bubble sort, which compares neighbours and swaps them, pass after pass, until everything is in order.",
-      "dialogue": "It worked with thirty names. Why is it stuck?",
-      "status": "Leaderboard frozen",
+      "caption": "By four o'clock, the results are pouring in. Then the leaderboard freezes. A little wheel spins and spins. The principal is waiting to announce the winners, and Coach Mehra keeps messaging: is the list ready? Kabir's face feels hot. With thirty runners, the code gave the right order in a blink. So why is it stuck now?",
+      "dialogue": "It worked with thirty runners. Why is it stuck now?",
+      "status": "Frozen and worried",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 19.018,
-      "duration": 18.667
+      "start": 20.142,
+      "duration": 18.628
     },
     {
-      "id": "growth",
-      "label": "Count the work",
-      "title": "Double the list, four times the work",
+      "id": "why",
+      "label": "Ask Ms Iyer",
+      "title": "Same answer, different work",
       "mood": "thinking",
-      "caption": "Mrs D'Souza helps her count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
-      "speech": "Missus D'Souza helps her count the work. Bubble sort's comparisons grow roughly with n squared, where n is the number of items. Double the list, and the work quadruples. Merge sort splits the list in half, again and again, then merges the sorted halves. Its work grows like n log n. How work grows with size is called time complexity.",
-      "dialogue": "Double the runners, four times the work!",
-      "status": "Counting the work",
-      "start": 38.335,
-      "duration": 19.328
+      "caption": "Kabir calls Ms Iyer, his computer teacher. Together they read the code. His bubble sort compares neighbours and swaps them, pass after pass. For 2,000 runners, that's about two million comparisons, and it re-sorts after every new time. Merge sort splits the list into halves, sorts each half, then merges them in order. Its work grows roughly like n log n.",
+      "speech": "Kabir calls Miss Iyer, his computer teacher. Together they read the code. His bubble sort compares neighbours and swaps them, pass after pass. For two thousand runners, that's about two million comparisons, and it re-sorts after every new time. Merge sort splits the list into halves, sorts each half, then merges them in order. Its work grows roughly like n log n.",
+      "dialogue": "So both sorts are right, but one works much harder?",
+      "status": "Finding the reason",
+      "start": 39.42,
+      "duration": 20.216
     },
     {
       "id": "race",
       "label": "Race the sorts",
-      "title": "Predict, then read the counts.",
+      "title": "Predict, run, then choose",
       "mood": "thinking",
-      "caption": "Your turn. Race the two sorts on three lists: eight names already in order, 100 results in reverse, and all 2,000 mixed-up results. Predict which does less work, then read the comparison counts. Finally, justify the choice for sports day. Careful: bubble sort isn't always slower. On one of these lists, it wins.",
-      "speech": "Your turn. Race the two sorts on three lists: eight names already in order, a hundred results in reverse, and all two thousand mixed-up results. Predict which does less work, then read the comparison counts. Finally, justify the choice for sports day. Careful: bubble sort isn't always slower. On one of these lists, it wins.",
-      "dialogue": "Predict first, then let the counts decide.",
-      "status": "Racing the sorts",
-      "start": 58.313,
-      "duration": 18.731
+      "caption": "Your turn. Help Kabir race the two sorts on three test lists: 8 results already in order, 100 in reverse, and all 2,000 mixed up. Before each race, predict which sort will make fewer comparisons, then run it and read the counters. Watch out: the winner can change with the list. Then choose the sort for sports day.",
+      "speech": "Your turn. Help Kabir race the two sorts on three test lists: eight results already in order, a hundred in reverse, and all two thousand mixed up. Before each race, predict which sort will make fewer comparisons, then run it and read the counters. Watch out: the winner can change with the list. Then choose the sort for sports day.",
+      "dialogue": "Let's measure the work, not guess.",
+      "status": "Testing both sorts",
+      "start": 60.286,
+      "duration": 18.532
     },
     {
-      "id": "choose",
-      "label": "Fit the data",
-      "title": "The best algorithm depends on the data.",
+      "id": "complexity",
+      "label": "Why it grows",
+      "title": "Time complexity: how work grows",
       "mood": "happy",
-      "caption": "So the best algorithm depends on the data. For a tiny list that's already sorted, bubble sort with an early exit finishes in one quick pass. But as lists grow, n squared explodes: about two million comparisons for 2,000 runners, against about twenty thousand for merge sort. Big lists need algorithms that scale.",
-      "speech": "So the best algorithm depends on the data. For a tiny list that's already sorted, bubble sort with an early exit finishes in one quick pass. But as lists grow, n squared explodes: about two million comparisons for two thousand runners, against about twenty thousand for merge sort. Big lists need algorithms that scale.",
-      "dialogue": "Choose the algorithm for the data, not by habit.",
-      "status": "Choosing wisely",
-      "start": 77.693,
-      "duration": 19.008
+      "caption": "The counters show a pattern called time complexity: how an algorithm's work grows as its input grows. Bubble sort's comparisons grow like n², so twice the runners means about four times the work. Merge sort grows like n log n, just over double. On a tiny, tidy list, bubble sort's early stop can win. On big mixed lists, merge sort wins easily.",
+      "speech": "The counters show a pattern called time complexity: how an algorithm's work grows as its input grows. Bubble sort's comparisons grow like n squared, so twice the runners means about four times the work. Merge sort grows like n log n, just over double. On a tiny, tidy list, bubble sort's early stop can win. On big mixed lists, merge sort wins easily.",
+      "dialogue": "Double the runners, and bubble sort does four times the work!",
+      "status": "It all clicks",
+      "start": 79.468,
+      "duration": 20.234
     },
     {
       "id": "ending",
-      "label": "A happier ending",
-      "title": "Medals on time",
+      "label": "Prize time",
+      "title": "Winners on the big screen",
       "mood": "happy",
-      "caption": "Meera switches the leaderboard to merge sort. She presses Update, and all 2,000 names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Meera compare more algorithms and pick the right one for the job!",
-      "speech": "Meera switches the leaderboard to merge sort. She presses Update, and all two thousand names appear in under a second. The ceremony starts, the winners get their medals, and the principal thanks the student who fixed it on the spot. Your turn: help Meera compare more algorithms and pick the right one for the job!",
-      "dialogue": "Two thousand names in under a second!",
-      "status": "Leaderboard live again",
+      "caption": "Kabir switches the leaderboard to merge sort. Now each re-sort takes about twenty thousand comparisons instead of two million, and the list keeps up easily. The winners appear just in time, and Coach Mehra sends a thumbs up. Correct answers matter, but so does the work behind them. Your turn: help Kabir race the sorters on new lists!",
+      "dialogue": "Merge sort for big lists. Measure before you guess!",
+      "status": "Proud and relieved",
       "tone": "resolved",
-      "start": 97.351,
-      "duration": 17.493
+      "start": 100.352,
+      "duration": 19.156
     }
   ]
 }

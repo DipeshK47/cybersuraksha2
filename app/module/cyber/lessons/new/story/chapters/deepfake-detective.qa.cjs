@@ -1,16 +1,14 @@
-// QA hooks for scripts/story-qa.cjs: how a learner inspects the clip and verifies before sharing.
-const answers = [['0:02', 'Looks normal'], ['0:05', 'Tag as artefact'], ['0:08', 'Tag as artefact'], ['0:11', 'Tag as artefact'], ['0:14', 'Looks normal']];
+// QA hooks for scripts/story-qa.cjs: how a learner completes Kabir's mid-story task.
 module.exports = {
   async solve(page) {
-    for (const [time, choice] of answers) {
-      await page.getByRole('button', { name: `Frame ${time}`, exact: true }).click();
-      const button = page.getByRole('button', { name: choice, exact: true });
-      if (await button.isEnabled()) await button.click();
+    for (const [second, tag] of [[1, 'Odd blinking'], [3, 'Lips don’t match audio'], [4, 'Shadow on the wrong side']]) {
+      await page.getByRole('button', { name: new RegExp(`^Frame at ${second} second`) }).click();
+      await page.getByRole('button', { name: tag, exact: true }).click();
     }
-    await page.getByRole('button', { name: /^Check the fair/ }).click();
+    await page.getByRole('button', { name: /Check the official channel/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: 'Looks real. Forward it', exact: true }).click();
-    return /Realistic fakes exist/;
+    await page.getByRole('button', { name: 'Looks real, forward it', exact: true }).click();
+    return /Looking real isn’t proof/;
   },
 };

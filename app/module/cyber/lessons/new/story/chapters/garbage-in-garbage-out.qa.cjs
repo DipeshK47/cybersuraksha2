@@ -1,12 +1,14 @@
-// QA hooks for scripts/story-qa.cjs: how a learner removes the unfair column from the bakery tool's data.
+// QA hooks for scripts/story-qa.cjs: how a learner completes Tara's mid-story task.
 module.exports = {
   async solve(page) {
-    const school = page.getByRole('button', { name: 'Remove School name' });
-    if (await school.isEnabled()) await school.click();
-    await page.getByRole('button', { name: 'Rerun the shortlist' }).click();
+    const putBack = page.getByRole('button', { name: 'Put back Test bake column' });
+    if (await putBack.count()) await putBack.click();
+    await page.getByRole('button', { name: 'Remove School column' }).click();
+    await page.getByRole('button', { name: 'Rerun the app' }).click();
+    await page.getByRole('button', { name: /Show Aunt Meera/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: 'Remove Years of baking' }).click();
-    return /real experience/;
+    await page.getByRole('button', { name: 'Remove Test bake column' }).click();
+    return /really bakes/;
   },
 };

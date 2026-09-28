@@ -1,142 +1,152 @@
 "use client";
 
-import { AtSign, BadgeCheck, Clock, CodeXml, Flag, Inbox, Mail, MailWarning, PhoneCall, Reply, Server, ShieldAlert, ShieldCheck, Trophy, UserRound, Users } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, BadgeCheck, Building2, Check, Clock, Code, FlaskConical, Flag, Forward, Globe, GraduationCap, IdCard, IndianRupee, Library, Mail, MailSearch, Menu, MousePointer2, Phone, Puzzle, Reply, Search, ShieldAlert, ShieldCheck, Sun, TriangleAlert } from "lucide-react";
+import type { ReactNode } from "react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
 import script from "./email-header-inspector.json";
 import k from "../story-player.module.css";
-import r from "./email-header-inspector.module.css";
+import e from "./email-header-inspector.module.css";
 
-const REAL = "youngscientists.cyberpur.example";
-const rows = [
-  { field: "Date", value: "Mon, 12 Oct 2026 21:47:03 +0530", bad: false, why: "The date only says when it was sent. Nothing odd here." },
-  { field: "From", value: "Scholarship Office <awards@youngscientists-cyberpur.example>", bad: true, why: "Lookalike domain: a hyphen instead of a dot. The real office is youngscientists.cyberpur.example." },
-  { field: "To", value: "meera.s@mail.cyberpur.example", bad: false, why: "That’s Meera’s own address, so it’s normal." },
-  { field: "Reply-To", value: "claims@fast-prize-desk.example", bad: true, why: "Replies would go to a completely different domain." },
-  { field: "Subject", value: "Congratulations! Award confirmed", bad: false, why: "An exciting subject isn’t a header mismatch by itself. Compare the addresses and servers." },
-  { field: "Received", value: "from mail.bulk-sender.example (203.0.113.45)", bad: true, why: "It came through an unrelated bulk-mail server, not the office’s." },
-  { field: "Authentication-Results", value: "spf=fail  dkim=fail", bad: true, why: "Both checks failed: the domain didn’t vouch for this message." },
-  { field: "MIME-Version", value: "1.0", bad: false, why: "MIME-Version is a standard technical line in almost every email." },
+// The raw header Kabir inspects. `bad` = a real mismatch (label shown once solved); `why` = hint if an ordinary line is flagged.
+const headers = [
+  { field: "Received", value: "from mail.fastprize-bulk.example [203.0.113.45]", bad: "Unrelated server", clue: "Which server did the message really come from? Is it the school’s?" },
+  { field: "Authentication-Results", value: "spf=fail; dkim=fail", bad: "Checks failed", clue: "Read the SPF and DKIM results. Did they pass?" },
+  { field: "From", value: "\"Scholarship Office\" <awards@cyberpur-school-awards.example>", bad: "Lookalike domain", clue: "Read the address inside the angle brackets, not just the name." },
+  { field: "Reply-To", value: "claims@quick-scholar-help.example", bad: "Replies go elsewhere", clue: "Where would a reply actually go?" },
+  { field: "To", value: "kabir@students.cyberpurschool.example", why: "That’s Kabir’s own school address, so it’s ordinary." },
+  { field: "Subject", value: "Congratulations! You have won an award", why: "The subject is only words the sender typed. It doesn’t show where the email came from." },
+  { field: "Date", value: "Mon, 28 Sep 2026 09:41 +0530", why: "The date and time are ordinary. They don’t say who sent it." },
 ];
-const clues = rows.filter(row => row.bad).length;
-const glossary = [
-  { name: "From", text: "The full address behind the display name", Icon: AtSign, at: .5 },
-  { name: "Reply-To", text: "Where your answer would really go", Icon: Reply, at: .6 },
-  { name: "Received", text: "The servers the message passed through", Icon: Server, at: .7 },
-  { name: "SPF · DKIM", text: "Checks that the sending domain vouches for it", Icon: ShieldCheck, at: .82 },
-];
+const badCount = headers.filter(line => line.bad).length;
 
-const verifySteps = [
-  { Icon: PhoneCall, text: "Call the number on the official website, not the email", at: .3 },
-  { Icon: Users, text: "Tell her parents, and warn classmates", at: .6 },
-  { Icon: Flag, text: "Report it as phishing in the mail app", at: .66 },
-];
+function Mailbox({ right = "Kabir’s inbox", children, foot }: { right?: string; children: ReactNode; foot: ReactNode }) {
+  return <div className={k.device}>
+    <div className={k.deviceBar}><span><Mail size={15} /> MAIL</span><span>{right}</span></div>
+    <div className={e.client}>{children}</div>
+    <div className={k.deviceFoot}>{foot}</div>
+  </div>;
+}
 
-function Logo() { return <span className={r.logo} aria-hidden="true">YS</span>; }
+// Same crest on the fake and the real email: a copied logo proves nothing.
+const Crest = () => <span className={e.crest} aria-hidden="true"><GraduationCap /></span>;
 
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
   const [flags, setFlags] = useState<string[]>([]);
-  const [passing, setPassing] = useState(false);
-  const done = solved || passing;
-  const flagged = solved ? rows.filter(row => row.bad).map(row => row.field) : flags;
-  // Reveal an item once narration reaches that fraction of the scene (everything shows while paused).
-  const cue = (at: number) => !playing || elapsed > script.scenes[scene].duration * at;
-  const show = (at: number) => ({ "data-on": cue(at), "aria-hidden": !cue(at) });
-
-  function toggle(row: (typeof rows)[number]) {
-    if (done) return;
-    if (!row.bad) { setHint(row.why); return; }
-    const on = flags.includes(row.field);
-    setFlags(value => on ? value.filter(f => f !== row.field) : [...value, row.field]);
-    setHint(on ? `${row.field} unflagged.` : `${row.field} flagged: ${row.why}`);
+  const on = (seconds: number) => !playing || elapsed >= seconds;
+  function toggle(field: string) {
+    if (solved) return;
+    setFlags(value => value.includes(field) ? value.filter(item => item !== field) : [...value, field]); setHint("");
   }
-  function submit() {
-    if (done) return;
-    if (flags.length < clues) { setHint(`You’ve flagged ${flags.length} of the clues. Compare every address, server and check with the real office.`); return; }
-    setHint("Four independent clues all point the same way. That’s strong evidence of a spoofed email.");
-    setPassing(true);
-    window.setTimeout(markSolved, reduced ? 0 : 700);
+  function check() {
+    if (solved) return;
+    if (flags.length === headers.length) { setHint("Flagging every line isn’t inspecting. Flag only the lines that don’t fit the school, then check."); return; }
+    const ordinary = headers.find(line => !line.bad && flags.includes(line.field));
+    if (ordinary) { setHint(`${ordinary.field}: ${ordinary.why} Unflag it and look again.`); return; }
+    const missing = headers.filter(line => line.bad && !flags.includes(line.field));
+    if (missing.length) { setHint(`${badCount - missing.length} of ${badCount} found. ${missing[0].clue}`); return; }
+    markSolved();
   }
-
-  const inbox = (fresh: "fake" | "real") => <div className={`${k.deviceArt} ${r.inbox}`}>
-    {fresh === "fake"
-      ? <div className={r.mail} data-new="true" {...show(.7)}><Logo /><div><strong>Scholarship Office</strong><span>Congratulations! Award confirmed</span></div><small>now</small></div>
-      : <div className={r.mail} data-new="true"><Logo /><div><strong>Young Scientists Office</strong><span>Your scholarship result</span><em>awards@{REAL}</em></div><small>now</small></div>}
-    <div className={r.mail} data-real="true"><Logo /><div><strong>Young Scientists Office</strong><span>Thank you for your interview</span><em>awards@{REAL}</em></div><small>Tue</small></div>
-    <div className={r.mail} data-real="true"><Logo /><div><strong>Young Scientists Office</strong><span>Interview: Monday, 10 am</span><em>awards@{REAL}</em></div><small>Fri</small></div>
-  </div>;
+  const shown = solved ? headers.filter(line => line.bad).map(line => line.field) : flags;
 
   return <SceneSwap scene={scene} reduced={reduced}>
-    {(scene === 0 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><Inbox size={16} /> CYBERPUR MAIL</span><span>Meera’s inbox · pretend app</span></div>
-      <div className={r.withBadge}>
-        {inbox(scene === 0 ? "fake" : "real")}
-        {scene === 5 && <div className={r.won}><Trophy aria-hidden="true" /><strong>You’ve won the scholarship!</strong><span>No fee. Headers checked: every field matches.</span></div>}
-      </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><Mail /><span>Real office emails come from</span><b>{REAL}</b></> : <><Flag /><span>The fake reached 20 applicants. Meera’s report helped warn them.</span></>}</div>
-    </div>}
+    {scene === 0 && <Mailbox foot={<><Sun /><span>Science fair entry: <b>Solar water heater</b></span><small>Waiting for results</small></>}>
+      <div className={e.appBar}><Menu aria-hidden="true" /><strong>Inbox</strong><span className={e.search}><Search aria-hidden="true" />Search mail</span><span className={e.me} aria-hidden="true">K</span></div>
+      <ul className={e.list}>
+        {on(10) && <li className={`${e.row} ${k.fitIn}`} data-new="true"><Crest /><div><strong>Scholarship Office</strong><b>Congratulations! You have won an award</b><span>Dear student, you have been selected for…</span></div><time>9:41</time></li>}
+        <li className={e.row}><span className={e.avatar} data-tone="teal" aria-hidden="true"><FlaskConical /></span><div><strong>Class 7B Science</strong><b>Fair photos are up!</b><span>Great work on the projects, everyone. See the…</span></div><time>Yesterday</time></li>
+        <li className={e.row}><span className={e.avatar} data-tone="plum" aria-hidden="true"><Library /></span><div><strong>Library Desk</strong><b>Your book is due on Friday</b><span>“Simple Machines for Young Makers” is due…</span></div><time>Mon</time></li>
+        <li className={e.row}><span className={e.avatar} data-tone="gold" aria-hidden="true"><Puzzle /></span><div><strong>Maths Club</strong><b>Puzzle of the week: magic squares</b><span>Bring your answers to Thursday’s meeting…</span></div><time>Sun</time></li>
+      </ul>
+    </Mailbox>}
 
-    {scene === 1 && <div className={k.device}>
-      <div className={k.deviceBar}><span><Mail size={16} /> CYBERPUR MAIL</span><span>Pretend email</span></div>
-      <div className={`${k.deviceArt} ${r.open}`}>
-        <div className={r.openHead}><Logo /><div><strong>Scholarship Office</strong><small>to me · Show details ▾</small></div><span className={r.timer} {...show(.3)}><Clock aria-hidden="true" />23:59:12 left</span></div>
-        <h3 className={r.subject}>Congratulations! You have won an award.</h3>
-        <p {...show(.1)} className={r.body}>To release your award, submit these within <b>24 hours</b>, or it goes to someone else:</p>
-        <div className={r.formRow} {...show(.2)}><span>Aadhaar number</span><i>____ ____ ____</i></div>
-        <div className={r.payRow} {...show(.3)}><span className={r.fakePay}>Pay ₹500 processing fee</span></div>
-        <p className={r.doubt} {...show(.8)}><MailWarning aria-hidden="true" />The real office never mentioned fees.</p>
-      </div>
-      <div className={k.deviceFoot}><UserRound /><span>Display name: “Scholarship Office”. Address hidden.</span></div>
-    </div>}
-
-    {scene === 2 && <div className={k.panel}>
-      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Arjun · Meera’s brother</small><p>“Don’t trust the name. Read the headers.”</p></div></div>
-      <div className={r.nameDemo} {...show(.12)}><span className={r.label}>Scholarship Office</span><span className={r.addr}>&lt;awards@youngscientists-cyberpur.example&gt;</span><small>display name · anyone can type it</small><small>address · where it really came from</small></div>
-      <div className={r.glossary}>{glossary.map(({ name, text, Icon, at }) => <div key={name} {...show(at)}><Icon aria-hidden="true" /><strong>{name}</strong><span>{text}</span></div>)}</div>
-    </div>}
-
-    {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Show original: flag the mismatches</h2>
-      <div className={r.bench}>
-        <div className={r.raw} role="group" aria-label="Raw email headers">{rows.map(row => { const on = flagged.includes(row.field); return <button key={row.field} type="button" className={r.row} aria-pressed={on} aria-label={`Flag ${row.field}`} disabled={done} onClick={() => toggle(row)}>
-          <code><b>{row.field}:</b> {row.value}</code>{on && <span className={r.flag}><Flag aria-hidden="true" /></span>}
-        </button>; })}</div>
-        <div className={r.reference}>
-          <small>The real office</small>
-          <span><AtSign aria-hidden="true" />awards@{REAL}</span>
-          <span><Server aria-hidden="true" />mail.{REAL}</span>
-          <span><BadgeCheck aria-hidden="true" />spf=pass · dkim=pass</span>
-          <b className={r.count}>{flagged.length} of {clues} clues flagged</b>
+    {scene === 1 && <Mailbox right="Pretend email · example only" foot={<><TriangleAlert /><span>Don’t click, reply or pay yet.</span><small>Pressure is a warning sign</small></>}>
+      <div className={e.msg}>
+        <div className={e.msgTop}><ArrowLeft aria-hidden="true" /><span>Inbox</span></div>
+        <h3 className={e.subject}>Congratulations! You have won an award</h3>
+        <div className={e.sender}><Crest /><div><strong>Scholarship Office</strong><span>to me · 9:41</span></div></div>
+        <div className={e.letter}>
+          <p>Dear student,</p>
+          <p>Congratulations! You have won an award. Submit your <mark data-on={on(4)}>Aadhaar number</mark> and a <mark data-on={on(5)}>₹500 processing fee</mark> <mark data-on={on(7.5)}>within 24 hours</mark>.</p>
+          <div className={e.cta}><span className={e.fakeButton}>Claim award now</span><span className={e.timer}><Clock aria-hidden="true" />23:59:12 left</span></div>
+        </div>
+        <div className={e.flags}>
+          <span className={e.flag} data-on={on(4)}><IdCard aria-hidden="true" />Asks for Aadhaar</span>
+          <span className={e.flag} data-on={on(11)}><IndianRupee aria-hidden="true" />Money first</span>
+          <span className={e.flag} data-on={on(13.5)}><Clock aria-hidden="true" />24-hour rush</span>
+          <span className={e.flag} data-kind="neutral" data-on={on(14.5)}><BadgeCheck aria-hidden="true" />Logo and name look right</span>
         </div>
       </div>
-      <p className={k.hint} aria-live="polite">{hint || (done ? "Four independent clues all point the same way. That’s strong evidence of a spoofed email." : "Tap a header line to flag it. Tap again to unflag.")}</p>
-      <div className={k.actions}>
-        <button type="button" className={r.trap} data-trap="true" onClick={() => { if (!done) setHint("A display name is just a label anyone can type. Check the address and servers behind it."); }} disabled={done}><UserRound />The name says Scholarship Office, so it’s real</button>
-        <button className={k.primary} type="button" onClick={submit} disabled={done}><CodeXml />Submit findings</button>
+    </Mailbox>}
+
+    {scene === 2 && <div className={k.panel}>
+      <div className={e.meera}><span aria-hidden="true">M</span><div><small>Meera Aunty</small><p>“Don’t click anything. Let’s look underneath.”</p></div></div>
+      <div className={e.layers}>
+        <div className={e.layer} data-on={on(7.5)}><small>What you see</small><strong><Crest />Scholarship Office</strong><span>The <b>display name</b>. Anyone can type any name here.</span></div>
+        <div className={e.layer} data-deep="true" data-on={on(11)}><small>What’s underneath</small><strong><Code aria-hidden="true" />Email headers</strong><span>Which servers it passed through, plus <b>SPF</b> and <b>DKIM</b> checks.</span></div>
       </div>
-      <small>Fictional headers. Every domain ends in .example.</small>
+      <div className={e.menu} data-on={on(16.5)}><span><Reply aria-hidden="true" />Reply</span><span><Forward aria-hidden="true" />Forward</span><span data-pick="true"><Code aria-hidden="true" />Show original<MousePointer2 aria-hidden="true" /></span></div>
+      <small>SPF asks: was this server allowed to send for that domain? DKIM checks the email’s digital signature.</small>
+    </div>}
+
+    {scene === 3 && <div className={k.device}>
+      <div className={k.deviceBar}><span><MailSearch size={15} /> SHOW ORIGINAL</span><span>Raw header · example only</span></div>
+      <div className={e.raw}>
+        <div className={e.domain}><ShieldCheck aria-hidden="true" /><span>School’s real domain</span><code>cyberpurschool.example</code></div>
+        {solved && <div className={e.verdict}><ShieldAlert aria-hidden="true" /><span><strong>Phishing:</strong> {badCount} of {badCount} mismatches flagged</span></div>}
+        <div className={e.lines} role="group" aria-label="Raw header lines. Tap a line to flag it.">
+          {headers.map(line => <button key={line.field} className={e.line} type="button" aria-pressed={shown.includes(line.field)} disabled={solved} onClick={() => toggle(line.field)}>
+            <span className={e.code}><b>{line.field}:</b> {line.value}</span>
+            <span className={e.flagMark} aria-hidden="true"><Flag /></span>
+            {solved && <em data-bad={Boolean(line.bad)}>{line.bad ?? "Ordinary"}</em>}
+          </button>)}
+        </div>
+      </div>
+      <div className={e.taskFoot}>
+        <p className={`${k.hint} ${e.tip}`} aria-live="polite">{solved ? "Four clues point the same way. Now check with the school directly." : hint || (flags.length ? `${flags.length} line${flags.length === 1 ? "" : "s"} flagged. Check when you’re sure.` : "Tap every line that doesn’t match the school. Tap again to unflag.")}</p>
+        {!solved && <div className={k.actions}>
+          <button className={e.trap} data-trap="true" disabled={solved} onClick={() => setHint("A display name is a label anyone can type. Check the address in the angle brackets: it isn’t cyberpurschool.example.")} type="button"><BadgeCheck />It’s real: the name says Scholarship Office</button>
+          <button className={k.primary} disabled={solved || !flags.length} onClick={check} type="button">Check my flags <ArrowRight /></button>
+        </div>}
+      </div>
     </div>}
 
     {scene === 4 && <div className={k.panel}>
-      <h2>Verify, then report</h2>
-      <div className={r.evidence} {...show(.02)}>{["Lookalike domain", "Reply-To elsewhere", "Unrelated server", "SPF and DKIM fail"].map(c => <span key={c}><ShieldAlert aria-hidden="true" />{c}</span>)}</div>
-      {verifySteps.map(({ Icon, text, at }) => <div className={k.step} key={text} data-active={cue(at)}><span><Icon /></span>{text}</div>)}
-      <p className={r.never} {...show(.86)}><ShieldAlert aria-hidden="true" />Never send an Aadhaar number or pay a fee through an email link.</p>
-      <small>Even an SPF pass isn’t proof on its own: scammers can set up their own lookalike domains. Check several clues and verify.</small>
+      <div className={e.evidence}>{headers.filter(line => line.bad).map(line => <span key={line.field}><Flag aria-hidden="true" />{line.bad}</span>)}</div>
+      <h2>Verify it yourself. Then report.</h2>
+      <div className={e.call} data-on={on(10.5)}>
+        <span className={e.callAvatar} aria-hidden="true"><Building2 /></span>
+        <div><strong>Cyberpur School Office</strong><span>+91 00000 12345 · from the school diary</span></div>
+        <em>Pretend call</em>
+        <p>“We never charge a fee for awards. There’s no such scholarship.”</p>
+      </div>
+      {([[Globe, "Typed cyberpurschool.example himself", 7.5], [Phone, "Called the number in the school diary", 10.5], [Flag, "Reported the email as phishing", 15.5]] as const).map(([Icon, text, at]) => <div className={k.step} key={text} data-active={on(at)}><span><Icon /></span>{text}</div>)}
+      <small>If money is ever lost to a scam, an adult should call 1930 quickly or report at cybercrime.gov.in.</small>
     </div>}
+
+    {scene === 5 && <Mailbox foot={<><Award /><span>Certificate for Innovation</span><small>Checked: sender, reply route, SPF, DKIM</small></>}>
+      <div className={e.msg}>
+        <h3 className={e.subject}>Science fair results: well done, Kabir!</h3>
+        <div className={e.sender}><Crest /><div><strong>Cyberpur School Office</strong><span>office@cyberpurschool.example</span></div></div>
+        <div className={e.passes}><span><Check aria-hidden="true" />Domain matches</span><span><Check aria-hidden="true" />SPF pass</span><span><Check aria-hidden="true" />DKIM pass</span></div>
+        <div className={e.letter} data-real="true"><p>Your solar water heater has won a <strong>certificate for Innovation</strong>. Please collect it at Monday’s assembly.</p><p>There is no fee and nothing to submit.</p></div>
+        <div className={e.reported}><ShieldAlert aria-hidden="true" /><span>“Scholarship Office” email</span><em>Reported as phishing</em></div>
+      </div>
+    </Mailbox>}
   </SceneSwap>;
 }
 
 const chapter: StoryChapter = {
   script,
-  title: "Meera and the award email",
-  icon: MailWarning,
-  character: { asset: "emotional-avatar", name: "Meera" },
+  title: "Kabir’s surprise scholarship",
+  icon: MailSearch,
+  character: { asset: "emotional-avatar", name: "Kabir" },
   interactionScene: 3,
-  beginLabel: "Practise with Meera",
-  waitingText: "Story paused. Flag every header clue, then submit your findings.",
-  lockedHint: "Help Meera inspect the email headers first.",
+  beginLabel: "Practise with Kabir",
+  waitingText: "Story paused. Flag the header mismatches to see what happens next.",
+  lockedHint: "Help Kabir inspect the raw headers first.",
+  solvedMood: "happy",
   World,
 };
 export default chapter;

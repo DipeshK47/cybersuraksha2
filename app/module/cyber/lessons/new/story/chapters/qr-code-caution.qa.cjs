@@ -1,13 +1,16 @@
-// QA hooks for scripts/story-qa.cjs: how a learner stops the fake "receive" payment and gets paid safely.
+// QA hooks for scripts/story-qa.cjs: how a learner completes Tara's mid-story task.
+// solve() also runs after wrongAttempt(), so it skips any step that is already answered.
 module.exports = {
   async solve(page) {
-    const cancel = page.getByRole('button', { name: 'Cancel the payment' });
-    if (await cancel.isEnabled()) await cancel.click();
-    await page.getByRole('button', { name: /^Send Mum.s own QR code/ }).click();
-    await page.waitForTimeout(600); // the story moves on after a short pause
+    for (const name of ['From Mum’s account to the buyer', 'Cancel, with no PIN', 'Send the shop’s own QR code or UPI ID']) {
+      const button = page.getByRole('button', { name, exact: true });
+      if (await button.count()) await button.click();
+    }
+    await page.getByRole('button', { name: /Send the shop’s QR to the buyer/ }).click();
   },
   async wrongAttempt(page) {
-    await page.getByRole('button', { name: /^Enter the PIN, it/ }).click();
-    return /A PIN never receives money/;
+    await page.getByRole('button', { name: 'From Mum’s account to the buyer', exact: true }).click();
+    await page.getByRole('button', { name: 'Enter PIN to receive', exact: true }).click();
+    return /only ever says yes to sending money/;
   },
 };

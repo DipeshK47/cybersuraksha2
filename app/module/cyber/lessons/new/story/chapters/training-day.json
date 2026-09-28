@@ -1,78 +1,79 @@
 {
-  "duration": 103.121,
+  "duration": 108.262,
   "scenes": [
     {
       "id": "meet",
       "label": "Meet Tara",
-      "title": "The Pet Finder is live!",
+      "title": "Our pet finder works!",
       "mood": "happy",
-      "caption": "Meet Tara. Her coding club has built a Pet Finder: a camera on the corner of her lane that spots dogs and helps find lost pets. Everyone on the lane loves Kittu, a friendly brown indie dog. Tara feeds him biscuits every morning on her way to school.",
-      "dialogue": "Our Pet Finder can spot any dog!",
+      "caption": "Meet Tara. Her coding club has built a lost pet finder for her lane. It's a camera that learned to spot dogs from photos. Today it spots Bruno, a golden retriever, in a second! Tara hopes it will help keep Kittu safe. He's the friendly lane dog everyone feeds.",
+      "dialogue": "Look! It found Bruno in one second!",
       "status": "Proud of her club",
       "start": 0.0,
-      "duration": 16.469
+      "duration": 17.591
     },
     {
-      "id": "missing",
+      "id": "problem",
       "label": "Kittu is missing",
       "title": "It walked right past him.",
       "mood": "sad",
-      "caption": "Then one morning, Kittu isn't waiting for his biscuits. He's missing! Tara checks the Pet Finder. The camera saw a brown dog walk right past, but it said: not a dog. No alert was sent. Kittu was right there, and the finder didn't recognise him.",
-      "dialogue": "Kittu walked right past, and it missed him!",
+      "caption": "One evening, Kittu doesn't come for his dinner. Tara checks the finder's camera log. There he is, trotting right past the gate! But the finder says: not a dog. No alert went out, so nobody knew where to look. Tara feels worried and upset. How could it miss him?",
+      "dialogue": "He was right there! Why didn't it see him?",
       "status": "Worried about Kittu",
       "tone": "trouble",
       "flash": {
         "mood": "surprise",
         "seconds": 3
       },
-      "start": 17.119,
-      "duration": 15.381
+      "start": 18.241,
+      "duration": 16.585
     },
     {
-      "id": "data",
-      "label": "Check the data",
-      "title": "What did the finder learn from?",
+      "id": "why",
+      "label": "Find out why",
+      "title": "What did it learn from?",
       "mood": "thinking",
-      "caption": "Tara asks Ms Fernandes, the club teacher, for help. A model learns from examples. This set of examples is called training data. Almost every photo showed a golden retriever. So the finder learned that a dog means golden and fluffy. It had never seen a dog like Kittu.",
-      "speech": "Tara asks Miss Fernandes, the club teacher, for help. A model learns from examples. This set of examples is called training data. Almost every photo showed a golden retriever. So the finder learned that a dog means golden and fluffy. It had never seen a dog like Kittu.",
-      "dialogue": "It only ever saw golden retrievers?",
-      "status": "Checking the data",
-      "start": 33.151,
-      "duration": 17.259
+      "caption": "Tara and Mr Das, her club teacher, open the photos the finder learned from. These examples are called training data. Almost every photo shows a golden retriever. So the finder learned that dogs are big, golden and fluffy. Kittu is a slim, brown indie dog, so it guessed wrong.",
+      "speech": "Tara and Mister Das, her club teacher, open the photos the finder learned from. These examples are called training data. Almost every photo shows a golden retriever. So the finder learned that dogs are big, golden and fluffy. Kittu is a slim, brown indie dog, so it guessed wrong.",
+      "dialogue": "Almost every photo is a golden retriever!",
+      "status": "Checking the photos",
+      "start": 35.475,
+      "duration": 18.479
     },
     {
-      "id": "label",
-      "label": "Label the photos",
-      "title": "Every kind of dog needs a label.",
+      "id": "fix",
+      "label": "Fix the data",
+      "title": "Teach it every kind of dog.",
       "mood": "thinking",
-      "caption": "Your turn. Help Tara fix the training data. Tap every photo that shows a dog to label it Dog, including dogs like Kittu. Leave the other animals unlabelled. Then retrain and test. Careful: training with only golden retrievers again won't help Kittu.",
-      "dialogue": "Every kind of dog needs a label.",
-      "status": "Labelling the photos",
-      "start": 51.059,
-      "duration": 16.747
+      "caption": "Your turn! Help Tara fix the training data. Label every dog as Dog: golden retrievers, pugs, and indie dogs like Kittu. Label the cat, the crow and the squirrel as Not dog. Then retrain the finder and test it on Kittu's photo. Will it spot him now?",
+      "dialogue": "Let's show it all kinds of dogs.",
+      "status": "Fixing the data",
+      "start": 54.605,
+      "duration": 16.682
     },
     {
-      "id": "varied",
-      "label": "Varied data",
-      "title": "Good data is varied.",
+      "id": "lesson",
+      "label": "Better data",
+      "title": "Better data, better answers.",
       "mood": "happy",
-      "caption": "Now the finder spots Kittu! Good training data is varied: many breeds, sizes and colours, in different light and from different angles. Leave a group out, and the model can unfairly fail that group. Even now, the finder can make mistakes, so a person checks every alert.",
-      "dialogue": "Different dogs, different light, different angles!",
-      "status": "Making it fairer",
-      "start": 68.456,
-      "duration": 16.683
+      "caption": "It works! The finder says Kittu is a dog. An AI learns only from the examples it's given. If some kinds are missing, it makes more mistakes about them. Good training data is varied and labelled correctly. People still need to test it, because even a better finder can get things wrong.",
+      "speech": "It works! The finder says Kittu is a dog. An A I learns only from the examples it's given. If some kinds are missing, it makes more mistakes about them. Good training data is varied and labelled correctly. People still need to test it, because even a better finder can get things wrong.",
+      "dialogue": "It's only as good as its examples.",
+      "status": "Understanding why",
+      "start": 71.937,
+      "duration": 18.057
     },
     {
       "id": "ending",
-      "label": "A happier ending",
-      "title": "Kittu is home!",
+      "label": "Kittu is home",
+      "title": "Found by the tea stall!",
       "mood": "happy",
-      "caption": "An alert pings: a brown dog near the park. A club member checks the photo. It's Kittu! Tara and the neighbours bring him home, tired but safe. Tara has learned that a model only knows what its examples teach it. Your turn: help Tara build a fairer dog dataset!",
-      "dialogue": "Kittu's home, and he's eating his biscuits!",
+      "caption": "That night, the finder spots Kittu near the tea stall. Tara and her dad hurry over, and there he is, wagging his tail! Meena Aunty brings his dinner. Now the club tests their finder on many kinds of dogs. Your turn: help Tara label and test more dog photos!",
+      "dialogue": "Kittu! We found you!",
       "status": "Kittu is safe",
       "tone": "resolved",
-      "start": 85.789,
-      "duration": 16.683
+      "start": 90.644,
+      "duration": 16.968
     }
   ]
 }

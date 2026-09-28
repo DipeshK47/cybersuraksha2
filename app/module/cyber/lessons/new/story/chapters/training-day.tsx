@@ -1,153 +1,148 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- small local photos in a Vite page; next/image does not apply here. */
 
-import { Bell, Bird, Camera, Cat, Check, CircleX, Database, Heart, PawPrint, RefreshCw, RotateCcw, ScanSearch, Sun, Tag, UserCheck, UserRound } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, BellOff, Bird, Cat, Check, CircleAlert, Heart, PawPrint, Plus, RotateCcw, ScanSearch, Squirrel, Users, X } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { useRef, useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
 import script from "./training-day.json";
 import k from "../story-player.module.css";
 import r from "./training-day.module.css";
 
-type Kind = "golden" | "indie" | "pug" | "cat" | "bird";
-/** One photo crop. `v` picks a framing so three source photos can stand in for a varied set. */
-function Pic({ kind, v = 0 }: { kind: Kind; v?: number }) {
-  return <span className={r.pic} data-kind={kind} data-v={v} aria-hidden="true">{kind === "cat" ? <Cat /> : kind === "bird" ? <Bird /> : null}</span>;
-}
-
-const photos: { id: string; kind: Kind; v: number; alt: string; dog: boolean; old?: boolean }[] = [
-  { id: "g1", kind: "golden", v: 0, alt: "golden retriever", dog: true, old: true },
-  { id: "i1", kind: "indie", v: 1, alt: "brown indie dog, close-up", dog: true },
-  { id: "c1", kind: "cat", v: 0, alt: "grey cat", dog: false },
-  { id: "p1", kind: "pug", v: 1, alt: "black pug", dog: true },
-  { id: "i2", kind: "indie", v: 2, alt: "brown indie dog, walking", dog: true },
-  { id: "g2", kind: "golden", v: 2, alt: "golden retriever, side view", dog: true, old: true },
-  { id: "b1", kind: "bird", v: 0, alt: "myna bird", dog: false },
-  { id: "p2", kind: "pug", v: 3, alt: "fawn pug", dog: true },
+const img = { golden: "/cyber-missions/dog-golden.jpg", indie: "/cyber-missions/dog-indie.jpg", pug: "/cyber-missions/dog-pug.jpg" };
+type Label = "dog" | "not";
+type Photo = { id: string; name: string; dog: boolean; src?: string; Icon?: LucideIcon };
+const photos: Photo[] = [
+  { id: "golden", name: "Golden retriever", dog: true, src: img.golden },
+  { id: "cat", name: "Cat", dog: false, Icon: Cat },
+  { id: "indie", name: "Indie dog", dog: true, src: img.indie },
+  { id: "crow", name: "Crow", dog: false, Icon: Bird },
+  { id: "pug", name: "Pugs", dog: true, src: img.pug },
+  { id: "squirrel", name: "Squirrel", dog: false, Icon: Squirrel },
 ];
-const oldLabels = photos.filter(p => p.old).map(p => p.id);
-const tests: { name: string; kind: Kind; v: number }[] = [{ name: "Kittu", kind: "indie", v: 1 }, { name: "A pug", kind: "pug", v: 3 }];
-const covered = (labels: string[], kind: Kind) => photos.filter(p => p.kind === kind).every(p => labels.includes(p.id));
-const oldBars = [{ name: "Golden retrievers", count: 48 }, { name: "Indie dogs", count: 0 }, { name: "Pugs", count: 0 }, { name: "Other dogs", count: 2 }];
-const traits = [{ label: "Many breeds", Icon: PawPrint, at: .22 }, { label: "Sizes and colours", Icon: Tag, at: .3 }, { label: "Different light", Icon: Sun, at: .38 }, { label: "Different angles", Icon: Camera, at: .44 }];
-const newBars = [{ name: "Golden retrievers", count: 48 }, { name: "Indie dogs", count: 46 }, { name: "Pugs", count: 40 }, { name: "Other dogs", count: 44 }];
-
-function Bars({ bars, show }: { bars: typeof oldBars; show: (at: number) => Record<string, boolean> }) {
-  return <div className={r.bars}>{bars.map(({ name, count }, i) => <div className={r.bar} key={name} data-zero={count === 0} {...show(i * .05)}>
-    <span>{name}</span><span className={r.track}><span style={{ transform: `scaleX(${count / 50})` }} /></span><b>{count}</b>
-  </div>)}</div>;
-}
+// Three test dogs from the lane: each passes only if its kind was labelled Dog in the tray.
+const tests = [{ id: "golden", pet: "Bruno", src: img.golden }, { id: "indie", pet: "Kittu", src: img.indie }, { id: "pug", pet: "Chikoo", src: img.pug }];
+const dataset = Array.from({ length: 50 }, (_, i) => i === 11 || i === 29 || i === 43 ? "other" : "golden");
 
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
-  const [labels, setLabels] = useState<string[]>(oldLabels);
-  const [tested, setTested] = useState<boolean[] | null>(null);
-  const [passing, setPassing] = useState(false);
-  const done = solved || passing;
-  const shownLabels = solved ? photos.filter(p => p.dog).map(p => p.id) : labels;
-  const results = solved ? [true, true] : tested;
-  const untouched = labels.length === oldLabels.length && labels.every(id => oldLabels.includes(id));
-  // Reveal an item once narration reaches that fraction of the scene (everything shows while paused).
-  const cue = (at: number) => !playing || elapsed > script.scenes[scene].duration * at;
-  const show = (at: number) => ({ "data-on": cue(at), "aria-hidden": !cue(at) });
+  const [labels, setLabels] = useState<Record<string, Label>>({});
+  const [tested, setTested] = useState<Record<string, boolean> | null>(null);
+  const sent = useRef(false);
+  // Reveal a detail once narration reaches that fraction of the scene; everything shows while paused.
+  const cue = (frac: number) => !playing || elapsed > script.scenes[scene].duration * frac;
+  const results = solved ? { golden: true, indie: true, pug: true } : tested;
+  const allPass = Boolean(results && tests.every(t => results[t.id]));
 
-  function toggle(id: string) {
-    if (done) return;
-    setLabels(value => value.includes(id) ? value.filter(x => x !== id) : [...value, id]);
-    setTested(null); setHint("");
-  }
+  function label(id: string, value: Label) { if (solved) return; setLabels(current => ({ ...current, [id]: value })); setTested(null); }
   function retrain() {
-    if (done) return;
-    const wrong = photos.find(p => !p.dog && labels.includes(p.id));
-    if (wrong) { setTested(null); setHint(`The ${wrong.alt} isn’t a dog. A wrong label teaches the finder a wrong lesson. Tap it again to remove the label.`); return; }
-    const result = tests.map(t => covered(labels, t.kind));
-    setTested(result);
-    if (!result[0] && untouched) { setHint("Retrained on golden retrievers only, so the finder still misses Kittu. Label the indie dogs and pugs too."); return; }
-    const left = photos.filter(p => p.dog && !labels.includes(p.id)).length;
-    if (left) { setHint(`Closer! ${left} dog ${left > 1 ? "photos are" : "photo is"} still unlabelled, so the finder still misses ${result[0] ? "pugs" : "dogs like Kittu"}. Every kind of dog needs examples.`); return; }
-    setHint("Retrained on varied dogs. The finder now spots Kittu and the pug!");
-    setPassing(true);
-    window.setTimeout(markSolved, reduced ? 0 : 700);
+    if (solved || sent.current) return;
+    setTested(Object.fromEntries(tests.map(t => [t.id, labels[t.id] === "dog"])));
+    const falseDog = photos.find(p => !p.dog && labels[p.id] === "dog");
+    const falseNot = photos.find(p => p.dog && labels[p.id] === "not");
+    const missing = photos.filter(p => p.dog && labels[p.id] !== "dog");
+    if (falseDog) return setHint(`A ${falseDog.name.toLowerCase()} labelled Dog teaches the finder the wrong idea of a dog. Wrong labels teach wrong answers.`);
+    if (falseNot) return setHint(`${falseNot.name} labelled Not dog tells the finder they aren’t dogs. That’s a wrong label. Every dog needs the Dog label.`);
+    if (missing.length === 2 && labels.golden === "dog") return setHint("Kittu is still “not a dog”. You labelled only golden retrievers, so the finder still thinks dogs look golden and fluffy. Label the indie dog and the pugs too.");
+    if (missing.length) return setHint(`Still missing: ${missing.map(p => p.name.toLowerCase()).join(" and ")}. A kind of dog left out of the training data gets missed in the test.`);
+    if (photos.some(p => !labels[p.id])) return setHint("All dogs pass! Now label the cat, crow and squirrel as Not dog, so the finder also learns what isn’t a dog.");
+    sent.current = true; setHint("");
+    // Let the learner see the green test before the story moves on.
+    window.setTimeout(markSolved, 1100);
   }
+  function addGoldens() { if (!solved) setHint("More of the same won’t help. The finder already knows golden retrievers. It needs different dogs, like indies and pugs."); }
+  function clear() { setLabels({}); setTested(null); setHint(""); }
 
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 1 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><ScanSearch size={16} /> PET FINDER</span><span>Lane corner camera · live</span></div>
-      <div className={`${k.deviceArt} ${r.feed}`}>
-        <div className={r.cam} data-scene={scene}>
-          <Pic kind={scene === 0 ? "golden" : "indie"} v={scene === 0 ? 0 : 4} />
-          <span className={r.rec}><span />REC · 07:42</span>
-          <span className={r.box} data-miss={scene === 1} {...show(scene === 1 ? .4 : .3)} />
-          <span className={r.tag} data-miss={scene === 1} {...show(scene === 1 ? .62 : .35)}>{scene === 1 ? <><CircleX aria-hidden="true" />Not a dog</> : <><Check aria-hidden="true" />{scene === 0 ? "Dog · 97%" : "Dog · 94%"}</>}</span>
+      <div className={k.deviceBar}><span><ScanSearch size={16} /> PET FINDER</span><span>Lane 4 · Cyberpur · Club project</span></div>
+      <div className={r.screen}>
+        <div className={`${k.deviceArt} ${r.feed} ${scene === 0 ? r.golden : r.indie}`} role="img" aria-label={scene === 0 ? "Camera view: Bruno, a golden retriever" : "Camera view: Kittu, a slim brown indie dog"}>
+          <span className={r.cam}><i />{scene === 0 ? "CAM 1 · GATE" : scene === 1 ? "CAM 1 · GATE · 6:40 PM" : "CAM 3 · TEA STALL"}</span>
+          {scene === 0 && cue(.47) && <span className={r.box}><b>Dog · 97%</b></span>}
+          {scene === 1 && cue(.48) && <span className={r.box} data-miss="true"><b>Not a dog</b></span>}
+          {scene === 5 && cue(.08) && <span className={r.box}><b>Dog · 91%</b></span>}
+          {scene === 5 && cue(.55) && <div className={`${k.success} ${r.found}`}><Heart /><strong>Kittu is home!</strong><span>Spotted by the retrained finder</span></div>}
         </div>
-        <div className={r.log}>
-          {scene === 0 && <>
-            <div className={r.event} {...show(.08)}><Camera aria-hidden="true" /><span>Camera on · watching the lane</span></div>
-            <div className={r.event} {...show(.38)}><PawPrint aria-hidden="true" /><span>Dog seen · alert ready</span></div>
-            <div className={r.friend} {...show(.64)}><Pic kind="indie" v={1} /><div><strong>Kittu</strong><span>Everyone’s friend · biscuits at 7:30</span></div><Heart aria-hidden="true" /></div>
+        {scene === 0 ? <div className={r.side}>
+          <strong><PawPrint /> Lane pets</strong>
+          <div className={r.pet}><img src={img.golden} alt="" /><div><b>Bruno</b><span>Golden retriever</span></div>{cue(.47) && <Check className={k.fitIn} aria-label="Spotted" />}</div>
+          <div className={r.pet} data-fav={cue(.72)}><img src={img.indie} alt="" /><div><b>Kittu</b><span>Lane dog · fed by all</span></div><Heart aria-hidden="true" /></div>
+          <div className={r.pet}><img src={img.pug} alt="" /><div><b>Chikoo</b><span>Pug · House 12</span></div></div>
+        </div> : <div className={r.side}>
+          <strong><Users /> Lane 4 neighbours</strong>
+          {scene === 1 ? <>
+            <p className={r.msg}><b>Meena Aunty</b>Kittu didn’t come for his dinner. Has anyone seen him?</p>
+            {cue(.3) && <p className={`${r.msg} ${k.fitIn}`} data-me="true"><b>Tara</b>Checking the pet finder now…</p>}
+            {cue(.62) && <p className={`${r.sys} ${k.fitIn}`}><BellOff />Finder: no dogs seen tonight</p>}
+          </> : <>
+            <p className={r.sys} data-ok="true"><ScanSearch />Finder: dog seen at the tea stall</p>
+            {cue(.2) && <p className={`${r.msg} ${k.fitIn}`} data-me="true"><b>Tara</b>It’s Kittu! Dad and I are going now.</p>}
+            {cue(.5) && <p className={`${r.msg} ${k.fitIn}`}><b>Meena Aunty</b>Bringing his dinner!</p>}
           </>}
-          {scene === 1 && <>
-            <div className={r.poster} {...show(.08)}><Pic kind="indie" v={1} /><div><strong>Missing: Kittu</strong><span>Brown indie dog · very friendly</span></div></div>
-            <div className={r.event} data-bad="true" {...show(.62)}><ScanSearch aria-hidden="true" /><span>07:42 · animal seen · <b>not a dog</b></span></div>
-            <div className={r.event} data-bad="true" {...show(.74)}><Bell aria-hidden="true" /><span>No alert sent</span></div>
-          </>}
-          {scene === 5 && <>
-            <div className={r.event} {...show(.04)}><Bell aria-hidden="true" /><span>Alert · brown dog near the park</span></div>
-            <div className={r.event} {...show(.2)}><UserCheck aria-hidden="true" /><span>Checked by a club member</span></div>
-            <div className={r.found} {...show(.33)}><Heart aria-hidden="true" /><strong>Kittu is home!</strong><span>Tired, hungry and safe</span></div>
-          </>}
-        </div>
+        </div>}
       </div>
-      <div className={k.deviceFoot}>{scene === 0 ? <><Database /><span>Trained on 50 example photos</span><small>Coding club project</small></>
-        : scene === 1 ? <><CircleX /><span>The finder didn’t recognise Kittu.</span></>
-          : <><Check /><span>Retrained on varied dogs · a person checks every alert</span></>}</div>
+      <div className={k.deviceFoot}>{scene === 0 ? <><Check /><span>Bruno spotted at the gate</span><small>Learned from 50 photos</small></> : scene === 1 ? <><CircleAlert /><span>No alert was sent.</span><small>Kittu walked right past the camera.</small></> : <><Check /><span>Retrained on many kinds of dogs</span><small>People still check every alert.</small></>}</div>
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.teacher}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Ms Fernandes · club teacher</small><p>“A model learns from its examples.”</p></div></div>
-      <h2>The finder’s training data</h2>
-      <div className={r.thumbs}>{[0, 1, 2, 3, 4, 0, 2, 1, 3].map((v, i) => <Pic kind="golden" v={v} key={i} />)}<span className={r.more}>+41</span></div>
-      <Bars bars={oldBars} show={at => show(.5 + at)} />
-      <div className={r.rule} {...show(.86)}><CircleX aria-hidden="true" /><span>What it learned: <b>dog = golden and fluffy</b></span></div>
+      <div className={r.teacher}><span className={r.avatar} aria-hidden="true">MD</span><div><span>Mr Das · Coding club</span><p>“Let’s look at what it learned from.”</p></div></div>
+      <h2>Training data: 50 photos</h2>
+      <div className={r.dataset} data-show={cue(.28)} role="img" aria-label="47 golden retrievers, 3 other dogs, no indie dogs">{dataset.map((kind, i) => <span key={i} data-kind={kind} />)}</div>
+      <div className={r.legend} data-show={cue(.4)}><span><i />47 golden retrievers</span><span><i data-kind="other" />3 other dogs</span><span><i data-kind="none" />0 indie dogs</span></div>
+      <div className={r.match}>
+        <div data-show={cue(.6)}><img src={img.golden} alt="" /><div><strong>What it learned</strong><small>Dog = big, golden, fluffy</small></div></div>
+        <ArrowRight aria-hidden="true" data-show={cue(.8)} />
+        <div data-show={cue(.8)} data-miss="true"><img src={img.indie} alt="" /><div><strong>Kittu</strong><small>Slim, brown, short coat: no match</small></div></div>
+      </div>
     </div>}
 
-    {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Label the new training photos</h2>
-      <p>Tap each photo that shows a dog. Tap again to remove a label.</p>
-      <div className={r.grid}>{photos.map((p, i) => { const on = shownLabels.includes(p.id); return <button className={r.photo} key={p.id} type="button" aria-pressed={on} aria-label={`Photo ${i + 1}: ${p.alt}`} disabled={done} onClick={() => toggle(p.id)}>
-        <Pic kind={p.kind} v={p.v} /><span className={r.label} data-on={on}>{on ? <><Tag aria-hidden="true" />Dog</> : "No label"}</span>
-      </button>; })}</div>
-      <div className={r.tests}>
-        {tests.map((t, i) => <div className={r.test} key={t.name} data-result={results ? results[i] : undefined}>
-          <Pic kind={t.kind} v={t.v} /><div><small>Test {i + 1}</small><strong>{t.name}</strong><span>{results ? results[i] ? "Dog ✓" : "Not a dog ✗" : "Not tested yet"}</span></div>
+    {scene === 3 && <div className={k.panel}>
+      <h2>Fix the training data</h2>
+      <div className={r.tray} role="group" aria-label="Training photos">
+        {photos.map(p => <div className={r.card} key={p.id} data-label={(solved ? (p.dog ? "dog" : "not") : labels[p.id]) ?? "none"}>
+          <div className={r.thumb} data-kind={p.id}>{p.src ? <img src={p.src} alt={p.name} /> : p.Icon && <p.Icon role="img" aria-label={p.name} />}</div>
+          <strong>{p.name}</strong>
+          <div className={r.toggle} role="group" aria-label={`Label for ${p.name}`}>
+            {(["dog", "not"] as const).map(value => { const on = solved ? (value === "dog") === p.dog : labels[p.id] === value; return <button key={value} aria-label={`Mark ${p.name} as ${value === "dog" ? "Dog" : "Not dog"}`} aria-pressed={on} disabled={solved} onClick={() => label(p.id, value)} type="button">{value === "dog" ? <Check aria-hidden="true" /> : <X aria-hidden="true" />}{value === "dog" ? "Dog" : "Not dog"}</button>; })}
+          </div>
         </div>)}
       </div>
-      <p className={k.hint} aria-live="polite">{hint || (done ? "Retrained on varied dogs. The finder now spots Kittu and the pug!" : `${shownLabels.length} photos labelled Dog.`)}</p>
-      <div className={k.actions}>
-        <button type="button" onClick={() => { setLabels(oldLabels); setTested(null); setHint(""); }} disabled={done || untouched}><RotateCcw />Start again</button>
-        <button className={k.primary} type="button" onClick={retrain} disabled={done}><RefreshCw />Retrain and test</button>
+      <div className={`${k.bank} ${r.trap}`}><button data-trap="true" disabled={solved} onClick={addGoldens} type="button"><Plus aria-hidden="true" />Add 20 more golden retrievers</button></div>
+      <div className={r.results} aria-live="polite">
+        <span>Test</span>
+        {tests.map(t => <div className={r.result} key={t.id} data-pass={results ? results[t.id] : undefined}><img src={t.src} alt="" /><div><b>{t.pet}</b><small>{!results ? "Not tested" : results[t.id] ? "Dog ✓" : "Not a dog ✗"}</small></div></div>)}
       </div>
-      <small>Example dataset. Real models learn from thousands of photos.</small>
+      <p className={k.hint} aria-live="polite">{hint || (allPass ? "Kittu spotted! The finder learned from every kind of dog." : "Label all six photos, then retrain and test.")}</p>
+      <div className={k.actions}><button onClick={clear} disabled={solved || !Object.keys(labels).length} type="button"><RotateCcw />Clear</button><button className={k.primary} disabled={solved || !Object.keys(labels).length} onClick={retrain} type="button">Retrain and test <ArrowRight /></button></div>
+      <small>Example photos only. A real finder needs many more photos, checked by people.</small>
     </div>}
 
     {scene === 4 && <div className={k.panel}>
-      <h2>Good data is varied</h2>
-      <Bars bars={newBars} show={at => show(.16 + at)} />
-      <div className={r.chips}>{traits.map(({ label, Icon, at }) => <span className={r.chip} key={label} {...show(at)}><Icon aria-hidden="true" />{label}</span>)}</div>
-      <div className={r.fair} {...show(.55)}><CircleX aria-hidden="true" /><span>Leave a group out, and the model can unfairly fail that group.</span></div>
-      <div className={r.human} {...show(.8)}><UserCheck aria-hidden="true" /><div><strong>A person checks every alert</strong><span>Models still make mistakes, so humans stay in charge.</span></div><Check aria-hidden="true" /></div>
+      <h2>Better data, better answers</h2>
+      <div className={r.compare}>
+        {[{ key: "before", title: "Before", mix: [["golden", 94], ["other", 6]], pass: [true, false, false] }, { key: "after", title: "After", mix: [["golden", 25], ["indie", 25], ["pug", 20], ["not", 30]], pass: [true, true, true] }].map(side => <div className={r.col} data-side={side.key} key={side.key}>
+          <span>{side.title}</span>
+          <div className={r.mix} aria-hidden="true">{side.mix.map(([kind, w]) => <i key={kind} data-kind={kind} style={{ width: `${w}%` }} />)}</div>
+          <small>{side.key === "before" ? "Almost all golden retrievers" : "Many kinds of dogs + not-dogs"}</small>
+          <div className={r.checks}>{tests.map((t, i) => <span key={t.id} data-pass={side.pass[i]}><img src={t.src} alt="" />{t.pet}{side.pass[i] ? <Check aria-label="found" /> : <X aria-label="missed" />}</span>)}</div>
+        </div>)}
+      </div>
+      {["Varied: many kinds of dogs", "Labelled correctly: Dog and Not dog", "Tested by people, again and again"].map((step, i) => <div className={k.step} key={step} data-active={cue(.52 + i * .13)}><span><Check /></span>{step}</div>)}
     </div>}
   </SceneSwap>;
 }
 
 const chapter: StoryChapter = {
   script,
-  title: "Tara and the Pet Finder",
+  title: "Tara’s lost pet finder",
   icon: PawPrint,
   character: { asset: "girl-expressions", name: "Tara" },
   interactionScene: 3,
   beginLabel: "Practise with Tara",
-  waitingText: "Story paused. Label every dog, then retrain and test the finder.",
+  waitingText: "Story paused. Fix the training data to see what happens next.",
   lockedHint: "Help Tara fix the training data first.",
   World,
-  credits: <p>Dog photos, cropped in the story: “<a href="https://commons.wikimedia.org/wiki/File:GoldenRetriever.jpg" target="_blank" rel="noreferrer">GoldenRetriever.jpg</a>” by Ltshears (public domain), “<a href="https://commons.wikimedia.org/wiki/File:An_Indian_Pariah_Dog.jpg" target="_blank" rel="noreferrer">An Indian Pariah Dog</a>” by Amogh Tripathi (CC0 1.0) and “<a href="https://commons.wikimedia.org/wiki/File:Pugs.JPG" target="_blank" rel="noreferrer">Pugs.JPG</a>” by Pugman (public domain), Wikimedia Commons.</p>,
+  credits: <p>Dog photos from Wikimedia Commons: “<a href="https://commons.wikimedia.org/wiki/File:GoldenRetriever.jpg" target="_blank" rel="noreferrer">GoldenRetriever.jpg</a>” by Ltshears (public domain), “<a href="https://commons.wikimedia.org/wiki/File:An_Indian_Pariah_Dog.jpg" target="_blank" rel="noreferrer">An Indian Pariah Dog</a>” by Amogh Tripathi (CC0 1.0), “<a href="https://commons.wikimedia.org/wiki/File:Pugs.JPG" target="_blank" rel="noreferrer">Pugs.JPG</a>” by Pugman (public domain).</p>,
 };
 export default chapter;

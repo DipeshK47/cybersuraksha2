@@ -1,6 +1,7 @@
 "use client";
 
-import { Award, Bus, Check, Clock, Droplets, Eye, Footprints, Globe, GraduationCap, Heart, Laugh, MessageSquare, Paperclip, Scale, Search, Shield, ShieldCheck, Smartphone, UserRound, Users } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { ArrowRight, Award, Camera, Check, CircleCheck, Clock, Droplets, EyeOff, FileText, Footprints, Globe, Link2, Lock, Mail, MessageCircle, MessageCircleHeart, Mic, PenLine, PhoneOff, Scale, Sparkles, Tags, Trash2, TriangleAlert, UserCheck, UserRound, Users, Video } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -8,141 +9,199 @@ import script from "./online-reputation-builder.json";
 import k from "../story-player.module.css";
 import r from "./online-reputation-builder.module.css";
 
-type PostId = "project" | "comment" | "photo";
 type Action = "keep" | "edit" | "delete" | "ask";
-const actions: { id: Action; label: string; spoken: string }[] = [
-  { id: "keep", label: "Keep", spoken: "Keep" },
-  { id: "edit", label: "Edit", spoken: "Edit" },
-  { id: "delete", label: "Delete & apologise", spoken: "Delete and apologise" },
-  { id: "ask", label: "Hide & ask", spoken: "Hide and ask" },
-];
-const posts: { id: PostId; short: string; when: string; correct: Action; ok: string; why: Partial<Record<Action, string>> }[] = [
-  { id: "project", short: "water-tester post", when: "3 days ago", correct: "keep", ok: "Keep: it’s accurate, respectful and shows real work. The panel should see this.",
-    why: { edit: "Nothing here breaks the criteria. It’s accurate and respectful, so there’s nothing to edit. Keep it.", delete: "Deleting this hides Meera’s best evidence. It’s accurate, respectful and her own work. Keep it.", ask: "It’s Meera’s own work and nobody else is in it, so there’s no one to ask. Keep it." } },
-  { id: "comment", short: "comment on Rahul’s drawing", when: "2 years ago", correct: "delete", ok: "Delete and apologise: removing it clears the page, and a direct apology repairs what it did to Rahul.",
-    why: { keep: "The panel checks respect. Mocking a classmate fails that test, and Rahul can still see it. It has to go.", edit: "Editing still leaves the mockery in the history and in any screenshots. Delete it, and apologise to Rahul directly.", ask: "This isn’t about permission. The problem is disrespect. Delete it and apologise." } },
-  { id: "photo", short: "photo of Aarav", when: "1 year ago", correct: "ask", ok: "Hide and ask: it’s Aarav’s face, so Aarav decides whether it stays public.",
-    why: { keep: "Aarav never agreed to be posted, and forty people laughed at him. Consent comes first: hide it and ask him.", edit: "A new caption doesn’t fix the real problem: Aarav never agreed. Hide it and ask him.", delete: "Close! Taking it down is kind, but Aarav should decide. Hide it now and ask what he wants." } },
+type PostData = { id: string; context: string; when: string; text: string; art?: "filter" | "sleep" | "team"; flag?: string };
+type AuditPost = PostData & { tab: string; noun: string; right: Action; trap?: Action; done: LucideIcon; outcome: string; hints: Partial<Record<Action, string>> };
+
+const actions: { id: Action; label: string; icon: LucideIcon }[] = [
+  { id: "keep", label: "Keep", icon: Check },
+  { id: "edit", label: "Edit", icon: PenLine },
+  { id: "delete", label: "Delete", icon: Trash2 },
+  { id: "ask", label: "Ask permission", icon: UserCheck },
 ];
 
-const facts = [{ label: "Searchable", Icon: Search, at: .34 }, { label: "Screenshots", Icon: Smartphone, at: .4 }, { label: "Lasts for years", Icon: Clock, at: .47 }];
+const posts: AuditPost[] = [
+  { id: "project", tab: "Project post", noun: "project post", context: "Public post", when: "2 weeks ago", art: "filter", right: "keep", trap: "delete", done: Check,
+    text: "A month of testing, and my solar water filter works! Sand, gravel and charcoal turn muddy water clear. Thanks, Ms Rao, for the lab time.",
+    outcome: "Kept. It’s honest, it’s his own work, and it’s kind to everyone in it.",
+    hints: {
+      delete: "Wait! This post shows real work and thanks a teacher. That’s the integrity the panel hopes to see. Deleting it hides his best evidence.",
+      edit: "Nothing here is unkind or private. It’s honest and it’s Kabir’s own work, so it can stay as it is.",
+      ask: "Only Kabir’s own project is in this post, and it thanks Ms Rao kindly. No one’s permission is needed.",
+    } },
+  { id: "comment", tab: "Old comment", noun: "comment about Tanvi", context: "Comment on Tanvi’s assembly song video", when: "1 year ago", flag: "Mocks a classmate", right: "delete", trap: "keep", done: MessageCircleHeart,
+    text: "lol Tanvi sounds like a pressure cooker whistle",
+    outcome: "Deleted. Kabir also messages Tanvi to say sorry.",
+    hints: {
+      keep: "Keeping it says the joke is still okay. Anyone can read it, including Tanvi and the panel. Mocking someone isn’t respect.",
+      edit: "A softer joke is still a joke at Tanvi’s expense. Remove it, then think about saying sorry.",
+      ask: "This isn’t about permission. The comment is unkind, so it shouldn’t stay up at all.",
+    } },
+  { id: "photo", tab: "Bus photo", noun: "photo of Ishaan", context: "Public post · School trip", when: "3 months ago", art: "sleep", flag: "No consent from Ishaan", right: "ask", done: EyeOff,
+    text: "Ishaan asleep on the trip bus hahaha",
+    outcome: "Hidden for now. Kabir asks for Ishaan’s consent before anyone sees it again.",
+    hints: {
+      keep: "It’s Ishaan’s face, not Kabir’s. A photo shared without asking can embarrass someone. Ishaan should get a say.",
+      edit: "A new caption doesn’t fix it. Ishaan never agreed to share this photo. Ask him first.",
+      delete: "Taking it down is safe, but it’s Ishaan’s photo, so he gets a say too. Hide it and ask him what he wants.",
+    } },
+];
+const teamPost: PostData = { id: "team", context: "Public post · Science club", when: "Just now", art: "team", text: "Science club team photo, shared with everyone’s OK. Next build: a rain gauge!" };
 
-/** One public post as the feed shows it; `compact` drops the picture for the audit list. */
-function Post({ id, compact }: { id: PostId; compact?: boolean }) {
-  if (id === "project") return <article className={r.post} data-compact={compact ?? false}>
-    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 3 days ago</small></div></header>
-    <p>Six weeks of testing: my water tester shows the lake got clearer after the clean-up drive!</p>
-    {!compact && <div className={r.chart} aria-hidden="true"><Droplets />{[72, 64, 51, 40, 33, 28].map((h, i) => <span key={i} style={{ height: `${h}%` }} />)}<small>cloudiness ↓</small></div>}
-    <footer><Heart aria-hidden="true" />56 likes · 9 comments</footer>
-  </article>;
-  if (id === "comment") return <article className={r.post} data-bad="true" data-compact={compact ?? false}>
-    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 2 years ago</small></div></header>
-    <p className={r.context}><MessageSquare aria-hidden="true" />Comment on Rahul’s drawing</p>
-    <blockquote>“lol this looks like a potato”</blockquote>
-    <footer><Laugh aria-hidden="true" />12 laughing reactions</footer>
-  </article>;
-  return <article className={r.post} data-bad="true" data-compact={compact ?? false}>
-    <header><span className={r.me}>M</span><div><strong>Meera S.</strong><small><Globe aria-hidden="true" />Public · 1 year ago</small></div></header>
-    <p>Look who fell asleep on the bus again</p>
-    {compact ? <p className={r.context}><Bus aria-hidden="true" />Photo: Aarav, asleep</p> : <div className={r.photo} aria-hidden="true"><Bus /><span>zzz</span><small>Photo: Aarav, asleep</small></div>}
-    <footer><Laugh aria-hidden="true" />40 laughing reactions</footer>
+const ideas = [
+  { icon: Globe, title: "Audience", text: "Public means anyone, not just friends.", at: .2 },
+  { icon: Camera, title: "Screenshots and copies", text: "A deleted post can survive as someone’s copy.", at: .32 },
+  { icon: Lock, title: "Privacy settings", text: "They help, but they aren’t a hiding place.", at: .6 },
+  { icon: Scale, title: "The fairness test", text: "Is each post fair to the people in it?", at: .76 },
+];
+
+function Thumb({ kind }: { kind: NonNullable<PostData["art"]> }) {
+  return <span className={r.thumb} data-kind={kind} aria-hidden="true">
+    {kind === "filter" ? <Droplets /> : kind === "team" ? <Users /> : <><UserRound /><i>z</i><i>z</i></>}
+  </span>;
+}
+
+function Post({ post, flagged = false }: { post: PostData; flagged?: boolean }) {
+  return <article className={r.post} data-flagged={flagged}>
+    <span className={r.avatar} aria-hidden="true">K</span>
+    <div className={r.postMain}>
+      <div className={r.postMeta}><strong>Kabir</strong><span>{post.context} · {post.when}</span></div>
+      <div className={r.postText}>{post.text}</div>
+      {flagged && post.flag && <span className={r.flag}><TriangleAlert aria-hidden="true" />{post.flag}</span>}
+    </div>
+    {post.art && <Thumb kind={post.art} />}
   </article>;
 }
 
-function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
-  const [decided, setDecided] = useState<Partial<Record<PostId, Action>>>({});
-  const done = solved || posts.every(p => decided[p.id]);
-  const chosen = (id: PostId) => solved ? posts.find(p => p.id === id)!.correct : decided[id];
-  // Reveal an item once narration reaches that fraction of the scene (everything shows while paused).
-  const cue = (at: number) => !playing || elapsed > script.scenes[scene].duration * at;
-  const show = (at: number) => ({ "data-on": cue(at), "aria-hidden": !cue(at) });
+function FilterArt() {
+  return <div className={r.filterArt} aria-hidden="true">
+    <span className={r.sun} />
+    <span className={r.solar} />
+    <span className={r.jar} />
+    <Droplets className={r.drip} />
+    <span className={r.glass} />
+  </div>;
+}
 
-  function choose(post: (typeof posts)[number], action: Action) {
-    if (done || decided[post.id]) return;
-    if (action !== post.correct) { setHint(post.why[action] ?? "Check this post against respect, integrity and consent."); return; }
-    const next = { ...decided, [post.id]: action };
-    setDecided(next); setHint(post.ok);
-    if (posts.every(p => next[p.id])) window.setTimeout(markSolved, reduced ? 0 : 900);
+function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
+  const [choices, setChoices] = useState<Record<string, Action>>({});
+  const [active, setActive] = useState(0);
+  const [wrong, setWrong] = useState("");
+  // Reveal an item once narration reaches that share of the scene; everything shows while paused.
+  const cue = (share: number) => !playing || elapsed > script.scenes[scene].duration * share;
+  const isDone = (post: AuditPost) => choices[post.id] === post.right;
+  const done = posts.filter(isDone).length;
+  const current = posts[active];
+
+  function choose(action: Action) {
+    if (solved || isDone(current)) return;
+    if (action !== current.right) { setWrong(`${current.id}:${action}`); setHint(current.hints[action] ?? ""); return; }
+    setChoices(value => ({ ...value, [current.id]: action })); setWrong(""); setHint("");
+    const next = posts.findIndex(post => post !== current && !isDone(post));
+    if (next >= 0) setActive(next);
   }
 
   return <SceneSwap scene={scene} reduced={reduced}>
-    {(scene === 0 || scene === 5) && <div className={k.device}>
-      <div className={k.deviceBar}><span><GraduationCap size={16} /> CYBERPUR YOUNG SCIENTISTS</span><span>{scene === 0 ? "Application · due Friday" : "Application status"}</span></div>
-      <div className={`${k.deviceArt} ${r.form}`}>
-        {scene === 0 ? <>
-          <div className={r.fields}>
-            <div className={r.field}><small>Applicant</small><span>Meera S. · Class 7</span></div>
-            <div className={r.field}><small>Project</small><span>Lake water clarity tester</span></div>
-            <div className={r.field} {...show(.3)}><small>Evidence</small><span><Paperclip aria-hidden="true" />test-results.pdf · 3 photos</span></div>
-            <div className={r.progress}><span style={{ transform: "scaleX(.9)" }} /><small>90% complete</small></div>
-          </div>
-          <p className={r.notice} {...show(.66)}><Eye aria-hidden="true" /><span>The panel may review applicants’ <b>public profiles</b> for respect and integrity.</span></p>
-        </> : <div className={r.status}>
-          <span className={r.stamp}><Award aria-hidden="true" />Shortlisted</span>
-          <strong>Interview on Monday</strong>
-          <span>“Tell us about your water tester.”</span>
-        </div>}
+    {scene === 0 && <div className={k.device}>
+      <div className={k.deviceBar}><span><Award size={16} /> CYBERPUR SCHOLARSHIPS</span><span>Pretend portal</span></div>
+      <div className={r.portal}>
+        <div className={r.projectCard}>
+          <FilterArt />
+          <div><small>Young Scientists Scholarship</small><strong>Solar water filter</strong><span>Kabir · Class 7 · Cyberpur Middle School</span></div>
+        </div>
+        <div className={r.checklist}>
+          <strong>Application</strong>
+          <div className={r.item} data-done={cue(.5)}><FileText aria-hidden="true" /><span>Project report</span><i><Check /></i></div>
+          <div className={r.item} data-done={cue(.6)}><Mail aria-hidden="true" /><span>Teacher’s letter</span><i><Check /></i></div>
+          <div className={`${r.item} ${r.reveal}`} data-todo="true" data-show={cue(.7)}><Link2 aria-hidden="true" /><span>Public profile link</span><em>To do</em></div>
+          <div className={r.progress} aria-label={`${[cue(.5), cue(.6)].filter(Boolean).length} of 3 steps done`}><span style={{ transform: `scaleX(${[cue(.5), cue(.6)].filter(Boolean).length / 3})` }} /></div>
+        </div>
       </div>
-      <div className={k.deviceFoot}>{scene === 0
-        ? <><Droplets /><span>Meera’s project: a clearer lake after the clean-up drive</span></>
-        : <><span className={r.chip}><Check aria-hidden="true" />Apology sent</span><span className={r.chip}><Shield aria-hidden="true" />Photo private · Aarav’s choice</span><span className={r.chip}><ShieldCheck aria-hidden="true" />Profile audited</span></>}</div>
+      <div className={k.deviceFoot}><Clock aria-hidden="true" /><span>Deadline: <b>Friday, 5 PM</b></span><small>Example only</small></div>
     </div>}
 
     {scene === 1 && <div className={k.device}>
-      <div className={k.deviceBar}><span><Eye size={16} /> PROFILE · PUBLIC VIEW</span><span>What anyone can see</span></div>
-      <div className={`${k.deviceArt} ${r.feed}`}>
-        <div {...show(.12)} className={r.reveal}><Post id="project" /></div>
-        <div {...show(.36)} className={r.reveal}><Post id="comment" /></div>
-        <div {...show(.62)} className={r.reveal}><Post id="photo" /></div>
+      <div className={k.deviceBar}><span><Globe size={16} /> VIEW AS PUBLIC</span><span>@kabir.builds</span></div>
+      <div className={r.feedBody}>
+        <div className={`${r.rule} ${r.reveal}`} data-show={cue(.04)}><Award aria-hidden="true" /><div><strong>Rule 4 · Public profiles</strong><span>The panel may view applicants’ public profiles for respect and integrity.</span></div></div>
+        {posts.map((post, i) => <div key={post.id} className={r.reveal} data-show={cue([.38, .48, .71][i])}><Post post={post} flagged={Boolean(post.flag) && cue([1, .6, .86][i])} /></div>)}
       </div>
-      <div className={k.deviceFoot}><Globe /><span>Public posts are searchable, can be screenshotted, and stay up until removed.</span></div>
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={r.sister}><span className={r.avatar}><UserRound aria-hidden="true" /></span><div><small>Arjun · Meera’s brother</small><p>“Read it the way the panel would.”</p></div></div>
-      <div className={r.term} {...show(.14)}><Footprints aria-hidden="true" /><div><strong>Digital footprint</strong><span>Everything you share publicly, and what others share about you.</span></div></div>
-      <div className={r.facts}>{facts.map(({ label, Icon, at }) => <span key={label} {...show(at)}><Icon aria-hidden="true" />{label}</span>)}</div>
-      <h2>The panel’s test</h2>
-      <div className={r.criteria}>
-        <span {...show(.62)}><Scale aria-hidden="true" />Respect</span>
-        <span {...show(.66)}><ShieldCheck aria-hidden="true" />Integrity</span>
-        <span {...show(.8)} data-extra="true"><Users aria-hidden="true" />Consent: did everyone agree?</span>
+      <div className={r.call}>
+        <div className={r.callMain}><span className={r.callAvatar} aria-hidden="true">ZA</span><div><strong>Aunt Zoya</strong><span><i />Video call · 04:12</span></div></div>
+        <span className={r.selfView} aria-hidden="true"><UserRound /><small>Kabir</small></span>
+        <div className={r.callControls} aria-hidden="true"><span><Mic /></span><span><Video /></span><span data-end="true"><PhoneOff /></span></div>
       </div>
+      <div className={r.zoyaSays}>“One old post doesn’t define you. Let’s look at it together.”</div>
+      {ideas.map(idea => <div className={`${k.step} ${r.idea}`} key={idea.title} data-active={cue(idea.at)}><span><idea.icon /></span><div><strong>{idea.title}</strong><small>{idea.text}</small></div></div>)}
     </div>}
 
-    {scene === 3 && <div className={`${k.panel} ${r.task}`}>
-      <h2>Audit Meera’s public posts</h2>
-      <p>Choose an action for each post, based on respect, integrity and consent.</p>
-      <div className={r.audit}>{posts.map(post => { const pick = chosen(post.id); return <div className={r.auditRow} key={post.id} data-done={Boolean(pick)}>
-        <Post id={post.id} compact />
-        <div className={r.actions} role="group" aria-label={`Action for the ${post.short}`}>{actions.map(a => <button key={a.id} type="button" aria-label={`${a.spoken}: ${post.short}`} aria-pressed={pick === a.id} data-trap={(post.id === "project" && a.id === "delete") || (post.id === "comment" && a.id === "keep") || undefined} disabled={done || Boolean(pick)} onClick={() => choose(post, a.id)}>{pick === a.id && <Check aria-hidden="true" />}{a.label}</button>)}</div>
-      </div>; })}</div>
-      <p className={k.hint} aria-live="polite">{hint || (done ? "Audit complete: every choice matches the evidence." : `${posts.filter(p => chosen(p.id)).length} of 3 posts audited.`)}</p>
-      <small>Fictional profile and posts.</small>
+    {scene === 3 && <div className={`${k.panel} ${r.audit}`}>
+      <div className={r.auditHead}><h2>Audit Kabir’s public profile</h2><span className={r.count}>{done} of 3 checked</span></div>
+      <div className={r.criteria}><Award aria-hidden="true" /><span>The panel looks for</span><b>Respect</b><b>Integrity</b><b>Own work</b></div>
+      {done < 3 ? <>
+        <div className={r.postTabs} role="group" aria-label="Posts to review">
+          {posts.map((post, i) => <button key={post.id} type="button" aria-current={i === active ? "true" : undefined} data-done={isDone(post)} onClick={() => { setActive(i); setWrong(""); setHint(""); }}><span>{isDone(post) ? <Check aria-label="checked" /> : i + 1}</span>{post.tab}</button>)}
+        </div>
+        <Post post={current} flagged={Boolean(current.flag)} />
+        {isDone(current)
+          ? <div className={r.outcome}><current.done aria-hidden="true" />{current.outcome}</div>
+          : <div className={r.verdicts} role="group" aria-label={`What should Kabir do with the ${current.noun}?`}>
+            {actions.map(({ id, label, icon: Icon }) => <button key={id} type="button" aria-label={`${label}: ${current.noun}`} data-trap={current.trap === id || undefined} data-wrong={wrong === `${current.id}:${id}`} onClick={() => choose(id)}><Icon aria-hidden="true" /><span>{label}</span></button>)}
+          </div>}
+      </> : <ul className={r.summary}>
+        {posts.map(post => <li key={post.id}><post.done aria-hidden="true" /><div><strong>{post.tab}</strong><span>{post.outcome}</span></div></li>)}
+      </ul>}
+      <p className={k.hint} aria-live="polite">{hint || (solved ? "Audit complete. Kabir’s profile is ready for the panel." : done === 3 ? "All three posts checked. Each choice matches the rules." : "Pick an action for this post. Each choice tells you why.")}</p>
+      <div className={k.actions}><button className={k.primary} disabled={done < 3 || solved} onClick={markSolved} type="button">{solved ? <><Check />Audit complete</> : <>Finish the audit <ArrowRight /></>}</button></div>
+      <small>Pretend posts and people. Never share real personal details in a lesson.</small>
     </div>}
 
     {scene === 4 && <div className={k.panel}>
-      <h2>Before you post</h2>
-      <div className={r.settings} {...show(.06)}>
-        <div><strong>Who can see new posts?</strong><small>Privacy settings</small></div>
-        <span className={r.segment}><span>Public</span><span data-on="true"><Users aria-hidden="true" />Friends only</span></span>
+      <div className={r.term}><Footprints aria-hidden="true" /><div><strong>Digital footprint</strong><span>Every post, comment and photo others can find. Together, they shape your online reputation.</span></div></div>
+      <div className={r.messages}>
+        <div className={`${r.thread} ${r.reveal}`} data-show={cue(.25)}>
+          <span className={r.threadHead}><MessageCircle aria-hidden="true" />Kabir and Tanvi</span>
+          <div className={r.bubble} data-me="true">Tanvi, I’m sorry about my comment on your song. It was mean, and singing at assembly took guts.</div>
+          <div className={r.bubble}><b aria-hidden="true">T</b>Thanks for saying that. It means a lot.</div>
+        </div>
+        <div className={`${r.thread} ${r.reveal}`} data-show={cue(.55)}>
+          <span className={r.threadHead}><MessageCircle aria-hidden="true" />Kabir and Ishaan</span>
+          <div className={r.bubble}><b aria-hidden="true">I</b>Not the bus one, please! The team photo is fine.</div>
+        </div>
       </div>
-      <p className={r.warn} {...show(.3)}><Smartphone aria-hidden="true" />Settings shrink the audience. They can’t stop screenshots.</p>
-      {["Who could see this?", "Could it hurt someone?", "Did everyone in it agree?"].map((step, i) => <div className={k.step} key={step} data-active={cue([.5, .58, .66][i])}><span><Check /></span>{step}</div>)}
-      <p className={r.good} {...show(.8)}><Award aria-hidden="true" />A good footprint isn’t empty. It shows your best work.</p>
+      <div className={`${r.settings} ${r.reveal}`} data-show={cue(.74)}>
+        <strong><Lock aria-hidden="true" />Privacy settings</strong>
+        <div><Tags aria-hidden="true" /><span>Review tags before they appear</span><i>On</i></div>
+        <div><Users aria-hidden="true" /><span>Everyday posts</span><i>Friends only</i></div>
+        <div><Globe aria-hidden="true" /><span>Project post</span><i>Public</i></div>
+      </div>
+    </div>}
+
+    {scene === 5 && <div className={k.device}>
+      <div className={k.deviceBar}><span><Award size={16} /> CYBERPUR SCHOLARSHIPS</span><span>Pretend portal</span></div>
+      <div className={r.feedBody}>
+        <div className={r.submitted}><CircleCheck aria-hidden="true" /><div><strong>Application submitted</strong><span>Thursday · a day before the deadline</span></div></div>
+        <div className={r.previewLabel}><Globe aria-hidden="true" />Public profile preview</div>
+        <div className={r.reveal} data-show={cue(.12)}><Post post={posts[0]} /></div>
+        <div className={r.reveal} data-show={cue(.2)}><Post post={teamPost} /></div>
+      </div>
+      <div className={`${k.deviceFoot} ${r.pauseFoot}`}><Sparkles aria-hidden="true" /><span>Pause before posting:</span>{["Who’s the audience?", "Who’s in it?", "How will it read later?"].map((text, i) => <span key={text} className={`${r.pauseChip} ${r.reveal}`} data-show={cue([.6, .72, .78][i])}>{text}</span>)}</div>
     </div>}
   </SceneSwap>;
 }
 
 const chapter: StoryChapter = {
   script,
-  title: "Meera’s scholarship profile",
-  icon: GraduationCap,
-  character: { asset: "emotional-avatar", name: "Meera" },
+  title: "Kabir’s public profile",
+  icon: Award,
+  character: { asset: "emotional-avatar", name: "Kabir" },
   interactionScene: 3,
-  beginLabel: "Practise with Meera",
-  waitingText: "Story paused. Audit all three posts to continue.",
-  lockedHint: "Help Meera audit her public posts first.",
+  beginLabel: "Practise with Kabir",
+  waitingText: "Story paused. Audit Kabir’s posts to see what happens next.",
+  lockedHint: "Help Kabir audit his public posts first.",
   World,
 };
 export default chapter;
