@@ -1,0 +1,78 @@
+{
+  "duration": 105.863,
+  "scenes": [
+    {
+      "id": "meet",
+      "label": "Meet Tara",
+      "title": "Ten minutes to the judges!",
+      "mood": "happy",
+      "caption": "Meet Tara. She's built an automatic hand-wash station for the school science fair. There's a sensor, a small pump and a tank of soap, all wired up on her lab table. The judges arrive in ten minutes, and Tara can't wait to show them how it works!",
+      "dialogue": "The judges are going to love this!",
+      "status": "Proud of her project",
+      "start": 0.0,
+      "duration": 15.785
+    },
+    {
+      "id": "problem",
+      "label": "Soap everywhere",
+      "title": "Squirt! Squirt! Nobody's there.",
+      "mood": "sad",
+      "caption": "Tara switches it on. Squirt! Soap splashes into the empty sink. A few seconds later... squirt! Again and again, even though nobody is there. The soap is running out, and the judges are almost here. Tara's heart sinks. Her machine is doing exactly what her plan says.",
+      "dialogue": "Stop! Nobody's even there!",
+      "status": "Feeling worried",
+      "tone": "trouble",
+      "flash": {
+        "mood": "surprise",
+        "seconds": 3
+      },
+      "start": 16.435,
+      "duration": 17.399
+    },
+    {
+      "id": "plan",
+      "label": "Read the plan",
+      "title": "The plan never asks.",
+      "mood": "thinking",
+      "caption": "Tara's science teacher, Mr. Das, comes over. Together, they read her plan one step at a time. Start. Dispense soap. Wait. Repeat. There's no step that checks for hands! A machine can't guess. It only follows its plan, so the plan has to ask a question.",
+      "speech": "Tara's science teacher, Mister Das, comes over. Together, they read her plan one step at a time. Start. Dispense soap. Wait. Repeat. There's no step that checks for hands! A machine can't guess. It only follows its plan, so the plan has to ask a question.",
+      "dialogue": "My plan never asks if hands are there.",
+      "status": "Reading the plan",
+      "start": 34.485,
+      "duration": 17.466
+    },
+    {
+      "id": "build",
+      "label": "Build the flowchart",
+      "title": "Question first, soap second.",
+      "mood": "thinking",
+      "caption": "Now it's your turn. Help Tara redraw her plan as a flowchart. It uses standard shapes: an oval to start and end, a rectangle for an action, and a diamond for a question with two answers, yes or no. Place each block, then test both paths.",
+      "dialogue": "Let's put the question first.",
+      "status": "Building with you",
+      "start": 52.601,
+      "duration": 16.246
+    },
+    {
+      "id": "paths",
+      "label": "Two paths",
+      "title": "One diamond, two paths.",
+      "mood": "happy",
+      "caption": "Look at Tara's new flowchart. The diamond is called a decision. It asks a yes or no question before anything happens. Yes leads to the soap, then the end. No waits, then loops back to ask again. Because the question comes first, soap only flows when hands are really there.",
+      "dialogue": "Ask first. Then act.",
+      "status": "Seeing both paths",
+      "start": 69.497,
+      "duration": 18.011
+    },
+    {
+      "id": "ending",
+      "label": "A happier ending",
+      "title": "Soap only when it's needed.",
+      "mood": "happy",
+      "caption": "The judges arrive as Tara holds out her hand. One neat squirt! She pulls away, and the station waits quietly. The judges smile and ask to see her flowchart. A machine can only choose if its plan asks a question. Your turn: help Tara choose the right shapes!",
+      "dialogue": "One squirt, just when it's needed!",
+      "status": "Ready for the judges",
+      "tone": "resolved",
+      "start": 88.157,
+      "duration": 17.055
+    }
+  ]
+}

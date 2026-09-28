@@ -102,7 +102,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     </div>}
 
     {scene === 2 && <div className={k.panel}>
-      <div className={g.aunt}><Avatar name="Meera" /><div><span>Aunt Meera</span><p>“Back then, we only put job notices up at Hilltop School.”</p></div></div>
+      <div className={g.aunt}><Avatar name="Meera" /><div><span>Aunt Meera</span><p>“Back then, we mostly put job notices up at Hilltop School.”</p></div></div>
       <div className={g.tableHead}><Database aria-hidden="true" /><strong>Training data: old hiring records</strong><small>6 of 48 rows</small></div>
       <Table rows={records} mark={at(.3)} label="Old hiring records, pretend data" />
       <div className={g.pattern} data-show={at(.5)}><Sparkles aria-hidden="true" /><span>Pattern the app learned:</span><b>Hilltop School = hire</b><small data-show={at(.68)}>Biased data</small></div>
