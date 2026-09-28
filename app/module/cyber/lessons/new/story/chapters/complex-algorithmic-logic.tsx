@@ -58,8 +58,8 @@ function Console({ label, slots, state, active }: { label: string; slots: [strin
   return <div className={r.console}>
     <div className={r.consoleBar}><span aria-hidden="true"><i /><i /><i /></span><CodeXml aria-hidden="true" /><b>{label}</b></div>
     <ol className={r.code}>{source.map((line, i) => {
-      const [before, after = ""] = line.split("{}"); const slot = i === LOOP ? 0 : i === COND ? 1 : -1;
-      return <li key={i} data-active={active === i}><Code text={before} />{slot >= 0 && <mark data-state={state[slot]}>{slots[slot]}</mark>}<Code text={after} /></li>;
+      const [before, after = ""] = line.split("{}"); const slot = i === LOOP ? 0 : i === COND ? 1 : undefined;
+      return <li key={i} data-active={active === i}><Code text={before} />{slot !== undefined && <mark data-state={state[slot]}>{slots[slot]}</mark>}<Code text={after} /></li>;
     })}</ol>
   </div>;
 }
