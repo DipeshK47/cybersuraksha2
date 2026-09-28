@@ -3699,3 +3699,11 @@ body:has(.surakshaGuideInline) .surakshaGuide:not(.surakshaGuideInline) {
 body:has([data-password-explainer]) .surakshaGuide:not(.surakshaGuideOpen) {
   display: none;
 }
+
+/* On phones the story chapter fills the width, so the floating launcher would
+   sit on its task buttons. It comes back once the learner moves on to practice. */
+@media (max-width: 600px) {
+  body:has([data-story-player]) .surakshaGuide:not(.surakshaGuideOpen) {
+    display: none;
+  }
+}
