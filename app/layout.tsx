@@ -30,17 +30,6 @@ const bricolage = Bricolage_Grotesque({
 const description =
   "CyberSuraksha turns Computational Thinking and Artificial Intelligence into hands-on learning missions for Classes 3-10.";
 
-const themeBootScript = `
-  (() => {
-    try {
-      const saved = localStorage.getItem("cybersuraksha-theme");
-      const theme = saved || "light";
-      document.documentElement.dataset.theme = theme;
-      document.documentElement.style.colorScheme = theme;
-    } catch (_) {}
-  })();
-`;
-
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host =
@@ -88,10 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-      </head>
+    <html lang="en">
       <body
         className={`${manrope.variable} ${ibmPlexMono.variable} ${bricolage.variable}`}
       >

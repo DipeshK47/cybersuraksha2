@@ -37,7 +37,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function choose(id: Choice) {
     if (solved || handled > 1) return;
     if (id === calls[handled].answer) { setHandled(handled + 1); setHint(""); return; }
-    setHint(whyNot[id]);
+    setHint(whyNot[id], false);
   }
   const call = calls[Math.min(done, 1)];
   return <SceneSwap scene={scene} reduced={reduced}>

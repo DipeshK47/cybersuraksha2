@@ -1,0 +1,34 @@
+{
+  "mode": "built-in image_gen",
+  "operation": "original asset generation",
+  "prompt_briefs": [
+    {
+      "asset": "public/cyber-missions/refined/report-card-workshop.webp",
+      "brief": "Warm Indian classroom after class. A desk with three abstract report cards and a code laptop, one small warning dot. Polished storybook 3D environment in cream, teal and amber. Darker left area for live UI title. No readable text, logos or scores."
+    },
+    {
+      "asset": "public/cyber-missions/refined/sports-day-sort.webp",
+      "brief": "School sports-day running track with diverse teenage runners crossing a finish line and an abstract timing leaderboard. Warm sunset, teal and amber. Polished storybook 3D environment, darker left area for live UI title. No readable text or logos."
+    },
+    {
+      "asset": "public/cyber-missions/refined/torch-permissions.webp",
+      "brief": "Indian teenage girl examining a smartphone torch illuminating a water-cycle poster, with symbolic camera, contacts, microphone and location icons. Warm painterly 3D storybook illustration, teal and cream. Dark left area, no readable text or logos."
+    },
+    {
+      "asset": "public/cyber-missions/refined/scholarship-inbox.webp",
+      "brief": "Indian teenage boy checking a scholarship inbox on his laptop, beside a solar water-filter prototype. Abstract email headers, no readable words. Polished warm 3D storybook classroom scene, darker left area for live UI title."
+    },
+    {
+      "asset": "public/cyber-missions/refined/recommendation-feed.webp",
+      "brief": "Indian teenage boy watching a tablet recommendation feed containing cricket, science, art and dragon thumbnails. Cricket is visibly repeated and dominates the feed. Polished warm storybook illustration, teal and amber, dark left area, no readable text or logos."
+    },
+    {
+      "asset": "public/cyber-missions/refined/city-map-permission.webp",
+      "brief": "Indian teenage girl examining a smartphone city map with a current-location dot and route. Indian street and school backpack in the background. Polished 3D storybook illustration, warm lighting. No labels, readable text, real location data or logos."
+    },
+    {
+      "asset": "public/cyber-missions/refined/class-video-permission.webp",
+      "brief": "Indian teenage girl at a desk with headphones attending a class video call on a laptop. A grid of teacher and classmates and camera/microphone symbols. Polished warm 3D storybook illustration, cream and teal, darker left area for live UI title, no readable text or logos."
+    }
+  ]
+}

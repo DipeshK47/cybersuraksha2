@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BatteryFull, BatteryLow, Bot, Check, Clock3, Cookie, Heart, Moon, Music, PawPrint, PlugZap, ScrollText, Sparkles, Speaker, Sprout, UsersRound, type LucideIcon } from "lucide-react";
+import { ArrowRight, BatteryFull, BatteryLow, Bot, Check, Clock3, Heart, Moon, Music, PawPrint, PlugZap, ScrollText, Sparkles, Speaker, Sprout, UsersRound, type LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -24,22 +24,22 @@ const rules = [["music plays", "DANCE"], ["battery is low", "SAY “I’m hungry
 const aliveFacts = ["Grows bigger", "Needs food, water or sunlight", "Needs care"];
 const machineFacts = ["Follows a program", "Programmed by people", "Needs charging, not food"];
 
-/** Rohan's toy robot, built from CSS. `low` = sleepy amber face; `dance` = sways (static when reduced). */
+/** The same toy in charged and low-battery poses; playback controls its dance. */
 function Tiko({ low, dance, line }: { low?: boolean; dance?: boolean; line: string }) {
-  const Battery = low ? BatteryLow : BatteryFull;
   return <>
     <div className={r.toy} data-low={Boolean(low)} data-dance={Boolean(dance)} aria-hidden="true">
       {dance && <><Music className={r.note} /><Music className={r.note} /></>}
-      <div className={r.bot}>
-        <span className={r.antenna} />
-        <span className={r.head}><span className={r.face}><i /><i /><b /></span></span>
-        <span className={r.arm} /><span className={r.arm} />
-        <span className={r.body}><span><Battery /></span></span>
-        <span className={r.feet} />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className={r.bot} src={`/cyber-missions/refined/tiko-${low ? "low" : "happy"}.webp`} alt="" width={467} height={560} />
     </div>
     <div className={r.say} data-low={Boolean(low)}><small>Tiko says</small><strong>{line}</strong><span aria-hidden="true">{[0, 1, 2, 3, 4].map(i => <i key={i} />)}</span></div>
   </>;
+}
+
+function ObjectArt({ name }: { name: string }) {
+  const slot = name === "Plant" ? 0 : name === "Smart speaker" ? 1 : 2;
+  const src = name === "Puppy" ? "/cyber-missions/dog-indie.jpg" : name === "Dancing robot" ? "/cyber-missions/refined/tiko-happy.webp" : null;
+  return <span className={r.objectArt} data-photo={name === "Puppy"} aria-hidden="true" style={{ backgroundImage: `url('${src ?? "/cyber-missions/refined/objects-atlas.webp"}')`, backgroundSize: src ? "contain" : "200% 200%", backgroundPosition: src ? "center" : `${slot % 2 * 100}% ${slot < 2 ? 0 : 100}%` }} />;
 }
 
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
@@ -54,7 +54,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     const thing = things.find(t => t.name === name);
     if (solved || !thing || done[name]) return;
     setActive("");
-    if (thing.bin !== bin) { setHint(`${thing.why} Try the other bin.`); return; }
+    if (thing.bin !== bin) { setHint(`${thing.why} Try the other bin.`, false); return; }
     setPlaced(value => ({ ...value, [name]: bin })); setHint("");
   }
   function tapBin(bin: Bin) {
@@ -69,7 +69,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         {scene === 1 && <div className={k.badge}><Moon /> Bedtime</div>}
         {scene === 5 && <div className={k.badge}><BatteryFull /> Fully charged!</div>}
         <Tiko low={scene === 1} dance={scene !== 1} line={scene === 1 ? "I’m hungry!" : "Let’s dance!"} />
-        {scene === 1 && <div className={r.snack} aria-hidden="true"><Cookie /><Cookie /><i /><i /><i /><i /></div>}
+        {scene === 1 && <div className={r.snack} aria-hidden="true"><span className={r.biscuits} /><i /><i /><i /><i /></div>}
         {scene === 5 && <div className={r.moti}><span className={r.pic} role="img" aria-label="Moti, the neighbour’s puppy" /><span><PawPrint aria-hidden="true" />Woof!</span></div>}
       </div>
       <div className={k.deviceFoot}>{scene === 0 ? <><Music /><span>Dance mode: <b>ON</b></span><small>Pretend toy</small></> : scene === 1 ? <><BatteryLow /><span>Battery: <b>LOW</b></span><small>Same words, again and again</small></> : <><Heart /><span>Rohan, Tiko and Moti</span><small>Charged, not fed</small></>}</div>
@@ -89,13 +89,13 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <h2>Alive or machine?</h2>
       <p>Tap a thing, then tap its bin. You can drag it too.</p>
       <div className={r.tray} role="group" aria-label="Things to sort">
-        {left.map(t => <button key={t.name} type="button" aria-pressed={active === t.name} disabled={solved} draggable={!solved} onDragStart={event => event.dataTransfer.setData("text/plain", t.name)} onClick={() => { setActive(active === t.name ? "" : t.name); setHint(""); }}><t.icon aria-hidden="true" />{t.name}</button>)}
+        {left.map(t => <button key={t.name} type="button" aria-pressed={active === t.name} disabled={solved} draggable={!solved} onDragStart={event => event.dataTransfer.setData("text/plain", t.name)} onClick={() => { setActive(active === t.name ? "" : t.name); setHint(""); }}><ObjectArt name={t.name} />{t.name}</button>)}
         {!left.length && <span className={r.trayDone}><Check aria-hidden="true" />All five sorted!</span>}
       </div>
       <div className={r.bins}>
         {bins.map(({ bin, icon: Icon, note }) => <button key={bin} type="button" className={r.bin} data-bin={bin} data-ready={Boolean(active)} disabled={solved} onClick={() => tapBin(bin)} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); sort(event.dataTransfer.getData("text/plain"), bin); }}>
           <span className={r.binHead}><Icon aria-hidden="true" /><strong>{bin}</strong><small>{note}</small></span>
-          <span className={r.binItems}>{things.some(t => done[t.name] === bin) ? things.filter(t => done[t.name] === bin).map(t => <span key={t.name} className={k.fitIn}><t.icon aria-hidden="true" />{t.name}</span>) : <em>Tap here to sort</em>}</span>
+          <span className={r.binItems}>{things.some(t => done[t.name] === bin) ? things.filter(t => done[t.name] === bin).map(t => <span key={t.name} className={k.fitIn}><ObjectArt name={t.name} />{t.name}</span>) : <em>Tap here to sort</em>}</span>
         </button>)}
       </div>
       <p className={k.hint} aria-live="polite">{hint || (solved ? "Sorted! Living things grow. Machines follow a program." : left.length ? "Ask: does it grow and need care? Or follow a program?" : "All sorted! Show Nani your bins.")}</p>

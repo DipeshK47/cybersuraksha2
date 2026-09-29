@@ -1,14 +1,15 @@
-/* Rohan's morning chapter only: bedroom art, Tikku the CSS toy robot, Papa's note, the step board and the order comparison. Shared pieces live in ../story-player.module.css. */
-.room{background-image:url('/cyber-missions/morning-room.webp');background-position:76% 80%}
+/* Illustrated morning props stay consistent in the story, step board and comparison. */
+.room{min-height:350px;aspect-ratio:16/9;background-image:url('/cyber-missions/morning-room.webp');background-position:center}
 
-/* Tikku: antenna, head with eyes, chest screen. */
-.tikku{position:absolute;top:16px;right:18px;display:grid;justify-items:center;width:84px;filter:drop-shadow(0 8px 12px #10263f66);animation:slotIn .3s var(--ease)}
-.tikku>i{position:relative;width:4px;height:13px;background:#28474d}
-.tikku>i:before{content:"";position:absolute;top:-9px;left:-5px;width:14px;height:14px;border-radius:50%;background:#efbb5d;box-shadow:inset -2px -2px 0 #c98c32}
-.head{display:flex;align-items:center;justify-content:center;gap:15px;width:70px;height:48px;border:4px solid #28474d;border-radius:16px;background:#e8f4ef}
-.head>b{width:11px;height:11px;border-radius:50%;background:#18545c}
-.tikku[data-face="happy"] .head>b{width:13px;height:8px;border:3.5px solid #18545c;border-bottom:0;border-radius:10px 10px 0 0;background:none}
-.body{margin-top:4px;min-width:62px;padding:6px 8px;border:4px solid #28474d;border-radius:10px;background:#0f3037;color:#a9f0c9;font-family:var(--font-mono),monospace;font-size:.62rem;font-weight:800;text-align:center;letter-spacing:.04em}
+/* Toy art stays separate from the command label. */
+.tikku{position:absolute;bottom:22px;left:35px;display:grid;justify-items:center;width:180px;filter:drop-shadow(0 8px 8px #10263f55);animation:slotIn .28s var(--ease)}
+.toyArt{display:block;width:180px;height:218px;background:url('/cyber-missions/refined/tiko-happy.webp') center/contain no-repeat}
+.room[data-resolved="true"] .tikku{bottom:105px}
+.room[data-resolved="true"] .body{visibility:hidden}
+.busArt{display:block;width:180px;height:120px;background:url('/cyber-missions/refined/morning-bus.webp') center/contain no-repeat;animation:busLeaves 4s ease-out both;animation-play-state:var(--story-loop-state,paused)}
+@keyframes busLeaves{from{transform:translateX(-12px)}to{transform:translateX(14px)}}
+.body{margin-top:3px;padding:5px 10px;border:1px solid #6cbcaf;border-radius:7px;background:#0f3037;color:#c9f5e5;font-family:var(--font-mono),monospace;font-size:.64rem;font-weight:800;text-align:center;letter-spacing:.04em}
+.stepArt{display:block;flex:none;width:58px;height:58px;background:center/contain no-repeat}
 .runRow button{white-space:nowrap}
 .mixups{display:flex;flex-wrap:wrap;gap:6px}
 
@@ -17,30 +18,40 @@
 .papa>span{font-size:.75rem;font-weight:850;color:#826137}
 .papa p{margin:5px 0 0;font-family:var(--font-display),sans-serif;font-size:1.25rem;color:#375b53}
 .list{margin:0;padding:0;list-style:none}
-.list>li{margin:7px 0}
-.list>li>span{font-size:.72rem;font-weight:850}
+.list>li{gap:10px;margin:8px 0;padding:7px 10px;border:1px solid #dfdfcb;border-radius:12px;background:#fff7e7;box-shadow:0 3px 0 #93774912}
+.list>li>b{display:grid;place-items:center;flex:none;width:25px;height:25px;border-radius:50%;background:#1e6466;color:#fff9e5;font-size:.7rem}
+.list>li .stepArt{width:48px;height:48px;background-color:transparent;background-size:contain;background-position:center;background-repeat:no-repeat;border-radius:0}
+.list>li .stepLabel{display:block;min-width:0;width:auto;height:auto;background:transparent;border-radius:0;font-size:.78rem;font-weight:800;color:#264c48}
 .list em{display:flex;align-items:center;gap:5px;margin-left:auto;padding:4px 9px;border-radius:999px;background:#f8e2cf;color:#8a4a22;font-size:.66rem;font-style:normal;font-weight:800;opacity:0;transition:opacity .25s ease}
 .list em svg{width:14px;height:14px}
 .list em[data-show="true"]{opacity:1}
 
-/* Scene 4: Tikku's step board, a dark robot screen on the cream card. */
-.board{margin:4px 0 14px;padding:10px;border-radius:12px;background:#28474d}
-.boardBar{display:flex;justify-content:space-between;gap:8px;padding:0 3px 9px;color:#fff4db;font-size:.62rem;font-weight:850;letter-spacing:.08em}
+/* A tactile command board with illustrated step cards and numbered docking slots. */
+.taskLead{display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:17px;margin-bottom:13px}
+.taskLead .toyArt{width:100px;height:120px;filter:drop-shadow(0 5px 4px #28474730)}
+.taskLead h2{margin-bottom:7px}.taskLead p{margin:0;line-height:1.5}
+.board{margin:4px 0 16px;padding:13px;border:6px solid #d8c391;border-top-color:#eadbb4;border-bottom-color:#b4a476;border-radius:18px;background:#244f53;box-shadow:0 5px 0 #927a5030,0 12px 20px #283e2520}
+.boardBar{display:flex;justify-content:space-between;gap:8px;padding:0 3px 11px;color:#fff4db;font-size:.65rem;font-weight:850;letter-spacing:.06em}
 .boardBar>span:first-child{display:flex;align-items:center;gap:6px}
 .boardBar svg{width:15px;height:15px;color:#a9f0c9}
 .board ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:0;padding:0;list-style:none}
-.board li{display:flex;align-items:center;gap:7px;min-height:48px;padding:6px 8px;border:1px dashed #6f8f8f;border-radius:8px;background:#1d3a40;color:#9fbab5;font-size:.7rem;font-weight:800;line-height:1.2;transition:background .2s ease,border-color .2s ease}
+.board li{position:relative;display:grid;align-content:center;justify-items:center;gap:4px;min-height:105px;padding:8px 5px;border:1px dashed #9ac7bd;border-radius:11px;background:#173e43;color:#c0d8cc;font-size:.7rem;font-weight:800;line-height:1.2;transition:background .2s ease,border-color .2s ease}
 /* Only a Run result ripples along the board; placing a card updates at once. */
 .board li[data-state]{transition-delay:calc(var(--i) * 90ms)}
-.board li>b{display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:50%;background:#355f63;color:#fff4db;font-size:.66rem}
-.board li>span{min-width:0;overflow-wrap:anywhere}
-.board li svg{flex:none;width:16px;height:16px;margin-left:auto}
+.board li>b{position:absolute;left:6px;top:6px;display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#355f63;color:#fff4db;font-size:.66rem}
+.board li>span:last-of-type{min-width:0;overflow-wrap:anywhere;text-align:center}
+.board li svg{position:absolute;right:5px;top:6px;width:16px;height:16px}
+.board li .stepArt{width:58px;height:58px}
 .board li[data-filled="true"]{border-style:solid;border-color:#e6d6ae;background:#fff8e6;color:#284747;animation:slotIn .25s var(--ease)}
 .board li[data-filled="true"]>b{background:#145b5e}
 .board li[data-state="ok"]{border-color:#7fbf92;background:#dcf0d6;color:#284c37}
 .board li[data-state="ok"] svg{color:#2f7a45}
 .board li[data-state="bad"]{border-color:#e08a5f;background:#fbe0d0;color:#83401c}
 .board li[data-state="bad"]>b{background:#b4582a}
+.choices.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.choices.choices button{display:grid;justify-items:center;align-content:center;gap:4px;min-height:108px;padding:6px;border:1px solid #d5d8c0;border-bottom:3px solid #b9c2a3;border-radius:12px;background:linear-gradient(#fffdf4,#f5f0de);box-shadow:0 4px 9px #3b45280b;font-size:.75rem;text-align:center}
+.choices button .stepArt{width:66px;height:66px}
+.choices button[aria-pressed="true"]{border-bottom-color:#95b49c;background:#e7eedc}
 
 /* Scene 5: the term, then the two lists side by side. */
 .term{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding:13px 14px;border-radius:10px;background:#28474d;color:#fff4db}
@@ -56,10 +67,49 @@
 .compare small{display:block;margin-top:6px;font-size:.68rem;font-weight:800;color:#8a4a22}
 .compare>div[data-good="true"] small{color:#2f6b3f}
 .pair{display:flex;align-items:center;gap:6px;margin:7px 0 0;font-size:.72rem}
-.pair>span{padding:4px 8px;border:1px solid #d6dccb;border-radius:6px;background:#fffcf3;font-weight:800;color:#284747}
+.pair>span{display:grid;justify-items:center;gap:2px;padding:4px 7px;border:1px solid #d6dccb;border-radius:9px;background:#fffcf3;font-weight:800;color:#284747}
+.pair .stepArt{width:50px;height:50px}
 .pair>svg{width:14px;height:14px;color:#6d7f73}
 .pair>svg:last-child{width:17px;height:17px;margin-left:auto;color:#b4582a}
 .compare>div[data-good="true"] .pair>svg:last-child{color:#2f7a45}
 
 @keyframes slotIn{from{transform:translateY(-7px);opacity:.5}to{transform:translateY(0);opacity:1}}
-@media(max-width:600px){.tikku{top:10px;right:10px;scale:.8;transform-origin:top right}.board ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.board li{min-height:42px;font-size:.66rem;padding:5px 7px}.papa p{font-size:1.1rem}.compare{gap:7px}.compare>div{padding:10px}.pair{font-size:.68rem;gap:4px}.pair>span{padding:3px 6px}}
+@media(max-width:600px){
+ .room{min-height:315px;background-position:65% center}
+ .tikku{bottom:14px;left:8px;width:135px}.tikku .toyArt{width:135px;height:163px}.room[data-resolved="true"] .tikku{bottom:109px}
+ .taskLead{grid-template-columns:75px minmax(0,1fr);gap:10px}.taskLead .toyArt{width:75px;height:95px}.taskLead h2{font-size:1.2rem}
+ .board{padding:9px;border-width:5px}.board ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.board li{min-height:100px;font-size:.67rem}.board li .stepArt{width:53px;height:53px}
+ .choices.choices{gap:6px}.choices.choices button{min-height:101px;font-size:.66rem}.choices button .stepArt{width:58px;height:58px}
+ .papa p{font-size:1.1rem}.list>li{flex-wrap:wrap;gap:7px;padding:5px 7px}.list>li .stepArt{width:40px;height:40px}.list>li .stepLabel{font-size:.7rem}.list em{font-size:.6rem;margin-left:auto}
+ .compare{grid-template-columns:1fr;gap:9px}.compare>div{padding:12px}.pair{font-size:.72rem;gap:7px}.pair>span{padding:4px 12px}.pair .stepArt{width:57px;height:57px}
+}
+
+/* Tikku stays in Rohan's sunlit bedroom through explanation, practice and review. */
+.routineRoom{padding:0 22px 22px;background:#bf995f url('/cyber-missions/morning-room.webp') center top/100% auto no-repeat}
+.routineHero{position:relative;height:225px}
+.routineHero .tikku{left:12px;bottom:6px;width:165px}
+.routineHero .toyArt{width:165px;height:200px}
+.routineBoard{padding:20px;border-radius:14px;background:#fff8eaf5;box-shadow:0 8px 20px #583c2233;color:#284747}
+.routineBoard h2{margin:0 0 12px;font-family:var(--font-display),sans-serif;font-size:1.45rem;line-height:1.25}
+.routineBoard>small{display:block;margin-top:13px;font-size:.66rem;color:#694b2c;line-height:1.4}
+.routineBoard .taskLead{display:block;margin-bottom:16px}
+.routineBoard .taskLead h2{margin-bottom:7px}
+.routineBoard .board{margin-bottom:16px}
+@media(max-width:600px){
+ .routineRoom{padding:0 10px 12px;background-size:auto 330px;background-position:60% top}
+ .routineHero{height:181px}.routineHero .tikku{left:6px;bottom:7px;width:127px}.routineHero .toyArt{width:127px;height:153px}
+ .routineBoard{padding:14px 11px}.routineBoard h2{font-size:1.2rem}
+ .routineBoard .list>li{gap:5px}.routineBoard .list em{margin-left:30px}
+ .routineBoard .choices.choices{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Frame the room's floor independently from the height of the lesson board. */
+.routineRoom{background:#bf995f}
+.routineHero{margin:0 -22px;background:url('/cyber-missions/morning-room.webp') center bottom/cover no-repeat}
+.routineHero .tikku{isolation:isolate}
+.routineHero .tikku:after{content:"";position:absolute;z-index:-1;left:10%;right:10%;bottom:31px;height:10px;border-radius:50%;background:#49371855;filter:blur(5px)}
+@media(max-width:600px){
+ .room{width:100%;aspect-ratio:auto}
+ .routineRoom{background:#bf995f}
+ .routineHero{margin:0 -10px;background-position:45% bottom}
+}

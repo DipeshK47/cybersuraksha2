@@ -21,3 +21,7 @@ _backup-*.tgz
 .impeccable/
 :memory:.ses
 codex-*chat*.md
+
+.lms-qa/
+
+.practice-qa/

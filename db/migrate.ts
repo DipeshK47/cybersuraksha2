@@ -2,6 +2,7 @@ import { env } from "cloudflare:workers";
 import baseline from "../drizzle/0000_baseline.sql?raw";
 import studentSessions from "../drizzle/0001_student_sessions.sql?raw";
 import assessment from "../drizzle/0002_keen_zaladane.sql?raw";
+import lms from "../drizzle/0003_aspiring_hiroim.sql?raw";
 
 /**
  * In-app D1 migrator.
@@ -20,6 +21,7 @@ const MIGRATIONS: Array<{ tag: string; sql: string }> = [
   { tag: "0001_student_sessions", sql: studentSessions },
   // assessment, progress rollups, report cards and guardians
   { tag: "0002_keen_zaladane", sql: assessment },
+  { tag: "0003_aspiring_hiroim", sql: lms },
 ];
 
 let migrationPromise: Promise<void> | null = null;

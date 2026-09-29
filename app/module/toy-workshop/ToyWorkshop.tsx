@@ -98,7 +98,7 @@ export function ToyWorkshop({
   const savedCompletion = useRef(false);
 
   const storageKey = `cybersuraksha-toy-workshop-v1-${studentId ?? "preview"}`;
-  const emit = useActivityEmitter(MODULE_ID, role === "student" && !!studentId);
+  const { emit } = useActivityEmitter(MODULE_ID, role === "student" && !!studentId, studentId);
   const contextQuery = useMemo(() => {
     const query = new URLSearchParams({ role });
     if (studentId) query.set("studentId", studentId);
@@ -332,6 +332,7 @@ export function ToyWorkshop({
   }
 
   function reset() {
+    emit("module_started", { restarted: true });
     setRunKey((value) => value + 1);
     setScreen(0);
     setCompleted(new Set());

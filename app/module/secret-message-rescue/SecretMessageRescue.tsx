@@ -73,6 +73,7 @@ export function SecretMessageRescue({
   className?: string;
 }) {
   const [screen, setScreen] = useState(0);
+  const [runKey, setRunKey] = useState(0);
   const [completed, setCompleted] = useState<Set<number>>(new Set());
   const [soundOn, setSoundOn] = useState(true);
   const [metrics, setMetrics] = useState<SkillMetrics>(emptyMetrics);
@@ -85,7 +86,7 @@ export function SecretMessageRescue({
   const startedAt = useRef<number | null>(null);
   const savedCompletion = useRef(false);
   const studentStorageKey = `${storageKey}-${studentId ?? "preview"}`;
-  const emit = useActivityEmitter(MODULE_ID, role === "student" && !!studentId);
+  const { emit } = useActivityEmitter(MODULE_ID, role === "student" && !!studentId, studentId);
   const contextQuery = useMemo(() => {
     const query = new URLSearchParams({ role });
     if (studentId) query.set("studentId", studentId);
@@ -307,6 +308,8 @@ export function SecretMessageRescue({
   }
 
   function reset() {
+    emit("module_started", { restarted: true });
+    setRunKey((value) => value + 1);
     setScreen(0);
     setCompleted(new Set());
     setMetrics(emptyMetrics());
@@ -418,7 +421,7 @@ export function SecretMessageRescue({
 
           <LessonStage
             completed={completed.has(screen)}
-            key={screen}
+            key={`${runKey}-${screen}`}
             metrics={metrics}
             onAnswer={recordAnswer}
             onComplete={completeCurrent}

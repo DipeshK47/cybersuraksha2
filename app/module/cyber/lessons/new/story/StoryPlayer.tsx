@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import type { ReactNode } from "react";
 import { useRef, useState } from "react";
-import { characters } from "./characters";
 import { StoryCharacter } from "./StoryCharacter";
 import type { StoryChapter } from "./types";
 import s from "./story-player.module.css";
@@ -20,7 +19,7 @@ export function SceneSwap({ scene, reduced, children }: { scene: number; reduced
   </AnimatePresence>;
 }
 
-export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter: StoryChapter; onBegin: () => void }) {
+export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: string; chapter: StoryChapter; onBegin: () => void; onActivity?: (type: string, payload?: unknown) => void }) {
   const { script: { scenes, duration }, interactionScene: gate, World } = chapter;
   const audio = useRef<HTMLAudioElement>(null);
   const [time, setTime] = useState(0);
@@ -29,6 +28,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
   const [audioUnavailable, setAudioUnavailable] = useState(false);
   const [finished, setFinished] = useState(false);
   const [solved, setSolved] = useState(false);
+  const solvedRef = useRef(false);
   const [hint, setHint] = useState("");
   const [waiting, setWaiting] = useState(false);
   const reduced = Boolean(useReducedMotion());
@@ -37,7 +37,6 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
   const elapsed = time - current.start;
   const flash = current.flash && playing && elapsed < current.flash.seconds ? current.flash.mood : undefined;
   const mood = scene === gate && solved ? chapter.solvedMood ?? "happy" : flash ?? current.mood;
-  const credit = characters[chapter.character.asset].credit;
 
   async function start() {
     try { await audio.current?.play(); }
@@ -52,6 +51,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
   // Scene buttons narrate that scene too; otherwise "Next scene" flips through the story in silence.
   async function jump(index: number) {
     if (index > gate && !solved) { index = gate; setHint(chapter.lockedHint); }
+    onActivity?.("story_viewed", { scene: scenes[index].id, category: scenes[index].title });
     setTime(scenes[index].start); setFinished(false); setWaiting(false);
     if (!audio.current || audioUnavailable) return;
     audio.current.currentTime = scenes[index].start;
@@ -60,7 +60,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
   function trackAudio() {
     if (!audio.current) return;
     let next = audio.current.currentTime;
-    if (!solved && next >= scenes[gate + 1].start) {
+    if (!solvedRef.current && next >= scenes[gate + 1].start) {
       next = scenes[gate + 1].start - .05;
       audio.current.pause(); audio.current.currentTime = next;
       setWaiting(true);
@@ -68,8 +68,10 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
     setTime(next);
   }
   async function markSolved() {
-    if (solved) return;
+    if (solvedRef.current) return;
+    onActivity?.("story_answered", { id: `${slug}-story`, correct: true, category: scenes[gate].title, feedback: "Story exercise solved." });
     const resume = playing || waiting;
+    solvedRef.current = true;
     setSolved(true); setWaiting(false); setHint("");
     if (audio.current) audio.current.currentTime = scenes[gate + 1].start;
     setTime(scenes[gate + 1].start);
@@ -78,7 +80,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
   const advance = () => scene === scenes.length - 1 ? onBegin() : void jump(scene + 1);
   const Icon = chapter.icon;
 
-  return <section className={s.intro} data-story-player={slug} data-scene={scene} data-gate={gate} data-playing={playing} data-waiting={waiting} data-solved={solved}>
+  return <section className={`${s.intro} ${slug === "password-vault-builder" ? "" : s.polishedMotion}`} data-story-player={slug} data-scene={scene} data-gate={gate} data-playing={playing} data-waiting={waiting} data-solved={solved}>
     <audio ref={audio} src={`/audio/cyber/${slug}/story.mp3`} preload="metadata" muted={muted}
       onTimeUpdate={trackAudio} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
       onEnded={() => { setPlaying(false); setFinished(true); setTime(duration); }}
@@ -103,7 +105,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
         <div className={s.name}><span>{chapter.character.name}</span><span>{current.status}</span></div>
       </div>
       <div className={s.storyWorld}>
-        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={setHint} reduced={reduced} />
+        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} reduced={reduced} />
       </div>
     </div>
     <div className={s.storyText}>
@@ -113,8 +115,7 @@ export function StoryPlayer({ slug, chapter, onBegin }: { slug: string; chapter:
     <div className={s.timeline} aria-hidden="true"><span style={{ transform: `scaleX(${Math.min(1, time / duration)})` }} /></div>
     <footer className={s.footer}>
       <div className={s.navigation}><button aria-label="Previous scene" disabled={scene === 0} onClick={() => void jump(scene - 1)} type="button"><ArrowLeft /></button><button className={s.primary} onClick={advance} disabled={scene === gate && !solved} type="button">{scene === scenes.length - 1 ? chapter.beginLabel : "Next scene"}<ArrowRight /></button><button className={s.skip} onClick={onBegin} type="button">Skip to practice</button></div>
-      <p>{audioUnavailable ? "Audio couldn’t load. Read the captions and use Next scene." : waiting ? chapter.waitingText : "AI male narration · Captions always on"}</p>
+      {audioUnavailable ? <p>Audio couldn’t load. Read the captions and use Next scene.</p> : waiting ? <p>{chapter.waitingText}</p> : null}
     </footer>
-    <details className={s.credits}><summary>Animation credits</summary><p>“{credit.title}” by <a href={credit.url} target="_blank" rel="noreferrer">{credit.author}, Rive Marketplace</a>, used under <a href={credit.licenseUrl} target="_blank" rel="noreferrer">{credit.license}</a>. Original animation; expressions controlled by this story. Static fallback frames exported from the same work.</p>{chapter.credits}</details>
   </section>;
 }

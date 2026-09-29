@@ -1,5 +1,6 @@
 import type { CurriculumStrand } from "./curriculum";
 import { cyberLessons } from "./cyber-lessons";
+import { newMissions } from "./new-missions";
 
 export type PlayableModule = {
   id: string;
@@ -60,6 +61,9 @@ export const playableModules: PlayableModule[] = [
     href: `/module/cyber/${lesson.slug}`,
   })),
 ];
+
+/** The current story chapters, using the same identities and routes as the class library. */
+export const assignmentChapters = playableModules.filter(module => newMissions.some(chapter => chapter.id === module.id));
 
 export function getPlayableModule(grade: number, title: string) {
   return playableModules.find(

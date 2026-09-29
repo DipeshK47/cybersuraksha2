@@ -1,22 +1,22 @@
 "use client";
 
-import { ArrowRight, Check, CircleHelp, Gamepad2, Gem, KeyRound, Lightbulb, LockKeyhole, Moon, RotateCcw, School, ShieldCheck, Sprout, Waves } from "lucide-react";
+import { ArrowRight, Check, CircleHelp, Gamepad2, KeyRound, LockKeyhole, Moon, RotateCcw, School, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
+import { passwordExamples } from "../../password-examples";
 import script from "./password-vault-builder.json";
 import k from "../story-player.module.css";
 import r from "./password-vault-builder.module.css";
 
-const words = ["Lantern", "River", "Cactus", "Moon", "Pebble"];
-const wordIcons = [Lightbulb, Waves, Sprout, Moon, Gem];
+const pieces = passwordExamples[0];
 
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
   const [selected, setSelected] = useState<string[]>([]);
-  function addWord(word: string) {
-    if (solved || selected.includes(word) || selected.length === 5) return;
-    if (!words.includes(word) && word !== "Rohan123") return;
-    if (word === "Rohan123") { setHint("That is the old shortcut: his name + 123. Try an unrelated word instead."); return; }
+  function addPiece(word: string) {
+    if (solved || selected.includes(word) || selected.length === 2) return;
+    if (!pieces.includes(word) && word !== "Rohan123") return;
+    if (word === "Rohan123") { setHint("That is the old shortcut: his name + 123. Choose words that are not his name instead.", false); return; }
     setSelected(value => [...value, word]); setHint("");
   }
   return <SceneSwap scene={scene} reduced={reduced}>
@@ -35,19 +35,21 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       {["Use the game’s official recovery steps", "Choose a new password", "Sign out other sessions"].map((step, i) => <div className={k.step} key={step} data-active={!playing || elapsed > i * 3}><span><Check /></span>{step}</div>)}
     </div>}
     {scene === 3 && <div className={k.panel}>
-      <h2>Help Rohan build his secret</h2><p>Drag words into the key, or tap them.</p>
-      <div className={r.wordSlots} aria-label={`${selected.length} of 5 words added`} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); addWord(event.dataTransfer.getData("text/plain")); }}>
-        {words.map((_, i) => <span key={i} data-filled={Boolean(selected[i])}>{selected[i] ?? <KeyRound aria-hidden="true" />}</span>)}
+      <h2>Build a password that is harder to guess</h2><p>Join two word tiles. Mango is a fruit. Rocket is a space machine. Their numbers and symbols stay attached.</p>
+      <div className={r.wordSlots} aria-label={`${selected.length} of 2 password pieces added`} onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); addPiece(event.dataTransfer.getData("text/plain")); }}>
+        {pieces.map((_, i) => <span key={i} data-filled={Boolean(selected[i])}>{selected[i] ?? <KeyRound aria-hidden="true" />}</span>)}
       </div>
-      <div className={k.bank}>{words.map((word, i) => { const Icon = wordIcons[i]; return <button key={word} draggable={!selected.includes(word) && !solved} onDragStart={event => event.dataTransfer.setData("text/plain", word)} onClick={() => addWord(word)} disabled={solved || selected.includes(word)} aria-pressed={selected.includes(word)} type="button"><Icon aria-hidden="true" />{word}</button>; })}<button data-trap="true" onClick={() => addWord("Rohan123")} disabled={solved} type="button"><KeyRound aria-hidden="true" />Rohan123</button></div>
-      <p className={k.hint} aria-live="polite">{hint || (selected.length === 5 ? "Five unrelated words. Much longer than Rohan123!" : "Five unrelated words make one long practice phrase.")}</p>
-      <div className={k.actions}><button onClick={() => setSelected(value => value.slice(0, -1))} disabled={!selected.length || solved} type="button"><RotateCcw />Undo</button><button className={k.primary} disabled={selected.length !== 5} onClick={markSolved} type="button">Save Rohan’s secret <ArrowRight /></button></div>
-      <small>Example only. Never use these words as your real password.</small>
+      <div className={k.bank}>{pieces.map(word => { return <button key={word} draggable={!selected.includes(word) && !solved} onDragStart={event => event.dataTransfer.setData("text/plain", word)} onClick={() => addPiece(word)} disabled={solved || selected.includes(word)} aria-pressed={selected.includes(word)} type="button"><KeyRound aria-hidden="true" />{word}</button>; })}<button data-trap="true" onClick={() => addPiece("Rohan123")} disabled={solved} type="button"><KeyRound aria-hidden="true" />Rohan123</button></div>
+      <p>482 is a number. ! and ? are symbols you can type.</p>
+      <div className={r.passwordReadout} aria-live="polite"><span>One practice password</span><code>{selected.join("") || "—"}</code><strong>{selected.join("").length} characters</strong></div>
+      <p className={k.hint} aria-live="polite">{hint || (selected.length === 2 ? "Two familiar words, with numbers and symbols. No name or birthday." : "Try Mango! and Rocket482? to see them join. No spaces needed.")}</p>
+      <div className={k.actions}><button onClick={() => setSelected(value => value.slice(0, -1))} disabled={!selected.length || solved} type="button"><RotateCcw />Undo</button><button className={k.primary} disabled={selected.length !== 2} onClick={markSolved} type="button">Save Rohan’s practice password <ArrowRight /></button></div>
+      <small>For practice only. Ask a trusted adult to help make and safely save a different password for each real account.</small>
     </div>}
     {scene === 4 && <div className={k.panel}>
-      <h2>Two accounts. Two different keys.</h2>
-      <div className={r.account}><Gamepad2 /><div><strong>Game account</strong><span>Lantern · River · Cactus · Moon · Pebble</span></div><KeyRound /></div>
-      <div className={r.account}><School /><div><strong>School account</strong><span>Tiger · Copper · Garden · Maple · Rocket</span></div><KeyRound /></div>
+      <h2>Two accounts. Two different passwords.</h2>
+      <div className={r.account}><Gamepad2 /><div><strong>Game account · public example</strong><code>{(selected.length === 2 ? selected : pieces).join("")}</code></div><KeyRound /></div>
+      <div className={r.account}><School /><div><strong>School account · different public example</strong><code>{passwordExamples[1].join("")}</code></div><KeyRound /></div>
       <div className={r.extraCheck}><ShieldCheck /><div><strong>Two-step verification</strong><span>An extra sign-in check, set up with a trusted adult.</span></div><Check /></div>
       <small>These are teaching examples, never real passwords.</small>
     </div>}
@@ -61,8 +63,8 @@ const chapter: StoryChapter = {
   character: { asset: "boy-emotions", name: "Rohan" },
   interactionScene: 3,
   beginLabel: "Practise with Rohan",
-  waitingText: "Story paused. Build the secret to see what happens next.",
-  lockedHint: "Help Rohan build his new secret first.",
+  waitingText: "Story paused. Join two word tiles to help Rohan make his practice password.",
+  lockedHint: "Help Rohan join his two word tiles first.",
   World,
 };
 export default chapter;

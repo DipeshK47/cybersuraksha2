@@ -102,10 +102,10 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function pickEnd(code: string) { if (solved) return; setEnd(code); setRan(false); setHint(""); }
   function pickCond(option: (typeof conds)[number]) {
     if (solved) return;
-    if (option.trap) { setHint(option.trap); return; }
+    if (option.trap) { setHint(option.trap, false); return; }
     setCond(option.code); setRan(false); setHint("");
   }
-  function runTests() { setRan(true); setHint(results.every((got, i) => got === cases[i].want) ? "" : why(end, cond)); }
+  function runTests() { setRan(true); setHint(results.every((got, i) => got === cases[i].want) ? "" : why(end, cond), false); }
   function reset() { setEnd(BUGGY.end); setCond(BUGGY.cond); setRan(false); setHint(""); }
 
   const traceLine = !playing ? undefined : !at(.28) ? -1 : !at(.39) ? 0 : !at(.67) ? LOOP : COND;

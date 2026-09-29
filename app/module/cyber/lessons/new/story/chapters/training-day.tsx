@@ -1,8 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element -- small local photos in a Vite page; next/image does not apply here. */
 
-import { ArrowRight, BellOff, Bird, Cat, Check, CircleAlert, Heart, PawPrint, Plus, RotateCcw, ScanSearch, Squirrel, Users, X } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowRight, BellOff, Check, CircleAlert, Heart, PawPrint, Plus, RotateCcw, ScanSearch, Users, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -10,16 +9,16 @@ import script from "./training-day.json";
 import k from "../story-player.module.css";
 import r from "./training-day.module.css";
 
-const img = { golden: "/cyber-missions/dog-golden.jpg", indie: "/cyber-missions/dog-indie.jpg", pug: "/cyber-missions/dog-pug.jpg" };
+const img = { golden: "/cyber-missions/dog-golden.jpg", indie: "/cyber-missions/dog-indie.jpg", pug: "/cyber-missions/dog-pug.jpg", cat: "/cyber-missions/cat-training.jpg", crow: "/cyber-missions/crow-training.jpg", squirrel: "/cyber-missions/squirrel-training.jpg" };
 type Label = "dog" | "not";
-type Photo = { id: string; name: string; dog: boolean; src?: string; Icon?: LucideIcon };
+type Photo = { id: string; name: string; dog: boolean; src: string };
 const photos: Photo[] = [
   { id: "golden", name: "Golden retriever", dog: true, src: img.golden },
-  { id: "cat", name: "Cat", dog: false, Icon: Cat },
+  { id: "cat", name: "Cat", dog: false, src: img.cat },
   { id: "indie", name: "Indie dog", dog: true, src: img.indie },
-  { id: "crow", name: "Crow", dog: false, Icon: Bird },
+  { id: "crow", name: "Crow", dog: false, src: img.crow },
   { id: "pug", name: "Pugs", dog: true, src: img.pug },
-  { id: "squirrel", name: "Squirrel", dog: false, Icon: Squirrel },
+  { id: "squirrel", name: "Squirrel", dog: false, src: img.squirrel },
 ];
 // Three test dogs from the lane: each passes only if its kind was labelled Dog in the tray.
 const tests = [{ id: "golden", pet: "Bruno", src: img.golden }, { id: "indie", pet: "Kittu", src: img.indie }, { id: "pug", pet: "Chikoo", src: img.pug }];
@@ -41,16 +40,16 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     const falseDog = photos.find(p => !p.dog && labels[p.id] === "dog");
     const falseNot = photos.find(p => p.dog && labels[p.id] === "not");
     const missing = photos.filter(p => p.dog && labels[p.id] !== "dog");
-    if (falseDog) return setHint(`A ${falseDog.name.toLowerCase()} labelled Dog teaches the finder the wrong idea of a dog. Wrong labels teach wrong answers.`);
-    if (falseNot) return setHint(`${falseNot.name} labelled Not dog tells the finder they aren’t dogs. That’s a wrong label. Every dog needs the Dog label.`);
-    if (missing.length === 2 && labels.golden === "dog") return setHint("Kittu is still “not a dog”. You labelled only golden retrievers, so the finder still thinks dogs look golden and fluffy. Label the indie dog and the pugs too.");
-    if (missing.length) return setHint(`Still missing: ${missing.map(p => p.name.toLowerCase()).join(" and ")}. A kind of dog left out of the training data gets missed in the test.`);
-    if (photos.some(p => !labels[p.id])) return setHint("All dogs pass! Now label the cat, crow and squirrel as Not dog, so the finder also learns what isn’t a dog.");
+    if (falseDog) return setHint(`A ${falseDog.name.toLowerCase()} labelled Dog teaches the finder the wrong idea of a dog. Wrong labels teach wrong answers.`, false);
+    if (falseNot) return setHint(`${falseNot.name} labelled Not dog tells the finder they aren’t dogs. That’s a wrong label. Every dog needs the Dog label.`, false);
+    if (missing.length === 2 && labels.golden === "dog") return setHint("Kittu is still “not a dog”. You labelled only golden retrievers, so the finder still thinks dogs look golden and fluffy. Label the indie dog and the pugs too.", false);
+    if (missing.length) return setHint(`Still missing: ${missing.map(p => p.name.toLowerCase()).join(" and ")}. A kind of dog left out of the training data gets missed in the test.`, false);
+    if (photos.some(p => !labels[p.id])) return setHint("All dogs pass! Now label the cat, crow and squirrel as Not dog, so the finder also learns what isn’t a dog.", false);
     sent.current = true; setHint("");
     // Let the learner see the green test before the story moves on.
     window.setTimeout(markSolved, 1100);
   }
-  function addGoldens() { if (!solved) setHint("More of the same won’t help. The finder already knows golden retrievers. It needs different dogs, like indies and pugs."); }
+  function addGoldens() { if (!solved) setHint("More of the same won’t help. The finder already knows golden retrievers. It needs different dogs, like indies and pugs.", false); }
   function clear() { setLabels({}); setTested(null); setHint(""); }
 
   return <SceneSwap scene={scene} reduced={reduced}>
@@ -101,7 +100,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <h2>Fix the training data</h2>
       <div className={r.tray} role="group" aria-label="Training photos">
         {photos.map(p => <div className={r.card} key={p.id} data-label={(solved ? (p.dog ? "dog" : "not") : labels[p.id]) ?? "none"}>
-          <div className={r.thumb} data-kind={p.id}>{p.src ? <img src={p.src} alt={p.name} /> : p.Icon && <p.Icon role="img" aria-label={p.name} />}</div>
+          <div className={r.thumb} data-kind={p.id}><img src={p.src} alt={p.name} /></div>
           <strong>{p.name}</strong>
           <div className={r.toggle} role="group" aria-label={`Label for ${p.name}`}>
             {(["dog", "not"] as const).map(value => { const on = solved ? (value === "dog") === p.dog : labels[p.id] === value; return <button key={value} aria-label={`Mark ${p.name} as ${value === "dog" ? "Dog" : "Not dog"}`} aria-pressed={on} disabled={solved} onClick={() => label(p.id, value)} type="button">{value === "dog" ? <Check aria-hidden="true" /> : <X aria-hidden="true" />}{value === "dog" ? "Dog" : "Not dog"}</button>; })}
@@ -143,6 +142,6 @@ const chapter: StoryChapter = {
   waitingText: "Story paused. Fix the training data to see what happens next.",
   lockedHint: "Help Tara fix the training data first.",
   World,
-  credits: <p>Dog photos from Wikimedia Commons: “<a href="https://commons.wikimedia.org/wiki/File:GoldenRetriever.jpg" target="_blank" rel="noreferrer">GoldenRetriever.jpg</a>” by Ltshears (public domain), “<a href="https://commons.wikimedia.org/wiki/File:An_Indian_Pariah_Dog.jpg" target="_blank" rel="noreferrer">An Indian Pariah Dog</a>” by Amogh Tripathi (CC0 1.0), “<a href="https://commons.wikimedia.org/wiki/File:Pugs.JPG" target="_blank" rel="noreferrer">Pugs.JPG</a>” by Pugman (public domain).</p>,
+  credits: <p>Animal photos from Wikimedia Commons: “<a href="https://commons.wikimedia.org/wiki/File:GoldenRetriever.jpg" target="_blank" rel="noreferrer">GoldenRetriever.jpg</a>” by Ltshears (public domain), “<a href="https://commons.wikimedia.org/wiki/File:An_Indian_Pariah_Dog.jpg" target="_blank" rel="noreferrer">An Indian Pariah Dog</a>” by Amogh Tripathi (CC0 1.0), “<a href="https://commons.wikimedia.org/wiki/File:Pugs.JPG" target="_blank" rel="noreferrer">Pugs.JPG</a>” by Pugman (public domain), “<a href="https://commons.wikimedia.org/wiki/File:Closeup_photo_of_a_cat.jpg" target="_blank" rel="noreferrer">Closeup photo of a cat</a>” by RobotBlanket (CC0 1.0), “<a href="https://commons.wikimedia.org/wiki/File:Indian_Crow.jpg" target="_blank" rel="noreferrer">Indian Crow</a>” by Priyanka Bansal (public domain), and “<a href="https://commons.wikimedia.org/wiki/File:Squirrel_closeup.JPG" target="_blank" rel="noreferrer">Squirrel closeup</a>” by Njose (CC0 1.0).</p>,
 };
 export default chapter;

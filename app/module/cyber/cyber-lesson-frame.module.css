@@ -36,6 +36,11 @@
   transform: translateY(0);
 }
 
+.skipLink:not(:focus) {
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+
 .topbar {
   min-height: 76px;
   padding: 12px clamp(14px, 3vw, 36px);

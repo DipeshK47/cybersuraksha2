@@ -4,7 +4,7 @@
 .golden{background-image:url('/cyber-missions/dog-golden.jpg');background-position:center 35%}
 .indie{background-image:url('/cyber-missions/dog-indie.jpg');background-position:center 30%}
 .cam{position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:5px;background:#0d1d2cc9;color:#f4f1e6;font-family:var(--font-mono),monospace;font-size:.6rem;font-weight:700;letter-spacing:.06em}
-.cam i{width:7px;height:7px;border-radius:50%;background:#ff6b5a;animation:rec 1.6s ease-in-out infinite}
+.cam i{width:7px;height:7px;border-radius:50%;background:#ff6b5a;animation:rec 1.6s ease-in-out infinite;animation-play-state:var(--story-loop-state,running)}
 /* Detection box: green = recognised, dashed orange = missed. */
 .box{position:absolute;inset:26% 17% 9% 20%;border:3px solid #7ee0a0;border-radius:8px;box-shadow:0 0 0 999px #0b18240f;animation:boxIn .28s var(--ease)}
 .box[data-miss]{border-style:dashed;border-color:#ffa47f}
@@ -64,10 +64,8 @@
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .thumb[data-kind="golden"] img{object-position:center 45%}
 .thumb[data-kind="indie"] img{object-position:center 36%}
-.thumb[data-kind="cat"]{background:#f1dfc6;color:#8c5a2f}
-.thumb[data-kind="crow"]{background:#dfe5ee;color:#34465c}
-.thumb[data-kind="squirrel"]{background:#eadfd2;color:#7a4f33}
-.thumb svg{width:40px;height:40px;stroke-width:1.7}
+.thumb[data-kind="crow"] img{object-position:center top}
+.thumb[data-kind="squirrel"] img{object-position:center 38%}
 .card>strong{padding:0 2px;font-size:.72rem}
 .toggle{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 .toggle button{display:flex;align-items:center;justify-content:center;gap:3px;min-height:40px;padding:4px 2px;border:1px solid #c8d5bd;border-radius:7px;background:#faf8ef;color:#345447;font-size:.68rem;white-space:nowrap}

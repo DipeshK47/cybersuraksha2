@@ -41,11 +41,11 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   }
   function check() {
     if (solved) return;
-    if (flags.length === headers.length) { setHint("Flagging every line isn’t inspecting. Flag only the lines that don’t fit the school, then check."); return; }
+    if (flags.length === headers.length) { setHint("Flagging every line isn’t inspecting. Flag only the lines that don’t fit the school, then check.", false); return; }
     const ordinary = headers.find(line => !line.bad && flags.includes(line.field));
-    if (ordinary) { setHint(`${ordinary.field}: ${ordinary.why} Unflag it and look again.`); return; }
+    if (ordinary) { setHint(`${ordinary.field}: ${ordinary.why} Unflag it and look again.`, false); return; }
     const missing = headers.filter(line => line.bad && !flags.includes(line.field));
-    if (missing.length) { setHint(`${badCount - missing.length} of ${badCount} found. ${missing[0].clue}`); return; }
+    if (missing.length) { setHint(`${badCount - missing.length} of ${badCount} found. ${missing[0].clue}`, false); return; }
     markSolved();
   }
   const shown = solved ? headers.filter(line => line.bad).map(line => line.field) : flags;
@@ -106,7 +106,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <div className={e.taskFoot}>
         <p className={`${k.hint} ${e.tip}`} aria-live="polite">{solved ? "Four clues point the same way. Now check with the school directly." : hint || (flags.length ? `${flags.length} line${flags.length === 1 ? "" : "s"} flagged. Check when you’re sure.` : "Tap every line that doesn’t match the school. Tap again to unflag.")}</p>
         {!solved && <div className={k.actions}>
-          <button className={e.trap} data-trap="true" disabled={solved} onClick={() => setHint("A display name is a label anyone can type. Check the address in the angle brackets: it isn’t cyberpurschool.example.")} type="button"><BadgeCheck />It’s real: the name says Scholarship Office</button>
+          <button className={e.trap} data-trap="true" disabled={solved} onClick={() => setHint("A display name is a label anyone can type. Check the address in the angle brackets: it isn’t cyberpurschool.example.", false)} type="button"><BadgeCheck />It’s real: the name says Scholarship Office</button>
           <button className={k.primary} disabled={solved || !flags.length} onClick={check} type="button">Check my flags <ArrowRight /></button>
         </div>}
       </div>

@@ -24,23 +24,6 @@
   color-scheme: light;
 }
 
-html[data-theme="dark"] {
-  --sl-canvas: #101411;
-  --sl-surface: #1c221e;
-  --sl-surface-soft: #252d28;
-  --sl-ink: #f7f4e8;
-  --sl-muted: #b2bcb5;
-  --sl-line: #e8e4d7;
-  --sl-yellow: #f2d36b;
-  --sl-indigo: #8c90ff;
-  --sl-lime: #bceb63;
-  --sl-coral: #ff8a72;
-  --sl-mint: #79aa99;
-  --sl-sky: #7fcce9;
-  --sl-shadow: #020403;
-  color-scheme: dark;
-}
-
 html {
   background: var(--sl-canvas);
 }
@@ -75,48 +58,6 @@ button {
 :where(a, button, input, select, textarea):focus-visible {
   outline: 3px solid var(--sl-indigo) !important;
   outline-offset: 3px !important;
-}
-
-.themeToggle {
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
-  padding: 0;
-  border: 2px solid var(--sl-line);
-  color: #171e19;
-  background: var(--sl-yellow);
-  border-radius: 50%;
-  box-shadow: var(--sl-shadow-sm);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition:
-    transform 140ms ease,
-    box-shadow 140ms ease;
-}
-
-.themeToggle:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 6px 6px 0 var(--sl-shadow);
-}
-
-.themeToggle:active {
-  transform: translate(3px, 3px);
-  box-shadow: 1px 1px 0 var(--sl-shadow);
-}
-
-.themeToggle svg {
-  width: 19px;
-  height: 19px;
-}
-
-.themeToggleDark,
-html[data-theme="dark"] .themeToggleLight {
-  display: none;
-}
-
-html[data-theme="dark"] .themeToggleDark {
-  display: inline-grid;
 }
 
 .pillButton,
@@ -2748,12 +2689,6 @@ html[data-theme="dark"] .themeToggleDark {
 }
 
 @media (max-width: 760px) {
-  .themeToggle {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-  }
-
   .landingShell,
   .dashboardWrap,
   .dashboardFoot,
@@ -3450,6 +3385,7 @@ html[data-theme="dark"] .themeToggleDark {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    animation-delay: 0ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -3457,8 +3393,7 @@ html[data-theme="dark"] .themeToggleDark {
 }
 
 @media print {
-  :root,
-  html[data-theme="dark"] {
+  :root {
     --sl-canvas: #fffdf5;
     --sl-surface: #ffffff;
     --sl-surface-soft: #f6f2e6;
@@ -3469,7 +3404,6 @@ html[data-theme="dark"] .themeToggleDark {
     color-scheme: light;
   }
 
-  .themeToggle,
   .surakshaGuide,
   .teacherHeader,
   .studentReportNav,
@@ -3700,10 +3634,31 @@ body:has([data-password-explainer]) .surakshaGuide:not(.surakshaGuideOpen) {
   display: none;
 }
 
-/* On phones the story chapter fills the width, so the floating launcher would
-   sit on its task buttons. It comes back once the learner moves on to practice. */
+/* These illustrated chapters reserve a place below the lesson for the Guide. */
+body:has([data-new-mission], [data-story-player="teach-pet-machine"], [data-story-player="step-by-step-morning"], [data-story-player="nanis-secret-code"], [data-story-player="password-vault"], [data-story-player="garbage-in-garbage-out"]) .surakshaGuide:not(.surakshaGuideInline) {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: min(1240px, calc(100% - 28px));
+  margin: 18px auto;
+}
+
+/* Keep the floating launcher off mobile story and practice controls. */
 @media (max-width: 600px) {
-  body:has([data-story-player]) .surakshaGuide:not(.surakshaGuideOpen) {
+  body:has([data-story-player], [data-new-mission]) .surakshaGuide:not(.surakshaGuideOpen) {
     display: none;
   }
+}
+
+/* Keep the closed Guide below portal content so it cannot cover grades or forms. */
+body:has(.teacherPage, .dashboardPage) .surakshaGuide:not(.surakshaGuideOpen):not(.surakshaGuideInline) {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: min(1240px, calc(100% - 28px));
+  margin: 18px auto;
 }

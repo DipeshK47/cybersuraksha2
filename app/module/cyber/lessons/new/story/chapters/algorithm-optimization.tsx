@@ -77,12 +77,12 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     const g = guess[active]; if (solved || !g || runs[active]) return;
     const counts = { bubble: bubbleCount(lists[active].data), merge: mergeCount(lists[active].data) };
     setRuns(r => r.map((v, i) => i === active ? counts : v));
-    setHint(counts[g] < counts[other(g)] ? "" : lists[active].wrong);
+    setHint(counts[g] < counts[other(g)] ? "" : lists[active].wrong, false);
   }
   function decide(id: string) {
     if (solved || raced < 3) return;
     setPicked(id);
-    if (id === "right") { setHint(""); markSolved(); } else setHint(finals.find(f => f.id === id)?.hint ?? "");
+    if (id === "right") { setHint(""); markSolved(); } else setHint(finals.find(f => f.id === id)?.hint ?? "", false);
   }
 
   const current = results[active];

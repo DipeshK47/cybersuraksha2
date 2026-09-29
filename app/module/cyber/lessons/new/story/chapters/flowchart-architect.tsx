@@ -105,7 +105,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function place(id: BlockId) {
     if (solved || placed.includes(id) || placed.length === 4) return;
     const slot = placed.length;
-    if (id !== answer[slot]) { setHint(why[slot][id] ?? "Not here. Does this spot need a question, an action or an ending?"); return; }
+    if (id !== answer[slot]) { setHint(why[slot][id] ?? "Not here. Does this spot need a question, an action or an ending?", false); return; }
     setPlaced(value => [...value, id]); setHint(""); keepFocus();
   }
   function drop(event: DragEvent) {

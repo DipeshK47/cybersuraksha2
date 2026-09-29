@@ -316,7 +316,7 @@ export function HandbookChatbot({
             ) : null}
           </div>
 
-          <form className="surakshaGuideComposer" onSubmit={askQuestion}>
+          <form className="surakshaGuideComposer" method="post" onSubmit={askQuestion}>
             <input
               aria-label="Ask Suraksha Guide"
               maxLength={800}

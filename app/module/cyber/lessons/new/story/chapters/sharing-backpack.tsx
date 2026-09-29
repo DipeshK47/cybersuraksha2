@@ -30,23 +30,10 @@ const profile = [
   { label: "Profile photo", value: "Selfie ready to upload", icon: Camera },
 ];
 
-/** Rohan's crayon tiger, drawn in SVG so no image asset is needed. */
+/** Rohan's tiger drawing is also his club avatar. */
 function Tiger({ label }: { label?: string }) {
-  return <svg viewBox="0 0 120 100" role={label ? "img" : undefined} aria-label={label} aria-hidden={label ? undefined : true}>
-    <rect x="3" y="3" width="114" height="94" rx="6" fill="#fffaf0" />
-    <circle cx="97" cy="18" r="8" fill="#ffd166" />
-    <path d="M8 89c10-5 18 4 28-1s18 4 28-1 18 4 28-1 14 3 20 0" fill="none" stroke="#7fb069" strokeWidth="4" strokeLinecap="round" />
-    <g stroke="#6b3410" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="38" cy="27" r="11" fill="#f08a24" /><circle cx="82" cy="27" r="11" fill="#f08a24" />
-      <circle cx="38" cy="26" r="5" fill="#ffd9a8" stroke="none" /><circle cx="82" cy="26" r="5" fill="#ffd9a8" stroke="none" />
-      <ellipse cx="60" cy="53" rx="35" ry="30" fill="#f59a30" />
-      <ellipse cx="60" cy="65" rx="15" ry="10" fill="#fff3df" />
-      <path d="M60 25v10M49 27l3 8M71 27l-3 8M26 49h10M27 58h9M94 49H84M93 58h-9" stroke="#3b2416" strokeWidth="3.5" />
-      <path d="M55 61h10l-5 5z" fill="#3b2416" />
-      <path d="M60 66q-4 6-9 3M60 66q4 6 9 3" fill="none" />
-    </g>
-    <circle cx="47" cy="48" r="4" fill="#2b2118" /><circle cx="73" cy="48" r="4" fill="#2b2118" />
-  </svg>;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img className={r.tigerArt} src="/cyber-missions/refined/tiger-drawing.webp" width={750} height={750} alt={label ?? ""} />;
 }
 
 /** Rohan's public club page: the risky preview (scene 2) or the saved, safer page (scene 6). */
@@ -91,7 +78,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     const item = items.find(x => x.name === name);
     if (solved || !item || placed[name]) return;
     setActive("");
-    if (item.bag !== bag) { setHint(item.no); return; }
+    if (item.bag !== bag) { setHint(item.no, false); return; }
     const next = { ...placed, [name]: bag };
     setPlaced(next);
     setHint(items.every(x => next[x.name]) ? "" : item.yes);

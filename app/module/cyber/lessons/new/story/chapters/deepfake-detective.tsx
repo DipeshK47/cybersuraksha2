@@ -31,36 +31,17 @@ const tags: { id: Clue | "shake"; label: string; icon: LucideIcon; found: string
 ];
 const time = (i: number) => `0:0${i}`;
 
-/** One frame of the pretend clip, drawn in code over the fair backdrop (no real face or footage). */
+/** Six fictional illustrated frames. The learner still inspects each original clue. */
 function ClipFrame({ f, ring }: { f: number; ring?: boolean }) {
   const fr = frames[f];
-  const skin = "#c98e62", ink = "#1d1411";
   return <svg className={d.frameArt} viewBox="0 0 160 90" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
     <g transform={fr.shake ? "translate(80 45) rotate(-4) scale(1.1) translate(-80 -45)" : undefined}>
       <image href="/cyber-missions/fairground-vault.jpg" width="160" height="90" preserveAspectRatio="xMidYMid slice" />
-      <rect width="160" height="90" fill="#0f1d33" opacity=".38" />
-      <circle cx="13" cy="61" r="26" fill="#ffc86b" opacity=".1" /><circle cx="13" cy="61" r="15" fill="#ffc86b" opacity=".16" /><circle cx="13" cy="61" r="6" fill="#ffe2a6" opacity=".55" />
-      <g transform="translate(80 45) scale(1.15) translate(-80 -45)">
-      {fr.shake && <ellipse cx="83" cy="40" rx="16" ry="19" fill={skin} opacity=".3" />}
-      <path d="M42 90C44 73 57 66 80 66s36 7 38 24Z" fill="#1f6f6a" />
-      <path d="M71 66l9 8 9-8" fill="none" stroke="#bfe3d4" strokeWidth="1.4" />
-      <rect x="93" y="75" width="12" height="7" rx="1.5" fill="#f3cf6a" />
-      <rect x="74" y="55" width="12" height="13" fill="#b27a50" />
-      <ellipse cx="64.5" cy="42" rx="2.6" ry="4" fill={skin} /><ellipse cx="95.5" cy="42" rx="2.6" ry="4" fill={skin} />
-      <ellipse cx="80" cy="40" rx="16" ry="19" fill={skin} />
-      {/* Light comes from the lantern on the left, so the shadow belongs on the right cheek. */}
-      <path d={fr.wrongShadow ? "M80 21A16 19 0 0 0 80 59Z" : "M80 21A16 19 0 0 1 80 59Z"} fill="#3a160a" opacity=".34" />
-      <path d="M63.5 37C62 22 72 17.5 81 17.5c10 0 17 6 15.5 19.5C93 29 87 26.5 80 27c-8 0-13 3.5-16.5 10Z" fill="#2b1d18" />
-      <path d="M70.5 35.2q3.5-1.6 7 0M82.5 35.2q3.5-1.6 7 0" fill="none" stroke="#2b1d18" strokeWidth="1.2" strokeLinecap="round" />
-      {fr.oddBlink ? <path d="M71.6 40.4q2.4 1.7 4.8 0" fill="none" stroke={ink} strokeWidth="1.1" strokeLinecap="round" /> : <><ellipse cx="74" cy="40" rx="1.9" ry="2.4" fill={ink} /><circle cx="74.6" cy="39.3" r=".6" fill="#fff" /></>}
-      <ellipse cx="86" cy="40" rx="1.9" ry={fr.oddBlink ? 2.9 : 2.4} fill={ink} /><circle cx="86.6" cy="39.3" r=".6" fill="#fff" />
-      <path d="M80 41q-1.6 4.6.6 5.2" fill="none" stroke="#9a5f3a" strokeWidth=".9" strokeLinecap="round" />
-      {fr.shutMouth ? <path d="M76 51.2q4 1 8 0" fill="none" stroke="#5b2130" strokeWidth="1.3" strokeLinecap="round" /> : <><ellipse cx="80" cy="51.2" rx="3.6" ry="2.4" fill="#5b2130" /><ellipse cx="80" cy="52.4" rx="2" ry=".9" fill="#c4606b" /></>}
-      {ring && fr.oddBlink && <ellipse className={d.ring} cx="80" cy="40" rx="12" ry="6" />}
-      {ring && fr.shutMouth && <ellipse className={d.ring} cx="80" cy="51.2" rx="7.5" ry="4.8" />}
-      {ring && fr.wrongShadow && <ellipse className={d.ring} cx="72" cy="40" rx="10" ry="20" />}
-      </g>
-      {ring && fr.wrongShadow && <circle className={d.ring} cx="13" cy="61" r="9" />}
+      <rect width="160" height="90" fill="#0f1d33" opacity=".35" />
+      <image href={`/cyber-missions/refined/fair-frame-${fr.shake ? 0 : f}.webp`} x="35" width="90" height="90" />
+      {ring && fr.oddBlink && <ellipse className={d.ring} cx="80" cy="38" rx="18" ry="7" />}
+      {ring && fr.shutMouth && <ellipse className={d.ring} cx="81" cy="55" rx="11" ry="5" />}
+      {ring && fr.wrongShadow && <><ellipse className={d.ring} cx="69" cy="45" rx="12" ry="22" /><ellipse className={d.ring} cx="40" cy="42" rx="6" ry="14" /></>}
     </g>
   </svg>;
 }
@@ -86,9 +67,9 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function tag(spec: (typeof tags)[number]) {
     if (solved) return;
     const t = time(frame);
-    if (spec.id === "shake") { setHint("A shaky camera happens in lots of real phone videos, so it isn’t an AI artefact. Look at the eyes, lips and light instead."); return; }
+    if (spec.id === "shake") { setHint("A shaky camera happens in lots of real phone videos, so it isn’t an AI artefact. Look at the eyes, lips and light instead.", false); return; }
     if (found.includes(frame)) { setHint(`${t} is already tagged. Scrub to another frame.`); return; }
-    if (clueAt[frame] !== spec.id) { setHint(clueAt[frame] ? `Look again: something else is off at ${t}.` : `At ${t}, ${spec.missing}. Check the other frames.`); return; }
+    if (clueAt[frame] !== spec.id) { setHint(clueAt[frame] ? `Look again: something else is off at ${t}.` : `At ${t}, ${spec.missing}. Check the other frames.`, false); return; }
     const next = [...found, frame];
     setFound(next);
     setHint(next.length === 3 ? "" : `Clue at ${t}: ${spec.found}. ${3 - next.length} more to find.`);
@@ -150,7 +131,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
           <div className={k.bank}>{tags.map(item => <button key={item.id} type="button" onClick={() => tag(item)} disabled={solved} aria-pressed={found.some(f => clueAt[f] === item.id)}><item.icon aria-hidden="true" />{item.label}</button>)}</div>
           <p className={k.hint} aria-live="polite">{hint || (solved ? "Done: three clues tagged and the official channel checked." : found.length === 3 ? "Three clues found. Clues aren’t proof, though. Check the official channel." : "Clues are glitches AI editing can leave. Not every odd thing is one.")}</p>
           <div className={k.actions}>
-            <button className={d.trap} type="button" disabled={solved} onClick={() => setHint("Looking real isn’t proof. Good fakes can look real, and forwarding spreads a rumour in minutes. Tag the clues, then check the official channel.")}><Forward />Looks real, forward it</button>
+            <button className={d.trap} type="button" disabled={solved} onClick={() => setHint("Looking real isn’t proof. Good fakes can look real, and forwarding spreads a rumour in minutes. Tag the clues, then check the official channel.", false)}><Forward />Looks real, forward it</button>
             {solved ? <span className={d.checked}><BadgeCheck /> Official channel checked</span> : <button className={k.primary} type="button" disabled={found.length !== 3} onClick={markSolved}>Check the official channel <ArrowRight /></button>}
           </div>
         </div>

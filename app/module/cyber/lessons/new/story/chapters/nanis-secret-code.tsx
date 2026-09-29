@@ -31,7 +31,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   function readCode() {
     if (ended) return;
-    setHint("Wait! That code is a key to Nani’s bank account. Real helpers never ask for it. Tap the shield instead.");
+    setHint("Wait! That code is a key to Nani’s bank account. Real helpers never ask for it. Tap the shield instead.", false);
   }
   function block() {
     if (ended) return;
@@ -39,12 +39,12 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   }
   function tellMum() {
     if (solved) return;
-    if (!ended) { setHint("End the call first, so the caller can’t listen. Tap the big shield."); return; }
+    if (!ended) { setHint("End the call first, so the caller can’t listen. Tap the big shield.", false); return; }
     setHint(""); markSolved();
   }
 
   return <SceneSwap scene={scene} reduced={reduced}>
-    {(scene === 0 || scene === 5) && <div className={k.device}>
+    {(scene === 0 || scene === 5) && <div className={`${k.device} ${r.homeDevice}`}>
       <div className={k.deviceBar}><span><House size={16} /> NANI’S HOUSE</span><span>{scene === 0 ? "Sunday evening" : "All safe"}</span></div>
       <div className={`${k.deviceArt} ${r.desk}`}>
         <div className={k.badge}><Trophy /> Carrom: Nani {scene === 0 ? 3 : 4} · Rohan 1</div>
@@ -65,6 +65,8 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     {scene === 1 && <div className={k.device}>
       <div className={k.deviceBar}><span><Smartphone size={16} /> NANI’S PHONE</span><span>Pretend call</span></div>
       <div className={r.callBody}>
+        <div className={r.familyCallArt} aria-hidden="true" />
+        <div className={r.phoneUi}>
         <div className={r.smsBanner}><MessageSquareText aria-hidden="true" /><span><small>Cyberpur Bank · 1 min ago</small><Sms /></span></div>
         <Caller ended={false} />
         <div className={r.bubbles}>
@@ -72,30 +74,44 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
           <p className={r.nani} {...on(.58)}><span className={r.avatar}>N</span>“Oh! Let me find my glasses…”</p>
         </div>
         <div className={r.callKeys} aria-hidden="true"><span><MicOff /></span><span><Grid3x3 /></span><span><Volume2 /></span><span data-end="true"><PhoneOff /></span></div>
+        </div>
       </div>
       <div className={k.deviceFoot}><TriangleAlert /><span>The caller wants Nani’s secret code.</span><small>Example only</small></div>
     </div>}
 
-    {scene === 2 && <div className={k.panel}>
+    {scene === 2 && <div className={`${k.device} ${r.lesson}`}>
+      <div className={r.rememberArt} aria-hidden="true" />
+      <div className={r.lessonBoard}>
       <div className={r.quote}><span>Rohan’s teacher</span><p>“Secret codes stay secret.”</p></div>
       <h2>Why Rohan says “Wait!”</h2>
+      <div className={r.keyExplanation}>
+      <div className={r.keyArt} aria-hidden="true" />
+      <div>
       <div className={k.step} data-active={cue(.15)}><span><KeyRound /></span>A code on a phone works like a key.</div>
       <div className={k.step} data-active={cue(.45)}><span><ShieldBan /></span>Real parcel companies, banks and offices never ask for it.</div>
       <div className={r.smsCard} data-on={cue(.76)}>
         <small><MessageSquareText aria-hidden="true" /> Cyberpur Bank · Message</small>
         <Sms highlight={cue(.76)} />
       </div>
+      </div>
+      </div>
       <small>Example message. The code is pretend.</small>
+      </div>
     </div>}
 
-    {scene === 3 && <div className={k.panel}>
+    {scene === 3 && <div className={`${k.device} ${r.task}`}>
+      <div className={r.taskIntro}>
       <h2>Keep Nani’s code secret</h2>
       <p>Tap the big shield to end the call. Then tell Mum.</p>
+      </div>
+      <div className={r.callScene} data-ended={ended} data-solved={solved}>
+      <div className={r.familyCallArt} aria-hidden="true" />
       <div className={r.miniCall} data-ended={ended}>
         <Caller ended={ended} />
         {!ended && <p className={r.them}>“Quick, Nani! Read me the six numbers!”</p>}
         {ended && !solved && <p className={`${r.quiet} ${k.fitIn}`}><ShieldCheck aria-hidden="true" />The line is quiet. The code stayed on Nani’s phone.</p>}
         {solved && <p className={`${r.mum} ${k.fitIn}`}><span className={r.avatar} data-mum="true">M</span>“Thank you for telling me! Let’s check Nani’s bank app together.”</p>}
+      </div>
       </div>
       <div className={r.controls}>
         <button className={r.readCode} data-trap="true" onClick={readCode} disabled={ended} type="button"><MessageSquareText aria-hidden="true" />Read the code</button>
@@ -105,17 +121,20 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
         </button>
         <button className={r.tellMum} data-ready={ended && !solved} onClick={tellMum} disabled={solved} type="button"><UsersRound aria-hidden="true" />{solved ? "Mum knows" : "Tell Mum"}</button>
       </div>
-      <p className={k.hint} aria-live="polite">{hint || (solved ? "Done! The code stayed secret, and Mum knows what happened." : ended ? "Call blocked! Now tell Mum what happened." : "The caller sounds kind. But he wants Nani’s secret code.")}</p>
+      <p className={`${k.hint} ${r.taskFeedback}`} aria-live="polite">{hint || (solved ? "Done! The code stayed secret, and Mum knows what happened." : ended ? "Call blocked! Now tell Mum what happened." : "The caller sounds kind. But he wants Nani’s secret code.")}</p>
       <small>Pretend call for practice. The code and number are examples.</small>
     </div>}
 
-    {scene === 4 && <div className={k.panel}>
+    {scene === 4 && <div className={`${k.device} ${r.lesson}`}>
+      <div className={r.reassureArt} aria-hidden="true" />
+      <div className={r.lessonBoard}>
       <div className={r.quote}><span>Mum</span><p>“You both did the right thing.”</p></div>
       <h2>Secret numbers stay private</h2>
       <div className={r.secret} {...on(.12)}><Hash aria-hidden="true" /><div><strong>OTP · one-time password</strong><span>The code that comes in a message.</span></div><LockKeyhole aria-hidden="true" /></div>
       <div className={r.secret} {...on(.32)}><KeyRound aria-hidden="true" /><div><strong>PIN · secret number</strong><span>For bank cards and payments.</span></div><LockKeyhole aria-hidden="true" /></div>
       <div className={r.rule} {...on(.64)}><PhoneOff aria-hidden="true" /><div><strong>Call feels wrong? Hang up.</strong><span>Tell a grown-up. They can call the number printed on the card.</span></div></div>
       <small>For grown-ups: no real bank, courier or office asks for an OTP or PIN. If money is ever lost, call 1930 quickly or report at cybercrime.gov.in.</small>
+      </div>
     </div>}
   </SceneSwap>;
 }

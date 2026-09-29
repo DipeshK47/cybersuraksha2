@@ -133,7 +133,7 @@ export default function RosterPage() {
 
         <section className="teacherPanel addStudentsPanel">
           <h2>Add students</h2>
-          <form onSubmit={createAccounts}>
+          <form method="post" onSubmit={createAccounts}>
             <label htmlFor="class-name">Class name (e.g. 7B)</label>
             <input id="class-name" name="className" required />
             <label htmlFor="student-lines">One student per line: roll number, name</label>

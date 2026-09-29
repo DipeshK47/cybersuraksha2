@@ -7,7 +7,6 @@ import {
   IndianRupee,
   ShieldCheck,
 } from "lucide-react";
-import { ThemeToggle } from "../../components/ThemeToggle";
 import {
   chapterCount,
   getGradeCurriculum,
@@ -108,7 +107,6 @@ export default async function GradePage({
         <div>
           <span>CyberSuraksha · Class {grade.grade}</span>
           <Link href="/logout">Log out</Link>
-          <ThemeToggle />
         </div>
       </header>
 

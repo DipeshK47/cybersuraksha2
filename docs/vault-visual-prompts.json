@@ -1,0 +1,81 @@
+{
+  "chapter": "password-vault",
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "path": "public/cyber-missions/refined/vault-props-atlas.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-9418-7db2-9455-2f32f5ec6bc6/exec-f2a47ebb-86da-424a-8c2c-d598a7bdfe19.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent sprite atlas for a premium children's cyber safety interactive lesson, matching a softly hand-painted 3D storybook style. Create SIX separate collectible miniature objects, evenly spaced in a strict 3 column by 2 row atlas. Each sprite entirely contained in its own cell, plenty of transparent padding, no touching, NO text, NO letters, NO UI. Transparent background. Top left: tall rounded amber wooden GAME ACCOUNT DOOR with brass keyhole, small controller emblem, delicate green ivy, standing on a tiny stone doorstep. Top middle: tall rounded teal SCHOOL ACCOUNT DOOR with brass keyhole, small academic cap emblem, books at base and tiny school lintel. Top right: tall rounded dusty lavender EMAIL ACCOUNT DOOR with brass keyhole, small white envelope emblem, brass mailbox and tiny doorstep. All three doors front-facing with subtle three-quarter depth, strong charming silhouettes, each looks like a tangible miniature toy door, same size. Bottom left: chunky dark teal PASSWORD VAULT, brass wheel and lock, warm amber trim, slightly open with three colorful antique keys neatly inside. Bottom middle: cream PAPER PASSWORD NOTEBOOK closed with a tan leather strap and brass clasp, resting at a gentle angle on a small wood tray, no writing. Bottom right: teal PHONE showing a large shield and checkmark, three small circular code dots, supported on a little desk stand, no writing. Soft highlights, painted material texture, warm storybook lighting, accurate clean details, crisp readable at small sizes, detailed real miniature object art, no abstract rectangles, no characters, no shadows extending across cells. Output square atlas.",
+      "layout": {
+        "columns": 3,
+        "rows": 2,
+        "items": [
+          "Game account door",
+          "School account door",
+          "Email account door",
+          "Password vault",
+          "Paper list notebook",
+          "Two-step phone"
+        ]
+      },
+      "transparent": true,
+      "derivatives": [
+        {
+          "path": "public/cyber-missions/refined/vault-game-door.webp",
+          "crop": [
+            0,
+            0,
+            416,
+            624
+          ]
+        },
+        {
+          "path": "public/cyber-missions/refined/vault-school-door.webp",
+          "crop": [
+            418,
+            0,
+            418,
+            624
+          ]
+        },
+        {
+          "path": "public/cyber-missions/refined/vault-email-door.webp",
+          "crop": [
+            836,
+            0,
+            418,
+            624
+          ]
+        },
+        {
+          "path": "public/cyber-missions/refined/vault-safe.webp",
+          "crop": [
+            0,
+            640,
+            456,
+            614
+          ]
+        },
+        {
+          "path": "public/cyber-missions/refined/vault-notebook.webp",
+          "crop": [
+            456,
+            640,
+            410,
+            614
+          ]
+        },
+        {
+          "path": "public/cyber-missions/refined/vault-phone.webp",
+          "crop": [
+            866,
+            640,
+            388,
+            614
+          ]
+        }
+      ],
+      "packaging": "Native cwebp crops, original transparent artwork preserved; individual sprites prevent adjacent atlas props from bleeding at small sizes."
+    }
+  ]
+}

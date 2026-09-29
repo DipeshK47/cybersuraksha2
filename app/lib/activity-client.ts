@@ -1,73 +1,59 @@
 "use client";
-
 import { useCallback, useEffect, useRef } from "react";
 
-/**
- * Client-side activity emitter used by the interactive modules.
- *
- * Events are queued and flushed as a small debounced batch to POST /api/activity
- * (which binds them to the verified student session server-side). Pending
- * events are flushed on unmount and on pagehide via `keepalive` so a student
- * navigating away does not lose their last actions.
- *
- * Emission is a no-op unless `enabled` (i.e. a real student, not teacher
- * preview) — teacher previews have no student session and must not record data.
- */
+export type ActivityEventInput = { moduleId: string; type: string; payload?: unknown; attemptKey: string; eventId: string };
 
-export type ActivityEventInput = {
-  moduleId: string;
-  type: string;
-  payload?: unknown;
-};
-
-const FLUSH_DELAY_MS = 800;
-
-export function useActivityEmitter(moduleId: string, enabled: boolean) {
+/** A durable, idempotent outbox shared by all existing interactive modules. */
+export function useActivityEmitter(moduleId: string, enabled: boolean, studentScope = "session") {
   const queue = useRef<ActivityEventInput[]>([]);
-  const timer = useRef<number | null>(null);
-
-  const flush = useCallback(() => {
-    if (timer.current) {
-      window.clearTimeout(timer.current);
-      timer.current = null;
-    }
-    if (queue.current.length === 0) return;
-    const events = queue.current.splice(0, queue.current.length);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sending = useRef<Promise<void> | null>(null);
+  const key = useRef("");
+  const loaded = useRef(false);
+  const storage = `cyber-activity-${studentScope}-${moduleId}`;
+  const initialize = useCallback(() => {
+    if (loaded.current) return;
+    loaded.current = true;
     try {
-      void fetch("/api/activity", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ events }),
-        keepalive: true,
-      }).catch(() => {
-        // Best-effort: activity loss must never interrupt the lesson.
-      });
-    } catch {
-      // Ignore — some browsers reject keepalive on large bodies, etc.
-    }
-  }, []);
-
-  const emit = useCallback(
-    (type: string, payload?: unknown) => {
-      if (!enabled) return;
-      queue.current.push({ moduleId, type, payload });
-      if (timer.current) window.clearTimeout(timer.current);
-      timer.current = window.setTimeout(flush, FLUSH_DELAY_MS);
-    },
-    [enabled, flush, moduleId],
-  );
-
+      key.current = localStorage.getItem(`${storage}-attempt`) ?? crypto.randomUUID();
+      queue.current = JSON.parse(localStorage.getItem(storage) ?? "[]");
+      if (!Array.isArray(queue.current)) queue.current = [];
+    } catch { key.current = crypto.randomUUID(); queue.current = []; }
+  }, [storage]);
+  const persist = useCallback(() => {
+    try { localStorage.setItem(storage, JSON.stringify(queue.current)); localStorage.setItem(`${storage}-attempt`, key.current); } catch { /* Memory queue still works when storage is unavailable. */ }
+  }, [storage]);
+  const flush = useCallback(async () => {
+    if (!enabled) return;
+    initialize();
+    if (sending.current) { await sending.current; return; }
+    if (timer.current) clearTimeout(timer.current);
+    sending.current = (async () => {
+      while (queue.current.length) {
+        const batch = queue.current.slice(0, 50);
+        const response = await fetch("/api/activity", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ events: batch }), keepalive: true });
+        if (!response.ok) throw new Error("Learning activity has not synced yet.");
+        queue.current.splice(0, batch.length); persist();
+      }
+    })();
+    try { await sending.current; } finally { sending.current = null; }
+  }, [enabled, initialize, persist]);
+  const emit = useCallback((type: string, payload?: unknown) => {
+    if (!enabled) return;
+    initialize();
+    const p = payload as { restored?: boolean; restarted?: boolean } | undefined;
+    if (type === "module_started" && (!p?.restored || p?.restarted)) key.current = crypto.randomUUID();
+    queue.current.push({ moduleId, type, payload, attemptKey: key.current, eventId: crypto.randomUUID() }); persist();
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => { void flush().catch(() => { /* Retained for online, next action, or reload. */ }); }, type === "module_completed" ? 0 : 500);
+  }, [enabled, flush, initialize, moduleId, persist]);
   useEffect(() => {
     if (!enabled) return;
-    const onHide = () => flush();
-    window.addEventListener("pagehide", onHide);
-    window.addEventListener("visibilitychange", onHide);
-    return () => {
-      window.removeEventListener("pagehide", onHide);
-      window.removeEventListener("visibilitychange", onHide);
-      flush();
-    };
+    const sync = () => { void flush().catch(() => {}); };
+    sync();
+    const retry = setInterval(sync, 10000);
+    window.addEventListener("online", sync); window.addEventListener("pagehide", sync); window.addEventListener("visibilitychange", sync);
+    return () => { clearInterval(retry); window.removeEventListener("online", sync); window.removeEventListener("pagehide", sync); window.removeEventListener("visibilitychange", sync); sync(); };
   }, [enabled, flush]);
-
-  return emit;
+  return { emit, flush };
 }

@@ -199,3 +199,15 @@ test("ships the Class 10 subject and chapter tier", async () => {
   assert.match(cybersuraksha, /\.dashboardWrapTeacher \.gradeTone-lime/);
   assert.match(globals, /\.gradeTone-lime/);
 });
+
+// A submission before hydration must never put passwords or personal details in the URL.
+test("client forms use POST for native submissions", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const root = new URL("../app/", import.meta.url);
+  for (const file of await readdir(root, { recursive: true })) {
+    if (!file.endsWith(".tsx")) continue;
+    const source = await readFile(new URL(file, root), "utf8");
+    for (const form of source.matchAll(/<form\b[^>]*>/g))
+      assert.match(form[0], /method="post"/, `${file}: native form must use POST`);
+  }
+});

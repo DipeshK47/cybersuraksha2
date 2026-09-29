@@ -69,7 +69,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     setHint(`Gap ${miss + 1}: ${tile.c === want.c
       ? "right colour, wrong shape! In this pattern, each colour always comes with the same shape. Check the shape too."
       : tile.s === want.s ? "right shape, wrong colour! The colours repeat in the same order as the shapes."
-      : "that tile breaks the group. Start at the first tile and say the group as you go."}`);
+      : "that tile breaks the group. Start at the first tile and say the group as you go."}`, false);
     setWrongGap(gaps[miss]); setPlaced([null, null]);
   }
 

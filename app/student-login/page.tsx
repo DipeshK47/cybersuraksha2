@@ -51,7 +51,7 @@ export default function StudentLoginPage() {
       }
       title="Student login"
     >
-      <form autoComplete="off" onSubmit={startLearning}>
+      <form autoComplete="off" method="post" onSubmit={startLearning}>
         <label htmlFor="student-school">Your school</label>
         <select defaultValue="" id="student-school" name="school" required>
           <option disabled value="">

@@ -40,7 +40,7 @@ export type StoryWorldProps = {
   /** Call once when the learner completes the mid-story task; the story resumes from the next scene. */
   markSolved: () => void;
   hint: string;
-  setHint: (hint: string) => void;
+  setHint: (hint: string, correct?: boolean) => void;
   reduced: boolean;
 };
 

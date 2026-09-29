@@ -5,7 +5,7 @@
 .notice svg{width:14px;height:14px}
 .notice strong{font-size:.8rem}
 .notice b,.bubble b{padding:1px 5px;border-radius:4px;background:#e8d6b1;font-family:var(--font-mono),monospace;letter-spacing:.06em}
-.ring{animation:ring 1.2s ease-out infinite}
+.ring{animation:ring 1.2s ease-out infinite;animation-play-state:var(--story-loop-state,running)}
 
 .callScene{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:18px;align-items:center}
 .phone{display:flex;flex-direction:column;gap:12px;min-height:370px;padding:10px 14px 16px;border:7px solid #28474d;border-radius:28px;background:linear-gradient(180deg,#22495a,#122b3a);color:#fff5e4;box-shadow:0 18px 30px #19342e2e}

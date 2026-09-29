@@ -1,7 +1,7 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import { ArrowRight, Award, Camera, Check, CircleCheck, Clock, Droplets, EyeOff, FileText, Footprints, Globe, Link2, Lock, Mail, MessageCircle, MessageCircleHeart, Mic, PenLine, PhoneOff, Scale, Sparkles, Tags, Trash2, TriangleAlert, UserCheck, UserRound, Users, Video } from "lucide-react";
+import { ArrowRight, Award, Camera, Check, CircleCheck, Clock, EyeOff, FileText, Footprints, Globe, Link2, Lock, Mail, MessageCircle, MessageCircleHeart, Mic, PenLine, PhoneOff, Scale, Sparkles, Tags, Trash2, TriangleAlert, UserCheck, UserRound, Users, Video } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -56,8 +56,10 @@ const ideas = [
 ];
 
 function Thumb({ kind }: { kind: NonNullable<PostData["art"]> }) {
-  return <span className={r.thumb} data-kind={kind} aria-hidden="true">
-    {kind === "filter" ? <Droplets /> : kind === "team" ? <Users /> : <><UserRound /><i>z</i><i>z</i></>}
+  const art = kind === "filter" ? "solar-filter" : kind === "sleep" ? "bus-photo" : "science-club";
+  return <span className={r.thumb} data-kind={kind}>
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img src={`/cyber-missions/refined/${art}.webp`} alt="" width={650} height={650} />
   </span>;
 }
 
@@ -74,13 +76,7 @@ function Post({ post, flagged = false }: { post: PostData; flagged?: boolean }) 
 }
 
 function FilterArt() {
-  return <div className={r.filterArt} aria-hidden="true">
-    <span className={r.sun} />
-    <span className={r.solar} />
-    <span className={r.jar} />
-    <Droplets className={r.drip} />
-    <span className={r.glass} />
-  </div>;
+  return <div className={r.filterArt} aria-hidden="true" />;
 }
 
 function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps) {
@@ -95,7 +91,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
 
   function choose(action: Action) {
     if (solved || isDone(current)) return;
-    if (action !== current.right) { setWrong(`${current.id}:${action}`); setHint(current.hints[action] ?? ""); return; }
+    if (action !== current.right) { setWrong(`${current.id}:${action}`); setHint(current.hints[action] ?? "", false); return; }
     setChoices(value => ({ ...value, [current.id]: action })); setWrong(""); setHint("");
     const next = posts.findIndex(post => post !== current && !isDone(post));
     if (next >= 0) setActive(next);

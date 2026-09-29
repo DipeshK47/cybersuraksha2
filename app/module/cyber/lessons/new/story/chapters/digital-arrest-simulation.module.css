@@ -16,21 +16,7 @@
 /* Scene 2 + task: the pretend video call. */
 .call{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);background:#122c35}
 .feed{position:relative;min-height:275px;overflow:hidden;background:linear-gradient(#35606a,#23434d 70%,#1c3840)}
-.office{position:absolute;inset:0}
-.shelf{position:absolute;left:7%;top:16%;display:grid;gap:9px;width:25%;padding:6px;border-radius:3px;background:#4c3b28}
-.shelf i{display:block;height:28px;border-radius:2px;background:repeating-linear-gradient(90deg,#d8c08c 0 7px,#a8844c 7px 10px,#c9a86a 10px 17px,#8e6f45 17px 19px)}
-.crest{position:absolute;right:9%;top:13%;display:grid;place-items:center;width:52px;height:52px;border:3px solid #d9b964;border-radius:50%;background:#2c4a55;color:#e9cf82}
-.crest svg{width:22px;height:22px}
-.officer{position:absolute;left:52%;bottom:0;width:150px;height:200px;transform:translateX(-50%)}
-.cap{position:absolute;left:50%;top:0;z-index:2;width:84px;height:30px;border-radius:40px 40px 5px 5px;background:#5e5a38;transform:translateX(-50%)}
-.cap:after{content:"";position:absolute;left:-6px;right:-6px;bottom:-5px;height:8px;border-radius:5px;background:#2f2d1e}
-.head{position:absolute;left:50%;top:18px;z-index:1;width:72px;height:80px;border-radius:44%;background:radial-gradient(circle at 34% 50%,#2b1d15 0 3.5px,transparent 4.5px),radial-gradient(circle at 66% 50%,#2b1d15 0 3.5px,transparent 4.5px),#b98559;transform:translateX(-50%)}
-.head:after{content:"";position:absolute;left:30%;right:30%;top:66%;height:6px;border-radius:0 0 8px 8px;background:#3b2a1f}
-.body{position:absolute;left:0;right:0;bottom:0;height:106px;border-radius:62px 62px 0 0;background:linear-gradient(90deg,transparent 48%,#9c8350 48% 52%,transparent 52%),#b89b62}
-.body:before{content:"";position:absolute;left:50%;top:0;width:38px;height:24px;background:#b98559;clip-path:polygon(0 0,100% 0,50% 100%);transform:translateX(-50%)}
-.body i{position:absolute;top:12px;width:34px;height:10px;border-radius:3px;background:radial-gradient(circle,#f1d77e 0 2.5px,transparent 3px) center/11px 10px repeat-x,#6d5a32}
-.body i:first-of-type{left:14px;transform:rotate(-14deg)}
-.body i:last-of-type{right:14px;transform:rotate(14deg)}
+.callerArt{position:absolute;inset:0;background:url('/cyber-missions/refined/pretend-caller.webp') center/cover}
 .fakeBadge{position:absolute;left:6%;bottom:14%;z-index:3;display:grid;justify-items:center;gap:1px;width:118px;padding:8px 6px;border:2px solid #9b8a55;border-radius:8px;background:#ece4c9;color:#3a3a2a;text-align:center;box-shadow:0 8px 16px #0b161e55;filter:blur(.35px);transform:rotate(-8deg)}
 .fakeBadge svg{width:20px;height:20px;color:#7b6a3a}
 .fakeBadge strong{font-size:.8rem;letter-spacing:.08em}
@@ -99,7 +85,7 @@
 @media(max-width:900px){.call{grid-template-columns:1fr}.chat{padding:10px}}
 @media(max-width:600px){
   .incoming{left:10px;right:10px;bottom:10px;width:auto;padding:8px 10px}
-  .feed{min-height:230px}.officer{width:124px;height:170px}.body{height:90px}.shelf{width:24%}.shelf i{height:22px}.crest{width:42px;height:42px}
+  .feed{min-height:230px}
   .fakeBadge{width:100px;left:4%}.fakeBadge small{font-size:.38rem}
   .chat li{font-size:.7rem;padding:8px 9px}
   .notes{grid-template-columns:1fr;gap:10px}

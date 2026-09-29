@@ -46,7 +46,7 @@ export default function RegisterSchoolPage() {
           Tell us who you are. Every school is reviewed before student access
           is enabled.
         </p>
-        <form onSubmit={submitRequest}>
+        <form method="post" onSubmit={submitRequest}>
           <label htmlFor="school-name">School name</label>
           <input id="school-name" name="schoolName" placeholder="DPS Vasant Kunj" required />
           <label htmlFor="contact-name">Contact person</label>

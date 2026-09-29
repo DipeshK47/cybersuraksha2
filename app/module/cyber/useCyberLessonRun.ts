@@ -89,6 +89,7 @@ export function useCyberLessonRun({
   const [saveAttempt, setSaveAttempt] = useState(0);
   const [mistake, setMistake] = useState<MistakeFeedback | null>(null);
   const [hints, setHints] = useState<LessonHints | null>(null);
+  const [runId, setRunId] = useState(0);
   const startedAt = useRef(0);
   const answersRef = useRef(answers);
   const leakIdsRef = useRef(leakIds);
@@ -100,9 +101,10 @@ export function useCyberLessonRun({
       `cybersuraksha-cyber-${lesson.slug}-v1-${studentId ?? "preview"}`,
     [lesson.slug, studentId],
   );
-  const emit = useActivityEmitter(
+  const { emit, flush: flushActivity } = useActivityEmitter(
     lesson.id,
     role === "student" && Boolean(studentId),
+    studentId,
   );
 
   useEffect(() => {
@@ -131,7 +133,9 @@ export function useCyberLessonRun({
         startedAt.current = Date.now();
       }
       setLoaded(true);
-      emit("module_started", { restored: Boolean(restored) });
+      if (restored?.completed) {
+        completionEmitted.current = true;
+      } else emit("module_started", { restored: Boolean(restored) });
     }, 0);
     return () => window.clearTimeout(timer);
   }, [emit, storageKey]);
@@ -184,6 +188,8 @@ export function useCyberLessonRun({
         kind: decision.kind,
         category: decision.category,
         checkpoint,
+        feedback: decision.feedback,
+        question: decision.question,
       });
       if (decision.unsafe && !leakIdsRef.current.includes(decision.id)) {
         const nextLeakIds = [...leakIdsRef.current, decision.id];
@@ -206,7 +212,7 @@ export function useCyberLessonRun({
       options?: { activity?: string; hints?: LessonHints },
     ) => {
       const activity = options?.activity ?? checkpoint;
-      emit("mistake", { activity, checkpoint });
+      emit("mistake", { activity, checkpoint, feedback: feedback.explanation, category: activity });
       lastMistakeHints.current = options?.hints ?? null;
       setMistake(feedback);
     },
@@ -258,7 +264,7 @@ export function useCyberLessonRun({
     if (role === "teacher" || !studentId || savedCompletion.current) return;
     savedCompletion.current = true;
     setSaveStatus("saving");
-    void fetch("/api/module-runs", {
+    void flushActivity().then(() => fetch("/api/module-runs", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -270,7 +276,7 @@ export function useCyberLessonRun({
         path: leakIds.length ? "supported" : "independent",
         durationSeconds,
       }),
-    })
+    }))
       .then((response) => {
         if (!response.ok) throw new Error("Progress could not be saved.");
         setSaveStatus("saved");
@@ -279,7 +285,7 @@ export function useCyberLessonRun({
         savedCompletion.current = false;
         setSaveStatus("error");
       });
-  }, [answers, completed, emit, leakIds, lesson.id, loaded, role, saveAttempt, studentId]);
+  }, [answers, completed, emit, flushActivity, leakIds, lesson.id, loaded, role, saveAttempt, studentId]);
 
   const retrySave = useCallback(() => {
     savedCompletion.current = false;
@@ -289,6 +295,7 @@ export function useCyberLessonRun({
 
   const resetLesson = useCallback(() => {
     window.localStorage.removeItem(storageKey);
+    setRunId((value) => value + 1);
     setCheckpointState("start");
     setState({});
     setAnswers({});
@@ -319,12 +326,14 @@ export function useCyberLessonRun({
     setCheckpoint,
     updateState,
     recordDecision,
+    trackActivity: emit,
     recordMistake,
     recordHint,
     closeMistake,
     closeHints,
     showHintFromMistake,
     completeLesson,
+    runId,
     resetLesson,
     retrySave,
   };

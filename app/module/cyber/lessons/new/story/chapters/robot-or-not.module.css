@@ -2,36 +2,13 @@
 .room{overflow:hidden;background-image:url('/cyber-missions/morning-room.webp');background-position:25% 70%}
 .room[data-reduced="true"] *{animation:none!important}
 
-/* Tiko, the toy robot */
-.toy{position:absolute;left:12%;bottom:9%;width:112px;height:152px;transform-origin:0 100%}
-.toy:before{content:"";position:absolute;left:12px;bottom:-5px;width:88px;height:12px;border-radius:50%;background:#10263f55}
-.bot{position:absolute;inset:0;transform-origin:50% 100%}
-.toy[data-dance="true"] .bot{animation:sway 1.6s ease-in-out infinite alternate}
-.antenna{position:absolute;left:54px;top:4px;width:4px;height:16px;border-radius:2px;background:#28474d}
-.antenna:after{content:"";position:absolute;left:-5px;top:-8px;width:14px;height:14px;border-radius:50%;background:#7ff0d0;box-shadow:0 0 12px #7ff0d0}
-.head{position:absolute;left:8px;top:18px;width:96px;height:66px;border:3px solid #28474d;border-radius:20px;background:#e9f0ee;box-shadow:inset 0 -5px #c9d8d4}
-.head:before,.head:after{content:"";position:absolute;top:20px;width:9px;height:20px;border:3px solid #28474d;border-radius:6px;background:#efbb5d}
-.head:before{left:-13px}.head:after{right:-13px}
-.face{position:absolute;inset:7px 7px 9px;display:flex;align-items:center;justify-content:center;gap:16px;padding-bottom:9px;border-radius:12px;background:#10263f}
-.face i{width:12px;height:16px;border-radius:7px;background:#7ff0d0;box-shadow:0 0 9px #7ff0d099}
-.face b{position:absolute;left:50%;bottom:6px;width:22px;height:9px;margin-left:-11px;border:3px solid #7ff0d0;border-top:0;border-radius:0 0 14px 14px}
-.arm{position:absolute;top:90px;left:3px;width:13px;height:40px;border:3px solid #28474d;border-radius:9px;background:#e9f0ee;transform:rotate(25deg);transform-origin:50% 6px}
-.arm+.arm{left:auto;right:3px;transform:rotate(-25deg)}
-.toy[data-dance="true"] .arm{animation:waveL .9s ease-in-out infinite alternate}
-.toy[data-dance="true"] .arm+.arm{animation-name:waveR;animation-delay:-.45s}
-.body{position:absolute;left:20px;top:86px;width:72px;height:48px;border:3px solid #28474d;border-radius:14px;background:#efbb5d;box-shadow:inset 0 -5px #d9a142}
-.body>span{position:absolute;inset:6px 11px 10px;display:grid;place-items:center;border-radius:7px;background:#fffbef}
-.body svg{width:24px;height:24px;color:#2f8a5f}
-.feet{position:absolute;left:26px;bottom:2px;width:60px;height:17px;border:3px solid #28474d;border-radius:10px;background:#3c6a70}
-.note{position:absolute;left:-16px;top:16px;width:22px;height:22px;color:#fff3c4;filter:drop-shadow(0 2px 3px #10263f88);animation:floatNote 1.8s ease-in-out infinite alternate}
-.note+.note{left:auto;right:-20px;top:40px;width:18px;animation-delay:-.9s}
-/* Low battery: sleepy amber face, drooping arms. */
-.toy[data-low="true"] .antenna:after{background:#ffae5c;box-shadow:0 0 12px #ffae5c}
-.toy[data-low="true"] .face i{height:5px;background:#ffae5c;box-shadow:0 0 9px #ffae5c99}
-.toy[data-low="true"] .face b{bottom:9px;height:7px;border:3px solid #ffae5c;border-bottom:0;border-radius:14px 14px 0 0}
-.toy[data-low="true"] .body svg{color:#c4512f}
-.toy[data-low="true"] .arm{transform:rotate(6deg)}
-.toy[data-low="true"] .arm+.arm{transform:rotate(-6deg)}
+/* Detailed toy art, grounded by a separate contact shadow. */
+.toy{position:absolute;left:10%;bottom:7%;width:164px;height:206px;transform-origin:50% 100%}
+.toy:before{content:"";position:absolute;left:18%;right:18%;bottom:-3px;height:14px;border-radius:50%;background:#10263f55;filter:blur(3px)}
+.bot{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform-origin:50% 90%;filter:drop-shadow(0 5px 5px #10263f33)}
+.toy[data-dance="true"] .bot{animation:sway 1.6s ease-in-out infinite alternate;animation-play-state:var(--story-loop-state,running)}
+.note{position:absolute;left:-9px;top:34px;width:22px;height:22px;color:#fff3c4;filter:drop-shadow(0 2px 3px #10263f88);animation:floatNote 1.8s ease-in-out infinite alternate;animation-play-state:var(--story-loop-state,running)}
+.note+.note{left:auto;right:-10px;top:65px;width:18px;animation-delay:-.9s}
 
 /* Tiko's speech screen */
 .say{position:absolute;right:7%;top:16%;display:grid;gap:5px;max-width:215px;padding:11px 15px 12px;border:3px solid #28474d;border-radius:14px 14px 14px 4px;background:#10263f;color:#7ff0d0;box-shadow:0 12px 26px #0b1a2a55}
@@ -118,11 +95,9 @@
 .quote b{color:#7ff0d0}
 
 @keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
-@keyframes waveL{from{transform:rotate(25deg)}to{transform:rotate(120deg)}}
-@keyframes waveR{from{transform:rotate(-25deg)}to{transform:rotate(-120deg)}}
 @keyframes floatNote{from{transform:translateY(4px);opacity:.4}to{transform:translateY(-8px);opacity:1}}
 @media(max-width:600px){
-  .toy{left:6%;bottom:8%;transform:scale(.72)}
+  .toy{left:4%;bottom:5%;width:128px;height:156px}
   .say{right:5%;top:22%;max-width:48%;padding:8px 10px 9px}
   .say strong{font-size:.9rem}
   .snack{left:calc(6% + 88px);bottom:6%;transform:scale(.8);transform-origin:0 100%}
@@ -135,3 +110,11 @@
   .binHead small{font-size:.6rem}
   .compare{grid-template-columns:1fr}
 }
+
+.objectArt{display:block;flex:none;width:46px;height:46px;background-repeat:no-repeat}
+.objectArt[data-photo="true"]{border-radius:8px;background-size:cover!important}
+.binItems .objectArt{width:24px;height:24px}
+.biscuits{width:52px;height:45px;background:url('/cyber-missions/refined/objects-atlas.webp') 100% 100%/200% 200% no-repeat}
+
+.binItems>span{animation:objectArrive .28s var(--ease)}
+@keyframes objectArrive{from{opacity:.4;transform:translateY(-10px) scale(.85)}to{opacity:1;transform:translateY(0) scale(1)}}

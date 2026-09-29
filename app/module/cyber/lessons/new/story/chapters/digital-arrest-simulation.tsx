@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Ban, Building2, Cake, CalendarDays, Camera, Check, CircleAlert, EyeOff, Globe, IdCard, IndianRupee, Mic, Package, Phone, PhoneOff, RotateCcw, Scale, Shield, ShieldCheck, Shirt, Star, StickyNote, UserRound, Users, Video } from "lucide-react";
+import { ArrowRight, Ban, Building2, Cake, CalendarDays, Camera, Check, CircleAlert, EyeOff, Globe, IdCard, IndianRupee, Mic, Package, Phone, PhoneOff, RotateCcw, Scale, Shield, ShieldCheck, Shirt, StickyNote, UserRound, Users, Video } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryScript, StoryWorldProps } from "../types";
@@ -37,8 +37,7 @@ const moves = [
 /** The pretend caller: office backdrop, uniformed figure, and a fake badge. All decorative except the caption tags. */
 function CallFeed({ small }: { small?: boolean }) {
   return <div className={r.feed} data-small={small}>
-    <div className={r.office} aria-hidden="true"><span className={r.shelf}><i /><i /><i /></span><span className={r.crest}><Star /></span></div>
-    <div className={r.officer} aria-hidden="true"><span className={r.cap} /><span className={r.head} /><span className={r.body}><i /><i /></span></div>
+    <div className={r.callerArt} aria-hidden="true" />
     <div className={r.fakeBadge} role="img" aria-label="Fake badge reading C.B.I., Central Bureau of Investigaton, with a spelling mistake"><Shield /><strong>C.B.I.</strong><small>CENTRAL BUREAU OF INVESTIGATON</small><small>ID 000-000</small></div>
     <span className={r.live}><i />LIVE · 04:12</span>
     <span className={r.callerTag}>“CBI Officer” · {caller}</span>
@@ -63,14 +62,14 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   }
   function checkSigns() {
     const wrong = clues.find(c => picked.includes(c.id) && !c.sign);
-    if (wrong) { setHint(wrong.why); return; }
+    if (wrong) { setHint(wrong.why, false); return; }
     setSignsDone(true); setHint("");
   }
   function choose(id: string) {
     if (solved || plan.includes(id)) return;
     const move = moves.find(m => m.id === id);
     if (!move) return;
-    if (move.trap) { setHint(move.trap); return; }
+    if (move.trap) { setHint(move.trap, false); return; }
     setPlan(v => [...v, id]); setHint("");
   }
 

@@ -1,0 +1,39 @@
+{
+  "chapter": "step-by-step-morning",
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0e437-1488-7360-a5bd-e8e1a738e7b3/exec-6e150ae8-0656-4991-9673-bde5dfbe1463.png",
+      "prompt": "Use case: illustration-story. Asset type: six educational morning-step illustrations on one transparent sprite atlas. Exact THREE equal square columns by TWO equal square rows, 3x2 grid, no grid lines, each isolated little vignette centered within its own cell with generous clear margins. Premium warm 3D animated-film toy-diorama art, beautiful tangible materials, tiny details, consistent camera and gentle golden morning studio lighting. Row 1 left-to-right: (1) a small rounded brass-orange alarm clock with ringing bells on a bedside stool beside the corner of a tiny pillow and rumpled blanket, no numbers on clock, conveys WAKE UP; (2) teal cup holding a toothbrush, a small toothpaste tube and a neat swirl of toothpaste, conveys BRUSH TEETH; (3) a pair of soft white school socks with teal bands, fabric visibly textured, one loosely folded over the other, no shoes. Row 2 left-to-right: (4) a matching pair of navy school sneakers with cream soles, detailed laces and material, no socks or feet; (5) an OPEN teal school backpack with its main zip fully open, two colourful exercise books being tucked into it, visible inside opening and books, conveys PUT BOOKS IN BAG; (6) the identical teal backpack CLOSED with the main compartment zip fully closed, large visible orange zipper pull, no books protruding, conveys ZIP THE BAG. Make the open and closed bags meaningfully distinct at small sizes. Same appealing rounded visual language, realistic fabric/brass/paper/plastic textures, no generic flat icons. Genuinely transparent alpha around all six vignettes, no humans, hands, feet, text, numbers, arrows, labels or logos. No object crosses a cell boundary. Overall image aspect3:2.",
+      "role": "initial atlas"
+    },
+    {
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0e437-1488-7360-a5bd-e8e1a738e7b3/exec-61f23a19-f887-4afd-8c42-5ed1a3953fbf.png",
+      "prompt": "Edit target: the attached six-vignette 3-column by 2-row morning-step atlas. Keep exactly these six illustrations, exact ordering, square cells, consistent style and high-quality textures: alarm-clock bedside vignette; toothbrush cup; white socks; blue sneakers; open teal bag with books; closed teal bag. Replace every colored/blurred backdrop surrounding each vignette with genuinely transparent alpha. No blue, tan or grey gradient backgrounds or square picture backgrounds should remain. Keep only the actual object artwork with natural contour edges. Reduce each isolated vignette slightly if needed so it fits entirely inside the center 80 percent of its cell with transparent margins. Maintain the open versus closed main zip of the two backpacks exactly. Preserve the clock's bedside stool/pillow/blanket grouping as one isolated miniature vignette contained fully within its top-left cell. Preserve brass, wool, cotton, paper and zipper details. Do not change object identities or order. No new objects, text, numbers, labels, frames, cards, coloured planes or shadow ground. Final must be one transparent3x2 atlas in aspect3:2.",
+      "exports": [
+        "public/cyber-missions/refined/morning-step-0.webp",
+        "public/cyber-missions/refined/morning-step-1.webp",
+        "public/cyber-missions/refined/morning-step-2.webp",
+        "public/cyber-missions/refined/morning-step-3.webp",
+        "public/cyber-missions/refined/morning-step-4.webp",
+        "public/cyber-missions/refined/morning-step-5.webp"
+      ],
+      "order": [
+        "Wake up",
+        "Brush teeth",
+        "Put on socks",
+        "Put on shoes",
+        "Put books in bag",
+        "Zip the bag"
+      ],
+      "packaging": "Each cell cropped with eight-pixel inner margin to prevent neighboring art bleed; transparent alpha retained, resized to 480 pixels and WebP."
+    },
+    {
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0e437-1488-7360-a5bd-e8e1a738e7b3/exec-35e004e6-7f45-46dc-83cd-c6c9f64a045b.png",
+      "prompt": "Use case: illustration-story. Asset type: premium transparent toy-school-bus vignette for a Class 3 lesson about getting morning steps in the right order. One charming detailed yellow-orange neighborhood school bus, fully visible, driving gently away toward viewer-right, side/three-quarter view, rounded friendly proportions, teal window trim and cream bumper, believable rubber tires and warm painted-metal material. Small subtle motion wisps behind wheels are allowed but no speed lines or drawn stroke figures. A tiny warm sandy road patch immediately under wheels, otherwise genuine transparent background with plenty of clear margin. Soft cinematic morning lighting, tactile miniature-diorama/3D animated-film rendering, gentle safe mood. No children or adults, no driver face, no words, numbers, logos, captions or letters anywhere on the bus, no signage or licence text. This is an illustrated story prop to accompany the existing 'Missed the bus!' caption, not a photoreal road photograph. Complete bus silhouette, wheels correctly placed, no extra vehicles, no flat geometric clipart. Landscape3:2.",
+      "exports": [
+        "public/cyber-missions/refined/morning-bus.webp"
+      ]
+    }
+  ]
+}

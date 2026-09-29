@@ -79,7 +79,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     const end = frames[frames.length - 1];
     const finish = () => {
       const message = why(body.id, count, end);
-      if (message) { setRunning(false); setHint(message); }
+      if (message) { setRunning(false); setHint(message, false); }
       else timer.current = window.setTimeout(() => { setRunning(false); markSolved(); }, 700);
     };
     setRunning(true); setHint("");

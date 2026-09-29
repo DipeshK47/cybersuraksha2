@@ -22,7 +22,8 @@ import {
 } from "lucide-react";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { ThemeToggle } from "../components/ThemeToggle";
+import { studentAssignments } from "../../db/lms";
+import { AssignmentNotification } from "../components/lms/LmsPortal";
 import {
   chapterCount,
   curriculum,
@@ -74,6 +75,8 @@ export default async function DashboardPage() {
   const studentProfile = studentSession
     ? await getStudentWithRuns(studentSession.student.id).catch(() => null)
     : null;
+  const inbox = studentSession ? await studentAssignments(studentSession.student.id) : [];
+  const pendingAssignments = inbox.filter(a => a.progress.completedAt == null);
   const studentName = studentProfile?.student.name ?? "Student Explorer";
   const studentRoll = studentProfile?.student.rollNo ?? "—";
   const completedMissions = studentProfile?.runs.length ?? 0;
@@ -124,6 +127,9 @@ export default async function DashboardPage() {
                 <Link className="dashboardGhost" href="/teach">
                   My classes
                 </Link>
+                <Link className="dashboardGhost" href="/teach/lms">
+                  Classroom
+                </Link>
                 <Link className="dashboardGhost" href="/teach/results">
                   Results
                 </Link>
@@ -133,6 +139,7 @@ export default async function DashboardPage() {
                 <span className="dashboardOrg">
                   {className ? `Class ${className}` : "Student"}
                 </span>
+                <AssignmentNotification />
                 <Link className="dashboardGhost" href="#student-overview">
                   My profile
                 </Link>
@@ -141,7 +148,6 @@ export default async function DashboardPage() {
             <Link className="dashboardGhost" href="/logout">
               Log out
             </Link>
-            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -275,17 +281,19 @@ export default async function DashboardPage() {
                 <span className="studentInsightIcon">
                   <ClipboardCheck aria-hidden="true" />
                 </span>
-                <p className="studentCardEyebrow">Pending work</p>
-                <strong>{pendingModules?.length ?? 0}</strong>
-                <h2>Upcoming deadlines</h2>
+                <p className="studentCardEyebrow">Assignments</p>
+                <strong>{pendingAssignments.length}</strong>
+                <h2>From your teacher</h2>
                 <ul className="studentDeadlineList">
-                  {(pendingModules ?? []).map((module, index) => (
-                    <li key={module.title}>
-                      <span>{module.title}</span>
-                      <b>{index === 0 ? "Fri" : "Next Tue"}</b>
+                  {pendingAssignments.slice(0, 3).map(assignment => (
+                    <li key={assignment.id}>
+                      <Link href={`/learn/assignments#assignment-${assignment.id}`}>{assignment.title}</Link>
+                      <b>{new Date(assignment.dueAt).toLocaleDateString(undefined, { day: "numeric", month: "short" })}</b>
                     </li>
                   ))}
+                  {!pendingAssignments.length && <li>No pending assignments.</li>}
                 </ul>
+                <Link className="dashboardGhost" href="/learn/assignments">View all assignments <ArrowRight aria-hidden="true" /></Link>
               </article>
 
               <article className="studentInsightCard studentAchievementCard">

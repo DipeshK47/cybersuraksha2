@@ -96,6 +96,8 @@ const activityEventSchema = z.object({
   type: z.string().min(1).max(40),
   payload: z.unknown().optional(),
   runId: z.number().int().optional(),
+  attemptKey: z.string().uuid().optional(),
+  eventId: z.string().uuid().optional(),
 });
 
 export const activitySchema = z.union([

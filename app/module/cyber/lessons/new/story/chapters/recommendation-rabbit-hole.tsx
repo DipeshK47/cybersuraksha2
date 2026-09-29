@@ -52,8 +52,13 @@ const TRAP_FULL = "That’s another “more like this” signal, and the feed is
 const TRAP_FOLLOW = "That channel only posts fair rumours, and a name with “truth” in it isn’t proof. Following it would narrow the feed even more. Pick a source that checks facts.";
 
 function Thumb({ clip, children }: { clip: Clip; children?: ReactNode }) {
-  const Icon = clip.icon;
-  return <span className={r.thumb} data-tone={clip.tone}><Icon aria-hidden="true" />{clip.time && <i>{clip.time}</i>}{children}</span>;
+  const src = clip.tone === "sky" ? "cricket" : clip.tone === "lime" ? "volcano" : clip.tone === "violet" ? "dragon-sketch" : null;
+  const art = src ? `/cyber-missions/refined/${src}.webp` : "/cyber-missions/fairground-vault.jpg";
+  return <span className={r.thumb} data-tone={clip.tone}>
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img src={art} alt="" width={560} height={940} />
+    {clip.time && <i>{clip.time}</i>}{children}
+  </span>;
 }
 
 function Card({ clip, children }: { clip: Clip; children?: ReactNode }) {

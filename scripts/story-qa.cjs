@@ -173,6 +173,72 @@ async function open(browser, viewport, { blockAudio, ...opts } = {}) {
     await p.context().close();
   }
 
+  // One shared-loader check is enough: a broken chapter chunk must offer a real choice.
+  if (slug === 'password-vault-builder') for (const action of ['Try story again', 'Go to practice']) {
+    const ctx = await b.newContext();
+    const p = await ctx.newPage();
+    const pattern = '**/*password-vault-builder.tsx*';
+    await p.route(pattern, route => route.abort());
+    await p.goto(URL);
+    await p.locator(`[data-story-error="${slug}"]`).waitFor({ timeout: 20000 });
+    check(await p.getByText('Story couldn’t load').count() === 1, 'chapter load failure stays visible');
+    await p.unroute(pattern);
+    await p.getByRole('button', { name: action }).click();
+    await p.locator(action === 'Try story again' ? `[data-story-player="${slug}"]` : `[data-new-mission="${slug}"]`).waitFor({ timeout: 20000 });
+    check(true, `${action} works after a chapter load failure`);
+    await ctx.close();
+  }
+
+  if (slug === 'nanis-secret-code') {
+    const p = await open(b, { width: 390, height: 844 });
+    await p.getByRole('button', { name: 'Skip to practice' }).click();
+    await p.getByRole('button', { name: 'Read the code aloud' }).click();
+    check(await p.getByText(/hand over a private code/i).count() === 1, 'unsafe code sharing gets feedback');
+    await p.getByRole('button', { name: 'Cover the code' }).click();
+    check(await p.getByText('••••••').count() === 1, 'code is covered');
+    await p.getByRole('button', { name: 'Next challenge' }).click();
+    check(await p.getByText('••••••').count() === 1, 'code stays covered in the next challenge');
+    await p.getByRole('button', { name: 'End call' }).click();
+    await p.getByRole('button', { name: 'Next challenge' }).click();
+    await p.getByRole('button', { name: /Unknown caller Call the stranger back/ }).click();
+    check(await p.getByText(/stranger is not a safe source/i).count() === 1, 'calling back the stranger gets feedback');
+    await p.getByRole('button', { name: /Nani and a trusted adult/ }).click();
+    check(await p.getByText('Trusted adult informed').count() === 1, 'student completes the safe phone sequence');
+    check(!(await overflow(p)), 'practice has no horizontal overflow on mobile');
+    await p.context().close();
+  }
+
+  if (slug === 'digital-arrest-simulation') {
+    const p = await open(b, { width: 390, height: 844 });
+    await p.getByRole('button', { name: 'Skip to practice' }).click();
+    await p.getByRole('button', { name: 'Dark video background' }).click();
+    check(await p.getByText(/background proves nothing/i).count() === 1, 'video background is not treated as proof');
+    await p.getByRole('button', { name: 'Claims digital arrest' }).click();
+    check(await p.getByText(/spotted a pressure tactic/i).count() === 1, 'digital arrest claim is recognized as a warning');
+    await p.context().close();
+  }
+
+  if (slug === 'deepfake-voice-relative-scam') {
+    const p = await open(b, { width: 390, height: 844 });
+    await p.getByRole('button', { name: 'Skip to practice' }).click();
+    check(await p.getByRole('button', { name: "Call uncle's saved number" }).isDisabled(), 'voice practice waits for the note');
+    await p.getByRole('button', { name: 'Play practice note' }).click();
+    await p.waitForFunction(() => document.querySelector('audio[src*="practice-1"]')?.currentTime > 0, null, { timeout: 10000 });
+    check(await p.getByRole('button', { name: 'Stop note' }).count() === 1, 'approved practice audio plays');
+    await p.getByRole('button', { name: 'Stop note' }).click();
+    check(await p.getByRole('button', { name: "Call uncle's saved number" }).isEnabled(), 'note unlocks verification choices');
+    await p.context().close();
+
+    const broken = await b.newContext({ viewport: { width: 390, height: 844 } });
+    const fallback = await broken.newPage();
+    await fallback.route('**/practice-1.mp3', route => route.abort());
+    await fallback.goto(URL);
+    await fallback.getByRole('button', { name: 'Skip to practice' }).click();
+    await fallback.getByText('Audio couldn’t load. Read the transcript above.').waitFor();
+    check(await fallback.getByRole('button', { name: "Call uncle's saved number" }).isEnabled(), 'voice transcript still allows practice if audio fails');
+    await broken.close();
+  }
+
   await b.close();
   // Two contact sheets (cheaper to review than 14 separate screenshots).
   try {

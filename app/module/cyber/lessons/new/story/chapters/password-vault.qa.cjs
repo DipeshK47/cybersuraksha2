@@ -7,15 +7,18 @@ async function fill(page, card, words) {
 }
 module.exports = {
   async solve(page) {
-    await fill(page, /^Sky Garden/, ['Anchor', 'Cloud', 'Drum']);
-    await fill(page, /^School portal/, ['Feather', 'Lotus', 'Rocket']);
-    await fill(page, /^Email/, ['Shell', 'Umbrella', 'Banyan']);
+    await fill(page, /^Sky Garden/, ['Mango!', 'Rocket482?']);
+    await fill(page, /^School portal/, ['Tiger#', 'Pencil739!']);
+    await fill(page, /^Email/, ['Apple@', 'Basket625!']);
     await page.getByRole('button', { name: /Replay the breach/ }).click();
   },
   async wrongAttempt(page) {
-    for (const word of ['Anchor', 'Cloud', 'Drum']) await page.getByRole('button', { name: word, exact: true }).click();
-    await page.getByRole('button', { name: /Copy game/ }).click();
+    for (const card of [/^Sky Garden/, /^School portal/, /^Email/]) await fill(page, card, ['Mango!', 'Tiger#']);
     await page.getByRole('button', { name: /Replay the breach/ }).click();
-    return /leaked passphrase opened/;
+    if (!await page.getByText(/Choose one short word tile/).count()) throw new Error('Two short tiles must not count as a complete password');
+    await fill(page, /^Sky Garden/, ['Mango!', 'Rocket482?']);
+    await page.getByRole('button', { name: /Reuse game/ }).click();
+    await page.getByRole('button', { name: /Replay the breach/ }).click();
+    return /leaked password opened/;
   },
 };

@@ -1,0 +1,25 @@
+{
+  "chapter": "garbage-in-garbage-out",
+  "generator": "Built-in image_gen",
+  "assets": [
+    {
+      "path": "public/cyber-missions/refined/bakery-interior.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-dc98-72b3-bfb4-e76cc8b78d45/exec-a82a5ebd-6090-4537-92f5-46a46e43e7bc.png",
+      "prompt": "Use case: illustration-story. Asset type: wide children's educational story scene background for Meera's Bakery, a fictional bakery in Cyberpur. Create a premium softly painted 3D storybook illustration, warm cream, honey wood, teal cupboards, copper oven, natural warm daylight. Scene: a welcoming bakery interior with an oven at left, shelves of artisan bread and pastries at right, flour sacks and mixing bowl, little potted plant, neatly arranged wooden test-bake counter across the lower portion. Four distinct beautiful freshly baked artisan loaves arranged on small wooden cutting boards along the counter, no scores or labels. Composition: wide landscape panoramic view, front three-quarter view, all props well spaced, center upper third softly lit blank cream wall suitable behind live UI title. Material details: flaky bread crust, lightly dusted flour, worn smooth wood, ceramic bowls. No people, no faces, no text, no letters, no numbers, no logos, no watermark. Friendly polished educational game art, designed to pair with teal and cream interactive interface, rich enough for close inspection but calm background."
+    },
+    {
+      "path": "public/cyber-missions/refined/bakery-portrait-atlas.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-dc98-72b3-bfb4-e76cc8b78d45/exec-f5298d65-7e07-437c-980e-932793b951b8.png",
+      "prompt": "Use case: illustration-story. Asset type: FIVE separate portrait tiles in one exactly aligned horizontal sprite sheet, matching a premium warm 3D painted storybook bakery educational game. Transparent background. Exact composition: five equal square zones in a single horizontal row, each containing one complete waist-up portrait centered within its own zone, generous empty margin between figures, straight-on view. LEFT TO RIGHT: 1 Kavya, a friendly fictional adult woman baker wearing a dusty rose apron over cream shirt, dark tied-back hair, holding a golden crusty round loaf; 2 Ishaan, friendly fictional adult man baker with short dark hair wearing a sage green apron over cream shirt, holding a small golden bread loaf; 3 Aarav, friendly fictional adult man baker with softly curled dark hair wearing a blue apron over cream shirt, holding a golden bread loaf; 4 Zoya, friendly fictional adult woman baker with dark tied-back hair wearing a muted lavender apron over cream shirt, holding a golden bread loaf; 5 Meera, friendly fictional middle-aged woman bakery owner with tied-back dark hair wearing a warm ochre apron over cream shirt, empty hands. All are fictional adults, similarly warm smiles, similar lighting, equally competent and dignified expressions, no school labels or identity associations, diverse natural warm skin tones without caricature. Keep all five figures identical size, heads aligned at same y, each clearly separated. Very clean silhouette alpha edges, soft warm daylight, handmade fabric texture, flour-dusted bread detail. No text, no symbols, no labels, no numbers, no logos, no watermarks, no background scenery, no extra objects outside held loaves.",
+      "order": [
+        "Kavya",
+        "Ishaan",
+        "Aarav",
+        "Zoya",
+        "Meera"
+      ],
+      "layout": "Five equally sized columns; transparent portraits; CSS uses 500% 100% background sizing."
+    }
+  ],
+  "notes": "Portrait styling is fictional decorative artwork and carries no school or hiring inference. Story, narrated script, all names, schools, years, scores, data rows and exercise rules are unchanged."
+}

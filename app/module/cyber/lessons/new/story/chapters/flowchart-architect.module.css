@@ -62,7 +62,7 @@
 .slot text{font-size:19px;fill:#8aa09a}
 .slot[data-current="true"] rect{fill:#fff2d6;stroke:#c0701a;stroke-width:2}
 .slot[data-current="true"] text{fill:#b0661a}
-.slot[data-current="true"]{animation:pulse 1.3s ease-in-out infinite alternate}
+.slot[data-current="true"]{animation:pulse 1.3s ease-in-out infinite alternate;animation-play-state:var(--story-loop-state,running)}
 .chart .branch{font-size:11px;font-weight:850;fill:#8a5a1c}
 .chart .loopText{font-size:10.5px;font-weight:700;font-style:italic;fill:#5f7671}
 

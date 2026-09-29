@@ -22,6 +22,7 @@ export function CyberLessonPage({
 }) {
   const runtime = useCyberLessonRun({ lesson, role, studentId });
   const lessonContent = createElement(getCyberLessonComponent(lesson.slug), {
+    key: runtime.runId,
     grade,
     lesson,
     role,

@@ -1,6 +1,6 @@
 /* Tara chapter only: the pretend hiring app, applicant cards, training-data table and the fixed shortlist. Shared pieces live in ../story-player.module.css. */
-div.app{display:flex;flex-direction:column;gap:12px;padding:16px;background-color:#fff6e8;background-image:radial-gradient(#efd9bb 1px,transparent 1.3px);background-size:16px 16px;color:#3b2f22}
-.shop{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:#fffdf9;box-shadow:0 4px 14px #7a4b1a14}
+div.app{display:flex;flex-direction:column;gap:12px;padding:22px 20px 18px;background:#dfbe8b url('/cyber-missions/refined/bakery-interior.webp') center/cover no-repeat;color:#3b2f22}
+.shop{display:flex;align-items:center;gap:10px;margin-bottom:50px;padding:11px 13px;border-radius:12px;background:#fff9edf5;box-shadow:0 6px 18px #64381024}
 .shop>svg{width:32px;height:32px;padding:6px;border-radius:9px;background:#f7d9a8;color:#8a4f16}
 .shop>div{display:grid;gap:2px;min-width:0}
 .shop strong{font-family:var(--font-display),sans-serif;font-size:1rem;color:#4a2c12}
@@ -8,31 +8,36 @@ div.app{display:flex;flex-direction:column;gap:12px;padding:16px;background-colo
 .pill{margin-left:auto;display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:99px;background:#e2efe4;color:#24604f;font-size:.66rem;font-weight:800;white-space:nowrap}
 .pill svg{width:14px;height:14px}
 
-.avatar{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:#dfe9f6;color:#27496d;font-size:.8rem;font-weight:850}
-.avatar[data-who="Kavya"]{background:#f6d6de;color:#8c2f4a}
-.avatar[data-who="Ishaan"]{background:#d8ecdf;color:#24604f}
-.avatar[data-who="Zoya"]{background:#e8def5;color:#5b3d86}
-.avatar[data-who="Meera"]{background:#f7d9a8;color:#7a4413}
+.avatar{display:block;flex:none;width:54px;height:90px;background:url('/cyber-missions/refined/bakery-portrait-atlas.webp') 50% 0/500% 100% no-repeat;filter:drop-shadow(0 3px 2px #51371724)}
+.avatar[data-who="Kavya"]{background-position:0 0}
+.avatar[data-who="Ishaan"]{background-position:25% 0}
+.avatar[data-who="Aarav"]{background-position:50% 0}
+.avatar[data-who="Zoya"]{background-position:75% 0}
+.avatar[data-who="Meera"]{background-position:100% 0}
 .school{display:inline-block;width:fit-content;padding:2px 7px;border-radius:5px;background:#e8eef3;color:#45596a;font-size:.62rem;font-weight:800;transition:background .25s ease,box-shadow .25s ease}
 .school[data-school="Hilltop"]{background:#f1e9d6;color:#77531c}
 .school[data-mark="true"]{background:#f8d27a;color:#5a3a06;box-shadow:0 0 0 2px #e7a93a}
 
 /* Scene 1: four applicant cards and the helper at work. */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 9px;align-items:center;padding:10px 11px;border:1px solid #efdcc2;border-radius:11px;background:#fffdf9}
+.card{position:relative;display:grid;grid-template-columns:74px minmax(0,1fr);gap:3px 12px;align-items:center;padding:10px 14px 10px 8px;border-radius:12px;background:#fff9eef7;box-shadow:0 6px 13px #47250926}
+.card .avatar{grid-row:1/3;width:74px;height:122px;align-self:end}
 .card>div{display:grid;gap:3px;min-width:0}
-.card strong{font-size:.84rem}
-.meter{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:7px;font-size:.62rem;color:#7a6149}
+.card strong{font-family:var(--font-display),sans-serif;font-size:1rem}
+.meter{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px;font-size:.65rem;color:#6a4d32}
+.meter>span{grid-column:1}.meter em{grid-column:2;grid-row:1/3;font-size:1rem}.meter i{grid-column:1}
 .meter i{height:7px;border-radius:9px;background:#f1e4d0;overflow:hidden}
 .meter b{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#e0a458,#c46e2b)}
 .meter em,.row em{font-family:var(--font-mono),monospace;font-style:normal;font-weight:850;color:#5a3616}
-.thinking{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;background:#1f4f52;color:#f5f0dc;font-size:.74rem;font-weight:750}
+.thinking{position:relative;overflow:hidden;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;background:#1f4f52;color:#f5f0dc;font-size:.74rem;font-weight:750}
+.thinking:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 40%,#fff4c125 50%,transparent 60%);transform:translateX(-100%);animation:checkingBakes 3s ease-in-out infinite;animation-play-state:var(--story-loop-state,paused)}
 .thinking svg{width:16px;height:16px;color:#f9d58a}
 
 /* Scene 2: the shortlist result screen. */
-.result{display:grid;gap:7px}
-.listLabel{margin-top:3px;font-size:.62rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#8a6a4b}
-.row{display:flex;align-items:center;gap:9px;min-width:0;padding:8px 11px;border:1px solid #efdcc2;border-radius:10px;background:#fffdf9;transition:box-shadow .25s ease,border-color .25s ease}
+.result{display:grid;gap:7px;padding:12px 14px;border-radius:12px;background:#fff9edf2;box-shadow:0 6px 18px #64381024}
+.listLabel{margin-top:3px;font-size:.66rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#705235}
+.row{display:flex;align-items:center;gap:11px;min-width:0;padding:4px 10px 0;border:1px solid #dfceb4;border-radius:10px;background:#fffdf9;transition:box-shadow .25s ease,border-color .25s ease}
+.row .avatar{width:42px;height:69px;align-self:end}
 .row strong{min-width:50px;font-size:.82rem}
 .row em{margin-left:auto;font-size:.74rem}
 .row>svg{width:19px;height:19px}
@@ -43,17 +48,21 @@ div.app{display:flex;flex-direction:column;gap:12px;padding:16px;background-colo
 .top{padding:2px 7px;border-radius:5px;background:#c8452e;color:#fff;font-size:.6rem;font-weight:850;white-space:nowrap}
 
 /* Scene 3: Aunt Meera, the training-data table and what the app learned. */
-.aunt{display:flex;align-items:flex-start;gap:11px;margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid #eadfca}
+.bakeryStage.bakeryStage{overflow:hidden;padding:22px 20px 20px;border:8px solid #28474d;border-radius:18px;background:#dfbe8b url('/cyber-missions/refined/bakery-interior.webp') center/cover no-repeat;box-shadow:0 18px 30px #19342e24}
+.workbook{min-width:0;padding:16px;border-radius:12px;background:#fff9edf5;box-shadow:0 7px 18px #48291330}
+.aunt{display:flex;align-items:center;gap:16px;min-height:192px;margin:0 24px 20px}
+.aunt .avatar{width:114px;height:190px}
+.aunt>div{padding:12px 14px;border-radius:12px 12px 12px 3px;background:#fff9edf5;box-shadow:0 5px 14px #5137171c}
 .aunt>div>span{font-size:.72rem;font-weight:850;color:#826137}
-.aunt p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.12rem;line-height:1.3;color:#375b53}
+.aunt p{margin:3px 0 0;font-family:var(--font-display),sans-serif;font-size:1.08rem;line-height:1.3;color:#375b53}
 .tableHead{display:flex;align-items:center;gap:7px;margin-bottom:8px;font-size:.78rem;color:#2f4f4a}
 .tableHead svg{width:17px;height:17px;color:#2f7369}
 .tableHead small{margin-left:auto;font-size:.64rem;color:#7a735c;white-space:nowrap}
-.tableWrap{overflow:hidden;border:1px solid #e3dccb;border-radius:10px;background:#fff}
+.tableWrap{overflow:hidden;border:1px solid #d8c3a2;border-radius:10px;background:#fffdf8}
 .table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.74rem;font-variant-numeric:tabular-nums}
-.table th{padding:7px 9px;background:#f4efe2;color:#5b5440;font-size:.65rem;font-weight:850;text-align:left}
+.table th{padding:9px;background:#f2e6cf;color:#59452c;font-size:.65rem;font-weight:850;text-align:left}
 .table th:first-child{width:26%}
-.table td{padding:6px 9px;border-top:1px solid #efe9da;color:#2e433f;transition:background .25s ease,opacity .2s ease}
+.table td{padding:8px 9px;border-top:1px solid #eadfcd;color:#2e433f;transition:background .25s ease,opacity .2s ease}
 .table th[data-label],.table td[data-label]{background:#f1f5ee}
 .table td[data-hired="true"]{color:#2f7a4f;font-weight:850}
 .table td[data-hired="false"]{color:#a0472f;font-weight:850}
@@ -71,34 +80,45 @@ div.app{display:flex;flex-direction:column;gap:12px;padding:16px;background-colo
 
 /* Scene 4: the task. Removed columns fade in the table; the shortlist strip shows the latest run. */
 .columns{margin:2px 0 12px}
+.taskBakery{display:flex;align-items:center;gap:16px;min-height:180px;margin:0 20px 20px}
+.taskBakery .avatar{width:108px;height:180px}
+.taskBakery>div{min-width:0;padding:15px 17px;border-radius:12px 12px 12px 3px;background:#fff9edf5;box-shadow:0 5px 14px #5137171c}
+.taskBakery h2{margin:0 0 6px}.taskBakery p{margin:0}
+.workbook>.columns{margin-top:0}
+.workbook>small{display:block;color:#64513a}
 .columns button>svg:last-child{width:14px;height:14px;color:#9b8a70}
 .columns button[data-out="true"]{border-color:#d7a894;background:#f6e6de;color:#8d3b24}
 .columns button[data-out="true"]>svg{color:#8d3b24}
 .run{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-top:10px;padding:9px 12px;border-radius:10px;background:#f3efe4;color:#4b4a3a;font-size:.72rem}
 .run>svg{width:16px;height:16px}
 .run>span{font-weight:850}
-.run b{padding:3px 8px;border:1px solid #e0d6c0;border-radius:6px;background:#fff;font-size:.7rem}
+.run b{display:flex;align-items:center;gap:5px;padding:2px 8px 0 4px;border:1px solid #e0d6c0;border-radius:6px;background:#fff;font-size:.7rem}
+.run .avatar{width:23px;height:38px}
 .run em{margin-left:auto;font-style:normal;font-weight:850;color:#a0472f}
 .run[data-fair="true"]{background:#e2efdb;color:#23553b}
 .run[data-fair="true"] b{border-color:#a9cfae;background:#f6fbf2;animation:fitIn .25s var(--ease)}
 
 /* Scene 5: before/after shortlist. */
 .compare{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;margin-bottom:16px}
-.compare>div{display:grid;gap:3px;padding:11px 13px;border-radius:11px}
-.compare>div[data-kind="old"]{background:#f3ece2;color:#7a5a3a}
-.compare>div[data-kind="new"]{background:#dcecd3;color:#24553a}
+.compare>div{display:grid;justify-items:center;gap:4px;padding:13px 12px;border-radius:11px;text-align:center;box-shadow:0 6px 16px #48291330}
+.compare>div[data-kind="old"]{background:#fff5e8ef;color:#684a2c}
+.compare>div[data-kind="new"]{background:#e8f3def2;color:#24553a}
 .compare span{font-size:.6rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
 .compare strong{font-size:.92rem}
 .compare small{font-size:.66rem}
-.compare>svg{width:20px;height:20px;color:#8a7a5c}
+.compare>svg{width:24px;height:24px;padding:3px;border-radius:50%;background:#fff7e9;color:#684a2c}
+.comparePeople{display:flex;justify-content:center;gap:10px}
+.comparePeople .avatar{width:82px;height:136px}
+.lessonBody{display:grid;grid-template-columns:114px minmax(0,1fr);align-items:end;gap:16px;margin-top:24px}
+.lessonBody>.avatar{width:114px;height:190px;align-self:center}
+.lessonBody h2{margin:0 0 9px}
 
 /* Scene 6: team board with a sold-out shelf. */
-div.ending{justify-content:center;gap:13px;background-color:#fdf0dc}
-.shelf{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px;border-radius:12px;background:#8b5a32;box-shadow:inset 0 -6px 0 #6f4524}
-.shelf span{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:#fff3de;color:#b36a2a}
-.shelf svg{width:22px;height:22px}
-.shelf b{margin-left:auto;padding:6px 11px;border-radius:7px;background:#c8452e;color:#fff;font-size:.74rem;rotate:-3deg}
-.chat{display:flex;align-items:flex-end;gap:9px}
+div.ending{justify-content:flex-end;gap:14px;min-height:430px;background-position:center}
+.shelf{display:flex;justify-content:flex-end;padding:0 8px}
+.shelf b{padding:9px 14px;border-radius:7px;background:#b73d27;color:#fff;font-family:var(--font-display),sans-serif;font-size:1.05rem;rotate:-3deg;box-shadow:0 5px 12px #4d281c30}
+.chat{display:flex;align-items:center;gap:12px;max-width:530px;align-self:center}
+.chat .avatar{width:118px;height:196px}
 .chat p{display:grid;gap:2px;margin:0;padding:10px 13px;border-radius:14px 14px 14px 4px;background:#fffdf9;box-shadow:0 4px 14px #7a4b1a14;font-size:.8rem;line-height:1.4}
 .chat strong{font-size:.66rem;color:#8c2f4a}
 .welcome{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:12px;background:#1f4f52;color:#fff5e4}
@@ -111,18 +131,20 @@ div.ending{justify-content:center;gap:13px;background-color:#fdf0dc}
 .card,.thinking,.top,.pattern,.pattern small,.gigo,.shelf b,.chat{transition:opacity .3s var(--ease),transform .3s var(--ease)}
 .card[data-show="false"],.thinking[data-show="false"],.top[data-show="false"],.pattern[data-show="false"],.pattern small[data-show="false"],.gigo[data-show="false"],.shelf b[data-show="false"],.chat[data-show="false"]{opacity:0;transform:translateY(6px)}
 @keyframes fitIn{from{transform:translateY(-5px);opacity:.5}to{transform:translateY(0);opacity:1}}
+@keyframes checkingBakes{0%,15%{transform:translateX(-100%)}75%,100%{transform:translateX(100%)}}
 
 @media(max-width:600px){
-  div.app{gap:9px;padding:11px}
+  div.app{gap:9px;padding:13px 10px;background-position:center}
   .shop{padding:8px 9px;gap:8px}.shop>svg{width:28px;height:28px;padding:5px}.shop strong{font-size:.86rem}.shop>div>span{font-size:.6rem}.pill{font-size:.58rem;padding:4px 7px}
-  .cards{gap:6px}.card{padding:8px;gap:6px 7px}.card strong{font-size:.74rem}.avatar{width:26px;height:26px;font-size:.68rem}.school{font-size:.56rem;padding:2px 5px}.meter{font-size:.56rem;gap:5px}
+  .shop{margin-bottom:38px}.cards{gap:7px}.card{grid-template-columns:45px minmax(0,1fr);padding:7px 7px 5px 3px;gap:3px 5px}.card strong{font-size:.78rem}.card .avatar{width:45px;height:75px}.avatar{width:40px;height:66px}.school{font-size:.56rem;padding:2px 5px}.meter{font-size:.54rem;gap:4px}.meter em{font-size:.75rem}
   .thinking{font-size:.66rem;padding:8px 10px}
-  .row{gap:6px;padding:7px 8px}.row strong{min-width:0;font-size:.74rem}.row em{font-size:.66rem}.row>svg{width:17px;height:17px}.top{font-size:.54rem;padding:2px 5px}
-  .aunt p{font-size:.98rem}
+  .result{padding:9px 8px;gap:6px}.row{gap:5px;padding:3px 6px 0}.row .avatar{width:33px;height:55px}.row strong{min-width:0;font-size:.74rem}.row em{font-size:.66rem}.row>svg{width:17px;height:17px}.top{font-size:.54rem;padding:2px 5px}
+  .bakeryStage.bakeryStage{padding:14px 10px;border-width:6px;border-radius:12px}.workbook{padding:11px 9px}.aunt{min-height:142px;margin:0 0 17px;gap:9px}.aunt .avatar{width:84px;height:140px}.aunt>div{padding:10px}.aunt p{font-size:.92rem}.taskBakery{min-height:142px;margin:0 0 17px;gap:9px}.taskBakery .avatar{width:84px;height:140px}.taskBakery>div{padding:11px}.taskBakery h2{font-size:1.14rem}.taskBakery p{font-size:.72rem}
   .table{font-size:.66rem}.table th{padding:6px 5px;font-size:.58rem}.table td{padding:5px}
   .pattern{font-size:.68rem}.gigo span{font-size:.64rem;padding:7px 6px}
   .run{font-size:.66rem;padding:8px 10px}.run b{font-size:.64rem}
-  .compare{gap:6px}.compare>div{padding:9px}.compare strong{font-size:.78rem}.compare small{font-size:.6rem}.compare>svg{width:16px}
-  .shelf span{width:36px;height:36px}.shelf svg{width:18px;height:18px}.shelf b{font-size:.64rem}
+  .compare{gap:6px}.compare>div{padding:10px 4px}.compare strong{font-size:.74rem}.compare small{font-size:.6rem}.compare>svg{width:20px;height:20px}.comparePeople{gap:0}.comparePeople .avatar{width:59px;height:98px}.lessonBody{grid-template-columns:1fr;gap:0;margin-top:16px;position:relative}.lessonBody>.avatar{position:absolute;right:6px;top:-40px;width:50px;height:83px}.lessonBody .workbook{padding-top:16px}.lessonBody h2{padding-right:46px;font-size:1.24rem;min-height:48px}
+  div.ending{min-height:350px;gap:12px}.shelf b{font-size:.8rem}.chat .avatar{width:94px;height:156px}
   .chat p{font-size:.72rem}.welcome strong{font-size:.98rem}.welcome>svg{width:24px;height:24px}
 }
+@media(prefers-reduced-motion:reduce){.avatar,.thinking,.thinking:before,.thinking:after,.card,.top,.pattern,.pattern small,.gigo,.shelf b,.chat,.run b{animation:none!important;transition:none!important}}

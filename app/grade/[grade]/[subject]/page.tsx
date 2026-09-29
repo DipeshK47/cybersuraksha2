@@ -8,7 +8,6 @@ import {
   PlayCircle,
   ShieldCheck,
 } from "lucide-react";
-import { ThemeToggle } from "../../../components/ThemeToggle";
 import {
   getGradeCurriculum,
   getGradeSubject,
@@ -90,7 +89,6 @@ export default async function SubjectPage({
             CyberSuraksha · Class {grade.grade} · {subject.name}
           </span>
           <Link href="/logout">Log out</Link>
-          <ThemeToggle />
         </div>
       </header>
 

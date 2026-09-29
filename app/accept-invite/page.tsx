@@ -62,7 +62,7 @@ function AcceptInviteForm() {
       tip={<>Invite links expire after seven days and can be used only once.</>}
       title="Accept your invite"
     >
-      <form onSubmit={accept}>
+      <form method="post" onSubmit={accept}>
         <label htmlFor="invite-name">Your full name</label>
         <input
           autoComplete="name"

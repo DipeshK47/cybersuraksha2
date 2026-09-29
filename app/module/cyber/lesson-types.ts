@@ -14,6 +14,8 @@ export type LessonDecision = {
   kind: LessonScoreKind;
   category: string;
   unsafe?: boolean;
+  feedback?: string;
+  question?: string;
 };
 
 export type RecordedDecision = LessonDecision & {
@@ -38,6 +40,7 @@ export type CyberLessonRuntime = {
   setCheckpoint: (checkpoint: string) => void;
   updateState: (patch: Record<string, unknown>) => void;
   recordDecision: (decision: LessonDecision) => boolean;
+  trackActivity: (type: string, payload?: unknown) => void;
   recordMistake: (
     feedback: MistakeFeedback,
     options?: { activity?: string; hints?: LessonHints },
@@ -47,6 +50,7 @@ export type CyberLessonRuntime = {
   closeHints: () => void;
   showHintFromMistake: () => void;
   completeLesson: (completion: LessonCompletion) => void;
+  runId: number;
   resetLesson: () => void;
   retrySave: () => void;
 };

@@ -1,47 +1,50 @@
-/* Pet machine chapter only: the UI-built fruit stall machine, fruit/rock tokens, memory slots, trays and meters. Shared pieces live in ../story-player.module.css. */
-.stall{display:grid;align-content:start;gap:10px;padding:26px 14px 14px;background-image:linear-gradient(180deg,#f8e7c4 0%,#f3dcae 66%,#c8965d 66%,#b7844f 100%)}
-.stall:before{content:"";position:absolute;inset:0 0 auto;height:14px;background:repeating-linear-gradient(90deg,#d6604b 0 24px,#fff3dc 24px 48px);box-shadow:0 3px 0 #0000001a}
-
-.head{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) 112px;align-items:center;gap:11px;padding:9px 11px;border-radius:12px;background:#1d5a60;box-shadow:inset 0 -4px 0 #174a4f,0 6px 14px #3b2a1030;color:#fff4db}
-.face{position:relative;width:54px;height:40px;border-radius:10px;background:#0f2f35}
-.face i{position:absolute;top:12px;left:13px;width:9px;height:9px;border-radius:50%;background:#9ff0da}
-.face i+i{left:auto;right:13px}
-.face b{position:absolute;bottom:8px;left:50%;width:14px;height:3px;border-radius:3px;background:#9ff0da;transform:translateX(-50%)}
-.face[data-face="happy"] i{top:14px;height:6px;border-radius:9px 9px 2px 2px}
-.face[data-face="happy"] b{width:18px;height:6px;border-radius:0 0 10px 10px}
-.face[data-face="confused"] i,.face[data-face="confused"] b{background:#ffc39a}
-.face[data-face="confused"] i+i{top:15px;width:6px;height:6px}
-.face[data-face="confused"] b{transform:translateX(-50%) rotate(-14deg)}
-.screen{display:grid;gap:2px;min-width:0}
-.screen small,.meter small{font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:#bfe1d9}
-.screen strong{font-family:var(--font-mono),monospace;font-size:.8rem;line-height:1.25;color:#fff4d8;overflow-wrap:anywhere}
-.meter{display:grid;gap:4px}
-.meter small:last-child{letter-spacing:0;text-transform:none;font-size:.62rem;color:#fff4db}
-.meter span{height:7px;border-radius:9px;background:#0f2f35;overflow:hidden}
+/* The stall is an illustrated stage; its speech, conveyor and sorted items stay live. */
+.stall{display:grid;align-content:start;gap:12px;padding:52px 24px 18px;background-image:url('/cyber-missions/refined/pet-market.webp');background-position:center;background-color:#d9af70}
+.head{position:relative;display:grid;grid-template-columns:190px minmax(0,1fr);grid-template-rows:1fr auto;align-items:end;gap:12px 18px;max-width:620px;width:100%;margin:0 auto}
+.face{position:relative;grid-row:1/3;width:190px;height:190px;isolation:isolate}
+.face:after{content:"";position:absolute;z-index:-1;left:12%;right:5%;bottom:2%;height:14px;border-radius:50%;background:#44250660;filter:blur(7px)}
+.robotArt{display:block;width:100%;height:100%;background:url('/cyber-missions/refined/pet-machine-happy.webp') center/contain no-repeat;filter:drop-shadow(0 5px 4px #44250630);animation:machineHello .5s var(--ease)}
+.face[data-face="confused"] .robotArt{background-image:url('/cyber-missions/refined/pet-machine-confused.webp')}
+.screen{position:relative;display:grid;align-content:center;gap:6px;min-width:0;min-height:86px;padding:15px 17px;border:1px solid #ffffff;border-radius:16px 16px 16px 4px;background:#fff9eaf2;box-shadow:0 5px 0 #9d642a30,0 12px 25px #57300c26}
+.screen:before{content:"";position:absolute;left:-7px;bottom:20px;width:14px;height:14px;background:#fff9ea;transform:rotate(45deg);border-left:1px solid #fff;border-bottom:1px solid #fff}
+.screen small,.meter small{font-size:.6rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#3f655d}
+.screen strong{position:relative;font-family:var(--font-display),sans-serif;font-size:1.12rem;line-height:1.25;color:#203f3d;overflow-wrap:anywhere}
+.meter{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;background:#174b50;box-shadow:0 4px 0 #0b34377d}
+.meter small{color:#d7ece2}
+.meter small:last-child{letter-spacing:0;text-transform:none;font-size:.65rem;color:#fff4db}
+.meter span{height:9px;border-radius:9px;background:#092f35;overflow:hidden}
 .meter b,.learnMeter b{display:block;height:100%;transform-origin:left;transition:transform .3s var(--ease)}
-.meter b{background:#f2c360}
+.meter b{border-radius:9px;background:linear-gradient(90deg,#f6bc51,#ffe3a0)}
 
-.belt{position:relative;display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 40px 10px 12px;border-radius:10px;background:linear-gradient(#3d4d52,#2b393d);box-shadow:inset 0 2px 0 #5a6c71}
-.belt:after{content:"";position:absolute;left:10px;right:10px;bottom:3px;height:4px;border-radius:2px;background:repeating-linear-gradient(90deg,#7c8f94 0 8px,transparent 8px 18px)}
-.belt>svg{position:absolute;right:11px;top:50%;width:20px;height:20px;color:#9ff0da;transform:translateY(-55%)}
-.belt em{font-size:.7rem;font-style:normal;font-weight:700;color:#dbe7e3}
+.belt{position:relative;isolation:isolate;display:flex;align-items:center;gap:8px;min-height:80px;margin:0 10px;padding:6px 48px 6px 15px;overflow:hidden;border:5px solid #447479;border-top-color:#6da0a1;border-bottom:9px solid #1a4348;border-radius:15px;background:#293438;box-shadow:inset 0 4px 8px #0007,0 6px 0 #4b2f1833,0 10px 16px #3e251626}
+.belt:before{content:"";position:absolute;z-index:-1;inset:0 -24px;background:repeating-linear-gradient(90deg,#435052 0 21px,#263335 21px 24px);animation:beltRoll .6s linear infinite;animation-play-state:paused}
+.belt[data-scanning="true"]:before{animation-play-state:var(--story-loop-state,paused)}
+.belt:after{content:"";position:absolute;right:8px;top:8px;bottom:8px;width:30px;border-radius:8px;background:#123d43;box-shadow:inset 0 1px 3px #0008}
+.belt>svg{position:absolute;z-index:1;right:14px;top:50%;width:19px;height:19px;color:#9ff0da;transform:translateY(-50%)}
+.belt em{font-size:.76rem;font-style:normal;font-weight:750;color:#eff7ec;text-shadow:0 1px 2px #000}
+.belt .token{width:54px;height:54px;background:transparent;box-shadow:none}
+.belt .thing{width:54px;height:54px;filter:drop-shadow(0 4px 3px #0008)}
+.belt[data-scanning="true"] .token{animation:conveyorTravel 3s linear both;animation-play-state:var(--story-loop-state,paused)}
 
-.bins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.bin{display:grid;align-content:start;gap:6px;min-width:0;min-height:88px;padding:8px 10px 10px;border:3px solid #c48a48;border-radius:12px;background:#fff6e3}
-.bin[data-bin="rock"]{border-color:#999b94;background:#efeee8}
-.bin>span{display:flex;align-items:center;gap:6px;font-size:.66rem;font-weight:850;color:#6a4b28}
-.bin[data-bin="rock"]>span{color:#4f5652}
+.bins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 9px}
+.bin{position:relative;display:grid;align-content:start;justify-items:center;gap:7px;min-width:0;min-height:145px;padding:0 6px 48px;isolation:isolate}
+.bin:before{content:"";position:absolute;z-index:-1;inset:18px 0 0;background:url('/cyber-missions/refined/pet-fruit-basket.webp') center bottom/100% 100% no-repeat;filter:drop-shadow(0 7px 4px #4c2c1540)}
+.bin[data-bin="rock"]:before{background-image:url('/cyber-missions/refined/pet-rock-crate.webp')}
+.bin>span{display:flex;align-items:center;gap:6px;position:relative;z-index:1;padding:5px 10px;border:1px solid #edcc8c;border-radius:7px;background:#fff5d9;box-shadow:0 3px 0 #71442322;font-size:.7rem;font-weight:850;color:#694318}
+.bin[data-bin="rock"]>span{border-color:#c0d4d5;background:#edf4ef;color:#284e50}
 .bin>span>svg{width:15px;height:15px}
-.bin>div{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:34px}
-.bin em{font-size:.64rem;font-style:normal;font-weight:600;opacity:.6}
+.bin>div{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:3px;min-height:47px;width:100%;padding:7px 3px 0}
+.bin .token{width:44px;height:44px;background:transparent;filter:drop-shadow(0 3px 2px #4425065c)}
+.bin .thing{width:44px;height:44px}
+.bin .token[data-mark="wrong"]{background:#fff0e7d9;box-shadow:0 0 0 2px #b4412f}
+.bin em{padding:3px 7px;border-radius:5px;background:#fff9e5d9;color:#654725;font-size:.67rem;font-style:normal;font-weight:700}
 
-/* Fruit icons and CSS-built rocks. */
-.thing{display:inline-grid;place-items:center;flex:none;width:30px;height:30px}
-.thing svg{width:26px;height:26px}
-.rock{display:block;width:24px;height:24px;border-radius:50%}
-.rock[data-rock="grey-rock"]{width:27px;height:20px;border-radius:45% 55% 40% 60%/55% 45% 55% 45%;background:radial-gradient(circle at 35% 30%,#c3c6bf,#7c807b 72%);box-shadow:inset -2px -3px 0 #62665f}
-.rock[data-rock="red-rock"]{background:radial-gradient(circle at 62% 64%,#6f2c22 0 1.6px,transparent 2px),radial-gradient(circle at 34% 58%,#6f2c22 0 1.3px,transparent 1.8px),radial-gradient(circle at 52% 34%,#6f2c22 0 1.2px,transparent 1.7px),radial-gradient(circle at 35% 30%,#dc7a63,#a8412f 72%);box-shadow:inset -2px -3px 0 #7d2e22}
-.rock[data-rock="pebble"]{width:28px;height:14px;background:radial-gradient(circle at 40% 30%,#eadabb,#b59c74 76%);box-shadow:inset -2px -2px 0 #957e59}
+@keyframes machineHello{from{opacity:0;transform:translateY(9px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes beltRoll{to{transform:translateX(24px)}}
+@keyframes conveyorTravel{from{transform:translateX(0)}to{transform:translateX(min(25vw,210px))}}
+
+/* One self-hosted atlas keeps all fruit and rock sprites visually consistent. */
+.thing{display:inline-block;flex:none;width:36px;height:36px;background:url('/cyber-missions/refined/fruit-atlas.webp') 0 0/400% 200% no-repeat}
 .token{position:relative;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#ffffffb8}
 .token[data-mark="wrong"]{background:#ffe2d8;box-shadow:0 0 0 2px #d4553f}
 .token[data-mark="right"]{background:#dff1d6;box-shadow:0 0 0 2px #4e9a5e}
@@ -70,9 +73,7 @@
 .task h2{margin-bottom:6px}
 .task>p{margin-bottom:12px}
 .examples button{padding:5px 10px 5px 5px;gap:5px}
-.examples .thing{width:26px;height:26px}
-.examples .thing svg{width:22px;height:22px}
-.examples .rock{transform:scale(.85)}
+.examples .thing{width:36px;height:36px}
 .examples.examples button[aria-pressed="true"]{opacity:1;background:#fff0c7;border-color:#c07a2c;box-shadow:0 0 0 2px #e7b25c}
 .trays{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0 11px}
 .tray{display:grid;align-content:start;gap:7px;min-width:0;min-height:88px;padding:9px 10px;border:2px dashed #c48a48;border-radius:12px;background:#fff6e3;color:#6a4b28;text-align:left}
@@ -89,7 +90,7 @@
 
 /* Test results after the task. */
 .result{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #dbe2d2;opacity:.3;transition:opacity .25s ease}
-.result .thing{width:40px;height:40px;border-radius:9px;background:#f1f2e6}
+.result .thing{width:40px;height:40px;border-radius:9px;background-color:#f1f2e6}
 .result>div{display:grid;gap:3px}
 .result strong,.check strong{font-size:.83rem}
 .result span,.check span{font-size:.71rem;line-height:1.4;color:#4d645b}
@@ -102,16 +103,58 @@
 .result[data-active="true"],.check[data-active="true"]{opacity:1}
 
 @media(max-width:600px){
-  .stall{gap:8px;padding:22px 9px 10px}
-  .head{grid-template-columns:auto minmax(0,1fr);gap:6px 9px;padding:8px 9px}
-  .meter{grid-column:1/-1;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px}
-  .face{width:46px;height:36px}.face i{top:11px;left:10px}.face i+i{left:auto;right:10px}
-  .screen strong{font-size:.72rem}
-  .belt{min-height:46px}.bins{gap:7px}.bin{min-height:80px;padding:7px 8px 8px}
-  .bin>div,.tray>div{gap:5px}.token{width:32px;height:32px}
+  .stall{gap:10px;padding:46px 10px 14px}
+  .head{grid-template-columns:128px minmax(0,1fr);grid-template-rows:auto auto;gap:9px 8px}
+  .face{grid-row:1;width:128px;height:144px;transform:translateY(12px)}
+  .screen{align-self:center;min-height:102px;padding:11px 10px;gap:5px}
+  .screen small{font-size:.53rem}.screen strong{font-size:.91rem}
+  .meter{grid-column:1/-1;grid-row:2;gap:8px;padding:9px 10px}
+  .belt{min-height:72px;margin:0 3px;padding-left:9px}.belt em{font-size:.69rem}
+  .belt .token,.belt .thing{width:46px;height:46px}
+  .bins{gap:10px;margin:0 1px}.bin{min-height:129px;padding:0 2px 37px}
+  .bin>span{gap:4px;padding:4px 6px;font-size:.6rem}.bin>span>svg{width:13px;height:13px}
+  .bin>div{gap:1px;padding:7px 0 0;min-height:50px}.bin .token,.bin .thing{width:28px;height:36px}
+  .bin .thing{background-size:400% 200%;width:28px;height:28px}
+  .tray>div{gap:5px}.token{width:32px;height:32px}
   .chat.chat>p{font-size:.7rem}.chat.chat>small{max-width:64px;text-align:right}.nani .chat.chat>p{font-size:1.05rem}
   .memory{gap:4px}.memory>span{min-height:50px}
   .examples button{font-size:.7rem;padding:4px 8px 4px 4px}
   .trays{gap:7px}.tray{min-height:80px;padding:8px}
   .result{gap:9px}.result span,.check span{font-size:.66rem}
 }
+
+.token{animation:sortArrive .28s var(--ease)}
+@keyframes sortArrive{from{opacity:.4;transform:translateY(-12px) rotate(-7deg) scale(.84)}to{opacity:1;transform:translateY(0) rotate(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.belt:before{animation:none}}
+
+/* The teaching board lives on the same market counter as the opening scenes. */
+.workspace{min-width:0;padding:20px;border-radius:14px;background:#fff5ddf5;box-shadow:0 9px 20px #55381830;color:#244b48}
+.workspace h2{margin:0 0 12px;font-family:var(--font-display),sans-serif;font-size:1.45rem;line-height:1.25}
+.workspace>p{font-size:.85rem;line-height:1.5}
+.workspace>small{display:block;margin-top:12px;font-size:.66rem;line-height:1.5;color:#694b2c}
+.memory{padding:12px;border:5px solid #6b9a90;border-radius:12px;background:#194b50}
+.memory>span{background:#245b5c;color:#b9d8c7;border-color:#9dbeb1}
+.memory>span[data-filled="true"]{border-color:#ecb357;background:#fff1cc}
+.trays{gap:18px}
+.tray.tray{min-height:155px;padding:0 6px 48px;border:0;border-radius:10px;background:transparent;justify-items:center;text-align:center;color:#5b3d20;transition:transform .2s var(--ease)}
+.tray.tray:hover:not([aria-disabled="true"]){transform:translateY(-3px)}
+.tray.tray:focus-visible{outline:3px solid #19696c;outline-offset:4px}
+.tray.tray[aria-disabled="true"]{cursor:default}
+.tray.tray>div{justify-content:center;gap:4px}
+.result.result{min-height:165px;padding:0 6px 48px;border:0;gap:9px}
+.result.result>div{flex-wrap:nowrap;gap:10px}
+.result.result strong{font-size:.72rem;color:#244b48;padding:5px;border-radius:5px;background:#fff7e9}
+.result.result .token,.result.result .thing{width:48px;height:48px}
+.result.result .thing{background-color:transparent}
+@media(max-width:600px){
+ .workspace{padding:14px 11px}.workspace h2{font-size:1.2rem}.workspace>p{font-size:.76rem}
+ .workspace .nani{margin-bottom:12px;padding-bottom:12px}
+ .trays{gap:8px}.tray.tray{min-height:133px;padding:0 2px 37px}
+ .result.result{min-height:147px;padding:0 2px 37px}.result.result>span{font-size:.6rem}
+ .result.result>div{flex-wrap:wrap;gap:4px}.result.result .token,.result.result .thing{width:36px;height:36px}
+ .result.result strong{font-size:.64rem}
+}
+
+/* The counter horizon stays fixed when the learning board grows. */
+.stall:has(.workspace){background-size:100% auto;background-repeat:no-repeat;background-position:center top}
+@media(max-width:600px){.stall:has(.workspace){background-size:auto 330px}}

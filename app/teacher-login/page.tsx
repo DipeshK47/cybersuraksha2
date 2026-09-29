@@ -48,7 +48,7 @@ export default function TeacherLoginPage() {
       }
       title="Teacher login"
     >
-      <form onSubmit={signIn}>
+      <form method="post" onSubmit={signIn}>
         <label htmlFor="teacher-email">Email</label>
         <input
           autoComplete="username"

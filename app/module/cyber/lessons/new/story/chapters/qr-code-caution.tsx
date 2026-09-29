@@ -78,8 +78,8 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
     if (solved || at > 2) return;
     if (option.id === task.answer) { setStep(at + 1); setWrong(""); setHint(""); return; }
     // The tempting PIN would really pay, so it sends the learner back to re-read the screen.
-    if (option.trap) { setStep(0); setWrong(""); setHint(`${option.why} Read the screen again.`); return; }
-    setWrong(option.id); setHint(option.why ?? "");
+    if (option.trap) { setStep(0); setWrong(""); setHint(`${option.why} Read the screen again.`, false); return; }
+    setWrong(option.id); setHint(option.why ?? "", false);
   }
   return <SceneSwap scene={scene} reduced={reduced}>
     {(scene === 0 || scene === 5) && <div className={k.device}>

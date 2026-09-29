@@ -35,7 +35,7 @@
 .stuck svg{width:30px;height:30px;color:#ffbe92}
 .stuck strong{font-family:var(--font-display),sans-serif;font-size:1.3rem;line-height:1.1}
 .stuck span{font-size:.72rem;color:#d7e4e1}
-svg[data-spin="true"]{animation:spin 1.2s linear infinite}
+svg[data-spin="true"]{animation:spin 1.2s linear infinite;animation-play-state:var(--story-loop-state,running)}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Ms Iyer's call (scene 3). */

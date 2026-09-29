@@ -1,6 +1,6 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, desc, eq, inArray } from "drizzle-orm";
 import { getDb } from "../../db";
-import { activityEvents } from "../../db/schema";
+import { activityEvents, learningAttempts, learningEvents } from "../../db/schema";
 
 /**
  * Real-time activity spine.
@@ -18,6 +18,9 @@ export const ACTIVITY_EVENT_TYPES = [
   "mistake",
   "privacy_leak",
   "module_completed",
+  "story_answered",
+  "story_viewed",
+  "story_feedback",
 ] as const;
 
 export type ActivityEventType = (typeof ACTIVITY_EVENT_TYPES)[number];
@@ -143,6 +146,19 @@ export async function deriveRunMetrics(
   studentId: number,
   moduleId: string,
 ): Promise<DerivedMetrics> {
+  const [latest] = await getDb().select().from(learningAttempts)
+    .where(and(eq(learningAttempts.studentId, studentId), eq(learningAttempts.moduleId, moduleId)))
+    .orderBy(desc(learningAttempts.startedAt)).limit(1);
+  if (latest && !latest.legacy) {
+    const rows = await getDb().select().from(learningEvents).where(eq(learningEvents.attemptId, latest.id)).orderBy(asc(learningEvents.createdAt));
+    const seen = new Set<string>();
+    return deriveMetricsFromEvents(rows.filter(e => {
+      if (e.type !== "question_answered") return true;
+      const id = String(parsePayload(e.payload).id ?? e.id);
+      if (seen.has(id)) return false;
+      seen.add(id); return true;
+    }));
+  }
   const events = await getDb()
     .select({ type: activityEvents.type, payload: activityEvents.payload })
     .from(activityEvents)

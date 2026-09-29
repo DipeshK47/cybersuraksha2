@@ -10,12 +10,7 @@
 .projectCard small{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#99702f}
 .projectCard strong{font-family:var(--font-display),sans-serif;font-size:1.15rem;line-height:1.15;color:#183b40}
 .projectCard>div:last-child>span{font-size:.7rem;color:#58706a}
-.filterArt{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:16px;height:138px;padding-bottom:16px;background:linear-gradient(170deg,#d3ebe3,#f6e5b8);border-bottom:14px solid #d5c08f}
-.sun{position:absolute;top:13px;left:16px;width:28px;height:28px;border-radius:50%;background:#f1b646;box-shadow:0 0 0 7px #f1b64633}
-.solar{width:56px;height:30px;margin-bottom:6px;border:2px solid #264657;border-radius:3px;background:linear-gradient(90deg,#9cc0d8 1px,transparent 1px) 0 0/14px 100%,linear-gradient(#9cc0d8 1px,transparent 1px) 0 0/100% 10px,#2f5f86;transform:skewX(-16deg)}
-.jar{width:54px;height:92px;border:3px solid #ffffffe0;border-top-width:0;border-radius:4px 4px 14px 14px;background:linear-gradient(#9b7446 0 24%,#8c979b 24% 44%,#e1c78c 44% 64%,#343a3d 64% 82%,#8fd0e6 82%);box-shadow:0 6px 14px #3a4a3a2e}
-.drip{width:18px;height:18px;margin-bottom:48px;color:#2f89a8}
-.glass{width:32px;height:46px;border:3px solid #ffffffe0;border-top:0;border-radius:0 0 8px 8px;background:linear-gradient(transparent 26%,#8fd0e6 26%)}
+.filterArt{position:relative;height:164px;background:#e5e4d2 url('/cyber-missions/refined/solar-filter.webp') center/cover}
 .checklist{display:grid;align-content:start;gap:8px;padding:13px}
 .checklist>strong{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#5d7169}
 .item{display:flex;align-items:center;gap:9px;min-height:40px;padding:8px 10px;border:1px solid #e0e6db;border-radius:9px;background:#fbfaf4;font-size:.78rem;color:#2a4a45}
@@ -40,13 +35,7 @@
 .flag{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 8px;border-radius:999px;background:#fbe1d5;color:#8a3b20;font-size:.63rem;font-weight:800}
 .flag svg{width:12px;height:12px}
 .thumb{position:relative;display:grid;place-items:center;width:58px;height:58px;border-radius:9px;overflow:hidden;color:#ffffffd9}
-.thumb svg{width:27px;height:27px}
-.thumb[data-kind="filter"]{background:linear-gradient(160deg,#8fd0e6,#2f7f86)}
-.thumb[data-kind="team"]{background:linear-gradient(160deg,#cde6b5,#5f9660)}
-.thumb[data-kind="sleep"]{background:linear-gradient(#a9cfe2 0 60%,#5d7c8e 60%);box-shadow:inset 0 0 0 4px #e6edef}
-.thumb[data-kind="sleep"] svg{transform:rotate(-16deg) translateY(4px)}
-.thumb i{position:absolute;top:9px;right:11px;font-size:.62rem;font-style:normal;font-weight:900;color:#fff}
-.thumb i+i{top:16px;right:17px;font-size:.5rem}
+.thumb img{width:100%;height:100%;object-fit:cover}
 
 /* Scene 2: the rules banner over the public view */
 .rule{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid #efd18f;border-radius:10px;background:#fff4d6;color:#5a4320}
@@ -132,7 +121,6 @@
 @media(max-width:600px){
   .portal{grid-template-columns:1fr;padding:10px;gap:10px}
   .filterArt{height:112px;border-bottom-width:10px;padding-bottom:10px}
-  .jar{height:78px;width:48px}
   .feedBody{padding:10px;gap:8px}
   .post{grid-template-columns:30px minmax(0,1fr) auto;gap:8px;padding:10px}
   .avatar{width:30px;height:30px}

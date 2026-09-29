@@ -2185,28 +2185,6 @@
   }
 }
 
-/* Dark theme refinement */
-
-:global(html[data-theme="dark"]) .toyCabin,
-:global(html[data-theme="dark"]) .isoScene,
-:global(html[data-theme="dark"]) .largeCrate {
-  background-color: var(--sl-surface-soft);
-}
-
-:global(html[data-theme="dark"]) .bucketWhite,
-:global(html[data-theme="dark"]) .shapeConveyor button:last-of-type {
-  color: #171e19;
-}
-
-:global(html[data-theme="dark"]) .tilewhite {
-  background: #f7f5ef;
-}
-
-:global(html[data-theme="dark"]) .feedback,
-:global(html[data-theme="dark"]) .saveStatus {
-  color: color-mix(in srgb, var(--sl-ink) 78%, var(--sl-muted));
-}
-
 /* Handbook-accurate SVG figures */
 
 .cubeAssemblyFigure {

@@ -1,3 +1,5 @@
+import { headers } from "next/headers";
+import { getStudentSessionFromCookieHeader } from "../../lib/student-session";
 import type { Metadata } from "next";
 import { ToyWorkshop } from "./ToyWorkshop";
 
@@ -12,12 +14,11 @@ export default async function ToyWorkshopPage({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const query = await searchParams;
-  const role = query.role === "teacher" ? "teacher" : "student";
-  const studentId =
-    typeof query.studentId === "string" ? query.studentId : undefined;
-  const className =
-    typeof query.className === "string" ? query.className : undefined;
+  await searchParams;
+  const session = await getStudentSessionFromCookieHeader((await headers()).get("cookie"));
+  const role = session ? "student" : "teacher";
+  const studentId = session ? String(session.student.id) : undefined;
+  const className = session?.student.className;
 
   return (
     <ToyWorkshop

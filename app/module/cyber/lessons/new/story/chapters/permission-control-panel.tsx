@@ -88,12 +88,12 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   function allowAll() {
     if (solved) return;
     setAllowed(perms.map(p => p.id));
-    setHint("Allow all would give a torch your contacts, location, camera and microphone. It only needs to shine, so switch off what it doesn’t need.");
+    setHint("Allow all would give a torch your contacts, location, camera and microphone. It only needs to shine, so switch off what it doesn’t need.", false);
   }
   function save() {
     if (solved) return;
     const left = perms.filter(p => allowed.includes(p.id));
-    if (left.length) { setHint(`${list(left.map(p => p.name))} ${left.length > 1 ? "are" : "is"} still on. Remember: ${left[0].why}`); return; }
+    if (left.length) { setHint(`${list(left.map(p => p.name))} ${left.length > 1 ? "are" : "is"} still on. Remember: ${left[0].why}`, false); return; }
     markSolved();
   }
 

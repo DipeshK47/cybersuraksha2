@@ -483,3 +483,43 @@ export const guardianSessions = sqliteTable(
     index("guardian_sessions_guardian_idx").on(table.guardianId),
   ],
 );
+
+/** Every learning session is preserved; runs remains the legacy latest-summary view. */
+export const learningAttempts = sqliteTable("learning_attempts", {
+  id: text("id").primaryKey(),
+  studentId: integer("student_id").notNull().references(() => students.id, { onDelete: "cascade" }),
+  moduleId: text("module_id").notNull(),
+  startedAt: integer("started_at").notNull(),
+  lastActiveAt: integer("last_active_at").notNull(),
+  completedAt: integer("completed_at"),
+  score: real("score"),
+  legacy: integer("legacy").notNull().default(0),
+}, t => [index("learning_attempt_student_module_idx").on(t.studentId, t.moduleId)]);
+
+export const learningEvents = sqliteTable("learning_events", {
+  id: text("id").primaryKey(),
+  attemptId: text("attempt_id").notNull().references(() => learningAttempts.id, { onDelete: "cascade" }),
+  type: text("type").notNull(),
+  payload: text("payload").notNull().default("{}"),
+  createdAt: integer("created_at").notNull(),
+}, t => [index("learning_events_attempt_idx").on(t.attemptId)]);
+
+export const assignments = sqliteTable("assignments", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  schoolId: integer("school_id").notNull().references(() => schools.id, { onDelete: "cascade" }),
+  teacherId: integer("teacher_id").notNull().references(() => teachers.id),
+  classId: integer("class_id").notNull().references(() => classes.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  instructions: text("instructions").notNull().default(""),
+  moduleIds: text("module_ids").notNull(),
+  dueAt: integer("due_at").notNull(),
+  totalMarks: real("total_marks").notNull(),
+  createdAt: integer("created_at").notNull(),
+  publishedAt: integer("published_at"),
+}, t => [index("assignment_class_idx").on(t.classId)]);
+
+export const assignmentStudents = sqliteTable("assignment_students", {
+  assignmentId: integer("assignment_id").notNull().references(() => assignments.id, { onDelete: "cascade" }),
+  studentId: integer("student_id").notNull().references(() => students.id, { onDelete: "cascade" }),
+  readAt: integer("read_at"),
+}, t => [uniqueIndex("assignment_student_unique_idx").on(t.assignmentId, t.studentId), index("assignment_student_inbox_idx").on(t.studentId)]);

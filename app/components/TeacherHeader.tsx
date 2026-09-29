@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function TeacherHeader({
   active,
 }: {
-  active: "lessons" | "roster" | "results" | "admin";
+  active: "lessons" | "roster" | "results" | "admin" | "lms";
 }) {
   return (
     <header className="teacherHeader">
@@ -19,6 +18,9 @@ export function TeacherHeader({
         <Link className={active === "roster" ? "active" : ""} href="/teach">
           Roster
         </Link>
+        <Link className={active === "lms" ? "active" : ""} href="/teach/lms">
+          Classroom
+        </Link>
         <Link className={active === "results" ? "active" : ""} href="/teach/results">
           Results
         </Link>
@@ -26,7 +28,6 @@ export function TeacherHeader({
           Admin
         </Link>
         <Link href="/logout">Log out</Link>
-        <ThemeToggle />
       </nav>
     </header>
   );

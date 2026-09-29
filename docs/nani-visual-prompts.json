@@ -1,0 +1,46 @@
+{
+  "chapter": "nanis-secret-code",
+  "generator": "built-in image_gen",
+  "created": "2026-09-28",
+  "use_case": "illustration-story",
+  "assets": [
+    {
+      "asset": "public/cyber-missions/refined/nani-carrom.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-4ea4-79c2-a956-b7d121310008/exec-c1e76f1d-73a9-4ef4-a645-d8a9004a7869.png",
+      "prompt": "Use case: illustration-story. Asset type: wide story scene artwork for a premium interactive Class 3 cyber safety lesson, landscape 3:2. Create an exquisitely crafted cinematic clay-like 3D children's storybook illustration of Sunday evening at an Indian grandmother's cozy house. Nani is a cheerful elderly Indian woman with warm brown skin, silver hair tied in a neat bun, round spectacles, a moss-green sari with a warm cream border. Rohan is an 8-year-old Indian boy with short dark hair, a teal T-shirt and mustard shorts. They sit facing each other on a woven rug, happily playing carrom; Nani is clearly delighted at winning, Rohan smiling in amazement. Accurate square wooden carrom board in foreground with black and white coins, red queen and striker. A small modern smartphone rests near Nani on the floor, screen blank and pale, no text. Cozy terracotta/cream plaster living room, soft sage sofa, wooden cabinet, potted plant, brass warm lamp, daylight becoming gold through a window. Rich tangible polished wood, textile, subtle paper-like textures, expressive appealing fully formed characters, premium animated feature still, no outline drawings. Composition: camera at board height, characters and board occupy center and upper two thirds, keep lower quarter simple rug to support HTML notification overlays. Palette warm cream, sage, golden honey, teal. No letters, captions, logos, UI panels, numbers or watermarks. Same friendly quality as a high-end 3D children's educational game.",
+      "scenes": [
+        1,
+        6
+      ]
+    },
+    {
+      "asset": "public/cyber-missions/refined/nani-phone-call.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-4ea4-79c2-a956-b7d121310008/exec-45ee3292-1603-493b-93d8-d1276a886d39.png",
+      "prompt": "Use case: illustration-story. Asset type: cinematic character vignette for the call and interaction slides of a premium Class 3 cyber-safety lesson. Reference image is identity and art style reference only: keep exactly the same friendly elderly Indian Nani in a moss green sari and silver bun, round spectacles, and 8-year-old Indian boy Rohan in a teal T-shirt and mustard shorts. New scene, landscape 3:2: Nani sits on her sage sofa holding a modern smartphone to her ear, leaning forward as if listening to a surprisingly insistent caller. Rohan stands close beside her, raising one open hand gently to say wait; his face is concerned but brave, Nani looks kindly puzzled. Both characters in center, waist up, fully visible faces and raised hand. Preserve cozy terracotta/cream Indian living room, warm evening window light, brass lamp and potted plant. Carrom board corner in lower foreground relates to story. Premium highly detailed polished animated-film 3D illustration, tangible textiles and skin, rich warm sage/teal/golden palette, emotionally expressive and charming for young children. The caller is not pictured. No scary imagery, no text, no numbers, no logos, no captions, no speech bubbles, no UI panels, no watermarks.",
+      "scenes": [
+        2,
+        4
+      ],
+      "reference": "nani-carrom.webp"
+    },
+    {
+      "asset": "public/cyber-missions/refined/nani-mum-reassures.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-4ea4-79c2-a956-b7d121310008/exec-99f14278-816a-4b90-b0e2-2bcf2dc492c8.png",
+      "prompt": "Use case: illustration-story. Asset type: wide reassurance scene for a premium Class 3 cyber-safety lesson. Reference image is character identity and visual style reference: preserve the same cheerful elderly Indian Nani with silver bun, round spectacles, moss-green sari with cream border, and 8-year-old Rohan with short dark hair, teal T-shirt and mustard shorts. New image: Rohan's mother, an Indian woman around 35 with dark tied-back hair and a muted terracotta kurta, sits beside Nani on the same sage sofa, arm warmly around Nani's shoulders and Rohan nestled at Nani's other side. Mum holds a smartphone at chest level angled so Nani and Rohan can all see a plain blank pale teal screen, and everyone looks relieved and happy. Waist up intimate family group, ALL three heads and faces clustered in middle horizontal third so suitable for a wide shallow crop, no facial cropping. Cozy Indian living room in golden evening light, terracotta cream walls, wooden cabinet, brass lamp, foliage, soft woven fabrics. Cinematic rich highly detailed polished 3D animated-feature children's storybook illustration matching the reference, friendly and age appropriate. No writing, numbers, captions, logos, watermark, speech bubbles or interface.",
+      "scenes": [
+        4,
+        5
+      ],
+      "reference": "nani-carrom.webp"
+    },
+    {
+      "asset": "public/cyber-missions/refined/nani-code-key.webp",
+      "source": "/Users/dipeshkumar/.codex/generated_images/01a0eade-4ea4-79c2-a956-b7d121310008/exec-d0581e3d-4e4c-4798-a5ad-ecf2fd169983.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent isolated educational prop illustration for a premium Class 3 cyber-safety story. Create one beautifully crafted large modern smartphone standing upright angled slightly in 3D, rounded teal case with a blank warm cream screen. In front of it rests a chunky golden brass house key, and a friendly teal rounded padlock with gold shackle stands beside the phone. Phone code works like a key is the concept. Arrange these three tangible objects into one readable compact composition, phone tallest at rear, key large recognizable in foreground, padlock lower right. Premium cinematic clay-like animated feature 3D, subtle warm sunlight, tactile brushed brass and teal painted materials, clean softened bevels, precise real object geometry. No characters, no environment, no floor plane, no background, genuine transparent background. No writing, no letters, no numbers, no icons drawn on the phone, no logos or watermarks. Soft natural contact shading only; silhouette must be crisp and usable as a cutout at 160 pixels.",
+      "scenes": [
+        3
+      ],
+      "transparent": true
+    }
+  ]
+}

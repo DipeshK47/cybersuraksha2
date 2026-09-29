@@ -239,7 +239,7 @@ export default function AdminPage() {
 
         <section className="teacherPanel">
           <h2>Invite a teacher</h2>
-          <form onSubmit={sendInvite}>
+          <form method="post" onSubmit={sendInvite}>
             <label htmlFor="invite-email">Work email</label>
             <input id="invite-email" name="email" required type="email" />
             <label htmlFor="invite-role">Role</label>
@@ -324,7 +324,7 @@ export default function AdminPage() {
 
         <section className="teacherPanel">
           <h2>Classes</h2>
-          <form onSubmit={createClass}>
+          <form method="post" onSubmit={createClass}>
             <label htmlFor="class-grade">Grade</label>
             <input
               id="class-grade"

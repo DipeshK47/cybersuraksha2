@@ -73,7 +73,7 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   const at = (fraction: number) => !playing || elapsed >= fraction * (script.scenes[scene].duration || 18);
   function choose(choice: Choice) {
     if (solved || step > 1) return;
-    if (!choice.ok) { setHint(choice.why ?? ""); return; }
+    if (!choice.ok) { setHint(choice.why ?? "", false); return; }
     setHint(""); setStep(value => value + 1);
   }
   const voiceProgress = playing ? Math.min(1, elapsed / ((script.scenes[1].duration || 20) * .72)) : 1;

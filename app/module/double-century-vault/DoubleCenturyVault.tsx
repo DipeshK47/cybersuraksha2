@@ -64,6 +64,7 @@ export function DoubleCenturyVault({
   className?: string;
 }) {
   const [screen, setScreen] = useState(0);
+  const [runKey, setRunKey] = useState(0);
   const [completed, setCompleted] = useState<Set<number>>(new Set());
   const [metrics, setMetrics] = useState<DcvMetrics>(emptyMetrics);
   const [soundOn, setSoundOn] = useState(true);
@@ -77,7 +78,7 @@ export function DoubleCenturyVault({
   const savedCompletion = useRef(false);
 
   const storageKey = `cybersuraksha-double-century-vault-v1-${studentId ?? "preview"}`;
-  const emit = useActivityEmitter(MODULE_ID, role === "student" && !!studentId);
+  const { emit } = useActivityEmitter(MODULE_ID, role === "student" && !!studentId, studentId);
   const contextQuery = useMemo(() => {
     const query = new URLSearchParams({ role });
     if (studentId) query.set("studentId", studentId);
@@ -300,6 +301,8 @@ export function DoubleCenturyVault({
   }
 
   function reset() {
+    emit("module_started", { restarted: true });
+    setRunKey((value) => value + 1);
     setScreen(0);
     setCompleted(new Set());
     setMetrics(emptyMetrics());
@@ -413,7 +416,7 @@ export function DoubleCenturyVault({
 
           <DcvStage
             completed={completed.has(screen)}
-            key={screen}
+            key={`${runKey}-${screen}`}
             metrics={metrics}
             onAnswer={recordAnswer}
             onComplete={completeCurrent}

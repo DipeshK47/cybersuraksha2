@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, LockKeyhole } from "lucide-react";
-import { ThemeToggle } from "../../components/ThemeToggle";
 
 const comingSoon = [
   {
@@ -45,7 +44,6 @@ export default async function TrackPage({
         <Link href={`/dashboard?${roleQuery}`}>← CyberSuraksha</Link>
         <div>
           <Link href="/logout">Log out</Link>
-          <ThemeToggle />
         </div>
       </header>
       <section className="trackShell">

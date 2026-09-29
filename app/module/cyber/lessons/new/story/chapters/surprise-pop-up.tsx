@@ -13,18 +13,11 @@ const claimHint = "Wait! Rohan never entered a contest, so this prize isn’t re
 const clues = [{ Icon: Gift, text: "A prize he never entered", at: .5 }, { Icon: Timer, text: "A timer that rushes him", at: .72 }, { Icon: Phone, text: "It wants Mum’s phone number", at: .86 }];
 const fieldHint = "Stop! Never type a phone number into a pop-up. Drag it to the trash instead.";
 
-/** A blocky game castle built from CSS. `built(at)` ghosts each piece until the narration reaches it. */
+/** Castle art sits behind the live flag, toolbar and prize window. */
 function CastleScene({ built = () => true, flag = false, dim = false, hotbar = false }: { built?: (at: number) => boolean; flag?: boolean; dim?: boolean; hotbar?: boolean }) {
   return <div className={r.land} aria-hidden="true">
-    <span className={r.sun} /><span className={r.cloud} /><span className={r.cloud} data-b="" />
-    <span className={r.hill} /><span className={r.hill} data-b="" /><span className={r.ground} />
-    <span className={r.moat} /><span className={r.bridge} data-on={built(.44)} />
-    <div className={r.castle}>
-      <span className={r.wall} />
-      {[0, 1, 2, 3].map(i => <span key={i} className={r.tower} data-t={i} data-on={built(.3 + i * .03)}><i /></span>)}
-      <span className={r.gate} data-on={built(.52)} />
-      {flag ? <span className={r.flag} /> : <span className={r.flagSlot}><Plus /></span>}
-    </div>
+    <span className={r.castleArt} data-on={built(.3)} />
+    {flag ? <span className={r.flag} /> : <span className={r.flagSlot}><Plus /></span>}
     {hotbar && <div className={r.hotbar}><span><Blocks /></span><span><Castle /></span><span data-pick=""><Flag /></span></div>}
     {dim && <span className={r.dim} />}
   </div>;
@@ -69,7 +62,7 @@ function TrashTask({ solved, markSolved, hint, setHint, reduced }: Pick<StoryWor
   }
   function trap(message: string) {
     if (done || dragged.current) return;
-    setHint(message);
+    setHint(message, false);
   }
 
   return <div className={k.panel}>

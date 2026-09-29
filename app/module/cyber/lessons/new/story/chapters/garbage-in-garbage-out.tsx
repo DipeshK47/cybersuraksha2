@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BadgeCheck, CakeSlice, ChefHat, CircleHelp, Cookie, Croissant, Database, GraduationCap, Hourglass, RefreshCw, ShieldCheck, Sparkles, Store, Undo2, UserCheck, UserX, Users, Wheat, X } from "lucide-react";
+import { ArrowRight, BadgeCheck, ChefHat, CircleHelp, Croissant, Database, GraduationCap, Hourglass, RefreshCw, ShieldCheck, Sparkles, Store, Undo2, UserCheck, UserX, Users, Wheat, X } from "lucide-react";
 import { useState } from "react";
 import { SceneSwap } from "../StoryPlayer";
 import type { StoryChapter, StoryWorldProps } from "../types";
@@ -35,7 +35,7 @@ function School({ name, mark }: { name: string; mark?: boolean }) {
   return <span className={g.school} data-school={name} data-mark={mark}>{name}</span>;
 }
 function Avatar({ name }: { name: string }) {
-  return <span className={g.avatar} data-who={name} aria-hidden="true">{name[0]}</span>;
+  return <span className={g.avatar} data-who={name} aria-hidden="true" />;
 }
 function Table({ rows, removed = [], mark, label }: { rows: Row[]; removed?: string[]; mark?: boolean; label: string }) {
   const out = (id: string) => removed.includes(id) || undefined;
@@ -69,8 +69,8 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
   }
   function rerun() {
     if (solved) return;
-    if (skillOut) { setHint(`The app can’t judge baking without ${skillOut.label}. Put it back, then rerun.`); return; }
-    if (!fixed) { setHint("Still only Hilltop names! One column tells the app nothing about baking. Remove that one."); setRan(false); return; }
+    if (skillOut) { setHint(`The app can’t judge baking without ${skillOut.label}. Put it back, then rerun.`, false); return; }
+    if (!fixed) { setHint("Still only Hilltop names! One column tells the app nothing about baking. Remove that one.", false); setRan(false); return; }
     setHint(""); setRan(true);
   }
   const status = solved ? "Fixed! The app now judges baking skills, not school names."
@@ -101,22 +101,27 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
       <div className={k.deviceFoot}>{scene === 0 ? <><Wheat /><span>Test bake day: all four loaves scored.</span><small>Pretend names and scores</small></> : <><CircleHelp /><span>The best test loaf… left out?</span><small>Both picks: Hilltop School</small></>}</div>
     </div>}
 
-    {scene === 2 && <div className={k.panel}>
+    {scene === 2 && <div className={`${k.panel} ${g.bakeryStage} ${g.ledger}`}>
       <div className={g.aunt}><Avatar name="Meera" /><div><span>Aunt Meera</span><p>“Back then, we mostly put job notices up at Hilltop School.”</p></div></div>
+      <div className={g.workbook}>
       <div className={g.tableHead}><Database aria-hidden="true" /><strong>Training data: old hiring records</strong><small>6 of 48 rows</small></div>
       <Table rows={records} mark={at(.3)} label="Old hiring records, pretend data" />
       <div className={g.pattern} data-show={at(.5)}><Sparkles aria-hidden="true" /><span>Pattern the app learned:</span><b>Hilltop School = hire</b><small data-show={at(.68)}>Biased data</small></div>
       <div className={g.gigo} data-show={at(.8)}><span>Flawed examples in</span><ArrowRight aria-hidden="true" /><span>Unfair answers out</span></div>
+      </div>
     </div>}
 
-    {scene === 3 && <div className={k.panel}>
+    {scene === 3 && <div className={`${k.panel} ${g.bakeryStage} ${g.task}`}>
+      <div className={g.taskBakery}><Avatar name="Meera" /><div>
       <h2>Fix the training data</h2>
       <p>Which column has nothing to do with baking? Tap it to remove it.</p>
+      </div></div>
+      <div className={g.workbook}>
       <div className={`${k.bank} ${g.columns}`}>{columns.map(({ id, label, Icon }) => { const out = removed.includes(id); return <button key={id} data-out={out} aria-label={`${out ? "Put back" : "Remove"} ${label} column`} disabled={solved} onClick={() => toggle(id)} type="button"><Icon aria-hidden="true" />{label}{out ? <Undo2 aria-hidden="true" /> : <X aria-hidden="true" />}</button>; })}</div>
       <Table rows={taskRows} removed={removed} label="Training data rows, pretend data" />
       <div className={g.run} data-fair={fair || solved}>
         <RefreshCw aria-hidden="true" /><span>{fair || solved ? "New shortlist" : "Current shortlist"}</span>
-        {list.map(a => <b key={a.name}>{a.name} {a.bake}/10</b>)}
+        {list.map(a => <b key={a.name}><Avatar name={a.name} />{a.name} {a.bake}/10</b>)}
         {!(fair || solved) && <em>Kavya left out</em>}
       </div>
       <p className={k.hint} aria-live="polite">{hint || status}</p>
@@ -126,23 +131,26 @@ function World({ scene, playing, elapsed, solved, markSolved, hint, setHint, red
           : <button className={k.primary} onClick={rerun} type="button"><RefreshCw />Rerun the app</button>}
       </div>
       <small>Pretend data. The app is a made-up example.</small>
+      </div>
     </div>}
 
-    {scene === 4 && <div className={k.panel}>
+    {scene === 4 && <div className={`${k.panel} ${g.bakeryStage} ${g.lesson}`}>
       <div className={g.compare}>
-        <div data-kind="old"><span>Old data</span><strong>Ishaan · Aarav</strong><small>Hilltop only</small></div>
+        <div data-kind="old"><span>Old data</span><div className={g.comparePeople}><Avatar name="Ishaan" /><Avatar name="Aarav" /></div><strong>Ishaan · Aarav</strong><small>Hilltop only</small></div>
         <ArrowRight aria-hidden="true" />
-        <div data-kind="new"><span>Fixed data</span><strong>Kavya · Ishaan</strong><small>Top test bakes</small></div>
+        <div data-kind="new"><span>Fixed data</span><div className={g.comparePeople}><Avatar name="Kavya" /><Avatar name="Ishaan" /></div><strong>Kavya · Ishaan</strong><small>Top test bakes</small></div>
       </div>
+      <div className={g.lessonBody}><Avatar name="Meera" /><div className={g.workbook}>
       <h2>Garbage in, garbage out</h2>
       {[[Database, "AI learns from examples"], [Store, "Check where the data came from"], [UserCheck, "Look at every result"], [BadgeCheck, "A person makes the final choice"]].map(([Icon, text], i) => { const I = Icon as typeof Database; return <div className={k.step} key={text as string} data-active={at(.42 + i * .13)}><span><I /></span>{text as string}</div>; })}
       <small>The app only helps. Aunt Meera still meets every baker.</small>
+      </div></div>
     </div>}
 
     {scene === 5 && <div className={k.device}>
       <div className={k.deviceBar}><span><ChefHat size={16} /> MEERA’S BAKERY</span><span>Team board · Monday</span></div>
       <div className={`${k.deviceArt} ${g.app} ${g.ending}`}>
-        <div className={g.shelf}>{[Croissant, Wheat, CakeSlice, Cookie].map((Icon, i) => <span key={i}><Icon aria-hidden="true" /></span>)}<b data-show={at(.2)}>Sold out by lunch!</b></div>
+        <div className={g.shelf}><b data-show={at(.2)}>Sold out by lunch!</b></div>
         <div className={g.chat} data-show={at(.3)}><Avatar name="Kavya" /><p><strong>Kavya</strong>Thank you for the chance! Fresh bread again tomorrow.</p></div>
         <div className={g.welcome}><BadgeCheck aria-hidden="true" /><div><strong>Welcome to the team, Kavya!</strong><span>Chosen for her baking skills</span></div></div>
       </div>

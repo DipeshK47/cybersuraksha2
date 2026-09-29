@@ -1,36 +1,14 @@
 /* Rohan's pop-up chapter only: a CSS-built game castle, the fake prize window, the trash dock and the ad-or-trick cards. Shared pieces live in ../story-player.module.css. */
 .sky,.arena{background-image:linear-gradient(#8fd0ee,#d9f1f8 64%)}
+.sky{aspect-ratio:16/9;min-height:205px}
 
-/* ── The castle world ── */
+/* The castle is generated art; the last flag is still a live game element. */
 .land{position:absolute;inset:0;overflow:hidden}
-.sun{position:absolute;top:13%;right:9%;width:40px;height:40px;border-radius:50%;background:#ffd76a;box-shadow:0 0 0 9px #ffd76a3d}
-.cloud{position:absolute;top:17%;left:40%;width:70px;height:20px;border-radius:20px;background:#fff;opacity:.92}
-.cloud:before{content:"";position:absolute;left:14px;top:-12px;width:32px;height:28px;border-radius:50%;background:inherit}
-.cloud[data-b]{top:30%;left:auto;right:26%;transform:scale(.7)}
-.hill{position:absolute;bottom:20%;left:-12%;width:62%;height:36%;border-radius:50% 50% 0 0;background:#a3d37f}
-.hill[data-b]{left:auto;right:-14%;width:68%;height:29%;background:#8fc76c}
-.ground{position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(#72b451,#5a9a40)}
-.moat{position:absolute;inset:auto 0 7%;height:9%;background:linear-gradient(#63b3de,#3a86b8);box-shadow:inset 0 3px #ffffff55}
-.bridge{position:absolute;left:50%;bottom:5%;width:min(11%,56px);height:15%;transform:translateX(-50%);border-inline:3px solid #6e4424;background:repeating-linear-gradient(0deg,#b07845 0 5px,#8b5a30 5px 7px)}
-.castle{position:absolute;left:50%;bottom:19%;width:min(60%,320px);aspect-ratio:5/3;transform:translateX(-50%)}
-.wall,.tower{position:absolute;bottom:0;background-color:#e2d9c5;background-image:linear-gradient(0deg,#b9ad94 2px,transparent 2px),linear-gradient(90deg,#b9ad94 2px,transparent 2px);background-size:18px 12px;box-shadow:inset -7px 0 #00000014}
-.wall{left:12%;right:12%;height:46%}
-.wall:before,.tower:before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:repeating-linear-gradient(90deg,#e2d9c5 0 8px,transparent 8px 14px)}
-.tower{width:17%;height:70%;transition:opacity .3s ease}
-.tower[data-t="0"]{left:0}
-.tower[data-t="3"]{right:0}
-.tower[data-t="1"],.tower[data-t="2"]{width:14%;height:84%}
-.tower[data-t="1"]{left:24%}
-.tower[data-t="2"]{right:24%}
-.tower[data-t="1"]:before,.tower[data-t="2"]:before{display:none}
-.tower[data-t="1"]:after,.tower[data-t="2"]:after{content:"";position:absolute;left:-14%;right:-14%;bottom:100%;height:30%;background:linear-gradient(90deg,#d5654a 50%,#b84d36 50%);clip-path:polygon(50% 0,100% 100%,0 100%)}
-.tower i{position:absolute;left:50%;top:24%;width:32%;height:15%;min-height:7px;transform:translateX(-50%);border-radius:6px 6px 0 0;background:#3b4a5c}
-.gate{position:absolute;left:50%;bottom:0;width:17%;height:34%;transform:translateX(-50%);border:3px solid #a39578;border-bottom:0;border-radius:40px 40px 0 0;background:repeating-linear-gradient(90deg,#2f2a26 0 3px,#6a4c33 3px 9px);transition:opacity .3s ease}
-.bridge{transition:opacity .3s ease}
-.tower[data-on="false"],.gate[data-on="false"],.bridge[data-on="false"]{opacity:.22}
-.flag{position:absolute;left:50%;bottom:calc(46% + 8px);width:3px;height:40%;background:#5b4a3a;animation:rise .3s var(--ease)}
+.castleArt{position:absolute;inset:0;background:url('/cyber-missions/refined/castle-game.webp') center/cover;transition:opacity .3s ease}
+.castleArt[data-on="false"]{opacity:.32}
+.flag{position:absolute;left:50%;top:31%;width:3px;height:48px;background:#5b4a3a;filter:drop-shadow(0 2px 2px #112b3a55);animation:rise .3s var(--ease)}
 .flag:after{content:"";position:absolute;left:3px;top:0;width:34px;height:22px;background:linear-gradient(#ff9a3c,#e8742a);clip-path:polygon(0 0,100% 0,78% 50%,100% 100%,0 100%)}
-.flagSlot{position:absolute;left:50%;bottom:calc(46% + 12px);display:grid;place-items:center;width:30px;height:30px;transform:translateX(-50%);border:2px dashed #fff;border-radius:8px;background:#ffffff47;color:#fff}
+.flagSlot{position:absolute;left:50%;top:34%;display:grid;place-items:center;width:30px;height:30px;transform:translateX(-50%);border:2px dashed #fff;border-radius:8px;background:#153f4566;color:#fff}
 .flagSlot svg{width:16px;height:16px}
 .hotbar{position:absolute;right:10px;bottom:10px;display:flex;gap:4px;padding:4px;border-radius:9px;background:#1e3440cc}
 .hotbar span,.slots span{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;background:#ffffff1c;color:#e9f3f0}
@@ -41,7 +19,7 @@
 /* ── The fake prize window ── */
 .overlay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:14px}
 .popup{position:relative;z-index:2;width:min(100%,330px);border-radius:12px;background:#fff8e6;color:#3a2a1f;box-shadow:0 18px 40px #0b1a2a70}
-.popup:after{content:"";position:absolute;inset:-6px;border:3px solid #ffd23f;border-radius:16px;pointer-events:none;animation:popFlash 1s linear infinite}
+.popup:after{content:"";position:absolute;inset:-6px;border:3px solid #ffd23f;border-radius:16px;pointer-events:none;animation:popFlash 1s linear infinite;animation-play-state:var(--story-loop-state,running)}
 .popup[data-flash="false"]:after{animation:none}
 .arena .popup{cursor:grab;touch-action:none}
 .popTop{display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:12px 12px 0 0;background:linear-gradient(90deg,#d6336c,#f0822a);color:#fff;font-size:.66rem;font-weight:900;letter-spacing:.08em}
@@ -102,11 +80,6 @@
 @keyframes popFlash{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes rise{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
 @media(max-width:600px){
-  .sun{width:28px;height:28px;box-shadow:0 0 0 6px #ffd76a3d}
-  .cloud{width:50px;height:15px}.cloud:before{left:9px;top:-9px;width:24px;height:21px}
-  .castle{width:min(62%,300px)}
-  .wall,.tower{background-size:13px 9px}
-  .wall:before,.tower:before{top:-6px;height:6px;background:repeating-linear-gradient(90deg,#e2d9c5 0 6px,transparent 6px 10px)}
   .flag:after{width:22px;height:15px}
   .flagSlot{width:24px;height:24px}.flagSlot svg{width:13px;height:13px}
   .hotbar{right:7px;bottom:7px;gap:3px;padding:3px}

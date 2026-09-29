@@ -1,3 +1,4 @@
+import { recordLearningEvent } from "../../../db/lms";
 import { getPlayableModuleById } from "../../data/module-registry";
 import { isValidEventType, recordEvent } from "../../lib/activity";
 import { requireStudent } from "../../lib/student-session";
@@ -8,6 +9,8 @@ type IncomingEvent = {
   type?: string;
   payload?: unknown;
   runId?: number;
+  attemptKey?: string;
+  eventId?: string;
 };
 
 /**
@@ -31,7 +34,12 @@ export async function POST(request: Request) {
     const moduleId = event.moduleId ?? "";
     if (!getPlayableModuleById(moduleId)) continue; // unknown module -> skip
     if (!isValidEventType(event.type)) continue;
-    await recordEvent({
+    if (JSON.stringify(event.payload ?? {}).length > 2000) return Response.json({ error: "Activity details are too long." }, { status: 400 });
+    let fresh = true;
+    if (event.attemptKey && event.eventId) {
+      fresh = await recordLearningEvent({ studentId, moduleId, type: event.type, payload: event.payload, attemptKey: event.attemptKey, eventId: event.eventId });
+    }
+    if (fresh) await recordEvent({
       studentId,
       moduleId,
       type: event.type,
