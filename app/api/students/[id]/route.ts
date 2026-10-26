@@ -2,6 +2,7 @@ import { and, asc, eq } from "drizzle-orm";
 import { getDb } from "../../../../db";
 import { runs, students } from "../../../../db/schema";
 import { getAccessibleStudent, requireTeacher } from "../../../lib/auth";
+import { schoolContent } from "../../../lib/content-access";
 import { writeAudit } from "../../../lib/audit";
 
 /** A single student's report — only if the student is in the teacher's scope. */
@@ -38,7 +39,7 @@ export async function GET(
     name: student.name,
     createdAt: student.createdAt,
   };
-  return Response.json({ student: safeStudent, runs: studentRuns });
+  return Response.json({ student: safeStudent, runs: studentRuns, schoolName: (await schoolContent(auth.schoolId)).schoolName });
 }
 
 /** Remove a student from the roster — scoped + audited. */

@@ -1,3 +1,4 @@
+import { requireGradePage } from "../../../../lib/content-page";
 import Link from "next/link";
 import { getGradeCurriculum, getSubjectChapter } from "../../../../data/curriculum";
 import { ChapterLesson } from "./ChapterLesson";
@@ -17,7 +18,7 @@ export default async function ChapterPage({
   const { grade: gradeParam, subject: subjectSlug, chapter: chapterSlug } =
     await params;
   const query = await searchParams;
-  const role = query.role === "student" ? "student" : "teacher";
+  const { role } = await requireGradePage(Number(gradeParam));
   const studentId =
     typeof query.studentId === "string" ? query.studentId : undefined;
   const className =
@@ -32,6 +33,8 @@ export default async function ChapterPage({
   const gradeNumber = Number.parseInt(gradeParam, 10);
   const grade = getGradeCurriculum(gradeNumber);
   const found = getSubjectChapter(gradeNumber, subjectSlug, chapterSlug);
+
+  await requireGradePage(gradeNumber, found?.subject);
 
   if (!grade || !found) {
     return (

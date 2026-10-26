@@ -190,7 +190,7 @@ export const students = sqliteTable(
     createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   },
   (table) => [
-    uniqueIndex("students_class_roll_idx").on(table.className, table.rollNo),
+    uniqueIndex("students_school_class_roll_idx").on(table.schoolId, table.className, table.rollNo),
     index("students_class_id_idx").on(table.classId),
   ],
 );
@@ -512,6 +512,7 @@ export const assignments = sqliteTable("assignments", {
   title: text("title").notNull(),
   instructions: text("instructions").notNull().default(""),
   moduleIds: text("module_ids").notNull(),
+  questions: text("questions").notNull().default("[]"),
   dueAt: integer("due_at").notNull(),
   totalMarks: real("total_marks").notNull(),
   createdAt: integer("created_at").notNull(),
@@ -523,3 +524,21 @@ export const assignmentStudents = sqliteTable("assignment_students", {
   studentId: integer("student_id").notNull().references(() => students.id, { onDelete: "cascade" }),
   readAt: integer("read_at"),
 }, t => [uniqueIndex("assignment_student_unique_idx").on(t.assignmentId, t.studentId), index("assignment_student_inbox_idx").on(t.studentId)]);
+
+export const schoolSettings = sqliteTable("school_settings", {
+  schoolId: integer("school_id").primaryKey().references(() => schools.id, { onDelete: "cascade" }),
+  grades: text("grades").notNull(),
+  subjects: text("subjects").notNull(),
+});
+
+export const assignmentSubmissions = sqliteTable("assignment_submissions", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  assignmentId: integer("assignment_id").notNull().references(() => assignments.id, { onDelete: "cascade" }),
+  studentId: integer("student_id").notNull().references(() => students.id, { onDelete: "cascade" }),
+  answers: text("answers").notNull(),
+  grades: text("grades").notNull(),
+  feedback: text("feedback").notNull().default(""),
+  submittedAt: integer("submitted_at").notNull(),
+  gradedAt: integer("graded_at"),
+  gradedBy: integer("graded_by").references(() => teachers.id, { onDelete: "set null" }),
+}, t => [uniqueIndex("submission_assignment_student_idx").on(t.assignmentId, t.studentId)]);

@@ -16,7 +16,9 @@ test("the dynamic route validates lesson, grade, and viewer context", async () =
   assert.match(page, /searchParams/);
   assert.match(page, /studentId/);
   assert.match(page, /className/);
-  assert.match(page, /lesson\.grades\.includes/);
+  assert.match(page, /requireModulePage\(lesson\.id, requestedGrade\)/);
+  const access = await source("app/lib/content-page.ts");
+  assert.match(access, /permitsModule\(context\.access, playable\)/);
   assert.match(page, /CyberLessonPage/);
 });
 

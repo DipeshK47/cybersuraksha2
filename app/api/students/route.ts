@@ -6,12 +6,13 @@ import { canAccessClass, requireTeacher } from "../../lib/auth";
 import { writeAudit } from "../../lib/audit";
 import { hashPassword } from "../../lib/password";
 import { createStudentsSchema, parseJson } from "../../lib/validation";
+import { schoolContent } from "../../lib/content-access";
 
 function makeAccessCode(rollNo: string) {
   const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   const bytes = crypto.getRandomValues(new Uint8Array(6));
   const suffix = Array.from(bytes, (byte) => alphabet[byte % alphabet.length]).join("");
-  return `DPS${rollNo}${suffix}`.slice(0, 12);
+  return `${rollNo.slice(0, 4)}${suffix}`;
 }
 
 /**
@@ -33,6 +34,7 @@ export async function POST(request: Request) {
   if (parsed.error) return parsed.error;
 
   const className = parsed.data.className.trim().toUpperCase();
+  const access = await schoolContent(auth.schoolId);
   const rows = parsed.data.students
     .map((student) => ({
       rollNo: student.rollNo?.trim() ?? "",
@@ -49,7 +51,7 @@ export async function POST(request: Request) {
 
   // Resolve the class within the teacher's own school.
   let [klass] = await db
-    .select({ id: classes.id })
+    .select({ id: classes.id, grade: classes.grade })
     .from(classes)
     .where(and(eq(classes.schoolId, auth.schoolId), eq(classes.name, className)))
     .limit(1);
@@ -62,9 +64,9 @@ export async function POST(request: Request) {
       );
     }
     const grade = Number.parseInt(className, 10);
-    if (!Number.isInteger(grade)) {
+    if (!Number.isInteger(grade) || !access.grades.includes(grade)) {
       return Response.json(
-        { error: "Class name must start with a grade number, e.g. 7B." },
+        { error: "Class name must start with an enabled grade, e.g. 7B." },
         { status: 400 },
       );
     }
@@ -72,13 +74,16 @@ export async function POST(request: Request) {
     [klass] = await db
       .insert(classes)
       .values({ schoolId: auth.schoolId, grade, section, name: className })
-      .returning({ id: classes.id });
+      .returning({ id: classes.id, grade: classes.grade });
   } else if (!(await canAccessClass(auth, klass.id))) {
     return Response.json(
       { error: "You are not assigned to that class." },
       { status: 403 },
     );
   }
+
+  if (!access.grades.includes(klass.grade)) return Response.json({ error: "This grade is disabled in school curriculum settings." }, { status: 400 });
+  if (new Set(rows.map(row => row.rollNo)).size !== rows.length) return Response.json({ error: "Each student must have a different roll number." }, { status: 400 });
 
   // Generate + hash a code per student; keep the plaintext only in memory.
   const codeByRoll = new Map<string, string>();

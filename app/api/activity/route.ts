@@ -3,6 +3,8 @@ import { getPlayableModuleById } from "../../data/module-registry";
 import { isValidEventType, recordEvent } from "../../lib/activity";
 import { requireStudent } from "../../lib/student-session";
 import { activitySchema, parseJson } from "../../lib/validation";
+import { studentContent } from "../../lib/content-access";
+import { permitsModule } from "../../lib/content-policy";
 
 type IncomingEvent = {
   moduleId?: string;
@@ -30,9 +32,15 @@ export async function POST(request: Request) {
     "events" in body ? body.events : [body];
 
   let accepted = 0;
+  const access = await studentContent(session.student);
+  for (const event of incoming) {
+    const playable = getPlayableModuleById(event.moduleId ?? "");
+    if (playable && !permitsModule(access, playable)) return Response.json({ error: "This content is not assigned to your class." }, { status: 403 });
+    if (JSON.stringify(event.payload ?? {}).length > 2000) return Response.json({ error: "Activity details are too long." }, { status: 400 });
+  }
   for (const event of incoming) {
     const moduleId = event.moduleId ?? "";
-    if (!getPlayableModuleById(moduleId)) continue; // unknown module -> skip
+    if (!getPlayableModuleById(moduleId)) continue; // unknown playable -> skip
     if (!isValidEventType(event.type)) continue;
     if (JSON.stringify(event.payload ?? {}).length > 2000) return Response.json({ error: "Activity details are too long." }, { status: 400 });
     let fresh = true;
@@ -44,7 +52,7 @@ export async function POST(request: Request) {
       moduleId,
       type: event.type,
       payload: event.payload,
-      runId: typeof event.runId === "number" ? event.runId : null,
+      runId: null,
     });
     accepted += 1;
   }

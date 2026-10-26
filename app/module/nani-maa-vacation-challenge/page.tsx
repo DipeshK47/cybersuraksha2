@@ -1,5 +1,4 @@
-import { headers } from "next/headers";
-import { getStudentSessionFromCookieHeader } from "../../lib/student-session";
+import { requireModulePage } from "../../lib/content-page";
 import type { Metadata } from "next";
 import { NaniMaaVacationChallenge } from "./NaniMaaVacationChallenge";
 
@@ -15,8 +14,7 @@ export default async function NaniMaaVacationChallengePage({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   await searchParams;
-  const session = await getStudentSessionFromCookieHeader((await headers()).get("cookie"));
-  const role = session ? "student" : "teacher";
+  const { student: session, role } = await requireModulePage("grade-3-nani-maa-vacation-challenge");
   const studentId = session ? String(session.student.id) : undefined;
   const className = session?.student.className;
 

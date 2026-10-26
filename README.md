@@ -1,7 +1,7 @@
 # CyberSuraksha
 
 CyberSuraksha is a local learning academy for Computational Thinking and
-Artificial Intelligence for Classes 3 to 10. The current playable Class 3
+Artificial Intelligence for Classes 3 to 12. The current playable Class 3
 modules include:
 
 - Secret Message Rescue
@@ -142,6 +142,10 @@ invite produces a one-time `/accept-invite?token=…` link, shown once.
   optional `CYBERSURAKSHA_ADMIN_NAME` / `CYBERSURAKSHA_SCHOOL_NAME`) and that single
   school admin is provisioned instead. No demo password is ever created. Build
   the rest of the roster through the admin console.
+
+## School backend and client handoff
+
+See [School backend handoff](docs/SCHOOL_BACKEND_HANDOFF.md) for school-specific grades and subjects, teacher permissions, custom assignments, grading, marks exports, student progress, local checks, and the remaining AWS integration. Configure curriculum in **Admin**, then use **Classroom** for teaching and assessment. University workflows are outside the current delivery.
 
 ## 7. Local database
 

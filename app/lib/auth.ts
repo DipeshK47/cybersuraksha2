@@ -1,4 +1,4 @@
-import { eq, inArray } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { getDb } from "../../db";
 import { classes, students, teacherClasses } from "../../db/schema";
 import { getSession, type SessionTeacher } from "./session";
@@ -61,7 +61,8 @@ export async function scopedClassIds(
   const rows = await db
     .select({ id: teacherClasses.classId })
     .from(teacherClasses)
-    .where(eq(teacherClasses.teacherId, teacher.id));
+    .innerJoin(classes, eq(classes.id, teacherClasses.classId))
+    .where(and(eq(teacherClasses.teacherId, teacher.id), eq(classes.schoolId, teacher.schoolId)));
   return rows.map((row) => row.id);
 }
 
@@ -89,7 +90,7 @@ export async function getAccessibleStudent(
     .from(students)
     .where(eq(students.id, studentId))
     .limit(1);
-  if (!student) return null;
+  if (!student || student.schoolId !== teacher.schoolId) return null;
 
   if (student.classId != null) {
     const allowed = await canAccessClass(teacher, student.classId);
@@ -111,6 +112,6 @@ export async function scopedStudentIds(
   const rows = await getDb()
     .select({ id: students.id })
     .from(students)
-    .where(inArray(students.classId, classIds));
+    .where(and(eq(students.schoolId, teacher.schoolId), inArray(students.classId, classIds)));
   return rows.map((row) => row.id);
 }

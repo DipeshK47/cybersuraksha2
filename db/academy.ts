@@ -1,4 +1,4 @@
-import { asc, eq, inArray, sql } from "drizzle-orm";
+import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { getDb } from ".";
 import { ensureMigrated } from "./migrate";
 import { classes, runs, schools, students, teachers } from "./schema";
@@ -198,7 +198,7 @@ async function seedDemoAcademy(): Promise<void> {
     let [row] = await db
       .select({ id: classes.id })
       .from(classes)
-      .where(eq(classes.name, className))
+      .where(and(eq(classes.schoolId, school.id), eq(classes.name, className)))
       .limit(1);
     if (!row) {
       const grade = Number.parseInt(className, 10);
@@ -214,7 +214,7 @@ async function seedDemoAcademy(): Promise<void> {
   // 4. Students (password hashed; plaintext demo code never persisted)
   const [studentCountRow] = await db
     .select({ count: sql<number>`count(*)` })
-    .from(students);
+    .from(students).where(eq(students.schoolId, school.id));
   if (Number(studentCountRow?.count ?? 0) === 0) {
     const rows = await Promise.all(
       seedStudents.map(async (student) => ({
@@ -232,11 +232,12 @@ async function seedDemoAcademy(): Promise<void> {
   // 5. Demo runs
   const [runCountRow] = await db
     .select({ count: sql<number>`count(*)` })
-    .from(runs);
+    .from(runs).innerJoin(students, eq(students.id, runs.studentId)).where(eq(students.schoolId, school.id));
   if (Number(runCountRow?.count ?? 0) === 0) {
     const studentRows = await db
       .select({ id: students.id, rollNo: students.rollNo })
       .from(students)
+      .where(eq(students.schoolId, school.id))
       .orderBy(asc(students.id));
     const byRoll = new Map(studentRows.map((s) => [s.rollNo, s]));
     const values = seedRuns.flatMap((run) => {

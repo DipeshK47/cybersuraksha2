@@ -31,12 +31,14 @@ export default function ParentReportPage() {
   const params = useParams<{ id: string }>();
   const [student, setStudent] = useState<Student | null>(null);
   const [runs, setRuns] = useState<Run[]>([]);
+  const [schoolName, setSchoolName] = useState("School");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    void getJson<{ student?: Student; runs?: Run[]; error?: string }>(
+    void getJson<{ student?: Student; runs?: Run[]; schoolName?: string; error?: string }>(
       `/api/students/${params.id}`,
     ).then((payload) => {
+      setSchoolName(payload.schoolName ?? "School");
       setStudent(payload.student ?? null);
       setRuns(payload.runs ?? []);
       setLoading(false);
@@ -65,7 +67,7 @@ export default function ParentReportPage() {
 
       <article className="parentReportPaper">
         <section className="parentReportHero">
-          <p>Delhi Public School, R.K. Puram · CyberShiksha</p>
+          <p>{schoolName} · CyberShiksha</p>
           <h1>{student.name}</h1>
           <span>Personal Cyber-Safety Progress Report</span>
           <div>Class {student.className} · Roll {student.rollNo}</div>

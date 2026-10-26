@@ -1,5 +1,4 @@
-import { headers } from "next/headers";
-import { getStudentSessionFromCookieHeader } from "../../../lib/student-session";
+import { requireModulePage } from "../../../lib/content-page";
 import { notFound } from "next/navigation";
 import { getCyberLesson } from "../../../data/cyber-lessons";
 import { CyberLessonPage } from "../CyberLessonPage";
@@ -23,11 +22,7 @@ export default async function CyberLessonRoute({
     typeof query.grade === "string"
       ? Number.parseInt(query.grade, 10)
       : defaultGrade;
-  const grade = lesson.grades.includes(requestedGrade)
-    ? requestedGrade
-    : defaultGrade;
-  const session = await getStudentSessionFromCookieHeader((await headers()).get("cookie"));
-  const role = session ? "student" : "teacher";
+  const { student: session, role, grade } = await requireModulePage(lesson.id, requestedGrade);
   const studentId = session ? String(session.student.id) : undefined;
   const className = session?.student.className;
 

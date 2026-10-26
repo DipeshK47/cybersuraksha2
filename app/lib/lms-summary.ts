@@ -1,9 +1,10 @@
 export type LearningEvent = { id: string; type: string; payload: string; createdAt: number };
 export type LearningAttempt = { id: string; studentId: number; moduleId: string; startedAt: number; lastActiveAt: number; completedAt: number | null; score: number | null; legacy: number };
-export type Assignment = { id: number; title: string; instructions: string; moduleIds: string; classId: number; dueAt: number; totalMarks: number; createdAt: number; publishedAt: number | null };
+import type { AssignmentQuestion, QuestionGrade, Submission } from "./assignment-assessment";
+export type Assignment = { id: number; title: string; instructions: string; moduleIds: string; questions?: string; classId: number; dueAt: number; totalMarks: number; createdAt: number; publishedAt: number | null };
 
 export function eventDetails(event: LearningEvent): Record<string, unknown> {
-  try { return JSON.parse(event.payload); } catch { return {}; }
+  try { const value = JSON.parse(event.payload); return value && typeof value === "object" && !Array.isArray(value) ? value : {}; } catch { return {}; }
 }
 
 /** Final grades use each exercise's first recorded answer; retries remain visible as learning activity. */
@@ -22,17 +23,24 @@ export function attemptSummary(events: LearningEvent[], questionIds?: string[]) 
     score: total && (!questionIds || total === questionIds.length) ? [...first.values()].filter(Boolean).length / total * 100 : null };
 }
 
-export function assignmentSummary(assignment: Assignment, attempts: LearningAttempt[], now = Date.now()) {
+export function assignmentSummary(assignment: Assignment, attempts: LearningAttempt[], now = Date.now(), submission?: Submission | null) {
   const moduleIds: string[] = JSON.parse(assignment.moduleIds);
+  const questions: AssignmentQuestion[] = JSON.parse(assignment.questions ?? "[]");
+  const grades: QuestionGrade[] = JSON.parse(submission?.grades ?? "[]");
+  const customPossible = questions.reduce((sum, q) => sum + q.marks, 0);
+  const customGraded = !questions.length || !!submission && questions.every(q => grades.some(g => g.questionId === q.id && g.marks != null));
+  const customMarks = customGraded ? grades.reduce((sum, g) => sum + (g.marks ?? 0), 0) : null;
   const latest = moduleIds.map(moduleId => attempts.filter(a => a.moduleId === moduleId && a.completedAt != null)
     .sort((a, b) => (b.completedAt! - a.completedAt!) || (b.startedAt - a.startedAt) || b.id.localeCompare(a.id))[0] ?? null);
   const completed = latest.filter((a): a is LearningAttempt => a !== null);
-  const done = completed.length === moduleIds.length;
-  const completedAt = done ? Math.max(...completed.map(a => a.completedAt!)) : null;
-  const alreadyCompleted = done && assignment.publishedAt != null && completed.every(a => a.completedAt! <= assignment.publishedAt!);
-  const graded = done && completed.every(a => a.score != null);
-  const score = graded ? completed.reduce((n, a) => n + a.score!, 0) / moduleIds.length : null;
-  const marks = score == null ? null : Math.round(score / 100 * assignment.totalMarks * 100) / 100;
+  const done = completed.length === moduleIds.length && (!questions.length || !!submission) && moduleIds.length + questions.length > 0;
+  const completedAt = done ? Math.max(...completed.map(a => a.completedAt!), submission?.submittedAt ?? 0) : null;
+  const alreadyCompleted = done && !questions.length && assignment.publishedAt != null && completed.every(a => a.completedAt! <= assignment.publishedAt!);
+  const graded = done && customGraded && completed.every(a => a.score != null);
+  const lessonScore = moduleIds.length ? completed.reduce((n, a) => n + (a.score ?? 0), 0) / moduleIds.length : 0;
+  const marks = graded ? Math.round((lessonScore / 100 * (assignment.totalMarks - customPossible) + (customMarks ?? 0)) * 100) / 100 : null;
+  const score = marks == null ? null : marks / assignment.totalMarks * 100;
   return { completed: completed.length, total: moduleIds.length, latest, completedAt, alreadyCompleted, score, marks,
-    status: done ? alreadyCompleted ? "Already completed" : completedAt! > assignment.dueAt ? "Completed late" : "Completed" : now > assignment.dueAt ? "Overdue" : attempts.some(a => moduleIds.includes(a.moduleId)) ? "In progress" : "Not started" };
+    customQuestions: questions.length, customSubmitted: !!submission, customMarks, customPossible, awaitingGrading: done && !customGraded,
+    status: done ? !customGraded ? "Awaiting grading" : alreadyCompleted ? "Already completed" : completedAt! > assignment.dueAt ? "Completed late" : "Completed" : now > assignment.dueAt ? "Overdue" : submission || attempts.some(a => moduleIds.includes(a.moduleId)) ? "In progress" : "Not started" };
 }

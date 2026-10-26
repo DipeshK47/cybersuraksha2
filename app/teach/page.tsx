@@ -125,7 +125,7 @@ export default function RosterPage() {
         <section className="teacherIntro">
           <h1>Class roster</h1>
           <p>
-            Delhi Public School, R.K. Puram — paste your class once and every
+            Paste your class once and every
             student gets their own account with a roll number and password.
             Print the login slips, hand them out, done.
           </p>
@@ -229,7 +229,7 @@ export default function RosterPage() {
                       <td>{student.name}</td>
                       <td>
                         <div className="tableActions">
-                          <Link href={`/teach/student/${student.id}`}>report</Link>
+                          <Link href={`/teach/lms/students/${student.id}`}>report</Link>
                           <button onClick={() => resetPassword(student)} type="button">
                             <RotateCcw aria-hidden="true" /> reset password
                           </button>

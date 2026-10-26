@@ -12,7 +12,7 @@ import { playableModules } from "../../data/module-registry";
  *
  * Two sources, deliberately: `/api/academy` for saved mission runs, and
  * `/api/analytics` for metrics the server derives from real activity events
- * (which a client cannot spoof). `/api/live` streams new events as they
+ * (these remain browser-reported practice estimates). `/api/live` streams new events as they
  * happen. Everything is already scoped to the signed-in teacher's classes.
  */
 

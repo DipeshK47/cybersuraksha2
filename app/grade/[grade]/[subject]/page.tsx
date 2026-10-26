@@ -1,3 +1,4 @@
+import { requireGradePage } from "../../../lib/content-page";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -44,7 +45,7 @@ export default async function SubjectPage({
 }) {
   const { grade: gradeParam, subject: subjectParam } = await params;
   const query = await searchParams;
-  const role = query.role === "student" ? "student" : "teacher";
+  const { role } = await requireGradePage(Number(gradeParam));
   const studentId =
     typeof query.studentId === "string" ? query.studentId : undefined;
   const className =
@@ -59,6 +60,8 @@ export default async function SubjectPage({
   const gradeNumber = Number.parseInt(gradeParam, 10);
   const grade = getGradeCurriculum(gradeNumber);
   const subject = getGradeSubject(gradeNumber, subjectParam);
+
+  await requireGradePage(gradeNumber, subject);
 
   if (!grade || !subject) {
     return (

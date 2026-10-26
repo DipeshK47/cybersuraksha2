@@ -2,6 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import { Copy, ShieldCheck } from "lucide-react";
+import { SchoolCurriculum } from "../../components/lms/SchoolCurriculum";
 import { TeacherHeader } from "../../components/TeacherHeader";
 import { readJson } from "../../lib/read-json";
 
@@ -236,6 +237,8 @@ export default function AdminPage() {
         </section>
 
         {status ? <p className="teacherStatus">{status}</p> : null}
+
+        <SchoolCurriculum />
 
         <section className="teacherPanel">
           <h2>Invite a teacher</h2>

@@ -22,7 +22,7 @@ export function TeacherHeader({
         <Link className={active === "lms" ? "active" : ""} href="/teach/lms">
           Classroom
         </Link>
-        <Link className={active === "results" ? "active" : ""} href="/teach/results">
+        <Link className={active === "results" ? "active" : ""} href="/teach/lms/marks">
           Results
         </Link>
         <Link className={active === "admin" ? "active" : ""} href="/teach/admin">

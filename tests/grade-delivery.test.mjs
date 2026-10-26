@@ -18,9 +18,8 @@ const { outputFiles } = buildSync({
 const { curriculum, getGradeCurriculum, getPlayableModule, getCyberLesson, assignmentChapters } =
   await import(`data:text/javascript;base64,${Buffer.from(outputFiles[0].text).toString("base64")}`);
 
-test("delivery exposes only Classes 6–12 and every cyber chapter is playable and assignable", () => {
-  assert.deepEqual(curriculum.map(entry => entry.grade), [6, 7, 8, 9, 10, 11, 12]);
-  for (const grade of [3, 4, 5]) assert.equal(getGradeCurriculum(grade), undefined);
+test("delivery supports Classes 3–12 and every cyber chapter is playable and assignable", () => {
+  assert.deepEqual(curriculum.map(entry => entry.grade), [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
   const strands = ["Artificial Intelligence", "Computational Thinking", "Cyber Fraud", "Cybersecurity"];
   for (const entry of curriculum) {
     const subjects = entry.subjects.filter(subject => subject.strand && subject.strand !== "English");
@@ -40,7 +39,7 @@ test("delivery exposes only Classes 6–12 and every cyber chapter is playable a
 });
 
 test("the shifted bands retain shared chapters and stable progress identities", () => {
-  for (const [band, grades] of Object.entries({ lower: [6, 7], middle: [8], upper: [9, 10] })) {
+  for (const [band, grades] of Object.entries({ lower: [3, 4, 6, 7], middle: [5, 8], upper: [9, 10] })) {
     const missions = newMissions.filter(mission => mission.band === band);
     assert.equal(missions.length, 8);
     for (const mission of missions) assert.deepEqual(getCyberLesson(mission.slug).grades, grades);

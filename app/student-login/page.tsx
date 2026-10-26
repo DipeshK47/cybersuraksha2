@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { AuthCard } from "../components/AuthCard";
 import { readJson } from "../lib/read-json";
 
@@ -10,11 +10,15 @@ export default function StudentLoginPage() {
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
+  const [schools, setSchools] = useState<{ name: string; slug: string }[]>([]);
+  useEffect(() => { let active = true; void fetch("/api/schools").then(response => readJson<{ schools?: { name: string; slug: string }[]; error?: string }>(response)).then(payload => { if (active) { setSchools(payload.schools ?? []); if (payload.error) setError(payload.error); } }).catch(() => { if (active) setError("Could not load schools. Reload to try again."); }); return () => { active = false; }; }, []);
+
   async function startLearning(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
     setSubmitting(true);
     const form = new FormData(event.currentTarget);
+    try {
     const response = await fetch("/api/auth/student", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -38,6 +42,7 @@ export default function StudentLoginPage() {
     sessionStorage.setItem("cybersuraksha-student", JSON.stringify(payload.student));
     // The dashboard resolves identity from the session cookie, not the URL.
     router.push("/dashboard");
+    } catch { setError("Could not connect. Please try again."); } finally { setSubmitting(false); }
   }
 
   return (
@@ -46,7 +51,7 @@ export default function StudentLoginPage() {
       tip={
         <>
           Lost your slip? Your teacher can give you a new password.
-          <span className="demoCredentials">Demo: class 7A · roll 20 · DPS20SAFE</span>
+
         </>
       }
       title="Student login"
@@ -57,7 +62,7 @@ export default function StudentLoginPage() {
           <option disabled value="">
             Choose your school…
           </option>
-          <option value="dps-rkp">Delhi Public School — R.K. Puram</option>
+          {schools.map(school => <option key={school.slug} value={school.slug}>{school.name}</option>)}
         </select>
         <label htmlFor="student-class">Your class</label>
         <input

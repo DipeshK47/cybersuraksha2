@@ -1,4 +1,8 @@
 import { getScopedAcademyData } from "../../../db/academy";
+import { getDb } from "../../../db";
+import { assignments } from "../../../db/schema";
+import { and, asc, eq, inArray, isNotNull } from "drizzle-orm";
+import { scopedClassIds } from "../../lib/auth";
 import { scopedStudentIds } from "../../lib/auth";
 import { getSession } from "../../lib/session";
 import type { SessionTeacher } from "../../lib/session";
@@ -51,7 +55,7 @@ async function teacherAnswer(question: string, teacher: SessionTeacher) {
   const { students, runs } = await getScopedAcademyData(studentIds);
   const query = question.toLowerCase();
   const student = students.find((item) => query.includes(item.name.toLowerCase()));
-  const classMatch = query.match(/(?:class\s*)?([3-8][a-z]?)/i)?.[1]?.toUpperCase();
+  const classMatch = query.match(/(?:class\s*)?((?:1[0-2]|[3-9])[a-z]?)\b/i)?.[1]?.toUpperCase();
   const selectedClass =
     students.find((item) => item.className.toUpperCase() === classMatch)?.className ??
     student?.className ??
@@ -60,16 +64,18 @@ async function teacherAnswer(question: string, teacher: SessionTeacher) {
 
   if (/schedule|timetable|when.*class|class time/.test(query)) {
     return {
-      answer: `Current CyberShiksha schedule for Class ${selectedClass}:\n• Monday, 10:30 — CT Lab\n• Wednesday, 12:15 — AI Studio\n\nThis is the schedule currently configured in the local dashboard.`,
+      answer: "No school timetable has been configured. Open Classroom to see actual published assignments and their deadlines.",
       sources: [],
       provider: "teacher-data",
     };
   }
   if (/deadline|due|pending work/.test(query)) {
+    const classIds = await scopedClassIds(teacher);
+    const rows = classIds.length ? await getDb().select({ title: assignments.title, dueAt: assignments.dueAt }).from(assignments)
+      .where(and(eq(assignments.schoolId, teacher.schoolId), inArray(assignments.classId, classIds), isNotNull(assignments.publishedAt))).orderBy(asc(assignments.dueAt)).limit(10) : [];
     return {
-      answer: `Current CyberShiksha deadline plan for Class ${selectedClass}:\n• First incomplete mission — Friday\n• Next incomplete mission — next Tuesday\n\nThe app does not yet store teacher-edited deadlines, so these are the configured dashboard deadlines rather than calendar events.`,
-      sources: [],
-      provider: "teacher-data",
+      answer: rows.length ? `Published assignment deadlines:\n${rows.map(row => `• ${row.title} — ${new Date(row.dueAt).toISOString()}`).join("\n")}\n\nOpen Classroom for each student’s completion and marks.` : "No published assignments are available for your classes. Create an assignment in Classroom to set a deadline.",
+      sources: [], provider: "teacher-data",
     };
   }
   if (student) {

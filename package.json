@@ -12,7 +12,9 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "handbooks:index": "node scripts/build-handbook-chat-index.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "typecheck": "tsc --noEmit",
+    "test:backend": "node --test tests/school-backend.test.mjs tests/school-migration.test.mjs tests/assessment.test.mjs tests/lms-summary.test.mjs"
   },
   "dependencies": {
     "@rive-app/canvas": "^2.42.1",

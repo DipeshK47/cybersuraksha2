@@ -1,6 +1,7 @@
 import { getAnsweredQuestions, recordPracticeAttempt } from "../../../db/progress";
 import { getStudentSession, requireStudent } from "../../lib/student-session";
 import { parseJson, practiceAttemptSchema } from "../../lib/validation";
+import { studentContent } from "../../lib/content-access";
 
 /**
  * Record one practice answer for the SIGNED-IN student.
@@ -20,6 +21,8 @@ export async function POST(request: Request) {
 
   const parsed = await parseJson(request, practiceAttemptSchema);
   if (parsed.error) return parsed.error;
+  const access = await studentContent(session.student);
+  if (!access.grades.includes(10) || !access.subjects.includes("Mathematics")) return Response.json({ error: "This subject is not assigned to your class." }, { status: 403 });
 
   const result = await recordPracticeAttempt({
     studentId: session.student.id,

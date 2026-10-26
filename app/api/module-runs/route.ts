@@ -3,6 +3,8 @@ import { saveModuleRun } from "../../../db/academy";
 import { deriveRunMetrics } from "../../lib/activity";
 import { requireStudent } from "../../lib/student-session";
 import { moduleRunSchema, parseJson } from "../../lib/validation";
+import { studentContent } from "../../lib/content-access";
+import { permitsModule } from "../../lib/content-policy";
 
 function percentage(value: unknown) {
   const numeric = Number(value);
@@ -39,6 +41,7 @@ export async function POST(request: Request) {
   if (!playableModule) {
     return Response.json({ error: "Module not found." }, { status: 404 });
   }
+  if (!permitsModule(await studentContent(session.student), playableModule)) return Response.json({ error: "This content is not assigned to your class." }, { status: 403 });
 
   const derived = await deriveRunMetrics(studentId, playableModule.id);
   const useDerived = derived.hasEvents && derived.questionsAnswered > 0;

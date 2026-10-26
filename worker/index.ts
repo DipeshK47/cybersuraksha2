@@ -58,6 +58,7 @@ function hasTeacherSession(request: Request): boolean {
 /** Re-emit a response with hardened security headers (stream-preserving). */
 function harden(response: Response, request: Request, url: URL): Response {
   const headers = new Headers(response.headers);
+  if (url.pathname.startsWith("/api/") || request.headers.get("cookie")) headers.set("Cache-Control", "private, no-store");
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("X-Frame-Options", "DENY");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");

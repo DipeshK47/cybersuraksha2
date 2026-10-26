@@ -1,3 +1,5 @@
+import { requireGradePage } from "../../lib/content-page";
+import { permitsSubject } from "../../lib/content-policy";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -55,7 +57,7 @@ export default async function GradePage({
 }) {
   const { grade: gradeParam } = await params;
   const query = await searchParams;
-  const role = query.role === "student" ? "student" : "teacher";
+  const { role } = await requireGradePage(Number(gradeParam));
   const studentId =
     typeof query.studentId === "string" ? query.studentId : undefined;
   const className =
@@ -66,7 +68,9 @@ export default async function GradePage({
           className ? `&className=${encodeURIComponent(className)}` : ""
         }`
       : "?role=teacher";
-  const grade = getGradeCurriculum(Number.parseInt(gradeParam, 10));
+  const context = await requireGradePage(Number(gradeParam));
+  const sourceGrade = getGradeCurriculum(Number(gradeParam));
+  const grade = sourceGrade ? { ...sourceGrade, modules: sourceGrade.modules.filter(m => context.access.subjects.includes(m.strand)), subjects: sourceGrade.subjects?.filter(subject => permitsSubject(context.access, subject)) } : undefined;
 
   if (!grade) {
     return (

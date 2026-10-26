@@ -16,6 +16,7 @@ export default function TeacherLoginPage() {
     setError("");
     setSubmitting(true);
     const form = new FormData(event.currentTarget);
+    try {
     const response = await fetch("/api/auth/teacher", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -32,6 +33,7 @@ export default function TeacherLoginPage() {
     }
     sessionStorage.setItem("cybersuraksha-role", "teacher");
     router.push("/dashboard?role=teacher");
+    } catch { setError("Could not connect. Please try again."); } finally { setSubmitting(false); }
   }
 
   return (
@@ -41,9 +43,7 @@ export default function TeacherLoginPage() {
         <>
           School not registered yet?{" "}
           <Link href="/register-school">Register your school</Link>
-          <span className="demoCredentials">
-            Demo: teacher@dpsrkp.edu.in · Teacher@123
-          </span>
+
         </>
       }
       title="Teacher login"

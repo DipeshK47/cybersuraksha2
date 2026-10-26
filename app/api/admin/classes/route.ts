@@ -4,6 +4,7 @@ import { classes } from "../../../../db/schema";
 import { requireRole } from "../../../lib/auth";
 import { writeAudit } from "../../../lib/audit";
 import { createClassSchema, parseJson } from "../../../lib/validation";
+import { schoolContent } from "../../../lib/content-access";
 
 /** List classes in the admin's school. */
 export async function GET(request: Request) {
@@ -33,6 +34,7 @@ export async function POST(request: Request) {
   if (parsed.error) return parsed.error;
 
   const grade = parsed.data.grade;
+  if (!(await schoolContent(auth.schoolId)).grades.includes(grade)) return Response.json({ error: "Enable this grade in school curriculum settings first." }, { status: 400 });
   const section = (parsed.data.section ?? "").trim().toUpperCase();
   const name = (parsed.data.name ?? `${grade}${section}`).trim().toUpperCase();
   if (!name) {

@@ -114,7 +114,7 @@ test("keeps the teacher grid balanced and ships the student learning overview", 
 
   assert.match(dashboard, /studentOverview/);
   assert.match(dashboard, /Mission progress/i);
-  assert.match(dashboard, /Upcoming deadlines/i);
+  assert.match(dashboard, /pendingAssignments/);
   assert.match(dashboard, /Badge cabinet/i);
   assert.match(styles, /\.dashboardWrapTeacher \.gradeCard:nth-child\(6\)/);
   assert.match(styles, /grid-column: span 4 !important/);

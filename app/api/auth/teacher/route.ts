@@ -1,3 +1,4 @@
+import { destroyStudentSession } from "../../../lib/student-session";
 import { eq } from "drizzle-orm";
 import { getDb } from "../../../../db";
 import { ensureAcademySeeded } from "../../../../db/academy";
@@ -50,6 +51,9 @@ export async function POST(request: Request) {
   }
 
   const cookie = await createSession(request, teacher.id);
+  const headers = new Headers();
+  headers.append("Set-Cookie", cookie);
+  headers.append("Set-Cookie", await destroyStudentSession(request));
   return Response.json(
     {
       teacher: {
@@ -58,6 +62,6 @@ export async function POST(request: Request) {
         role: teacher.role,
       },
     },
-    { headers: { "Set-Cookie": cookie } },
+    { headers },
   );
 }

@@ -35,6 +35,8 @@ import {
 import { getPlayableModule } from "../data/module-registry";
 import { getStudentWithRuns } from "../../db/academy";
 import { getSessionFromCookieHeader } from "../lib/session";
+import { studentContent, teacherContent } from "../lib/content-access";
+import { permitsSubject } from "../lib/content-policy";
 import { getStudentSessionFromCookieHeader } from "../lib/student-session";
 
 // Keyed by grade, not by array position: an index-based list silently yields
@@ -67,11 +69,13 @@ export default async function DashboardPage() {
     : await getSessionFromCookieHeader(cookieHeader);
   if (!studentSession && !teacherSession) redirect("/");
 
+  const access = studentSession ? await studentContent(studentSession.student) : await teacherContent(teacherSession!.teacher);
+  const visibleCurriculum = curriculum.filter(entry => access.grades.includes(entry.grade)).map(entry => ({ ...entry, modules: entry.modules.filter(module => access.subjects.includes(module.strand)), subjects: entry.subjects?.filter(subject => permitsSubject(access, subject)) }));
   const role = studentSession ? "student" : "teacher";
   const studentId = studentSession ? String(studentSession.student.id) : undefined;
   const className = studentSession?.student.className;
-  const assignedGrade = className ? Number.parseInt(className, 10) : undefined;
-  const assignedCurriculum = curriculum.find(
+  const assignedGrade = studentSession ? access.grades[0] : undefined;
+  const assignedCurriculum = visibleCurriculum.find(
     (grade) => grade.grade === assignedGrade,
   );
   const studentProfile = studentSession
@@ -122,14 +126,14 @@ export default async function DashboardPage() {
           <nav className="dashboardNavRight" aria-label={`${role} navigation`}>
             {role === "teacher" ? (
               <>
-                <span className="dashboardOrg">Delhi Public School, R.K. Puram</span>
+                <span className="dashboardOrg">{access.schoolName}</span>
                 <Link className="dashboardGhost" href="/teach">
                   My classes
                 </Link>
                 <Link className="dashboardGhost" href="/teach/lms">
                   Classroom
                 </Link>
-                <Link className="dashboardGhost" href="/teach/results">
+                <Link className="dashboardGhost" href="/teach/lms/marks">
                   Results
                 </Link>
               </>
@@ -139,8 +143,8 @@ export default async function DashboardPage() {
                   {className ? `Class ${className}` : "Student"}
                 </span>
                 <AssignmentNotification />
-                <Link className="dashboardGhost" href="#student-overview">
-                  My profile
+                <Link className="dashboardGhost" href="/learn/progress">
+                  My progress
                 </Link>
               </>
             )}
@@ -185,13 +189,13 @@ export default async function DashboardPage() {
               <div className="studentIdentity">
                 <span>Class {className ?? "7A"}</span>
                 <span>Roll {studentRoll}</span>
-                <span>DPS R.K. Puram</span>
+                <span>{access.schoolName}</span>
               </div>
               <div className="studentStreak">
                 <Flame aria-hidden="true" />
                 <span>
-                  <b>3 week</b>
-                  learning streak
+                  <b>{completedMissions}</b>
+                  missions completed
                 </span>
               </div>
             </article>
@@ -262,18 +266,9 @@ export default async function DashboardPage() {
                 <span className="studentInsightIcon">
                   <CalendarDays aria-hidden="true" />
                 </span>
-                <p className="studentCardEyebrow">Class schedule</p>
-                <h2>This week</h2>
-                <ul className="studentSchedule">
-                  <li>
-                    <b>Mon · 10:30</b>
-                    <span>CT Lab</span>
-                  </li>
-                  <li>
-                    <b>Wed · 12:15</b>
-                    <span>AI Studio</span>
-                  </li>
-                </ul>
+                <p className="studentCardEyebrow">My learning</p>
+                <h2>{pendingAssignments.length ? "Next deadline" : "Learn at your pace"}</h2>
+                <p>{pendingAssignments.length ? new Date(Math.min(...pendingAssignments.map(a => a.dueAt))).toLocaleString() : "Your teacher’s assignments and deadlines appear here."}</p>
               </article>
 
               <article className="studentInsightCard studentDeadlineCard">
@@ -320,7 +315,7 @@ export default async function DashboardPage() {
 
         <section className="dashboardHero">
           <p className="dashboardEyebrow">
-            Mission control · Classes 6–12
+            Mission control · Your school curriculum
           </p>
           <h1>
             Think it through.
@@ -332,8 +327,9 @@ export default async function DashboardPage() {
           </p>
         </section>
 
+        {!visibleCurriculum.length && <p role="status">No curriculum is assigned yet. Ask your school administrator to check your class and curriculum settings.</p>}
         <section className="gradeGrid" id="classes" aria-label="Choose a class">
-          {curriculum.map((grade) => {
+          {visibleCurriculum.map((grade) => {
             const Icon = gradeIcons[grade.grade] ?? Sparkles;
             const isAssigned = assignedGrade === grade.grade;
             return (

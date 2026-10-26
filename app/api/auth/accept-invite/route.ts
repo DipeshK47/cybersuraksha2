@@ -1,3 +1,4 @@
+import { destroyStudentSession } from "../../../lib/student-session";
 import { acceptInvite } from "../../../lib/invites";
 import { createSession } from "../../../lib/session";
 import { enforceRateLimit } from "../../../lib/rate-limit";
@@ -20,5 +21,8 @@ export async function POST(request: Request) {
   }
 
   const cookie = await createSession(request, result.teacherId);
-  return Response.json({ ok: true }, { headers: { "Set-Cookie": cookie } });
+  const headers = new Headers();
+  headers.append("Set-Cookie", cookie);
+  headers.append("Set-Cookie", await destroyStudentSession(request));
+  return Response.json({ ok: true }, { headers });
 }

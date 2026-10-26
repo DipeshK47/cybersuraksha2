@@ -512,6 +512,7 @@ const sourceCurriculum: GradeCurriculum[] = [
 
 // Reuse the existing Classes 3–7 sequence for delivery in Classes 6–10.
 export const curriculum: GradeCurriculum[] = [
+  ...sourceCurriculum.filter(entry => entry.grade >= 3 && entry.grade <= 5),
   ...sourceCurriculum
     .filter((entry) => entry.grade >= 3 && entry.grade <= 7)
     .map((entry) => {

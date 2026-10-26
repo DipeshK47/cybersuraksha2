@@ -31,7 +31,7 @@ function isSecureRequest(request: Request): boolean {
 function readCookie(header: string | null, name: string): string | null {
   for (const part of (header ?? "").split(";")) {
     const [key, ...rest] = part.trim().split("=");
-    if (key === name) return decodeURIComponent(rest.join("="));
+    if (key === name) { try { return decodeURIComponent(rest.join("=")); } catch { return null; } }
   }
   return null;
 }

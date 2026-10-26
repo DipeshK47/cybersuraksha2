@@ -45,3 +45,6 @@
 .chaptersHeading{margin:20px 0 0;font-size:.9rem;font-weight:650}.card[id]{scroll-margin-top:24px}
 
 .row>.field{align-content:start}
+
+.answer{white-space:pre-wrap;overflow-wrap:anywhere;padding:16px;background:var(--sl-surface-soft);border-radius:8px;line-height:1.6}
+.form fieldset{min-width:0;border:1px solid color-mix(in srgb,var(--sl-muted) 25%,transparent);border-radius:10px;padding:18px}
