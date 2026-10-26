@@ -1,0 +1,77 @@
+{
+  "duration": 94.951,
+  "scenes": [
+    {
+      "id": "who-benefits-who-is-missed-1",
+      "label": "Meet the team",
+      "title": "An average hides a gap",
+      "mood": "happy",
+      "caption": "Asha reviews two supplied input groups for the same low-stakes library task. Each has ten examples with five staff-review cases. One group contains full-text enquiries; the other contains abbreviated or alternative-format text.",
+      "dialogue": "Compare denominators as well as percentages.",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.149
+    },
+    {
+      "id": "who-benefits-who-is-missed-2",
+      "label": "The problem",
+      "title": "Who is missed",
+      "mood": "surprise",
+      "caption": "The prepared results find four of five staff-review cases in group A and two of five in group B. That is eighty percent versus forty percent recall in these tiny groups. The gap does not by itself establish a cause or a universal claim about people.",
+      "dialogue": "A group result is evidence to investigate.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 16.799,
+      "duration": 16.256
+    },
+    {
+      "id": "who-benefits-who-is-missed-3",
+      "label": "How it works",
+      "title": "Write the model card",
+      "mood": "thinking",
+      "caption": "Record intended use, synthetic-data provenance, evaluation counts, group and shift limitations and a human override. Keep an accessible manual route. Check permission to use source material and provide attribution; a citation alone does not establish permission.",
+      "dialogue": "The assurance pack includes limits and responsibilities.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 33.705,
+      "duration": 17.109
+    },
+    {
+      "id": "who-benefits-who-is-missed-4",
+      "label": "Your decision",
+      "title": "Choose the next action",
+      "mood": "thinking",
+      "caption": "Should Asha hide the smaller group, assume its users are inherently unsuitable, or document the gap, involve users in an accessible review and collect fresh independent evidence after improvements?",
+      "dialogue": "A gap calls for investigation and a usable alternative.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.465,
+      "duration": 12.864
+    },
+    {
+      "id": "who-benefits-who-is-missed-5",
+      "label": "What changes",
+      "title": "A practical mitigation",
+      "mood": "happy",
+      "caption": "The team records the weak group result, keeps staff review available and plans a revised accessible workflow with a fresh evaluation. Requests outside scope or involving private data have explicit override and stop-use routes.",
+      "dialogue": "A model card is useful only when its limits change action.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 64.979,
+      "duration": 15.403
+    },
+    {
+      "id": "who-benefits-who-is-missed-6",
+      "label": "Enter the lab",
+      "title": "Enter the assurance lab",
+      "mood": "happy",
+      "caption": "Calculate the group recalls, complete the model card and select safeguards for accessibility, data use and human authority. Your teacher reviews the reasoning; the tiny pack is not a general fairness certificate.",
+      "dialogue": "State what you measured and what remains unknown.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 81.031,
+      "duration": 13.269
+    }
+  ]
+}

@@ -476,7 +476,7 @@ export function NaniMaaVacationChallenge({
                   : !studentId
                     ? "Preview complete. Sign in as a student to save this result."
                     : saveStatus === "saving"
-                      ? "Saving Nani Maa's Vacation Challenge to your local CyberSuraksha profile…"
+                      ? "Saving Nani Maa's Vacation Challenge to your local CyberShiksha profile…"
                       : saveStatus === "saved"
                         ? "Progress saved to the student and teacher progress views."
                         : saveStatus === "error"

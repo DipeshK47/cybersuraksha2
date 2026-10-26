@@ -175,6 +175,6 @@ const chapter: StoryChapter = {
   waitingText: "Story paused. Tag the clues and check the official channel to see what happens next.",
   lockedHint: "Help Kabir inspect the clip first.",
   World,
-  credits: <p>Fair backdrop: original CyberSuraksha illustration. The clip, organiser and chat are drawn in code; no real person or footage is used.</p>,
+  credits: <p>Fair backdrop: original CyberShiksha illustration. The clip, organiser and chat are drawn in code; no real person or footage is used.</p>,
 };
 export default chapter;

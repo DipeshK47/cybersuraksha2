@@ -30,10 +30,10 @@ function VaultPuzzle({ task, stage, ready, submit, gamePassword, saveGamePasswor
     </div>
     <div className={v.keyWorkbench}>
       {stage === 2 && <p className={v.previousKey}>Rohan’s game example: <code>{gamePassword}</code>. School needs a different password.</p>}
-      <ol className={v.wordSlots} aria-label="Two-piece practice password">{[0, 1].map(i => <li key={i} data-filled={Boolean(pieces[i])}><b>{i + 1}</b>{pieces[i] ?? "Choose a piece"}</li>)}</ol>
+      <ol className={v.wordSlots} aria-label="Two-piece practice password">{[0, 1].map(i => <li key={i} data-filled={Boolean(pieces[i])}><b>{i + 1}</b>{pieces[i] ? <span lang="en" translate="no">{pieces[i]}</span> : "Choose a piece"}</li>)}</ol>
       <p className={v.note}>Numbers: 0–9. Symbols: ! ? # @.</p>
       <p className={v.passwordReadout}>One password: <code>{password || "—"}</code> <strong>{password.length} / 16 characters</strong></p>
-      <div className={v.words}>{task.pieces.map(piece => <button type="button" key={piece} disabled={pieces.includes(piece) || pieces.length === 2} onClick={() => choose(piece)}><KeyRound aria-hidden="true" />{piece}</button>)}</div>
+      <div className={v.words} lang="en" translate="no">{task.pieces.map(piece => <button type="button" key={piece} disabled={pieces.includes(piece) || pieces.length === 2} onClick={() => choose(piece)}><KeyRound aria-hidden="true" />{piece}</button>)}</div>
       <div className={s.controls}><button type="button" className={s.secondary} disabled={!pieces.length} onClick={() => { setPieces(current => current.slice(0, -1)); setTested(false); }}><RotateCcw aria-hidden="true" />Undo piece</button><button type="button" className={s.primary} disabled={pieces.length !== 2} onClick={() => { setTested(true); if (good && stage === 0) saveGamePassword(password); submit(good, good ? stage === 0 ? "Mango and Rocket make a password you can read. It avoids his name and 123. Give school a different password too." : "You chose words instead of a name or easy counting pattern. This password is different from Rohan’s game password." : "This uses a name or easy counting pattern. Undo that tile and choose a word tile instead."); }}><Play aria-hidden="true" />Test password</button></div>
       <p className={v.note}>Practice only. Ask a trusted adult to help make and safely save a different password for each real account. Never use these classroom examples.</p>
     </div>

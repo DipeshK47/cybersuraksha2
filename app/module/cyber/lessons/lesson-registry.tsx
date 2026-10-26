@@ -26,7 +26,83 @@ import { NanisSecretCode, SurprisePopUp, OtpGuardian, QrCodeCaution, DigitalArre
 import { PasswordVaultBuilder, SharingBackpack, PasswordVault, PermissionControlPanel, OnlineReputationBuilder, EmailHeaderInspector } from "./new/SecurityMissions";
 import { RobotOrNot, TeachPetMachine, TrainingDay, GarbageInGarbageOut, DeepfakeDetective, RecommendationRabbitHole } from "./new/AiMissions";
 
+import { Class11Security } from "./senior/Class11Security";
+import { Class11AI } from "./senior/Class11AI";
+import { Class12Fraud } from "./senior/Class12Fraud";
+import { Class12CT } from "./senior/Class12CT";
+import { Class12AI } from "./senior/Class12AI";
+import { Class12Security } from "./senior/Class12Security";
+import { Class11Fraud } from "./senior/Class11Fraud";
+import { Class11CT } from "./senior/Class11CT";
+
 const lessonComponents = {
+  "the-easy-money-recruitment-chain": Class12Fraud,
+  "check-the-investment-story": Class12Fraud,
+  "identity-and-authority-can-be-manufactured": Class12Fraud,
+  "help-after-harm": Class12Fraud,
+  "trace-a-pattern-without-accusing": Class12Fraud,
+  "design-prevention-that-can-be-tested": Class12Fraud,
+  "integrated-case-the-college-fest-incident": Class12Fraud,
+  "the-evidence-hearing": Class12Fraud,
+  "choose-the-right-data-model": Class12CT,
+  "how-work-grows-with-input-size": Class12CT,
+  "the-duplicate-registration-problem": Class12CT,
+  "build-a-reliable-alerts-pipeline": Class12CT,
+  "make-failure-visible": Class12CT,
+  "do-not-confuse-a-pattern-with-a-cause": Class12CT,
+  "retest-after-a-change": Class12CT,
+  "automation-design-review": Class12CT,
+  "set-a-decision-and-a-baseline": Class12AI,
+  "protect-the-evaluation": Class12AI,
+  "the-model-that-scores-95-percent": Class12AI,
+  "vision-networks-and-changing-inputs": Class12AI,
+  "the-source-grounded-research-assistant": Class12AI,
+  "when-instructions-arrive-inside-data": Class12AI,
+  "who-benefits-who-is-missed": Class12AI,
+  "ai-go-revise-stop-review": Class12AI,
+  "from-personal-safety-to-system-risk": Class12Security,
+  "design-the-college-fest-portal": Class12Security,
+  "secure-by-design": Class12Security,
+  "protect-the-whole-dependency-chain": Class12Security,
+  "when-logs-disagree": Class12Security,
+  "the-breach-tabletop": Class12Security,
+  "recover-and-learn": Class12Security,
+  "security-assurance-review": Class12Security,
+  "how-a-scam-builds-pressure": Class11Fraud,
+  "the-internship-that-pays-too-well": Class11Fraud,
+  "before-you-approve-that-payment": Class11Fraud,
+  "when-the-message-looks-official": Class11Fraud,
+  "a-familiar-voice-asks-for-money": Class11Fraud,
+  "what-to-do-after-a-loss": Class11Fraud,
+  "integrated-case-the-festival-refund": Class11Fraud,
+  "defend-your-decision": Class11Fraud,
+  "decompose-the-scholarship-desk": Class11CT,
+  "model-only-what-matters": Class11CT,
+  "make-the-rules-explicit": Class11CT,
+  "trace-and-debug-a-decision": Class11CT,
+  "search-and-sort-with-purpose": Class11CT,
+  "reuse-a-reliable-step": Class11CT,
+  "test-the-boundaries": Class11CT,
+  "algorithm-review-board": Class11CT,
+
+  "is-ai-needed-here": Class11AI,
+  "frame-a-useful-ai-problem": Class11AI,
+  "repair-the-dataset": Class11AI,
+  "how-a-model-learns": Class11AI,
+  "measure-mistakes-not-confidence": Class11AI,
+  "whose-examples-are-missing": Class11AI,
+  "can-this-assistant-be-trusted": Class11AI,
+  "ai-evaluation-review": Class11AI,
+
+  "your-digital-risk-map": Class11Security,
+  "identity-beyond-a-password": Class11Security,
+  "who-should-have-access": Class11Security,
+  "what-a-browser-can-tell-you": Class11Security,
+  "data-has-a-lifecycle": Class11Security,
+  "devices-updates-and-backups": Class11Security,
+  "the-suspicious-login": Class11Security,
+  "security-design-review": Class11Security,
+
   "can-i-tell-this": CanITellThis,
   "someone-new-in-my-game": SomeoneNewInMyGame,
   "smart-helper-or-normal-tool": SmartHelperOrNormalTool,

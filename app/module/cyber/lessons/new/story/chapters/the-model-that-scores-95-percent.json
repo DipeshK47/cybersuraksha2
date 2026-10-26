@@ -1,0 +1,77 @@
+{
+  "duration": 92.071,
+  "scenes": [
+    {
+      "id": "the-model-that-scores-95-percent-1",
+      "label": "Meet the team",
+      "title": "The ninety-five-percent claim",
+      "mood": "happy",
+      "caption": "Asha sees a prepared classifier sheet reporting ninety five percent accuracy. In the supplied hundred requests, only five genuinely need staff review. The headline alone does not show whether the rare cases were found.",
+      "dialogue": "What sits inside that percentage?",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.997
+    },
+    {
+      "id": "the-model-that-scores-95-percent-2",
+      "label": "The problem",
+      "title": "Read the confusion table",
+      "mood": "surprise",
+      "caption": "The stricter candidate finds one staff-review case, misses four, flags one routine case and correctly leaves ninety four routine cases unflagged. Its accuracy is ninety five percent, precision fifty percent and recall twenty percent.",
+      "dialogue": "Four of the five important cases were missed.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 15.647,
+      "duration": 15.253
+    },
+    {
+      "id": "the-model-that-scores-95-percent-3",
+      "label": "How it works",
+      "title": "Compare thresholds and costs",
+      "mood": "thinking",
+      "caption": "A second prepared operating point finds four cases but flags six routine requests. It uses ten review slots and meets the exercise recall target. With missed cases costing five and extra reviews costing one, its total error cost is lower on this pack.",
+      "dialogue": "More accuracy is not automatically a better decision.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 31.551,
+      "duration": 16.939
+    },
+    {
+      "id": "the-model-that-scores-95-percent-4",
+      "label": "Your decision",
+      "title": "Choose for the stated goal",
+      "mood": "thinking",
+      "caption": "Should Asha accept ninety five percent without checking misses, choose the candidate that meets the preset recall and capacity criteria, or hide false positives to make the report cleaner?",
+      "dialogue": "Use the acceptance plan, not the biggest headline.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 49.139,
+      "duration": 12.117
+    },
+    {
+      "id": "the-model-that-scores-95-percent-5",
+      "label": "What changes",
+      "title": "A conditional threshold choice",
+      "mood": "happy",
+      "caption": "The review-more operating point fits the supplied low-stakes costs and capacity. Its precision is still limited and its evidence is only this prepared pack. If error costs or review capacity change, the preferred comparator can change too.",
+      "dialogue": "State both the choice and its conditions.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.907,
+      "duration": 15.467
+    },
+    {
+      "id": "the-model-that-scores-95-percent-6",
+      "label": "Enter the lab",
+      "title": "Enter the metrics lab",
+      "mood": "happy",
+      "caption": "Calculate precision and recall, compare prepared operating points and reconsider the choice under changed error costs. The scores are supplied classroom sheets, not measurements of a deployed AI system.",
+      "dialogue": "Explain what each error costs in this task.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 78.023,
+      "duration": 13.397
+    }
+  ]
+}

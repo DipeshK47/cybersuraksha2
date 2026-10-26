@@ -1,0 +1,77 @@
+{
+  "duration": 89.02,
+  "scenes": [
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-1",
+      "label": "Meet the team",
+      "title": "A misleading alert comparison",
+      "mood": "happy",
+      "caption": "Kabir sees a summary claiming that alerts increased from twenty to thirty, so the new rule caused a deterioration. The two windows differ in duration and number of observed readings. Some readings are missing in the second window.",
+      "dialogue": "A raw count needs a denominator and a time window.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.485
+    },
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-2",
+      "label": "The problem",
+      "title": "Read the supplied windows",
+      "mood": "surprise",
+      "caption": "Window A has twenty flagged records among one hundred observed readings in one hour, with no missing readings. Window B has thirty flags among three hundred observed readings in three hours, plus fifteen missing readings.",
+      "dialogue": "Missing is not another word for normal.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 15.135,
+      "duration": 13.717
+    },
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-3",
+      "label": "How it works",
+      "title": "Compare like with like",
+      "mood": "thinking",
+      "caption": "The observed-reading flag rates are twenty percent and ten percent. The alert counts per hour also differ from raw totals. Keep the time windows, observed denominators and missingness on the comparison rather than treating missing readings as known negatives.",
+      "dialogue": "A corrected table can change the interpretation.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 29.503,
+      "duration": 15.915
+    },
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-4",
+      "label": "Your decision",
+      "title": "Choose the causal claim",
+      "mood": "thinking",
+      "caption": "Do these two windows prove that the new rule caused any change, or do different workloads, windows and missingness leave alternative explanations? Choose the statement supported by this observational pack.",
+      "dialogue": "Association alone does not establish the cause.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 46.067,
+      "duration": 13.205
+    },
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-5",
+      "label": "What changes",
+      "title": "A cautious interpretation",
+      "mood": "happy",
+      "caption": "Kabir replaces the raw-count headline with a labelled comparison. The observed flag rate is lower in B in this pack, but missing readings and different conditions limit the conclusion. No controlled comparison establishes why it changed.",
+      "dialogue": "A useful summary records its uncertainty.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.923,
+      "duration": 15.253
+    },
+    {
+      "id": "do-not-confuse-a-pattern-with-a-cause-6",
+      "label": "Enter the lab",
+      "title": "Enter the summary lab",
+      "mood": "happy",
+      "caption": "Calculate the observed rates, repair the misleading table and state the limits of a causal claim. Keep unknown readings separate and name a plausible alternative explanation to investigate.",
+      "dialogue": "A denominator is part of the evidence.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 75.826,
+      "duration": 12.544
+    }
+  ]
+}

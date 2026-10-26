@@ -1,5 +1,7 @@
 import { getCyberLessonsForGrade } from "./cyber-lessons";
 import { newMissions } from "./new-missions";
+import { class12Subjects } from "./class-12-curriculum";
+import { class11Subjects } from "./class-11-curriculum";
 
 export type CurriculumStrand =
   | "Computational Thinking"
@@ -141,7 +143,7 @@ const cyberSubjectsForGrade = (grade: number): GradeSubject[] => {
       slug,
       name: strand,
       description,
-      book: `CyberSuraksha Interactive Curriculum · Class ${grade}`,
+      book: `CyberShiksha Interactive Curriculum · Class ${grade}`,
       chapters: [],
       modules: lessons
         .filter((lesson) => lesson.strand === strand)
@@ -151,7 +153,7 @@ const cyberSubjectsForGrade = (grade: number): GradeSubject[] => {
     .filter((subject) => subject.modules.length > 0);
 };
 
-export const curriculum: GradeCurriculum[] = [
+const sourceCurriculum: GradeCurriculum[] = [
   {
     grade: 3,
     title: "Logic Explorers",
@@ -490,6 +492,41 @@ export const curriculum: GradeCurriculum[] = [
       },
     ],
   },
+  {
+    grade: 11,
+    title: "Digital Decision Makers",
+    description: "Investigate risks, evaluate AI, test algorithms and verify suspicious requests through four practical modules.",
+    tone: "mint",
+    modules: [],
+    subjects: class11Subjects,
+  },
+  {
+    grade: 12,
+    title: "Evidence, Systems and Responsibility",
+    description: "Design safer services, evaluate AI evidence, build reliable workflows and respond to complex fraud through four practical modules.",
+    tone: "mint",
+    modules: [],
+    subjects: class12Subjects,
+  },
+];
+
+// Reuse the existing Classes 3–7 sequence for delivery in Classes 6–10.
+export const curriculum: GradeCurriculum[] = [
+  ...sourceCurriculum
+    .filter((entry) => entry.grade >= 3 && entry.grade <= 7)
+    .map((entry) => {
+      const grade = entry.grade + 3;
+      const otherSubjects = sourceCurriculum
+        .find((existing) => existing.grade === grade)
+        ?.subjects?.filter((subject) => !subject.strand || subject.strand === "English") ?? [];
+      return {
+        ...entry,
+        grade,
+        modules: [],
+        subjects: [...cyberSubjectsForGrade(grade), ...otherSubjects],
+      };
+    }),
+  ...sourceCurriculum.filter((entry) => entry.grade >= 11),
 ];
 
 export function getGradeCurriculum(grade: number) {

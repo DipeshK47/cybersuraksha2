@@ -1,0 +1,77 @@
+{
+  "duration": 79.676,
+  "scenes": [
+    {
+      "id": "when-the-message-looks-official-1",
+      "label": "Meet the team",
+      "title": "An official-looking warning",
+      "mood": "happy",
+      "caption": "Kabir sees a fictional bank-account warning with a familiar display name and a support number. Another message claims a courier problem. Both ask him to act through the links they supply.",
+      "dialogue": "Who supplied this contact route?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 12.096
+    },
+    {
+      "id": "when-the-message-looks-official-2",
+      "label": "The problem",
+      "title": "Look behind the display name",
+      "mood": "surprise",
+      "caption": "The message’s actual address does not match the supplied official-source pack. The claimed support number appears only inside the warning. A logo, polished grammar or a top search result does not independently establish authority.",
+      "dialogue": "Display name and actual sender are different fields.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 12.746,
+      "duration": 15.509
+    },
+    {
+      "id": "when-the-message-looks-official-3",
+      "label": "How it works",
+      "title": "Choose a separate route",
+      "mood": "thinking",
+      "caption": "Open a previously installed trusted app or use a contact obtained independently from the organisation’s genuine channel. Do not let the suspicious message choose the site, number and evidence used to verify itself.",
+      "dialogue": "Independent verification must be independent.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 28.905,
+      "duration": 14.677
+    },
+    {
+      "id": "when-the-message-looks-official-4",
+      "label": "Your decision",
+      "title": "Test the claim",
+      "mood": "thinking",
+      "caption": "The warning offers an urgent support call from its own number. Should Kabir call that number, trust the logo, or check using his existing trusted bank app?",
+      "dialogue": "A support label does not authorise the caller.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 44.233,
+      "duration": 9.963
+    },
+    {
+      "id": "when-the-message-looks-official-5",
+      "label": "What changes",
+      "title": "A claim-to-evidence table",
+      "mood": "happy",
+      "caption": "Kabir records the account-lock claim and the independent check needed to resolve it. He keeps uncertainty visible instead of declaring the account safe from the message alone.",
+      "dialogue": "Record what is claimed and what could verify it.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 54.845,
+      "duration": 10.944
+    },
+    {
+      "id": "when-the-message-looks-official-6",
+      "label": "Enter the lab",
+      "title": "Enter the verification lab",
+      "mood": "happy",
+      "caption": "Inspect sender details, match claims to independent checks and handle a well-written warning with no obvious spelling errors. The same evidence standard applies even when the message looks professional.",
+      "dialogue": "Appearance is one observation, not the verdict.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 66.439,
+      "duration": 12.587
+    }
+  ]
+}

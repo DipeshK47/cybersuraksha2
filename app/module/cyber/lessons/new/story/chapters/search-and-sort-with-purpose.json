@@ -1,0 +1,77 @@
+{
+  "duration": 91.303,
+  "scenes": [
+    {
+      "id": "search-and-sort-with-purpose-1",
+      "label": "Meet the team",
+      "title": "Find one enquiry",
+      "mood": "happy",
+      "caption": "Asha needs applicant ID sixty in a shuffled list of seven numeric practice IDs. Linear search can inspect them in order without sorting first. The team will count comparisons instead of declaring one method best for every task.",
+      "dialogue": "How much work does this lookup actually take?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.509
+    },
+    {
+      "id": "search-and-sort-with-purpose-2",
+      "label": "The problem",
+      "title": "A fast-looking mistake",
+      "mood": "surprise",
+      "caption": "A teammate proposes binary search on the shuffled list. Binary search discards part of the search range based on ordering, so that shortcut is not valid until the data satisfies the sorted-order requirement.",
+      "dialogue": "The method has a precondition.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 16.159,
+      "duration": 13.525
+    },
+    {
+      "id": "search-and-sort-with-purpose-3",
+      "label": "How it works",
+      "title": "Compare with purpose",
+      "mood": "thinking",
+      "caption": "Linear search checks items one by one. Binary search checks a middle item in sorted data and narrows the range. Sorting itself takes work. A tiny one-off enquiry and many repeated lookups can justify different choices.",
+      "dialogue": "Count the work and state what you excluded.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 30.335,
+      "duration": 15.552
+    },
+    {
+      "id": "search-and-sort-with-purpose-4",
+      "label": "Your decision",
+      "title": "Protect the precondition",
+      "mood": "thinking",
+      "caption": "The numeric IDs are still shuffled. Which action is justified before using binary search? Choose between using linear search directly and establishing the required sorted order before a binary-search experiment.",
+      "dialogue": "Do not discard half a range without an ordering guarantee.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 46.537,
+      "duration": 14.059
+    },
+    {
+      "id": "search-and-sort-with-purpose-5",
+      "label": "What changes",
+      "title": "Measure the paths",
+      "mood": "happy",
+      "caption": "The supplied linear search finds sixty after five comparisons. On the sorted version, the supplied binary search finds it after two. Those lookup counts exclude sorting cost and do not prove that binary search is always the better overall choice.",
+      "dialogue": "A lower lookup count is only part of the decision.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 61.245,
+      "duration": 16.085
+    },
+    {
+      "id": "search-and-sort-with-purpose-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Step through both searches, sort the practice cards before the binary run and choose a method for a new desk situation. Explain the sorted-data condition and whether preparation work is worth doing.",
+      "dialogue": "Let us compare the whole task, not only its last step.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 77.981,
+      "duration": 12.672
+    }
+  ]
+}

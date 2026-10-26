@@ -6,7 +6,7 @@ import { ToyWorkshop } from "./ToyWorkshop";
 export const metadata: Metadata = {
   title: "Toy Workshop",
   description:
-    "An interactive Class 3 spatial-thinking and pattern mission from CyberSuraksha.",
+    "An interactive Class 3 spatial-thinking and pattern mission from CyberShiksha.",
 };
 
 export default async function ToyWorkshopPage({

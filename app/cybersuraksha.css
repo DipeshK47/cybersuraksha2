@@ -126,7 +126,7 @@ button {
   color: #18201b !important;
   background: var(--sl-yellow) !important;
   display: grid !important;
-  grid-template-columns: auto auto !important;
+  grid-template-columns: auto !important;
   grid-template-rows: auto auto !important;
   place-content: center !important;
   align-items: center !important;

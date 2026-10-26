@@ -1,0 +1,77 @@
+{
+  "duration": 98.919,
+  "scenes": [
+    {
+      "id": "the-evidence-hearing-1",
+      "label": "Meet the team",
+      "title": "The evidence hearing",
+      "mood": "happy",
+      "caption": "Kabir prepares a concise team briefing from the college-fest dossier. The hearing asks for confirmed facts, claims, actions, owners and remaining uncertainty. It should protect the person affected and avoid turning an anomaly into an accusation.",
+      "dialogue": "A confident presentation still needs evidence.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.32
+    },
+    {
+      "id": "the-evidence-hearing-2",
+      "label": "The problem",
+      "title": "An individual fresh case",
+      "mood": "surprise",
+      "caption": "The new case includes a documented group purchase that explains one pass-through pattern, but a separate caller asks for a PIN. The receipt supports the purchase context; it does not authorise the caller or make sharing a secret safe.",
+      "dialogue": "Keep separate claims separate.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 16.97,
+      "duration": 14.848
+    },
+    {
+      "id": "the-evidence-hearing-3",
+      "label": "How it works",
+      "title": "Defend and reflect",
+      "mood": "thinking",
+      "caption": "State the decision, cite supporting evidence, consider an alternative and explain what remains unknown. Identify one change that would improve the tested aid. Label prior work and any assistance honestly. The teacher reviews the actual briefing, individual defence and reflection.",
+      "dialogue": "A checked answer does not establish authorship or understanding.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 32.468,
+      "duration": 18.261
+    },
+    {
+      "id": "the-evidence-hearing-4",
+      "label": "Your decision",
+      "title": "Choose the supported decision",
+      "mood": "thinking",
+      "caption": "Should Kabir accuse the collector from the flag, share a PIN because one receipt is genuine, or preserve the benign context while independently verifying the separate caller and keeping secrets private?",
+      "dialogue": "One supported fact does not verify every request.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.379,
+      "duration": 13.077
+    },
+    {
+      "id": "the-evidence-hearing-5",
+      "label": "What changes",
+      "title": "A safer revision",
+      "mood": "happy",
+      "caption": "Specific feedback lets an unsafe decision be revised while the original attempt remains visible. The student adds the missed case to the aid’s tests and explains a clearer verification route and owner. No oral defence or annual assessment is automatically passed from a text length.",
+      "dialogue": "Use feedback to improve the next decision.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.107,
+      "duration": 17.749
+    },
+    {
+      "id": "the-evidence-hearing-6",
+      "label": "Enter the lab",
+      "title": "Enter the hearing lab",
+      "mood": "happy",
+      "caption": "Prepare the team outline, resolve the fresh case and save an individual decision, reflection and improvement plan with four labelled dossier sources. This completes the second annual-capstone lesson within the thirty two-lesson year.",
+      "dialogue": "Defend the response and the remaining limit.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 83.506,
+      "duration": 14.763
+    }
+  ]
+}

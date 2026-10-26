@@ -164,7 +164,7 @@ export default function RosterPage() {
             <div className="slipGrid">
               {issuedAccounts.map((student) => (
                 <article className="loginSlip" key={student.id}>
-                  <b>CyberSuraksha</b>
+                  <b>CyberShiksha</b>
                   <span>{student.name}</span>
                   <dl>
                     <div><dt>Class</dt><dd>{student.className}</dd></div>

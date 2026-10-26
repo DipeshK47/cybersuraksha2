@@ -1,0 +1,77 @@
+{
+  "duration": 94.204,
+  "scenes": [
+    {
+      "id": "recover-and-learn-1",
+      "label": "Meet the team",
+      "title": "Recovery needs evidence",
+      "mood": "happy",
+      "caption": "Asha chooses between two fictional portal snapshots after an incident at fourteen ten. The exercise target is service restoration within thirty minutes and at most ten minutes of data loss. These are supplied planning objectives, not universal deadlines.",
+      "dialogue": "Which restoration point is clean and complete?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.064
+    },
+    {
+      "id": "recover-and-learn-2",
+      "label": "The problem",
+      "title": "A recent copy can still be wrong",
+      "mood": "surprise",
+      "caption": "The fourteen eight snapshot is recent but contains an unauthorised guest permission and a missing registration. The fourteen hundred snapshot has the four expected records and the approved access model. Recent alone does not mean clean or complete.",
+      "dialogue": "Check content and access, not only the timestamp.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 16.714,
+      "duration": 16.235
+    },
+    {
+      "id": "recover-and-learn-3",
+      "label": "How it works",
+      "title": "Restore then verify",
+      "mood": "thinking",
+      "caption": "Use the clean point and test the exact expected IDs and statuses, intended organiser access and guest denial. Compare the actual restore time with the stated objective. Reopening requires evidence of service behaviour, not simply a completed copy operation.",
+      "dialogue": "A recovery test must include the protections too.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 33.599,
+      "duration": 17.472
+    },
+    {
+      "id": "recover-and-learn-4",
+      "label": "Your decision",
+      "title": "Choose the recovery claim",
+      "mood": "thinking",
+      "caption": "A backup copies successfully, but nobody checks record completeness or access. Is that enough to declare recovery? Choose the requirement that makes the claim testable.",
+      "dialogue": "Copy success is not service recovery evidence.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.721,
+      "duration": 10.901
+    },
+    {
+      "id": "recover-and-learn-5",
+      "label": "What changes",
+      "title": "A bounded recovery result",
+      "mood": "happy",
+      "caption": "The clean model is restored at fourteen twenty two. That is twelve minutes of downtime. The backup precedes the incident by ten minutes, so both exercise objectives are met. Access and data tests pass, but the team still documents limits and a follow-up improvement.",
+      "dialogue": "State which tests passed and what they do not prove.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 63.272,
+      "duration": 16.576
+    },
+    {
+      "id": "recover-and-learn-6",
+      "label": "Enter the lab",
+      "title": "Enter the recovery lab",
+      "mood": "happy",
+      "caption": "Interpret the two objectives, restore the harmless dataset model and test completeness, permissions and timing. Add an improvement action and keep an independent recovery route for the next supplier outage.",
+      "dialogue": "Declare the tested result, not a guarantee.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.498,
+      "duration": 13.056
+    }
+  ]
+}

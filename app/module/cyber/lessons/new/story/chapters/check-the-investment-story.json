@@ -1,0 +1,77 @@
+{
+  "duration": 94.289,
+  "scenes": [
+    {
+      "id": "check-the-investment-story-1",
+      "label": "Meet the team",
+      "title": "Check the investment story",
+      "mood": "happy",
+      "caption": "Kabir receives a fictional app offer promising guaranteed daily returns. A familiar public figure appears to endorse it. The teacher has supplied a mock registry entry and company contact pack for comparison; these are not real regulatory records.",
+      "dialogue": "Which exact claim does each source support?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.811
+    },
+    {
+      "id": "check-the-investment-story-2",
+      "label": "The problem",
+      "title": "A borrowed name and a release fee",
+      "mood": "surprise",
+      "caption": "The offer uses a firm name and a copied-looking registration reference, but its app domain does not match the independently supplied contact. When withdrawal is requested, the sender demands another release fee. Neither an endorsement image nor a matching name verifies that request.",
+      "dialogue": "A registry match is not a safety guarantee.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 17.461,
+      "duration": 17.707
+    },
+    {
+      "id": "check-the-investment-story-3",
+      "label": "How it works",
+      "title": "Verify the exact entity and channel",
+      "mood": "thinking",
+      "caption": "Check the claimed entity, permitted role, contact route and offer against independent records. Even a verified registration would not promise returns or prove this sender controls that entity. Do not install an unverified app or pay a new fee to test a withdrawal claim.",
+      "dialogue": "Verification reduces uncertainty; it does not remove investment risk.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 35.817,
+      "duration": 17.877
+    },
+    {
+      "id": "check-the-investment-story-4",
+      "label": "Your decision",
+      "title": "Choose the supported decision",
+      "mood": "thinking",
+      "caption": "Should Kabir pay the release fee, trust the endorsement, or pause the offer and reject its unsupported payment instructions while checking through the independent route?",
+      "dialogue": "A request for more money is not proof of recoverable funds.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 54.345,
+      "duration": 9.963
+    },
+    {
+      "id": "check-the-investment-story-5",
+      "label": "What changes",
+      "title": "A claim-source ledger",
+      "mood": "happy",
+      "caption": "Kabir records the mismatched channel, unverified endorsement and unsupported guaranteed return. He can explain the evidence for a pause without issuing investment advice or assuming a real organisation is fraudulent.",
+      "dialogue": "The conclusion should be no broader than the evidence.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 64.957,
+      "duration": 14.699
+    },
+    {
+      "id": "check-the-investment-story-6",
+      "label": "Enter the lab",
+      "title": "Enter the verification lab",
+      "mood": "happy",
+      "caption": "Compare the synthetic source pack, classify each claim and choose a safe pause or rejection response. No real company, security or investment product is evaluated, and no recovery is promised.",
+      "dialogue": "Check claims before money or documents move.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.306,
+      "duration": 13.333
+    }
+  ]
+}

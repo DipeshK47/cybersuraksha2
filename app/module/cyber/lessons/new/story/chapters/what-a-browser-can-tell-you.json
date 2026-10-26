@@ -1,0 +1,77 @@
+{
+  "duration": 86.417,
+  "scenes": [
+    {
+      "id": "what-a-browser-can-tell-you-1",
+      "label": "Meet the team",
+      "title": "A familiar page",
+      "mood": "happy",
+      "caption": "Kabir receives a festival link. The page has a school crest and a familiar title, and it asks him to sign in. Those page details can be copied. He needs to inspect what the browser actually opened.",
+      "dialogue": "The page looks familiar. What does the address say?",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.269
+    },
+    {
+      "id": "what-a-browser-can-tell-you-2",
+      "label": "The problem",
+      "title": "Read the address",
+      "mood": "surprise",
+      "caption": "The hostname begins with the school name but continues into another domain. The known school hostname is different. A familiar word inside an address does not mean that the whole address belongs to that organisation.",
+      "dialogue": "Read all the way to the next slash.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 13.919,
+      "duration": 14.101
+    },
+    {
+      "id": "what-a-browser-can-tell-you-3",
+      "label": "How it works",
+      "title": "Connection limits",
+      "mood": "thinking",
+      "caption": "H T T P S protects the connection to the hostname shown. It does not establish that the operator is your school or that a request is honest. An independent known address or school contact helps verify the claim.",
+      "dialogue": "A protected connection is not an endorsement.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 28.671,
+      "duration": 14.912
+    },
+    {
+      "id": "what-a-browser-can-tell-you-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "Identify the full hostname in the supplied address bar. Start after the scheme and stop at the next slash. Do not use the page title, logo or only the familiar beginning.",
+      "dialogue": "Which hostname did we really open?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 44.233,
+      "duration": 11.968
+    },
+    {
+      "id": "what-a-browser-can-tell-you-5",
+      "label": "What changes",
+      "title": "Independent route",
+      "mood": "happy",
+      "caption": "Kabir uses the school address from his diary and checks through the school instead of replying to the suspicious sender. He does not type credentials into the supplied page. He records the evidence and its limits.",
+      "dialogue": "I will use a route I already know.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 56.851,
+      "duration": 13.248
+    },
+    {
+      "id": "what-a-browser-can-tell-you-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "A programme page also asks for access to contacts. Displaying festival times does not need the whole contact list. In the lab, read full hostnames, explain connection indicators and make a proportionate permission decision.",
+      "dialogue": "Check both the destination and the request.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 70.749,
+      "duration": 15.019
+    }
+  ]
+}

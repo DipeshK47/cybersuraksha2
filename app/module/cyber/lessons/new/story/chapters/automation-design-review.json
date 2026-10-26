@@ -1,0 +1,77 @@
+{
+  "duration": 92.092,
+  "scenes": [
+    {
+      "id": "automation-design-review-1",
+      "label": "Meet the team",
+      "title": "The automation design review",
+      "mood": "happy",
+      "caption": "Kabir compares a shared validated pipeline with a design that copies rules across screens and compares every record pair. The reviewer asks about correctness, efficiency, maintainability and what stays with a person.",
+      "dialogue": "The fastest label is not the whole design.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.549
+    },
+    {
+      "id": "automation-design-review-2",
+      "label": "The problem",
+      "title": "Larger input and a changed rule",
+      "mood": "surprise",
+      "caption": "The fresh brief has one hundred twenty eight records and a review threshold of at least eighty. The same all-pairs comparison requires eight thousand one hundred twenty eight pair checks; one record visit per item is one hundred twenty eight. Preparation and storage work still need stating.",
+      "dialogue": "Count the operation and preserve the rule change history.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 15.199,
+      "duration": 17.045
+    },
+    {
+      "id": "automation-design-review-3",
+      "label": "How it works",
+      "title": "Revise in a separate version",
+      "mood": "thinking",
+      "caption": "Evaluate the new rule on a preserved copy with a separate output ledger. Keep old-version results rather than overwriting them. Under the new brief, scores seventy nine, eighty and eighty one must follow the new inclusive boundary.",
+      "dialogue": "A versioned check avoids confusing old and new decisions.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 32.895,
+      "duration": 15.125
+    },
+    {
+      "id": "automation-design-review-4",
+      "label": "Your decision",
+      "title": "Choose the design defence",
+      "mood": "thinking",
+      "caption": "Should the team copy slightly different rules everywhere, choose a design only for its animation, or share validation and transformation, measure work and retain human ownership of conflicting data and policy?",
+      "dialogue": "Correctness and oversight remain requirements at scale.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.67,
+      "duration": 13.419
+    },
+    {
+      "id": "automation-design-review-5",
+      "label": "What changes",
+      "title": "An accountable design",
+      "mood": "happy",
+      "caption": "Kabir keeps the shared contracts, stable event IDs, quarantine and checkpointed retry. He reports the operation-count assumptions and names the authorised person who reviews conflicting identities or changes the priority policy.",
+      "dialogue": "Automation must not invent authority.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 62.739,
+      "duration": 15.36
+    },
+    {
+      "id": "automation-design-review-6",
+      "label": "Enter the lab",
+      "title": "Enter the review lab",
+      "mood": "happy",
+      "caption": "Compare the two designs, test the new eighty-point rule and defend a fresh conflicting-record case. Use the schema, traces, counts and eight-case record in an individual teacher-reviewed viva.",
+      "dialogue": "Defend the evidence and the remaining limit.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 78.749,
+      "duration": 12.693
+    }
+  ]
+}

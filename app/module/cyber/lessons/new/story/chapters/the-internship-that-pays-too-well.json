@@ -1,0 +1,77 @@
+{
+  "duration": 90.727,
+  "scenes": [
+    {
+      "id": "the-internship-that-pays-too-well-1",
+      "label": "Meet the team",
+      "title": "An extraordinary internship",
+      "mood": "happy",
+      "caption": "Kabir receives a fictional internship offer with an unusually high stipend. The sender requests an upfront processing payment and an identity-document upload. The school has supplied a separate official-source pack for comparison.",
+      "dialogue": "What does the supplied organisation actually say?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.741
+    },
+    {
+      "id": "the-internship-that-pays-too-well-2",
+      "label": "The problem",
+      "title": "Compare the sources",
+      "mood": "surprise",
+      "caption": "The offer uses the organisation name but comes from a different address. The supplied official pack lists a different application channel, no processing fee and no identity upload at this stage. These contradictions matter more than the polished layout.",
+      "dialogue": "A real organisation name does not verify this sender.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.391,
+      "duration": 15.68
+    },
+    {
+      "id": "the-internship-that-pays-too-well-3",
+      "label": "How it works",
+      "title": "Build due diligence",
+      "mood": "thinking",
+      "caption": "Compare the role, process, contact route and payment request with independently obtained information. Keep personal documents private while the offer is unresolved. A confident promise is not evidence that a particular recruiter is authorised.",
+      "dialogue": "Check the exact offer, not only whether the organisation exists.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 31.721,
+      "duration": 15.701
+    },
+    {
+      "id": "the-internship-that-pays-too-well-4",
+      "label": "Your decision",
+      "title": "Choose a supported response",
+      "mood": "thinking",
+      "caption": "The supplied official pack contradicts the payment and document instructions. Should Kabir pay to hold the place, send a smaller identity scan, or reject these instructions and verify through the listed official application route?",
+      "dialogue": "Tie the decision to the contradiction.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.073,
+      "duration": 14.165
+    },
+    {
+      "id": "the-internship-that-pays-too-well-5",
+      "label": "What changes",
+      "title": "The offer stays unverified",
+      "mood": "happy",
+      "caption": "Kabir preserves the offer, rejects the unsupported payment and document requests, and checks using the independent route. He can explain what contradicted the offer without claiming that every attractive opportunity is fraudulent.",
+      "dialogue": "A pause or rejection needs a reason.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 62.888,
+      "duration": 14.037
+    },
+    {
+      "id": "the-internship-that-pays-too-well-6",
+      "label": "Enter the lab",
+      "title": "Enter the verification lab",
+      "mood": "happy",
+      "caption": "Compare the synthetic offer and source pack, build a due-diligence checklist and handle a new scholarship claim. No real organisation is assessed and no payment or identity document is collected.",
+      "dialogue": "Use the evidence pack to defend each decision.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 77.575,
+      "duration": 12.501
+    }
+  ]
+}

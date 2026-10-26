@@ -1,0 +1,77 @@
+{
+  "duration": 102.737,
+  "scenes": [
+    {
+      "id": "security-assurance-review-1",
+      "label": "Meet the team",
+      "title": "The security assurance review",
+      "mood": "happy",
+      "caption": "Kabir prepares the portal design for an individual review. The portfolio contains a risk register, boundary controls, an evidence timeline, an incident action log and a recovery test. The reviewer asks how cost, privacy and usability shaped the design.",
+      "dialogue": "Who owns the remaining risk?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.832
+    },
+    {
+      "id": "security-assurance-review-2",
+      "label": "The problem",
+      "title": "New evidence changes the story",
+      "mood": "surprise",
+      "caption": "An initial login alert is explained by authorised maintenance. Separately, the supplied access settings still confirm a public export link. One benign alert does not cancel independent evidence of exposure; the team must revise each conclusion separately.",
+      "dialogue": "Do not let one correction erase unrelated evidence.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 17.482,
+      "duration": 17.152
+    },
+    {
+      "id": "security-assurance-review-3",
+      "label": "How it works",
+      "title": "Defend proportionate controls",
+      "mood": "thinking",
+      "caption": "Keep the registration data restricted, preserve evidence, allow suppliers to publish only the programme and maintain tested recovery. Assign an owner and review point for residual supplier failure. Explain the tradeoff rather than claiming all risks are gone.",
+      "dialogue": "A useful defence connects action, evidence and limitation.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 35.284,
+      "duration": 17.088
+    },
+    {
+      "id": "security-assurance-review-4",
+      "label": "Your decision",
+      "title": "Choose the revised conclusion",
+      "mood": "thinking",
+      "caption": "The login alert is benign, but the public export setting is confirmed. Should the team dismiss everything, accuse the named user anyway, or correct the alert hypothesis while containing and reviewing the separate exposure?",
+      "dialogue": "Update the conclusion supported by the new evidence.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 53.022,
+      "duration": 14.165
+    },
+    {
+      "id": "security-assurance-review-5",
+      "label": "What changes",
+      "title": "A defensible decision",
+      "mood": "happy",
+      "caption": "The team changes the login hypothesis and retains the independently justified access restriction. It records who will review scope, who owns recovery and what remains uncertain. The teacher assesses the student’s individual explanation, not only the checked choices.",
+      "dialogue": "Explain what changed and why.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 67.837,
+      "duration": 17.749
+    },
+    {
+      "id": "security-assurance-review-6",
+      "label": "Enter the lab",
+      "title": "Enter the assurance lab",
+      "mood": "happy",
+      "caption": "Connect tradeoffs to risk owners, revise the misleading-alert case and defend a new supplier request. Use the evidence record for a short individual viva. Structured checks do not automatically assess authorship or oral understanding.",
+      "dialogue": "Defend the decision with evidence and a remaining limit.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 86.237,
+      "duration": 15.851
+    }
+  ]
+}

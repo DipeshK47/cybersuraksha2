@@ -1,0 +1,77 @@
+{
+  "duration": 94.247,
+  "scenes": [
+    {
+      "id": "make-the-rules-explicit-1",
+      "label": "Meet the team",
+      "title": "The exercise rule arrives",
+      "mood": "happy",
+      "caption": "Asha receives the fictional desk’s rule: a valid record meets the exercise criteria when its score is at least sixty and its documents are complete. Missing or invalid information must follow an explicit review route. These are invented classroom rules.",
+      "dialogue": "At least sixty includes sixty.",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.832
+    },
+    {
+      "id": "make-the-rules-explicit-2",
+      "label": "The problem",
+      "title": "A tempting shortcut",
+      "mood": "surprise",
+      "caption": "A first draft uses either a high score or complete documents. That would let a low score through simply because the paperwork is complete. Another draft uses greater than sixty and excludes the exact boundary.",
+      "dialogue": "A small word changes the whole decision.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 17.482,
+      "duration": 14.144
+    },
+    {
+      "id": "make-the-rules-explicit-3",
+      "label": "How it works",
+      "title": "Write the decisions precisely",
+      "mood": "thinking",
+      "caption": "Use a decision table and unambiguous pseudocode. Validate input first, handle missing information, then apply the score threshold and document condition. The score and documents must both satisfy the stated rule. Keep the missing-document route visible.",
+      "dialogue": "AND and OR make different promises.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 32.276,
+      "duration": 16.491
+    },
+    {
+      "id": "make-the-rules-explicit-4",
+      "label": "Your decision",
+      "title": "Test the exact boundary",
+      "mood": "thinking",
+      "caption": "A supplied record has score sixty and complete documents. Under the stated at-least-sixty rule, which outcome should the algorithm produce? Keep real scholarship decisions separate from this exercise classification.",
+      "dialogue": "Check the value where the branch changes.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 49.417,
+      "duration": 13.995
+    },
+    {
+      "id": "make-the-rules-explicit-5",
+      "label": "What changes",
+      "title": "Run both paths",
+      "mood": "happy",
+      "caption": "The team tests score fifty-nine, score sixty and a higher score with incomplete documents. The results expose both an incorrect comparison and an incorrect Boolean operator. A corrected rule handles each path as the brief states.",
+      "dialogue": "A decision table makes hidden shortcuts visible.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 64.061,
+      "duration": 15.424
+    },
+    {
+      "id": "make-the-rules-explicit-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Complete the decision table, change the live rule’s operators and assemble the checking sequence. Run the supplied cases and explain any mismatch instead of trusting an algorithm merely because it looks like code.",
+      "dialogue": "Let us test what the rule actually does.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 80.135,
+      "duration": 13.461
+    }
+  ]
+}

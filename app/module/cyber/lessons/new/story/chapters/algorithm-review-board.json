@@ -1,0 +1,77 @@
+{
+  "duration": 96.807,
+  "scenes": [
+    {
+      "id": "algorithm-review-board-1",
+      "label": "Meet the team",
+      "title": "The review board meets",
+      "mood": "happy",
+      "caption": "Asha and Kabir present the scholarship-enquiry workflow. They bring the decomposition, data model, rule table, trace, search comparison and test matrix. The board needs evidence of correctness and a clear account of what remains with the teacher.",
+      "dialogue": "Can another person follow and challenge our reasoning?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.064
+    },
+    {
+      "id": "algorithm-review-board-2",
+      "label": "The problem",
+      "title": "The requirement changes",
+      "mood": "surprise",
+      "caption": "The fictional exercise threshold changes from sixty to seventy. The new rule must include exactly seventy. A record that met the old threshold may legitimately change outcome, while invalid, missing and duplicate-record protections should remain intact.",
+      "dialogue": "A changed requirement is not a reason to drop validation.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 16.714,
+      "duration": 16.512
+    },
+    {
+      "id": "algorithm-review-board-3",
+      "label": "How it works",
+      "title": "Revise with evidence",
+      "mood": "thinking",
+      "caption": "Update the shared rule once and review expected outcomes affected by the new requirement. Retest unchanged protections and add the new boundary cases. Compare designs on correctness, effort and maintainability, while keeping final award decisions under human authority.",
+      "dialogue": "Name what changed and what still has to hold.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 33.876,
+      "duration": 17.685
+    },
+    {
+      "id": "algorithm-review-board-4",
+      "label": "Your decision",
+      "title": "Test the new boundary",
+      "mood": "thinking",
+      "caption": "Under the revised at-least-seventy rule with complete documents, what should happen to a record scoring exactly seventy? Use the revised brief rather than reusing an old expectation without checking it.",
+      "dialogue": "The new boundary belongs in the test pack.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 52.211,
+      "duration": 12.608
+    },
+    {
+      "id": "algorithm-review-board-5",
+      "label": "What changes",
+      "title": "The board challenges a conflict",
+      "mood": "happy",
+      "caption": "Two new records arrive with the same stable ID and different values. A high score does not settle that conflict. The team preserves both supplied records, flags the duplicate and refers it for review instead of silently choosing one.",
+      "dialogue": "A correct threshold cannot repair conflicting identity data.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 65.469,
+      "duration": 15.488
+    },
+    {
+      "id": "algorithm-review-board-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Run the revised workflow, compare two designs and defend the response to a fresh conflicting-record case. Your teacher reviews the individual explanation; the automatic checks assess the structured decisions and test results.",
+      "dialogue": "Defend the evidence, the alternative and the limitation.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 81.607,
+      "duration": 14.549
+    }
+  ]
+}

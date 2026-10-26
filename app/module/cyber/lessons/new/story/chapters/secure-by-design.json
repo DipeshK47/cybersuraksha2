@@ -1,0 +1,77 @@
+{
+  "duration": 97.425,
+  "scenes": [
+    {
+      "id": "secure-by-design-1",
+      "label": "Meet the team",
+      "title": "A request that should fail",
+      "mood": "happy",
+      "caption": "Asha tests a harmless offline portal model. One signed-in participant requests another participant’s record, and another request supplies a negative amount. The first draft relies on the interface to prevent both cases.",
+      "dialogue": "Which server decisions must be explicit?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.275
+    },
+    {
+      "id": "secure-by-design-2",
+      "label": "The problem",
+      "title": "Three different protections",
+      "mood": "surprise",
+      "caption": "Input validation checks the allowed shape or range. Authorisation checks whether this identified actor may perform this action on this record. Safe data access keeps supplied values from becoming query instructions. One control does not replace the other two.",
+      "dialogue": "A valid input can still request an unauthorised record.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 15.925,
+      "duration": 17.131
+    },
+    {
+      "id": "secure-by-design-3",
+      "label": "How it works",
+      "title": "Retain failing examples",
+      "mood": "thinking",
+      "caption": "Keep an own-record case, a different-owner case, an invalid amount and an unexpected identifier. Run the draft, repair the specific controls and rerun the same cases. This toy model reports outcomes without executing any database query.",
+      "dialogue": "Before-and-after evidence explains the correction.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 33.705,
+      "duration": 16.299
+    },
+    {
+      "id": "secure-by-design-4",
+      "label": "Your decision",
+      "title": "Repair the boundary",
+      "mood": "thinking",
+      "caption": "A record identifier is well formed, but belongs to another participant. Does formatting make the request authorised? Choose the control that checks the actor’s permitted action on the requested record.",
+      "dialogue": "Identity, validity and permission are separate facts.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 50.654,
+      "duration": 12.885
+    },
+    {
+      "id": "secure-by-design-5",
+      "label": "What changes",
+      "title": "The repaired model",
+      "mood": "happy",
+      "caption": "The server checks a trusted session, enforces record ownership, validates the amount and uses structured data access. The corrected synthetic pack rejects unsafe requests while retaining the intended own-record path. Passing the pack is evidence, not a security guarantee.",
+      "dialogue": "A repair must not remove the valid path.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 64.189,
+      "duration": 17.728
+    },
+    {
+      "id": "secure-by-design-6",
+      "label": "Enter the lab",
+      "title": "Enter the design lab",
+      "mood": "happy",
+      "caption": "Map misuse cases to controls, run the faulty and corrected model and test exact amount boundaries. Do not scan, exploit or send requests to a live service; every operation stays inside this lesson.",
+      "dialogue": "Test the correction at the boundary too.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 82.567,
+      "duration": 14.208
+    }
+  ]
+}

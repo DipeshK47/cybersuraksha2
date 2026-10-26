@@ -1,0 +1,77 @@
+{
+  "duration": 84.049,
+  "scenes": [
+    {
+      "id": "trace-and-debug-a-decision-1",
+      "label": "Meet the team",
+      "title": "A result goes missing",
+      "mood": "happy",
+      "caption": "Kabir checks a loop that processes three sample scores. Its index starts at zero. The valid positions are zero, one and two, but the draft loop also tries to read position three.",
+      "dialogue": "Three items do not have an index three.",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 12.587
+    },
+    {
+      "id": "trace-and-debug-a-decision-2",
+      "label": "The problem",
+      "title": "One iteration too many",
+      "mood": "surprise",
+      "caption": "The loop continues while the index is less than or equal to the list length. That condition runs once too often. The trace needs to show the failed access instead of silently dropping the evidence of the bug.",
+      "dialogue": "Trace the values rather than guessing.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 13.237,
+      "duration": 13.675
+    },
+    {
+      "id": "trace-and-debug-a-decision-3",
+      "label": "How it works",
+      "title": "Follow the execution",
+      "mood": "thinking",
+      "caption": "A trace records the index, current value and result at each step. A strict less-than-length guard visits only valid positions. Separately, a score comparison can be valid-looking code yet implement the wrong threshold.",
+      "dialogue": "A syntax problem and a logic problem are different.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 27.561,
+      "duration": 14.656
+    },
+    {
+      "id": "trace-and-debug-a-decision-4",
+      "label": "Your decision",
+      "title": "Choose the loop guard",
+      "mood": "thinking",
+      "caption": "For a zero-based list of three items, which guard prevents reading beyond the last item? Compare the index to the length, remembering that the final valid index is one less than the length.",
+      "dialogue": "Stop before the index reaches the length.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 42.867,
+      "duration": 11.819
+    },
+    {
+      "id": "trace-and-debug-a-decision-5",
+      "label": "What changes",
+      "title": "Repair and rerun",
+      "mood": "happy",
+      "caption": "Kabir fixes the guard and sees exactly three valid trace rows. He then checks the score boundary and replaces greater-than-sixty with greater-than-or-equal-to-sixty. The failing examples become evidence for the corrections.",
+      "dialogue": "A repair needs a successful rerun.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 55.336,
+      "duration": 14.251
+    },
+    {
+      "id": "trace-and-debug-a-decision-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Run the buggy loop, fix its guard, repair the threshold comparison and classify syntax-like versus logical errors. Keep the failed case and the corrected trace so another person can assess the change.",
+      "dialogue": "Let us preserve the before-and-after evidence.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 70.237,
+      "duration": 13.163
+    }
+  ]
+}

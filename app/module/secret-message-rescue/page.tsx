@@ -6,7 +6,7 @@ import { SecretMessageRescue } from "./SecretMessageRescue";
 export const metadata: Metadata = {
   title: "Secret Message Rescue",
   description:
-    "A playable Class 3 Caesar Cipher mission from CyberSuraksha.",
+    "A playable Class 3 Caesar Cipher mission from CyberShiksha.",
 };
 
 export default async function SecretMessageRescuePage({

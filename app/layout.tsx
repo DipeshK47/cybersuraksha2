@@ -6,8 +6,10 @@ import {
 } from "next/font/google";
 import { headers } from "next/headers";
 import { HandbookChatbot } from "./components/HandbookChatbot";
+import { LanguageToggle } from "./components/LanguageToggle";
 import "./globals.css";
 import "./cybersuraksha.css";
+import "./hindi.css";
 
 const manrope = Manrope({
   variable: "--font-body",
@@ -28,7 +30,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 const description =
-  "CyberSuraksha turns Computational Thinking and Artificial Intelligence into hands-on learning missions for Classes 3-10.";
+  "CyberShiksha turns Computational Thinking and Artificial Intelligence into hands-on learning missions for Classes 6-12.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -42,15 +44,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: {
-      default: "CyberSuraksha",
-      template: "%s — CyberSuraksha",
+      default: "CyberShiksha",
+      template: "%s — CyberShiksha",
     },
     description,
     icons: {
       icon: "/favicon.svg",
     },
     openGraph: {
-      title: "CyberSuraksha",
+      title: "CyberShiksha",
       description,
       type: "website",
       images: [
@@ -58,13 +60,13 @@ export async function generateMetadata(): Promise<Metadata> {
           url: socialImage,
           width: 1200,
           height: 630,
-          alt: "CyberSuraksha — Think. Build. Discover.",
+          alt: "CyberShiksha — Think. Build. Discover.",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "CyberSuraksha",
+      title: "CyberShiksha",
       description,
       images: [socialImage],
     },
@@ -81,6 +83,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${ibmPlexMono.variable} ${bricolage.variable}`}
       >
+        <LanguageToggle />
         {children}
         <HandbookChatbot />
       </body>

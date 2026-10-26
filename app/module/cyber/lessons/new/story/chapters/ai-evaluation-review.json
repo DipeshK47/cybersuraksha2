@@ -1,0 +1,77 @@
+{
+  "duration": 93.052,
+  "scenes": [
+    {
+      "id": "ai-evaluation-review-1",
+      "label": "Meet the team",
+      "title": "The evaluation meeting",
+      "mood": "happy",
+      "caption": "Asha and Kabir bring their work together: a task brief, a data-quality log, a simple baseline, held-out results, a group comparison and a human review plan. The decision must follow that evidence rather than the polish of a demo.",
+      "dialogue": "Should we use it, revise it or stop?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.784
+    },
+    {
+      "id": "ai-evaluation-review-2",
+      "label": "The problem",
+      "title": "Evidence is incomplete",
+      "mood": "surprise",
+      "caption": "The model slightly beats the baseline on the tiny pack, but dim examples perform poorly. The current proposal would label every sample automatically. A narrow overall improvement does not justify removing human review or claiming broad reliability.",
+      "dialogue": "Our limits belong in the recommendation.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 15.434,
+      "duration": 16.448
+    },
+    {
+      "id": "ai-evaluation-review-3",
+      "label": "How it works",
+      "title": "A defensible dossier",
+      "mood": "thinking",
+      "caption": "An evaluation dossier states the intended use, data limits, comparator, test results, fairness concern and human intervention point. It records what should trigger revision or stopping, and discloses any AI help used in preparing the work.",
+      "dialogue": "A go decision needs conditions, not just enthusiasm.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 32.532,
+      "duration": 15.595
+    },
+    {
+      "id": "ai-evaluation-review-4",
+      "label": "Your decision",
+      "title": "Make the recommendation",
+      "mood": "thinking",
+      "caption": "The small test shows weak dim-condition performance and there is no human fallback yet. Choose the recommendation that fits the evidence before the prototype is used more widely.",
+      "dialogue": "What needs to change before anyone relies on it?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 48.777,
+      "duration": 11.285
+    },
+    {
+      "id": "ai-evaluation-review-5",
+      "label": "What changes",
+      "title": "An unseen condition",
+      "mood": "happy",
+      "caption": "The festival moves to an evening courtyard that was never evaluated. The team pauses automatic use, keeps a manual route and proposes a separate collection and fresh test. New conditions require new evidence, not a recycled score.",
+      "dialogue": "Our earlier score does not cover this new setting.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 60.712,
+      "duration": 15.445
+    },
+    {
+      "id": "ai-evaluation-review-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Complete the dossier, defend a use or revise decision and handle the changed evening case. Record assistance honestly. Your teacher can ask for an individual explanation on fresh evidence, beyond the lab’s structured checks.",
+      "dialogue": "Defend both the decision and its practical limits.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 76.807,
+      "duration": 15.595
+    }
+  ]
+}

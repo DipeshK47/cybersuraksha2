@@ -20,7 +20,7 @@ export default async function SampleModulePage({
     <main className="modulePreviewPage">
       <header className="modulePreviewNav">
         <Link href={`/track/${track}?${roleQuery}`}>← Exit</Link>
-        <span>CyberSuraksha · Sample</span>
+        <span>CyberShiksha · Sample</span>
       </header>
       <section className="modulePreviewCard">
         <span className="modulePreviewIcon">
@@ -33,7 +33,7 @@ export default async function SampleModulePage({
             : "Who’s Really Behind the Screen?"}
         </h1>
         <p>
-          This is the module placeholder requested for the CyberSuraksha clone. The
+          This is the module placeholder requested for the CyberShiksha clone. The
           lesson story, questions, scoring engine, audio, and scenario content
           are intentionally not copied.
         </p>

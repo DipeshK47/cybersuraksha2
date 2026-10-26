@@ -1,0 +1,77 @@
+{
+  "duration": 91.644,
+  "scenes": [
+    {
+      "id": "the-easy-money-recruitment-chain-1",
+      "label": "Meet the team",
+      "title": "A small payment earns trust",
+      "mood": "happy",
+      "caption": "Asha inspects a fictional task-job offer. A small initial payment appears in the supplied practice record. The recruiter then asks her to deposit more, receive money through her personal account and pass it onward for a commission.",
+      "dialogue": "What new action is the recruiter asking for?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.827
+    },
+    {
+      "id": "the-easy-money-recruitment-chain-2",
+      "label": "The problem",
+      "title": "The chain changes",
+      "mood": "surprise",
+      "caption": "The first payment proves only that one payment occurred. It does not verify the job, source of later funds or authority to use someone’s account. Account renting and forwarding money for strangers can create serious financial and legal risk.",
+      "dialogue": "An early reward is not verification of the whole chain.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 15.477,
+      "duration": 15.488
+    },
+    {
+      "id": "the-easy-money-recruitment-chain-3",
+      "label": "How it works",
+      "title": "Find a safe exit",
+      "mood": "thinking",
+      "caption": "Decline account sharing and further transfers, keep relevant messages and use independent help. If an account has already been used, promptly contact the bank through a trusted channel and involve a trusted adult. Do not move unexpected money at a stranger’s direction.",
+      "dialogue": "A safe exit does not require another payment.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 31.615,
+      "duration": 16.576
+    },
+    {
+      "id": "the-easy-money-recruitment-chain-4",
+      "label": "Your decision",
+      "title": "Choose the response",
+      "mood": "thinking",
+      "caption": "Should Asha pass the next amount onward, pay a release fee, or refuse the account-use request, preserve the evidence and seek appropriate trusted help?",
+      "dialogue": "A promised commission does not establish a legitimate purpose.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.841,
+      "duration": 9.6
+    },
+    {
+      "id": "the-easy-money-recruitment-chain-5",
+      "label": "What changes",
+      "title": "A documented refusal",
+      "mood": "happy",
+      "caption": "Asha writes a calm refusal and records the recruiter’s requested chain without calling every account holder a criminal. The origin and purpose of the funds remain unresolved. Support and bank guidance matter more than trying to investigate or refund the money herself.",
+      "dialogue": "Preserve uncertainty and stop the unsafe next step.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.091,
+      "duration": 17.173
+    },
+    {
+      "id": "the-easy-money-recruitment-chain-6",
+      "label": "Enter the lab",
+      "title": "Enter the casework lab",
+      "mood": "happy",
+      "caption": "Map the staged job chain, identify safe exit points and practise a refusal and escalation plan. All accounts, amounts and messages are invented. No transfer or real account access occurs.",
+      "dialogue": "Trace the request before agreeing to a role.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 76.914,
+      "duration": 14.08
+    }
+  ]
+}

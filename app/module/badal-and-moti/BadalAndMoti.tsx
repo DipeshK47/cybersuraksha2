@@ -316,7 +316,7 @@ export function BadalAndMoti({
   }
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} data-teaching-language="en">
       <a className={styles.skipLink} href="#bm-lesson-content">
         Skip to lesson
       </a>
@@ -477,7 +477,7 @@ export function BadalAndMoti({
                   : !studentId
                     ? "Preview complete. Sign in as a student to save this result."
                     : saveStatus === "saving"
-                      ? "Saving Badal and Moti to your local CyberSuraksha profile…"
+                      ? "Saving Badal and Moti to your local CyberShiksha profile…"
                       : saveStatus === "saved"
                         ? "Progress saved to the student and teacher progress views."
                         : saveStatus === "error"

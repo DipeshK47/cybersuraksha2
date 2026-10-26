@@ -74,7 +74,7 @@ export default async function GradePage({
         <section className="gradeMissing">
           <p>Class not found</p>
           <h1>This classroom is not available.</h1>
-          <Link href={`/dashboard${roleQuery}`}>Return to CyberSuraksha</Link>
+          <Link href={`/dashboard${roleQuery}`}>Return to CyberShiksha</Link>
         </section>
       </main>
     );
@@ -92,7 +92,7 @@ export default async function GradePage({
     }),
     {},
   );
-  // Senior classes are organised by subject; they carry no mission modules.
+  // Subject libraries can contain textbook chapters or interactive missions.
   const subjects = grade.subjects;
   const chapters = chapterCount(grade);
   const subjectLessons = subjectModuleCount(grade);
@@ -105,7 +105,7 @@ export default async function GradePage({
           All classes
         </Link>
         <div>
-          <span>CyberSuraksha · Class {grade.grade}</span>
+          <span>CyberShiksha · Class {grade.grade}</span>
           <Link href="/logout">Log out</Link>
         </div>
       </header>
@@ -211,7 +211,7 @@ export default async function GradePage({
         ) : null}
 
         {(cyberModules.length ? [
-          { title: "CyberSuraksha modules", description: "Open a module to play its two chapters", items: cyberModules },
+          { title: "CyberShiksha modules", description: "Open a module to explore its chapters", items: cyberModules },
           { title: "Other subjects", description: "Explore other class lessons", items: otherSubjects },
         ] : [{ title: "Subjects", description: "Open a subject to see its lessons", items: subjects ?? [] }]).filter((group) => group.items.length).map((group) => (
           <section

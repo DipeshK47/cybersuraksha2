@@ -1,0 +1,77 @@
+{
+  "duration": 89.319,
+  "scenes": [
+    {
+      "id": "identity-and-authority-can-be-manufactured-1",
+      "label": "Meet the team",
+      "title": "A convincing identity claim",
+      "mood": "happy",
+      "caption": "Asha receives a synthetic interview message from a cloned-looking profile and hears a familiar voice. The caller claims institutional authority and asks her to keep the conversation secret while using a new verification number.",
+      "dialogue": "Who supplied the supposed verifier?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.251
+    },
+    {
+      "id": "identity-and-authority-can-be-manufactured-2",
+      "label": "The problem",
+      "title": "Identity can be manufactured",
+      "mood": "surprise",
+      "caption": "A profile image, realistic voice or video and a formal title can be copied or manipulated. Two channels supplied by the same claimant are not independent. These observations call for verification rather than proving who created the message.",
+      "dialogue": "Familiar appearance is not independent authority.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 14.901,
+      "duration": 15.936
+    },
+    {
+      "id": "identity-and-authority-can-be-manufactured-3",
+      "label": "How it works",
+      "title": "Triangulate outside the channel",
+      "mood": "thinking",
+      "caption": "End the pressured interaction and use a previously known careers-office route and an independently supplied organisation contact. Compare the exact role and request, protect personal data and record what remains unknown. An unanswered check is not confirmation.",
+      "dialogue": "Independence matters more than the number of screens.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 31.487,
+      "duration": 16.917
+    },
+    {
+      "id": "identity-and-authority-can-be-manufactured-4",
+      "label": "Your decision",
+      "title": "Choose the verification protocol",
+      "mood": "thinking",
+      "caption": "Should Asha use the caller’s new number, send an identity scan as a test, or use known independent contacts and keep the request paused until it is supported?",
+      "dialogue": "A test disclosure is still a disclosure.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 49.054,
+      "duration": 10.048
+    },
+    {
+      "id": "identity-and-authority-can-be-manufactured-5",
+      "label": "What changes",
+      "title": "A bounded identity result",
+      "mood": "happy",
+      "caption": "One supplied office check confirms an advertised role, but the claimant’s identity and private payment request remain unresolved. Asha updates only the role-existence claim and retains the pause on documents and money.",
+      "dialogue": "Confirming one fact does not verify the entire interaction.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.752,
+      "duration": 14.699
+    },
+    {
+      "id": "identity-and-authority-can-be-manufactured-6",
+      "label": "Enter the lab",
+      "title": "Enter the identity lab",
+      "mood": "happy",
+      "caption": "Separate identity signals from authority, build independent checks and handle partial confirmation. The simulation creates no real voice clone or call, and it never asks for an actual identity document.",
+      "dialogue": "Verify the exact person, channel and requested action.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 75.101,
+      "duration": 13.568
+    }
+  ]
+}

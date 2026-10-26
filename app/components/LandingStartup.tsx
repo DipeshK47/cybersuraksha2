@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
+import { BrandLogo } from "./BrandLogo";
 import { useEffect, useState } from "react";
 
 export function LandingStartup() {
@@ -25,18 +25,15 @@ export function LandingStartup() {
 
   return (
     <div
-      aria-label="Opening CyberSuraksha"
+      aria-label="Opening CyberShiksha"
       aria-live="polite"
       className={`landingStartup${
         phase === "leaving" ? " landingStartupLeaving" : ""
       }`}
       role="status"
     >
-      <div className="landingStartupMark">
-        <Sparkles aria-hidden="true" />
-      </div>
       <div className="landingStartupCopy">
-        <span>CyberSuraksha</span>
+        <BrandLogo />
         <b>Opening the studio</b>
       </div>
       <div className="landingStartupTrack" aria-hidden="true">

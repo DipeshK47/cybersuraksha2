@@ -1,0 +1,77 @@
+{
+  "duration": 89.191,
+  "scenes": [
+    {
+      "id": "protect-the-evaluation-1",
+      "label": "Meet the team",
+      "title": "Keep evaluation independent",
+      "mood": "happy",
+      "caption": "Kabir audits a supplied split of synthetic enquiries. The files are called training, validation and final test, but some related examples appear on both sides. Different filenames do not guarantee independent evidence.",
+      "dialogue": "Look for related families, not only identical IDs.",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.848
+    },
+    {
+      "id": "protect-the-evaluation-2",
+      "label": "The problem",
+      "title": "Two hidden overlaps",
+      "mood": "surprise",
+      "caption": "A paraphrase of family A sits in the final test while its original is in training. A related family D example also crosses training and final testing. These overlaps can make performance look stronger than it is.",
+      "dialogue": "Related examples need a common partition.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 15.498,
+      "duration": 14.187
+    },
+    {
+      "id": "protect-the-evaluation-3",
+      "label": "How it works",
+      "title": "Separate the roles",
+      "mood": "thinking",
+      "caption": "Training examples fit the model, validation examples guide choices and the final test estimates the frozen candidate on unseen cases. Group related examples, record the manifest and keep final outcomes out of tuning. Repeatedly selecting on final results wears out that test.",
+      "dialogue": "A final test is not another tuning screen.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 30.335,
+      "duration": 18.453
+    },
+    {
+      "id": "protect-the-evaluation-4",
+      "label": "Your decision",
+      "title": "Repair the split",
+      "mood": "thinking",
+      "caption": "Should Kabir rename duplicate files and keep the score, move related families together and freeze a manifest, or tune directly on the final answers?",
+      "dialogue": "Protect independence before trusting the result.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 49.438,
+      "duration": 9.6
+    },
+    {
+      "id": "protect-the-evaluation-5",
+      "label": "What changes",
+      "title": "A traceable manifest",
+      "mood": "happy",
+      "caption": "Kabir groups the related records into the same partition and preserves all supplied examples. The final pack is frozen only after the leakage audit passes. This small demonstration teaches the split process; it does not train a real model.",
+      "dialogue": "Record what moved and why.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.688,
+      "duration": 15.851
+    },
+    {
+      "id": "protect-the-evaluation-6",
+      "label": "Enter the lab",
+      "title": "Enter the split lab",
+      "mood": "happy",
+      "caption": "Match the three dataset roles, repair the two family overlaps and respond when final answers have already guided a revision. A fresh independent check is needed after that contamination.",
+      "dialogue": "A clean-looking score needs a clean evaluation path.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 76.189,
+      "duration": 12.352
+    }
+  ]
+}

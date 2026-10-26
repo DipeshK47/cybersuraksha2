@@ -1,0 +1,77 @@
+{
+  "duration": 91.132,
+  "scenes": [
+    {
+      "id": "whose-examples-are-missing-1",
+      "label": "Meet the team",
+      "title": "Two lighting conditions",
+      "mood": "happy",
+      "caption": "Asha tests the same prototype on two supplied groups: bright images and dim images. Each group has eight examples. The comparison will show whether one overall score hides a difference between conditions.",
+      "dialogue": "Whose examples and which conditions did we miss?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.251
+    },
+    {
+      "id": "whose-examples-are-missing-2",
+      "label": "The problem",
+      "title": "The average hides a gap",
+      "mood": "surprise",
+      "caption": "The model gets seven of eight bright examples correct, but only three of eight dim examples correct. The gap warrants investigation. It does not, by itself, prove that lighting is the only cause.",
+      "dialogue": "A difference is a clue, not a complete explanation.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 14.901,
+      "duration": 13.312
+    },
+    {
+      "id": "whose-examples-are-missing-3",
+      "label": "How it works",
+      "title": "Representation and proxies",
+      "mood": "thinking",
+      "caption": "A collection can miss relevant conditions. An irrelevant background mark can also become a proxy the model relies on. Compare controlled examples where possible, collect suitable varied data and keep a human fallback for cases the model cannot handle.",
+      "dialogue": "Check what the model is responding to.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 28.863,
+      "duration": 16.299
+    },
+    {
+      "id": "whose-examples-are-missing-4",
+      "label": "Your decision",
+      "title": "Interpret the gap",
+      "mood": "thinking",
+      "caption": "Choose what follows from the supplied bright and dim results. Avoid claiming that every dim image fails, that the model is universally accurate, or that one small comparison proves a cause.",
+      "dialogue": "Say exactly what this comparison supports.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 45.811,
+      "duration": 12.672
+    },
+    {
+      "id": "whose-examples-are-missing-5",
+      "label": "What changes",
+      "title": "A better plan",
+      "mood": "happy",
+      "caption": "The team proposes a separate, varied collection across lighting conditions and a fresh evaluation pack. It tests background changes carefully and routes uncertain cases to a person. It preserves the original results instead of quietly replacing failures with easy examples.",
+      "dialogue": "Improve coverage without hiding the first result.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 59.133,
+      "duration": 17.92
+    },
+    {
+      "id": "whose-examples-are-missing-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Calculate errors by group, inspect a controlled background change and choose a proportionate collection and review plan. State the remaining uncertainty and avoid treating correlation as proof of cause.",
+      "dialogue": "Let us make missing coverage visible.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 77.703,
+      "duration": 12.779
+    }
+  ]
+}

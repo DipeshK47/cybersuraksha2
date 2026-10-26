@@ -24,7 +24,7 @@ const expected = {
   },
 };
 
-const grades = { lower: [3, 4], middle: [5], upper: [6, 7] };
+const grades = { lower: [6, 7], middle: [8], upper: [9, 10] };
 
 test("the curriculum has the first two W chapters in all four modules per band", () => {
   assert.equal(newMissions.length, 24);

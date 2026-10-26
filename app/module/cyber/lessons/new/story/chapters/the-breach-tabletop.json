@@ -1,0 +1,77 @@
+{
+  "duration": 94.225,
+  "scenes": [
+    {
+      "id": "the-breach-tabletop-1",
+      "label": "Meet the team",
+      "title": "The breach tabletop begins",
+      "mood": "happy",
+      "caption": "Kabir leads a fictional data-exposure rehearsal. A public export link is confirmed in the supplied settings, while the full download scope remains unknown. The team must contain exposure, preserve evidence and communicate without inventing facts.",
+      "dialogue": "Who can authorise each action?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.744
+    },
+    {
+      "id": "the-breach-tabletop-2",
+      "label": "The problem",
+      "title": "Roles before improvisation",
+      "mood": "surprise",
+      "caption": "The incident lead coordinates and escalates, the authorised service operator changes access, the evidence recorder preserves supplied records and the communications lead sends approved factual updates. Students rehearse roles; they do not administer a real school system.",
+      "dialogue": "Ownership prevents conflicting actions.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 16.394,
+      "duration": 16.853
+    },
+    {
+      "id": "the-breach-tabletop-3",
+      "label": "How it works",
+      "title": "Contain and preserve",
+      "mood": "thinking",
+      "caption": "Alert the responsible lead and retain available records. Use authorised controls to restrict the exposed link or session, record what changed and verify the restriction. Preserve evidence alongside urgent containment rather than delaying action for a perfect archive.",
+      "dialogue": "Record the reason and time of each step.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 33.897,
+      "duration": 17.728
+    },
+    {
+      "id": "the-breach-tabletop-4",
+      "label": "Your decision",
+      "title": "Choose the first response",
+      "mood": "thinking",
+      "caption": "Should the team erase logs to tidy the system, accuse the account holder in a group chat, or notify the authorised incident lead, preserve supplied records and restrict exposure through the operator?",
+      "dialogue": "Containment and evidence can support each other.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 52.275,
+      "duration": 12.843
+    },
+    {
+      "id": "the-breach-tabletop-5",
+      "label": "What changes",
+      "title": "A factual stakeholder message",
+      "mood": "happy",
+      "caption": "The approved message states that a link was exposed and is now restricted, that scope is under review and where affected people can get help. It avoids naming a culprit or promising that no data was received.",
+      "dialogue": "Communicate what is established and what remains under review.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.768,
+      "duration": 13.099
+    },
+    {
+      "id": "the-breach-tabletop-6",
+      "label": "Enter the lab",
+      "title": "Enter the tabletop lab",
+      "mood": "happy",
+      "caption": "Assign the four roles, build the response order and choose a factual stakeholder update. Record the action log and handoff for recovery. This exercise sends no external message and changes no real service.",
+      "dialogue": "Rehearse the response before an incident demands it.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 79.517,
+      "duration": 14.059
+    }
+  ]
+}

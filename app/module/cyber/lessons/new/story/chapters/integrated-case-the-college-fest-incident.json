@@ -1,0 +1,77 @@
+{
+  "duration": 99.303,
+  "scenes": [
+    {
+      "id": "integrated-case-the-college-fest-incident-1",
+      "label": "Meet the team",
+      "title": "The college-fest incident",
+      "mood": "happy",
+      "caption": "Asha and Kabir combine the four Class Twelve modules. A mock portal exposure, an unverified voice request and a changed-beneficiary transfer arrive together. An assistant offers confident advice, while duplicate event content conflicts in the alert record.",
+      "dialogue": "Several concerns can exist at the same time.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.768
+    },
+    {
+      "id": "integrated-case-the-college-fest-incident-2",
+      "label": "The problem",
+      "title": "Four strands of evidence",
+      "mood": "surprise",
+      "caption": "The public export setting is confirmed, but complete download scope is unknown. The assistant cites no reliable evidence for the voice claim. The same event ID carries different amounts, and the payment request names an unverified beneficiary.",
+      "dialogue": "Each conclusion needs its own supporting evidence.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 17.418,
+      "duration": 15.765
+    },
+    {
+      "id": "integrated-case-the-college-fest-incident-3",
+      "label": "How it works",
+      "title": "Assign responsibilities",
+      "mood": "thinking",
+      "caption": "An authorised operator contains the portal exposure and preserves records. The incident lead coordinates verification and support, and the evidence recorder restricts the dossier. Students use prior module work or honestly labelled supplied replacements; no live service is changed.",
+      "dialogue": "Name who can act and who keeps the record.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 33.833,
+      "duration": 17.984
+    },
+    {
+      "id": "integrated-case-the-college-fest-incident-4",
+      "label": "Your decision",
+      "title": "Choose the immediate response",
+      "mood": "thinking",
+      "caption": "Should the team pay because the voice sounds familiar, overwrite the conflicting event, or pause the transfer, preserve the conflict and coordinate authorised containment, verification and help?",
+      "dialogue": "Confidence does not resolve contradictory evidence.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 52.467,
+      "duration": 12.224
+    },
+    {
+      "id": "integrated-case-the-college-fest-incident-5",
+      "label": "What changes",
+      "title": "New evidence changes one claim",
+      "mood": "happy",
+      "caption": "A known school contact confirms a genuine vendor order for two thousand three hundred rupees. The new request is for three thousand two hundred to another beneficiary. The order’s existence does not validate the changed amount, recipient or voice, and the separate portal exposure still needs review.",
+      "dialogue": "Revise only what the new evidence supports.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.341,
+      "duration": 18.176
+    },
+    {
+      "id": "integrated-case-the-college-fest-incident-6",
+      "label": "Enter the lab",
+      "title": "Enter the integrated case lab",
+      "mood": "happy",
+      "caption": "Build the four-strand response, update the changed evidence and assemble a private decision dossier with source labels and responsible roles. This is the first of the existing two annual-capstone lessons, not extra class time.",
+      "dialogue": "Bring the evidence together without merging its uncertainties.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 84.167,
+      "duration": 14.485
+    }
+  ]
+}

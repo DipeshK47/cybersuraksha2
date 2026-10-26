@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "./components/BrandLogo";
 import { LandingStartup } from "./components/LandingStartup";
 
 const features = [
@@ -44,7 +45,7 @@ export default function Home() {
       <div className="landingShell">
         <nav className="landingNav" aria-label="Primary navigation">
           <Link className="landingBrand" href="/">
-            <b>Cyber</b>Suraksha
+            <BrandLogo />
           </Link>
           <div className="landingLinks">
             <Link className="pillButton pillButtonGhost" href="/teacher-login">
@@ -64,7 +65,7 @@ export default function Home() {
             Curiosity becomes <em>momentum.</em>
           </h1>
           <p className="landingSub">
-            A bright learning studio where Classes 3–10 solve puzzles, build
+            A bright learning studio where Classes 6–12 solve puzzles, build
             computational thinking skills, and explore responsible AI through
             interactive missions.
           </p>
@@ -81,7 +82,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="featureGrid" aria-label="CyberSuraksha benefits">
+        <section className="featureGrid" aria-label="CyberShiksha benefits">
           {features.map((feature) => (
             <article className="featureCard" key={feature.title}>
               <span>{feature.tag}</span>
@@ -105,7 +106,7 @@ export default function Home() {
         </section>
 
         <footer className="landingFooter">
-          <span>© CyberSuraksha</span>
+          <span>© CyberShiksha</span>
           <Link href="/register-school">Register a school</Link>
         </footer>
       </div>

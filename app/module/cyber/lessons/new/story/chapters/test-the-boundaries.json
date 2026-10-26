@@ -1,0 +1,77 @@
+{
+  "duration": 96.081,
+  "scenes": [
+    {
+      "id": "test-the-boundaries-1",
+      "label": "Meet the team",
+      "title": "A green demonstration is not enough",
+      "mood": "happy",
+      "caption": "Asha has seen one valid record pass. That is useful, but it does not show what happens at the exact threshold, with an empty list, with duplicate IDs or with missing fields. She starts a test matrix before calling the workflow reliable.",
+      "dialogue": "Which cases could still break it?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.488
+    },
+    {
+      "id": "test-the-boundaries-2",
+      "label": "The problem",
+      "title": "The hidden boundary",
+      "mood": "surprise",
+      "caption": "A draft uses greater than sixty. An ordinary score of seventy-two passes, so the mistake is easy to miss. The exact-threshold case of sixty exposes it immediately. Other cases are needed for input and collection behaviour.",
+      "dialogue": "A carefully chosen case can reveal a hidden error.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 16.138,
+      "duration": 15.68
+    },
+    {
+      "id": "test-the-boundaries-3",
+      "label": "How it works",
+      "title": "Build a test matrix",
+      "mood": "thinking",
+      "caption": "Include ordinary, boundary and invalid cases with expected results. Check an empty collection without a crash, flag duplicate IDs without overwriting and preserve missing data for review. A passing finite set supports confidence but cannot prove correctness for every possible input.",
+      "dialogue": "Write the expected outcome before running the test.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 32.468,
+      "duration": 18.112
+    },
+    {
+      "id": "test-the-boundaries-4",
+      "label": "Your decision",
+      "title": "Choose a revealing case",
+      "mood": "thinking",
+      "caption": "Which supplied test directly distinguishes greater-than-sixty from at-least-sixty? Use an input where the two conditions disagree, rather than another comfortable score far above the threshold.",
+      "dialogue": "Test exactly where the branch changes.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 51.23,
+      "duration": 12.373
+    },
+    {
+      "id": "test-the-boundaries-5",
+      "label": "What changes",
+      "title": "Retain the evidence",
+      "mood": "happy",
+      "caption": "Asha runs six specified cases and sees the faulty comparison fail at the boundary. She fixes it and reruns the same matrix. The record includes ordinary, boundary, empty, duplicate and missing-data behaviour, not only the most convenient success.",
+      "dialogue": "A fix should pass the old checks too.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 64.253,
+      "duration": 16.683
+    },
+    {
+      "id": "test-the-boundaries-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Build the six-case matrix, run and repair the regression pack and handle new invalid and incomplete cases. State the limits of the tests instead of treating green results as a proof of all possible behaviour.",
+      "dialogue": "Let us challenge the workflow deliberately.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 81.586,
+      "duration": 13.845
+    }
+  ]
+}

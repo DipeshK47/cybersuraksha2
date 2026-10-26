@@ -1,0 +1,7 @@
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/hindi/noto-sans-devanagari-400.ttf') format('truetype')}
+@font-face{font-family:'Noto Sans Devanagari';font-style:normal;font-weight:600 900;font-display:swap;src:url('/fonts/hindi/noto-sans-devanagari-700.ttf') format('truetype')}
+html[lang=hi] body{--font-body:'Noto Sans Devanagari',sans-serif;--font-display:'Noto Sans Devanagari',sans-serif;font-family:'Noto Sans Devanagari',sans-serif;line-height:1.65}
+html[lang=hi] :is(h1,h2,h3,h4){line-height:1.45;letter-spacing:0}
+html[lang=hi] :is(button,input,select,textarea){font-family:'Noto Sans Devanagari',sans-serif;line-height:1.6}
+html[lang=hi] :is(button,a,label,summary){overflow-wrap:break-word}
+html[lang=hi] :is(button,summary){white-space:normal}

@@ -6,7 +6,7 @@ import { DoubleCenturyVault } from "./DoubleCenturyVault";
 export const metadata: Metadata = {
   title: "Double Century Vault",
   description:
-    "An interactive Class 3 place-value and number-sense mission from CyberSuraksha.",
+    "An interactive Class 3 place-value and number-sense mission from CyberShiksha.",
 };
 
 export default async function DoubleCenturyVaultPage({

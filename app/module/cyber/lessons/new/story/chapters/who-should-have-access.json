@@ -1,0 +1,77 @@
+{
+  "duration": 84.689,
+  "scenes": [
+    {
+      "id": "who-should-have-access-1",
+      "label": "Meet the team",
+      "title": "The shared drive",
+      "mood": "happy",
+      "caption": "Asha manages registrations, a teacher reads progress and a supplier delivers equipment. Their tasks are different. The festival drive should give each person only the information and actions needed for their task.",
+      "dialogue": "Different jobs need different permissions.",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.059
+    },
+    {
+      "id": "who-should-have-access-2",
+      "label": "The problem",
+      "title": "Too much access",
+      "mood": "surprise",
+      "caption": "The team made everyone an editor. A supplier can read private contacts and a guest can change the registration file. Dev has left the team, but the organiser group still includes his account.",
+      "dialogue": "A link can grant more access than we intended.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 14.709,
+      "duration": 12.395
+    },
+    {
+      "id": "who-should-have-access-3",
+      "label": "How it works",
+      "title": "Least privilege",
+      "mood": "thinking",
+      "caption": "Asha needs edit access. The oversight teacher needs view access. The supplier does not need registration data. A guest can receive a separate programme link that expires after the event. Start with the task, then choose the permission.",
+      "dialogue": "Only the access needed, only while needed.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 27.753,
+      "duration": 15.232
+    },
+    {
+      "id": "who-should-have-access-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "The team removes Dev from a direct share. However, the organiser group still grants him access to the folder. Is the removal complete? Choose a change and test your decision.",
+      "dialogue": "Check inherited access as well as direct shares.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 43.635,
+      "duration": 11.264
+    },
+    {
+      "id": "who-should-have-access-5",
+      "label": "What changes",
+      "title": "Test the change",
+      "mood": "happy",
+      "caption": "Asha removes the departed member from the relevant group and checks direct shares and public links. She tests access as the affected role. A change is useful only if the resulting permissions match the intended task.",
+      "dialogue": "Let us test what each person can actually open.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 55.549,
+      "duration": 14.272
+    },
+    {
+      "id": "who-should-have-access-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "The team can still organise the festival with fewer permissions. Suppliers get delivery information and guests get the programme. In the lab, configure three sharing cases and test the people whose access matters.",
+      "dialogue": "A smaller permission set can still do the job.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 70.471,
+      "duration": 13.568
+    }
+  ]
+}

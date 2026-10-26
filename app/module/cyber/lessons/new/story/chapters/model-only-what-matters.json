@@ -1,0 +1,77 @@
+{
+  "duration": 91.111,
+  "scenes": [
+    {
+      "id": "model-only-what-matters-1",
+      "label": "Meet the team",
+      "title": "Choose a useful record",
+      "mood": "happy",
+      "caption": "Kabir models the fictional applicant table. A stable ID, a practice score and document status support the exercise rules. Home addresses, bank details and photographs are unnecessary for the stated classroom task.",
+      "dialogue": "What does this process actually need to know?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.677
+    },
+    {
+      "id": "model-only-what-matters-2",
+      "label": "The problem",
+      "title": "Names are not reliable keys",
+      "mood": "surprise",
+      "caption": "Two separate applicants can have the same name, and one ID may appear twice. Overwriting a keyed record would hide that conflict. The model needs a stable identifier and a route for duplicate or missing data.",
+      "dialogue": "A tidy table must not erase a conflict.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 15.327,
+      "duration": 13.568
+    },
+    {
+      "id": "model-only-what-matters-3",
+      "label": "How it works",
+      "title": "Pick the right representation",
+      "mood": "thinking",
+      "caption": "A record holds one applicant’s fields. A list holds several records. A keyed lookup retrieves a unique record by its stable ID. A data dictionary states the meaning, type and validation rule for each field.",
+      "dialogue": "Represent the task, not every detail about a person.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 29.545,
+      "duration": 14.464
+    },
+    {
+      "id": "model-only-what-matters-4",
+      "label": "Your decision",
+      "title": "Protect the identifier",
+      "mood": "thinking",
+      "caption": "Two supplied records contain the same applicant ID with conflicting values. Should a lookup silently keep the newest row, or should the conflict be flagged for review before a unique record is used?",
+      "dialogue": "Do not hide disagreement by overwriting it.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 44.659,
+      "duration": 13.013
+    },
+    {
+      "id": "model-only-what-matters-5",
+      "label": "What changes",
+      "title": "A minimal model",
+      "mood": "happy",
+      "caption": "Kabir defines an ID as an uppercase letter and two digits. Scores must be finite values from zero to one hundred; missing data stays missing. Document status distinguishes complete, incomplete and unknown. Duplicate IDs remain visible.",
+      "dialogue": "The field meaning is part of the model.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 58.323,
+      "duration": 16.896
+    },
+    {
+      "id": "model-only-what-matters-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Select necessary fields, match records, lists and keyed lookups to their jobs, and inspect validation routes. Use synthetic records only. A clear model makes the later algorithm’s inputs and limits easier to explain.",
+      "dialogue": "Let us make the data rules explicit too.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 75.869,
+      "duration": 14.592
+    }
+  ]
+}

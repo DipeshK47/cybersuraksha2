@@ -1,0 +1,77 @@
+{
+  "duration": 96.999,
+  "scenes": [
+    {
+      "id": "when-logs-disagree-1",
+      "label": "Meet the team",
+      "title": "The logs disagree",
+      "mood": "happy",
+      "caption": "Asha receives four synthetic events from different portal components. One clock is known to run two minutes fast. A gateway records a successful response but does not record how many bytes reached the client. Another component records an access denial on a different path.",
+      "dialogue": "Which conclusions are actually established?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 17.259
+    },
+    {
+      "id": "when-logs-disagree-2",
+      "label": "The problem",
+      "title": "A name in a log is not a person",
+      "mood": "surprise",
+      "caption": "A session label identifies an account context, not necessarily the person at the keyboard. A successful status code alone does not prove the full file was received. Missing response-size evidence and a different request path limit the conclusion.",
+      "dialogue": "Keep facts, hypotheses and unknowns separate.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 17.909,
+      "duration": 16.064
+    },
+    {
+      "id": "when-logs-disagree-3",
+      "label": "How it works",
+      "title": "Normalise before correlating",
+      "mood": "thinking",
+      "caption": "Apply only the supplied clock correction, preserve raw times and compare request paths and session identifiers. Record alternative explanations such as session misuse or a path-specific denial. Do not invent missing records to force a neat story.",
+      "dialogue": "Corrected time supports correlation, not certainty.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 34.623,
+      "duration": 16.576
+    },
+    {
+      "id": "when-logs-disagree-4",
+      "label": "Your decision",
+      "title": "Choose an evidence statement",
+      "mood": "thinking",
+      "caption": "A gateway log says status two hundred, but response bytes are unknown. Does that prove the entire registration file was stolen by the account holder? Choose the statement that matches the evidence limit.",
+      "dialogue": "A successful response is an indicator, not complete attribution.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.849,
+      "duration": 13.056
+    },
+    {
+      "id": "when-logs-disagree-5",
+      "label": "What changes",
+      "title": "A careful evidence ledger",
+      "mood": "happy",
+      "caption": "The team keeps the request event as an observed fact, treats possible disclosure as a hypothesis and records missing bytes and attribution as unknowns. The initial alert still deserves proportionate verification and containment by authorised staff.",
+      "dialogue": "Uncertainty does not mean ignoring the risk.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.555,
+      "duration": 16.341
+    },
+    {
+      "id": "when-logs-disagree-6",
+      "label": "Enter the lab",
+      "title": "Enter the evidence lab",
+      "mood": "happy",
+      "caption": "Classify facts and hypotheses, correct the known clock offset and preserve a timeline with missing evidence. State at least one alternative explanation without investigating or accusing a real person.",
+      "dialogue": "Let the evidence set the confidence.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 82.546,
+      "duration": 13.803
+    }
+  ]
+}

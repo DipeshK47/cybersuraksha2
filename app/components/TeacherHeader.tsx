@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "./BrandLogo";
 
 export function TeacherHeader({
   active,
@@ -8,7 +9,7 @@ export function TeacherHeader({
   return (
     <header className="teacherHeader">
       <Link className="teacherWordmark" href="/dashboard?role=teacher">
-        <b>Cyber</b>Suraksha
+        <BrandLogo />
         <small>· Teacher</small>
       </Link>
       <nav aria-label="Teacher navigation">

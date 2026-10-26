@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-test("contains the finished CyberSuraksha landing experience", async () => {
+test("contains the finished CyberShiksha landing experience", async () => {
   const [page, layout] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
@@ -10,8 +10,28 @@ test("contains the finished CyberSuraksha landing experience", async () => {
   assert.match(page, /Ideas become experiments/i);
   assert.match(page, /Teacher login/i);
   assert.match(page, /Student login/i);
-  assert.match(layout, /CyberSuraksha/i);
+  assert.match(layout, /CyberShiksha/i);
   assert.doesNotMatch(`${page}\n${layout}`, /Your site is taking shape|codex-preview/i);
+});
+
+test("shares the EEVSEC CyberShiksha logo across site entry points", async () => {
+  const paths = [
+    "app/page.tsx",
+    "app/dashboard/page.tsx",
+    "app/register-school/page.tsx",
+    "app/components/AuthCard.tsx",
+    "app/components/TeacherHeader.tsx",
+    "app/components/LandingStartup.tsx",
+  ];
+  for (const path of paths) {
+    const source = await readFile(new URL(`../${path}`, import.meta.url), "utf8");
+    assert.match(source, /<BrandLogo \/>/, path);
+    assert.doesNotMatch(source, /CyberSuraksha|<b>Cyber<\/b>Suraksha/, path);
+  }
+  const logo = await readFile(new URL("../public/brand/cybershiksha.svg", import.meta.url), "utf8");
+  assert.match(logo, /EEVSEC CyberShiksha/);
+  // The wordmark viewport ends above the original colored line and school descriptor.
+  assert.match(logo, /viewBox="250 110 1340 195" overflow="hidden"/);
 });
 
 test("ships teacher, student, report, and database capabilities", async () => {
@@ -37,7 +57,7 @@ test("ships teacher, student, report, and database capabilities", async () => {
   assert.equal(hosting.d1, "DB");
 });
 
-test("includes every Grade 3–8 curriculum card", async () => {
+test("keeps the original curriculum content for the Classes 6–12 delivery mapping", async () => {
   const curriculum = await readFile(
     new URL("../app/data/curriculum.ts", import.meta.url),
     "utf8",

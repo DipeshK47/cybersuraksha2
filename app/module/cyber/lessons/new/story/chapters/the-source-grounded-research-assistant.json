@@ -1,0 +1,77 @@
+{
+  "duration": 90.023,
+  "scenes": [
+    {
+      "id": "the-source-grounded-research-assistant-1",
+      "label": "Meet the team",
+      "title": "A fluent research answer",
+      "mood": "happy",
+      "caption": "Asha audits a fictional library assistant using a fixed school-source pack. Retrieval selects relevant passages; generation produces an answer. An answer can display a citation that does not support its sentence.",
+      "dialogue": "Check the passage behind each citation.",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.848
+    },
+    {
+      "id": "the-source-grounded-research-assistant-2",
+      "label": "The problem",
+      "title": "What the pack actually says",
+      "mood": "surprise",
+      "caption": "The pack gives weekday desk hours, says staff review renewal requests and forbids identity scans in this classroom workflow. It gives no weekend schedule. A generated answer invents guaranteed renewals and weekend hours while citing those pages.",
+      "dialogue": "A citation label alone is not evidence.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 15.498,
+      "duration": 16.128
+    },
+    {
+      "id": "the-source-grounded-research-assistant-3",
+      "label": "How it works",
+      "title": "Answer, abstain or escalate",
+      "mood": "thinking",
+      "caption": "Answer supported questions with the matching passage. Say when the pack does not establish a fact. Refer individual exceptions to authorised staff, and refuse unauthorised private-record requests rather than collecting more personal data.",
+      "dialogue": "Use the source and the authority boundary together.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 32.276,
+      "duration": 15.701
+    },
+    {
+      "id": "the-source-grounded-research-assistant-4",
+      "label": "Your decision",
+      "title": "Check a confident claim",
+      "mood": "thinking",
+      "caption": "The answer promises every renewal is guaranteed and cites the staff-review passage. Is the guarantee supported, is any citation enough, or does that passage contradict the guarantee?",
+      "dialogue": "Read what the cited passage actually establishes.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.627,
+      "duration": 12.267
+    },
+    {
+      "id": "the-source-grounded-research-assistant-5",
+      "label": "What changes",
+      "title": "A corrected response",
+      "mood": "happy",
+      "caption": "Asha keeps the supported weekday hours, replaces the guarantee with staff review and states that weekend hours are not supplied. She can identify the passage for each supported sentence and the route for an unresolved question.",
+      "dialogue": "Do not fill evidence gaps with fluent guesses.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.544,
+      "duration": 13.973
+    },
+    {
+      "id": "the-source-grounded-research-assistant-6",
+      "label": "Enter the lab",
+      "title": "Enter the source lab",
+      "mood": "happy",
+      "caption": "Build the claim-support ledger, correct the cited answer and define answer, abstain, refuse and staff-escalation routes. Every source and request is fictional, and no real student data is collected.",
+      "dialogue": "Support each answer or make the limit visible.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 76.167,
+      "duration": 13.205
+    }
+  ]
+}

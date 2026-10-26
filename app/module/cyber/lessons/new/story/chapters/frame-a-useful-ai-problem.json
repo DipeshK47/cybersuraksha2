@@ -1,0 +1,77 @@
+{
+  "duration": 87.079,
+  "scenes": [
+    {
+      "id": "frame-a-useful-ai-problem-1",
+      "label": "Meet the team",
+      "title": "A useful brief",
+      "mood": "happy",
+      "caption": "The team wants a helper for festival volunteers sorting clean practice samples. Before collecting examples, Asha asks who will use it, what decision it supports and how anyone will know whether it helps.",
+      "dialogue": "Useful for whom, and for which decision?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 12.715
+    },
+    {
+      "id": "frame-a-useful-ai-problem-2",
+      "label": "The problem",
+      "title": "The vague promise",
+      "mood": "surprise",
+      "caption": "The draft says the helper will solve all waste problems perfectly. It gives no input, output or measurable test. A broad promise leaves the team unable to decide what to build or when a person should take over.",
+      "dialogue": "Perfect is not a test plan.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 13.365,
+      "duration": 14.315
+    },
+    {
+      "id": "frame-a-useful-ai-problem-3",
+      "label": "How it works",
+      "title": "Make success observable",
+      "mood": "thinking",
+      "caption": "Define the user, input and output. Set a measurable criterion using a fixed set of unseen examples, and specify the action for uncertainty. This is a low-stakes classroom prototype, not an autonomous system handling real waste.",
+      "dialogue": "A clear limit belongs in the brief.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 28.329,
+      "duration": 15.723
+    },
+    {
+      "id": "frame-a-useful-ai-problem-4",
+      "label": "Your decision",
+      "title": "Keep a human role",
+      "mood": "thinking",
+      "caption": "The prototype receives a damaged or unfamiliar sample. Its training examples do not cover that condition. Should it force a label, or flag the sample for a person to review?",
+      "dialogue": "Make the uncertain case part of the design.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 44.702,
+      "duration": 12.032
+    },
+    {
+      "id": "frame-a-useful-ai-problem-5",
+      "label": "What changes",
+      "title": "A testable task",
+      "mood": "happy",
+      "caption": "Asha writes a brief for volunteers: suggest a practice material label from a supplied image, or request review. The team will check a fixed held-out pack and record errors. A person stays responsible for unfamiliar cases.",
+      "dialogue": "Now we can tell whether the prototype meets its brief.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 57.384,
+      "duration": 15.317
+    },
+    {
+      "id": "frame-a-useful-ai-problem-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Build the brief, map human review points and turn a vague goal into an acceptance criterion. The lab checks your structured decisions; your teacher can ask you to explain why those limits fit the stated task.",
+      "dialogue": "Define success before looking at results.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 73.351,
+      "duration": 13.077
+    }
+  ]
+}

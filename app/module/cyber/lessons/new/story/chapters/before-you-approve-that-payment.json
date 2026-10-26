@@ -1,0 +1,77 @@
+{
+  "duration": 87.42,
+  "scenes": [
+    {
+      "id": "before-you-approve-that-payment-1",
+      "label": "Meet the team",
+      "title": "A refund on screen",
+      "mood": "happy",
+      "caption": "Asha expects a fictional festival refund of eight hundred rupees. A message asks her to scan a code and approve the next screen. In this simulation the screen is only a teaching artifact; no real code or payment exists.",
+      "dialogue": "Read the authorisation, not only the message.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.72
+    },
+    {
+      "id": "before-you-approve-that-payment-2",
+      "label": "The problem",
+      "title": "The direction is wrong",
+      "mood": "surprise",
+      "caption": "The mock screen says pay eight hundred rupees from Asha to Refund Desk. That is outgoing authorisation, even though the message calls it a refund. The payee and amount need checking alongside the direction.",
+      "dialogue": "An incoming promise can hide an outgoing instruction.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.37,
+      "duration": 14.037
+    },
+    {
+      "id": "before-you-approve-that-payment-3",
+      "label": "How it works",
+      "title": "Payment evidence",
+      "mood": "thinking",
+      "caption": "Receiving money does not require sharing an OTP or entering a UPI PIN to approve someone else’s payment. Use your own trusted bank or payment app to check a credit. A screenshot supplied by the sender is not your account record.",
+      "dialogue": "Check who pays whom before confirming.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 30.057,
+      "duration": 16.256
+    },
+    {
+      "id": "before-you-approve-that-payment-4",
+      "label": "Your decision",
+      "title": "Choose the safe action",
+      "mood": "thinking",
+      "caption": "The screen authorises a debit to an unverified payee. Should Asha approve it to receive money, share her PIN with support, or cancel and verify the refund separately?",
+      "dialogue": "The screen’s direction controls this decision.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 46.963,
+      "duration": 11.712
+    },
+    {
+      "id": "before-you-approve-that-payment-5",
+      "label": "What changes",
+      "title": "Approval is cancelled",
+      "mood": "happy",
+      "caption": "Asha cancels the outgoing authorisation and checks through the school’s known festival contact. She keeps the message as evidence. A matching amount did not make the mismatched payee or outgoing direction safe.",
+      "dialogue": "Eight hundred in the message was not eight hundred received.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.325,
+      "duration": 14.251
+    },
+    {
+      "id": "before-you-approve-that-payment-6",
+      "label": "Enter the lab",
+      "title": "Enter the payment lab",
+      "mood": "happy",
+      "caption": "Inspect direction, payee and amount, distinguish a credit from a debit and respond when the beneficiary changes. Every amount and reference is fictional. There is no payment button connected to a bank.",
+      "dialogue": "Practise the check before any real confirmation.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 74.226,
+      "duration": 12.544
+    }
+  ]
+}

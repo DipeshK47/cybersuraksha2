@@ -1,0 +1,77 @@
+{
+  "duration": 90.3,
+  "scenes": [
+    {
+      "id": "devices-updates-and-backups-1",
+      "label": "Meet the team",
+      "title": "At the gate",
+      "mood": "happy",
+      "caption": "The festival gate team needs a readable list of forty-two registrations. One shared laptop holds the working copy. Having a file somewhere is not enough if the right person cannot use it when visitors arrive.",
+      "dialogue": "Will the list still be usable after a failure?",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.165
+    },
+    {
+      "id": "devices-updates-and-backups-2",
+      "label": "The problem",
+      "title": "The empty file",
+      "mood": "surprise",
+      "caption": "At ten thirty, the working file becomes empty. Sync copies that empty state. A duplicate on the same failed laptop may be unavailable too. A separate version from ten o clock still contains the expected registrations.",
+      "dialogue": "The newest copy may contain the same damage.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 14.815,
+      "duration": 15.104
+    },
+    {
+      "id": "devices-updates-and-backups-3",
+      "label": "How it works",
+      "title": "Recoverable copies",
+      "mood": "thinking",
+      "caption": "Separate backups can survive a device failure. Version history can recover a state before corruption. A restoration test checks that the contents are readable, complete and accessible. Preserve the original and restore a practice duplicate to a new folder.",
+      "dialogue": "Test restoration, not just the backup icon.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 30.569,
+      "duration": 16.597
+    },
+    {
+      "id": "devices-updates-and-backups-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "The corruption began at ten thirty. Compare the unavailable local duplicate, the newest empty synced file and the separate earlier version. Choose the first recovery point to test.",
+      "dialogue": "Which copy can give us a usable independent fallback?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 47.817,
+      "duration": 11.733
+    },
+    {
+      "id": "devices-updates-and-backups-5",
+      "label": "What changes",
+      "title": "Test the restore",
+      "mood": "happy",
+      "caption": "The team restores the separate earlier version to a new folder. It checks the expected forty-two records and tests access with the gate account. The original remains untouched and the restoration result is recorded.",
+      "dialogue": "Now we have evidence that recovery worked.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 60.2,
+      "duration": 13.973
+    },
+    {
+      "id": "devices-updates-and-backups-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "The team also uses trusted updates, individual accounts and a screen lock. These controls address different risks. In the lab, repair the device plan, restore a fictional file and decide how to verify a different recovery case.",
+      "dialogue": "Protect the device and rehearse the fallback.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 74.823,
+      "duration": 14.827
+    }
+  ]
+}

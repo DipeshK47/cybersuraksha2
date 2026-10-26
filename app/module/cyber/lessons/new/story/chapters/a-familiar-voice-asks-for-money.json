@@ -1,0 +1,77 @@
+{
+  "duration": 89.703,
+  "scenes": [
+    {
+      "id": "a-familiar-voice-asks-for-money-1",
+      "label": "Meet the team",
+      "title": "A familiar voice",
+      "mood": "happy",
+      "caption": "Asha receives a fictional call that sounds like a relative. The caller says there is an emergency and demands an immediate private transfer. A familiar voice feels convincing, but it does not independently verify identity or the payment request.",
+      "dialogue": "Can we check without following the caller’s instructions?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.0
+    },
+    {
+      "id": "a-familiar-voice-asks-for-money-2",
+      "label": "The problem",
+      "title": "Pressure on the call",
+      "mood": "surprise",
+      "caption": "The caller insists that Asha must not tell anyone and gives a new number to confirm the story. The same person would then control both the claim and its supposed verification. An intimidating authority claim can use the same pattern.",
+      "dialogue": "A second number from the caller is not independent.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 16.65,
+      "duration": 15.253
+    },
+    {
+      "id": "a-familiar-voice-asks-for-money-3",
+      "label": "How it works",
+      "title": "Use known channels",
+      "mood": "thinking",
+      "caption": "Calmly end the call. Contact the relative through a previously known route and involve a trusted adult. A second independent person or channel can help resolve the claim. Do not pay while identity and circumstances remain uncertain.",
+      "dialogue": "Verification can be calm and supportive.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 32.553,
+      "duration": 15.36
+    },
+    {
+      "id": "a-familiar-voice-asks-for-money-4",
+      "label": "Your decision",
+      "title": "Choose the response",
+      "mood": "thinking",
+      "caption": "The voice sounds convincing and the caller asks for secrecy. Should Asha make a small test payment, stay on the line for instructions, or end the call and check through a known contact?",
+      "dialogue": "Familiar sound is not enough.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.563,
+      "duration": 11.627
+    },
+    {
+      "id": "a-familiar-voice-asks-for-money-5",
+      "label": "What changes",
+      "title": "The claim is checked",
+      "mood": "happy",
+      "caption": "Asha ends the call and uses her saved contact rather than a new number supplied by the caller. She asks a trusted adult to help check the situation separately. If one route fails, uncertainty remains; it does not authorise payment.",
+      "dialogue": "An unanswered call is not confirmation.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 60.84,
+      "duration": 15.467
+    },
+    {
+      "id": "a-familiar-voice-asks-for-money-6",
+      "label": "Enter the lab",
+      "title": "Enter the call lab",
+      "mood": "happy",
+      "caption": "Rehearse the first two decisions, build a two-channel verification plan and choose a calm response to a new authority claim. No real voice clone, call or transfer is created.",
+      "dialogue": "A safe script helps when emotions rise.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 76.957,
+      "duration": 12.096
+    }
+  ]
+}

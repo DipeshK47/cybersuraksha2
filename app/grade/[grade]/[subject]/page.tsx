@@ -17,7 +17,7 @@ import { getPlayableModule } from "../../../data/module-registry";
 
 /**
  * Library for one subject. It supports textbook chapters and interactive
- * CyberSuraksha lesson collections without changing their underlying routes.
+ * CyberShiksha lesson collections without changing their underlying routes.
  */
 function StrandIcon({ strand }: { strand: CurriculumStrand }) {
   if (strand === "Artificial Intelligence") {
@@ -86,7 +86,7 @@ export default async function SubjectPage({
         </Link>
         <div>
           <span>
-            CyberSuraksha · Class {grade.grade} · {subject.name}
+            CyberShiksha · Class {grade.grade} · {subject.name}
           </span>
           <Link href="/logout">Log out</Link>
         </div>

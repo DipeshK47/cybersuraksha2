@@ -242,6 +242,7 @@ export function PracticeSet<Skill extends string>({
           <div aria-label="Choose one answer" className={styles.choiceRow} role="group">
             {currentQuestion.options.map((option, optionIndex) => (
               <button
+                data-learning-example
                 className={
                   !currentAnswer
                     ? ""

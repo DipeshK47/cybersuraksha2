@@ -46,6 +46,8 @@ export type StoryWorldProps = {
 
 export type StoryChapter = {
   script: StoryScript;
+  /** Local Hindi narration and cue times, in the same order as the English scenes. */
+  hindiAudio?: { src: string; duration: number; scenes: { start: number; duration: number }[] };
   /** Header title, e.g. "Rohan’s missing moon base". */
   title: string;
   icon: LucideIcon;

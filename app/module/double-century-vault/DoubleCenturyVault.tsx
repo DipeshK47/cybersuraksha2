@@ -474,7 +474,7 @@ export function DoubleCenturyVault({
                   : !studentId
                     ? "Preview complete. Sign in as a student to save this result."
                     : saveStatus === "saving"
-                      ? "Saving Double Century Vault to your local CyberSuraksha profile…"
+                      ? "Saving Double Century Vault to your local CyberShiksha profile…"
                       : saveStatus === "saved"
                         ? "Double Century Vault saved to the student and teacher progress views."
                         : saveStatus === "error"

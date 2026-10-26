@@ -1,0 +1,77 @@
+{
+  "duration": 92.881,
+  "scenes": [
+    {
+      "id": "build-a-reliable-alerts-pipeline-1",
+      "label": "Meet the team",
+      "title": "Build a reliable alerts pipeline",
+      "mood": "happy",
+      "caption": "Kabir designs an offline workflow for synthetic service-alert records. Each record has a stable ID, category and priority score from zero to one hundred. The exercise routes scores at least seventy to human review; lower valid scores are recorded only.",
+      "dialogue": "A pipeline needs clear contracts between steps.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 17.365
+    },
+    {
+      "id": "build-a-reliable-alerts-pipeline-2",
+      "label": "The problem",
+      "title": "Not every input is valid",
+      "mood": "surprise",
+      "caption": "The pack includes an out-of-range score and an unknown category. Silently dropping those rows would make the output look complete while hiding lost evidence. The original batch must remain available for review and repair.",
+      "dialogue": "Invalid input needs a visible route.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 18.015,
+      "duration": 14.336
+    },
+    {
+      "id": "build-a-reliable-alerts-pipeline-3",
+      "label": "How it works",
+      "title": "Four connected stages",
+      "mood": "thinking",
+      "caption": "Preserve the original input, validate the schema and stable IDs, transform valid records, then commit a retry-safe output ledger and action log. Quarantine malformed or conflicting records without inventing values or overwriting originals.",
+      "dialogue": "Each stage states what it receives and produces.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 33.001,
+      "duration": 16.768
+    },
+    {
+      "id": "build-a-reliable-alerts-pipeline-4",
+      "label": "Your decision",
+      "title": "Choose the invalid-record path",
+      "mood": "thinking",
+      "caption": "Should an invalid score be silently changed to zero, deleted from the evidence, or held in a labelled quarantine while valid records follow the stated contract?",
+      "dialogue": "A convenient output must not hide an invalid input.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 50.419,
+      "duration": 10.517
+    },
+    {
+      "id": "build-a-reliable-alerts-pipeline-5",
+      "label": "What changes",
+      "title": "A traceable pipeline run",
+      "mood": "happy",
+      "caption": "Kabir records valid outputs and the reason each invalid input was quarantined. The ledger remembers committed event IDs so a retry can distinguish an already handled event from a conflicting reuse of that ID. This is a classroom model, not a distributed delivery guarantee.",
+      "dialogue": "Record both success and unresolved work.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.587,
+      "duration": 17.984
+    },
+    {
+      "id": "build-a-reliable-alerts-pipeline-6",
+      "label": "Enter the lab",
+      "title": "Enter the pipeline lab",
+      "mood": "happy",
+      "caption": "Arrange the stages, specify their input and output contracts and run the mixed-validity pack. Nothing is sent to a real service or person; review routes stay inside the lesson.",
+      "dialogue": "Make failure paths part of the design.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.221,
+      "duration": 12.011
+    }
+  ]
+}

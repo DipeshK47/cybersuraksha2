@@ -1,0 +1,77 @@
+{
+  "duration": 89.895,
+  "scenes": [
+    {
+      "id": "vision-networks-and-changing-inputs-1",
+      "label": "Meet the team",
+      "title": "The same object looks different",
+      "mood": "happy",
+      "caption": "Kabir compares prepared images of a notebook and a cardboard box under bright light, dim light and a tight crop. The images and predictions are illustrative examples. No live vision model is running in this lesson.",
+      "dialogue": "Does a familiar object guarantee a stable prediction?",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.653
+    },
+    {
+      "id": "vision-networks-and-changing-inputs-2",
+      "label": "The problem",
+      "title": "A changed input",
+      "mood": "surprise",
+      "caption": "The bright examples receive the intended labels. Under dim light or cropping, some prepared outputs change or request review. A single successful image does not establish robustness across conditions.",
+      "dialogue": "Keep wrong labels separate from abstentions.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 14.303,
+      "duration": 13.696
+    },
+    {
+      "id": "vision-networks-and-changing-inputs-3",
+      "label": "How it works",
+      "title": "Features, layers and use",
+      "mood": "thinking",
+      "caption": "Features describe patterns in the input. Layers transform representations. Training adjusts parameters using examples; inference uses the learned parameters on a new input. A confidence score is not a guarantee, and this activity does not reveal the internal workings of a real network.",
+      "dialogue": "Concepts help explain the test, not prove a result.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 28.649,
+      "duration": 18.88
+    },
+    {
+      "id": "vision-networks-and-changing-inputs-4",
+      "label": "Your decision",
+      "title": "Choose the claim",
+      "mood": "thinking",
+      "caption": "Can Kabir declare that all dim images fail, that the model is robust everywhere, or only that these supplied examples show changed outputs and need a bounded follow-up test?",
+      "dialogue": "Let the sample limit the claim.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.179,
+      "duration": 11.307
+    },
+    {
+      "id": "vision-networks-and-changing-inputs-5",
+      "label": "What changes",
+      "title": "A bounded shift record",
+      "mood": "happy",
+      "caption": "Kabir records two correct bright outputs, one correct dim output and changed or review outcomes in the other conditions. The tiny prepared pack supports a classroom observation only. Unfamiliar conditions keep a human-review route.",
+      "dialogue": "Do not generalise from six illustrative inputs.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 60.136,
+      "duration": 15.403
+    },
+    {
+      "id": "vision-networks-and-changing-inputs-6",
+      "label": "Enter the lab",
+      "title": "Enter the vision lab",
+      "mood": "happy",
+      "caption": "Match the network concepts, inspect each prepared image condition and classify its output as correct, wrong or review. State the limit and propose separate relevant evaluation before broader use.",
+      "dialogue": "Changing the input can change the evidence.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 76.189,
+      "duration": 13.056
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "duration": 92.625,
+  "scenes": [
+    {
+      "id": "choose-the-right-data-model-1",
+      "label": "Meet the team",
+      "title": "An operation needs a model",
+      "mood": "happy",
+      "caption": "Asha organises a fictional festival desk. Registrations have stable identifiers, edits need an undo history and support tickets arrive in order. The team should choose a data structure for the required operation, rather than put everything into one undifferentiated list.",
+      "dialogue": "What must happen next to each item?",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 18.304
+    },
+    {
+      "id": "choose-the-right-data-model-2",
+      "label": "The problem",
+      "title": "Different orders mean different behaviour",
+      "mood": "surprise",
+      "caption": "An ordered list preserves a sequence. A keyed lookup retrieves by a unique stable ID. A stack removes the latest added item first; a queue serves the earliest waiting item first. A name is not necessarily a unique key.",
+      "dialogue": "Undo and first-come support need different removal orders.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 18.954,
+      "duration": 15.296
+    },
+    {
+      "id": "choose-the-right-data-model-3",
+      "label": "How it works",
+      "title": "Trace the next operation",
+      "mood": "thinking",
+      "caption": "The undo stack contains U1, U2 and then U3. The latest action is U3. The support queue contains T1, T2 and then T3; T1 is served next. These are abstract operation rules, not measurements of a particular implementation.",
+      "dialogue": "Predict, run and inspect the remaining items.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 34.9,
+      "duration": 17.301
+    },
+    {
+      "id": "choose-the-right-data-model-4",
+      "label": "Your decision",
+      "title": "Choose the support model",
+      "mood": "thinking",
+      "caption": "For first-come support, should the newest ticket jump ahead, should names determine identity, or should the earliest waiting ticket be served from a queue?",
+      "dialogue": "The structure should express the required policy.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 52.851,
+      "duration": 9.024
+    },
+    {
+      "id": "choose-the-right-data-model-5",
+      "label": "What changes",
+      "title": "A model with limits",
+      "mood": "happy",
+      "caption": "Asha keeps stable-ID lookup separate from arrival order and undo history. Duplicate IDs must be reviewed before a unique lookup is trusted. A priority exception is a policy change for a person to authorise, not something the data structure decides.",
+      "dialogue": "A useful model makes its assumptions visible.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 62.525,
+      "duration": 16.768
+    },
+    {
+      "id": "choose-the-right-data-model-6",
+      "label": "Enter the lab",
+      "title": "Enter the reliability lab",
+      "mood": "happy",
+      "caption": "Match operations to structures, predict and run stack and queue removals, then state the uniqueness and policy limits. No real registration data or live support tickets are used.",
+      "dialogue": "Choose the model from the operation.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 79.943,
+      "duration": 12.032
+    }
+  ]
+}

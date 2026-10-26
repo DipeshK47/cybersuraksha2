@@ -476,7 +476,7 @@ export function SecretMessageRescue({
                 {role === "teacher"
                   ? "Teacher preview complete. Student progress is not changed."
                   : saveStatus === "saving"
-                    ? "Saving this mission to your CyberSuraksha profile…"
+                    ? "Saving this mission to your CyberShiksha profile…"
                     : saveStatus === "saved"
                       ? "Mission saved. Your dashboard and teacher report are updated."
                       : saveStatus === "error"

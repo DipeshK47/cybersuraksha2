@@ -1,4 +1,5 @@
 import handbookPages from "../data/handbook-chat-index.json";
+import hindiPages from "../data/handbook-hi.json";
 
 export type HandbookSource = {
   id: string;
@@ -15,7 +16,7 @@ export type HandbookSource = {
 type HandbookPage = (typeof handbookPages)[number];
 
 const stopwords = new Set(
-  "a an and are as at be by can did do does for from had has have how i in is it me my of on or our should that the their them there they this to was we were what when where which who why will with you your".split(
+  "a an and are as at be by can did do does for from had has have how i in is it me my of on or our should that the their them there they this to was we were what when where which who why will with you your एक और है हैं था थी थे का की के को में से पर यह वह क्या कैसे क्यों कब कहाँ कौन आप आपका आपकी मुझे मेरा मेरी हम हमारे कि भी तो लिए करें होता होती होते".split(
     " ",
   ),
 );
@@ -25,7 +26,7 @@ function tokens(value: string) {
     new Set(
       value
         .toLowerCase()
-        .match(/[a-z0-9]+/g)
+        .match(/[\p{L}\p{M}\p{N}]+/gu)
         ?.filter((token) => token.length >= 2 && !stopwords.has(token)) ?? [],
     ),
   );
@@ -41,8 +42,7 @@ function countOccurrences(haystack: string, needle: string) {
   return count;
 }
 
-function scorePage(page: HandbookPage, query: string, queryTokens: string[]) {
-  const text = page.text.toLowerCase();
+function scorePage(page: HandbookPage, query: string, queryTokens: string[], text = page.text.toLowerCase()) {
   const chapter = page.chapter?.toLowerCase() ?? "";
   let score = 0;
 
@@ -55,16 +55,16 @@ function scorePage(page: HandbookPage, query: string, queryTokens: string[]) {
   return score;
 }
 
-function excerptFor(page: HandbookPage, queryTokens: string[]) {
-  const lower = page.text.toLowerCase();
+function excerptFor(page: HandbookPage, queryTokens: string[], text = page.text) {
+  const lower = text.toLowerCase();
   const firstMatch = queryTokens
     .map((token) => lower.indexOf(token))
     .filter((index) => index >= 0)
     .sort((left, right) => left - right)[0];
   const start = Math.max(0, (firstMatch ?? 0) - 180);
-  const end = Math.min(page.text.length, start + 820);
-  return `${start > 0 ? "…" : ""}${page.text.slice(start, end)}${
-    end < page.text.length ? "…" : ""
+  const end = Math.min(text.length, start + 820);
+  return `${start > 0 ? "…" : ""}${text.slice(start, end)}${
+    end < text.length ? "…" : ""
   }`;
 }
 
@@ -72,6 +72,7 @@ export function searchStudentHandbooks(
   question: string,
   grade: number,
   limit = 5,
+  language: "en" | "hi" = "en",
 ): HandbookSource[] {
   const query = question.toLowerCase().trim();
   const queryTokens = tokens(query);
@@ -79,14 +80,18 @@ export function searchStudentHandbooks(
 
   return (handbookPages as HandbookPage[])
     .filter((page) => page.grade === grade)
-    .map((page) => ({ page, score: scorePage(page, query, queryTokens) }))
+    .map((page) => {
+      const translated = language === "hi" ? (hindiPages as Record<string, string>)[`${page.documentId}:${page.pdfPage}`] : undefined;
+      const text = translated ?? page.text;
+      return { page, text, score: scorePage(page, query, queryTokens, (translated ? `${page.text} ${text}` : page.text).toLowerCase()) };
+    })
     .filter((result) => result.score > 0)
     .sort(
       (left, right) =>
         right.score - left.score || left.page.pdfPage - right.page.pdfPage,
     )
     .slice(0, limit)
-    .map(({ page }, index) => ({
+    .map(({ page, text }, index) => ({
       id: `H${index + 1}`,
       kind: "handbook" as const,
       title: `Class ${page.grade} Student Handbook`,
@@ -99,6 +104,6 @@ export function searchStudentHandbooks(
       chapter: page.chapter,
       pdfPage: page.pdfPage,
       printedPage: page.printedPage,
-      excerpt: excerptFor(page, queryTokens),
+      excerpt: excerptFor(page, queryTokens, text),
     }));
 }

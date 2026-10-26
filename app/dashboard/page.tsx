@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "../components/BrandLogo";
 import {
   Award,
   ArrowRight,
@@ -28,6 +29,7 @@ import {
   chapterCount,
   curriculum,
   moduleCount,
+  subjectModuleCount,
   type CurriculumStrand,
 } from "../data/curriculum";
 import { getPlayableModule } from "../data/module-registry";
@@ -79,11 +81,16 @@ export default async function DashboardPage() {
   const pendingAssignments = inbox.filter(a => a.progress.completedAt == null);
   const studentName = studentProfile?.student.name ?? "Student Explorer";
   const studentRoll = studentProfile?.student.rollNo ?? "—";
-  const completedMissions = studentProfile?.runs.length ?? 0;
-  // Subject-organised classes have no missions to count, so guard the divisor.
-  // Dividing by 0 rendered a literal "NaN%" beside a bar that looked complete.
+  const subjectMissions = assignedCurriculum?.subjects?.flatMap(subject => subject.modules ?? [])
+    .filter(module => getPlayableModule(assignedCurriculum.grade, module.title)) ?? [];
+  const assignedMissions = subjectMissions.length ? subjectMissions : assignedCurriculum?.modules ?? [];
+  const completedIds = new Set(studentProfile?.runs.map(run => run.moduleId));
+  const pendingModules = assignedMissions.filter(module => !completedIds.has(getPlayableModule(assignedGrade ?? 0, module.title)?.id ?? "")).slice(0, 2);
+  const completedMissions = assignedMissions.length
+    ? assignedMissions.filter(module => completedIds.has(getPlayableModule(assignedGrade ?? 0, module.title)?.id ?? "")).length
+    : studentProfile?.runs.length ?? 0;
   const totalMissions =
-    assignedCurriculum?.modules.length ||
+    assignedMissions.length ||
     (assignedCurriculum ? chapterCount(assignedCurriculum) : 12);
   const missionProgress =
     totalMissions > 0
@@ -93,10 +100,6 @@ export default async function DashboardPage() {
   const reportScore = latestRun
     ? Math.round((latestRun.drill + latestRun.recall) / 2)
     : 0;
-  const pendingModules = assignedCurriculum?.modules.slice(
-    completedMissions,
-    completedMissions + 2,
-  );
   const nextModule = pendingModules?.[0]?.title ?? "Choose your next mission";
   const nextPlayableModule =
     assignedCurriculum && pendingModules?.[0]
@@ -114,11 +117,7 @@ export default async function DashboardPage() {
       <header className="dashboardNav">
         <div className="dashboardNavInner">
           <Link className="dashboardBrand" href={`/dashboard${roleQuery}`}>
-            <span className="dashboardBrandMark">
-              <Sparkles aria-hidden="true" />
-            </span>
-            <span className="dashboardBrandName">CyberSuraksha</span>
-            <span className="dashboardBrandSub">CT + AI</span>
+            <BrandLogo />
           </Link>
           <nav className="dashboardNavRight" aria-label={`${role} navigation`}>
             {role === "teacher" ? (
@@ -321,7 +320,7 @@ export default async function DashboardPage() {
 
         <section className="dashboardHero">
           <p className="dashboardEyebrow">
-            Mission control · Classes 3–10
+            Mission control · Classes 6–12
           </p>
           <h1>
             Think it through.
@@ -381,7 +380,7 @@ export default async function DashboardPage() {
                     </>
                   ) : (
                     <>
-                      <b>{chapterCount(grade)}</b> chapters
+                      <b>{chapterCount(grade) + subjectModuleCount(grade)}</b> chapters
                       <i>
                         {(grade.subjects ?? [])
                           .map((subject) => subject.name)

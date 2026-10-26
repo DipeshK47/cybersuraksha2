@@ -153,10 +153,10 @@ function Letters({ word, ed = false }: { word: string; ed?: boolean }) {
 function EdWord({ word }: { word: string }) {
   // Highlight the -ed so the eye lands on the two letters that carry the meaning.
   return (
-    <>
+    <span lang="en" translate="no">
       {word.slice(0, -2)}
       <b>{word.slice(-2)}</b>
-    </>
+    </span>
   );
 }
 
@@ -409,14 +409,14 @@ function EdCluster({ onAnswer, onComplete, onMistake, playTone, voice }: BmScree
               return (
                 <article className={styles.machineCard} data-done={done} key={item.id}>
                   <p>
-                    {item.before} <b>{done ? item.correct : "____"}</b> {item.after}
+                    <span lang="en" translate="no">{item.before} <b>{done ? item.correct : "____"}</b> {item.after}</span>
                     <SpeakButton
                       audioSrc={clip(`machine-${item.id}`)}
                       label="Read"
                       text={`${item.before} blank ${item.after} Is it ${item.base}, or ${item.base}ed?`}
                     />
                   </p>
-                  <div className={styles.choiceRow}>
+                  <div className={styles.choiceRow} lang="en" translate="no">
                     {[item.base, `${item.base}ed`].map((option) => (
                       <button
                         className={
@@ -443,8 +443,8 @@ function EdCluster({ onAnswer, onComplete, onMistake, playTone, voice }: BmScree
                         </>
                       ) : (
                         <>
-                          <span className={styles.wordTileMini}>{item.base}</span>+
-                          <span className={`${styles.wordTileMini} ${styles.wordTileEd}`}>ed</span>=
+                          <span className={styles.wordTileMini} lang="en" translate="no">{item.base}</span>+
+                          <span className={`${styles.wordTileMini} ${styles.wordTileEd}`} lang="en" translate="no">ed</span>=
                           <span className={`${styles.wordTileMini} ${styles.wordTileJoined}`}>
                             <EdWord word={item.correct} />
                           </span>
@@ -784,7 +784,7 @@ const pairsExampleAudio = narration.examples.pairs.map((step) => step.src);
 
 function PairTiles({ left, right, and = true }: { left: string; right?: string; and?: boolean }) {
   return (
-    <div>
+    <div lang="en" translate="no">
       <span className={styles.wordTile} style={{ "--i": 0 } as CSSProperties}>{left}</span>
       {and && right ? <span className={styles.pairLink}>and</span> : null}
       {right ? (
@@ -1022,7 +1022,7 @@ function PairsCluster({ onAnswer, onComplete, onMistake, playTone, voice }: BmSc
           </Prompt>
 
           <div aria-label="Word pair matching board" className={styles.pairBoard}>
-            <div className={styles.pairColumn}>
+            <div className={styles.pairColumn} lang="en" translate="no">
               {pairLeft.map((word) => {
                 const colour = matched[word];
                 return (
@@ -1042,8 +1042,8 @@ function PairsCluster({ onAnswer, onComplete, onMistake, playTone, voice }: BmSc
                 );
               })}
             </div>
-            <span aria-hidden="true">and</span>
-            <div className={styles.pairColumn}>
+            <span aria-hidden="true" lang="en" translate="no">and</span>
+            <div className={styles.pairColumn} lang="en" translate="no">
               {pairRight.map((word) => {
                 const left = pairLeft.find((candidate) => pairOf[candidate] === word)!;
                 const colour = matched[left];

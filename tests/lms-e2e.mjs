@@ -4,6 +4,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { newMissions } from '../app/data/new-missions.ts';
+import { class12Missions } from '../app/data/class-12-missions.ts';
+import { class11Missions } from '../app/data/class-11-missions.ts';
 import prototypes from '../app/data/cyber-lessons.json' with { type: 'json' };
 const base=process.env.BASE_URL ?? 'http://127.0.0.1:3201';
 const request=async (path,cookie,method='GET',body) => fetch(base+path,{method,headers:{...(cookie?{cookie}:{}),...(body?{'content-type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),redirect:'manual'});
@@ -16,20 +18,20 @@ test('LMS publication, notifications, prior work, latest scores, retries and acc
   const teacher=cookie(await request('/api/auth/teacher',null,'POST',{email:'teacher@dpsrkp.edu.in',password:'Teacher@123'}));
   const student=cookie(await request('/api/auth/student',null,'POST',{school:'dps-rkp',className:'7A',rollNo:'20',password:'DPS20SAFE'}));
   const library=await json('/api/lms/assignments',teacher);
-  assert.deepEqual(library.modules.map(m=>m.id).sort(),newMissions.map(m=>m.id).sort(),'only the current 24 chapters are assignable');
-  for(const grade of [3,4,5,6,7]) {
+  assert.deepEqual(library.modules.map(m=>m.id).sort(),[...newMissions,...class11Missions,...class12Missions].map(m=>m.id).sort(),'only completed curriculum chapters are assignable');
+  for(const grade of [6,7,8,9,10,11,12]) {
     const chapters=library.modules.filter(m=>m.grades.includes(grade));
-    assert.equal(chapters.length,8,`eight chapters for Class ${grade}`);
-    for(const strand of new Set(chapters.map(m=>m.strand))) assert.equal(chapters.filter(m=>m.strand===strand).length,2);
+    assert.equal(chapters.length,grade>=11?32:8,`available chapters for Class ${grade}`);
+    for(const strand of new Set(chapters.map(m=>m.strand))) assert.equal(chapters.filter(m=>m.strand===strand).length,grade>=11?8:2);
     if(grade===7) continue;
-    const {class:section}=await json('/api/admin/classes',teacher,'POST',{grade,section:'QA'});
+    const {class:section}=await json('/api/admin/classes',teacher,'POST',{grade,section:'Q'+randomUUID().slice(0,3)});
     assert.equal((await request('/api/lms/assignments',teacher,'POST',{title:`Class ${grade} chapter check`,classId:section.id,moduleIds:[chapters[0].id],dueAt:Date.now()+86400000,totalMarks:20})).status,201);
     const wrongBand=library.modules.find(m=>!m.grades.includes(grade));
     assert.equal((await request('/api/lms/assignments',teacher,'POST',{title:'Wrong band',classId:section.id,moduleIds:[wrongBand.id],dueAt:Date.now()+86400000,totalMarks:20})).status,400);
   }
   const klass=library.classes.find(c=>c.name==='7A');
   assert.equal((await request('/api/lms/assignments',teacher,'POST',{title:'Old prototype',classId:klass.id,moduleIds:[prototypes.find(m=>m.grades.includes(7)).id],dueAt:Date.now()+86400000,totalMarks:20})).status,400);
-  const chapter=library.modules.find(m=>m.title==='Algorithm Optimization');
+  const chapter=library.modules.find(m=>m.title==='Pattern Detective');
   assert.ok(chapter);
   const ids=newMissions.find(m=>m.id===chapter.id).assessmentIds;
   const learner=library.students.find(s=>s.className==='7A'&&s.rollNo==='20');
@@ -41,7 +43,7 @@ test('LMS publication, notifications, prior work, latest scores, retries and acc
   const history=async()=>json(`/api/lms/students/${learner.id}`,teacher);
   const event=(attemptKey,type,payload={})=>({moduleId:chapter.id,attemptKey,eventId:randomUUID(),type,payload});
   const key1=randomUUID();
-  const events=[event(key1,'module_started'),event(key1,'story_answered',{id:'story',correct:true,category:'Optimization story'}),event(key1,'question_answered',{id:ids[0],correct:false,category:'Loop optimization',feedback:'Remove the repeated action.'}),event(key1,'question_answered',{id:ids[0],correct:true,category:'Loop optimization',retry:true}),event(key1,'question_answered',{id:ids[1],correct:true,category:'Loop optimization'}),event(key1,'question_answered',{id:ids[2],correct:true,category:'Loop optimization'}),event(key1,'module_completed')];
+  const events=[event(key1,'module_started'),event(key1,'story_answered',{id:'story',correct:true,category:'Optimization story'}),event(key1,'question_answered',{id:ids[0],correct:false,category:'Pattern recognition',feedback:'Remove the repeated action.'}),event(key1,'question_answered',{id:ids[0],correct:true,category:'Pattern recognition',retry:true}),event(key1,'question_answered',{id:ids[1],correct:true,category:'Pattern recognition'}),event(key1,'question_answered',{id:ids[2],correct:true,category:'Pattern recognition'}),event(key1,'module_completed')];
   await json('/api/activity',student,'POST',{events});
   const initial=await history();
   const one=initial.attempts.find(a=>a.id.endsWith(key1));
@@ -57,7 +59,7 @@ test('LMS publication, notifications, prior work, latest scores, retries and acc
   inbox=(await json('/api/lms/inbox',student)).assignments.find(a=>a.id===assignment.id);
   assert.ok(inbox.readAt);
   const key2=randomUUID();
-  await json('/api/activity',student,'POST',{events:[event(key2,'module_started'),event(key2,'question_answered',{id:ids[0],correct:false,category:'Loop optimization'}),event(key2,'question_answered',{id:ids[1],correct:false,category:'Loop optimization'}),event(key2,'question_answered',{id:ids[2],correct:false,category:'Loop optimization'}),event(key2,'module_completed')]});
+  await json('/api/activity',student,'POST',{events:[event(key2,'module_started'),event(key2,'question_answered',{id:ids[0],correct:false,category:'Pattern recognition'}),event(key2,'question_answered',{id:ids[1],correct:false,category:'Pattern recognition'}),event(key2,'question_answered',{id:ids[2],correct:false,category:'Pattern recognition'}),event(key2,'module_completed')]});
   inbox=(await json('/api/lms/inbox',student)).assignments.find(a=>a.id===assignment.id);
   assert.equal(inbox.progress.marks,0,'latest score replaces a higher previous score');
   assert.equal(inbox.progress.alreadyCompleted,false);

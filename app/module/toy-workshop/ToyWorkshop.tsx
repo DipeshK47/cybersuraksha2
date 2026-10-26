@@ -502,7 +502,7 @@ export function ToyWorkshop({
                   : !studentId
                     ? "Preview complete. Sign in as a student to save this result."
                     : saveStatus === "saving"
-                      ? "Saving Toy Workshop to your local CyberSuraksha profile…"
+                      ? "Saving Toy Workshop to your local CyberShiksha profile…"
                       : saveStatus === "saved"
                         ? "Toy Workshop saved to the student and teacher progress views."
                         : saveStatus === "error"

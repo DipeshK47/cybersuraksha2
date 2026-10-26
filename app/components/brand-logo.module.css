@@ -1,0 +1,8 @@
+.logo {
+  display: inline-block;
+  width: clamp(240px, 24vw, 310px);
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  vertical-align: middle;
+}

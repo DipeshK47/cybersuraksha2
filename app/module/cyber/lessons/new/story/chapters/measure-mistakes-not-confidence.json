@@ -1,0 +1,77 @@
+{
+  "duration": 85.777,
+  "scenes": [
+    {
+      "id": "measure-mistakes-not-confidence-1",
+      "label": "Meet the team",
+      "title": "A score needs a comparator",
+      "mood": "happy",
+      "caption": "Kabir brings a fixed pack of eight held-out examples. The training collection’s majority label is Recycle, so always guessing that label provides a simple baseline. The model and baseline must face the same pack.",
+      "dialogue": "Better than what, on which examples?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.781
+    },
+    {
+      "id": "measure-mistakes-not-confidence-2",
+      "label": "The problem",
+      "title": "The confident claim",
+      "mood": "surprise",
+      "caption": "The model interface sounds certain, but confidence wording does not tell the team whether predictions are correct. A convenient set of easy examples could also make performance look stronger than it is. Count actual results before making a claim.",
+      "dialogue": "Let us compare predictions with labels.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 14.431,
+      "duration": 15.467
+    },
+    {
+      "id": "measure-mistakes-not-confidence-3",
+      "label": "How it works",
+      "title": "Count the mistakes",
+      "mood": "thinking",
+      "caption": "The model gets six of eight correct. The majority-label baseline gets five of eight correct on this same pack. Those totals describe this small test. They do not establish a universal accuracy or make every error acceptable.",
+      "dialogue": "Six out of eight is evidence with a boundary.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 30.548,
+      "duration": 14.677
+    },
+    {
+      "id": "measure-mistakes-not-confidence-4",
+      "label": "Your decision",
+      "title": "Choose the supported claim",
+      "mood": "thinking",
+      "caption": "Which statement is supported by the supplied test? Compare the model with the baseline using the same denominator, and keep the claim limited to the eight examples actually evaluated.",
+      "dialogue": "Keep the denominator in the sentence.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 45.875,
+      "duration": 11.477
+    },
+    {
+      "id": "measure-mistakes-not-confidence-5",
+      "label": "What changes",
+      "title": "Inspect missed cases",
+      "mood": "happy",
+      "caption": "The team identifies the recyclable sample the model missed and the residual sample it called recyclable. These errors can have different consequences. Looking only at the overall total would hide which kinds of mistakes happened.",
+      "dialogue": "An error table tells us more than a slogan.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 58.003,
+      "duration": 14.613
+    },
+    {
+      "id": "measure-mistakes-not-confidence-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Calculate both totals, locate the mistakes and reject a general claim based on a convenient sample. Record what the model did on this pack and what further evidence the team would need.",
+      "dialogue": "Measure errors before trusting the claim.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 73.266,
+      "duration": 11.861
+    }
+  ]
+}

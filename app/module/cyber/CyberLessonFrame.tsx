@@ -9,6 +9,8 @@ import {
 } from "../../components/learning/LearningSupport";
 import type { CyberLessonMeta } from "../../data/cyber-lessons";
 import { newMissions } from "../../data/new-missions";
+import { class12Missions } from "../../data/class-12-missions";
+import { class11Missions } from "../../data/class-11-missions";
 import type {
   CyberLessonRole,
   CyberLessonRuntime,
@@ -38,7 +40,7 @@ export function CyberLessonFrame({
   const exitHref = `/grade/${grade}?${query.toString()}`;
 
   return (
-    <main className={styles.page} data-accent={lesson.accent} data-edition={newMissions.some((mission) => mission.slug === lesson.slug) ? "practice" : undefined}>
+    <main className={styles.page} data-accent={lesson.accent} data-edition={[...newMissions, ...class11Missions, ...class12Missions].some((mission) => mission.slug === lesson.slug) ? "practice" : undefined}>
       <a className={styles.skipLink} href="#cyber-lesson-content">
         Skip to lesson
       </a>

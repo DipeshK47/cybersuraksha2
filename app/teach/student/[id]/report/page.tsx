@@ -65,7 +65,7 @@ export default function ParentReportPage() {
 
       <article className="parentReportPaper">
         <section className="parentReportHero">
-          <p>Delhi Public School, R.K. Puram · CyberSuraksha</p>
+          <p>Delhi Public School, R.K. Puram · CyberShiksha</p>
           <h1>{student.name}</h1>
           <span>Personal Cyber-Safety Progress Report</span>
           <div>Class {student.className} · Roll {student.rollNo}</div>

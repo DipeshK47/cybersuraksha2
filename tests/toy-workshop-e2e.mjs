@@ -20,7 +20,7 @@ await page.goto(
 );
 await page.waitForLoadState("networkidle");
 
-assert.equal(await page.title(), "Toy Workshop — CyberSuraksha");
+assert.equal(await page.title(), "Toy Workshop — CyberShiksha");
 await page.getByRole("heading", { name: "Turn the viewpoint" }).waitFor();
 assert.equal(
   await page

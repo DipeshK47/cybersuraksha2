@@ -1,0 +1,77 @@
+{
+  "duration": 90.428,
+  "scenes": [
+    {
+      "id": "data-has-a-lifecycle-1",
+      "label": "Meet the team",
+      "title": "The long form",
+      "mood": "happy",
+      "caption": "Asha creates a form to send programme updates through school email. The draft also asks for a home address, an identity document and bank details. Each extra field creates another record that would need protection.",
+      "dialogue": "What does our actual purpose require?",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.037
+    },
+    {
+      "id": "data-has-a-lifecycle-2",
+      "label": "The problem",
+      "title": "Unneeded details",
+      "mood": "surprise",
+      "caption": "Email updates do not require a home address or an identity scan. No payment is involved, so bank details are unnecessary too. A field should not be collected merely because it might be useful someday.",
+      "dialogue": "We can run this event with less personal data.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 14.687,
+      "duration": 13.952
+    },
+    {
+      "id": "data-has-a-lifecycle-3",
+      "label": "How it works",
+      "title": "The lifecycle",
+      "mood": "thinking",
+      "caption": "Decide what to collect, how to store it, who needs access and when its purpose ends. Restrict sensitive details to the roles that need them. Retention depends on the purpose and applicable policy, including authorised holds for relevant records.",
+      "dialogue": "Collection is only the first decision.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 29.289,
+      "duration": 15.637
+    },
+    {
+      "id": "data-has-a-lifecycle-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "The form only sends programme updates. No delivery, identity check or payment is part of its purpose. Choose the field needed to do this job and test your decision.",
+      "dialogue": "Keep the necessary contact channel.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 45.577,
+      "duration": 11.307
+    },
+    {
+      "id": "data-has-a-lifecycle-5",
+      "label": "What changes",
+      "title": "The smaller form",
+      "mood": "happy",
+      "caption": "Asha keeps school email for updates and removes the unrelated fields. Only the named registration team can use the contact list. The team records its purpose so later access and retention choices have a clear reason.",
+      "dialogue": "A smaller form still serves our students.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 57.533,
+      "duration": 14.976
+    },
+    {
+      "id": "data-has-a-lifecycle-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "After follow-up ends, apply the exercise retention plan. Anonymous attendance totals can support planning. Relevant records for an active complaint need restricted authorised review. In the lab, make collection, audience and end-of-purpose decisions.",
+      "dialogue": "Let us follow the records through their whole lifecycle.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 73.159,
+      "duration": 16.619
+    }
+  ]
+}

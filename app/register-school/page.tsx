@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { BrandLogo } from "../components/BrandLogo";
 import { readJson } from "../lib/read-json";
 
 export default function RegisterSchoolPage() {
@@ -31,7 +32,7 @@ export default function RegisterSchoolPage() {
     }
     event.currentTarget.reset();
     setStatus(
-      "Request received. The CyberSuraksha team will verify the school and contact you.",
+      "Request received. The CyberShiksha team will verify the school and contact you.",
     );
   }
 
@@ -39,7 +40,7 @@ export default function RegisterSchoolPage() {
     <main className="authPage registerPage">
       <section className="authCard registerCard">
         <div className="authBrand">
-          <b>Cyber</b>Suraksha
+          <BrandLogo />
         </div>
         <h1>Register your school</h1>
         <p className="authSub">
@@ -65,7 +66,7 @@ export default function RegisterSchoolPage() {
           </p>
         ) : null}
         <Link className="authBack" href="/">
-          ← Back to CyberSuraksha
+          ← Back to CyberShiksha
         </Link>
       </section>
     </main>

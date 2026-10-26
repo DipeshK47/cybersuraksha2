@@ -1,0 +1,77 @@
+{
+  "duration": 94.396,
+  "scenes": [
+    {
+      "id": "protect-the-whole-dependency-chain-1",
+      "label": "Meet the team",
+      "title": "The portal depends on others",
+      "mood": "happy",
+      "caption": "Kabir evaluates a fictional event-service supplier and a payment integration. The supplier can publish a programme without downloading registrations. The team also depends on updates, private secrets and a recovery route that must work during an outage.",
+      "dialogue": "Which dependency can affect the whole service?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.637
+    },
+    {
+      "id": "protect-the-whole-dependency-chain-2",
+      "label": "The problem",
+      "title": "A constrained budget",
+      "mood": "surprise",
+      "caption": "The exercise gives the team six budget units. Three targeted controls cost two units each: least-privilege supplier access, private managed secrets with rotation, and independent tested recovery. Decorative assurance badges cannot replace these requirements.",
+      "dialogue": "Use the stated needs to defend the spend.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 16.287,
+      "duration": 17.365
+    },
+    {
+      "id": "protect-the-whole-dependency-chain-3",
+      "label": "How it works",
+      "title": "Minimum access and exit",
+      "mood": "thinking",
+      "caption": "Limit purpose, scope, duration and onward sharing. Name the owner who revokes access when work ends. Keep a trusted update route and avoid putting integration secrets in the client or a group chat. Test recovery independently of the failed supplier.",
+      "dialogue": "A supplier agreement needs an exit as well as an entry.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 34.303,
+      "duration": 16.661
+    },
+    {
+      "id": "protect-the-whole-dependency-chain-4",
+      "label": "Your decision",
+      "title": "Choose the supplier access",
+      "mood": "thinking",
+      "caption": "The supplier needs to publish the programme. Should it receive the full registration export, a shared organiser account, or only programme-publishing access that expires after the task?",
+      "dialogue": "Useful access can remain narrow.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.614,
+      "duration": 11.861
+    },
+    {
+      "id": "protect-the-whole-dependency-chain-5",
+      "label": "What changes",
+      "title": "An owned dependency decision",
+      "mood": "happy",
+      "caption": "The team funds the required controls within the supplied budget and records what remains outside it. A minimum-access agreement and independent recovery test reduce exposure, but cannot promise uninterrupted service or eliminate supplier failure.",
+      "dialogue": "Keep the remaining dependency risk explicit.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 64.125,
+      "duration": 15.957
+    },
+    {
+      "id": "protect-the-whole-dependency-chain-6",
+      "label": "Enter the lab",
+      "title": "Enter the dependency lab",
+      "mood": "happy",
+      "caption": "Allocate the exercise budget, build the minimum-access agreement and respond to a supplier outage. Explain both the selected safeguards and the remaining risk; no real supplier is being rated.",
+      "dialogue": "Decide from the task and evidence, not a badge.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.733,
+      "duration": 13.013
+    }
+  ]
+}

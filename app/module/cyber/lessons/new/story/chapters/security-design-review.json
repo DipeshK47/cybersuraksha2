@@ -1,0 +1,77 @@
+{
+  "duration": 92.028,
+  "scenes": [
+    {
+      "id": "security-design-review-1",
+      "label": "Meet the team",
+      "title": "The hearing",
+      "mood": "happy",
+      "caption": "The festival team presents its security plan. Three priorities need attention: a public registration folder, a possible gate-laptop failure and a stolen password. The team has six exercise tokens to spend on controls.",
+      "dialogue": "Can we justify every control we choose?",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.253
+    },
+    {
+      "id": "security-design-review-2",
+      "label": "The problem",
+      "title": "The budget",
+      "mood": "surprise",
+      "caption": "Named access, a tested separate backup and protected individual accounts each cost two tokens. A poster redesign also costs two. A good design spends the available budget on the stated risks rather than unrelated improvements.",
+      "dialogue": "A useful change must address the actual failure mode.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 15.903,
+      "duration": 15.872
+    },
+    {
+      "id": "security-design-review-3",
+      "label": "How it works",
+      "title": "Match the control",
+      "mood": "thinking",
+      "caption": "Access restrictions reduce unwanted exposure. Recoverable backups support continuity after a failure. Stronger sign-in and private recovery protect accounts. Each control has a purpose, and none can remove every remaining risk.",
+      "dialogue": "A backup cannot close an open sharing link.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 32.425,
+      "duration": 15.68
+    },
+    {
+      "id": "security-design-review-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "The registration folder is open through a public link. Choose the control that directly reduces this exposure. Consider what the control changes rather than whether its name sounds secure.",
+      "dialogue": "Which choice changes who can reach the data?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 48.755,
+      "duration": 12.501
+    },
+    {
+      "id": "security-design-review-5",
+      "label": "What changes",
+      "title": "New evidence",
+      "mood": "happy",
+      "caption": "The gate laptop is lost while an organiser session remains active. M F A does not automatically close that session. The team needs to revoke access, assess exposure with the teacher and test its separate backup.",
+      "dialogue": "Our plan needs a response to this new event.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 61.907,
+      "duration": 14.571
+    },
+    {
+      "id": "security-design-review-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Defend the plan with its budget, evidence and limitations. Explain a remaining risk and revise after a changed case. In the lab, complete the design review that brings together the whole Cybersecurity module.",
+      "dialogue": "A defensible design includes the risks it cannot eliminate.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 77.127,
+      "duration": 14.251
+    }
+  ]
+}

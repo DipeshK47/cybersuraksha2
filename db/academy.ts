@@ -43,7 +43,7 @@ function realAdminFromEnv() {
     email,
     password,
     name: process.env.CYBERSURAKSHA_ADMIN_NAME?.trim() || "School Admin",
-    schoolName: process.env.CYBERSURAKSHA_SCHOOL_NAME?.trim() || "CyberSuraksha School",
+    schoolName: process.env.CYBERSURAKSHA_SCHOOL_NAME?.trim() || "CyberShiksha School",
   };
 }
 

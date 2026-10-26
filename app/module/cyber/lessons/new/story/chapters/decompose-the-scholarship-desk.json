@@ -1,0 +1,77 @@
+{
+  "duration": 93.073,
+  "scenes": [
+    {
+      "id": "decompose-the-scholarship-desk-1",
+      "label": "Meet the team",
+      "title": "A busy enquiry desk",
+      "mood": "happy",
+      "caption": "Asha and Kabir help organise a fictional scholarship enquiry desk. Requests arrive as anonymous practice records. The team needs a clear process before building a screen or writing code. Real award decisions remain with the responsible teacher.",
+      "dialogue": "What are the separate jobs inside this request?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.192
+    },
+    {
+      "id": "decompose-the-scholarship-desk-2",
+      "label": "The problem",
+      "title": "One enormous instruction",
+      "mood": "surprise",
+      "caption": "The first plan says to handle every application in one step. It mixes collecting records, checking exercise rules, reviewing missing information and sending a response. Nobody can explain where an incomplete record should go.",
+      "dialogue": "A single vague step hides the important decisions.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 16.842,
+      "duration": 14.997
+    },
+    {
+      "id": "decompose-the-scholarship-desk-3",
+      "label": "How it works",
+      "title": "Break the process down",
+      "mood": "thinking",
+      "caption": "Separate intake, rule checking, teacher review and communication. Define what each part receives and produces. Record constraints and distinguish supplied facts from assumptions. A smaller process is easier to test when a rule changes.",
+      "dialogue": "Inputs and outputs connect the smaller steps.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 32.489,
+      "duration": 15.829
+    },
+    {
+      "id": "decompose-the-scholarship-desk-4",
+      "label": "Your decision",
+      "title": "Keep the human role",
+      "mood": "thinking",
+      "caption": "The team can calculate whether a practice record meets the stated exercise rules. Does that authorise the program to award a real scholarship? Choose the boundary that fits this fictional enquiry workflow.",
+      "dialogue": "A computed check is not a real award decision.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 48.969,
+      "duration": 13.312
+    },
+    {
+      "id": "decompose-the-scholarship-desk-5",
+      "label": "What changes",
+      "title": "An explicit handoff",
+      "mood": "happy",
+      "caption": "Asha gives each subproblem an output and a handoff. Incomplete data goes to review. The teacher keeps responsibility for final decisions. Communication uses the reviewed outcome instead of treating an automatic suggestion as an award.",
+      "dialogue": "Now we can see where each record goes.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 62.931,
+      "duration": 16.171
+    },
+    {
+      "id": "decompose-the-scholarship-desk-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Build the process order, separate facts and assumptions and define the workflow scope. You will use this decomposition throughout the module as the data, rules and test evidence become more precise.",
+      "dialogue": "Let us build the process before adding complexity.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 79.751,
+      "duration": 12.672
+    }
+  ]
+}

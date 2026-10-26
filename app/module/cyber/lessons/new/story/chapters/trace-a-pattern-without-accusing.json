@@ -1,0 +1,77 @@
+{
+  "duration": 91.793,
+  "scenes": [
+    {
+      "id": "trace-a-pattern-without-accusing-1",
+      "label": "Meet the team",
+      "title": "A pattern needs context",
+      "mood": "happy",
+      "caption": "Asha traces a small fictional transfer network. One account receives money and soon sends a similar amount onward. Another collector does the same while organising a documented group purchase. The visible pattern alone does not establish wrongdoing.",
+      "dialogue": "What does the transaction record actually show?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.469
+    },
+    {
+      "id": "trace-a-pattern-without-accusing-2",
+      "label": "The problem",
+      "title": "Two similar paths",
+      "mood": "surprise",
+      "caption": "The prepared five-minute rule flags both the unresolved pass-through path and the documented group collector. A payment record shows an amount, time and route; it does not reveal a person’s intent, authorisation or complete financial context.",
+      "dialogue": "A review flag must not become an allegation.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 17.119,
+      "duration": 15.915
+    },
+    {
+      "id": "trace-a-pattern-without-accusing-3",
+      "label": "How it works",
+      "title": "Test an innocent explanation",
+      "mood": "thinking",
+      "caption": "Compare the timestamps and source references with independently supplied receipts. Keep the group-purchase explanation where supported and mark the unresolved path for authorised review. Missing evidence and alternative explanations stay visible.",
+      "dialogue": "The same flag can match a legitimate activity.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 33.684,
+      "duration": 15.979
+    },
+    {
+      "id": "trace-a-pattern-without-accusing-4",
+      "label": "Your decision",
+      "title": "Choose the conclusion",
+      "mood": "thinking",
+      "caption": "Should Asha label every flagged account criminal, publish the network, or state the observed pattern and evidence gaps while testing the documented benign explanation?",
+      "dialogue": "Investigate the hypothesis without accusing a person.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 50.313,
+      "duration": 10.304
+    },
+    {
+      "id": "trace-a-pattern-without-accusing-5",
+      "label": "What changes",
+      "title": "A cautious ledger",
+      "mood": "happy",
+      "caption": "Asha records two flagged intermediaries: one has supplied benign context and one remains unresolved. She does not call the unresolved case a confirmed fraud or calculate a meaningful accuracy score from unknown truth labels.",
+      "dialogue": "A count is only as informative as its labels.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.267,
+      "duration": 15.573
+    },
+    {
+      "id": "trace-a-pattern-without-accusing-6",
+      "label": "Enter the lab",
+      "title": "Enter the pattern lab",
+      "mood": "happy",
+      "caption": "Trace the synthetic edges, run the transparent rule and explain what the benign match teaches. No real account number, person or transaction is analysed, and no external investigation is performed.",
+      "dialogue": "Keep the flag separate from the verdict.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 77.49,
+      "duration": 13.653
+    }
+  ]
+}

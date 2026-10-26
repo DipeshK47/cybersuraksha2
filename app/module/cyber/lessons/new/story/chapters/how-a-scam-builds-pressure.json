@@ -1,0 +1,77 @@
+{
+  "duration": 87.953,
+  "scenes": [
+    {
+      "id": "how-a-scam-builds-pressure-1",
+      "label": "Meet the team",
+      "title": "The offer arrives",
+      "mood": "happy",
+      "caption": "Asha receives a fictional college-preparation offer. The message promises a reward, claims official authority and demands a decision before the next bell. Instead of reacting immediately, she asks what the sender wants her to do.",
+      "dialogue": "What action is the message pushing?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.997
+    },
+    {
+      "id": "how-a-scam-builds-pressure-2",
+      "label": "The problem",
+      "title": "Five pressure levers",
+      "mood": "surprise",
+      "caption": "The offer says there are only two places, that an admissions officer has selected Asha, and that she must keep the opportunity secret. Urgency, scarcity, authority, secrecy and reward can work together to crowd out a careful check.",
+      "dialogue": "Pressure is evidence to inspect, not proof by itself.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.647,
+      "duration": 14.827
+    },
+    {
+      "id": "how-a-scam-builds-pressure-3",
+      "label": "How it works",
+      "title": "Separate signals from proof",
+      "mood": "thinking",
+      "caption": "A short deadline can occur in a genuine message too. A warning sign is a reason to pause and verify the claim independently. Do not decide from one phrase, a logo or an emotional reaction alone.",
+      "dialogue": "Which independent source could check the claim?",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 31.124,
+      "duration": 14.272
+    },
+    {
+      "id": "how-a-scam-builds-pressure-4",
+      "label": "Your decision",
+      "title": "Choose the next move",
+      "mood": "thinking",
+      "caption": "The sender says a small payment will secure the place if Asha acts now. Should she pay, accuse someone publicly, or pause and check through an independently located college contact? Choose a response supported by the evidence.",
+      "dialogue": "Protect the decision before the deadline takes over.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 46.046,
+      "duration": 14.293
+    },
+    {
+      "id": "how-a-scam-builds-pressure-5",
+      "label": "What changes",
+      "title": "A calmer verification",
+      "mood": "happy",
+      "caption": "Asha keeps the message and finds the organisation through a separate trusted route. She does not use the contact supplied by the offer. The claim stays unverified until independent evidence supports it.",
+      "dialogue": "We can pause without pretending we know everything.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 60.989,
+      "duration": 13.461
+    },
+    {
+      "id": "how-a-scam-builds-pressure-6",
+      "label": "Enter the lab",
+      "title": "Enter the verification lab",
+      "mood": "happy",
+      "caption": "Map the pressure tactics, distinguish a warning sign from proof and transfer the same reasoning to a new message. Your record will pair each concern with a specific safe verification action.",
+      "dialogue": "A useful warning leads to a useful check.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 75.101,
+      "duration": 12.203
+    }
+  ]
+}

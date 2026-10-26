@@ -1,0 +1,77 @@
+{
+  "duration": 88.892,
+  "scenes": [
+    {
+      "id": "design-prevention-that-can-be-tested-1",
+      "label": "Meet the team",
+      "title": "A guide must work under pressure",
+      "mood": "happy",
+      "caption": "Kabir prototypes a short verification aid. The first draft says to trust a familiar display name and wait until all evidence is collected before asking for help. Two fictional cases will reveal whether those instructions are usable and safe.",
+      "dialogue": "Test the guide, not only its appearance.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.595
+    },
+    {
+      "id": "design-prevention-that-can-be-tested-2",
+      "label": "The problem",
+      "title": "Two different situations",
+      "mood": "surprise",
+      "caption": "The first case arrives before a new-beneficiary transfer. The second begins after a suspected loss with private evidence. A useful aid must support independent verification before payment and prompt trusted help after harm without public forwarding.",
+      "dialogue": "Different stages need different next actions.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 16.245,
+      "duration": 16.064
+    },
+    {
+      "id": "design-prevention-that-can-be-tested-3",
+      "label": "How it works",
+      "title": "Define expected outcomes",
+      "mood": "thinking",
+      "caption": "Before testing, the expected outcomes are a pause with an independently known verification route, and prompt bank, adult and official reporting with restricted evidence. Run the draft, preserve its failures and replace ambiguous instructions.",
+      "dialogue": "A revision log should show what changed and why.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 32.959,
+      "duration": 15.253
+    },
+    {
+      "id": "design-prevention-that-can-be-tested-4",
+      "label": "Your decision",
+      "title": "Choose the repair",
+      "mood": "thinking",
+      "caption": "Should Kabir keep the familiar-name shortcut, delete the failed case, or rewrite the aid to name the independent route, prompt help and private evidence handling?",
+      "dialogue": "A prettier guide does not repair an unsafe instruction.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.862,
+      "duration": 9.6
+    },
+    {
+      "id": "design-prevention-that-can-be-tested-5",
+      "label": "What changes",
+      "title": "A tested revision",
+      "mood": "happy",
+      "caption": "The revised aid passes both prepared cases while retaining the first draft’s results. It still needs another learner’s pressure test and a fresh ambiguous case. Two passing examples are evidence, not a universal prevention guarantee.",
+      "dialogue": "The test must be usable by someone else too.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.112,
+      "duration": 15.552
+    },
+    {
+      "id": "design-prevention-that-can-be-tested-6",
+      "label": "Enter the lab",
+      "title": "Enter the prevention lab",
+      "mood": "happy",
+      "caption": "Match controls to failure modes, run and revise the two-case aid, then handle an unanswered verification call. Your teacher or peer reviews actual usability separately from the structured check.",
+      "dialogue": "Make the next safe action easy to identify.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 75.314,
+      "duration": 12.928
+    }
+  ]
+}

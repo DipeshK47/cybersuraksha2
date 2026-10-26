@@ -1,0 +1,77 @@
+{
+  "duration": 88.081,
+  "scenes": [
+    {
+      "id": "defend-your-decision-1",
+      "label": "Meet the team",
+      "title": "A fresh decision to defend",
+      "mood": "happy",
+      "caption": "Kabir receives a new fictional exam-fee correction message. A familiar voice and a confident assistant both support it. The message asks for a private transfer, but the independent school notice has not yet confirmed any correction.",
+      "dialogue": "Begin with what is known and unknown.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.04
+    },
+    {
+      "id": "defend-your-decision-2",
+      "label": "The problem",
+      "title": "Build an individual explanation",
+      "mood": "surprise",
+      "caption": "The student must separate the message’s claim, the supplied evidence, the remaining uncertainty and the next safe action. An alternative should be considered and rejected with a reason, rather than ignored.",
+      "dialogue": "Your reasoning matters more than repeating a slogan.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.69,
+      "duration": 12.608
+    },
+    {
+      "id": "defend-your-decision-3",
+      "label": "How it works",
+      "title": "Use the annual portfolio",
+      "mood": "thinking",
+      "caption": "Bring a security control, an AI evaluation or source check, an algorithm trace and a payment-verification record. Identify whether each item is your earlier work or a supplied classroom example. The teacher reviews the individual defence.",
+      "dialogue": "Automatic checks cannot establish authorship or oral understanding.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 28.948,
+      "duration": 16.128
+    },
+    {
+      "id": "defend-your-decision-4",
+      "label": "Your decision",
+      "title": "Respond to the fresh claim",
+      "mood": "thinking",
+      "caption": "Without independent confirmation, should Kabir send a small test payment, follow the assistant’s confidence, or pause and verify through a previously known school contact?",
+      "dialogue": "State why the unresolved claim changes the action.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 45.726,
+      "duration": 10.581
+    },
+    {
+      "id": "defend-your-decision-5",
+      "label": "What changes",
+      "title": "Feedback and a safer revision",
+      "mood": "happy",
+      "caption": "An unsafe answer gets specific feedback and can be revised. Retain the original attempt as evidence of learning. A successful structured check is not an automatic pass for the individual oral explanation.",
+      "dialogue": "Explain the repair and what remains uncertain.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 56.957,
+      "duration": 14.208
+    },
+    {
+      "id": "defend-your-decision-6",
+      "label": "Enter the lab",
+      "title": "Enter the defence lab",
+      "mood": "happy",
+      "caption": "Inspect the fresh case, challenge unsafe assistant advice and prepare a two-minute individual defence with evidence, an alternative and a limitation. Add a short reflection for teacher discussion; its length is not automatically graded.",
+      "dialogue": "Defend the decision, then reflect on the next check.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 71.815,
+      "duration": 15.616
+    }
+  ]
+}

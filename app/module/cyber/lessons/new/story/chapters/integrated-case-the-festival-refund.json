@@ -1,0 +1,77 @@
+{
+  "duration": 90.407,
+  "scenes": [
+    {
+      "id": "integrated-case-the-festival-refund-1",
+      "label": "Meet the team",
+      "title": "The festival refund case",
+      "mood": "happy",
+      "caption": "Asha and Kabir bring together the year’s four modules. A fictional festival message promises a refund. An assistant says to approve it, but the mock payment screen shows money leaving the account. The supporting evidence is incomplete.",
+      "dialogue": "Each module can test a different part of the claim.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.912
+    },
+    {
+      "id": "integrated-case-the-festival-refund-2",
+      "label": "The problem",
+      "title": "Four pieces of evidence",
+      "mood": "surprise",
+      "caption": "The refund folder has a public sharing link, the assistant offers uncited advice, the decision rule has no route for missing verification, and the payment screen names a different payee. No single reassuring detail resolves all four problems.",
+      "dialogue": "What does each piece actually establish?",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.562,
+      "duration": 15.68
+    },
+    {
+      "id": "integrated-case-the-festival-refund-3",
+      "label": "How it works",
+      "title": "Combine the methods",
+      "mood": "thinking",
+      "caption": "Restrict sensitive evidence access, check the assistant against supplied sources, preserve an explicit unknown route in the logic, and inspect payment direction. Reuse your earlier work or label the supplied replacement examples honestly.",
+      "dialogue": "An evidence portfolio records both work and its source.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 31.892,
+      "duration": 15.168
+    },
+    {
+      "id": "integrated-case-the-festival-refund-4",
+      "label": "Your decision",
+      "title": "Choose the immediate decision",
+      "mood": "thinking",
+      "caption": "The assistant sounds certain, but the screen says pay an unverified beneficiary. Should the team approve because the amount matches, trust the assistant, or cancel and check the refund through the known school route?",
+      "dialogue": "Confidence cannot override contradictory evidence.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 47.71,
+      "duration": 12.992
+    },
+    {
+      "id": "integrated-case-the-festival-refund-5",
+      "label": "What changes",
+      "title": "New evidence changes one claim",
+      "mood": "happy",
+      "caption": "A known school contact confirms a real refund is due. That supports the existence of a refund, but it does not verify the message’s new payee or authorise an outgoing payment. Update only the conclusion the new evidence supports.",
+      "dialogue": "Revise the claim without losing the safeguards.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.352,
+      "duration": 15.445
+    },
+    {
+      "id": "integrated-case-the-festival-refund-6",
+      "label": "Enter the lab",
+      "title": "Enter the integrated lab",
+      "mood": "happy",
+      "caption": "Build the four-module evidence map, respond to the changed evidence and set the next three actions. Record portfolio sources and prepare to explain your decision in the annual checkpoint.",
+      "dialogue": "The case uses two existing lessons, with no extra class hours.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 77.447,
+      "duration": 12.309
+    }
+  ]
+}

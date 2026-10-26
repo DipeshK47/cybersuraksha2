@@ -6,7 +6,7 @@ import { NaniMaaVacationChallenge } from "./NaniMaaVacationChallenge";
 export const metadata: Metadata = {
   title: "Nani Maa's Vacation Challenge",
   description:
-    "An interactive Class 3 fair-sharing and number-tracking mission from CyberSuraksha.",
+    "An interactive Class 3 fair-sharing and number-tracking mission from CyberShiksha.",
 };
 
 export default async function NaniMaaVacationChallengePage({

@@ -1,0 +1,77 @@
+{
+  "duration": 96.529,
+  "scenes": [
+    {
+      "id": "design-the-college-fest-portal-1",
+      "label": "Meet the team",
+      "title": "Design the college-fest portal",
+      "mood": "happy",
+      "caption": "Kabir lays out a browser, application server, database and external payment provider. DNS helps locate the named service and HTTPS protects the connection to that hostname. Neither decides which registration a person may read.",
+      "dialogue": "Where does trust change?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.851
+    },
+    {
+      "id": "design-the-college-fest-portal-2",
+      "label": "The problem",
+      "title": "The browser can change",
+      "mood": "surprise",
+      "caption": "A browser-side button hides private records in the first draft, but requests still reach the server. The design must not trust the client to report its own role or enforce the final access rule. A public browser should not hold database credentials.",
+      "dialogue": "Place a check where the request cannot bypass it.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 16.501,
+      "duration": 16.107
+    },
+    {
+      "id": "design-the-college-fest-portal-3",
+      "label": "How it works",
+      "title": "Defend three control locations",
+      "mood": "thinking",
+      "caption": "Verify the session and record permission on the server. Keep database access behind the application’s constrained account. Validate the purpose and authenticity of external payment status at the integration boundary. Document the assumptions of this classroom architecture.",
+      "dialogue": "Each boundary needs a specific reason for its control.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 33.257,
+      "duration": 17.237
+    },
+    {
+      "id": "design-the-college-fest-portal-4",
+      "label": "Your decision",
+      "title": "Choose the control location",
+      "mood": "thinking",
+      "caption": "The browser says a user is an organiser. Where should permission to read a private registration be checked: only in the hidden button, by a shared password, or on the server using trusted session and record data?",
+      "dialogue": "A client claim is not a trusted role assignment.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.145,
+      "duration": 13.568
+    },
+    {
+      "id": "design-the-college-fest-portal-5",
+      "label": "What changes",
+      "title": "A defensible architecture",
+      "mood": "happy",
+      "caption": "The team puts identity, permission and data access controls at their owning boundaries. HTTPS still protects transport; it does not certify the operator, prove a payment or grant database access. The external provider remains a dependency to assess.",
+      "dialogue": "The diagram makes assumptions visible.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.363,
+      "duration": 17.003
+    },
+    {
+      "id": "design-the-college-fest-portal-6",
+      "label": "Enter the lab",
+      "title": "Enter the architecture lab",
+      "mood": "happy",
+      "caption": "Match each component to its job, place three controls and explain the connection and provider assumptions. The architecture is a teaching model, not an implementation or a claim of production security.",
+      "dialogue": "Explain why each control belongs at that boundary.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 83.015,
+      "duration": 12.864
+    }
+  ]
+}

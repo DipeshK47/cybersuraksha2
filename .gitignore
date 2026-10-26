@@ -25,3 +25,9 @@ codex-*chat*.md
 .lms-qa/
 
 .practice-qa/
+
+# Local preparation files and QA captures; shipped assets live in public/ and output/pdf/.
+tmp/
+output/playwright/
+__pycache__/
+*.pyc

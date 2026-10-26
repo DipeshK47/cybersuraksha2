@@ -1,0 +1,77 @@
+{
+  "duration": 92.455,
+  "scenes": [
+    {
+      "id": "can-this-assistant-be-trusted-1",
+      "label": "Meet the team",
+      "title": "The research desk",
+      "mood": "happy",
+      "caption": "Kabir asks a fictional assistant to draft festival instructions from a fixed source pack. The pack includes a volunteer memo and a practice safety note. A fluent answer arrives with some correct statements and some unsupported ones.",
+      "dialogue": "Which source actually supports each sentence?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.955
+    },
+    {
+      "id": "can-this-assistant-be-trusted-2",
+      "label": "The problem",
+      "title": "A polished mistake",
+      "mood": "surprise",
+      "caption": "The answer invents a percentage reduction in waste and suggests that student volunteers sort glass themselves. The supplied practice note requires adult-led glass collection instead. A citation-shaped label does not make an invented statement supported.",
+      "dialogue": "A source name is not evidence until we check it.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 15.605,
+      "duration": 16.299
+    },
+    {
+      "id": "can-this-assistant-be-trusted-3",
+      "label": "How it works",
+      "title": "Read the source",
+      "mood": "thinking",
+      "caption": "Read the relevant passages. Mark claims as supported, contradicted or not established. Ask the assistant to use only supplied material, cite the passage and state when the pack does not answer a question. Keep real personal details out of prompts.",
+      "dialogue": "Let the evidence set the limits of the answer.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 32.553,
+      "duration": 16.405
+    },
+    {
+      "id": "can-this-assistant-be-trusted-4",
+      "label": "Your decision",
+      "title": "An absent statistic",
+      "mood": "thinking",
+      "caption": "None of the supplied sources measures a percentage reduction in waste. Decide how to handle the assistant’s impressive numerical claim. A plausible number cannot replace a missing measurement.",
+      "dialogue": "What should an answer say when evidence is absent?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 49.609,
+      "duration": 12.224
+    },
+    {
+      "id": "can-this-assistant-be-trusted-5",
+      "label": "What changes",
+      "title": "A corrected response",
+      "mood": "happy",
+      "caption": "The team keeps the supported meeting information, follows the supplied adult-led collection note and removes the unsupported statistic. Its rewritten answer names the sources. Human checking remains responsible for the final message.",
+      "dialogue": "Correct, attribute and acknowledge what we do not know.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 62.483,
+      "duration": 15.275
+    },
+    {
+      "id": "can-this-assistant-be-trusted-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Audit the claims, improve the instruction and assemble a corrected attributed response. The source pack is fictional and fixed, so no external account or private school data is required for the exercise.",
+      "dialogue": "Verify the source, not just the assistant tone.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 78.407,
+      "duration": 13.397
+    }
+  ]
+}

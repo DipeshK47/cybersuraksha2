@@ -1,0 +1,107 @@
+{
+  "duration": 94.417,
+  "scenes": [
+    {
+      "id": "your-digital-risk-map-1",
+      "label": "Meet the team",
+      "title": "Meet the team",
+      "mood": "happy",
+      "caption": "Asha is organising the Cyberpur school festival. Her team needs to protect a registration list, keep supplier payment amounts accurate, and have a working laptop at the gate. Security includes all three needs.",
+      "dialogue": "We need more than a secret password.",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.293
+    },
+    {
+      "id": "your-digital-risk-map-2",
+      "label": "The problem",
+      "title": "The open link",
+      "mood": "surprise",
+      "caption": "A supplier forwards the registration link to a public group. The folder allows anyone with that link to view it. Nobody yet knows whether the contact details were copied. Asha needs to describe the risk before choosing a safeguard.",
+      "dialogue": "Which part of this situation can we change?",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 14.943,
+      "duration": 15.061
+    },
+    {
+      "id": "your-digital-risk-map-3",
+      "label": "How it works",
+      "title": "Build a chain",
+      "mood": "thinking",
+      "caption": "The registration list is an asset. An unauthorised download is a threat event. Public-link sharing is a vulnerability. Restricting the folder to named organisers is a control. These words describe different parts of the same case.",
+      "dialogue": "The asset, threat and weakness are different.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 30.655,
+      "duration": 15.36
+    },
+    {
+      "id": "your-digital-risk-map-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "Help Asha identify the vulnerability. The list has value, and a download could cause harm. Which setting makes unwanted access easier? Choose a description, then test your decision.",
+      "dialogue": "Find the weakness we can repair.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 46.665,
+      "duration": 11.776
+    },
+    {
+      "id": "your-digital-risk-map-5",
+      "label": "What changes",
+      "title": "Reduce the risk",
+      "mood": "happy",
+      "caption": "Asha restricts the folder to named organisers and asks the responsible teacher to review the possible exposure. The team records what it knows and what remains uncertain. Changing permissions reduces future access; it cannot undo a copy someone already made.",
+      "dialogue": "We can reduce risk without pretending it vanished.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 59.091,
+      "duration": 17.365
+    },
+    {
+      "id": "your-digital-risk-map-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Asha also checks who can change supplier amounts and what happens if the gate laptop fails. Confidentiality, integrity and availability describe these different impacts. In the lab, build a risk chain, classify impacts and justify three priorities.",
+      "dialogue": "Let us build an evidence-based risk register.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 77.106,
+      "duration": 16.661
+    }
+  ],
+  "hindiAudio": {
+    "src": "/audio/cyber/your-digital-risk-map/story-hi.mp3",
+    "duration": 111.341633,
+    "scenes": [
+      {
+        "start": 0.0,
+        "duration": 17.475918
+      },
+      {
+        "start": 18.125918,
+        "duration": 17.397551
+      },
+      {
+        "start": 36.173469,
+        "duration": 18.364082
+      },
+      {
+        "start": 55.187551,
+        "duration": 14.28898
+      },
+      {
+        "start": 70.126531,
+        "duration": 20.114286
+      },
+      {
+        "start": 90.890816,
+        "duration": 19.800816
+      }
+    ]
+  }
+}

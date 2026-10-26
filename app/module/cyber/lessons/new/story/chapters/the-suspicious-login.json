@@ -1,0 +1,77 @@
+{
+  "duration": 93.585,
+  "scenes": [
+    {
+      "id": "the-suspicious-login-1",
+      "label": "Meet the team",
+      "title": "An account alert",
+      "mood": "happy",
+      "caption": "Kabir reviews a supplied sign-in alert. A recognised school-laptop sign-in is followed by an unfamiliar session with a different city label. The new event needs attention, but the city label alone does not identify anyone.",
+      "dialogue": "An indicator needs checking.",
+      "status": "Planning the festival",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.168
+    },
+    {
+      "id": "the-suspicious-login-2",
+      "label": "The problem",
+      "title": "A download follows",
+      "mood": "surprise",
+      "caption": "The unfamiliar session downloads the registration file at nine fourteen. At nine twenty, Asha says she does not recognise that session. These observations support a careful response without an accusation about a particular student.",
+      "dialogue": "Put the events in order before choosing an explanation.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 15.818,
+      "duration": 15.381
+    },
+    {
+      "id": "the-suspicious-login-3",
+      "label": "How it works",
+      "title": "Facts and hypotheses",
+      "mood": "thinking",
+      "caption": "An observation describes what a supplied record says. A hypothesis is a possible explanation to verify. An unsupported conclusion goes beyond the evidence. Location labels can be approximate, and records may not tell the whole story.",
+      "dialogue": "Say what we know, and what we still need to check.",
+      "status": "Thinking it through",
+      "tone": "normal",
+      "start": 31.849,
+      "duration": 15.957
+    },
+    {
+      "id": "the-suspicious-login-4",
+      "label": "Your decision",
+      "title": "Your decision",
+      "mood": "thinking",
+      "caption": "The city label differs from the recognised session. Decide what that detail supports. Do not accuse a person or delete evidence. Choose the statement that treats the record proportionately.",
+      "dialogue": "What can this clue actually establish?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 48.457,
+      "duration": 12.267
+    },
+    {
+      "id": "the-suspicious-login-5",
+      "label": "What changes",
+      "title": "Initial response",
+      "mood": "happy",
+      "caption": "Preserve relevant details and verify with Asha through a known channel. With the owner, review and revoke unrecognised sessions and secure the account. Inform the responsible teacher about possible data exposure. Urgent containment and escalation may overlap.",
+      "dialogue": "We can act calmly without claiming certainty.",
+      "status": "Revising the plan",
+      "tone": "resolved",
+      "start": 61.373,
+      "duration": 17.536
+    },
+    {
+      "id": "the-suspicious-login-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "A clear timeline and evidence ledger are stronger than a guess. In the lab, reconstruct the events, classify three claims and handle a fresh unknown-session case using the stated initial-response sequence.",
+      "dialogue": "Let us investigate the evidence, not other students.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 79.559,
+      "duration": 13.376
+    }
+  ]
+}

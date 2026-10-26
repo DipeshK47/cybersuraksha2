@@ -3,10 +3,18 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import type { ReactNode } from "react";
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import { StoryCharacter } from "./StoryCharacter";
 import type { StoryChapter } from "./types";
 import s from "./story-player.module.css";
+
+function subscribeLanguage(changed: () => void) {
+  const observer = new MutationObserver(changed);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  return () => observer.disconnect();
+}
+const currentLanguage = () => document.documentElement.lang;
+const serverLanguage = () => "en";
 
 /** Scene-to-scene transition every chapter world uses, so all stories move the same way. */
 export function SceneSwap({ scene, reduced, children }: { scene: number; reduced: boolean; children: ReactNode }) {
@@ -20,7 +28,13 @@ export function SceneSwap({ scene, reduced, children }: { scene: number; reduced
 }
 
 export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: string; chapter: StoryChapter; onBegin: () => void; onActivity?: (type: string, payload?: unknown) => void }) {
-  const { script: { scenes, duration }, interactionScene: gate, World } = chapter;
+  const { interactionScene: gate, World } = chapter;
+  const language = useSyncExternalStore(subscribeLanguage, currentLanguage, serverLanguage);
+  const narration = language === "hi" ? chapter.hindiAudio : undefined;
+  const [activeNarration, setActiveNarration] = useState(narration);
+  const scenes = chapter.script.scenes.map((scene, index) => ({ ...scene, ...narration?.scenes[index] }));
+  const duration = narration?.duration ?? chapter.script.duration;
+  const source = narration?.src ?? `/audio/cyber/${slug}/story.mp3`;
   const audio = useRef<HTMLAudioElement>(null);
   const [time, setTime] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -31,6 +45,13 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   const solvedRef = useRef(false);
   const [hint, setHint] = useState("");
   const [waiting, setWaiting] = useState(false);
+  // Restart only this section in the new voice; keep the learner's decision and world state.
+  if (activeNarration !== narration) {
+    const previousScenes = activeNarration?.scenes ?? chapter.script.scenes;
+    const index = Math.max(0, previousScenes.findLastIndex(item => time >= item.start));
+    setActiveNarration(narration); setTime(scenes[index].start);
+    setPlaying(false); setFinished(false); setWaiting(false); setAudioUnavailable(false);
+  }
   const reduced = Boolean(useReducedMotion());
   const scene = Math.max(0, scenes.findLastIndex(item => time >= item.start));
   const current = scenes[scene];
@@ -39,9 +60,10 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   const mood = scene === gate && solved ? chapter.solvedMood ?? "happy" : flash ?? current.mood;
 
   async function start() {
-    try { await audio.current?.play(); }
+    const element = audio.current;
+    try { await element?.play(); }
     // A quick Pause aborts the pending play(); that is not a broken audio file.
-    catch (error) { if ((error as Error).name !== "AbortError") { setAudioUnavailable(true); setPlaying(false); } }
+    catch (error) { if (element === audio.current && (error as Error).name !== "AbortError") { setAudioUnavailable(true); setPlaying(false); } }
   }
   async function play() {
     if (!audio.current || audioUnavailable || waiting) return;
@@ -81,7 +103,8 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   const Icon = chapter.icon;
 
   return <section className={`${s.intro} ${slug === "password-vault-builder" ? "" : s.polishedMotion}`} data-story-player={slug} data-scene={scene} data-gate={gate} data-playing={playing} data-waiting={waiting} data-solved={solved}>
-    <audio ref={audio} src={`/audio/cyber/${slug}/story.mp3`} preload="metadata" muted={muted}
+    <audio key={source} ref={audio} src={source} preload="metadata" muted={muted}
+      onLoadedMetadata={() => { if (audio.current) audio.current.currentTime = time; }}
       onTimeUpdate={trackAudio} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
       onEnded={() => { setPlaying(false); setFinished(true); setTime(duration); }}
       onError={() => { setAudioUnavailable(true); setPlaying(false); }} />

@@ -1,0 +1,77 @@
+{
+  "duration": 93.308,
+  "scenes": [
+    {
+      "id": "is-ai-needed-here-1",
+      "label": "Meet the team",
+      "title": "A new helper",
+      "mood": "happy",
+      "caption": "Asha and Kabir are planning a waste-sorting helper for the school festival. Some jobs need a prediction, some need clear rules, and some need a written draft. They start with the task rather than choosing AI first.",
+      "dialogue": "What are we actually trying to do?",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.739
+    },
+    {
+      "id": "is-ai-needed-here-2",
+      "label": "The problem",
+      "title": "One tool for everything?",
+      "mood": "surprise",
+      "caption": "A proposed assistant would calculate bills, identify materials from pictures and write volunteer messages. These tasks have different needs. An exact calculation should follow the stated arithmetic rule; a polished sentence is not evidence that its claims are true.",
+      "dialogue": "An impressive answer can still be the wrong tool.",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 14.389,
+      "duration": 17.237
+    },
+    {
+      "id": "is-ai-needed-here-3",
+      "label": "How it works",
+      "title": "Three approaches",
+      "mood": "thinking",
+      "caption": "Rules follow explicit instructions. A learned prediction uses patterns from examples. A generated response produces new content. Any approach still needs suitable inputs and checking. Sometimes a simple calculation or verified lookup is sufficient.",
+      "dialogue": "A rule, a prediction and a draft are different.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 32.276,
+      "duration": 16.832
+    },
+    {
+      "id": "is-ai-needed-here-4",
+      "label": "Your decision",
+      "title": "Choose a tool",
+      "mood": "thinking",
+      "caption": "The festival desk sells three tickets at twenty rupees each, with no discount. Which approach best fits the exact total? Choose the tool whose result can be traced to the stated rule.",
+      "dialogue": "Do we need AI to multiply three by twenty?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 49.758,
+      "duration": 11.968
+    },
+    {
+      "id": "is-ai-needed-here-5",
+      "label": "What changes",
+      "title": "A proportionate choice",
+      "mood": "happy",
+      "caption": "The team uses a rule for the bill. It considers a small prediction experiment for object images and a checked draft for volunteer instructions. It keeps official policy answers tied to supplied sources instead of treating generated text as authority.",
+      "dialogue": "Choose the smallest approach that serves the task.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 62.376,
+      "duration": 16.299
+    },
+    {
+      "id": "is-ai-needed-here-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "In the lab, classify tasks, run an exact bill calculation and handle a policy question when the sources do not contain the answer. Explain both your choice and what the tool cannot establish.",
+      "dialogue": "Let us test the approach, not its marketing.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 79.325,
+      "duration": 13.333
+    }
+  ]
+}

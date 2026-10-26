@@ -1,0 +1,77 @@
+{
+  "duration": 87.527,
+  "scenes": [
+    {
+      "id": "how-work-grows-with-input-size-1",
+      "label": "Meet the team",
+      "title": "Count work before claiming speed",
+      "mood": "happy",
+      "caption": "Kabir compares synthetic record collections of eight, sixteen and thirty two items. He counts record probes and pair comparisons rather than using a stopwatch. Different assumptions can change what a count means.",
+      "dialogue": "What is one unit of work here?",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.952
+    },
+    {
+      "id": "how-work-grows-with-input-size-2",
+      "label": "The problem",
+      "title": "Four patterns of growth",
+      "mood": "surprise",
+      "caption": "A known-position indexed read takes one counted access. A last-item linear search visits every record. A sorted binary search narrows the interval. Comparing every unordered pair grows much faster as the input increases.",
+      "dialogue": "A low count needs its preparation assumptions.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 14.602,
+      "duration": 15.403
+    },
+    {
+      "id": "how-work-grows-with-input-size-3",
+      "label": "How it works",
+      "title": "Read the counted table",
+      "mood": "thinking",
+      "caption": "For eight, sixteen and thirty two records, last-item linear search needs eight, sixteen and thirty two probes. The supplied sorted binary trace needs four, five and six. All-pairs comparisons number twenty eight, one hundred twenty and four hundred ninety six.",
+      "dialogue": "The exact counts support a qualitative growth explanation.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 30.655,
+      "duration": 16.192
+    },
+    {
+      "id": "how-work-grows-with-input-size-4",
+      "label": "Your decision",
+      "title": "Choose the valid assumption",
+      "mood": "thinking",
+      "caption": "Can binary search discard half an arbitrary shuffled list, or must sorted order be established first? Choose the statement that also keeps sorting and index-building effort visible.",
+      "dialogue": "An algorithm depends on its preconditions.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 47.497,
+      "duration": 11.307
+    },
+    {
+      "id": "how-work-grows-with-input-size-5",
+      "label": "What changes",
+      "title": "A bounded efficiency claim",
+      "mood": "happy",
+      "caption": "Kabir describes constant, logarithmic, linear and quadratic growth for these counted operations. Big O concerns how work grows under stated assumptions; it is not a promise of elapsed time or a substitute for correctness.",
+      "dialogue": "A fast wrong result is still wrong.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 59.453,
+      "duration": 15.125
+    },
+    {
+      "id": "how-work-grows-with-input-size-6",
+      "label": "Enter the lab",
+      "title": "Enter the growth lab",
+      "mood": "happy",
+      "caption": "Build the three-size operation table, inspect exact counts and explain the ordering and preparation limits. The classroom counter is bounded and does not benchmark a real service.",
+      "dialogue": "Count the work you actually claim to compare.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 75.229,
+      "duration": 11.648
+    }
+  ]
+}

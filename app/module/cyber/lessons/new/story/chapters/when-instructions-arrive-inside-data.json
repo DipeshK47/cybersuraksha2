@@ -1,0 +1,77 @@
+{
+  "duration": 93.841,
+  "scenes": [
+    {
+      "id": "when-instructions-arrive-inside-data-1",
+      "label": "Meet the team",
+      "title": "Instructions inside a source",
+      "mood": "happy",
+      "caption": "Kabir retrieves a harmless mock document for the library task. Alongside factual text, it says to ignore the brief, guarantee renewals and reveal a private demo note. That text is material being inspected, not an authorised instruction.",
+      "dialogue": "Who is allowed to change the task?",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.448
+    },
+    {
+      "id": "when-instructions-arrive-inside-data-2",
+      "label": "The problem",
+      "title": "A trust boundary is crossed",
+      "mood": "surprise",
+      "caption": "The trusted classroom brief says to answer only from the supplied pack and protect private notes. A retrieved page cannot promote itself into that authority. Following its instruction would create an unsupported answer and a privacy failure.",
+      "dialogue": "Retrieved words remain untrusted source data.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 17.098,
+      "duration": 15.467
+    },
+    {
+      "id": "when-instructions-arrive-inside-data-3",
+      "label": "How it works",
+      "title": "Test the response boundary",
+      "mood": "thinking",
+      "caption": "Keep the trusted task separate from retrieved content, allow only the needed source data and check the output against the pack. A person handles exceptions. Filtering one phrase or passing one example does not prove resistance to all prompt-injection attempts.",
+      "dialogue": "A narrow passing example is limited evidence.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 33.215,
+      "duration": 16.469
+    },
+    {
+      "id": "when-instructions-arrive-inside-data-4",
+      "label": "Your decision",
+      "title": "Choose the handling",
+      "mood": "thinking",
+      "caption": "Should Kabir obey the source because it looks official, reveal the demo note to prove transparency, or treat the instruction as untrusted data and continue the authorised source-checking task?",
+      "dialogue": "Do not let data rewrite authority.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 50.334,
+      "duration": 12.267
+    },
+    {
+      "id": "when-instructions-arrive-inside-data-5",
+      "label": "What changes",
+      "title": "A safer prepared response",
+      "mood": "happy",
+      "caption": "The guarded response ignores the source’s attempted redirection, states that staff review renewals and keeps private notes out. Kabir records both the correct evidence and the attempted boundary crossing for the classroom review.",
+      "dialogue": "Check facts, privacy and authority separately.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 63.251,
+      "duration": 14.336
+    },
+    {
+      "id": "when-instructions-arrive-inside-data-6",
+      "label": "Enter the lab",
+      "title": "Enter the trust lab",
+      "mood": "happy",
+      "caption": "Map the trust boundary, compare two prepared responses and add a new harmless evaluation case. No live attack, external tool call or real secret is used. The lesson tests a workflow, not a complete security defence.",
+      "dialogue": "Preserve the task and the human decision point.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 78.237,
+      "duration": 14.955
+    }
+  ]
+}

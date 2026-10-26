@@ -1,0 +1,77 @@
+{
+  "duration": 86.503,
+  "scenes": [
+    {
+      "id": "retest-after-a-change-1",
+      "label": "Meet the team",
+      "title": "A new category changes the contract",
+      "mood": "happy",
+      "caption": "Asha adds capacity alerts to the synthetic pipeline. Old latency and outage cases must still behave as specified. The revised draft accidentally changes the at-least-seventy comparison to greater than seventy.",
+      "dialogue": "A new feature can break an old boundary.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.933
+    },
+    {
+      "id": "retest-after-a-change-2",
+      "label": "The problem",
+      "title": "Write expected outcomes first",
+      "mood": "surprise",
+      "caption": "The minimum pack covers a routine alert, exact threshold, malformed input, empty input, an identical repeat, partial output failure, the new category and a conflicting duplicate. Expected results come from the requirement, not from whatever the program happens to return.",
+      "dialogue": "Retain both old and new cases.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 15.583,
+      "duration": 17.173
+    },
+    {
+      "id": "retest-after-a-change-3",
+      "label": "How it works",
+      "title": "Run and inspect the regression",
+      "mood": "thinking",
+      "caption": "The exact-seventy case should request review. With a greater-than comparison it is recorded only, revealing the regression. Repair the comparison and rerun all eight cases, including capacity and failure handling.",
+      "dialogue": "A repair needs a rerun, not only an edit.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 33.407,
+      "duration": 14.421
+    },
+    {
+      "id": "retest-after-a-change-4",
+      "label": "Your decision",
+      "title": "Choose the response to a failing test",
+      "mood": "thinking",
+      "caption": "Should Asha change the expected answer to match the bug, remove the boundary case, or repair the inclusive comparison and keep all eight tests?",
+      "dialogue": "Tests should challenge the implementation.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.478,
+      "duration": 9.237
+    },
+    {
+      "id": "retest-after-a-change-5",
+      "label": "What changes",
+      "title": "A limited test record",
+      "mood": "happy",
+      "caption": "All eight specified cases pass after the repair while the new category stays enabled. The record supports those behaviours under the exercise contract. It does not prove every possible input or replace human review of policy changes.",
+      "dialogue": "Passing tests are evidence with a scope.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 58.365,
+      "duration": 15.36
+    },
+    {
+      "id": "retest-after-a-change-6",
+      "label": "Enter the lab",
+      "title": "Enter the regression lab",
+      "mood": "happy",
+      "caption": "Build the expected matrix, catch and repair the deliberate boundary regression and handle a fresh capacity case. Keep original results and tests when a requirement changes.",
+      "dialogue": "Retest what changed and what should not change.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 74.375,
+      "duration": 11.477
+    }
+  ]
+}

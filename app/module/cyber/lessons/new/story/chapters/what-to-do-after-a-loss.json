@@ -1,0 +1,77 @@
+{
+  "duration": 94.823,
+  "scenes": [
+    {
+      "id": "what-to-do-after-a-loss-1",
+      "label": "Meet the team",
+      "title": "A loss needs support",
+      "mood": "happy",
+      "caption": "Kabir learns of a fictional unauthorised payment in the class case. The useful response is prompt help and evidence preservation, without blaming the person who was targeted. This classroom case uses invented details only.",
+      "dialogue": "What can reduce further harm now?",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.976
+    },
+    {
+      "id": "what-to-do-after-a-loss-2",
+      "label": "The problem",
+      "title": "Do not wait for a perfect file",
+      "mood": "surprise",
+      "caption": "For an actual financial cyber fraud in India, contact the bank or payment provider immediately through a trusted channel. Seek a trusted adult’s help and promptly use nineteen thirty or the National Cyber Crime Reporting Portal. Do not delay urgent contact to finish screenshots.",
+      "dialogue": "Start urgent contact while preserving the evidence you have.",
+      "status": "Evidence unresolved",
+      "tone": "trouble",
+      "start": 15.626,
+      "duration": 17.792
+    },
+    {
+      "id": "what-to-do-after-a-loss-3",
+      "label": "How it works",
+      "title": "Keep a useful record",
+      "mood": "thinking",
+      "caption": "Record the time, amount, transaction reference and what happened. Preserve relevant messages and receipts. Keep PINs and OTPs private and redact unrelated personal information from the classroom copy. Reporting does not guarantee recovery.",
+      "dialogue": "Evidence supports response; it does not promise an outcome.",
+      "status": "Build a check",
+      "tone": "normal",
+      "start": 34.068,
+      "duration": 16.896
+    },
+    {
+      "id": "what-to-do-after-a-loss-4",
+      "label": "Your decision",
+      "title": "Choose the first response",
+      "mood": "thinking",
+      "caption": "Should Kabir pay a recovery agent, wait until he has every screenshot, or contact the bank promptly and involve a trusted adult in official reporting? Choose the response that avoids another unsafe step.",
+      "dialogue": "A second fee can create a second loss.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 51.614,
+      "duration": 13.504
+    },
+    {
+      "id": "what-to-do-after-a-loss-5",
+      "label": "What changes",
+      "title": "A mock report only",
+      "mood": "happy",
+      "caption": "The team assembles a clearly labelled practice report from the supplied time, amount, reference and redacted messages. The exercise never sends a complaint, contacts a bank or calls a helpline. Real incidents require real trusted channels.",
+      "dialogue": "Keep the practice record separate from a real report.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 65.768,
+      "duration": 16.107
+    },
+    {
+      "id": "what-to-do-after-a-loss-6",
+      "label": "Enter the lab",
+      "title": "Enter the response lab",
+      "mood": "happy",
+      "caption": "Choose prompt contacts, assemble the fictional report and respond to a recovery guarantee. Your teacher can review the contact plan and the completeness of the synthetic evidence record.",
+      "dialogue": "Prompt help, preserved evidence and no blame.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 82.525,
+      "duration": 11.648
+    }
+  ]
+}

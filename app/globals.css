@@ -2619,11 +2619,6 @@ a.missionCard:hover {
 }
 
 @media (max-width: 470px) {
-  .landingBrand {
-    max-width: 90px;
-    line-height: 1.5;
-  }
-
   .landingLinks {
     gap: 6px;
   }

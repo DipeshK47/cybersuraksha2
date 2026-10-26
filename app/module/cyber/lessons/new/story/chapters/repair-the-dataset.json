@@ -1,0 +1,77 @@
+{
+  "duration": 93.564,
+  "scenes": [
+    {
+      "id": "repair-the-dataset-1",
+      "label": "Meet the team",
+      "title": "The sample collection",
+      "mood": "happy",
+      "caption": "Kabir receives a tiny synthetic dataset for the sorting experiment. Each record should have an identifier, an observed material and a label supported by the supplied description. The collection looks tidy until the team inspects individual rows.",
+      "dialogue": "A table can look clean and still mislead us.",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.573
+    },
+    {
+      "id": "repair-the-dataset-2",
+      "label": "The problem",
+      "title": "Hidden faults",
+      "mood": "surprise",
+      "caption": "One observed paper sample is labelled metal. A repeated record would be counted twice. Another row has no observed material, so nobody can justify a material label. The collection also contains only bright photographs.",
+      "dialogue": "Which changes are supported by evidence?",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 16.223,
+      "duration": 14.784
+    },
+    {
+      "id": "repair-the-dataset-3",
+      "label": "How it works",
+      "title": "Repair without inventing",
+      "mood": "thinking",
+      "caption": "Correct a label only when the supplied observation supports the correction. Remove a proven duplicate while preserving the original record. Quarantine an unresolved row rather than inventing its value. Record the decision and the dataset limits.",
+      "dialogue": "Unknown is more honest than a made-up answer.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 31.657,
+      "duration": 16.107
+    },
+    {
+      "id": "repair-the-dataset-4",
+      "label": "Your decision",
+      "title": "The missing field",
+      "mood": "thinking",
+      "caption": "A row has no observation of its material. The team cannot inspect the original sample. Choose what to do before this row is used for training. Do not guess simply to make every cell look complete.",
+      "dialogue": "What can we honestly record here?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 48.414,
+      "duration": 13.525
+    },
+    {
+      "id": "repair-the-dataset-5",
+      "label": "What changes",
+      "title": "A change log",
+      "mood": "happy",
+      "caption": "The team fixes the supported label, handles the duplicate and puts the unresolved row aside for review. Its data card says the tiny collection covers bright conditions only. Repairing a table does not make it representative of every situation.",
+      "dialogue": "Every correction needs a reason we can trace.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 62.589,
+      "duration": 15.829
+    },
+    {
+      "id": "repair-the-dataset-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Repair labels, distinguish a true duplicate from a separate sample and review the collection strategy for dim conditions. Keep a quality log and a limitation instead of claiming the small dataset is ready for general use.",
+      "dialogue": "Let us repair the evidence, not decorate the table.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 79.069,
+      "duration": 13.845
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "./BrandLogo";
 
 export function AuthCard({
   title,
@@ -15,14 +16,14 @@ export function AuthCard({
     <main className="authPage">
       <section className="authCard" aria-labelledby="auth-title">
         <div className="authBrand">
-          <b>Cyber</b>Suraksha
+          <BrandLogo />
         </div>
         <h1 id="auth-title">{title}</h1>
         <p className="authSub">{subtitle}</p>
         {children}
         <div className="authTip">{tip}</div>
         <Link className="authBack" href="/">
-          ← Back to CyberSuraksha
+          ← Back to CyberShiksha
         </Link>
       </section>
     </main>

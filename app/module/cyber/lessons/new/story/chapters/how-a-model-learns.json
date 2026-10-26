@@ -1,0 +1,77 @@
+{
+  "duration": 95.207,
+  "scenes": [
+    {
+      "id": "how-a-model-learns-1",
+      "label": "Meet the team",
+      "title": "Examples and a rule",
+      "mood": "happy",
+      "caption": "Asha compares a handwritten rule with a tiny learned predictor. In this lab, each fictional sample has two numerical features and a material label. A nearest-example method predicts from the closest labelled training examples.",
+      "dialogue": "The examples can change the predictions.",
+      "status": "Planning the experiment",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.72
+    },
+    {
+      "id": "how-a-model-learns-2",
+      "label": "The problem",
+      "title": "Only one kind of example",
+      "mood": "surprise",
+      "caption": "The first training selection contains paper examples only. A new metal-like sample is still compared with paper because the model has never been shown the other label. A model cannot gain missing coverage from a confident-looking display.",
+      "dialogue": "What did we actually show it?",
+      "status": "Checking the problem",
+      "tone": "trouble",
+      "start": 15.37,
+      "duration": 14.549
+    },
+    {
+      "id": "how-a-model-learns-3",
+      "label": "How it works",
+      "title": "Keep the test separate",
+      "mood": "thinking",
+      "caption": "Training examples shape the model. Held-out examples check it after the choices are made. Classification predicts categories, regression predicts numerical values and clustering groups similar examples without provided group labels. This lab uses a deliberately tiny classification method.",
+      "dialogue": "Testing is not another chance to teach from the answers.",
+      "status": "Understanding the method",
+      "tone": "normal",
+      "start": 30.569,
+      "duration": 18.347
+    },
+    {
+      "id": "how-a-model-learns-4",
+      "label": "Your decision",
+      "title": "Protect the evaluation",
+      "mood": "thinking",
+      "caption": "A teammate wants to reveal test labels and copy them into training before reporting the score. Choose the action that preserves a meaningful independent check. The test examples must stay outside the training selection.",
+      "dialogue": "Do we still have an unseen test?",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 49.566,
+      "duration": 13.717
+    },
+    {
+      "id": "how-a-model-learns-5",
+      "label": "What changes",
+      "title": "Observe the learner",
+      "mood": "happy",
+      "caption": "The team adds the missing training label and runs the held-out examples before revealing their labels. If equally close examples disagree, this toy model asks for human review. Its result is an educational demonstration, not a reliable material detector.",
+      "dialogue": "A small demonstration can show a method without proving reliability.",
+      "status": "Reviewing the evidence",
+      "tone": "resolved",
+      "start": 63.933,
+      "duration": 17.088
+    },
+    {
+      "id": "how-a-model-learns-6",
+      "label": "Enter the lab",
+      "title": "Enter the lab",
+      "mood": "happy",
+      "caption": "Match learning tasks to methods, change the training examples and commit predictions before test labels appear. Then explain an unfamiliar result and why the held-out labels should remain outside training.",
+      "dialogue": "Change the examples and watch what actually changes.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 81.671,
+      "duration": 12.885
+    }
+  ]
+}

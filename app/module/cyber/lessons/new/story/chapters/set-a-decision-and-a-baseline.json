@@ -1,0 +1,77 @@
+{
+  "duration": 92.988,
+  "scenes": [
+    {
+      "id": "set-a-decision-and-a-baseline-1",
+      "label": "Meet the team",
+      "title": "Decide what the helper is for",
+      "mood": "happy",
+      "caption": "Asha frames a fictional library-enquiry helper. It suggests whether a request needs staff review; it never approves renewals or makes binding decisions. The team must define users, a comparator and acceptable errors before inspecting prepared scores.",
+      "dialogue": "What decision will a prediction support?",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 17.195
+    },
+    {
+      "id": "set-a-decision-and-a-baseline-2",
+      "label": "The problem",
+      "title": "A useful comparator",
+      "mood": "surprise",
+      "caption": "The supplied pack has one hundred requests: five need staff review and ninety five are routine. An always-routine non-AI baseline looks accurate but misses every staff-review case. The team needs more than a headline percentage.",
+      "dialogue": "Compare on the same cases and the same task.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 17.845,
+      "duration": 15.531
+    },
+    {
+      "id": "set-a-decision-and-a-baseline-3",
+      "label": "How it works",
+      "title": "Commit the acceptance plan",
+      "mood": "thinking",
+      "caption": "In this exercise, a missed staff-review case costs five invented units and an unnecessary review costs one. Staff can review at most ten flagged requests per hundred. The proposed minimum recall is eighty percent. These are classroom constraints, not universal targets.",
+      "dialogue": "Write the goal before reading results.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 34.025,
+      "duration": 17.877
+    },
+    {
+      "id": "set-a-decision-and-a-baseline-4",
+      "label": "Your decision",
+      "title": "Choose a defensible plan",
+      "mood": "thinking",
+      "caption": "Should the team choose whichever metric looks best after testing, compare different packs, or fix the task, baseline, costs and review capacity before inspecting the prepared results?",
+      "dialogue": "A result should answer the question you set.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 52.553,
+      "duration": 11.243
+    },
+    {
+      "id": "set-a-decision-and-a-baseline-5",
+      "label": "What changes",
+      "title": "A bounded brief",
+      "mood": "happy",
+      "caption": "Asha commits the library-staff use, always-routine comparator, error costs, recall target and review capacity. An uncertain request still has a staff route. The plan can now reveal whether a candidate meets the stated purpose.",
+      "dialogue": "A polished answer is not an acceptance criterion.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 64.445,
+      "duration": 15.467
+    },
+    {
+      "id": "set-a-decision-and-a-baseline-6",
+      "label": "Enter the lab",
+      "title": "Enter the evaluation lab",
+      "mood": "happy",
+      "caption": "Build the brief, commit the acceptance plan before revealing the sheet and explain when a non-AI comparator is preferable. No real library record or live model is used.",
+      "dialogue": "Start with the decision and its consequences.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.562,
+      "duration": 11.776
+    }
+  ]
+}

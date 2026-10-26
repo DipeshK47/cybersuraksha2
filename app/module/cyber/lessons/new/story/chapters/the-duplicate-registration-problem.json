@@ -1,0 +1,77 @@
+{
+  "duration": 93.095,
+  "scenes": [
+    {
+      "id": "the-duplicate-registration-problem-1",
+      "label": "Meet the team",
+      "title": "The duplicate registration problem",
+      "mood": "happy",
+      "caption": "Asha receives two fictional tables: registrations and check-ins. Two different people share the name Riya. One registration ID has conflicting statuses, one check-in repeats and another check-in has no matching registration.",
+      "dialogue": "A name match cannot resolve these records.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 14.848
+    },
+    {
+      "id": "the-duplicate-registration-problem-2",
+      "label": "The problem",
+      "title": "The join can hide a problem",
+      "mood": "surprise",
+      "caption": "Joining on names could merge different people. A unique registration ID should identify one registration, and a check-in reference should point to that ID. The supplied dirty tables violate those intended constraints and need reconciliation first.",
+      "dialogue": "Do not silently overwrite a key conflict.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 15.498,
+      "duration": 16.299
+    },
+    {
+      "id": "the-duplicate-registration-problem-3",
+      "label": "How it works",
+      "title": "Keep unresolved cases visible",
+      "mood": "thinking",
+      "caption": "Group by stable ID, preserve original rows and classify conflicts, repeated check-ins and unmatched references. A registration with no check-in row has unknown attendance; an absent row is not proof that the person was absent.",
+      "dialogue": "Missing evidence must remain missing.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 32.447,
+      "duration": 15.915
+    },
+    {
+      "id": "the-duplicate-registration-problem-4",
+      "label": "Your decision",
+      "title": "Choose the reconciliation rule",
+      "mood": "thinking",
+      "caption": "Should the team merge all Riya rows, keep whichever conflicting value arrived last, or reconcile by stable ID and hold unresolved cases for authorised review?",
+      "dialogue": "Preserve the conflict instead of guessing.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 49.011,
+      "duration": 11.392
+    },
+    {
+      "id": "the-duplicate-registration-problem-5",
+      "label": "What changes",
+      "title": "An evidence-linked result",
+      "mood": "happy",
+      "caption": "Asha keeps R02 and R03 distinct despite their shared name. The conflicting R02 values, repeated R01 check-in and unmatched R05 reference remain visible. R04 matches; R03 has no check-in evidence.",
+      "dialogue": "The unresolved list is part of the output.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.053,
+      "duration": 18.304
+    },
+    {
+      "id": "the-duplicate-registration-problem-6",
+      "label": "Enter the lab",
+      "title": "Enter the reconciliation lab",
+      "mood": "happy",
+      "caption": "Define the key relationships, run the supplied join audit and classify every result. Explain the human review needed before a repaired key or attendance conclusion is accepted.",
+      "dialogue": "A reliable join starts with reliable identity.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 80.007,
+      "duration": 12.437
+    }
+  ]
+}

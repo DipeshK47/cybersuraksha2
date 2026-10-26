@@ -38,7 +38,7 @@ type Message = {
 const welcome: Message = {
   id: "welcome",
   role: "assistant",
-  text: "Hi! I’m Suraksha Guide. Ask me about your Computational Thinking and AI handbook.",
+  text: "Hi! I’m Shiksha Guide. Ask me about your Computational Thinking and AI handbook.",
 };
 
 const modulesWithInlineGuide = new Set([
@@ -60,7 +60,7 @@ function getInitialGrade() {
     const stored = sessionStorage.getItem("cybersuraksha-student");
     const student = stored ? (JSON.parse(stored) as { className?: string }) : null;
     const grade = Number.parseInt(student?.className ?? "", 10);
-    return grade >= 3 && grade <= 8 ? grade : 7;
+    return grade >= 6 && grade <= 8 ? grade : 7;
   } catch {
     return 7;
   }
@@ -120,7 +120,7 @@ export function HandbookChatbot({
           {
             id: "welcome",
             role: "assistant",
-            text: "Hi! I’m Suraksha Guide for Teachers. Ask for a class report, a student’s progress, the current schedule, or deadlines.",
+            text: "Hi! I’m Shiksha Guide for Teachers. Ask for a class report, a student’s progress, the current schedule, or deadlines.",
           },
         ]);
       }
@@ -157,6 +157,7 @@ export function HandbookChatbot({
           grade,
           history,
           sessionId: getSessionId(),
+          language: document.documentElement.lang === "hi" ? "hi" : "en",
         }),
       });
       const payload = await readJson<{
@@ -208,7 +209,7 @@ export function HandbookChatbot({
     >
       {open ? (
         <section
-          aria-label="Suraksha Guide handbook assistant"
+          aria-label="Shiksha Guide handbook assistant"
           aria-modal="false"
           className="surakshaGuidePanel"
           role="dialog"
@@ -218,11 +219,11 @@ export function HandbookChatbot({
               <Bot />
             </span>
             <span>
-              <strong>Suraksha Guide</strong>
+              <strong>Shiksha Guide</strong>
               <small>{viewerRole === "teacher" ? "Teacher insight assistant" : "Handbook learning assistant"}</small>
             </span>
             <button
-              aria-label="Close Suraksha Guide"
+              aria-label="Close Shiksha Guide"
               className="surakshaGuideClose"
               onClick={() => setOpen(false)}
               type="button"
@@ -244,7 +245,7 @@ export function HandbookChatbot({
                 onChange={(event) => setGrade(Number(event.target.value))}
                 value={grade}
               >
-                {[3, 4, 5, 6, 7, 8].map((value) => (
+                {[6, 7, 8].map((value) => (
                   <option key={value} value={value}>
                     {value}
                   </option>
@@ -280,7 +281,7 @@ export function HandbookChatbot({
                 className={`surakshaGuideMessage surakshaGuideMessage${message.role}`}
                 key={message.id}
               >
-                <p>{message.text}</p>
+                <p translate={message.role === "user" ? "no" : undefined}>{message.text}</p>
                 {message.sources?.length ? (
                   <div className="surakshaGuideSources">
                     {message.sources.map((source) =>
@@ -318,7 +319,7 @@ export function HandbookChatbot({
 
           <form className="surakshaGuideComposer" method="post" onSubmit={askQuestion}>
             <input
-              aria-label="Ask Suraksha Guide"
+              aria-label="Ask Shiksha Guide"
               maxLength={800}
               onChange={(event) => setQuestion(event.target.value)}
               placeholder="Ask a handbook question…"
@@ -343,13 +344,13 @@ export function HandbookChatbot({
 
       <button
         aria-expanded={open}
-        aria-label={open ? "Close Suraksha Guide" : "Open Suraksha Guide"}
+        aria-label={open ? "Close Shiksha Guide" : "Open Shiksha Guide"}
         className="surakshaGuideLauncher"
         onClick={toggleAssistant}
         type="button"
       >
         <Bot aria-hidden="true" />
-        <span>Ask Suraksha Guide</span>
+        <span>Ask Shiksha Guide</span>
       </button>
     </aside>
   );

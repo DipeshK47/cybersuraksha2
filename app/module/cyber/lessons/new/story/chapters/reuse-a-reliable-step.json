@@ -1,0 +1,77 @@
+{
+  "duration": 97.02,
+  "scenes": [
+    {
+      "id": "reuse-a-reliable-step-1",
+      "label": "Meet the team",
+      "title": "One check in three places",
+      "mood": "happy",
+      "caption": "Kabir notices that the enquiry screen, review list and response preview each contain a copied version of the exercise rule. One copy has already drifted to a different threshold. Repeating the code has repeated the opportunity for inconsistency.",
+      "dialogue": "Can one reliable step serve every caller?",
+      "status": "Planning the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 15.915
+    },
+    {
+      "id": "reuse-a-reliable-step-2",
+      "label": "The problem",
+      "title": "The copies disagree",
+      "mood": "surprise",
+      "caption": "The same record is marked differently depending on which screen checks it. The team needs one shared function with a clear contract rather than three almost-identical sets of conditions. Moving the code must preserve input validation and review paths.",
+      "dialogue": "Reuse the check without losing its safeguards.",
+      "status": "Investigating a problem",
+      "tone": "trouble",
+      "start": 16.565,
+      "duration": 15.787
+    },
+    {
+      "id": "reuse-a-reliable-step-3",
+      "label": "How it works",
+      "title": "Describe the contract",
+      "mood": "thinking",
+      "caption": "State the function’s input, output and expectations. Use stable IDs, validated scores and explicit document status. A missing field is not automatically zero or false. A shared function must return a visible review result when required information is absent.",
+      "dialogue": "An absent value is a real case to handle.",
+      "status": "Tracing the reasoning",
+      "tone": "normal",
+      "start": 33.001,
+      "duration": 18.069
+    },
+    {
+      "id": "reuse-a-reliable-step-4",
+      "label": "Your decision",
+      "title": "Handle a missing score",
+      "mood": "thinking",
+      "caption": "A record has no score value but its documents are complete. Should the shared check silently convert the missing score to zero, mark the record eligible, or return the defined missing-data review route?",
+      "dialogue": "Missing is not a numeric score.",
+      "status": "Your turn",
+      "tone": "normal",
+      "start": 51.721,
+      "duration": 12.693
+    },
+    {
+      "id": "reuse-a-reliable-step-5",
+      "label": "What changes",
+      "title": "Use the same function",
+      "mood": "happy",
+      "caption": "The team runs the same validated function for several records and sees consistent outcomes. Complete and incomplete document flags remain distinct from an unknown flag. The review list and response preview can now share one rule without losing validation.",
+      "dialogue": "One correction can reach all the callers.",
+      "status": "Checking the correction",
+      "tone": "resolved",
+      "start": 65.064,
+      "duration": 17.131
+    },
+    {
+      "id": "reuse-a-reliable-step-6",
+      "label": "Enter the lab",
+      "title": "Enter the logic lab",
+      "mood": "happy",
+      "caption": "Define the contract, check three example calls and test a missing-score case. Explain what the caller receives and when a person must review the record. Syntax is optional; the reasoning must be explicit.",
+      "dialogue": "Let us test the shared step at its boundaries.",
+      "status": "Ready to practise",
+      "tone": "resolved",
+      "start": 82.845,
+      "duration": 13.525
+    }
+  ]
+}

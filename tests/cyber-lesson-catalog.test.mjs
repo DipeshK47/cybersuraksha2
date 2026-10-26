@@ -45,7 +45,7 @@ test("the catalog contains the exact 18 approved lessons", async () => {
   assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 18);
 });
 
-test("every band has two lessons in each CyberSuraksha bucket", async () => {
+test("every band has two lessons in each CyberShiksha bucket", async () => {
   const lessons = await catalog();
 
   for (const band of ["lower", "middle", "upper"]) {
@@ -85,24 +85,24 @@ test("lesson mechanics and presentation patterns do not repeat", async () => {
 test("every lesson has the right grades, assessment contract, and family action", async () => {
   const lessons = await catalog();
   const gradesBySlug = {
-    "can-i-tell-this": [3],
-    "someone-new-in-my-game": [4],
-    "smart-helper-or-normal-tool": [3],
-    "teach-moti-to-sort": [4],
-    "free-coins-tap-now": [3],
-    "the-grown-ups-phone": [4],
-    "save-my-game-account": [5],
-    "trouble-in-the-class-group": [5],
-    "can-the-chatbot-be-wrong": [5],
-    "why-does-my-feed-repeat": [5],
-    "upi-paying-or-receiving": [5],
-    "the-gaming-giveaway-trap": [5],
-    "what-did-this-photo-reveal": [6],
-    "the-almost-real-login-page": [7],
-    "use-ai-without-losing-your-thinking": [6],
-    "real-edited-or-ai-made": [7],
-    "my-friend-suddenly-needs-money": [6],
-    "the-influencer-shop-and-giveaway": [7],
+    "can-i-tell-this": [6],
+    "someone-new-in-my-game": [7],
+    "smart-helper-or-normal-tool": [6],
+    "teach-moti-to-sort": [7],
+    "free-coins-tap-now": [6],
+    "the-grown-ups-phone": [7],
+    "save-my-game-account": [8],
+    "trouble-in-the-class-group": [8],
+    "can-the-chatbot-be-wrong": [8],
+    "why-does-my-feed-repeat": [8],
+    "upi-paying-or-receiving": [8],
+    "the-gaming-giveaway-trap": [8],
+    "what-did-this-photo-reveal": [9],
+    "the-almost-real-login-page": [10],
+    "use-ai-without-losing-your-thinking": [9],
+    "real-edited-or-ai-made": [10],
+    "my-friend-suddenly-needs-money": [9],
+    "the-influencer-shop-and-giveaway": [10],
   };
 
   for (const lesson of lessons) {
@@ -118,10 +118,10 @@ test("every lesson has the right grades, assessment contract, and family action"
   }
 });
 
-test("each class sees only its own CyberSuraksha lessons", async () => {
+test("each class sees only its own CyberShiksha lessons", async () => {
   const lessons = await catalog();
   const lessonTitlesByGrade = Object.fromEntries(
-    [3, 4, 5, 6, 7].map((grade) => [
+    [6, 7, 8, 9, 10].map((grade) => [
       grade,
       lessons
         .filter((lesson) => lesson.grades.includes(grade))
@@ -129,23 +129,23 @@ test("each class sees only its own CyberSuraksha lessons", async () => {
     ]),
   );
 
-  assert.deepEqual(lessonTitlesByGrade[3], [
+  assert.deepEqual(lessonTitlesByGrade[6], [
     "Can I Tell This?",
     "Smart Helper or Normal Tool?",
     "Free Coins! Tap Now!",
   ]);
-  assert.deepEqual(lessonTitlesByGrade[4], [
+  assert.deepEqual(lessonTitlesByGrade[7], [
     "Someone New in My Game",
     "Teach Moti to Sort",
     "The Grown-Up's Phone",
   ]);
-  assert.equal(lessonTitlesByGrade[5].length, 6);
-  assert.deepEqual(lessonTitlesByGrade[6], [
+  assert.equal(lessonTitlesByGrade[8].length, 6);
+  assert.deepEqual(lessonTitlesByGrade[9], [
     "What Did This Photo Reveal?",
     "Use AI Without Losing Your Thinking",
     "My Friend Suddenly Needs Money",
   ]);
-  assert.deepEqual(lessonTitlesByGrade[7], [
+  assert.deepEqual(lessonTitlesByGrade[10], [
     "The Almost-Real Login Page",
     "Real, Edited or AI-Made?",
     "The Influencer Shop and Giveaway",

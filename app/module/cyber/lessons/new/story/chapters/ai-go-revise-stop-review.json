@@ -1,0 +1,77 @@
+{
+  "duration": 92.945,
+  "scenes": [
+    {
+      "id": "ai-go-revise-stop-review-1",
+      "label": "Meet the team",
+      "title": "Go, revise or stop",
+      "mood": "happy",
+      "caption": "Kabir brings the baseline plan, split audit, metrics, image-shift observations, source checks and model card to the review board. The recommendation must follow the evidence and name the human decision maker.",
+      "dialogue": "What would make the decision change?",
+      "status": "Inspect the evidence",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.205
+    },
+    {
+      "id": "ai-go-revise-stop-review-2",
+      "label": "The problem",
+      "title": "The pack is not ready for broad use",
+      "mood": "surprise",
+      "caption": "The review-more result fits one cost plan, but alternative-format recall remains weak and changed image inputs are barely tested. A favourable overall number does not resolve those limitations. The manual staff route remains available.",
+      "dialogue": "Meeting one criterion does not satisfy the whole brief.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 13.855,
+      "duration": 15.616
+    },
+    {
+      "id": "ai-go-revise-stop-review-3",
+      "label": "How it works",
+      "title": "Make a conditional recommendation",
+      "mood": "thinking",
+      "caption": "A bounded go decision needs the stated criteria, safe scope and human oversight to hold. Revise when evidence or performance is insufficient. Stop the affected automatic workflow if it exposes private information or violates authority, and use an approved manual route.",
+      "dialogue": "Different failures need different responses.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 30.121,
+      "duration": 17.856
+    },
+    {
+      "id": "ai-go-revise-stop-review-4",
+      "label": "Your decision",
+      "title": "Choose the current recommendation",
+      "mood": "thinking",
+      "caption": "Should Kabir approve broad use from ninety five percent, revise and independently retest the documented gaps while keeping the manual route, or delete the weak-group results?",
+      "dialogue": "Keep inconvenient evidence in the pack.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.627,
+      "duration": 11.264
+    },
+    {
+      "id": "ai-go-revise-stop-review-5",
+      "label": "What changes",
+      "title": "An accountable review",
+      "mood": "happy",
+      "caption": "Kabir recommends revision before broader use, identifies the missing evidence and assigns a staff review point. He also discloses any additional assistance used to prepare his explanation. A checked selection does not establish authorship or oral understanding.",
+      "dialogue": "Defend the evidence and your contribution.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 60.541,
+      "duration": 17.173
+    },
+    {
+      "id": "ai-go-revise-stop-review-6",
+      "label": "Enter the lab",
+      "title": "Enter the review lab",
+      "mood": "happy",
+      "caption": "Assemble the assurance pack, recommend a bounded next step and respond to a fresh privacy failure. Explain when the non-AI baseline or manual route is preferable in an individual teacher-reviewed viva.",
+      "dialogue": "A responsible recommendation includes a stop condition.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 78.365,
+      "duration": 13.931
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "duration": 96.593,
+  "scenes": [
+    {
+      "id": "from-personal-safety-to-system-risk-1",
+      "label": "Meet the team",
+      "title": "A service with many users",
+      "mood": "happy",
+      "caption": "Asha and Kabir move from protecting one account to designing a fictional college-festival portal. Students register, organisers manage entries and a supplier sees only the programme. A failure can now affect people who never made the unsafe decision.",
+      "dialogue": "Who owns the risk for the whole service?",
+      "status": "Inspect the system",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 16.363
+    },
+    {
+      "id": "from-personal-safety-to-system-risk-2",
+      "label": "The problem",
+      "title": "Map assets and actors",
+      "mood": "surprise",
+      "caption": "The registration database, identities and gate availability are assets. Students, organisers, suppliers and the service provider have different roles. Requests cross trust boundaries from a browser into a server and then into stored data.",
+      "dialogue": "A signed-in user is not automatically allowed every record.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 17.013,
+      "duration": 15.744
+    },
+    {
+      "id": "from-personal-safety-to-system-risk-3",
+      "label": "How it works",
+      "title": "Risk needs an owner",
+      "mood": "thinking",
+      "caption": "Separate the harmful event, the weakness, the safeguard and the person responsible for checking it. Use the supplied likelihood and impact estimates to prioritise this exercise. A numerical score supports a discussion; it does not measure real risk precisely.",
+      "dialogue": "Every priority needs evidence and an accountable owner.",
+      "status": "Build the control",
+      "tone": "normal",
+      "start": 33.407,
+      "duration": 16.875
+    },
+    {
+      "id": "from-personal-safety-to-system-risk-4",
+      "label": "Your decision",
+      "title": "Choose the access boundary",
+      "mood": "thinking",
+      "caption": "A supplier signs in successfully but has no registration task. Should sign-in grant the supplier all records, should the team share one organiser password, or should the server restrict access to the supplier’s authorised purpose?",
+      "dialogue": "Authentication and authorisation remain different checks.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 50.931,
+      "duration": 14.507
+    },
+    {
+      "id": "from-personal-safety-to-system-risk-5",
+      "label": "What changes",
+      "title": "A shared responsibility map",
+      "mood": "happy",
+      "caption": "Asha assigns an owner for registration access, a gate fallback and supplier permissions. The team records what could still fail after controls are applied. No individual promise removes the service’s need for tested safeguards.",
+      "dialogue": "An owner checks the control and the remaining risk.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 66.088,
+      "duration": 15.36
+    },
+    {
+      "id": "from-personal-safety-to-system-risk-6",
+      "label": "Enter the lab",
+      "title": "Enter the system lab",
+      "mood": "happy",
+      "caption": "Complete the entry check, map actors and trust boundaries, then prioritise the supplied risks and owners. This module uses only synthetic records and offline models, with no school-system investigation.",
+      "dialogue": "Design the service before assuming it is safe.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 82.098,
+      "duration": 13.845
+    }
+  ]
+}

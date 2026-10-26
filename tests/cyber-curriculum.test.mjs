@@ -8,7 +8,7 @@ async function source(path) {
   return readFile(new URL(path, root), "utf8");
 }
 
-test("the curriculum exposes the three CyberSuraksha learning buckets", async () => {
+test("the curriculum exposes the three CyberShiksha learning buckets", async () => {
   const curriculum = await source("app/data/curriculum.ts");
 
   assert.match(curriculum, /\| "Cybersecurity"/);
@@ -23,7 +23,7 @@ test("playable modules can be shared by every grade in an age band", async () =>
   assert.match(registry, /module\.grades\.includes\(grade\)/);
 });
 
-test("class and dashboard cards describe all CyberSuraksha strands", async () => {
+test("class and dashboard cards describe all CyberShiksha strands", async () => {
   const [gradePage, dashboard] = await Promise.all([
     source("app/grade/[grade]/page.tsx"),
     source("app/dashboard/page.tsx"),
@@ -36,7 +36,7 @@ test("class and dashboard cards describe all CyberSuraksha strands", async () =>
   assert.match(dashboard, /Cyber Fraud/);
 });
 
-test("CyberSuraksha lessons live inside their subject banners", async () => {
+test("CyberShiksha lessons live inside their subject banners", async () => {
   const [curriculum, gradePage, subjectPage] = await Promise.all([
     source("app/data/curriculum.ts"),
     source("app/grade/[grade]/page.tsx"),

@@ -1,0 +1,77 @@
+{
+  "duration": 95.249,
+  "scenes": [
+    {
+      "id": "make-failure-visible-1",
+      "label": "Meet the team",
+      "title": "The output stops halfway",
+      "mood": "happy",
+      "caption": "Asha runs a synthetic batch with three valid alerts. The first output commits, then the prepared output fault stops the second. A reliable workflow must identify what succeeded and what remains pending.",
+      "dialogue": "Partial success is different from complete success.",
+      "status": "Inspect the workflow",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.867
+    },
+    {
+      "id": "make-failure-visible-2",
+      "label": "The problem",
+      "title": "Do not erase the checkpoint",
+      "mood": "surprise",
+      "caption": "Deleting the output history before retrying can repeat the first output. Ignoring the stop can lose the remaining records. Preserve the input batch, committed IDs and pending work while the authorised operator resolves the fault.",
+      "dialogue": "A safe retry starts from preserved evidence.",
+      "status": "Risk unresolved",
+      "tone": "trouble",
+      "start": 14.517,
+      "duration": 14.997
+    },
+    {
+      "id": "make-failure-visible-3",
+      "label": "How it works",
+      "title": "Choose the failure response",
+      "mood": "thinking",
+      "caption": "Empty input should produce an explicit no-change result. Malformed data goes to quarantine. An unavailable output stops the batch with a checkpoint; retry only after the underlying fault is resolved. A changed payload under an existing ID needs review, not overwrite.",
+      "dialogue": "Different failures need different actions.",
+      "status": "Build the contract",
+      "tone": "normal",
+      "start": 30.164,
+      "duration": 18.133
+    },
+    {
+      "id": "make-failure-visible-4",
+      "label": "Your decision",
+      "title": "Choose the retry plan",
+      "mood": "thinking",
+      "caption": "Should Asha delete the ledger and start again, pretend the whole batch succeeded, or retry the preserved batch after the fault is resolved while skipping already committed identical events?",
+      "dialogue": "Keep pending work and completed work distinct.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 48.947,
+      "duration": 11.669
+    },
+    {
+      "id": "make-failure-visible-5",
+      "label": "What changes",
+      "title": "A visible recovery trace",
+      "mood": "happy",
+      "caption": "The model keeps A01 committed and marks A02 and A03 pending. On retry, it skips the identical A01 event and commits the remaining two. All three unique outputs are present, and no real notification was ever sent.",
+      "dialogue": "The action log explains what the retry changed.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 61.267,
+      "duration": 16.427
+    },
+    {
+      "id": "make-failure-visible-6",
+      "label": "Enter the lab",
+      "title": "Enter the failure lab",
+      "mood": "happy",
+      "caption": "Classify the fault pack, run the partial-failure simulation and inspect the retry. Then respond to an existing ID arriving with different content. The model demonstrates retry safety without promising real-world exactly-once delivery.",
+      "dialogue": "Make the unresolved work visible.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 78.343,
+      "duration": 16.256
+    }
+  ]
+}

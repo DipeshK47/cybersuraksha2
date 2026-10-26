@@ -1,0 +1,77 @@
+{
+  "duration": 93.031,
+  "scenes": [
+    {
+      "id": "help-after-harm-1",
+      "label": "Meet the team",
+      "title": "Support after harm",
+      "mood": "happy",
+      "caption": "Kabir helps with a fictional account-misuse and coercion case. A peer is upset after a payment and a threat to publish a private chat. The response should offer help without blame and avoid spreading the private material.",
+      "dialogue": "Start with support and reducing further harm.",
+      "status": "Inspect the case",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 13.803
+    },
+    {
+      "id": "help-after-harm-2",
+      "label": "The problem",
+      "title": "Prompt trusted help",
+      "mood": "surprise",
+      "caption": "For a real Indian financial cyber-fraud incident, immediately contact the bank or payment provider through a trusted channel and promptly report through nineteen thirty or the National Cyber Crime Reporting Portal. Involve a trusted adult and school safeguarding staff for coercion or threats.",
+      "dialogue": "Do not delay urgent contact while preparing a perfect file.",
+      "status": "Claim unresolved",
+      "tone": "trouble",
+      "start": 14.453,
+      "duration": 18.475
+    },
+    {
+      "id": "help-after-harm-3",
+      "label": "How it works",
+      "title": "Preserve relevant evidence privately",
+      "mood": "thinking",
+      "caption": "Keep the time, amount, reference and relevant messages in a restricted original record. Redact unrelated personal details in the classroom copy, keep PINs and OTPs out and do not forward harmful content to groups. Reporting does not guarantee recovery.",
+      "dialogue": "Evidence can be useful without becoming public.",
+      "status": "Build the check",
+      "tone": "normal",
+      "start": 33.577,
+      "duration": 17.813
+    },
+    {
+      "id": "help-after-harm-4",
+      "label": "Your decision",
+      "title": "Choose the supportive response",
+      "mood": "thinking",
+      "caption": "Should Kabir blame the peer, forward the threatened chat widely, or offer calm support, preserve evidence privately and use appropriate bank, adult, school and official-help routes?",
+      "dialogue": "Help should not create another exposure.",
+      "status": "Decision required",
+      "tone": "trouble",
+      "start": 52.041,
+      "duration": 11.093
+    },
+    {
+      "id": "help-after-harm-5",
+      "label": "What changes",
+      "title": "A mock case file",
+      "mood": "happy",
+      "caption": "The team assembles an explicitly labelled mock report from supplied details. It records the suspected loss without pretending that all facts or attribution are established. No complaint is submitted and no bank, helpline or school official is contacted by the lesson.",
+      "dialogue": "A practice file is not a real report.",
+      "status": "Evidence updated",
+      "tone": "resolved",
+      "start": 63.784,
+      "duration": 17.216
+    },
+    {
+      "id": "help-after-harm-6",
+      "label": "Enter the lab",
+      "title": "Enter the support lab",
+      "mood": "happy",
+      "caption": "Choose prompt help routes, build the redacted fictional case file and respond to a paid recovery promise. Keep evidence relevant, private and supportive throughout.",
+      "dialogue": "Support the person and preserve the facts.",
+      "status": "Ready for practice",
+      "tone": "resolved",
+      "start": 81.65,
+      "duration": 10.731
+    }
+  ]
+}
