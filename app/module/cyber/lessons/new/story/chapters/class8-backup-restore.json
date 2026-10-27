@@ -1,0 +1,78 @@
+{
+  "duration": 100.881,
+  "narrationHash": "2727cf076eb4db0708481a5a543e5f007c48293dd650d6ba3d578698e7c0d4a0",
+  "scenes": [
+    {
+      "id": "class8-backup-restore-1",
+      "label": "Meet the team",
+      "title": "The empty comic",
+      "mood": "thinking",
+      "caption": "The group opens its comic: an empty page. Someone accidentally replaced the project, and the change reached the synchronised folder too. Kabir says there must be a backup because the file appears on two devices.",
+      "dialogue": "Two matching copies may share one mistake.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.336
+    },
+    {
+      "id": "class8-backup-restore-2",
+      "label": "The problem",
+      "title": "Copies need a history",
+      "mood": "surprise",
+      "caption": "Synchronisation keeps locations aligned and may spread an accidental replacement. A useful backup preserves a recoverable copy separately; some services also keep earlier versions. The class must inspect the supplied history rather than assume that every synced folder offers recovery.",
+      "dialogue": "What version does each copy contain?",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 14.986,
+      "duration": 18.581
+    },
+    {
+      "id": "class8-backup-restore-3",
+      "label": "How it works",
+      "title": "Read the recovery cards",
+      "mood": "thinking",
+      "caption": "The simulation offers an empty current copy, an unreadable snapshot and a checked yesterday version with six panels. Yesterday's version lacks today's new ending. A sensible recovery plan uses the best verified copy while acknowledging the work that may need rebuilding.",
+      "dialogue": "A date alone is not enough.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 34.217,
+      "duration": 17.472
+    },
+    {
+      "id": "class8-backup-restore-4",
+      "label": "Your decision",
+      "title": "Choose a restore",
+      "mood": "thinking",
+      "caption": "Decide whether to overwrite everything immediately, trust the backup label without opening it, or restore the checked version into a separate test location. Keeping the original state while testing avoids turning an uncertain recovery into another accidental replacement.",
+      "dialogue": "Test separately before replacing.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 52.339,
+      "duration": 16.917
+    },
+    {
+      "id": "class8-backup-restore-5",
+      "label": "What changes",
+      "title": "Verify the result",
+      "mood": "happy",
+      "caption": "Meera opens the restored project, checks the six panels and confirms the captions are readable. This demonstrates that this copy restored successfully in this test. It does not guarantee every future restore or recover the ending that was never captured.",
+      "dialogue": "Name the missing work honestly.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 69.907,
+      "duration": 16.085
+    },
+    {
+      "id": "class8-backup-restore-6",
+      "label": "Enter the lab",
+      "title": "An older but complete copy",
+      "mood": "happy",
+      "caption": "Now a newer snapshot has two panels; an older one has the required six. Compare content and time. Record your selected version, verification checks and remaining limitations in a recovery log.",
+      "dialogue": "Newest is not always most useful.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 86.642,
+      "duration": 13.589
+    }
+  ]
+}

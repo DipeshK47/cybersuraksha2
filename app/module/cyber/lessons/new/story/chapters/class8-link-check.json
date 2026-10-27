@@ -1,0 +1,78 @@
+{
+  "duration": 98.727,
+  "narrationHash": "dc088950efa6cce36a0fe2c7295caedeeedd49adef2439792ff3e512e7235a06",
+  "scenes": [
+    {
+      "id": "class8-link-check-1",
+      "label": "Meet the team",
+      "title": "Two template notices",
+      "mood": "thinking",
+      "caption": "Two messages offer the same school-project template. Both show the school colours, a familiar logo and a tidy download button. Kabir chooses the more polished page. Meera asks what evidence connects either message to the school.",
+      "dialogue": "Appearance is easy to copy.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.275
+    },
+    {
+      "id": "class8-link-check-2",
+      "label": "The problem",
+      "title": "Read the hostname",
+      "mood": "surprise",
+      "caption": "Their teacher provides fictional addresses on cards. In https://school.example/templates, the hostname is school.example. In https://school.example.notice.example/templates, the hostname is school.example.notice.example. Words near the beginning can look familiar while belonging to a different hostname.",
+      "dialogue": "Read the whole host before the slash.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 15.925,
+      "duration": 20.245
+    },
+    {
+      "id": "class8-link-check-3",
+      "label": "How it works",
+      "title": "What HTTPS establishes",
+      "mood": "thinking",
+      "caption": "HTTPS protects the connection to the named host when its checks succeed. It does not establish that the owner is the school or that a claim is honest. A copied logo and a secure connection are not independent proof of identity.",
+      "dialogue": "Connection security is one kind of evidence.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 36.82,
+      "duration": 15.424
+    },
+    {
+      "id": "class8-link-check-4",
+      "label": "Your decision",
+      "title": "Choose the route",
+      "mood": "thinking",
+      "caption": "Decide whether the team should trust the logo, trust the padlock alone, or open the school resource page through its existing known bookmark. This independent route avoids relying on the message to prove its own story.",
+      "dialogue": "Use a route known before this message.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 52.894,
+      "duration": 13.845
+    },
+    {
+      "id": "class8-link-check-5",
+      "label": "What changes",
+      "title": "Compare the evidence",
+      "mood": "happy",
+      "caption": "The known resource page lists the approved template. The team compares its destination with the notice and asks the teacher about a mismatch. They do not explore the questionable page or enter account details to see what happens.",
+      "dialogue": "A mismatch is a reason to pause.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 67.389,
+      "duration": 14.315
+    },
+    {
+      "id": "class8-link-check-6",
+      "label": "Enter the lab",
+      "title": "The familiar word moves",
+      "mood": "happy",
+      "caption": "In the lab, a new card puts the school name after the first slash. Identify the hostname again instead of memorising a word position. Record what the address proves, what remains unknown and how to verify the resource independently.",
+      "dialogue": "The path is not the owner.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 82.354,
+      "duration": 15.723
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "duration": 97.105,
+  "narrationHash": "a8e492b88538f32872eaa72abe0279f6b512e2966e4a5bfb88994235221a382a",
+  "scenes": [
+    {
+      "id": "class8-fraud-calm-response-1",
+      "label": "Meet the team",
+      "title": "A worried learner",
+      "mood": "thinking",
+      "caption": "In a fictional case, Aman shared a login code with someone claiming to be support. He fears punishment and considers hiding it. His classmate encourages seeking help now.",
+      "dialogue": "You deserve help; let us tell an adult.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 11.477
+    },
+    {
+      "id": "class8-fraud-calm-response-2",
+      "label": "The problem",
+      "title": "Limit further harm",
+      "mood": "surprise",
+      "caption": "Aman stops replying and sends no more codes. He tells a trusted teacher what happened. The teacher helps the responsible adult use the service’s known account protection and recovery route, rather than following another link supplied by the same contact.",
+      "dialogue": "Do not wait for a perfect explanation.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 12.127,
+      "duration": 15.915
+    },
+    {
+      "id": "class8-fraud-calm-response-3",
+      "label": "How it works",
+      "title": "A small factual record",
+      "mood": "thinking",
+      "caption": "They write when the message arrived, what action was requested and what Aman shared, without copying the actual secret into their note. Relevant messages can be preserved with adult help. They avoid forwarding private material to classmates or posting accusations publicly.",
+      "dialogue": "Preserve facts without spreading secrets.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 28.692,
+      "duration": 17.109
+    },
+    {
+      "id": "class8-fraud-calm-response-4",
+      "label": "Your decision",
+      "title": "The next decision",
+      "mood": "thinking",
+      "caption": "A new contact promises guaranteed recovery for a fee. Aman can pay, delete everything, or show the offer to the adult and continue through known official help. Choose the plan that avoids another exposure and preserves useful evidence.",
+      "dialogue": "Recovery promises can create another trap.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 46.451,
+      "duration": 15.659
+    },
+    {
+      "id": "class8-fraud-calm-response-5",
+      "label": "What changes",
+      "title": "Appropriate reporting",
+      "mood": "happy",
+      "caption": "The adult checks account sessions and protection options with the provider. If money is involved, they promptly contact their financial provider through its known route and use current official reporting guidance. Nobody can promise recovery, and reporting is not a reason to blame Aman.",
+      "dialogue": "Support and factual reporting belong together.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 62.76,
+      "duration": 17.259
+    },
+    {
+      "id": "class8-fraud-calm-response-6",
+      "label": "Enter the lab",
+      "title": "The situation changes",
+      "mood": "happy",
+      "caption": "The lab adds an unauthorised payment to the timeline. Revise the priorities with adult financial-provider help, keeping the same calm language and minimal incident note. Do not investigate the unknown contact yourselves.",
+      "dialogue": "Changed harm needs appropriate help promptly.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 80.669,
+      "duration": 15.787
+    }
+  ]
+}

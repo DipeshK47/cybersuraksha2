@@ -1,0 +1,78 @@
+{
+  "duration": 92.881,
+  "narrationHash": "d1e8dee605325221cde8a9df116a69c04f1cb4353331a676e05d7e931ac12c4f",
+  "scenes": [
+    {
+      "id": "class8-fair-play-grid-1",
+      "label": "Meet the team",
+      "title": "Space for every team",
+      "mood": "thinking",
+      "caption": "A sports club marks activity zones on a courtyard grid. Each cell represents one square mat. A clear entrance lane must let visitors move between the gate and the far end.",
+      "dialogue": "A good layout includes movement.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 11.733
+    },
+    {
+      "id": "class8-fair-play-grid-2",
+      "label": "The problem",
+      "title": "Name a cell",
+      "mood": "surprise",
+      "caption": "Rohan labels rows from top to bottom and columns from left to right, starting at one for people reading the board. Saying row two, column three now identifies exactly one cell, even when the paper is passed around.",
+      "dialogue": "Agree on the labels first.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 12.383,
+      "duration": 14.357
+    },
+    {
+      "id": "class8-fair-play-grid-3",
+      "label": "How it works",
+      "title": "Area and shape",
+      "mood": "thinking",
+      "caption": "The first zone needs six mats arranged as two rows of three. A single strip of six also has area six, but it does not meet the shape requirement. Counting cells checks area; checking their arrangement tests shape.",
+      "dialogue": "Equal counts can hide different shapes.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 27.391,
+      "duration": 14.251
+    },
+    {
+      "id": "class8-fair-play-grid-4",
+      "label": "Your decision",
+      "title": "Turn the zone",
+      "mood": "thinking",
+      "caption": "Mina rotates the rectangle a quarter turn. It now uses three rows of two, while its area stays six. Choose the claim that survives this transformation. Rotation changes orientation, so the club must still check the nearby access lane.",
+      "dialogue": "Same area does not promise a clear lane.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 42.291,
+      "duration": 16.213
+    },
+    {
+      "id": "class8-fair-play-grid-5",
+      "label": "What changes",
+      "title": "A reflected plan",
+      "mood": "happy",
+      "caption": "The team also tries a mirror image across a vertical centre line. Left and right positions swap, but rows stay unchanged. They compare labelled cells instead of turning the whole sheet upside down and accidentally changing both directions.",
+      "dialogue": "Describe the transformation precisely.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 59.155,
+      "duration": 15.701
+    },
+    {
+      "id": "class8-fair-play-grid-6",
+      "label": "Enter the lab",
+      "title": "A smaller boundary",
+      "mood": "happy",
+      "caption": "Rain closes one courtyard column. Your final challenge uses the remaining cells and a smaller zone. Build only the specified shape, then inspect every boundary and the protected lane. Save a checked layout rather than an attractive but untested sketch.",
+      "dialogue": "The changed boundary needs a fresh check.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 75.506,
+      "duration": 16.725
+    }
+  ]
+}

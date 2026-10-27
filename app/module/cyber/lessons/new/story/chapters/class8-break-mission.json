@@ -1,0 +1,78 @@
+{
+  "duration": 88.38,
+  "narrationHash": "b9fcd28bc4a983cf6c96c6939a2dedca7e17d7c45acfae1a7ea5b42469f50595",
+  "scenes": [
+    {
+      "id": "class8-break-mission-1",
+      "label": "Meet the team",
+      "title": "A trail for everyone",
+      "mood": "thinking",
+      "caption": "Tara and Imran are preparing a discovery trail for visitors. Each team must reach three clue stations and return to the classroom. One visitor uses a wheelchair, so every chosen route must avoid stairs.",
+      "dialogue": "What will count as success?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.973
+    },
+    {
+      "id": "class8-break-mission-2",
+      "label": "The problem",
+      "title": "Facts are not goals",
+      "mood": "surprise",
+      "caption": "Their inputs are a school map, twelve blank cards and permission to use two rooms and the courtyard. These facts describe what is available. A successful trail also needs readable clues and a route everyone can follow.",
+      "dialogue": "Twelve cards is a resource.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 14.623,
+      "duration": 14.101
+    },
+    {
+      "id": "class8-break-mission-3",
+      "label": "How it works",
+      "title": "Smaller jobs",
+      "mood": "thinking",
+      "caption": "They split the work into checking access, choosing stations, drawing a route and writing clue cards. Writing every card immediately seems quick, but a clue naming an unsuitable room would need to be made again later.",
+      "dialogue": "Which job depends on another?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 29.375,
+      "duration": 13.525
+    },
+    {
+      "id": "class8-break-mission-4",
+      "label": "Your decision",
+      "title": "Choose a sequence",
+      "mood": "thinking",
+      "caption": "Imran wants to print first. Tara suggests checking the map before choosing stations, then testing the route before printing. Choose a plan that respects these dependencies. Jobs without a dependency may still happen together safely.",
+      "dialogue": "Fast work can still be wasted work.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 43.55,
+      "duration": 15.189
+    },
+    {
+      "id": "class8-break-mission-5",
+      "label": "What changes",
+      "title": "A room closes",
+      "mood": "happy",
+      "caption": "The art room becomes unavailable. Because their plan separates stations from clue wording, the team replaces that station with the covered courtyard. They check the level entrance again instead of assuming the replacement is accessible.",
+      "dialogue": "A change can affect several jobs.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 59.389,
+      "duration": 14.144
+    },
+    {
+      "id": "class8-break-mission-6",
+      "label": "Enter the lab",
+      "title": "Keep a task map",
+      "mood": "happy",
+      "caption": "Now build your own task map. Record a success condition, a dependency and the revised station choice. Use a fresh closure notice to test whether your plan still works before any visitor starts the trail.",
+      "dialogue": "Show the reason beside the arrow.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 74.183,
+      "duration": 13.547
+    }
+  ]
+}

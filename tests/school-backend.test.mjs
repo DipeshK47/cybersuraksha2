@@ -115,6 +115,30 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
   assert.equal(own.student.id,learner.id);
   assert.equal(own.insights.find(i=>i.source==='Assignment').wrong,2);
  });
+ await t.test('Class 8 replacement retains stored legacy marks while current APIs deny the old content',async()=>{
+  const eighth=workspace.classes.find(c=>c.name==='8B');
+  const eighthLearner=workspace.students.find(s=>s.classId===eighth.id&&s.rollNo==='31');
+  const eighthCookie=await login('student',{school:'dps-rkp',className:'8B',rollNo:'31',password:'DPS31SAFE'});
+  const legacyId='cyber-middle-ct-flowchart-architect';
+  await db.prepare('INSERT INTO learning_attempts (id,student_id,module_id,started_at,last_active_at,completed_at,score,legacy) VALUES (?,?,?,?,?,?,?,?)').bind('fixture:class8:legacy',eighthLearner.id,legacyId,1,3,3,75,1).run();
+  await db.prepare('INSERT INTO learning_events (id,attempt_id,type,payload,created_at) VALUES (?,?,?,?,?)').bind('fixture:class8:event','fixture:class8:legacy','question_answered',JSON.stringify({id:'flowchart-architect-check-1',correct:false,feedback:'Historical lesson evidence remains readable.'}),2).run();
+  const teacherRow=await db.prepare('SELECT id FROM teachers WHERE email=?').bind('teacher@dpsrkp.edu.in').first();
+  await db.prepare('INSERT INTO assignments (id,school_id,teacher_id,class_id,title,module_ids,due_at,total_marks,created_at,published_at) VALUES (?,?,?,?,?,?,?,?,?,?)').bind(300,1,teacherRow.id,eighth.id,'Historical Class 8 lesson',JSON.stringify([legacyId]),Date.now()+86400000,20,1,2).run();
+  await db.prepare('INSERT INTO assignment_students (assignment_id,student_id) VALUES (?,?)').bind(300,eighthLearner.id).run();
+  const historical=await json(`/api/lms/students/${eighthLearner.id}`,admin);
+  assert.equal(historical.attempts.find(a=>a.id==='fixture:class8:legacy').score,75);
+  assert.ok(historical.events.some(e=>e.id==='fixture:class8:event'));
+  const oldReport=await json('/api/lms/assignments/300',admin);
+  assert.equal(oldReport.students.find(s=>s.id===eighthLearner.id).progress.marks,15);
+  assert.equal((await request(`/api/lms/students/${eighthLearner.id}`,other)).status,404);
+  assert.equal((await request('/api/lms/inbox/300',eighthCookie)).status,403);
+  assert.equal((await request('/api/activity',eighthCookie,'POST',{moduleId:legacyId,type:'module_started',payload:{}})).status,403);
+  assert.equal((await request('/api/module-runs',eighthCookie,'POST',{moduleId:legacyId})).status,403);
+  const current=workspace.modules.filter(m=>m.grades.includes(8));
+  assert.equal(current.length,32);
+  assert.ok(current.every(m=>m.id.startsWith('cyber-class8-')));
+  assert.equal((await request('/api/activity',eighthCookie,'POST',{moduleId:current[0].id,type:'module_started',payload:{}})).status,200);
+ });
  await t.test('school curriculum changes take effect on APIs immediately',async()=>{
   const settings=await json('/api/admin/school',admin);
   await json('/api/admin/school',admin,'PUT',{schoolName:settings.schoolName,grades:[6],subjects:['Cybersecurity']});

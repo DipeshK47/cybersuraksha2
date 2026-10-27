@@ -3,6 +3,7 @@ import rawLessons from "./cyber-lessons.json";
 import { newMissions } from "./new-missions";
 import { class12Missions, CLASS12_LESSON_SLUGS } from "./class-12-missions";
 import { class11Missions, CLASS11_LESSON_SLUGS } from "./class-11-missions";
+import { class8Missions, CLASS8_LESSON_SLUGS } from "./class-8-missions";
 
 export const CYBER_LESSON_SLUGS = [
   "can-i-tell-this",
@@ -49,6 +50,7 @@ export const CYBER_LESSON_SLUGS = [
   "recommendation-rabbit-hole",
   ...CLASS11_LESSON_SLUGS,
   ...CLASS12_LESSON_SLUGS,
+  ...CLASS8_LESSON_SLUGS,
 ] as const;
 
 export type CyberLessonSlug = (typeof CYBER_LESSON_SLUGS)[number];
@@ -74,6 +76,7 @@ const cyberLessonSchema = z.object({
 export type CyberLessonMeta = z.infer<typeof cyberLessonSchema>;
 
 const expectedGrades: Record<CyberLessonSlug, number[]> = {
+  ...Object.fromEntries(CLASS8_LESSON_SLUGS.map(slug => [slug, [8]])),
   "the-easy-money-recruitment-chain": [12],
   "check-the-investment-story": [12],
   "identity-and-authority-can-be-manufactured": [12],
@@ -206,6 +209,7 @@ const parsedLessons = [
   ...z.array(cyberLessonSchema).parse(newMissions),
   ...z.array(cyberLessonSchema).parse(class11Missions),
   ...z.array(cyberLessonSchema).parse(class12Missions),
+  ...z.array(cyberLessonSchema).parse(class8Missions),
 ];
 
 assertUnique(parsedLessons, (lesson) => lesson.id, "id");
@@ -235,5 +239,5 @@ export function getCyberLesson(slug: string) {
 }
 
 export function getCyberLessonsForGrade(grade: number) {
-  return cyberLessons.filter((lesson) => lesson.grades.includes(grade));
+  return cyberLessons.filter((lesson) => lesson.grades.includes(grade) && (grade !== 8 || lesson.id.startsWith("cyber-class8-")));
 }

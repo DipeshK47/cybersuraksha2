@@ -1,0 +1,78 @@
+{
+  "duration": 95.164,
+  "narrationHash": "b39743422a16133c63f79b1edd4f640e8ddbc2c52851dfc6ccada5b129dc70be",
+  "scenes": [
+    {
+      "id": "class8-fraud-familiar-media-1",
+      "label": "Meet the team",
+      "title": "The organiser’s voice",
+      "mood": "thinking",
+      "caption": "A voice message resembles the club organiser. It asks Isha to send a voucher for new equipment before lunch. The familiar voice and matching photograph make the request feel personal.",
+      "dialogue": "Familiar media can carry an unverified request.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 12.203
+    },
+    {
+      "id": "class8-fraud-familiar-media-2",
+      "label": "The problem",
+      "title": "How media can mislead",
+      "mood": "surprise",
+      "caption": "Her teacher explains that recordings may be edited, reused or generated. A genuine old recording can also appear in a misleading context. The class cannot tell which happened here merely by listening, and does not need to establish the production method first.",
+      "dialogue": "The requested action still needs checking.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 12.853,
+      "duration": 16.725
+    },
+    {
+      "id": "class8-fraud-familiar-media-3",
+      "label": "How it works",
+      "title": "No magic detection clue",
+      "mood": "thinking",
+      "caption": "One pupil suggests looking for strange blinking or robotic sounds. Such clues are unreliable: convincing manipulated media may lack obvious glitches, while genuine recordings can have poor quality. A smooth clip cannot prove identity, authority or permission to transfer value.",
+      "dialogue": "Do not turn appearance into a verdict.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 30.228,
+      "duration": 18.411
+    },
+    {
+      "id": "class8-fraud-familiar-media-4",
+      "label": "Your decision",
+      "title": "The verification choice",
+      "mood": "thinking",
+      "caption": "Isha can send the voucher, judge the voice more carefully, or ask her teacher to contact the organiser through the club’s previously known route. Choose a plan that verifies the request itself before anyone acts on it.",
+      "dialogue": "Check the request, not just the clip.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 49.289,
+      "duration": 13.888
+    },
+    {
+      "id": "class8-fraud-familiar-media-5",
+      "label": "What changes",
+      "title": "A different instruction",
+      "mood": "happy",
+      "caption": "The organiser confirms through that route that no voucher was requested. Isha pauses the transfer and preserves a minimal fictional note for the teacher. She does not circulate the clip as entertainment or publicly name someone as the creator without evidence.",
+      "dialogue": "A denial changes the action plan.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 63.827,
+      "duration": 15.979
+    },
+    {
+      "id": "class8-fraud-familiar-media-6",
+      "label": "Enter the lab",
+      "title": "Now it is live",
+      "mood": "happy",
+      "caption": "The lab introduces a live-looking video call asking for a file instead. Build a new verification plan: higher realism does not remove the need to confirm a consequential request through an independent known channel.",
+      "dialogue": "Realistic is not the same as verified.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 80.455,
+      "duration": 14.059
+    }
+  ]
+}

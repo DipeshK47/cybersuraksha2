@@ -1,0 +1,78 @@
+{
+  "duration": 95.868,
+  "narrationHash": "617bb909378214dbed6522bbe42ad5b4144bcb61852e5ccbcef87cc0bdd5b143",
+  "scenes": [
+    {
+      "id": "class8-fraud-screen-control-1",
+      "label": "Meet the team",
+      "title": "An alarming window",
+      "mood": "thinking",
+      "caption": "A classroom pop-up announces infections and gives a support number. A loud warning tells Riya not to close it. The teacher reminds the class that the pop-up’s own claims have not been independently checked.",
+      "dialogue": "A warning can be an advertisement.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.141
+    },
+    {
+      "id": "class8-fraud-screen-control-2",
+      "label": "The problem",
+      "title": "The offered helper",
+      "mood": "surprise",
+      "caption": "The pretend caller asks Riya to install a remote access tool and share her screen. Screen sharing could expose visible messages; remote control could allow someone else to operate the device. Neither request becomes safe because the caller says technician.",
+      "dialogue": "Ask what access would allow.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.791,
+      "duration": 16.981
+    },
+    {
+      "id": "class8-fraud-screen-control-3",
+      "label": "How it works",
+      "title": "Do not investigate",
+      "mood": "thinking",
+      "caption": "Riya does not need to catch the caller or test an installation. Clicking inside the warning to find out more may continue the interaction. She can stop responding and ask the teacher to help exit the window using familiar device controls.",
+      "dialogue": "A child is not the investigator.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 31.423,
+      "duration": 15.765
+    },
+    {
+      "id": "class8-fraud-screen-control-4",
+      "label": "Your decision",
+      "title": "Choose the support plan",
+      "mood": "thinking",
+      "caption": "The caller offers a free inspection if Riya grants control immediately. Choose between accepting, arguing with the caller, or refusing access and bringing the tablet to the teacher, who already knows the school’s technical support route.",
+      "dialogue": "Free does not settle the access question.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 47.838,
+      "duration": 14.699
+    },
+    {
+      "id": "class8-fraud-screen-control-5",
+      "label": "What changes",
+      "title": "A safe handover",
+      "mood": "happy",
+      "caption": "Riya refuses the installation and hands over the device. The teacher closes the warning and contacts known school support independently. Their fictional support note describes the pop-up and requested access, rather than asserting that the tablet definitely contains a particular infection.",
+      "dialogue": "Record observations, not the warning’s diagnosis.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 63.187,
+      "duration": 18.219
+    },
+    {
+      "id": "class8-fraud-screen-control-6",
+      "label": "Enter the lab",
+      "title": "A different doorway",
+      "mood": "happy",
+      "caption": "The lab replaces the pop-up with a friendly chat offering screen sharing only. Identify what remains exposed and revise the refusal, exit and adult support sequence for this changed request.",
+      "dialogue": "Friendly wording still needs checking.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 82.055,
+      "duration": 13.163
+    }
+  ]
+}

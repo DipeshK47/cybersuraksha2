@@ -1,0 +1,78 @@
+{
+  "duration": 89.532,
+  "narrationHash": "169f439ab050de41a7f4f5abc306596ad7e145de681a608170ecbf79698fe255",
+  "scenes": [
+    {
+      "id": "class8-ai-useful-question-1",
+      "label": "Meet the team",
+      "title": "Dry planters",
+      "mood": "thinking",
+      "caption": "The garden club notices dry planters after weekends. Iqbal proposes an AI watering predictor immediately. Nisha asks what problem they actually need to solve.",
+      "dialogue": "Start with the need.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 11.243
+    },
+    {
+      "id": "class8-ai-useful-question-2",
+      "label": "The problem",
+      "title": "Make success visible",
+      "mood": "surprise",
+      "caption": "They replace make the garden smarter with reduce dry planter checks from six to at most two in the next ten simulated mornings.",
+      "dialogue": "What will we count?",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 11.893,
+      "duration": 8.064
+    },
+    {
+      "id": "class8-ai-useful-question-3",
+      "label": "How it works",
+      "title": "Try the simple plan",
+      "mood": "thinking",
+      "caption": "A written weekend schedule might already solve the problem. The club compares it with a prediction proposal using the same held out mornings. They also count unnecessary watering, because reducing dryness by watering constantly could create a different problem for the plants.",
+      "dialogue": "Compare benefits and costs.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 20.607,
+      "duration": 16.832
+    },
+    {
+      "id": "class8-ai-useful-question-4",
+      "label": "Your decision",
+      "title": "Choose the next step",
+      "mood": "thinking",
+      "caption": "Iqbal wants to build before inspecting the logs. Nisha proposes defining the goal, checking useful data, trying a simple baseline and then testing alternatives. Decide which sequence gives the club evidence before it invests effort in a more complicated tool.",
+      "dialogue": "Tools come after the question.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 38.089,
+      "duration": 16.683
+    },
+    {
+      "id": "class8-ai-useful-question-5",
+      "label": "What changes",
+      "title": "A responsible trial",
+      "mood": "happy",
+      "caption": "The schedule meets the target in this simulation with fewer unnecessary watering events. The club keeps it for now. A teacher remains responsible for real garden decisions; these invented results do not establish what would happen with different plants, seasons or equipment.",
+      "dialogue": "The simpler plan can win.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 55.421,
+      "duration": 17.557
+    },
+    {
+      "id": "class8-ai-useful-question-6",
+      "label": "Enter the lab",
+      "title": "Rain changes the brief",
+      "mood": "happy",
+      "caption": "A new fictional forecast introduces heavy rain. Now the club must include overwatering in its success test and review the schedule. In the lab, prepare a project brief, order the investigation and adapt the goal when the conditions change.",
+      "dialogue": "A brief can be revised.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 73.629,
+      "duration": 15.253
+    }
+  ]
+}

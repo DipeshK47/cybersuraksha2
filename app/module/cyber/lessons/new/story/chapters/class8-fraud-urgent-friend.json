@@ -1,0 +1,78 @@
+{
+  "duration": 93.649,
+  "narrationHash": "69fab77c75ab6d5f9ceb909197efe2e9467d1ab61d724ce0e3f6257413a03f0a",
+  "scenes": [
+    {
+      "id": "class8-fraud-urgent-friend-1",
+      "label": "Meet the team",
+      "title": "The familiar profile",
+      "mood": "thinking",
+      "caption": "Arjun receives an imaginary message from his project partner’s familiar profile. It asks for a private project folder and a voucher immediately. The picture and nickname match, so Arjun initially assumes his friend must be writing the message.",
+      "dialogue": "A profile is an identity claim.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.467
+    },
+    {
+      "id": "class8-fraud-urgent-friend-2",
+      "label": "The problem",
+      "title": "What is being requested?",
+      "mood": "surprise",
+      "caption": "The folder includes other pupils’ work. The voucher would transfer value. A classmate points out that a copied profile or an account controlled by someone else could make the same request. Familiar appearance alone does not identify the sender.",
+      "dialogue": "Check before sharing or buying.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 16.117,
+      "duration": 15.68
+    },
+    {
+      "id": "class8-fraud-urgent-friend-3",
+      "label": "How it works",
+      "title": "A narrowing deadline",
+      "mood": "thinking",
+      "caption": "The sender says a teacher will be angry if Arjun waits. This adds pressure without supplying evidence. Asking the same account whether it is really his friend would only let whoever controls that account repeat the claim.",
+      "dialogue": "A repeated claim is not confirmation.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 32.447,
+      "duration": 14.187
+    },
+    {
+      "id": "class8-fraud-urgent-friend-4",
+      "label": "Your decision",
+      "title": "An independent check",
+      "mood": "thinking",
+      "caption": "Arjun considers sending the folder, buying the voucher, or contacting his friend through a phone route already known to his family. Choose the plan that checks identity without releasing classmates’ work or spending money while the request remains uncertain.",
+      "dialogue": "Use a route known beforehand.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 47.283,
+      "duration": 15.723
+    },
+    {
+      "id": "class8-fraud-urgent-friend-5",
+      "label": "What changes",
+      "title": "The friend answers",
+      "mood": "happy",
+      "caption": "The real friend denies sending it. Arjun stops responding to the suspicious account and tells a trusted teacher. They keep a minimal fictional record and use the platform’s reporting route, without publicly accusing the friend of attempting fraud.",
+      "dialogue": "Describe the account activity fairly.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 63.656,
+      "duration": 15.637
+    },
+    {
+      "id": "class8-fraud-urgent-friend-6",
+      "label": "Enter the lab",
+      "title": "Another channel appears",
+      "mood": "happy",
+      "caption": "A new message arrives from an unfamiliar number, claiming the old phone is broken. In the lab, explain why that new number cannot verify itself and revise the verification and reporting plan.",
+      "dialogue": "Changed contact details need checking.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 79.943,
+      "duration": 13.056
+    }
+  ]
+}

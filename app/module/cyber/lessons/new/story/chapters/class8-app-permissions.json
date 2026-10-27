@@ -1,0 +1,78 @@
+{
+  "duration": 98.641,
+  "narrationHash": "30cbd0509787061fb7d05d7f30d12e2e1890be2573b234f98642784912c27f86",
+  "scenes": [
+    {
+      "id": "class8-app-permissions-1",
+      "label": "Meet the team",
+      "title": "The scanner request",
+      "mood": "thinking",
+      "caption": "Meera tries a fictional homework scanner that turns a page drawing into a document. Before scanning, it asks for camera, all photos, contacts and location. Kabir suggests allowing everything because deciding permission by permission will take longer.",
+      "dialogue": "What does this job actually need?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.32
+    },
+    {
+      "id": "class8-app-permissions-2",
+      "label": "The problem",
+      "title": "Connect access to purpose",
+      "mood": "surprise",
+      "caption": "The feature card says this scan uses the camera, saves inside the app and needs neither contacts nor location. Asking for a permission is not proof of malware; unnecessary access still deserves a careful question.",
+      "dialogue": "Need is more useful than a guess.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 16.97,
+      "duration": 14.592
+    },
+    {
+      "id": "class8-app-permissions-3",
+      "label": "How it works",
+      "title": "Use the smallest scope",
+      "mood": "thinking",
+      "caption": "They choose camera access while using the scanner. Least privilege means giving only the access needed. If one selected picture works instead, access to the entire photo library may be unnecessary.",
+      "dialogue": "A smaller scope can still work.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 32.212,
+      "duration": 13.675
+    },
+    {
+      "id": "class8-app-permissions-4",
+      "label": "Your decision",
+      "title": "Test your choice",
+      "mood": "thinking",
+      "caption": "Decide whether to allow every request, reject the app as certainly malicious, or test a limited plan. The simulation shows a scan succeeding with camera access while contacts and location remain unavailable. The result supports this task, not every possible feature.",
+      "dialogue": "Run the test before checking.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 46.537,
+      "duration": 17.472
+    },
+    {
+      "id": "class8-app-permissions-5",
+      "label": "What changes",
+      "title": "Work ends",
+      "mood": "happy",
+      "caption": "After the exhibition, the club no longer needs scanning. The teacher helps review and revoke the access. Removing permission limits future access; it does not establish what happened to information previously collected or automatically erase every existing copy.",
+      "dialogue": "Review permissions over time.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 64.659,
+      "duration": 16.747
+    },
+    {
+      "id": "class8-app-permissions-6",
+      "label": "Enter the lab",
+      "title": "A different input",
+      "mood": "happy",
+      "caption": "Now the task is importing one prepared diagram instead of taking a photograph. Choose a selected-file route, test the changed feature and remove camera access. Keep a ledger showing the permission, its purpose and the observed result for each version.",
+      "dialogue": "A new purpose needs a new test.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 82.055,
+      "duration": 15.936
+    }
+  ]
+}

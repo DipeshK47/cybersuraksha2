@@ -1,0 +1,78 @@
+{
+  "duration": 93.521,
+  "narrationHash": "cb189169fe5cde141f05ef03d4274f954eccfde9eed220fc4043884782c78428",
+  "scenes": [
+    {
+      "id": "class8-fraud-payment-direction-1",
+      "label": "Meet the team",
+      "title": "A refund claim",
+      "mood": "thinking",
+      "caption": "A buyer promises Dev’s aunt a refund. The buyer sends a pretend QR card and says she must scan it and enter her UPI PIN to receive money. Dev reads the paper screen.",
+      "dialogue": "Read the action on the screen.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 12.864
+    },
+    {
+      "id": "class8-fraud-payment-direction-2",
+      "label": "The problem",
+      "title": "Follow the arrow",
+      "mood": "surprise",
+      "caption": "The prepared screen says Pay merchant: sixty rupees. Its arrow points from the aunt’s wallet toward the merchant. The buyer’s message says receive, but the displayed action says pay. The class traces that difference without opening any banking application.",
+      "dialogue": "Words in a chat do not reverse money.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.514,
+      "duration": 16.341
+    },
+    {
+      "id": "class8-fraud-payment-direction-3",
+      "label": "How it works",
+      "title": "The PIN’s purpose",
+      "mood": "thinking",
+      "caption": "A UPI PIN authorises payment actions; receiving money does not require entering it. A QR image is not evidence that a refund is genuine. Dev does not scan, enter a PIN or test the claim with a small amount.",
+      "dialogue": "No test payment is needed.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 30.505,
+      "duration": 15.851
+    },
+    {
+      "id": "class8-fraud-payment-direction-4",
+      "label": "Your decision",
+      "title": "The decision point",
+      "mood": "thinking",
+      "caption": "The buyer becomes impatient and promises an instant return. Dev can encourage his aunt to approve, send her PIN to the buyer, or pause and cancel this request. Choose the response supported by the displayed direction and the PIN’s purpose.",
+      "dialogue": "The responsible adult handles the account.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 47.006,
+      "duration": 15.893
+    },
+    {
+      "id": "class8-fraud-payment-direction-5",
+      "label": "What changes",
+      "title": "A clear explanation",
+      "mood": "happy",
+      "caption": "Dev explains that the screen would send money outward. His aunt cancels and checks the original transaction through her already known provider route. They keep an imaginary direction note; the lesson does not ask children to operate anyone’s account.",
+      "dialogue": "Explain the mismatch calmly.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 63.549,
+      "duration": 15.509
+    },
+    {
+      "id": "class8-fraud-payment-direction-6",
+      "label": "Enter the lab",
+      "title": "A new label",
+      "mood": "happy",
+      "caption": "In the lab, a changed request calls itself a scholarship deposit, yet the screen still says Pay. Trace the new arrows, count outgoing amounts and explain why a kinder label cannot change the action.",
+      "dialogue": "Follow the direction every time.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 79.709,
+      "duration": 13.163
+    }
+  ]
+}

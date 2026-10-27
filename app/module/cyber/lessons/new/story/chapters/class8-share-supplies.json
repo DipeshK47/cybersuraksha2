@@ -1,0 +1,78 @@
+{
+  "duration": 93.649,
+  "narrationHash": "1f17c73e5fdea8e56c753a5773229ffe6bc7994bfa7a8df95910a77c1b68b9d9",
+  "scenes": [
+    {
+      "id": "class8-share-supplies-1",
+      "label": "Meet the team",
+      "title": "A reusable kit",
+      "mood": "thinking",
+      "caption": "The project club prepares model-building packs. Four learners need six reusable rods and eight clips. Larger groups need adjusted supplies; the sample pack cannot serve everyone unchanged.",
+      "dialogue": "Compare learners and materials together.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 12.949
+    },
+    {
+      "id": "class8-share-supplies-2",
+      "label": "The problem",
+      "title": "Scale every part",
+      "mood": "surprise",
+      "caption": "For twelve learners, the sample group size is multiplied by three. Keeping the same recipe means multiplying both rods and clips by three too. Adding three to each material would change the ratio and leave the pack short.",
+      "dialogue": "One scale factor applies to both materials.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.599,
+      "duration": 14.677
+    },
+    {
+      "id": "class8-share-supplies-3",
+      "label": "How it works",
+      "title": "Compare like with like",
+      "mood": "thinking",
+      "caption": "Suppliers offer different clip pack sizes. A cheaper pack may cost more per clip. The club compares equal quantities and checks whether whole packs fit its pretend budget.",
+      "dialogue": "A price needs a quantity beside it.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 28.927,
+      "duration": 11.179
+    },
+    {
+      "id": "class8-share-supplies-4",
+      "label": "Your decision",
+      "title": "Whole objects remain whole",
+      "mood": "thinking",
+      "caption": "There are seventeen rods for three teams. Dividing gives a fraction, but cutting reusable rods is not allowed. Choose the agreed policy: equal whole shares first, then keep leftovers in a labelled reserve. Other policies would need discussion rather than silent rounding.",
+      "dialogue": "A fraction is not always a usable allocation.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 40.755,
+      "duration": 17.344
+    },
+    {
+      "id": "class8-share-supplies-5",
+      "label": "What changes",
+      "title": "Check the ledger",
+      "mood": "happy",
+      "caption": "Five rods go to each team and two remain in reserve. The ledger checks five plus five plus five plus two equals seventeen. No rod disappears through rounding. This follows their stated rule, not a claim that every situation demands identical shares.",
+      "dialogue": "Record where every item went.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 58.749,
+      "duration": 17.024
+    },
+    {
+      "id": "class8-share-supplies-6",
+      "label": "Enter the lab",
+      "title": "Different needs arrive",
+      "mood": "happy",
+      "caption": "A later project agrees to allocate rods in the ratio two to one because the models have different designs. Apply that new rule to a fresh total and reserve any whole-item leftover. Explain the changed agreement instead of repeating equal sharing automatically.",
+      "dialogue": "The rule is part of the problem.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 76.423,
+      "duration": 16.576
+    }
+  ]
+}

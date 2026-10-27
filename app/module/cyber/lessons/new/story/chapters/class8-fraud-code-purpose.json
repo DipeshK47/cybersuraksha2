@@ -1,0 +1,78 @@
+{
+  "duration": 93.991,
+  "narrationHash": "dce23a5e87aed9eacb9ff951e2e25b340fe2292ccbbd790d5a7fca35e881edad",
+  "scenes": [
+    {
+      "id": "class8-fraud-code-purpose-1",
+      "label": "Meet the team",
+      "title": "A support call",
+      "mood": "thinking",
+      "caption": "In a classroom role-play, Kavya receives a call claiming to be account support. The caller says her school account will close unless she reads out a login code. No actual account or code appears anywhere in the activity.",
+      "dialogue": "What would that code authorise?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.464
+    },
+    {
+      "id": "class8-fraud-code-purpose-2",
+      "label": "The problem",
+      "title": "Different secrets",
+      "mood": "surprise",
+      "caption": "Her teacher introduces three labelled cards. A password protects account access. A one-time password, or OTP, confirms a particular action for a limited period. A UPI PIN authorises payment actions. Calling all three just a number hides their different purposes.",
+      "dialogue": "Read the purpose, not the digits.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 15.114,
+      "duration": 17.984
+    },
+    {
+      "id": "class8-fraud-code-purpose-3",
+      "label": "How it works",
+      "title": "The caller’s request",
+      "mood": "thinking",
+      "caption": "The pretend notification says the OTP is for signing in. Sharing it could help another person complete that sign-in. The caller’s claimed job does not change the code’s purpose, and Kavya does not need to investigate or challenge the caller.",
+      "dialogue": "End the call and get help.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 33.748,
+      "duration": 15.36
+    },
+    {
+      "id": "class8-fraud-code-purpose-4",
+      "label": "Your decision",
+      "title": "Choose the response",
+      "mood": "thinking",
+      "caption": "Kavya can read the code aloud, send a screenshot, or end the call and ask a trusted adult to open the service’s previously known help route. Choose a response that keeps the secret away from another person.",
+      "dialogue": "A screenshot shares the secret too.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 49.758,
+      "duration": 12.693
+    },
+    {
+      "id": "class8-fraud-code-purpose-5",
+      "label": "What changes",
+      "title": "A legitimate sign-in",
+      "mood": "happy",
+      "caption": "Later, Kavya intentionally opens the school’s verified sign-in page with her teacher. Its stated action matches the login she initiated. Entering the requested OTP there is different from sending it to a caller or a message link.",
+      "dialogue": "Purpose and destination must match.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 63.101,
+      "duration": 15.403
+    },
+    {
+      "id": "class8-fraud-code-purpose-6",
+      "label": "Enter the lab",
+      "title": "An unexpected code",
+      "mood": "happy",
+      "caption": "The lab changes the situation: an OTP arrives when nobody requested a sign-in. Build a code-handling record that leaves it unused, avoids forwarding it and asks for account checks through trusted support.",
+      "dialogue": "Unexpected codes need a pause.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 79.154,
+      "duration": 14.187
+    }
+  ]
+}

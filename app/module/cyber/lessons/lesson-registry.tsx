@@ -34,8 +34,11 @@ import { Class12AI } from "./senior/Class12AI";
 import { Class12Security } from "./senior/Class12Security";
 import { Class11Fraud } from "./senior/Class11Fraud";
 import { Class11CT } from "./senior/Class11CT";
+import { Class8Lesson } from "./class8/Class8Lesson";
+import { CLASS8_LESSON_SLUGS } from "../../../data/class-8-missions";
 
-const lessonComponents = {
+const lessonComponents: Record<CyberLessonSlug, ComponentType<CyberLessonComponentProps>> = {
+  ...Object.fromEntries(CLASS8_LESSON_SLUGS.map(slug => [slug, Class8Lesson])),
   "the-easy-money-recruitment-chain": Class12Fraud,
   "check-the-investment-story": Class12Fraud,
   "identity-and-authority-can-be-manufactured": Class12Fraud,

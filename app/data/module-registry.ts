@@ -3,6 +3,7 @@ import { cyberLessons } from "./cyber-lessons";
 import { newMissions } from "./new-missions";
 import { class12Missions } from "./class-12-missions";
 import { class11Missions } from "./class-11-missions";
+import { class8Missions } from "./class-8-missions";
 
 export type PlayableModule = {
   id: string;
@@ -58,14 +59,16 @@ export const playableModules: PlayableModule[] = [
   ...cyberLessons.map((lesson) => ({
     id: lesson.id,
     title: lesson.title,
-    grades: lesson.grades,
+    // Keep legacy identities for historical reports and their other grades.
+    // Current Class 8 access uses only the replacement Future Lab course.
+    grades: lesson.grades.filter(grade => grade !== 8 || lesson.id.startsWith("cyber-class8-")),
     strand: lesson.strand,
     href: `/module/cyber/${lesson.slug}`,
   })),
 ];
 
 /** The current story chapters, using the same identities and routes as the class library. */
-export const assignmentChapters = playableModules.filter(module => [...newMissions, ...class11Missions, ...class12Missions].some(chapter => chapter.id === module.id));
+export const assignmentChapters = playableModules.filter(module => [...newMissions, ...class11Missions, ...class12Missions, ...class8Missions].some(chapter => chapter.id === module.id));
 
 export function getPlayableModule(grade: number, title: string) {
   return playableModules.find(

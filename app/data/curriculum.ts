@@ -2,6 +2,7 @@ import { getCyberLessonsForGrade } from "./cyber-lessons";
 import { newMissions } from "./new-missions";
 import { class12Subjects } from "./class-12-curriculum";
 import { class11Subjects } from "./class-11-curriculum";
+import { class8Subjects } from "./class-8-curriculum";
 
 export type CurriculumStrand =
   | "Computational Thinking"
@@ -517,6 +518,7 @@ export const curriculum: GradeCurriculum[] = [
     .filter((entry) => entry.grade >= 3 && entry.grade <= 7)
     .map((entry) => {
       const grade = entry.grade + 3;
+      if (grade === 8) return { ...entry, grade, title: "Future Lab", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
       const otherSubjects = sourceCurriculum
         .find((existing) => existing.grade === grade)
         ?.subjects?.filter((subject) => !subject.strand || subject.strand === "English") ?? [];

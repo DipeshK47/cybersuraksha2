@@ -1,0 +1,78 @@
+{
+  "duration": 90.876,
+  "narrationHash": "7944606e51faf224abfb1fbe07891290b1eb0ddd525f25ac4f90d0f989fa5c45",
+  "scenes": [
+    {
+      "id": "class8-garden-loops-1",
+      "label": "Meet the team",
+      "title": "A model helper",
+      "mood": "thinking",
+      "caption": "An on-screen garden helper waters pretend planters. Each marked planter needs two water tokens. This is a simulation: running instructions never controls a real pump or plant.",
+      "dialogue": "We can test safely on the screen.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 12.437
+    },
+    {
+      "id": "class8-garden-loops-2",
+      "label": "The problem",
+      "title": "One body, many repeats",
+      "mood": "surprise",
+      "caption": "Writing water, move, water, move for a long row hides mistakes. A counted loop stores one body of instructions and repeats it for marked planters. The number of repetitions must come from the actual row.",
+      "dialogue": "Repeating is useful only with the right count.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.087,
+      "duration": 14.208
+    },
+    {
+      "id": "class8-garden-loops-3",
+      "label": "How it works",
+      "title": "State changes",
+      "mood": "thinking",
+      "caption": "They name a counter done and start it at zero. Before each repetition they check whether done is less than the number of planters. Watering adds two tokens to the total; updating done records that one more planter was served.",
+      "dialogue": "Track done and total separately.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 27.945,
+      "duration": 13.973
+    },
+    {
+      "id": "class8-garden-loops-4",
+      "label": "Your decision",
+      "title": "Where does update belong?",
+      "mood": "thinking",
+      "caption": "A draft places done equals done plus one after the whole loop. The condition never sees progress while the loop runs. Choose the repair that changes the counter inside every repetition rather than adding another watering instruction outside it.",
+      "dialogue": "The stopping test needs changing state.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 42.569,
+      "duration": 15.296
+    },
+    {
+      "id": "class8-garden-loops-5",
+      "label": "What changes",
+      "title": "Test the edges",
+      "mood": "happy",
+      "caption": "For three planters, the totals after each repetition are two, four and six. For one planter the loop runs once. For an empty row it runs zero times because the first condition is already false; no water token should be used.",
+      "dialogue": "An empty case is a real test.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 58.515,
+      "duration": 15.296
+    },
+    {
+      "id": "class8-garden-loops-6",
+      "label": "Enter the lab",
+      "title": "New dose, same checks",
+      "mood": "happy",
+      "caption": "A second row uses three tokens per planter instead of two. The team changes the body but keeps the counter logic. Trace this new dose and recheck the empty row, showing that a successful earlier test does not cover every changed requirement.",
+      "dialogue": "Keep a trace, not just the final total.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 74.461,
+      "duration": 15.765
+    }
+  ]
+}

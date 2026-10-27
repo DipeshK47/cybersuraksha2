@@ -1,0 +1,78 @@
+{
+  "duration": 89.596,
+  "narrationHash": "e74667132edcfe98be7c9c9fb3dff58b9ae6663c695a5086abf6bba96a198b6d",
+  "scenes": [
+    {
+      "id": "class8-digital-trail-1",
+      "label": "Meet the team",
+      "title": "The garden picture",
+      "mood": "thinking",
+      "caption": "Meera and Kabir photograph seedlings for their school garden magazine. The picture also shows full names on a noticeboard and where the club meets after school. Public readers need the garden story, but not those details.",
+      "dialogue": "Look behind the seedlings too.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.144
+    },
+    {
+      "id": "class8-digital-trail-2",
+      "label": "The problem",
+      "title": "A different audience",
+      "mood": "surprise",
+      "caption": "The draft is shared with the class; the finished magazine will have a public link. Kabir assumes the same photo permission covers both. Meera notices the audience has changed. The pictured children have not agreed to public sharing.",
+      "dialogue": "Class permission has a purpose.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 14.794,
+      "duration": 15.232
+    },
+    {
+      "id": "class8-digital-trail-3",
+      "label": "How it works",
+      "title": "Keep the purpose",
+      "mood": "thinking",
+      "caption": "The story needs seedlings and care instructions, not names or a meeting location. Prepare a different picture, remove identifying details and check permission with the people pictured and the responsible teacher before publishing.",
+      "dialogue": "Useful does not mean revealing everything.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 30.676,
+      "duration": 14.464
+    },
+    {
+      "id": "class8-digital-trail-4",
+      "label": "Your decision",
+      "title": "Make the decision",
+      "mood": "thinking",
+      "caption": "Choose the team's next step: publish the original, assume the class folder makes it safe, or prepare a suitable version and check permission. Test the plan by inspecting what a public reader can see.",
+      "dialogue": "Preview before publishing.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 45.79,
+      "duration": 12.544
+    },
+    {
+      "id": "class8-digital-trail-5",
+      "label": "What changes",
+      "title": "A useful revision",
+      "mood": "happy",
+      "caption": "The new image explains the garden without showing children or the noticeboard. The teacher checks its public preview. This reduces unnecessary sharing. Editing a new version cannot remove copies of an old one already shared.",
+      "dialogue": "Check what remains visible.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 58.984,
+      "duration": 15.104
+    },
+    {
+      "id": "class8-digital-trail-6",
+      "label": "Enter the lab",
+      "title": "A new screenshot",
+      "mood": "happy",
+      "caption": "Now inspect a sports-club screenshot. It includes contact details the teacher needs but the magazine does not. In the lab, prepare a safe image, test two sharing audiences and explain what should stay private.",
+      "dialogue": "Different purpose, different fields.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 74.738,
+      "duration": 14.208
+    }
+  ]
+}

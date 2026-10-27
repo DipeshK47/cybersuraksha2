@@ -1,0 +1,78 @@
+{
+  "duration": 91.367,
+  "narrationHash": "2400d8c5bca46861255a1ddc15fcecf6e1d39ae55c36007d448cadc7a45f507d",
+  "scenes": [
+    {
+      "id": "class8-ai-smart-automatic-1",
+      "label": "Meet the team",
+      "title": "Three tables",
+      "mood": "thinking",
+      "caption": "At the discovery club, Tara finds a kitchen timer, a lamp and a prepared picture sorter. Each produces an output without another button press.",
+      "dialogue": "Let us inspect the evidence.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 9.131
+    },
+    {
+      "id": "class8-ai-smart-automatic-2",
+      "label": "The problem",
+      "title": "A fixed countdown",
+      "mood": "surprise",
+      "caption": "The timer follows instructions: count down from the chosen number, then ring. It does not need examples of earlier lunches. A device can be useful and automatic while following a fixed rule written by a person.",
+      "dialogue": "Automatic does not settle the AI question.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 9.781,
+      "duration": 14.016
+    },
+    {
+      "id": "class8-ai-smart-automatic-3",
+      "label": "How it works",
+      "title": "The lamp rule",
+      "mood": "thinking",
+      "caption": "The lamp switches on when its light reading falls below a set threshold. Its instruction card states that rule. Tara now has evidence about this lamp, rather than a guess based on its shiny case or its sensor.",
+      "dialogue": "A sensor alone does not show learning.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 24.447,
+      "duration": 13.675
+    },
+    {
+      "id": "class8-ai-smart-automatic-4",
+      "label": "Your decision",
+      "title": "Open the model card",
+      "mood": "thinking",
+      "caption": "The picture demonstration has labelled training examples and a separate test pack. Its predictions depend on patterns from examples. Choose what the club should inspect before describing another mystery device whose advertisement supplies no mechanism or test evidence at all.",
+      "dialogue": "What evidence is missing?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 38.771,
+      "duration": 16.597
+    },
+    {
+      "id": "class8-ai-smart-automatic-5",
+      "label": "What changes",
+      "title": "An honest label",
+      "mood": "happy",
+      "caption": "Tara requests a mechanism description. The mystery device stays marked unknown until evidence arrives. The prepared classifier is a classroom simulation, and a successful demonstration does not prove it will recognise every picture outside this carefully chosen collection of cards.",
+      "dialogue": "Unknown is an evidence based answer.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 56.019,
+      "duration": 18.219
+    },
+    {
+      "id": "class8-ai-smart-automatic-6",
+      "label": "Enter the lab",
+      "title": "A new display",
+      "mood": "happy",
+      "caption": "Now a talking toy joins the display. A recorded greeting can sound clever without learning anything. In the lab, compare mechanisms, connect each claim to evidence and decide which questions would resolve uncertainty about this changed example.",
+      "dialogue": "Explain your uncertainty, too.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 74.887,
+      "duration": 15.829
+    }
+  ]
+}

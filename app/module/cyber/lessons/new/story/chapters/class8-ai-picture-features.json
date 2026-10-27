@@ -1,0 +1,78 @@
+{
+  "duration": 92.284,
+  "narrationHash": "8a19af95f30885311d39fe78113ac6f96616a17ef56e10594438a0c91c0ef8f5",
+  "scenes": [
+    {
+      "id": "class8-ai-picture-features-1",
+      "label": "Meet the team",
+      "title": "Garden drawings",
+      "mood": "thinking",
+      "caption": "The magazine team draws watering cans and flowerpots for a prepared picture sorter. In its first demonstration, every can appears on grass and every pot appears on a table.",
+      "dialogue": "What did the model rely on?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 11.307
+    },
+    {
+      "id": "class8-ai-picture-features-2",
+      "label": "The problem",
+      "title": "Reveal the evidence",
+      "mood": "surprise",
+      "caption": "Their teacher reveals a feature card. This simulated model uses background colour, not the object shape. Grass means can; table means pot. Its success on the first pack therefore does not show that it recognises a spout, handle or open rim at all.",
+      "dialogue": "A correct answer can hide a shortcut.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 11.957,
+      "duration": 16.555
+    },
+    {
+      "id": "class8-ai-picture-features-3",
+      "label": "How it works",
+      "title": "Change one thing",
+      "mood": "thinking",
+      "caption": "Asha draws the same can on a table while keeping its spout and handle. The shortcut calls it a pot. Changing only the background makes the failure easier to explain than changing the object, lighting and viewpoint together in a single new drawing.",
+      "dialogue": "Keep comparison pairs clear.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 29.161,
+      "duration": 15.68
+    },
+    {
+      "id": "class8-ai-picture-features-4",
+      "label": "Your decision",
+      "title": "Choose a test pack",
+      "mood": "thinking",
+      "caption": "The team must choose between more familiar grass drawings and paired drawings with exchanged backgrounds. Which pack would challenge the shortcut?",
+      "dialogue": "Try to reveal a failure.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 45.491,
+      "duration": 9.045
+    },
+    {
+      "id": "class8-ai-picture-features-5",
+      "label": "What changes",
+      "title": "A better inspection",
+      "mood": "happy",
+      "caption": "The exchanged backgrounds reveal both kinds of error. Object features provide more relevant evidence for this task, but a drawing with a hidden spout can still be ambiguous. The team records uncertainty and asks a person to review unclear cases rather than promising perfect recognition.",
+      "dialogue": "Relevant features still have limits.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 55.187,
+      "duration": 18.688
+    },
+    {
+      "id": "class8-ai-picture-features-6",
+      "label": "Enter the lab",
+      "title": "Dim light arrives",
+      "mood": "happy",
+      "caption": "A new drawing pack makes the same objects dimmer and shows side views. In the lab, identify evidence, trace background mistakes and select tests that separate changes in light from changes in viewpoint. Keep a human review option for drawings with genuinely missing features.",
+      "dialogue": "Test the changed condition.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 74.525,
+      "duration": 17.109
+    }
+  ]
+}

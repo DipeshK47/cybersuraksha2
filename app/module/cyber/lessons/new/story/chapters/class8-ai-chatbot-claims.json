@@ -1,0 +1,78 @@
+{
+  "duration": 94.204,
+  "narrationHash": "7d5f9f045ef1ca2d394d36b4f50cbba68ee04f8b82a73c541b58af64572de44c",
+  "scenes": [
+    {
+      "id": "class8-ai-chatbot-claims-1",
+      "label": "Meet the team",
+      "title": "A polished paragraph",
+      "mood": "thinking",
+      "caption": "For the science magazine, Dev reviews a fictional assistant response about the school garden. It confidently says every seed needs sunlight to germinate and cites a booklet page.",
+      "dialogue": "Fluent writing can still be wrong.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 11.029
+    },
+    {
+      "id": "class8-ai-chatbot-claims-2",
+      "label": "The problem",
+      "title": "Open the source",
+      "mood": "surprise",
+      "caption": "The supplied booklet extract says seed requirements vary and describes moisture, suitable temperature and air for the examples discussed. Its quoted page does not support the universal sunlight claim.",
+      "dialogue": "Check the exact claim.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 11.679,
+      "duration": 12.907
+    },
+    {
+      "id": "class8-ai-chatbot-claims-3",
+      "label": "How it works",
+      "title": "What generation does",
+      "mood": "thinking",
+      "caption": "The teacher explains that language models generate plausible continuations using patterns learned during training. A confident tone is not a built in fact check. Dev marks which statements the supplied extract supports and which require another trustworthy source before the class can publish them.",
+      "dialogue": "Confidence is not verification.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 25.236,
+      "duration": 18.155
+    },
+    {
+      "id": "class8-ai-chatbot-claims-4",
+      "label": "Your decision",
+      "title": "Choose an editorial action",
+      "mood": "thinking",
+      "caption": "The team can publish unchanged, invent a better looking reference or revise the sentence to match the available evidence. Choose a response that keeps uncertainty visible.",
+      "dialogue": "Never manufacture a citation.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 44.041,
+      "duration": 11.264
+    },
+    {
+      "id": "class8-ai-chatbot-claims-5",
+      "label": "What changes",
+      "title": "Credit and responsibility",
+      "mood": "happy",
+      "caption": "Dev revises the paragraph and records that a simulated assistant draft was checked and edited by students. The teacher reviews the final science explanation. The team avoids claiming the assistant conducted an experiment, and it keeps names, private messages and unpublished personal details out of requests.",
+      "dialogue": "People remain responsible for publication.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 55.955,
+      "duration": 19.328
+    },
+    {
+      "id": "class8-ai-chatbot-claims-6",
+      "label": "Enter the lab",
+      "title": "A changed claim",
+      "mood": "happy",
+      "caption": "Another draft claims a particular fertiliser always doubles growth. The supplied card reports only one small fictional trial. In the lab, check each claim, prepare a cautious revision and write a safe request that asks for evidence and limitations rather than unsupported certainty.",
+      "dialogue": "One trial cannot prove always.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 75.933,
+      "duration": 17.621
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "duration": 94.268,
+  "narrationHash": "8807ca77489ce01e6eb68dcc143a6e00a29854e89df14fdd8252ecd3f3f186c1",
+  "scenes": [
+    {
+      "id": "class8-library-rules-1",
+      "label": "Meet the team",
+      "title": "Returns arrive",
+      "mood": "thinking",
+      "caption": "The library club tests fictional return cards showing page counts and cover damage. Learners trace a sorting rule and tell the librarian where each card belongs. No books move automatically.",
+      "dialogue": "Make the decision visible.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.333
+    },
+    {
+      "id": "class8-library-rules-2",
+      "label": "The problem",
+      "title": "Check before comparing",
+      "mood": "surprise",
+      "caption": "Some cards have a blank page count. The team sends those to review before arithmetic. Blank does not mean zero pages. Treating unknown information as a small number would create a confident but unsupported shelf decision.",
+      "dialogue": "Unknown needs a different branch.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.983,
+      "duration": 14.955
+    },
+    {
+      "id": "class8-library-rules-3",
+      "label": "How it works",
+      "title": "Both conditions matter",
+      "mood": "thinking",
+      "caption": "For complete cards, the compact shelf accepts a book only when its page count is at most two hundred AND its cover is undamaged. Otherwise it goes to review. A short damaged book therefore does not qualify for the shelf.",
+      "dialogue": "AND means both must pass.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 29.588,
+      "duration": 14.059
+    },
+    {
+      "id": "class8-library-rules-4",
+      "label": "Your decision",
+      "title": "The exact boundary",
+      "mood": "thinking",
+      "caption": "A card says exactly two hundred pages with an undamaged cover. One learner uses less than two hundred and sends it to review. Choose the comparison that matches the librarian’s stated rule rather than silently changing the permitted boundary.",
+      "dialogue": "At most includes equality.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 44.297,
+      "duration": 15.573
+    },
+    {
+      "id": "class8-library-rules-5",
+      "label": "What changes",
+      "title": "Test the branches",
+      "mood": "happy",
+      "caption": "The team traces three cards: a short intact book, a short damaged book and a book with missing pages information. Their outputs reveal different reasons for review. Keeping the reason beside the result helps diagnose mistakes in the rule.",
+      "dialogue": "Output alone can hide the reason.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 60.52,
+      "duration": 15.979
+    },
+    {
+      "id": "class8-library-rules-6",
+      "label": "Enter the lab",
+      "title": "A changed policy",
+      "mood": "happy",
+      "caption": "Now the librarian changes the policy: review any damaged cover OR any book above three hundred pages. Missing counts still need review first. Apply the new statement carefully; do not carry the old two-hundred-page cutoff into this different situation.",
+      "dialogue": "New requirements need new test cards.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 77.149,
+      "duration": 16.469
+    }
+  ]
+}

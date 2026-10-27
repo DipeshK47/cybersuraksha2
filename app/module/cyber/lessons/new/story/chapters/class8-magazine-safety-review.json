@@ -1,0 +1,78 @@
+{
+  "duration": 94.972,
+  "narrationHash": "42c69cfea043a165db4db61189474e12401c6802f5ae42d9fd9673c49fdd46c8",
+  "scenes": [
+    {
+      "id": "class8-magazine-safety-review-1",
+      "label": "Meet the team",
+      "title": "Ready to publish?",
+      "mood": "thinking",
+      "caption": "The magazine is ready for publication. Its pack includes an approved garden article, an unredacted contact roster and a draft link anyone can edit. The deadline is close, but the teacher schedules a safety review.",
+      "dialogue": "A deadline does not replace a check.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.379
+    },
+    {
+      "id": "class8-magazine-safety-review-2",
+      "label": "The problem",
+      "title": "Different documents, different needs",
+      "mood": "surprise",
+      "caption": "Meera separates the working draft from the finished publication. Named editors need the draft, public readers need only the approved issue, and the contact roster belongs in the teacher's restricted records. No single sharing setting fits all three purposes.",
+      "dialogue": "Match access to purpose.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 15.029,
+      "duration": 16.341
+    },
+    {
+      "id": "class8-magazine-safety-review-3",
+      "label": "How it works",
+      "title": "Test as readers",
+      "mood": "thinking",
+      "caption": "The team repairs the pack and tests the result as an editor and a public reader. A role label is not enough: the public test must fail to open the draft and roster, while the approved issue remains readable.",
+      "dialogue": "Show what each reader can open.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 32.02,
+      "duration": 13.099
+    },
+    {
+      "id": "class8-magazine-safety-review-4",
+      "label": "Your decision",
+      "title": "Choose the release plan",
+      "mood": "thinking",
+      "caption": "Decide whether to publish now and repair later, hide the link but keep broad access, or finish the content and permission tests before release. Hiding a link does not make an accessible document private if someone already has its address.",
+      "dialogue": "An unlisted link is still a link.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 45.769,
+      "duration": 15.125
+    },
+    {
+      "id": "class8-magazine-safety-review-5",
+      "label": "What changes",
+      "title": "An earlier copy exists",
+      "mood": "happy",
+      "caption": "After the review, Kabir remembers sending an earlier copy to a fictional group. The team tells the teacher calmly, limits further access and records what was shared. Removing permission cannot guarantee that downloaded copies or screenshots disappear from other devices.",
+      "dialogue": "Tell the truth without blaming.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 61.544,
+      "duration": 17.131
+    },
+    {
+      "id": "class8-magazine-safety-review-6",
+      "label": "Enter the lab",
+      "title": "Revise the response",
+      "mood": "happy",
+      "caption": "The teacher guides the response and appropriate removal requests. Prepare a tested publishing plan and incident note from supplied fictional facts. Record remaining uncertainty; do not promise the mistake is completely undone.",
+      "dialogue": "Reduce further harm and seek help.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 79.325,
+      "duration": 14.997
+    }
+  ]
+}

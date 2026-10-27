@@ -1,0 +1,78 @@
+{
+  "duration": 91.751,
+  "narrationHash": "2469fec033f0c9230a72db5aa3f47f46e2c0debd608048ed0d70182bffed845f",
+  "scenes": [
+    {
+      "id": "class8-fraud-hidden-price-1",
+      "label": "Meet the team",
+      "title": "A winning banner",
+      "mood": "thinking",
+      "caption": "During a fictional game demonstration, Meera sees a banner promising a rare costume. It says she has been specially selected. The class pauses the imaginary screen before anybody clicks, because an exciting reward can distract from what comes next.",
+      "dialogue": "What does it ask us to do?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.829
+    },
+    {
+      "id": "class8-fraud-hidden-price-2",
+      "label": "The problem",
+      "title": "Read the request",
+      "mood": "surprise",
+      "caption": "The next card requests a school login and a small unlocking payment. Neither is needed to examine the offer. Meera writes two requested actions on her offer-check card, separating the promised costume from the information and money being sought.",
+      "dialogue": "Small fees can still matter.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 16.479,
+      "duration": 15.616
+    },
+    {
+      "id": "class8-fraud-hidden-price-3",
+      "label": "How it works",
+      "title": "The countdown",
+      "mood": "thinking",
+      "caption": "A timer says the reward expires in two minutes, and a note says not to tell adults. These are pressure tactics, not proof that the prize exists. A padlock and copied game logo would not establish who controls the page either.",
+      "dialogue": "Urgency is a reason to pause.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 32.745,
+      "duration": 14.507
+    },
+    {
+      "id": "class8-fraud-hidden-price-4",
+      "label": "Your decision",
+      "title": "Choose a route",
+      "mood": "thinking",
+      "caption": "Meera can pay, ask the banner’s own chat helper, or check with a guardian through the game’s already known official route. Choose a route whose contact details do not come from the suspicious offer.",
+      "dialogue": "The offer cannot verify itself.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 47.902,
+      "duration": 12.523
+    },
+    {
+      "id": "class8-fraud-hidden-price-5",
+      "label": "What changes",
+      "title": "A recorded result",
+      "mood": "happy",
+      "caption": "She closes the offer and records the request without entering details. Her guardian helps check the known service. The class cannot establish the sender’s identity from the banner alone; avoiding exposure does not require solving that mystery.",
+      "dialogue": "Record the action, not a guess.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 61.075,
+      "duration": 15.573
+    },
+    {
+      "id": "class8-fraud-hidden-price-6",
+      "label": "Enter the lab",
+      "title": "A different hook",
+      "mood": "happy",
+      "caption": "Tomorrow’s card offers a free scholarship badge but demands secrecy instead of speed. In the lab, revise the offer-check card and explain why a different reward does not change the need for independent checking.",
+      "dialogue": "Check the hidden request again.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 77.298,
+      "duration": 13.803
+    }
+  ]
+}

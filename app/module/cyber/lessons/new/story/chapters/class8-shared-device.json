@@ -1,0 +1,78 @@
+{
+  "duration": 92.369,
+  "narrationHash": "983428818c09c0936039ddd98b42077a9f9afe4404b3e15f0c160e1d2bd9e197",
+  "scenes": [
+    {
+      "id": "class8-shared-device-1",
+      "label": "Meet the team",
+      "title": "The next class arrives",
+      "mood": "thinking",
+      "caption": "Kabir finishes a draft on the library computer. Another class waits, so he closes the tab and stands up. Meera notices the account avatar remains in another tab and the draft is still in Downloads.",
+      "dialogue": "Closing a view may leave a session.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.269
+    },
+    {
+      "id": "class8-shared-device-2",
+      "label": "The problem",
+      "title": "Three different actions",
+      "mood": "surprise",
+      "caption": "A tab is one view of a service. Signing out ends the account session through that service. Locking a screen temporarily blocks use of the device, but it does not replace signing out before handing a shared computer to someone else.",
+      "dialogue": "Choose the action for the situation.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.919,
+      "duration": 14.315
+    },
+    {
+      "id": "class8-shared-device-3",
+      "label": "How it works",
+      "title": "Check local traces",
+      "mood": "thinking",
+      "caption": "The school checklist also covers downloaded work and saved sign-in details. Learners should not delete other people's files or explore their sessions. They handle only their own supplied fictional draft, following the approved storage and cleanup process with the librarian.",
+      "dialogue": "Our own work, approved process.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 28.884,
+      "duration": 17.323
+    },
+    {
+      "id": "class8-shared-device-4",
+      "label": "Your decision",
+      "title": "Choose the handover",
+      "mood": "thinking",
+      "caption": "Decide whether to close the tab, lock the screen and leave, or save approved work, clean up your own local copy and sign out. The final plan must be tested, because a checklist tick alone cannot show the next user's access.",
+      "dialogue": "Test the result, not the intention.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 46.857,
+      "duration": 14.08
+    },
+    {
+      "id": "class8-shared-device-5",
+      "label": "What changes",
+      "title": "The next-user test",
+      "mood": "happy",
+      "caption": "In the simulation, reopening the service asks for sign-in and the Downloads panel no longer exposes the draft. This supports the tested handover. It does not prove every trace anywhere has disappeared; school administrators manage wider device policies.",
+      "dialogue": "State exactly what was checked.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 61.587,
+      "duration": 16.341
+    },
+    {
+      "id": "class8-shared-device-6",
+      "label": "Enter the lab",
+      "title": "A short interruption",
+      "mood": "happy",
+      "caption": "Now a teacher calls Kabir away briefly, with no handover planned. Lock before leaving and follow school rules on return. Record how this pause differs from a complete end-of-session routine.",
+      "dialogue": "A pause is not a handover.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 78.578,
+      "duration": 13.141
+    }
+  ]
+}

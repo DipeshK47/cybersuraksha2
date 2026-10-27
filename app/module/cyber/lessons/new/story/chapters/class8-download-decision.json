@@ -1,0 +1,78 @@
+{
+  "duration": 98.748,
+  "narrationHash": "4a125b6839d4ed7bafabe0dcfc970f7a54c2c4591bc75ab742600da683d3832e",
+  "scenes": [
+    {
+      "id": "class8-download-decision-1",
+      "label": "Meet the team",
+      "title": "An animation pack",
+      "mood": "thinking",
+      "caption": "The team wants a moving exhibition title. A fictional animation pack promises instant effects, but asks them to disable protection and install an unrelated browser extension. The demonstration contains no downloadable files or working installer.",
+      "dialogue": "Read the requested actions first.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.917
+    },
+    {
+      "id": "class8-download-decision-2",
+      "label": "The problem",
+      "title": "Purpose versus extras",
+      "mood": "surprise",
+      "caption": "Kabir focuses on the preview. Meera reads what would change on the device. An attractive effect is not evidence that an extension is needed. The request to weaken protection changes the risk, even if the pack has many enthusiastic comments.",
+      "dialogue": "Popularity does not explain a permission.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 17.567,
+      "duration": 15.893
+    },
+    {
+      "id": "class8-download-decision-3",
+      "label": "How it works",
+      "title": "A safer option",
+      "mood": "thinking",
+      "caption": "The teacher offers a simple animation already available in the approved editor. It meets the title requirement without adding software. A source check considers who provides the file, why it is needed and whether its requested changes fit the job.",
+      "dialogue": "A smaller solution can meet the goal.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 34.111,
+      "duration": 15.701
+    },
+    {
+      "id": "class8-download-decision-4",
+      "label": "Your decision",
+      "title": "Choose before installing",
+      "mood": "thinking",
+      "caption": "Decide whether to disable protection, trust the comments alone, or stop the pack and use the approved alternative. Stopping is a complete decision when the evidence does not justify the requested access. Nobody needs to experiment with the suspicious file.",
+      "dialogue": "We can finish without that pack.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 50.462,
+      "duration": 16.448
+    },
+    {
+      "id": "class8-download-decision-5",
+      "label": "What changes",
+      "title": "Updates are different cases",
+      "mood": "happy",
+      "caption": "Later, the approved editor reports an update inside its known settings. Updates can fix problems, so the team should not reject every update. They follow the school process with the responsible adult, using the application route rather than an advertisement.",
+      "dialogue": "Check the route and the purpose.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 67.56,
+      "duration": 15.872
+    },
+    {
+      "id": "class8-download-decision-6",
+      "label": "Enter the lab",
+      "title": "Test the reasoning",
+      "mood": "happy",
+      "caption": "Inspect a download card, record concerning requests and choose an alternative. Then handle a verified update. Explain the evidence that changed your response; downloads do not all carry identical risks.",
+      "dialogue": "Evidence can change the action.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 84.082,
+      "duration": 14.016
+    }
+  ]
+}

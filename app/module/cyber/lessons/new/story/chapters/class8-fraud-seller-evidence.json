@@ -1,0 +1,78 @@
+{
+  "duration": 96.316,
+  "narrationHash": "7a958cff5663563f862b166317f17f1aadb0135463924c4aca1ba2a08f905836",
+  "scenes": [
+    {
+      "id": "class8-fraud-seller-evidence-1",
+      "label": "Meet the team",
+      "title": "Two kit offers",
+      "mood": "thinking",
+      "caption": "The club compares two invented kit offers. A is cheap with thousands of reviews. B costs more, with return terms. Noor considers the evidence before asking her guardian about purchasing.",
+      "dialogue": "A comparison can include unanswered questions.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 12.48
+    },
+    {
+      "id": "class8-fraud-seller-evidence-2",
+      "label": "The problem",
+      "title": "Inspect the details",
+      "mood": "surprise",
+      "caption": "A gives no seller address, return period or explanation of delivery charges. B supplies those details, but they remain claims to verify. More information makes checking possible; it does not guarantee that an order will arrive or that every statement is true.",
+      "dialogue": "Useful detail is not a guarantee.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.13,
+      "duration": 16.725
+    },
+    {
+      "id": "class8-fraud-seller-evidence-3",
+      "label": "How it works",
+      "title": "Reviews and lookalikes",
+      "mood": "thinking",
+      "caption": "Several A reviews repeat identical sentences. That weakens their usefulness without proving every review is fake. A copied logo and HTTPS would not establish the operator either. The adult should inspect the actual hostname and compare it with an independently known source.",
+      "dialogue": "Read the address, not just the badge.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 30.505,
+      "duration": 17.899
+    },
+    {
+      "id": "class8-fraud-seller-evidence-4",
+      "label": "Your decision",
+      "title": "A defensible comparison",
+      "mood": "thinking",
+      "caption": "Noor can declare A fraudulent because it is cheap, call B perfectly safe because it has terms, or record the gaps and ask for verification. Choose the conclusion that distinguishes observed facts from claims the paper cards cannot settle.",
+      "dialogue": "Neither price nor popularity proves identity.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 49.054,
+      "duration": 15.232
+    },
+    {
+      "id": "class8-fraud-seller-evidence-5",
+      "label": "What changes",
+      "title": "The comparison record",
+      "mood": "happy",
+      "caption": "She records A’s missing terms and B’s checkable details, then asks her guardian to confirm the seller through an independent route. The class makes no real purchase and does not send an address or payment information to either offer.",
+      "dialogue": "Make the next question specific.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 64.936,
+      "duration": 14.763
+    },
+    {
+      "id": "class8-fraud-seller-evidence-6",
+      "label": "Enter the lab",
+      "title": "The offers change",
+      "mood": "happy",
+      "caption": "In the lab, A adds clear terms while B’s hostname changes unexpectedly. Revise the comparison using current evidence instead of keeping yesterday’s ranking. Explain what the responsible adult should check before deciding.",
+      "dialogue": "Evidence can change the next step.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 80.349,
+      "duration": 15.317
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "duration": 91.26,
+  "narrationHash": "be80ca92e4ff39794dd23373333bce129fe1085ad3013d3b01408d27e5ae8f75",
+  "scenes": [
+    {
+      "id": "class8-ai-trustworthy-data-1",
+      "label": "Meet the team",
+      "title": "Material cards",
+      "mood": "thinking",
+      "caption": "Ravi prepares an invented dataset for a classroom material sorter. Each card has an object identifier, a stiffness reading and a material label.",
+      "dialogue": "What does each column mean?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 9.941
+    },
+    {
+      "id": "class8-ai-trustworthy-data-2",
+      "label": "The problem",
+      "title": "Feature or answer",
+      "mood": "surprise",
+      "caption": "Stiffness is an input feature; the checked material type is the label they want to predict. The identifier helps track repairs but is not evidence of material. A collector name would add unnecessary personal information and would not help this stated sorting task.",
+      "dialogue": "A useful column has a purpose.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 10.591,
+      "duration": 16.597
+    },
+    {
+      "id": "class8-ai-trustworthy-data-3",
+      "label": "How it works",
+      "title": "Rows that disagree",
+      "mood": "thinking",
+      "caption": "Two copies of card R2 have identical readings and labels. Card R3 has no label, while two versions of R4 give conflicting labels. Simply counting all rows would exaggerate some examples and hide uncertainty about others.",
+      "dialogue": "Keep a repair log.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 27.839,
+      "duration": 15.893
+    },
+    {
+      "id": "class8-ai-trustworthy-data-4",
+      "label": "Your decision",
+      "title": "Do not guess",
+      "mood": "thinking",
+      "caption": "Ravi offers to fill the missing label with whichever answer appears most often. Choose whether to accept his shortcut or set uncertain records aside for checking.",
+      "dialogue": "Unknown is not a material type.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 44.382,
+      "duration": 10.603
+    },
+    {
+      "id": "class8-ai-trustworthy-data-5",
+      "label": "What changes",
+      "title": "A smaller reliable pack",
+      "mood": "happy",
+      "caption": "The team keeps one exact copy of R2 and quarantines R3 and R4 pending a supplied reference check. Its repair log records what changed and why. The smaller pack is more honest, although it still needs coverage checks before any model demonstration.",
+      "dialogue": "Repair decisions need evidence.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 55.635,
+      "duration": 17.344
+    },
+    {
+      "id": "class8-ai-trustworthy-data-6",
+      "label": "Enter the lab",
+      "title": "An unfamiliar batch",
+      "mood": "happy",
+      "caption": "Now a new batch includes shiny wrappers with missing stiffness readings. Their appearance does not supply the absent numbers. In the lab, organise columns, choose repairs and decide which new records need measurement before they can join a dependable training collection.",
+      "dialogue": "Do not invent measurements either.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 73.629,
+      "duration": 16.981
+    }
+  ]
+}

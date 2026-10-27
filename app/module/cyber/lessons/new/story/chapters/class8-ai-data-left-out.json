@@ -1,0 +1,78 @@
+{
+  "duration": 95.996,
+  "narrationHash": "d537ae5d1ccf7f532c790736a65eaf4c3488fc7e15cfb10c6523fc2d749cfa69",
+  "scenes": [
+    {
+      "id": "class8-ai-data-left-out-1",
+      "label": "Meet the team",
+      "title": "Two project kits",
+      "mood": "thinking",
+      "caption": "Two fictional classrooms try the same prepared recycling classifier. The first uses mostly plain cards; the second has many shiny wrappers.",
+      "dialogue": "An average can hide a gap.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 9.643
+    },
+    {
+      "id": "class8-ai-data-left-out-2",
+      "label": "The problem",
+      "title": "Inspect the coverage",
+      "mood": "surprise",
+      "caption": "The training summary contains many plain card examples and only one shiny wrapper. It does not establish the only cause: lighting, measurement quality and label mistakes might also affect the results and should be checked using controlled comparisons.",
+      "dialogue": "Look for missing conditions.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 10.293,
+      "duration": 15.488
+    },
+    {
+      "id": "class8-ai-data-left-out-3",
+      "label": "How it works",
+      "title": "Use the right total",
+      "mood": "thinking",
+      "caption": "The plain kit has four errors among forty tests. The shiny kit has three errors among ten tests. Counting errors alone makes plain seem worse, but the error rates are ten percent and thirty percent. Each rate uses its own group total, not all fifty tests.",
+      "dialogue": "Three out of what?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 26.431,
+      "duration": 16.533
+    },
+    {
+      "id": "class8-ai-data-left-out-4",
+      "label": "Your decision",
+      "title": "Choose the conclusion",
+      "mood": "thinking",
+      "caption": "A poster claims the classifier is fair because it made only seven mistakes overall. Decide whether that conclusion respects the group evidence. The team can report an observed gap and investigate it without claiming a small classroom sample proves unfairness in every possible real situation.",
+      "dialogue": "Report the gap with limits.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 43.614,
+      "duration": 18.432
+    },
+    {
+      "id": "class8-ai-data-left-out-5",
+      "label": "What changes",
+      "title": "Invite better evidence",
+      "mood": "happy",
+      "caption": "The teams plan balanced fictional material examples, checked labels and separate tests across backgrounds. Participation can reveal overlooked conditions, while a human review option gives learners a way to challenge an uncertain or incorrect sorting decision.",
+      "dialogue": "Include a way to question results.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 62.696,
+      "duration": 16.576
+    },
+    {
+      "id": "class8-ai-data-left-out-6",
+      "label": "Enter the lab",
+      "title": "Different group sizes",
+      "mood": "happy",
+      "caption": "A fresh pack reverses the group sizes. In the lab, build a coverage checklist, calculate the new rates and propose a review plan. Explain what these observations show and what would require more varied evidence before making broader claims.",
+      "dialogue": "Recalculate before comparing.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 79.922,
+      "duration": 15.424
+    }
+  ]
+}

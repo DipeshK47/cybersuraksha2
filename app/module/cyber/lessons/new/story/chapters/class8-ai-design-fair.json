@@ -1,0 +1,78 @@
+{
+  "duration": 89.724,
+  "narrationHash": "8b04e263a68d9390a07ea7f34e07c1d6a40453d7e7d52caaf65d0bb27bcd18d8",
+  "scenes": [
+    {
+      "id": "class8-ai-design-fair-1",
+      "label": "Meet the team",
+      "title": "The club proposal",
+      "mood": "thinking",
+      "caption": "At the design fair, Sana proposes a tool that suggests labels for invented craft supply cards. Another team offers a simple lookup table. The class agrees that a useful project needs a clear purpose, an honest comparison and someone responsible for checking suggested labels.",
+      "dialogue": "Usefulness is our starting point.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.027
+    },
+    {
+      "id": "class8-ai-design-fair-2",
+      "label": "The problem",
+      "title": "Define the contract",
+      "mood": "surprise",
+      "caption": "Success means at least eight correct labels in ten separate tests, no personal information and teacher review of uncertain cases.",
+      "dialogue": "Agree what a pass means.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 18.677,
+      "duration": 8.704
+    },
+    {
+      "id": "class8-ai-design-fair-3",
+      "label": "How it works",
+      "title": "Compare the options",
+      "mood": "thinking",
+      "caption": "The lookup table gets nine correct; the toy model gets eight.",
+      "dialogue": "The baseline deserves a fair test.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 28.031,
+      "duration": 3.691
+    },
+    {
+      "id": "class8-ai-design-fair-4",
+      "label": "Your decision",
+      "title": "Make a defensible choice",
+      "mood": "thinking",
+      "caption": "Sana can hide the stronger baseline, announce her model as perfect or recommend the table while retaining a documented model experiment. Choose a proposal that fits the evidence and states its limits. A teacher will review the explanation, separately from the automatic practice checks.",
+      "dialogue": "A good project can change direction.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 32.371,
+      "duration": 17.024
+    },
+    {
+      "id": "class8-ai-design-fair-5",
+      "label": "What changes",
+      "title": "The reviewed project card",
+      "mood": "happy",
+      "caption": "The final card names the purpose, synthetic data, test counts, comparison and responsible reviewer. It says the result applies only to the supplied collection. Students can inspect uncertain labels and ask for correction; the proposal never sorts real people or makes consequential decisions about their opportunities.",
+      "dialogue": "Record what the test cannot prove.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 50.045,
+      "duration": 19.627
+    },
+    {
+      "id": "class8-ai-design-fair-6",
+      "label": "Enter the lab",
+      "title": "A new requirement",
+      "mood": "happy",
+      "caption": "The club then requests automatic judgements about which pupils deserve supplies. That changes the purpose and risk completely. In the lab, evaluate the original evidence and decide why this new use should stop pending a different, teacher-led allocation process with clear rules and an opportunity for questions.",
+      "dialogue": "An old test does not approve a new purpose.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 70.322,
+      "duration": 18.752
+    }
+  ]
+}

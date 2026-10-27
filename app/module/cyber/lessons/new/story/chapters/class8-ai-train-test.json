@@ -1,0 +1,78 @@
+{
+  "duration": 96.7,
+  "narrationHash": "a2c1ca187a0e9d6fe241d08d5d4ce13007ac33db5ad18063536bb26d9f989e6c",
+  "scenes": [
+    {
+      "id": "class8-ai-train-test-1",
+      "label": "Meet the team",
+      "title": "A visible rule",
+      "mood": "thinking",
+      "caption": "Leela opens a classroom simulation for sorting invented material cards. Every card has a stiffness number. The toy model copies the label of the selected training example with the nearest number.",
+      "dialogue": "There is no hidden intelligence here.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.248
+    },
+    {
+      "id": "class8-ai-train-test-2",
+      "label": "The problem",
+      "title": "Only one kind",
+      "mood": "surprise",
+      "caption": "At first, selected examples contain only soft paper. The model calls even stiff test cards paper because it has no selected card example.",
+      "dialogue": "What is missing from training?",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.898,
+      "duration": 9.259
+    },
+    {
+      "id": "class8-ai-train-test-3",
+      "label": "How it works",
+      "title": "Keep a test aside",
+      "mood": "thinking",
+      "caption": "Training cards teach the toy; separate test cards check it. Copying test answers into training would make the check less informative. If equally near examples disagree, this model abstains instead of inventing certainty. An abstention counts as an incorrect answer in this exercise.",
+      "dialogue": "A tie can mean no prediction.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 23.807,
+      "duration": 17.92
+    },
+    {
+      "id": "class8-ai-train-test-4",
+      "label": "Your decision",
+      "title": "Choose the repair",
+      "mood": "thinking",
+      "caption": "The team can repeat the same soft example many times, secretly reuse the test labels, or add a verified example from the missing material. Choose a repair that addresses coverage while preserving an independent check of whether the change actually helped.",
+      "dialogue": "Repair the cause, then test.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 42.377,
+      "duration": 16.299
+    },
+    {
+      "id": "class8-ai-train-test-5",
+      "label": "What changes",
+      "title": "Record the result",
+      "mood": "happy",
+      "caption": "With both materials represented, the selected model passes these supplied tests. Leela records the training identifiers and correct predictions. She does not announce that all real waste can now be sorted: moisture, mixed materials and measurement errors are outside this deliberately small classroom simulation.",
+      "dialogue": "A test result has a boundary.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 59.325,
+      "duration": 19.008
+    },
+    {
+      "id": "class8-ai-train-test-6",
+      "label": "Enter the lab",
+      "title": "A new numerical range",
+      "mood": "happy",
+      "caption": "The last pack uses a different stiffness scale and fresh test values. Earlier numbers cannot simply be copied. In the lab, select examples, run the model and explain how the chosen examples cover both labels before comparing the new predictions with expected answers.",
+      "dialogue": "Transfer the method, not the numbers.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 78.983,
+      "duration": 17.067
+    }
+  ]
+}

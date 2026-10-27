@@ -1,0 +1,78 @@
+{
+  "duration": 90.087,
+  "narrationHash": "4d7caf6f7991dd086e0db5aae8a9158db267fed65071405013ee973f72c6581f",
+  "scenes": [
+    {
+      "id": "class8-binary-messages-1",
+      "label": "Meet the team",
+      "title": "Eight signal lamps",
+      "mood": "thinking",
+      "caption": "Nila and Farhan test a model weather station with eight lamps. A lamp can be on or off. They agree that on means one and off means zero, so the same eight positions can represent many different numbers.",
+      "dialogue": "We need a shared reading rule.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.205
+    },
+    {
+      "id": "class8-binary-messages-2",
+      "label": "The problem",
+      "title": "Positions have values",
+      "mood": "surprise",
+      "caption": "From left to right, the positions are worth 128, 64, 32, 16, 8, 4, 2 and 1. Moving left doubles the value. Reading a message means adding only the values whose lamps are switched on.",
+      "dialogue": "An off lamp contributes zero.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 13.855,
+      "duration": 14.635
+    },
+    {
+      "id": "class8-binary-messages-3",
+      "label": "How it works",
+      "title": "Build a message",
+      "mood": "thinking",
+      "caption": "To send thirteen, Nila chooses eight, four and one. The other lamps stay off. Farhan checks the sum rather than counting the lit lamps. Three lit lamps can represent different totals depending on their positions.",
+      "dialogue": "Eight plus four plus one is thirteen.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 29.14,
+      "duration": 13.632
+    },
+    {
+      "id": "class8-binary-messages-4",
+      "label": "Your decision",
+      "title": "Is it secret?",
+      "mood": "thinking",
+      "caption": "Farhan suggests using the lamps to hide a club message. Nila points to the public place-value chart beside the model. Choose whether changing the representation alone protects the information from someone who knows this simple reading rule.",
+      "dialogue": "Encoding is not encryption.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 43.422,
+      "duration": 14.891
+    },
+    {
+      "id": "class8-binary-messages-5",
+      "label": "What changes",
+      "title": "Compare with a reference",
+      "mood": "happy",
+      "caption": "The reference card says twenty-six, but the received pattern totals twenty-seven. They compare each position and find the extra one-value lamp. Without a trusted reference or another check, an unexpected number would not reveal which lamp was wrong.",
+      "dialogue": "The reference tells us what was intended.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 58.963,
+      "duration": 15.488
+    },
+    {
+      "id": "class8-binary-messages-6",
+      "label": "Enter the lab",
+      "title": "Make a trace",
+      "mood": "happy",
+      "caption": "Practise sending one number and decoding another. Then correct a message whose larger place is wrong. Keep the received total and the corrected total in your trace so another team can follow exactly how you found the mismatch.",
+      "dialogue": "Record the positions, not a guess.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 75.101,
+      "duration": 14.336
+    }
+  ]
+}

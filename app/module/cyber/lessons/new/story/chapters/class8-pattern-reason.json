@@ -1,0 +1,78 @@
+{
+  "duration": 90.556,
+  "narrationHash": "c2f3a090ea28e861e3ce5256b959e45bfb640ce90f85598b10acb332eeab5684",
+  "scenes": [
+    {
+      "id": "class8-pattern-reason-1",
+      "label": "Meet the team",
+      "title": "Tiles for science",
+      "mood": "thinking",
+      "caption": "The science corner needs displays that can grow as more projects arrive. Dev builds a square with one tile, then a square with four tiles. Asha asks whether the next display should simply add three more tiles.",
+      "dialogue": "Count the shape, not just the list.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.931
+    },
+    {
+      "id": "class8-pattern-reason-2",
+      "label": "The problem",
+      "title": "Rows explain the rule",
+      "mood": "surprise",
+      "caption": "A square of side three has three rows with three tiles in each row. Its count is nine. Moving from side two to side three adds a new row and column, with their shared corner counted only once.",
+      "dialogue": "Three times three makes nine.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 14.581,
+      "duration": 13.312
+    },
+    {
+      "id": "class8-pattern-reason-3",
+      "label": "How it works",
+      "title": "Add another dimension",
+      "mood": "thinking",
+      "caption": "Next they build solid cube models. Side two means two layers, each containing two rows of two small cubes. That makes eight cubes, not four. The third multiplication describes depth rather than another decorative border.",
+      "dialogue": "A layer is itself a square.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 28.543,
+      "duration": 14.976
+    },
+    {
+      "id": "class8-pattern-reason-4",
+      "label": "Your decision",
+      "title": "A tempting shortcut",
+      "mood": "thinking",
+      "caption": "Asha proposes doubling each previous count because one becomes two in a different display. Dev asks which construction that describes. Choose the rule supported by equal rows and columns, then check a larger size before trusting it.",
+      "dialogue": "A match on one example is weak evidence.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 44.169,
+      "duration": 15.189
+    },
+    {
+      "id": "class8-pattern-reason-5",
+      "label": "What changes",
+      "title": "Test beyond the start",
+      "mood": "happy",
+      "caption": "For side four, the square needs sixteen tiles and the cube needs sixty-four small cubes. A rule that matches the first small example but predicts something else here fails. One clear counterexample is enough to reject that rule.",
+      "dialogue": "Show where the proposed rule breaks.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 60.008,
+      "duration": 14.421
+    },
+    {
+      "id": "class8-pattern-reason-6",
+      "label": "Enter the lab",
+      "title": "Build and explain",
+      "mood": "happy",
+      "caption": "In the workshop, construct the next square and connect counts to their dimensions. Finally inspect a hollow border instead of a filled square. Its inside is empty, so reusing the filled-square rule would count tiles that are absent.",
+      "dialogue": "A changed shape may need a changed rule.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 75.079,
+      "duration": 14.827
+    }
+  ]
+}

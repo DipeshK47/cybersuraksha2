@@ -1,0 +1,78 @@
+{
+  "duration": 95.889,
+  "narrationHash": "b73df0772584f835932c275b4b6752fedd506dccbfcd10bdcf6d8937a4c85582",
+  "scenes": [
+    {
+      "id": "class8-account-control-1",
+      "label": "Meet the team",
+      "title": "One reused secret",
+      "mood": "thinking",
+      "caption": "The robotics club uses a fictional account for its project board. A notice says a password reused on another service was exposed. Kabir wants to add a number to the old password and continue working immediately.",
+      "dialogue": "Changing one character is a weak plan.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.867
+    },
+    {
+      "id": "class8-account-control-2",
+      "label": "The problem",
+      "title": "Separate the accounts",
+      "mood": "surprise",
+      "caption": "Meera explains that a different, long passphrase for each account limits the damage from reuse. They compare invented plans rather than entering secrets. An approved password manager can help, with a responsible adult following school account rules.",
+      "dialogue": "Our examples are invented.",
+      "status": "Class 8 Future Lab",
+      "tone": "trouble",
+      "start": 14.517,
+      "duration": 15.979
+    },
+    {
+      "id": "class8-account-control-3",
+      "label": "How it works",
+      "title": "Another check",
+      "mood": "thinking",
+      "caption": "The club enables an additional sign-in check through its known settings. This makes a stolen password less useful, but does not make the account invincible. A request to approve an unexpected sign-in should be refused and discussed with the teacher.",
+      "dialogue": "Did we start this sign-in?",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 31.145,
+      "duration": 15.467
+    },
+    {
+      "id": "class8-account-control-4",
+      "label": "Your decision",
+      "title": "Choose a response",
+      "mood": "thinking",
+      "caption": "Your decision is whether to keep the reused secret, change only the final digit, or replace it with a unique passphrase and review protection. The teacher supervises the change without asking anyone to share the new secret.",
+      "dialogue": "Help does not require knowing your secret.",
+      "status": "Class 8 Future Lab",
+      "tone": "normal",
+      "start": 47.262,
+      "duration": 14.507
+    },
+    {
+      "id": "class8-account-control-5",
+      "label": "What changes",
+      "title": "Plan for losing access",
+      "mood": "happy",
+      "caption": "Recovery is a separate route for getting back in when ordinary sign-in fails. The club checks its approved recovery contact and stores fictional recovery material safely. A second check cannot help if every recovery route has been neglected.",
+      "dialogue": "Prepare before a problem.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 62.419,
+      "duration": 15.552
+    },
+    {
+      "id": "class8-account-control-6",
+      "label": "Enter the lab",
+      "title": "The device is missing",
+      "mood": "happy",
+      "caption": "Now the sign-in device is unavailable before an exhibition. Use the approved recovery route with the responsible teacher, then review protection again. In practice, distinguish a deliberate sign-in from an unexpected approval request and a recovery attempt.",
+      "dialogue": "No real passwords in this lab.",
+      "status": "Class 8 Future Lab",
+      "tone": "resolved",
+      "start": 78.621,
+      "duration": 16.619
+    }
+  ]
+}
