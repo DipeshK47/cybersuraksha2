@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Check, FlaskConical, RotateCcw } from "lucide-react";
 import type { Class8Task, TaskAnswer } from "../../../../data/class8/types";
 import { buildTaskEvidence } from "./task-evidence";
 import { simulateRoute, testModel, testPermissions } from "./task-evaluation";
+import { makeTaskSimulation, type TaskSimulationSnapshot } from "./task-simulation";
 import { ui, useEvidenceLanguage } from "./ui";
 import s from "./class8.module.css";
 
@@ -15,15 +16,28 @@ export function initialAnswer(task: Class8Task): TaskAnswer {
   return task.kind === "choice" ? "" : {};
 }
 
-export function TaskBoard({ task, answer, onChange, onCheck, disabled = false }: {
-  task: Class8Task; answer: TaskAnswer; onChange: (answer: TaskAnswer) => void; onCheck: () => void; disabled?: boolean;
+export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disabled = false, onSimulationChange }: {
+  task: Class8Task; answer: TaskAnswer; onChange: (answer: TaskAnswer) => void; onCheck: () => void; disabled?: boolean; onSimulationChange?: (snapshot: TaskSimulationSnapshot | null) => void;
 }) {
   const evidenceLanguage = useEvidenceLanguage();
-  const [testedAnswer, setTestedAnswer] = useState("");
+  const [testRun, setTestRun] = useState<{ configuration: string; snapshot: TaskSimulationSnapshot } | null>(null);
+  const configuration = JSON.stringify(task);
+  const simulationListener = useRef(onSimulationChange);
+  useEffect(() => { simulationListener.current = onSimulationChange; });
   const selected = Array.isArray(answer) ? answer as string[] : [];
   const values = typeof answer === "object" && !Array.isArray(answer) ? answer : {};
   const serialized = JSON.stringify(answer);
-  const tested = testedAnswer === serialized;
+  const snapshot = testRun?.configuration === configuration && testRun.snapshot.fingerprint === serialized ? testRun.snapshot : null;
+  const tested = snapshot !== null;
+  // Once an input/configuration changes, returning to an old answer still requires a new test.
+  useEffect(() => { setTestRun(null); }, [serialized, configuration]);
+  useEffect(() => { simulationListener.current?.(snapshot); }, [snapshot]);
+  useEffect(() => () => { simulationListener.current?.(null); }, []);
+  function onChange(value: TaskAnswer) { setTestRun(null); changeAnswer(value); }
+  function runTest() {
+    const snapshot = makeTaskSimulation(task, answer);
+    setTestRun(snapshot ? { configuration, snapshot } : null);
+  }
   const needsTest = task.kind === "route" || task.kind === "model" || (task.kind === "match" && task.presentation === "permissions");
   const toggle = (id: string) => onChange(selected.includes(id) ? selected.filter(item => item !== id) : [...selected, id]);
   const checkButton = <button className={s.primary} type="button" disabled={disabled || (needsTest && !tested)} onClick={onCheck}><Check aria-hidden="true" />{ui.check[evidenceLanguage]}</button>;
@@ -50,7 +64,7 @@ export function TaskBoard({ task, answer, onChange, onCheck, disabled = false }:
       return <div className={s.robot}><div className={s.grid} aria-hidden="true" style={{ gridTemplateColumns: `repeat(${task.width}, minmax(0, 1fr))` }}>{Array.from({ length: task.width * task.height }, (_, cell) => <div className={s.robotCell} data-blocked={task.blocked.includes(cell)} data-visited={result.path.includes(cell)} key={cell}><span>{task.blocked.includes(cell) ? "×" : result.position === cell ? "◆" : cell === task.goal ? "◎" : task.stops?.includes(cell) ? "★" : "·"}</span><small>{cell === task.start ? ui.started[evidenceLanguage] : cell === task.goal ? ui.goal[evidenceLanguage] : task.stops?.includes(cell) ? ui.stop[evidenceLanguage] : ""}</small>{task.cellCosts && !task.blocked.includes(cell) && <small translate="no">{ui.cellEntryCost[evidenceLanguage]}: {task.cellCosts[String(cell)] ?? 1}</small>}</div>)}</div>{(task.cellCosts || task.maxCost != null) && <p translate="no">{ui.routeCost[evidenceLanguage]}: {result.cost}{task.maxCost != null && <> / {ui.costBudget[evidenceLanguage]}: {task.maxCost}</>}. {ui.startFree[evidenceLanguage]}</p>}<div className={s.directions}>{([["up", ArrowUp], ["left", ArrowLeft], ["down", ArrowDown], ["right", ArrowRight]] as const).map(([id, Icon]) => <button type="button" className={s.secondary} key={id} disabled={disabled || selected.length >= task.maxSteps} onClick={() => onChange([...selected, id])}><Icon aria-hidden="true" />{ui[id][evidenceLanguage]}</button>)}</div><ol className={s.moveList} aria-label={ui.plan[evidenceLanguage]}>{selected.map((move, index) => <li key={index}>{index + 1}. {ui[move as "up" | "right" | "down" | "left"]?.[evidenceLanguage]}</li>)}</ol><p>{selected.length} / {task.maxSteps}</p><button type="button" className={s.secondary} disabled={disabled || !selected.length} onClick={() => onChange(selected.slice(0, -1))}>{ui.undo[evidenceLanguage]}</button>{tested && <p role="status" className={s.result}>{result.valid ? ui.routeOk[evidenceLanguage] : ui.routeFail[evidenceLanguage]}{buildTaskEvidence(task, answer).slice(2).map(line => <span key={line.label.en} translate="no"> {line.label[evidenceLanguage]}: {line.value[evidenceLanguage]}.</span>)}</p>}</div>;
     })()}
     {task.kind === "model" && <div className={s.model}><p>{ui.modelNote[evidenceLanguage]}</p><h3>{ui.training[evidenceLanguage]}</h3><p>{task.feature[evidenceLanguage]}</p><div className={s.choices}>{task.examples.map(row => <label className={s.selection} key={row.id}><input type="checkbox" checked={selected.includes(row.id)} disabled={disabled} onChange={() => toggle(row.id)} /><span>{row.id} · {row.value} · {task.labels.find(label => label.id === row.label)?.label[evidenceLanguage]}</span></label>)}</div><h3>{task.checkRole === "validation" ? ui.validation[evidenceLanguage] : ui.testing[evidenceLanguage]}</h3><div className={s.tableWrap}><table><thead><tr><th>{task.feature[evidenceLanguage]}</th><th>{ui.expected[evidenceLanguage]}</th>{tested && <th>{ui.predicted[evidenceLanguage]}</th>}</tr></thead><tbody>{testModel(task, selected).map(row => <tr key={row.id}><td>{row.id} · {row.value}</td><td>{task.labels.find(label => label.id === row.expected)?.label[evidenceLanguage]}</td>{tested && <td>{task.labels.find(label => label.id === row.predicted)?.label[evidenceLanguage] ?? ui.uncertain[evidenceLanguage]}</td>}</tr>)}</tbody></table></div></div>}
-    {needsTest && <button type="button" className={s.secondary} disabled={disabled} onClick={() => setTestedAnswer(serialized)}><FlaskConical aria-hidden="true" />{ui.test[evidenceLanguage]}</button>}
+    {needsTest && <button type="button" className={s.secondary} disabled={disabled} onClick={runTest}><FlaskConical aria-hidden="true" />{ui.test[evidenceLanguage]}</button>}
     {tested && task.kind === "match" && task.presentation === "permissions" && <div className={s.result} role="status"><h3>{ui.preview[evidenceLanguage]}</h3>{testPermissions(task, values).map(test => <p key={test.label.en}><strong>{test.label[evidenceLanguage]}</strong><br />{test.result[evidenceLanguage]}</p>)}</div>}
     <div className={s.actions}>{checkButton}</div>
   </div>;

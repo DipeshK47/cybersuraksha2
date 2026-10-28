@@ -63,7 +63,9 @@ export function evaluateTask(task: Class8Task, answer: TaskAnswer): { correct: b
       if (fields(answer)) failure = task.rows.find(row => answer[row.id] !== row.answer)?.explanation ?? failure;
       break;
     }
-    case "order": correct = strings(answer) && answer.length === task.expected.length && task.expected.every((id, index) => answer[index] === id); break;
+    case "order": correct = strings(answer) && (task.prerequisites
+      ? exactSet(answer, task.expected) && task.prerequisites.every(edge => answer.includes(edge.before) && answer.includes(edge.after) && answer.indexOf(edge.before) < answer.indexOf(edge.after))
+      : answer.length === task.expected.length && task.expected.every((id, index) => answer[index] === id)); break;
     case "number": correct = fields(answer) && task.fields.every(row => {
       const value = answer[row.id];
       if (typeof value !== "string" || !value.trim()) return false;

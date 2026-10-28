@@ -54,6 +54,21 @@ export function diagnoseTask(task: Class8Task, answer: TaskAnswer): TaskDiagnosi
       }
       break;
     case "order":
+      if (task.prerequisites) {
+        const label = (id: string) => task.items.find(item => item.id === id)?.label ?? literal(id);
+        for (const id of task.expected) {
+          if (!selected.includes(id as never)) add(false, `missing-${id}`, combine(l("Missing:", "छूट गया:"), label(id)), l("Include this step once in your schedule.", "इस कदम को अपने क्रम में एक बार शामिल करें।"));
+        }
+        for (const id of new Set<string | number>(selected)) {
+          if (!task.expected.includes(String(id))) add(false, `unknown-${id}`, literal(id), l("This ID is not a step in the supplied schedule. Remove it.", "यह आईडी दिए गए क्रम का कदम नहीं है। इसे हटाएँ।"));
+          if (selected.filter(value => value === id).length > 1) add(false, `duplicate-${id}`, combine(l("Duplicate:", "दोहराया गया:"), label(String(id))), l("Each step must appear exactly once. Remove the repeated step.", "हर कदम ठीक एक बार होना चाहिए। दोहराया गया कदम हटाएँ।"));
+        }
+        for (const edge of task.prerequisites) {
+          const before = selected.indexOf(edge.before as never), after = selected.indexOf(edge.after as never);
+          if (before >= 0 && after >= 0) add(before < after, `edge-${edge.before}-${edge.after}`, l(`${label(edge.before).en} before ${label(edge.after).en}`, `${label(edge.before).hi} के बाद ${label(edge.after).hi}`), edge.reason);
+        }
+        break;
+      }
       task.expected.forEach((id, index) => {
         const expected = task.items.find(item => item.id === id)!;
         const actual = task.items.find(item => item.id === selected[index]);

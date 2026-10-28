@@ -3,9 +3,9 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import type { ReactNode } from "react";
-import { useRef, useState, useSyncExternalStore } from "react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { StoryCharacter } from "./StoryCharacter";
-import type { StoryChapter } from "./types";
+import type { StoryChapter, StoryMediaClock } from "./types";
 import s from "./story-player.module.css";
 
 function subscribeLanguage(changed: () => void) {
@@ -15,6 +15,19 @@ function subscribeLanguage(changed: () => void) {
 }
 const currentLanguage = () => document.documentElement.lang;
 const serverLanguage = () => "en";
+
+/** Keep the visualization clock scene-local even before React receives an audio timeupdate. */
+export function createStoryMediaClock(options: {
+  start: number; duration: number; readTime: () => number; readLimit: () => number;
+  pause: () => void; resume: () => void;
+}): StoryMediaClock {
+  return {
+    duration: options.duration,
+    readElapsed: () => Math.max(0, Math.min(options.duration, Math.min(options.readTime(), options.readLimit()) - options.start)),
+    pause: options.pause,
+    resume: options.resume,
+  };
+}
 
 /** Scene-to-scene transition every chapter world uses, so all stories move the same way. */
 export function SceneSwap({ scene, reduced, children }: { scene: number; reduced: boolean; children: ReactNode }) {
@@ -80,7 +93,7 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     await start();
   }
   function trackAudio() {
-    if (!audio.current) return;
+    if (!audio.current || audioUnavailable || audio.current.readyState === 0) return;
     let next = audio.current.currentTime;
     if (!solvedRef.current && next >= scenes[gate + 1].start) {
       next = scenes[gate + 1].start - .05;
@@ -99,13 +112,28 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     setTime(scenes[gate + 1].start);
     if (resume && !audioUnavailable) await start();
   }
+  // Read changing playback state through a ref so timeupdate does not replace the adapter.
+  const mediaState = useRef({ time, audioUnavailable, play, trackAudio });
+  mediaState.current = { time, audioUnavailable, play, trackAudio };
+  const gateStart = scenes[gate + 1].start;
+  const media = useMemo(() => createStoryMediaClock({
+    start: current.start,
+    duration: current.duration,
+    readTime: () => {
+      const element = audio.current;
+      return element && element.readyState > 0 && !mediaState.current.audioUnavailable && Number.isFinite(element.currentTime) ? element.currentTime : mediaState.current.time;
+    },
+    readLimit: () => solvedRef.current ? Infinity : gateStart - .05,
+    pause: () => { mediaState.current.trackAudio(); audio.current?.pause(); setPlaying(false); },
+    resume: () => { void mediaState.current.play(); },
+  }), [scene, source, current.start, current.duration, gateStart]);
   const advance = () => scene === scenes.length - 1 ? onBegin() : void jump(scene + 1);
   const Icon = chapter.icon;
 
   return <section className={`${s.intro} ${slug === "password-vault-builder" ? "" : s.polishedMotion}`} data-story-player={slug} data-scene={scene} data-gate={gate} data-playing={playing} data-waiting={waiting} data-solved={solved}>
     <audio key={source} ref={audio} src={source} preload="metadata" muted={muted}
       onLoadedMetadata={() => { if (audio.current) audio.current.currentTime = time; }}
-      onTimeUpdate={trackAudio} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
+      onTimeUpdate={trackAudio} onPlay={() => setPlaying(true)} onPause={() => { trackAudio(); setPlaying(false); }}
       onEnded={() => { setPlaying(false); setFinished(true); setTime(duration); }}
       onError={() => { setAudioUnavailable(true); setPlaying(false); }} />
     <header className={s.header}>
@@ -128,7 +156,7 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
         <div className={s.name}><span>{chapter.character.name}</span><span>{current.status}</span></div>
       </div>
       <div className={s.storyWorld}>
-        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} onActivity={onActivity} reduced={reduced} />
+        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} onActivity={onActivity} reduced={reduced} media={media} />
       </div>
     </div>
     <div className={s.storyText}>

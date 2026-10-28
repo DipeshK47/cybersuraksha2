@@ -13,7 +13,7 @@ export type MatchTask = TaskBase & {
   presentation?: "match" | "permissions" | "dataset";
   simulation?: { label: L; checks: { rowId: string; allowedAnswers: string[] }[]; allowed: L; denied: L }[];
 };
-export type OrderTask = TaskBase & { kind: "order"; items: { id: string; label: L }[]; expected: string[]; stepReasons?: L[] };
+export type OrderTask = TaskBase & { kind: "order"; items: { id: string; label: L }[]; expected: string[]; prerequisites?: { before: string; after: string; reason: L }[]; stepReasons?: L[] };
 export type NumberTask = TaskBase & { kind: "number"; fields: { id: string; label: L; answer: number; min?: number; max?: number; explanation?: L }[] };
 export type BinaryTask = TaskBase & { kind: "binary"; target: number; bits: 8 };
 export type GridTask = TaskBase & { kind: "grid"; width: number; height: number; expected: number[]; blocked?: number[]; caption: L; cellReasons?: Record<string,L> };

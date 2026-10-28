@@ -29,6 +29,9 @@ export type StoryScene = {
 
 export type StoryScript = { duration: number; scenes: StoryScene[] };
 
+/** A scene-local, audio-authoritative clock for an optional concept visualization. */
+export type StoryMediaClock = { readElapsed: () => number; duration: number; pause: () => void; resume: () => void };
+
 /** Props handed to a chapter's world panel. The panel stays mounted across scenes, so its own state persists. */
 export type StoryWorldProps = {
   scene: number;
@@ -44,6 +47,7 @@ export type StoryWorldProps = {
   /** Managed worlds record complete checked answers and bounded evidence directly. */
   onActivity?: (type: string, payload?: unknown) => void;
   reduced: boolean;
+  media?: StoryMediaClock;
 };
 
 export type StoryChapter = {
