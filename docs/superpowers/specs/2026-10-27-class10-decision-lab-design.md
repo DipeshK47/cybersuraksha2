@@ -1,6 +1,6 @@
 # Class 10 Decision Lab: course and animation design
 
-Status: proposed for user review on 27 October 2026. No Class 10 implementation has started.
+Status: approved by the user on 27 October 2026, including the complete course, cast, Indian English narration, explanatory animations and controls. Implementation is in progress.
 
 Repository: `cybersuraksha2`. Working branch: `feat/class10-decision-lab`, starting at the delivered Class 8/9 commit `74034c0`, which is also on remote `main`.
 
