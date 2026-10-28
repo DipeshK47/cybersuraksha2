@@ -1,0 +1,93 @@
+{
+  "duration": 104.844,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "62d74955915a4f58ffc892503c641e7047231211a167ad8b388d0da8a00fe08c",
+  "scenes": [
+    {
+      "id": "class10-file-access-paths-1",
+      "label": "Meet the team",
+      "title": "A direct invitation",
+      "mood": "thinking",
+      "caption": "Aditi draws a fictional poster file on the Decision Lab board. Vihaan has a direct invitation to read it. They trace his request through that edge and record why the page opens.",
+      "speech": "Aditi draws a fictional poster file on the Decision Lab board. Vihaan has a direct invitation to read it. They trace his request through that edge and record why the page opens.",
+      "dialogue": "Name the path, not just the result.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.416
+    },
+    {
+      "id": "class10-file-access-paths-2",
+      "label": "The problem",
+      "title": "A group also reaches it",
+      "mood": "surprise",
+      "caption": "The Bulletin group also has read access, and Vihaan is a member. A second route now reaches the same file. Counting routes explains access, but counting the file twice would exaggerate the number of distinct files exposed.",
+      "speech": "The Bulletin group also has read access, and Vihaan is a member. A second route now reaches the same file. Counting routes explains access, but counting the file twice would exaggerate the number of distinct files exposed.",
+      "dialogue": "Several paths can lead to one file.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 14.066,
+      "duration": 16.752
+    },
+    {
+      "id": "class10-file-access-paths-3",
+      "label": "How it works",
+      "title": "A link crosses the boundary",
+      "mood": "thinking",
+      "caption": "A public link introduces another route that does not require group membership. The fictional visitor account can now open the poster. Aditi marks the link separately, because removing a named person cannot cancel access granted to anyone holding that link.",
+      "speech": "A public link introduces another route that does not require group membership. The fictional visitor account can now open the poster. Aditi marks the link separately, because removing a named person cannot cancel access granted to anyone holding that link.",
+      "dialogue": "A public route needs its own review.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 31.468,
+      "duration": 18.672
+    },
+    {
+      "id": "class10-file-access-paths-4",
+      "label": "Your decision",
+      "title": "One edge disappears",
+      "mood": "thinking",
+      "caption": "Vihaan removes his direct invitation and predicts refusal. His test still opens the file through the group, while the public link also remains enabled. The result challenges his prediction without implying that the removal itself failed to save.",
+      "speech": "Vihaan removes his direct invitation and predicts refusal. His test still opens the file through the group, while the public link also remains enabled. The result challenges his prediction without implying that the removal itself failed to save.",
+      "dialogue": "Inspect surviving routes after a change.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 50.79,
+      "duration": 17.88
+    },
+    {
+      "id": "class10-file-access-paths-5",
+      "label": "What changes",
+      "title": "Close the unintended routes",
+      "mood": "happy",
+      "caption": "The teacher removes the old group permission and disables the public link. Aditi keeps her named editor permission for maintaining the poster. The revised ledger distinguishes removing an access path from deleting either the file or an account.",
+      "speech": "The teacher removes the old group permission and disables the public link. Aditi keeps her named editor permission for maintaining the poster. The revised ledger distinguishes removing an access path from deleting either the file or an account.",
+      "dialogue": "Preserve the route that the job still needs.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 69.32,
+      "duration": 16.752
+    },
+    {
+      "id": "class10-file-access-paths-6",
+      "label": "Enter the lab",
+      "title": "Test both outcomes",
+      "mood": "happy",
+      "caption": "A new visitor request is refused, and Aditi can still save the planned correction. Your access-path ledger must record both outcomes and the settings tested. These current checks cannot retrieve copies someone might have downloaded before the changes.",
+      "speech": "A new visitor request is refused, and Aditi can still save the planned correction. Your access-path ledger must record both outcomes and the settings tested. These current checks cannot retrieve copies someone might have downloaded before the changes.",
+      "dialogue": "Refusal and permitted work both matter.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 86.722,
+      "duration": 17.472
+    }
+  ]
+}

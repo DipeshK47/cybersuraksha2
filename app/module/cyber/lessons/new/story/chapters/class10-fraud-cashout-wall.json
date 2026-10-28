@@ -1,0 +1,93 @@
+{
+  "duration": 111.828,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "22f5a21d60a4d23351703c57149c4c69baa4fa7e200ce2207be3f9d988ae613d",
+  "scenes": [
+    {
+      "id": "class10-fraud-cashout-wall-1",
+      "label": "Meet the team",
+      "title": "A climbing number",
+      "mood": "thinking",
+      "caption": "A fictional trading-game screen enters the Decision Lab. Vihaan watches its balance climb while Aditi asks what the number represents. Nobody trades or connects accounts; the figure is supplied screen data.",
+      "speech": "A fictional trading-game screen enters the Decision Lab. Vihaan watches its balance climb while Aditi asks what the number represents. Nobody trades or connects accounts; the figure is supplied screen data.",
+      "dialogue": "A screen can display a number without transferring funds.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.816
+    },
+    {
+      "id": "class10-fraud-cashout-wall-2",
+      "label": "The problem",
+      "title": "Crowded praise",
+      "mood": "surprise",
+      "caption": "Several testimonial cards repeat the same wording and picture arrangement. Aditi groups the copies rather than counting them as independent witnesses. These cards show screen content, without a separate provider record of received withdrawal.",
+      "speech": "Several testimonial cards repeat the same wording and picture arrangement. Aditi groups the copies rather than counting them as independent witnesses. These cards show screen content, without a separate provider record of received withdrawal.",
+      "dialogue": "Repeated praise is not independent payment evidence.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 16.466,
+      "duration": 17.76
+    },
+    {
+      "id": "class10-fraud-cashout-wall-3",
+      "label": "How it works",
+      "title": "A further payment",
+      "mood": "thinking",
+      "caption": "The withdrawal panel now demands ₹600 before it will release the displayed balance. Vihaan records this as a new payment request, not a completed cash-out. Paying creates further exposure without proving receipt of the promised withdrawal.",
+      "speech": "The withdrawal panel now demands ₹600 before it will release the displayed balance. Vihaan records this as a new payment request, not a completed cash-out. Paying creates further exposure without proving receipt of the promised withdrawal.",
+      "dialogue": "A demand is not evidence of an incoming payment.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 34.876,
+      "duration": 18.192
+    },
+    {
+      "id": "class10-fraud-cashout-wall-4",
+      "label": "Your decision",
+      "title": "Inspect the gap",
+      "mood": "thinking",
+      "caption": "The learner pauses and asks which independent record would support receipt. A screenshot of the same game cannot fill the gap. Their teacher distinguishes interface appeal from evidence about funds, without any test payment.",
+      "speech": "The learner pauses and asks which independent record would support receipt. A screenshot of the same game cannot fill the gap. Their teacher distinguishes interface appeal from evidence about funds, without any test payment.",
+      "dialogue": "Do not buy evidence from the claimant.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 53.718,
+      "duration": 16.008
+    },
+    {
+      "id": "class10-fraud-cashout-wall-5",
+      "label": "What changes",
+      "title": "Separate the records",
+      "mood": "happy",
+      "caption": "The supplied case contains no completed recipient-side provider entry for a withdrawal. Its confirmed received amount is therefore ₹0 within these records. Aditi separates the game balance, preventing display arithmetic becoming a claim of received income.",
+      "speech": "The supplied case contains no completed recipient-side provider entry for a withdrawal. Its confirmed received amount is therefore ₹0 within these records. Aditi separates the game balance, preventing display arithmetic becoming a claim of received income.",
+      "dialogue": "The conclusion is limited to the supplied records.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 70.376,
+      "duration": 18.864
+    },
+    {
+      "id": "class10-fraud-cashout-wall-6",
+      "label": "Enter the lab",
+      "title": "Help without another fee",
+      "mood": "happy",
+      "caption": "Vihaan takes the claim-and-evidence note privately to a trusted adult. They retain the payment demand and relevant fictional references without publishing account details. No recovery is promised. The operator remains unidentified; support does not require solving every unknown.",
+      "speech": "Vihaan takes the claim-and-evidence note privately to a trusted adult. They retain the payment demand and relevant fictional references without publishing account details. No recovery is promised. The operator remains unidentified; support does not require solving every unknown.",
+      "dialogue": "Ask for support before taking another financial step.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 89.89,
+      "duration": 21.288
+    }
+  ]
+}

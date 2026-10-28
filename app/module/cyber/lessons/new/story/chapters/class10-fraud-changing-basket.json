@@ -1,0 +1,93 @@
+{
+  "duration": 111.276,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c219aba213a4038aa8f1fb09815096989f2a36250bb09c4b7798f29238bf7c03",
+  "scenes": [
+    {
+      "id": "class10-fraud-changing-basket-1",
+      "label": "Meet the team",
+      "title": "An item price",
+      "mood": "thinking",
+      "caption": "Decision Lab sketch kits cost ₹240 each. Aditi needs kits for a small group. Vihaan records the unit price, leaving space for quantity and charges before calculating a final bill.",
+      "speech": "Decision Lab sketch kits cost ₹240 each. Aditi needs kits for a small group. Vihaan records the unit price, leaving space for quantity and charges before calculating a final bill.",
+      "dialogue": "A unit price needs a quantity.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.624
+    },
+    {
+      "id": "class10-fraud-changing-basket-2",
+      "label": "The problem",
+      "title": "Build the base total",
+      "mood": "surprise",
+      "caption": "The supplied basket contains 3 kits, a mandatory delivery charge of ₹45 and a mandatory handling charge of ₹15. No other charge or discount applies. Aditi calculates the item subtotal, then adds stated charges with each line visible.",
+      "speech": "The supplied basket contains 3 kits, a mandatory delivery charge of ₹45 and a mandatory handling charge of ₹15. No other charge or discount applies. Aditi calculates the item subtotal, then adds stated charges with each line visible.",
+      "dialogue": "Use only the stated charges.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 16.274,
+      "duration": 19.512
+    },
+    {
+      "id": "class10-fraud-changing-basket-3",
+      "label": "How it works",
+      "title": "A checked extra",
+      "mood": "thinking",
+      "caption": "A storage pouch is already selected at ₹90 for the whole basket. Vihaan places this optional line away from the mandatory charges. A checked box shows basket state, without establishing deliberate choice or understanding of price.",
+      "speech": "A storage pouch is already selected at ₹90 for the whole basket. Vihaan places this optional line away from the mandatory charges. A checked box shows basket state, without establishing deliberate choice or understanding of price.",
+      "dialogue": "Inspect the default before accepting it.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 36.436,
+      "duration": 17.616
+    },
+    {
+      "id": "class10-fraud-changing-basket-4",
+      "label": "Your decision",
+      "title": "Make a deliberate choice",
+      "mood": "thinking",
+      "caption": "The learner compares the basket with and without the pouch. Their teacher asks them to explain whether the group needs it, rather than assuming every extra is fraudulent. They can pause purchasing while privately reconciling quantity and costs.",
+      "speech": "The learner compares the basket with and without the pouch. Their teacher asks them to explain whether the group needs it, rather than assuming every extra is fraudulent. They can pause purchasing while privately reconciling quantity and costs.",
+      "dialogue": "A choice needs an understood consequence.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 54.702,
+      "duration": 17.592
+    },
+    {
+      "id": "class10-fraud-changing-basket-5",
+      "label": "What changes",
+      "title": "Remove the pouch",
+      "mood": "happy",
+      "caption": "Aditi removes the optional pouch in the paper simulation. The mandatory charges remain because their terms have not changed. Vihaan checks that the total falls by the pouch price, without drawing unsupported legal conclusions.",
+      "speech": "Aditi removes the optional pouch in the paper simulation. The mandatory charges remain because their terms have not changed. Vihaan checks that the total falls by the pouch price, without drawing unsupported legal conclusions.",
+      "dialogue": "Removing one line does not remove every charge.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 72.944,
+      "duration": 16.368
+    },
+    {
+      "id": "class10-fraud-changing-basket-6",
+      "label": "Enter the lab",
+      "title": "Record the actual terms",
+      "mood": "happy",
+      "caption": "The final displayed amount without the pouch is ₹780. Their price and consent record keeps the advertisement, quantity, mandatory fees and removed extra together. Later changes require another comparison before purchasing, even when the headline looks attractive.",
+      "speech": "The final displayed amount without the pouch is ₹780. Their price and consent record keeps the advertisement, quantity, mandatory fees and removed extra together. Later changes require another comparison before purchasing, even when the headline looks attractive.",
+      "dialogue": "Document the terms you actually reviewed.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 89.962,
+      "duration": 20.664
+    }
+  ]
+}

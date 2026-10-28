@@ -167,6 +167,33 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
   }
   assert.equal((await request('/api/activity',ninthCookie,'POST',{moduleId:current[0].id,type:'module_started',payload:{}})).status,200);
  });
+ await t.test('Class 10 replacement preserves legacy marks and evidence while denying old module access',async()=>{
+  const created=await json('/api/admin/classes',admin,'POST',{grade:10,section:'Q',name:'10Q'},201);
+  const issued=await json('/api/students',admin,'POST',{className:'10Q',students:[{rollNo:'101',name:'Class Ten History Learner'}]},201);
+  const tenthLearner=issued.students[0];
+  const tenthCookie=await login('student',{school:'dps-rkp',className:'10Q',rollNo:'101',password:tenthLearner.accessCode});
+  const legacyId='cyber-upper-ct-algorithm-optimization';
+  await db.prepare('INSERT INTO learning_attempts (id,student_id,module_id,started_at,last_active_at,completed_at,score,legacy) VALUES (?,?,?,?,?,?,?,?)').bind('fixture:class10:legacy',tenthLearner.id,legacyId,1,3,3,75,1).run();
+  await db.prepare('INSERT INTO learning_events (id,attempt_id,type,payload,created_at) VALUES (?,?,?,?,?)').bind('fixture:class10:event','fixture:class10:legacy','question_answered',JSON.stringify({id:'algorithm-optimization-check-1',correct:false,feedback:'Preserve the original Class 10 reasoning.'}),2).run();
+  const teacherRow=await db.prepare('SELECT id FROM teachers WHERE email=?').bind('teacher@dpsrkp.edu.in').first();
+  await db.prepare('INSERT INTO assignments (id,school_id,teacher_id,class_id,title,module_ids,due_at,total_marks,created_at,published_at) VALUES (?,?,?,?,?,?,?,?,?,?)').bind(401,1,teacherRow.id,created.class.id,'Historical Class 10 lesson',JSON.stringify([legacyId]),Date.now()+86400000,20,1,2).run();
+  await db.prepare('INSERT INTO assignment_students (assignment_id,student_id) VALUES (?,?)').bind(401,tenthLearner.id).run();
+  const history=await json(`/api/lms/students/${tenthLearner.id}`,admin);
+  assert.equal(history.attempts.find(a=>a.id==='fixture:class10:legacy').score,75);
+  assert.ok(history.events.some(e=>e.id==='fixture:class10:event'));
+  const oldReport=await json('/api/lms/assignments/401',admin);
+  assert.equal(oldReport.students.find(s=>s.id===tenthLearner.id).progress.marks,15);
+  assert.equal((await request(`/api/lms/students/${tenthLearner.id}`,other)).status,404);
+  assert.equal((await request('/api/lms/inbox/401',tenthCookie)).status,403);
+  const current=workspace.modules.filter(m=>m.grades.includes(10));
+  assert.equal(current.length,32);
+  assert.ok(current.every(m=>m.id.startsWith('cyber-class10-')));
+  for(const moduleId of [legacyId,workspace.modules.find(m=>m.id.startsWith('cyber-class9-')).id]){
+   assert.equal((await request('/api/activity',tenthCookie,'POST',{moduleId,type:'module_started',payload:{}})).status,403);
+   assert.equal((await request('/api/module-runs',tenthCookie,'POST',{moduleId})).status,403);
+  }
+  assert.equal((await request('/api/activity',tenthCookie,'POST',{moduleId:current[0].id,type:'module_started',payload:{}})).status,200);
+ });
  await t.test('school curriculum changes take effect on APIs immediately',async()=>{
   const settings=await json('/api/admin/school',admin);
   await json('/api/admin/school',admin,'PUT',{schoolName:settings.schoolName,grades:[6],subjects:['Cybersecurity']});

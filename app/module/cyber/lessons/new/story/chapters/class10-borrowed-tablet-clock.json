@@ -1,0 +1,93 @@
+{
+  "duration": 107.268,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "54e851310a3749e9630f15ce32594878e7942090df37c09096ae378c977aadfb",
+  "scenes": [
+    {
+      "id": "class10-borrowed-tablet-clock-1",
+      "label": "Meet the team",
+      "title": "Two clocks disagree",
+      "mood": "thinking",
+      "caption": "Aditi and Vihaan inspect invented observation cards in the Decision Lab. The borrowed tablet is documented as seven minutes fast relative to reference. Events use whole minutes since midnight within one stated day.",
+      "speech": "Aditi and Vihaan inspect invented observation cards in the Decision Lab. The borrowed tablet is documented as seven minutes fast relative to reference. Events use whole minutes since midnight within one stated day.",
+      "dialogue": "Keep the documented offset visible.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.432
+    },
+    {
+      "id": "class10-borrowed-tablet-clock-2",
+      "label": "The problem",
+      "title": "The apparent order",
+      "mood": "surprise",
+      "caption": "Reference and tablet cards appear reversed when sorted by displayed values. Vihaan almost calls the sequence impossible. Aditi asks whether the numbers share a clock basis before interpreting the order or inventing a cause.",
+      "speech": "Reference and tablet cards appear reversed when sorted by displayed values. Vihaan almost calls the sequence impossible. Aditi asks whether the numbers share a clock basis before interpreting the order or inventing a cause.",
+      "dialogue": "Different clock bases can mislead an ordering.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 16.082,
+      "duration": 16.584
+    },
+    {
+      "id": "class10-borrowed-tablet-clock-3",
+      "label": "How it works",
+      "title": "Apply the documented correction",
+      "mood": "thinking",
+      "caption": "They subtract the documented fast offset from each tablet value and leave reference values unchanged. Corrected cards share the supplied basis. No hidden timezone or daylight-saving rule applies; the example stays within the same day.",
+      "speech": "They subtract the documented fast offset from each tablet value and leave reference values unchanged. Corrected cards share the supplied basis. No hidden timezone or daylight-saving rule applies; the example stays within the same day.",
+      "dialogue": "A fast clock needs subtraction here.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 33.316,
+      "duration": 17.904
+    },
+    {
+      "id": "class10-borrowed-tablet-clock-4",
+      "label": "Your decision",
+      "title": "Observations are not identities",
+      "mood": "thinking",
+      "caption": "The normalized sequence describes when observations occurred on that basis. It does not identify who held the tablet or why a page changed. Vihaan puts those guesses in unresolved fields instead of the observation labels.",
+      "speech": "The normalized sequence describes when observations occurred on that basis. It does not identify who held the tablet or why a page changed. Vihaan puts those guesses in unresolved fields instead of the observation labels.",
+      "dialogue": "A time conversion cannot supply a missing actor.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 51.87,
+      "duration": 16.896
+    },
+    {
+      "id": "class10-borrowed-tablet-clock-5",
+      "label": "What changes",
+      "title": "Build a reproducible timeline",
+      "mood": "happy",
+      "caption": "Aditi places each card by its normalized minute and retains the original displayed value beside it. The teacher can reproduce the calculation from the same offset. Their timeline explains the changed order without claiming that order proves causation.",
+      "speech": "Aditi places each card by its normalized minute and retains the original displayed value beside it. The teacher can reproduce the calculation from the same offset. Their timeline explains the changed order without claiming that order proves causation.",
+      "dialogue": "Keep original and converted values together.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 69.416,
+      "duration": 18.528
+    },
+    {
+      "id": "class10-borrowed-tablet-clock-6",
+      "label": "Enter the lab",
+      "title": "Leave unknowns visible",
+      "mood": "happy",
+      "caption": "The finished record labels the clock basis, offset and same-day assumption, while actor and cause remain unknown. Your evidence must let another learner repeat the conversion and distinguish chronology from unsupported intention or responsibility claims.",
+      "speech": "The finished record labels the clock basis, offset and same-day assumption, while actor and cause remain unknown. Your evidence must let another learner repeat the conversion and distinguish chronology from unsupported intention or responsibility claims.",
+      "dialogue": "A cautious timeline can be useful with unknown fields.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 88.594,
+      "duration": 18.024
+    }
+  ]
+}

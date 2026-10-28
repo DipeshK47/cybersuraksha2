@@ -1,0 +1,93 @@
+{
+  "duration": 111.54,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "f95f978803b579e02d5debe56d346b272d98ca80892e99245e56337391b6e7fb",
+  "scenes": [
+    {
+      "id": "class10-ai-threshold-workload-1",
+      "label": "Meet the team",
+      "title": "Scores on an axis",
+      "mood": "thinking",
+      "caption": "Vihaan lines up six fictional notice cards in the Decision Lab. Their supplied scores are 90, 80, 70, 60, 40 and 20. These numbers rank cases; nobody has established that they are calibrated probabilities.",
+      "speech": "Vihaan lines up six fictional notice cards in the Decision Lab. Their supplied scores are 90, 80, 70, 60, 40 and 20. These numbers rank cases; nobody has established that they are calibrated probabilities.",
+      "dialogue": "Scores are supplied measurements here.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.928
+    },
+    {
+      "id": "class10-ai-threshold-workload-2",
+      "label": "The problem",
+      "title": "Draw the dividing line",
+      "mood": "surprise",
+      "caption": "Aditi defines positive as a notice needing specialist review. Checked positives are A, C, D and F. With threshold 70, scores at or above the line are flagged: A, B and C. Equality belongs on the flagged side.",
+      "speech": "Aditi defines positive as a notice needing specialist review. Checked positives are A, C, D and F. With threshold 70, scores at or above the line are flagged: A, B and C. Equality belongs on the flagged side.",
+      "dialogue": "State what equality means.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 18.578,
+      "duration": 18.336
+    },
+    {
+      "id": "class10-ai-threshold-workload-3",
+      "label": "How it works",
+      "title": "Move the boundary",
+      "mood": "thinking",
+      "caption": "Lowering the threshold to 50 adds D to the review queue. Lowering it again to 30 adds E. Checked labels stay fixed, so the changing workload and mistakes come from a decision boundary moving across unchanged cards.",
+      "speech": "Lowering the threshold to 50 adds D to the review queue. Lowering it again to 30 adds E. Checked labels stay fixed, so the changing workload and mistakes come from a decision boundary moving across unchanged cards.",
+      "dialogue": "Move the rule, keep the cases.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 37.564,
+      "duration": 15.408
+    },
+    {
+      "id": "class10-ai-threshold-workload-4",
+      "label": "Your decision",
+      "title": "A tempting setting",
+      "mood": "thinking",
+      "caption": "The team can review at most 3 cards and permits at most 1 missed positive. Choose whether any supplied threshold satisfies both conditions. Aditi refuses to describe a setting as acceptable merely because its missed-case count improves.",
+      "speech": "The team can review at most 3 cards and permits at most 1 missed positive. Choose whether any supplied threshold satisfies both conditions. Aditi refuses to describe a setting as acceptable merely because its missed-case count improves.",
+      "dialogue": "Do both limits fit at once?",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 53.622,
+      "duration": 18.072
+    },
+    {
+      "id": "class10-ai-threshold-workload-5",
+      "label": "What changes",
+      "title": "Recount the same cards",
+      "mood": "happy",
+      "caption": "Threshold 70 needs 3 reviews and misses 2 positives. Threshold 50 needs 4 reviews and misses 1. Threshold 30 needs 5 reviews and misses 1. The lower settings reduce one miss but exceed the available review capacity.",
+      "speech": "Threshold 70 needs 3 reviews and misses 2 positives. Threshold 50 needs 4 reviews and misses 1. Threshold 30 needs 5 reviews and misses 1. The lower settings reduce one miss but exceed the available review capacity.",
+      "dialogue": "Write workload beside missed cases.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 72.344,
+      "duration": 18.456
+    },
+    {
+      "id": "class10-ai-threshold-workload-6",
+      "label": "Enter the lab",
+      "title": "Send the plan back",
+      "mood": "happy",
+      "caption": "None of these settings meets both constraints. Vihaan records the conflict and requests a revised plan, representative evidence and a human fallback before any pilot. Tuning on this visible validation pack cannot guarantee performance on fresh unseen cases.",
+      "speech": "None of these settings meets both constraints. Vihaan records the conflict and requests a revised plan, representative evidence and a human fallback before any pilot. Tuning on this visible validation pack cannot guarantee performance on fresh unseen cases.",
+      "dialogue": "An honest conflict is a useful result.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 91.45,
+      "duration": 19.44
+    }
+  ]
+}

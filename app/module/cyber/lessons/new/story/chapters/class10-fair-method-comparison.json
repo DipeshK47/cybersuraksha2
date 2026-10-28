@@ -1,0 +1,93 @@
+{
+  "duration": 113.268,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "b567a851d243d6b4699632e2a62a05c29a7260c4a1d156bdfda0b46ddae4931d",
+  "scenes": [
+    {
+      "id": "class10-fair-method-comparison-1",
+      "label": "Meet the team",
+      "title": "One input, two lanes",
+      "mood": "thinking",
+      "caption": "In the Decision Lab, Aditi gives both methods the same fictional card batch and the same required result. Vihaan states a counted operation before starting. Fair comparison needs matching inputs, outputs and counting rules.",
+      "speech": "In the Decision Lab, Aditi gives both methods the same fictional card batch and the same required result. Vihaan states a counted operation before starting. Fair comparison needs matching inputs, outputs and counting rules.",
+      "dialogue": "Define the unit of work first.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.112
+    },
+    {
+      "id": "class10-fair-method-comparison-2",
+      "label": "The problem",
+      "title": "Count inspections",
+      "mood": "surprise",
+      "caption": "Method A inspects each card once. Method B inspects every ordered pair, including pairs of a card with itself. Neither exits early in this supplied model. The counters record inspections only, leaving setup, loop control and elapsed time outside this particular measurement.",
+      "speech": "Method A inspects each card once. Method B inspects every ordered pair, including pairs of a card with itself. Neither exits early in this supplied model. The counters record inspections only, leaving setup, loop control and elapsed time outside this particular measurement.",
+      "dialogue": "Do not count an unrequested operation.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 17.762,
+      "duration": 21.672
+    },
+    {
+      "id": "class10-fair-method-comparison-3",
+      "label": "How it works",
+      "title": "Double the input",
+      "mood": "thinking",
+      "caption": "They double the batch while leaving both algorithms unchanged. Aditi keeps the operation definition fixed. The new counts follow from the rules, not from how quickly the animation seems to move.",
+      "speech": "They double the batch while leaving both algorithms unchanged. Aditi keeps the operation definition fixed. The new counts follow from the rules, not from how quickly the animation seems to move.",
+      "dialogue": "Keep the counting convention fixed.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 40.084,
+      "duration": 14.688
+    },
+    {
+      "id": "class10-fair-method-comparison-4",
+      "label": "Your decision",
+      "title": "Predict before measuring",
+      "mood": "thinking",
+      "caption": "Vihaan suggests that both totals must merely double because both received twice as many cards. Decide using the explicit inspection formulas. Their prediction includes counts and the assumptions supporting those formulas.",
+      "speech": "Vihaan suggests that both totals must merely double because both received twice as many cards. Decide using the explicit inspection formulas. Their prediction includes counts and the assumptions supporting those formulas.",
+      "dialogue": "A pair count depends on both positions.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 55.422,
+      "duration": 16.776
+    },
+    {
+      "id": "class10-fair-method-comparison-5",
+      "label": "What changes",
+      "title": "Plot exact scale points",
+      "mood": "happy",
+      "caption": "Their scale display uses a few discrete batch sizes and the exact counts from each rule. The pair lane grows faster in this operation measure. That finding does not automatically establish memory use or actual elapsed time on every device.",
+      "speech": "Their scale display uses a few discrete batch sizes and the exact counts from each rule. The pair lane grows faster in this operation measure. That finding does not automatically establish memory use or actual elapsed time on every device.",
+      "dialogue": "A count graph has a named vertical measure.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 72.848,
+      "duration": 18.816
+    },
+    {
+      "id": "class10-fair-method-comparison-6",
+      "label": "Enter the lab",
+      "title": "A qualified decision",
+      "mood": "happy",
+      "caption": "Aditi selects a method under a stated inspection budget only after checking that its promised result applies. They retain formulas, input sizes and limits with the decision. A single timed demonstration can describe that run, but cannot prove a universal speed advantage.",
+      "speech": "Aditi selects a method under a stated inspection budget only after checking that its promised result applies. They retain formulas, input sizes and limits with the decision. A single timed demonstration can describe that run, but cannot prove a universal speed advantage.",
+      "dialogue": "Keep the assumptions beside the result.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 92.314,
+      "duration": 20.304
+    }
+  ]
+}

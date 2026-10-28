@@ -4,6 +4,7 @@ import { class12Subjects } from "./class-12-curriculum";
 import { class11Subjects } from "./class-11-curriculum";
 import { class8Subjects } from "./class-8-curriculum";
 import { class9Subjects } from "./class-9-curriculum";
+import { class10Subjects } from "./class-10-curriculum";
 
 export type CurriculumStrand =
   | "Computational Thinking"
@@ -524,6 +525,7 @@ export const curriculum: GradeCurriculum[] = [
       const otherSubjects = sourceCurriculum
         .find((existing) => existing.grade === grade)
         ?.subjects?.filter((subject) => !subject.strand || subject.strand === "English") ?? [];
+      if (grade === 10) return { ...entry, grade, title: "Decision Lab", description: "Compare alternatives, explain consequences and defend decisions through 32 original chapters.", modules: [], subjects: [...class10Subjects, ...otherSubjects] };
       return {
         ...entry,
         grade,

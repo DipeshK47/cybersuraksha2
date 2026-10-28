@@ -1,6 +1,7 @@
 """Generate measured Indian English audio; requires edge-tts, soundfile, numpy,
 and imageio-ffmpeg in an authoring environment. No synthesis service at runtime.
 Usage: python scripts/narrate-class9.py [class9-slug ...] [--workers 2] [--force]
+The Class 10 entrypoint calls this same engine with its own grade and settings.
 """
 import argparse
 import asyncio
@@ -55,7 +56,7 @@ async def narrate(path, force, semaphore):
             return
         if len(story["scenes"]) != 6:
             raise ValueError(f"Expected six scenes: {path.stem}")
-        with tempfile.TemporaryDirectory(prefix="class9-narration-") as folder:
+        with tempfile.TemporaryDirectory(prefix="cybersuraksha-narration-") as folder:
             temp = Path(folder)
             parts, elapsed = [], 0.0
             for index, scene in enumerate(story["scenes"]):
@@ -81,17 +82,21 @@ async def narrate(path, force, semaphore):
         print(f"DONE {path.stem}: {elapsed:.3f}s, six measured en-IN scenes", flush=True)
 
 
-async def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+async def main(grade=9):
+    global SETTINGS
+    if grade not in (9, 10):
+        raise ValueError("Only Classes 9 and 10 use this narration engine")
+    SETTINGS = json.loads((ROOT / f"scripts/class{grade}-voice.json").read_text())
+    parser = argparse.ArgumentParser(description=f"Generate measured Indian English narration for Class {grade}")
     parser.add_argument("slugs", nargs="*")
     parser.add_argument("--workers", type=int, default=2, choices=range(1, 5))
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
-    paths = [SCRIPTS / f"{slug}.json" for slug in args.slugs] if args.slugs else sorted(SCRIPTS.glob("class9-*.json"))
+    paths = [SCRIPTS / f"{slug}.json" for slug in args.slugs] if args.slugs else sorted(SCRIPTS.glob(f"class{grade}-*.json"))
     if not paths:
-        raise SystemExit("Compile the Class 9 scripts before generating narration")
-    if any(not path.stem.startswith("class9-") for path in paths):
-        raise SystemExit("Only Class 9 narration is handled by this tool")
+        raise SystemExit(f"Compile the Class {grade} scripts before generating narration")
+    if any(not path.stem.startswith(f"class{grade}-") for path in paths):
+        raise SystemExit(f"Only Class {grade} narration is handled by this tool")
     semaphore = asyncio.Semaphore(args.workers)
     await asyncio.gather(*(narrate(path, args.force, semaphore) for path in paths))
 

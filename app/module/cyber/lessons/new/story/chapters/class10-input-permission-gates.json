@@ -1,0 +1,93 @@
+{
+  "duration": 107.412,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "1d5cbc90103e1d9b9e963abf14c402679a2cda30f6603a8fdbb6af867c220923",
+  "scenes": [
+    {
+      "id": "class10-input-permission-gates-1",
+      "label": "Meet the team",
+      "title": "Read the request shape",
+      "mood": "thinking",
+      "caption": "At the Decision Lab, Aditi builds a local fictional quantity form. The format gate accepts whole-number digit strings only. Vihaan sends a word instead, and the request stops before anyone considers its size or the account role.",
+      "speech": "At the Decision Lab, Aditi builds a local fictional quantity form. The format gate accepts whole-number digit strings only. Vihaan sends a word instead, and the request stops before anyone considers its size or the account role.",
+      "dialogue": "A format check asks how the input is written.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.424
+    },
+    {
+      "id": "class10-input-permission-gates-2",
+      "label": "The problem",
+      "title": "A number can be excessive",
+      "mood": "surprise",
+      "caption": "The next card contains digits but exceeds the stated quantity limit. Its format passes, yet the range gate refuses it. The stored quantity stays unchanged, with a range reason rather than an incorrect formatting diagnosis.",
+      "speech": "The next card contains digits but exceeds the stated quantity limit. Its format passes, yet the range gate refuses it. The stored quantity stays unchanged, with a range reason rather than an incorrect formatting diagnosis.",
+      "dialogue": "Passing one gate does not pass the next.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 18.074,
+      "duration": 16.968
+    },
+    {
+      "id": "class10-input-permission-gates-3",
+      "label": "How it works",
+      "title": "Well formed but not authorized",
+      "mood": "thinking",
+      "caption": "A visitor submits a quantity that passes both input checks. The role gate still refuses an edit because visitors may only read the bulletin. Aditi identifies the permission rule rather than inventing a defect in the number.",
+      "speech": "A visitor submits a quantity that passes both input checks. The role gate still refuses an edit because visitors may only read the bulletin. Aditi identifies the permission rule rather than inventing a defect in the number.",
+      "dialogue": "Validation and authorization answer different questions.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 35.692,
+      "duration": 16.248
+    },
+    {
+      "id": "class10-input-permission-gates-4",
+      "label": "Your decision",
+      "title": "Repair the missing gate",
+      "mood": "thinking",
+      "caption": "Vihaan notices that his first decision table allowed every valid number to be saved. He inserts a role check after validation and retests a visitor. The repaired table explains why an acceptable value can accompany a denied action.",
+      "speech": "Vihaan notices that his first decision table allowed every valid number to be saved. He inserts a role check after validation and retests a visitor. The repaired table explains why an acceptable value can accompany a denied action.",
+      "dialogue": "Do not turn input quality into an editing grant.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 52.59,
+      "duration": 17.424
+    },
+    {
+      "id": "class10-input-permission-gates-5",
+      "label": "What changes",
+      "title": "An editor request succeeds",
+      "mood": "happy",
+      "caption": "The named editor sends a whole number inside the permitted range. All gates pass, so the fictional record changes to that quantity. The team records the request, role, gate results and stored result together, making the update reproducible.",
+      "speech": "The named editor sends a whole number inside the permitted range. All gates pass, so the fictional record changes to that quantity. The team records the request, role, gate results and stored result together, making the update reproducible.",
+      "dialogue": "A permitted action needs every required check.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 70.664,
+      "duration": 18.528
+    },
+    {
+      "id": "class10-input-permission-gates-6",
+      "label": "Enter the lab",
+      "title": "Verify what stayed unchanged",
+      "mood": "happy",
+      "caption": "They replay the rejected cards against a fresh local record. Each refusal leaves it unchanged for the stated reason. Your table must distinguish format, range and permission refusals; these fictional tests use no live target.",
+      "speech": "They replay the rejected cards against a fresh local record. Each refusal leaves it unchanged for the stated reason. Your table must distinguish format, range and permission refusals; these fictional tests use no live target.",
+      "dialogue": "A rejection reason belongs beside the resulting record.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 89.842,
+      "duration": 16.92
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 105.276,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "a464e0de3d3027f75ee3620846deb9d2ce785bf366cb2de264670533870886b6",
+  "scenes": [
+    {
+      "id": "class10-plugin-capability-review-1",
+      "label": "Meet the team",
+      "title": "A useful layout tool",
+      "mood": "thinking",
+      "caption": "Vihaan brings a fictional layout plugin to the Decision Lab bulletin workflow. Its preview arranges headings. Aditi asks what installing it would let software do, because a preview does not describe every capability.",
+      "speech": "Vihaan brings a fictional layout plugin to the Decision Lab bulletin workflow. Its preview arranges headings. Aditi asks what installing it would let software do, because a preview does not describe every capability.",
+      "dialogue": "A useful preview starts a review; it does not finish it.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.2
+    },
+    {
+      "id": "class10-plugin-capability-review-2",
+      "label": "The problem",
+      "title": "Open the manifest",
+      "mood": "surprise",
+      "caption": "The supplied manifest for the approved release requests access to the selected document and permission to change its layout. These match the task but still require an approved source record and an invented-document test.",
+      "speech": "The supplied manifest for the approved release requests access to the selected document and permission to change its layout. These match the task but still require an approved source record and an invented-document test.",
+      "dialogue": "A capability has a concrete consequence.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 16.85,
+      "duration": 15
+    },
+    {
+      "id": "class10-plugin-capability-review-3",
+      "label": "How it works",
+      "title": "The update asks for more",
+      "mood": "thinking",
+      "caption": "A proposed update keeps the familiar name but adds permission to send the whole document to an external destination. The bulletin task does not require that transfer. Vihaan highlights the addition instead of assuming updates preserve boundaries.",
+      "speech": "A proposed update keeps the familiar name but adds permission to send the whole document to an external destination. The bulletin task does not require that transfer. Vihaan highlights the addition instead of assuming updates preserve boundaries.",
+      "dialogue": "Compare the changed permission, not only the version label.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 32.5,
+      "duration": 17.376
+    },
+    {
+      "id": "class10-plugin-capability-review-4",
+      "label": "Your decision",
+      "title": "Pause the proposal",
+      "mood": "thinking",
+      "caption": "Aditi pauses the update and records its new transfer capability for the teacher. A scan result reports no finding in the supplied check, but it cannot establish every possible behaviour. They record that limited result beside the permission question.",
+      "speech": "Aditi pauses the update and records its new transfer capability for the teacher. A scan result reports no finding in the supplied check, but it cannot establish every possible behaviour. They record that limited result beside the permission question.",
+      "dialogue": "No finding is narrower than a guarantee.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 50.526,
+      "duration": 18
+    },
+    {
+      "id": "class10-plugin-capability-review-5",
+      "label": "What changes",
+      "title": "Compare source and purpose",
+      "mood": "happy",
+      "caption": "The teacher compares the approved-source register with the exact release and its manifest. Only the earlier minimal configuration is approved for this fictional exercise. A familiar publisher name on another download would not make it the recorded release.",
+      "speech": "The teacher compares the approved-source register with the exact release and its manifest. Only the earlier minimal configuration is approved for this fictional exercise. A familiar publisher name on another download would not make it the recorded release.",
+      "dialogue": "Match the actual package to the record.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 69.176,
+      "duration": 17.616
+    },
+    {
+      "id": "class10-plugin-capability-review-6",
+      "label": "Enter the lab",
+      "title": "Bound the trial",
+      "mood": "happy",
+      "caption": "They test the approved configuration on an invented document, keep the original unchanged and record how to remove the plugin. The layout succeeds within those checks. Your comparison must name the excluded transfer and trial limits.",
+      "speech": "They test the approved configuration on an invented document, keep the original unchanged and record how to remove the plugin. The layout succeeds within those checks. Your comparison must name the excluded transfer and trial limits.",
+      "dialogue": "A bounded trial supports a bounded decision.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 87.442,
+      "duration": 17.184
+    }
+  ]
+}

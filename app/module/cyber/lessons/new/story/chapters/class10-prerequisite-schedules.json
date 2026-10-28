@@ -1,0 +1,93 @@
+{
+  "duration": 116.796,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e0331b0b6a798965afbf2225c3739a9acd67bd962573262427f02b8c52b1d32a",
+  "scenes": [
+    {
+      "id": "class10-prerequisite-schedules-1",
+      "label": "Meet the team",
+      "title": "Connect the tasks",
+      "mood": "thinking",
+      "caption": "Aditi and Vihaan plan a fictional demonstration in the Decision Lab. Each task becomes a named node, and each arrow means its starting task must finish before its destination begins. The drawing describes dependencies, not a compulsory reading order.",
+      "speech": "Aditi and Vihaan plan a fictional demonstration in the Decision Lab. Each task becomes a named node, and each arrow means its starting task must finish before its destination begins. The drawing describes dependencies, not a compulsory reading order.",
+      "dialogue": "An arrow explains a prerequisite.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.648
+    },
+    {
+      "id": "class10-prerequisite-schedules-2",
+      "label": "The problem",
+      "title": "More than one ready task",
+      "mood": "surprise",
+      "caption": "Once setup finishes, both lights and audio are ready. Neither depends on the other. Aditi highlights both choices. Several tasks can be ready although their trace records one completion at a time.",
+      "speech": "Once setup finishes, both lights and audio are ready. Neither depends on the other. Aditi highlights both choices. Several tasks can be ready although their trace records one completion at a time.",
+      "dialogue": "Ready does not mean already completed.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 19.298,
+      "duration": 16.248
+    },
+    {
+      "id": "class10-prerequisite-schedules-3",
+      "label": "How it works",
+      "title": "Two schedules branch",
+      "mood": "thinking",
+      "caption": "They build one schedule with lights before audio and another with audio before lights. Both finish setup first and recording only after both preparations. The graph accepts either complete schedule, because changing independent choices does not reverse a required prerequisite edge.",
+      "speech": "They build one schedule with lights before audio and another with audio before lights. Both finish setup first and recording only after both preparations. The graph accepts either complete schedule, because changing independent choices does not reverse a required prerequisite edge.",
+      "dialogue": "Different can still be valid.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 36.196,
+      "duration": 20.04
+    },
+    {
+      "id": "class10-prerequisite-schedules-4",
+      "label": "Your decision",
+      "title": "Choose a ready next step",
+      "mood": "thinking",
+      "caption": "Vihaan has completed setup and lights. He proposes recording immediately, but audio remains unfinished. Decide which available task can actually advance the plan. Readiness must inspect every incoming edge, not just the most important looking completed task.",
+      "speech": "Vihaan has completed setup and lights. He proposes recording immediately, but audio remains unfinished. Decide which available task can actually advance the plan. Readiness must inspect every incoming edge, not just the most important looking completed task.",
+      "dialogue": "Recording needs both preparations.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 56.886,
+      "duration": 20.688
+    },
+    {
+      "id": "class10-prerequisite-schedules-5",
+      "label": "What changes",
+      "title": "Follow the chosen schedule",
+      "mood": "happy",
+      "caption": "Aditi completes audio, then recording, then screening. Her evidence preserves the actual chosen order and checks each prerequisite at the moment its task begins. A valid trace need not resemble another learner’s reference schedule.",
+      "speech": "Aditi completes audio, then recording, then screening. Her evidence preserves the actual chosen order and checks each prerequisite at the moment its task begins. A valid trace need not resemble another learner’s reference schedule.",
+      "dialogue": "Keep the order you actually tested.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 78.224,
+      "duration": 17.376
+    },
+    {
+      "id": "class10-prerequisite-schedules-6",
+      "label": "Enter the lab",
+      "title": "A blocked dependency",
+      "mood": "happy",
+      "caption": "In a replay, audio becomes unavailable after setup. Lights can still proceed, but recording must wait for audio and screening must wait for recording. Their repair preserves these restrictions, without deleting an inconvenient arrow or pretending unfinished work was completed.",
+      "speech": "In a replay, audio becomes unavailable after setup. Lights can still proceed, but recording must wait for audio and screening must wait for recording. Their repair preserves these restrictions, without deleting an inconvenient arrow or pretending unfinished work was completed.",
+      "dialogue": "Name the blocked task and its downstream effect.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 96.25,
+      "duration": 19.896
+    }
+  ]
+}

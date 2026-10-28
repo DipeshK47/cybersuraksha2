@@ -1,0 +1,93 @@
+{
+  "duration": 105.66,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "905d1af94d6429f92e4a24a2dfa14983a195d8115974b7f484ba58d97ffbbd42",
+  "scenes": [
+    {
+      "id": "class10-ai-unusual-reading-1",
+      "label": "Meet the team",
+      "title": "The lamp readings",
+      "mood": "thinking",
+      "caption": "Aditi brings fictional lamp times into the Decision Lab. The supplied readings are 6, 8, 10, 12 and 44 seconds. Vihaan places every value on a dot plot before choosing a representative summary.",
+      "speech": "Aditi brings fictional lamp times into the Decision Lab. The supplied readings are 6, 8, 10, 12 and 44 seconds. Vihaan places every value on a dot plot before choosing a representative summary.",
+      "dialogue": "Plot all the supplied readings.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.536
+    },
+    {
+      "id": "class10-ai-unusual-reading-2",
+      "label": "The problem",
+      "title": "A distant point",
+      "mood": "surprise",
+      "caption": "The reading at 44 stretches the horizontal scale. It might record a genuinely slow lamp or a recording problem. Its distance raises a question without establishing which explanation is correct.",
+      "speech": "The reading at 44 stretches the horizontal scale. It might record a genuinely slow lamp or a recording problem. Its distance raises a question without establishing which explanation is correct.",
+      "dialogue": "Unusual does not mean false.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 17.186,
+      "duration": 14.64
+    },
+    {
+      "id": "class10-ai-unusual-reading-3",
+      "label": "How it works",
+      "title": "Two markers separate",
+      "mood": "thinking",
+      "caption": "The total is 80 seconds, giving a mean of 16. The middle sorted reading gives a median of 10. Aditi moves both markers onto the plot so their different answers can be explained from the same list of measurements.",
+      "speech": "The total is 80 seconds, giving a mean of 16. The middle sorted reading gives a median of 10. Aditi moves both markers onto the plot so their different answers can be explained from the same list of measurements.",
+      "dialogue": "Different summaries answer different questions.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 32.476,
+      "duration": 15.816
+    },
+    {
+      "id": "class10-ai-unusual-reading-4",
+      "label": "Your decision",
+      "title": "Check the actual list",
+      "mood": "thinking",
+      "caption": "Choose a headline that states the median and the wide spread while retaining the unusual observation for checking. Vihaan rejects quietly deleting the largest reading simply to make the batch appear faster. A source check must come before that decision.",
+      "speech": "Choose a headline that states the median and the wide spread while retaining the unusual observation for checking. Vihaan rejects quietly deleting the largest reading simply to make the batch appear faster. A source check must come before that decision.",
+      "dialogue": "Keep the reason in the record.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 48.942,
+      "duration": 17.424
+    },
+    {
+      "id": "class10-ai-unusual-reading-5",
+      "label": "What changes",
+      "title": "A labelled comparison",
+      "mood": "happy",
+      "caption": "With 44 included, the range is 38 seconds. Without that questioned reading, the remaining mean and median are both 9 and the range is 6. This comparison measures sensitivity; it supplies no permission to replace the original evidence silently.",
+      "speech": "With 44 included, the range is 38 seconds. Without that questioned reading, the remaining mean and median are both 9 and the range is 6. This comparison measures sensitivity; it supplies no permission to replace the original evidence silently.",
+      "dialogue": "Label every changed scenario.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 67.016,
+      "duration": 19.032
+    },
+    {
+      "id": "class10-ai-unusual-reading-6",
+      "label": "Enter the lab",
+      "title": "An honest summary note",
+      "mood": "happy",
+      "caption": "Their notebook retains the full list, both calculations and a request to inspect the original timer record. If the reading is verified, the slow lamp needs explanation. If corrected, the revision should preserve its source and reason for future readers.",
+      "speech": "Their notebook retains the full list, both calculations and a request to inspect the original timer record. If the reading is verified, the slow lamp needs explanation. If corrected, the revision should preserve its source and reason for future readers.",
+      "dialogue": "A correction needs a trace.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 86.698,
+      "duration": 18.312
+    }
+  ]
+}

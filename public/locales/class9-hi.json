@@ -2365,5 +2365,9 @@
   "Trace the appeal to its source complete": "अपील का मूल स्रोत खोजें पूरा हुआ",
   "You solved three practice challenges in Trace the appeal to its source.": "आपने अपील का मूल स्रोत खोजें में तीन प्रैक्टिस चैलेंज हल किए।",
   "Build a case note that helps complete": "मदद करने वाला मामला नोट बनाएँ पूरा हुआ",
-  "You solved three practice challenges in Build a case note that helps.": "आपने मदद करने वाला मामला नोट बनाएँ में तीन प्रैक्टिस चैलेंज हल किए।"
+  "You solved three practice challenges in Build a case note that helps.": "आपने मदद करने वाला मामला नोट बनाएँ में तीन प्रैक्टिस चैलेंज हल किए।",
+  "Include this step once in your schedule.": "इस कदम को अपने क्रम में एक बार शामिल करें।",
+  "This ID is not a step in the supplied schedule. Remove it.": "यह आईडी दिए गए क्रम का कदम नहीं है। इसे हटाएँ।",
+  "Duplicate:": "दोहराया गया:",
+  "Each step must appear exactly once. Remove the repeated step.": "हर कदम ठीक एक बार होना चाहिए। दोहराया गया कदम हटाएँ।"
 }

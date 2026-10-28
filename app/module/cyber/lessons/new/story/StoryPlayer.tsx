@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import type { ReactNode } from "react";
-import { useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { StoryCharacter } from "./StoryCharacter";
 import type { StoryChapter, StoryMediaClock } from "./types";
 import s from "./story-player.module.css";
@@ -16,6 +16,12 @@ function subscribeLanguage(changed: () => void) {
 const currentLanguage = () => document.documentElement.lang;
 const serverLanguage = () => "en";
 
+// Native media seeks can truncate an authored boundary by one microsecond
+// (for example 65.526 becomes 65.525999). Keep that seek in its scene.
+const MEDIA_TIME_PRECISION = .000001;
+
+const sceneElapsed = (start: number, duration: number, time: number, limit: number) => Math.max(0, Math.min(duration, Math.min(time, limit) - start));
+
 /** Keep the visualization clock scene-local even before React receives an audio timeupdate. */
 export function createStoryMediaClock(options: {
   start: number; duration: number; readTime: () => number; readLimit: () => number;
@@ -23,7 +29,7 @@ export function createStoryMediaClock(options: {
 }): StoryMediaClock {
   return {
     duration: options.duration,
-    readElapsed: () => Math.max(0, Math.min(options.duration, Math.min(options.readTime(), options.readLimit()) - options.start)),
+    readElapsed: () => sceneElapsed(options.start, options.duration, options.readTime(), options.readLimit()),
     pause: options.pause,
     resume: options.resume,
   };
@@ -61,12 +67,12 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   // Restart only this section in the new voice; keep the learner's decision and world state.
   if (activeNarration !== narration) {
     const previousScenes = activeNarration?.scenes ?? chapter.script.scenes;
-    const index = Math.max(0, previousScenes.findLastIndex(item => time >= item.start));
+    const index = Math.max(0, previousScenes.findLastIndex(item => time >= item.start - MEDIA_TIME_PRECISION));
     setActiveNarration(narration); setTime(scenes[index].start);
     setPlaying(false); setFinished(false); setWaiting(false); setAudioUnavailable(false);
   }
   const reduced = Boolean(useReducedMotion());
-  const scene = Math.max(0, scenes.findLastIndex(item => time >= item.start));
+  const scene = Math.max(0, scenes.findLastIndex(item => time >= item.start - MEDIA_TIME_PRECISION));
   const current = scenes[scene];
   const elapsed = time - current.start;
   const flash = current.flash && playing && elapsed < current.flash.seconds ? current.flash.mood : undefined;
@@ -114,19 +120,21 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   }
   // Read changing playback state through a ref so timeupdate does not replace the adapter.
   const mediaState = useRef({ time, audioUnavailable, play, trackAudio });
-  mediaState.current = { time, audioUnavailable, play, trackAudio };
+  useLayoutEffect(() => { mediaState.current = { time, audioUnavailable, play, trackAudio }; });
   const gateStart = scenes[gate + 1].start;
-  const media = useMemo(() => createStoryMediaClock({
-    start: current.start,
-    duration: current.duration,
-    readTime: () => {
+  // Timing includes scene/voice identity even when two narrations share durations.
+  const sceneStart = Number(current.start), sceneDuration = Number(current.duration);
+  const mediaTiming = useMemo(() => ({ source, scene, start: sceneStart, duration: sceneDuration, gateStart }), [source, scene, sceneStart, sceneDuration, gateStart]);
+  const media = useMemo<StoryMediaClock>(() => ({
+    duration: mediaTiming.duration,
+    readElapsed: () => {
       const element = audio.current;
-      return element && element.readyState > 0 && !mediaState.current.audioUnavailable && Number.isFinite(element.currentTime) ? element.currentTime : mediaState.current.time;
+      const actualTime = element && element.readyState > 0 && !mediaState.current.audioUnavailable && Number.isFinite(element.currentTime) ? element.currentTime : mediaState.current.time;
+      return sceneElapsed(mediaTiming.start, mediaTiming.duration, actualTime, solvedRef.current ? Infinity : mediaTiming.gateStart - .05);
     },
-    readLimit: () => solvedRef.current ? Infinity : gateStart - .05,
     pause: () => { mediaState.current.trackAudio(); audio.current?.pause(); setPlaying(false); },
     resume: () => { void mediaState.current.play(); },
-  }), [scene, source, current.start, current.duration, gateStart]);
+  }), [mediaTiming]);
   const advance = () => scene === scenes.length - 1 ? onBegin() : void jump(scene + 1);
   const Icon = chapter.icon;
 

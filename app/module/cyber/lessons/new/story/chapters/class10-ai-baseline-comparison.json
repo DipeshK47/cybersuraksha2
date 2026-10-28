@@ -1,0 +1,93 @@
+{
+  "duration": 108.732,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "be76d3c0a27c634c4dbd29527f0ff1f9db7b8e5532f230dc5d03a22ee204dc40",
+  "scenes": [
+    {
+      "id": "class10-ai-baseline-comparison-1",
+      "label": "Meet the team",
+      "title": "A bulletin needs sorting",
+      "mood": "thinking",
+      "caption": "Aditi brings fictional bulletin cards into the Decision Lab. Vihaan first writes the purpose: help a volunteer find workshop notices. The output is a workshop label for each card, with a person checking before posting.",
+      "speech": "Aditi brings fictional bulletin cards into the Decision Lab. Vihaan first writes the purpose: help a volunteer find workshop notices. The output is a workshop label for each card, with a person checking before posting.",
+      "dialogue": "What exactly should come out?",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.512
+    },
+    {
+      "id": "class10-ai-baseline-comparison-2",
+      "label": "The problem",
+      "title": "A rule can be inspected",
+      "mood": "surprise",
+      "caption": "Their baseline marks a card positive whenever its text contains workshop. On cards A through F, it predicts yes, yes, no, no, yes, no. The checked labels are yes, no, yes, no, yes, no.",
+      "speech": "Their baseline marks a card positive whenever its text contains workshop. On cards A through F, it predicts yes, yes, no, no, yes, no. The checked labels are yes, no, yes, no, yes, no.",
+      "dialogue": "Compare each prediction with its label.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 17.162,
+      "duration": 17.856
+    },
+    {
+      "id": "class10-ai-baseline-comparison-3",
+      "label": "How it works",
+      "title": "A different candidate",
+      "mood": "thinking",
+      "caption": "The supplied model predicts yes, no, yes, no, no, no on those same cards. Aditi circles its disagreement on E. A model can improve the total while still introducing a mistake that the simple rule avoided.",
+      "speech": "The supplied model predicts yes, no, yes, no, no, no on those same cards. Aditi circles its disagreement on E. A model can improve the total while still introducing a mistake that the simple rule avoided.",
+      "dialogue": "Better totals still contain mistakes.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 35.668,
+      "duration": 17.16
+    },
+    {
+      "id": "class10-ai-baseline-comparison-4",
+      "label": "Your decision",
+      "title": "Keep the comparison fair",
+      "mood": "thinking",
+      "caption": "Vihaan suggests giving the model easier cards. Aditi stops the comparison: the target, checked labels and cases must stay fixed. Choose a plan that measures both methods under equivalent conditions, including the volunteer’s available review time.",
+      "speech": "Vihaan suggests giving the model easier cards. Aditi stops the comparison: the target, checked labels and cases must stay fixed. Choose a plan that measures both methods under equivalent conditions, including the volunteer’s available review time.",
+      "dialogue": "Hold the evidence steady.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 53.478,
+      "duration": 18.792
+    },
+    {
+      "id": "class10-ai-baseline-comparison-5",
+      "label": "What changes",
+      "title": "Count paired errors",
+      "mood": "happy",
+      "caption": "The rule is wrong on B and C; the model is wrong on E. Their error counts are 2 and 1. These supplied predictions support a narrow pack comparison, without showing how the model learned its behaviour.",
+      "speech": "The rule is wrong on B and C; the model is wrong on E. Their error counts are 2 and 1. These supplied predictions support a narrow pack comparison, without showing how the model learned its behaviour.",
+      "dialogue": "Name the actual mistaken cards.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 72.92,
+      "duration": 15.432
+    },
+    {
+      "id": "class10-ai-baseline-comparison-6",
+      "label": "Enter the lab",
+      "title": "Return to usefulness",
+      "mood": "happy",
+      "caption": "They attach the evidence to the purpose card. Review effort, missed notices and whether sorting helps volunteers still need investigation. Aditi keeps the baseline available while the notebook distinguishes prediction quality from a useful, appropriate application.",
+      "speech": "They attach the evidence to the purpose card. Review effort, missed notices and whether sorting helps volunteers still need investigation. Aditi keeps the baseline available while the notebook distinguishes prediction quality from a useful, appropriate application.",
+      "dialogue": "A score does not decide the purpose.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 89.002,
+      "duration": 19.08
+    }
+  ]
+}

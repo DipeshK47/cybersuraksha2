@@ -30,7 +30,7 @@ export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disab
   const snapshot = testRun?.configuration === configuration && testRun.snapshot.fingerprint === serialized ? testRun.snapshot : null;
   const tested = snapshot !== null;
   // Once an input/configuration changes, returning to an old answer still requires a new test.
-  useEffect(() => { setTestRun(null); }, [serialized, configuration]);
+  if (testRun && (testRun.configuration !== configuration || testRun.snapshot.fingerprint !== serialized)) setTestRun(null);
   useEffect(() => { simulationListener.current?.(snapshot); }, [snapshot]);
   useEffect(() => () => { simulationListener.current?.(null); }, []);
   function onChange(value: TaskAnswer) { setTestRun(null); changeAnswer(value); }

@@ -1,0 +1,93 @@
+{
+  "duration": 112.692,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "22db284d24b99e8beb127a79bfc64ae8feace2ad26729e0c7104a7ab8b3d0765",
+  "scenes": [
+    {
+      "id": "class10-verified-version-restore-1",
+      "label": "Meet the team",
+      "title": "A version timeline",
+      "mood": "thinking",
+      "caption": "In the Decision Lab, Vihaan records a fictional bulletin timeline. An independent snapshot contains twelve approved entries. The working file later gains three entries, then two. Aditi separates these additions to measure the recovery cost.",
+      "speech": "In the Decision Lab, Vihaan records a fictional bulletin timeline. An independent snapshot contains twelve approved entries. The working file later gains three entries, then two. Aditi separates these additions to measure the recovery cost.",
+      "dialogue": "Record what each recovery point actually contains.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.744
+    },
+    {
+      "id": "class10-verified-version-restore-2",
+      "label": "The problem",
+      "title": "The unwanted edit spreads",
+      "mood": "surprise",
+      "caption": "An unwanted edit replaces the bulletin text and synchronizes to its linked copy. Both views show the unwanted result. Vihaan notices that matching copies provide no earlier clean state when synchronization carries the same change across.",
+      "speech": "An unwanted edit replaces the bulletin text and synchronizes to its linked copy. Both views show the unwanted result. Vihaan notices that matching copies provide no earlier clean state when synchronization carries the same change across.",
+      "dialogue": "Matching copies can share the same problem.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 19.394,
+      "duration": 17.928
+    },
+    {
+      "id": "class10-verified-version-restore-3",
+      "label": "How it works",
+      "title": "An independent point remains",
+      "mood": "thinking",
+      "caption": "The independent snapshot was not part of that synchronization. It retains the approved entries according to its manifest. The teacher warns that it is only a recovery candidate; opening and comparing the restored result remain necessary.",
+      "speech": "The independent snapshot was not part of that synchronization. It retains the approved entries according to its manifest. The teacher warns that it is only a recovery candidate; opening and comparing the restored result remain necessary.",
+      "dialogue": "A candidate copy is not a completed recovery.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 37.972,
+      "duration": 17.4
+    },
+    {
+      "id": "class10-verified-version-restore-4",
+      "label": "Your decision",
+      "title": "Choose with the cost visible",
+      "mood": "thinking",
+      "caption": "Aditi compares the available points. The synchronized copy includes the unwanted edit; the independent snapshot predates the additions. Choosing the clean point means recovering an older state and accounting for missing work, without promising a lossless return.",
+      "speech": "Aditi compares the available points. The synchronized copy includes the unwanted edit; the independent snapshot predates the additions. Choosing the clean point means recovering an older state and accounting for missing work, without promising a lossless return.",
+      "dialogue": "Clean and latest are different properties.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 56.022,
+      "duration": 18.912
+    },
+    {
+      "id": "class10-verified-version-restore-5",
+      "label": "What changes",
+      "title": "Restore into a test area",
+      "mood": "happy",
+      "caption": "With the teacher, they restore the independent snapshot into a separate test area. They preserve the damaged file for review. They compare the restored title, entry identifiers and expected count with the manifest before declaring the rehearsal successful.",
+      "speech": "With the teacher, they restore the independent snapshot into a separate test area. They preserve the damaged file for review. They compare the restored title, entry identifiers and expected count with the manifest before declaring the rehearsal successful.",
+      "dialogue": "Test the restored contents, not just the open button.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 75.584,
+      "duration": 18.312
+    },
+    {
+      "id": "class10-verified-version-restore-6",
+      "label": "Enter the lab",
+      "title": "Resume with a record",
+      "mood": "happy",
+      "caption": "The older-state comparison passes. Their restore record lists the later additions that need verified re-entry and the teacher responsible for resuming work. Your evidence must describe recovered content and work still missing from that point.",
+      "speech": "The older-state comparison passes. Their restore record lists the later additions that need verified re-entry and the teacher responsible for resuming work. Your evidence must describe recovered content and work still missing from that point.",
+      "dialogue": "A verified older state can still need rebuilding.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 94.546,
+      "duration": 17.496
+    }
+  ]
+}

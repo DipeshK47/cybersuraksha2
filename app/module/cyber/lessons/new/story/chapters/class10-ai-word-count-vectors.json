@@ -1,0 +1,93 @@
+{
+  "duration": 117.804,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "725a54545050a6528602866003741e137107bbef3161838bba02c1ce15cc445d",
+  "scenes": [
+    {
+      "id": "class10-ai-word-count-vectors-1",
+      "label": "Meet the team",
+      "title": "Write the token rule",
+      "mood": "thinking",
+      "caption": "Aditi writes a token rule in the Decision Lab: remove a final full stop or danda, lowercase Latin letters, then split at spaces and discard empty tokens. Hindi characters stay unchanged. Neither stemming nor any other normalization is applied.",
+      "speech": "Aditi writes a token rule in the Decision Lab: remove a final full stop or danda, lowercase Latin letters, then split at spaces and discard empty tokens. Hindi characters stay unchanged. Neither stemming nor any other normalization is applied.",
+      "dialogue": "The representation needs a precise rule.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 19.152
+    },
+    {
+      "id": "class10-ai-word-count-vectors-2",
+      "label": "The problem",
+      "title": "Repeated words stack",
+      "mood": "surprise",
+      "caption": "For “Aditi helps Aditi.” the authored tokens are [aditi,helps,aditi]. Vihaan stacks the repeated name twice. With vocabulary [aditi,helps,vihaan], the count vector is [2,1,0]. An absent vocabulary word keeps its position with a zero rather than disappearing.",
+      "speech": "For “Aditi helps Aditi.” the authored tokens are [aditi,helps,aditi]. Vihaan stacks the repeated name twice. With vocabulary [aditi,helps,vihaan], the count vector is [2,1,0]. An absent vocabulary word keeps its position with a zero rather than disappearing.",
+      "dialogue": "Fix the vocabulary order first.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 19.802,
+      "duration": 21.648
+    },
+    {
+      "id": "class10-ai-word-count-vectors-3",
+      "label": "How it works",
+      "title": "Align the vectors",
+      "mood": "thinking",
+      "caption": "They compare “Aditi helps Vihaan.” with “Vihaan helps Aditi.” Their authored token lists reverse the names around helps. Under the same vocabulary both vectors are [1,1,1], even though the person doing the helping has changed between the sentences.",
+      "speech": "They compare “Aditi helps Vihaan.” with “Vihaan helps Aditi.” Their authored token lists reverse the names around helps. Under the same vocabulary both vectors are [1,1,1], even though the person doing the helping has changed between the sentences.",
+      "dialogue": "Identical counts can conceal different roles.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 42.1,
+      "duration": 18.816
+    },
+    {
+      "id": "class10-ai-word-count-vectors-4",
+      "label": "Your decision",
+      "title": "What can counts establish?",
+      "mood": "thinking",
+      "caption": "Choose the claim supported by those matching vectors. Aditi can establish equal word frequencies under this rule. She cannot infer that the two sentences say the same thing, or recover their original order from the counts alone without more information.",
+      "speech": "Choose the claim supported by those matching vectors. Aditi can establish equal word frequencies under this rule. She cannot infer that the two sentences say the same thing, or recover their original order from the counts alone without more information.",
+      "dialogue": "Do not infer a lost distinction.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 61.566,
+      "duration": 18.12
+    },
+    {
+      "id": "class10-ai-word-count-vectors-5",
+      "label": "What changes",
+      "title": "An authored Hindi example",
+      "mood": "happy",
+      "caption": "Hindi examples use the explicit tokens [अदिति,ने,विहान,को,बुलाया] and [विहान,ने,अदिति,को,बुलाया]. The fixed vocabulary is [अदिति,ने,विहान,को,बुलाया]. Both count vectors match, while the caller changes. No undocumented language processing is needed to inspect this example.",
+      "speech": "Hindi examples use the explicit tokens [अदिति,ने,विहान,को,बुलाया] and [विहान,ने,अदिति,को,बुलाया]. The fixed vocabulary is [अदिति,ने,विहान,को,बुलाया]. Both count vectors match, while the caller changes. No undocumented language processing is needed to inspect this example.",
+      "dialogue": "Keep the supplied tokens visible.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 80.336,
+      "duration": 16.704
+    },
+    {
+      "id": "class10-ai-word-count-vectors-6",
+      "label": "Enter the lab",
+      "title": "Restore the sentence context",
+      "mood": "happy",
+      "caption": "Vihaan puts the original sentences beside the count displays. Their evidence note describes useful frequency information and the missing order. A human reads the sentences to distinguish the roles; matching vectors provide no proof that the messages have identical meaning.",
+      "speech": "Vihaan puts the original sentences beside the count displays. Their evidence note describes useful frequency information and the missing order. A human reads the sentences to distinguish the roles; matching vectors provide no proof that the messages have identical meaning.",
+      "dialogue": "Keep the text when meaning matters.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 97.69,
+      "duration": 19.464
+    }
+  ]
+}

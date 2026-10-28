@@ -8,6 +8,23 @@ export function collectMessages(value,messages={}) {
   return messages;
 }
 
+/** Claim new keys and retain ownership only while existing copy is unchanged. */
+export function mergeOwnedMessages(existing,previousOwned,authored) {
+  const messages={...existing},owned={...previousOwned};
+  for(const [source,translation] of Object.entries(authored)) {
+    if(!Object.hasOwn(existing,source)) {
+      messages[source]=translation;
+      owned[source]=translation;
+    }else if(Object.hasOwn(previousOwned,source)) {
+      if(existing[source]===previousOwned[source]) {
+        messages[source]=translation;
+        owned[source]=translation;
+      }else delete owned[source];
+    }
+  }
+  return {messages,owned};
+}
+
 export function narrationDigest(scenes,settings) {
   return createHash('sha256').update(JSON.stringify({settings,speech:scenes.map(scene=>scene.speech??scene.caption)})).digest('hex');
 }

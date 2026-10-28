@@ -1,0 +1,93 @@
+{
+  "duration": 118.62,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "dfba1f1815743660f0acdeb2937ec032b6a5a6b28db828a39fa84c663915b1a8",
+  "scenes": [
+    {
+      "id": "class10-resource-invariant-1",
+      "label": "Meet the team",
+      "title": "A fixed total",
+      "mood": "thinking",
+      "caption": "Aditi opens a pretend resource desk in the Decision Lab with a fixed pool of tokens. Vihaan splits the display into allocated and remaining counters. Their sum must stay equal to the original pool after every accepted or rejected request.",
+      "speech": "Aditi opens a pretend resource desk in the Decision Lab with a fixed pool of tokens. Vihaan splits the display into allocated and remaining counters. Their sum must stay equal to the original pool after every accepted or rejected request.",
+      "dialogue": "Check the sum after every event.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.904
+    },
+    {
+      "id": "class10-resource-invariant-2",
+      "label": "The problem",
+      "title": "Move units, conserve total",
+      "mood": "surprise",
+      "caption": "A valid request moves tokens from remaining to allocated. The request identifier is remembered only when acceptance succeeds. Aditi records both counters: reducing one without increasing the other loses units.",
+      "speech": "A valid request moves tokens from remaining to allocated. The request identifier is remembered only when acceptance succeeds. Aditi records both counters: reducing one without increasing the other loses units.",
+      "dialogue": "A transfer changes both sides together.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 18.554,
+      "duration": 16.224
+    },
+    {
+      "id": "class10-resource-invariant-3",
+      "label": "How it works",
+      "title": "An excessive request",
+      "mood": "thinking",
+      "caption": "Vihaan submits more tokens than remain. The corrected process checks capacity before touching either counter and rejects the request unchanged. Letting remaining become negative would preserve the sum, but would violate the separate nonnegative resource rule and allow impossible allocations.",
+      "speech": "Vihaan submits more tokens than remain. The corrected process checks capacity before touching either counter and rejects the request unchanged. Letting remaining become negative would preserve the sum, but would violate the separate nonnegative resource rule and allow impossible allocations.",
+      "dialogue": "The sum is necessary but not sufficient.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 35.428,
+      "duration": 20.376
+    },
+    {
+      "id": "class10-resource-invariant-4",
+      "label": "Your decision",
+      "title": "A familiar identifier",
+      "mood": "thinking",
+      "caption": "An earlier accepted request appears again with the same identifier. Decide whether available capacity alone justifies processing it twice. Aditi checks identifiers alongside counters, seeking a failure that conservation cannot reveal.",
+      "speech": "An earlier accepted request appears again with the same identifier. Decide whether available capacity alone justifies processing it twice. Aditi checks identifiers alongside counters, seeking a failure that conservation cannot reveal.",
+      "dialogue": "Conservation does not prove uniqueness.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 56.454,
+      "duration": 18.12
+    },
+    {
+      "id": "class10-resource-invariant-5",
+      "label": "What changes",
+      "title": "Reject without a second transfer",
+      "mood": "happy",
+      "caption": "The revised process recognises the duplicate before moving tokens. Both counters and the remembered identifier set stay unchanged. A never-accepted identifier is not remembered, so a later smaller request with that identifier can still be considered.",
+      "speech": "The revised process recognises the duplicate before moving tokens. Both counters and the remembered identifier set stay unchanged. A never-accepted identifier is not remembered, so a later smaller request with that identifier can still be considered.",
+      "dialogue": "Rejection has a precise state effect: none.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 75.224,
+      "duration": 19.2
+    },
+    {
+      "id": "class10-resource-invariant-6",
+      "label": "Enter the lab",
+      "title": "Replay the invariant",
+      "mood": "happy",
+      "caption": "Their evidence table shows each request, acceptance reason and resulting state. Equality at capacity is accepted when the identifier is new; excessive and duplicate requests change nothing. The invariant stays visible, alongside the additional checks that stop impossible or repeated allocations.",
+      "speech": "Their evidence table shows each request, acceptance reason and resulting state. Equality at capacity is accepted when the identifier is new; excessive and duplicate requests change nothing. The invariant stays visible, alongside the additional checks that stop impossible or repeated allocations.",
+      "dialogue": "Keep every rejection in the evidence.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 95.074,
+      "duration": 22.896
+    }
+  ]
+}

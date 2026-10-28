@@ -1,0 +1,93 @@
+{
+  "duration": 122.292,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e09ed1e01c3a140be076ae518b0a1acf102245692b82114df93d6126688e2eb0",
+  "scenes": [
+    {
+      "id": "class10-fraud-help-without-fees-1",
+      "label": "Meet the team",
+      "title": "Two help needs",
+      "mood": "thinking",
+      "caption": "A Decision Lab incident card records exposed access and a disputed transfer. Aditi separates access protection from financial reporting. Vihaan tells the teacher promptly, without waiting to identify the sender.",
+      "speech": "A Decision Lab incident card records exposed access and a disputed transfer. Aditi separates access protection from financial reporting. Vihaan tells the teacher promptly, without waiting to identify the sender.",
+      "dialogue": "Different help needs can have separate routes.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.632
+    },
+    {
+      "id": "class10-fraud-help-without-fees-2",
+      "label": "The problem",
+      "title": "A recovery seller",
+      "mood": "surprise",
+      "caption": "A recovery seller then promises guaranteed repayment after a new fee and requests a login code. Their teacher names both requests without blame. The promise supplies no recovery evidence while creating further payment or account exposure.",
+      "speech": "A recovery seller then promises guaranteed repayment after a new fee and requests a login code. Their teacher names both requests without blame. The promise supplies no recovery evidence while creating further payment or account exposure.",
+      "dialogue": "A recovery promise is still a claim.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 17.282,
+      "duration": 17.592
+    },
+    {
+      "id": "class10-fraud-help-without-fees-3",
+      "label": "How it works",
+      "title": "Independent help lanes",
+      "mood": "thinking",
+      "caption": "The supplied route cards identify known provider support and India’s official financial-fraud reporting through 1930 or cybercrime.gov.in. With a trusted adult, these help needs can be pursued promptly and independently. They practise with fictional cards, without accounts or real reports.",
+      "speech": "The supplied route cards identify known provider support and India’s official financial-fraud reporting through 1930 or cybercrime.gov.in. With a trusted adult, these help needs can be pursued promptly and independently. They practise with fictional cards, without accounts or real reports.",
+      "dialogue": "Do not delay one help route for the other.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 35.524,
+      "duration": 22.056
+    },
+    {
+      "id": "class10-fraud-help-without-fees-4",
+      "label": "Your decision",
+      "title": "Choose relevant facts",
+      "mood": "thinking",
+      "caption": "Aditi prepares the supplied transaction reference, amount, recorded time and a short description of what was disputed. She excludes passwords and unrelated family photographs. The adult supplies further necessary details privately through verified routes, without publishing account history.",
+      "speech": "Aditi prepares the supplied transaction reference, amount, recorded time and a short description of what was disputed. She excludes passwords and unrelated family photographs. The adult supplies further necessary details privately through verified routes, without publishing account history.",
+      "dialogue": "An initial handover is not a public data dump.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 58.23,
+      "duration": 21.552
+    },
+    {
+      "id": "class10-fraud-help-without-fees-5",
+      "label": "What changes",
+      "title": "Send through the right lane",
+      "mood": "happy",
+      "caption": "Vihaan places the access concern with the provider lane and the financial incident facts with the official reporting lane. Their private record keeps the routes and purposes separate. Seller contacts and search advertisements cannot replace independently verified destinations for sensitive facts.",
+      "speech": "Vihaan places the access concern with the provider lane and the financial incident facts with the official reporting lane. Their private record keeps the routes and purposes separate. Seller contacts and search advertisements cannot replace independently verified destinations for sensitive facts.",
+      "dialogue": "Match the information to the verified purpose.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 80.432,
+      "duration": 20.64
+    },
+    {
+      "id": "class10-fraud-help-without-fees-6",
+      "label": "Enter the lab",
+      "title": "An acknowledgement, not a guarantee",
+      "mood": "happy",
+      "caption": "The simulation returns an acknowledgement for the handover. Aditi records the reference and requested follow-up with the adult. Reporting can support a response but does not guarantee recovery. Their plan preserves uncertainty while documenting prompt help and private facts.",
+      "speech": "The simulation returns an acknowledgement for the handover. Aditi records the reference and requested follow-up with the adult. Reporting can support a response but does not guarantee recovery. Their plan preserves uncertainty while documenting prompt help and private facts.",
+      "dialogue": "Record the actual response, not an imagined outcome.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 101.722,
+      "duration": 19.92
+    }
+  ]
+}

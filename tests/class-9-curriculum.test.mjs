@@ -33,8 +33,8 @@ test('Class 9 delivery and access contain exactly the 32 original registered cha
     assert.deepEqual(new Set(list.map(row=>row.id)),new Set(class9Chapters.map(c=>'cyber-'+c.slug)));
   }
   assert.equal(new Set(lessons.flatMap(l=>l.assessmentIds)).size,96);
-  for(const gradeNumber of [8,11,12]) assert.equal(getGradeCurriculum(gradeNumber).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,32);
-  for(const gradeNumber of [6,7,10]) assert.equal(getGradeCurriculum(gradeNumber).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,8);
+  for(const gradeNumber of [8,10,11,12]) assert.equal(getGradeCurriculum(gradeNumber).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,32);
+  for(const gradeNumber of [6,7]) assert.equal(getGradeCurriculum(gradeNumber).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,8);
   assert.ok(cyberLessons.some(l=>!l.slug.startsWith('class9-')&&l.grades.includes(9)),'Keep historical lesson metadata');
 });
 

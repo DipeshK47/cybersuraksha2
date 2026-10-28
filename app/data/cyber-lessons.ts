@@ -5,6 +5,7 @@ import { class12Missions, CLASS12_LESSON_SLUGS } from "./class-12-missions";
 import { class11Missions, CLASS11_LESSON_SLUGS } from "./class-11-missions";
 import { class8Missions, CLASS8_LESSON_SLUGS } from "./class-8-missions";
 import { class9Missions, CLASS9_LESSON_SLUGS } from "./class-9-missions";
+import { class10Missions, CLASS10_LESSON_SLUGS } from "./class-10-missions";
 
 export const CYBER_LESSON_SLUGS = [
   "can-i-tell-this",
@@ -53,6 +54,7 @@ export const CYBER_LESSON_SLUGS = [
   ...CLASS12_LESSON_SLUGS,
   ...CLASS8_LESSON_SLUGS,
   ...CLASS9_LESSON_SLUGS,
+  ...CLASS10_LESSON_SLUGS,
 ] as const;
 
 export type CyberLessonSlug = (typeof CYBER_LESSON_SLUGS)[number];
@@ -78,6 +80,7 @@ const cyberLessonSchema = z.object({
 export type CyberLessonMeta = z.infer<typeof cyberLessonSchema>;
 
 const expectedGrades: Record<CyberLessonSlug, number[]> = {
+  ...Object.fromEntries(CLASS10_LESSON_SLUGS.map(slug => [slug, [10]])),
   ...Object.fromEntries(CLASS9_LESSON_SLUGS.map(slug => [slug, [9]])),
   ...Object.fromEntries(CLASS8_LESSON_SLUGS.map(slug => [slug, [8]])),
   "the-easy-money-recruitment-chain": [12],
@@ -214,6 +217,7 @@ const parsedLessons = [
   ...z.array(cyberLessonSchema).parse(class12Missions),
   ...z.array(cyberLessonSchema).parse(class8Missions),
   ...z.array(cyberLessonSchema).parse(class9Missions),
+  ...z.array(cyberLessonSchema).parse(class10Missions),
 ];
 
 assertUnique(parsedLessons, (lesson) => lesson.id, "id");
@@ -243,5 +247,5 @@ export function getCyberLesson(slug: string) {
 }
 
 export function getCyberLessonsForGrade(grade: number) {
-  return cyberLessons.filter((lesson) => lesson.grades.includes(grade) && (grade !== 8 || lesson.id.startsWith("cyber-class8-")) && (grade !== 9 || lesson.id.startsWith("cyber-class9-")));
+  return cyberLessons.filter((lesson) => lesson.grades.includes(grade) && (grade !== 8 || lesson.id.startsWith("cyber-class8-")) && (grade !== 9 || lesson.id.startsWith("cyber-class9-")) && (grade !== 10 || lesson.id.startsWith("cyber-class10-")));
 }

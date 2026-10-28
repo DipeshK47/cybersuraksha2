@@ -34,8 +34,9 @@ function walk(dir) {
     if (!/\.tsx?$/.test(file) || /\.generated\.ts$/.test(file)) continue;
     const source=fs.readFileSync(file,'utf8');
     const ast=ts.createSourceFile(file,source,ts.ScriptTarget.Latest,true,file.endsWith('.tsx')?ts.ScriptKind.TSX:ts.ScriptKind.TS);
-    const bilingualContent = ['class8','class9'].some(grade=>file.startsWith(path.join('app','data',grade)+path.sep)||file===path.join('app','module','cyber','lessons',grade,'ui.ts'));
-    const bilingualComposites = ['task-feedback.ts','task-evidence.ts'].some(name=>file===path.join('app','module','cyber','lessons','class8',name));
+    const class10Content = file.startsWith(path.join('app','data','class10')+path.sep)||file.startsWith(path.join('app','module','cyber','lessons','class10')+path.sep);
+    const bilingualContent = class10Content||['class8','class9'].some(grade=>file.startsWith(path.join('app','data',grade)+path.sep)||file===path.join('app','module','cyber','lessons',grade,'ui.ts'));
+    const bilingualComposites = ['task-feedback.ts','task-evidence.ts','task-simulation.ts'].some(name=>file===path.join('app','module','cyber','lessons','class8',name));
     function visit(node) {
       if (ts.isImportDeclaration(node)||ts.isTypeAliasDeclaration(node)||ts.isInterfaceDeclaration(node)) return;
       // A programming range invariant is not rendered learner-facing copy.
@@ -46,7 +47,7 @@ function walk(dir) {
         if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text==='l') {
           const english=node.arguments[0];
           if (english && (ts.isStringLiteral(english)||ts.isNoSubstitutionTemplateLiteral(english))) add(english.text,file);
-          else if (english && !bilingualComposites) throw new Error(`Bilingual source must use a literal English message: ${file}`);
+          else if (english && !bilingualComposites && !class10Content) throw new Error(`Bilingual source must use a literal English message: ${file}`);
           return;
         }
         ts.forEachChild(node,visit); return;
@@ -78,6 +79,10 @@ function walk(dir) {
   }
 }
 walk('app'); walk('db');
+// The course compiler collects actual runtime L pairs, including authored
+// diagram/helper values that cannot be recovered from a literal-only AST scan.
+const class10Messages=path.join('public','locales','class10-hi.json');
+if(fs.existsSync(class10Messages))for(const source of Object.keys(JSON.parse(fs.readFileSync(class10Messages,'utf8'))))add(source,class10Messages);
 fs.mkdirSync('tmp/i18n',{recursive:true});
 const catalogue={messages:[...messages].sort(),templates:[...templates.values()],sources:Object.fromEntries(sources)};
 fs.writeFileSync('tmp/i18n/catalogue.json',JSON.stringify(catalogue,null,2));

@@ -1,0 +1,93 @@
+{
+  "duration": 107.916,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c3bc6076b22cb7fc2d5d75b345e26a8156d4bf8d68aa82ec3a953c84499c15c7",
+  "scenes": [
+    {
+      "id": "class10-stable-sort-pass-1",
+      "label": "Meet the team",
+      "title": "The cards arrive",
+      "mood": "thinking",
+      "caption": "Aditi brings four fictional priority cards into the Decision Lab. Vihaan gives each a stable letter identity as well as a numeric key. The pass moves complete cards.",
+      "speech": "Aditi brings four fictional priority cards into the Decision Lab. Vihaan gives each a stable letter identity as well as a numeric key. The pass moves complete cards.",
+      "dialogue": "A key and an identity are different fields.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 13.44
+    },
+    {
+      "id": "class10-stable-sort-pass-2",
+      "label": "The problem",
+      "title": "A moving comparison window",
+      "mood": "surprise",
+      "caption": "The supplied pass compares adjacent positions from left to right. After each comparison, the next pair uses the current row, not the untouched starting row. Aditi slides a window while keeping card identities visible.",
+      "speech": "The supplied pass compares adjacent positions from left to right. After each comparison, the next pair uses the current row, not the untouched starting row. Aditi slides a window while keeping card identities visible.",
+      "dialogue": "Read the row again after a swap.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 14.09,
+      "duration": 16.968
+    },
+    {
+      "id": "class10-stable-sort-pass-3",
+      "label": "How it works",
+      "title": "A strict swap condition",
+      "mood": "thinking",
+      "caption": "A pair swaps only when its left key is strictly greater than its right key. The first comparison therefore changes the row. Vihaan writes one comparison and one swap as separate events, rather than treating those two counts as interchangeable measures.",
+      "speech": "A pair swaps only when its left key is strictly greater than its right key. The first comparison therefore changes the row. Vihaan writes one comparison and one swap as separate events, rather than treating those two counts as interchangeable measures.",
+      "dialogue": "A comparison can finish without a swap.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 31.708,
+      "duration": 18.048
+    },
+    {
+      "id": "class10-stable-sort-pass-4",
+      "label": "Your decision",
+      "title": "Predict the next window",
+      "mood": "thinking",
+      "caption": "After the first swap, the window advances one position. Decide which named cards are now adjacent and whether their keys require movement. Looking only at the original row would compare the wrong cards and produce an unreproducible pass.",
+      "speech": "After the first swap, the window advances one position. Decide which named cards are now adjacent and whether their keys require movement. Looking only at the original row would compare the wrong cards and produce an unreproducible pass.",
+      "dialogue": "What occupies the positions now?",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 50.406,
+      "duration": 17.448
+    },
+    {
+      "id": "class10-stable-sort-pass-5",
+      "label": "What changes",
+      "title": "Keep the equal identities",
+      "mood": "happy",
+      "caption": "The equal ranked cards meet inside the window. Since equality is not greater than, they stay in their original relative order. Aditi preserves the letters in the trace: seeing repeated numeric keys alone would hide an accidental reversal of tied records.",
+      "speech": "The equal ranked cards meet inside the window. Since equality is not greater than, they stay in their original relative order. Aditi preserves the letters in the trace: seeing repeated numeric keys alone would hide an accidental reversal of tied records.",
+      "dialogue": "Tie identities are evidence of stability.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 68.504,
+      "duration": 18.864
+    },
+    {
+      "id": "class10-stable-sort-pass-6",
+      "label": "Enter the lab",
+      "title": "One pass has limits",
+      "mood": "happy",
+      "caption": "They finish the final adjacent comparison and record the resulting row, comparison count and swap count. The row need not be fully sorted after one pass. Their test set includes named ties and a single-card boundary, checking different possible defects separately.",
+      "speech": "They finish the final adjacent comparison and record the resulting row, comparison count and swap count. The row need not be fully sorted after one pass. Their test set includes named ties and a single-card boundary, checking different possible defects separately.",
+      "dialogue": "Report what the pass actually guarantees.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 88.018,
+      "duration": 19.248
+    }
+  ]
+}

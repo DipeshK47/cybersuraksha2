@@ -1,0 +1,93 @@
+{
+  "duration": 122.772,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5fe76211ab75e78d8813a487e6eece6b4b4893d1288026c509af75946288b2d0",
+  "scenes": [
+    {
+      "id": "class10-ai-model-card-stop-rule-1",
+      "label": "Meet the team",
+      "title": "A narrow prototype",
+      "mood": "thinking",
+      "caption": "Aditi proposes a Decision Lab prototype for fictional strips. Its single input is a supplied contrast value, and its output suggests review or pass to a teacher. It cannot certify equipment, diagnose faults or make decisions about real people.",
+      "speech": "Aditi proposes a Decision Lab prototype for fictional strips. Its single input is a supplied contrast value, and its output suggests review or pass to a teacher. It cannot certify equipment, diagnose faults or make decisions about real people.",
+      "dialogue": "Write what this prototype is for.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.936
+    },
+    {
+      "id": "class10-ai-model-card-stop-rule-2",
+      "label": "The problem",
+      "title": "Train before validation",
+      "mood": "surprise",
+      "caption": "Vihaan selects training examples 2→review and 8→pass. The model copies the nearest value’s label, abstaining on conflicting ties. Separate visible validation inputs 3,4,6,9 produce review,review,pass,pass. Their checked labels agree, but these are development results.",
+      "speech": "Vihaan selects training examples 2→review and 8→pass. The model copies the nearest value’s label, abstaining on conflicting ties. Separate visible validation inputs 3,4,6,9 produce review,review,pass,pass. Their checked labels agree, but these are development results.",
+      "dialogue": "Keep training and visible validation separate.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 19.586,
+      "duration": 22.656
+    },
+    {
+      "id": "class10-ai-model-card-stop-rule-3",
+      "label": "How it works",
+      "title": "The queue is real work",
+      "mood": "thinking",
+      "caption": "Every review or abstention requires a human check. On the normal validation batch, the queue contains 2 strips, matching the teacher’s capacity of 2. Aditi counts outputs; correct predictions still require inspections.",
+      "speech": "Every review or abstention requires a human check. On the normal validation batch, the queue contains 2 strips, matching the teacher’s capacity of 2. Aditi counts outputs; correct predictions still require inspections.",
+      "dialogue": "Correct predictions can still create work.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 42.892,
+      "duration": 17.304
+    },
+    {
+      "id": "class10-ai-model-card-stop-rule-4",
+      "label": "Your decision",
+      "title": "Bound the proposed use",
+      "mood": "thinking",
+      "caption": "Choose a model-card entry retaining the narrow task, actual development evidence and teacher responsibility. The allowed input range is 0 through 10. Their stop rule pauses the whole batch if an input leaves that range or required review exceeds available capacity.",
+      "speech": "Choose a model-card entry retaining the narrow task, actual development evidence and teacher responsibility. The allowed input range is 0 through 10. Their stop rule pauses the whole batch if an input leaves that range or required review exceeds available capacity.",
+      "dialogue": "Limits need an action and an owner.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 60.846,
+      "duration": 19.392
+    },
+    {
+      "id": "class10-ai-model-card-stop-rule-5",
+      "label": "What changes",
+      "title": "A changed batch arrives",
+      "mood": "happy",
+      "caption": "The changed batch contains 3,5,6,20. The model abstains at 5 and predicts pass at 20, but extrapolation is outside the stated input range. Vihaan triggers the stop rule immediately; the numerical output cannot authorise the out-of-range strip.",
+      "speech": "The changed batch contains 3,5,6,20. The model abstains at 5 and predicts pass at 20, but extrapolation is outside the stated input range. Vihaan triggers the stop rule immediately; the numerical output cannot authorise the out-of-range strip.",
+      "dialogue": "A prediction cannot override the stop rule.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 80.888,
+      "duration": 20.04
+    },
+    {
+      "id": "class10-ai-model-card-stop-rule-6",
+      "label": "Enter the lab",
+      "title": "Hand over unresolved evidence",
+      "mood": "happy",
+      "caption": "The teacher receives the paused batch and its model card. Fresh evaluation after freezing remains unresolved, alongside monitoring and fallback. A classroom validation success is recorded accurately while the notebook leaves any real deployment decision with responsible human review.",
+      "speech": "The teacher receives the paused batch and its model card. Fresh evaluation after freezing remains unresolved, alongside monitoring and fallback. A classroom validation success is recorded accurately while the notebook leaves any real deployment decision with responsible human review.",
+      "dialogue": "Document what remains to be established.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 101.578,
+      "duration": 20.544
+    }
+  ]
+}

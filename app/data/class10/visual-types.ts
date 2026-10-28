@@ -1,4 +1,4 @@
-import type { L } from '../lesson-content';
+import type { L, RouteTask } from '../lesson-content';
 
 export type VisualNode = {
   id: string;
@@ -9,7 +9,17 @@ export type VisualNode = {
   shape?: 'card' | 'circle' | 'box';
 };
 export type VisualEdge = { id: string; from: string; to: string; label?: L };
+/** Optional worked route: authored endpoints retain 3–4 frames; entries replay between them. */
+export type VisualRoute = {
+  id: string;
+  label: L;
+  task: RouteTask;
+  moves: string[];
+  from: number;
+  to: number;
+};
 export type VisualStep = {
+  route?: VisualRoute;
   label: L;
   description: L;
   active: string[];

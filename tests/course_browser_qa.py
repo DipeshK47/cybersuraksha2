@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright, expect
 expect.set_options(timeout=60000)
 
 GRADE = int(os.environ.get("COURSE_QA_GRADE", "8"))
-assert GRADE in (8, 9)
+assert GRADE in (8, 9, 10)
 ROOT = Path(__file__).resolve().parent.parent
 BASE = os.environ.get("BASE_URL", "http://localhost:3218")
 if not re.match(r"^http://(localhost|127\.0\.0\.1):\d+$", BASE):
@@ -179,259 +179,272 @@ def preview_negatives(teacher, browser, errors):
     print(f"PASS authenticated teacher preview: {count} wrong submissions, all single-choice alternatives, all mechanics in EN/HI",flush=True)
     preview.close()
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True, channel="chrome")
-    student = browser.new_context(viewport={"width": 1440, "height": 1000}, reduced_motion="reduce")
-    teacher = browser.new_context(viewport={"width": 1440, "height": 1000})
-    assert teacher.request.post(BASE + "/api/auth/teacher", data={"email": "teacher@dpsrkp.edu.in", "password": "Teacher@123"}).status == 200
-    if GRADE == 9:
-        classes_response = teacher.request.get(BASE + "/api/admin/classes")
-        assert classes_response.status == 200, classes_response.text()
-        existing = next((row for row in classes_response.json()["classes"] if row["grade"] == GRADE),None)
-        if existing:
-            class_name = existing["name"]
+if __name__ == "__main__":
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, channel="chrome")
+        student = browser.new_context(viewport={"width": 1440, "height": 1000}, reduced_motion="reduce")
+        teacher = browser.new_context(viewport={"width": 1440, "height": 1000})
+        assert teacher.request.post(BASE + "/api/auth/teacher", data={"email": "teacher@dpsrkp.edu.in", "password": "Teacher@123"}).status == 200
+        if GRADE >= 9:
+            classes_response = teacher.request.get(BASE + "/api/admin/classes")
+            assert classes_response.status == 200, classes_response.text()
+            existing = next((row for row in classes_response.json()["classes"] if row["grade"] == GRADE),None)
+            if existing:
+                class_name = existing["name"]
+            else:
+                added = teacher.request.post(BASE + "/api/admin/classes",data={"grade":GRADE,"section":"QA","name":f"{GRADE}QA"})
+                assert added.status == 201, added.text()
+                class_name = added.json()["class"]["name"]
         else:
-            added = teacher.request.post(BASE + "/api/admin/classes",data={"grade":GRADE,"section":"QA","name":"9QA"})
-            assert added.status == 201, added.text()
-            class_name = added.json()["class"]["name"]
-    else:
-        class_name = "8B"
-    roll = "QA" + str(time.time_ns())[-12:]
-    issued = teacher.request.post(BASE + "/api/students", data={"className": class_name, "students": [{"rollNo": roll, "name": "Future Lab QA Learner"}]})
-    assert issued.status == 201, issued.text()
-    access_code = issued.json()["students"][0]["accessCode"]
-    login = student.request.post(BASE + "/api/auth/student", data={"school": "dps-rkp", "className": class_name, "rollNo": roll, "password": access_code})
-    assert login.status == 200, login.text()
-    student_id = login.json()["student"]["id"]
-    workspace = teacher.request.get(BASE + "/api/lms/assignments").json()
-    class_id = next(row["id"] for row in workspace["classes"] if row["name"] == class_name)
-    selected_modules = ["cyber-" + next(row["slug"] for row in cases if row["strand"] == subject) for subject in ["Cybersecurity", "Artificial Intelligence", "Computational Thinking", "Cyber Fraud"]]
-    created = teacher.request.post(BASE + "/api/lms/assignments", data={"title": f"Class {GRADE} browser verification", "instructions": "Complete the selected Future Lab chapters.", "classId": class_id, "moduleIds": selected_modules, "questions": [], "dueAt": int((time.time()+86400)*1000), "totalMarks": 100, "publish": True})
-    assert created.status == 201, created.text()
-    assignment_id = created.json()["assignment"]["id"]
-    page = student.new_page()
-    page.set_default_timeout(25000)
-    errors = []
-    page.on("pageerror", lambda error: errors.append(str(error)))
-    page.goto(BASE + f"/grade/{GRADE}", timeout=120000)
-    expect(page.locator(f'a[href^="/grade/{GRADE}/"]')).to_have_count(4)
-    activity_events = []
-    def capture_activity(request):
-        if request.url.endswith("/api/activity") and request.method == "POST":
-            body = request.post_data_json
-            activity_events.extend(body.get("events",[body]))
-    page.on("request",capture_activity)
-    seen_kinds = set()
-    seen_hindi = set()
-    for index, chapter in enumerate(cases):
-        slug = chapter["slug"]
-        script_path = ROOT / "app/module/cyber/lessons/new/story/chapters" / (slug + ".json")
-        deadline = time.monotonic() + 1800
-        while True:
-            script = json.loads(script_path.read_text())
-            if script.get("duration", 0) > 0 and (ROOT / "public/audio/cyber" / slug / "story.mp3").exists():
-                break
-            if time.monotonic() > deadline:
-                raise TimeoutError("Measured narration missing: " + slug)
-            time.sleep(2)
-        page.set_viewport_size({"width": 390 if index % 2 else 1440, "height": 1000})
-        page.goto(BASE + "/module/cyber/" + slug + f"?grade={GRADE}", timeout=120000)
-        story = page.locator(f'[data-story-player="{slug}"]')
-        expect(story).to_be_visible()
-        if GRADE == 9:
-            portraits = story.locator('svg[role="img"]').filter(has_text="Reva")
-            expect(portraits).to_have_count(1)
-            expect(portraits).to_contain_text("Nikhil")
-            assert portraits.locator("path").count() >= 8
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": story overflow"
-        page.wait_for_function("() => {const a=document.querySelector('audio');return a && a.readyState>=1 && Number.isFinite(a.duration) && a.duration>0}")
-        duration = page.locator("audio").evaluate("a=>a.duration")
-        assert abs(duration-script["duration"]) < 0.2, (slug, duration, script["duration"])
-        page.get_by_role("button", name="हिन्दी", exact=True).click()
-        page.wait_for_function("document.documentElement.lang==='hi'")
-        expect(story.get_by_text(chapter["scenes"][0]["caption"]["hi"], exact=True)).to_be_visible()
-        page.get_by_role("button", name="English", exact=True).click()
-        page.wait_for_function("document.documentElement.lang==='en'")
-        story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
-        expect(story).to_have_attribute("data-scene", "3")
-        story.locator("audio").evaluate("a=>a.pause()")
-        decision = story.locator('[data-task-kind="choice"]')
-        blank_check(story,decision,chapter["decision"],activity_events)
-        if GRADE == 9:
-            for language in ("en","hi"):
-                set_language(page,language)
-                for item in chapter["storyWrongs"]:
-                    wrong_then_edit(story,decision,chapter["decision"],item["answer"],item["diagnosis"],chapter["decision"]["correct"],language)
-                    expect(story).to_have_attribute("data-solved","false")
-            set_language(page,"en")
-            # Keyboard selection and checking are real button interactions.
-            decision.get_by_role("button",name=next(o["label"]["en"] for o in chapter["decision"]["options"] if o["id"] == chapter["decision"]["correct"]),exact=True).focus()
-            page.keyboard.press("Enter")
-        elif index == 0:
-            solve(decision,chapter["decision"],chapter["storyWrongs"][0]["answer"])
-            expect(story).to_have_attribute("data-solved","false")
-        solve(decision, chapter["decision"], chapter["decision"]["correct"])
-        expect(story).to_have_attribute("data-solved", "true")
-        if GRADE == 9:
-            set_language(page,"hi")
-            for scene_index, scene in enumerate(chapter["scenes"]):
-                story.locator("nav button").nth(scene_index).click()
-                expect(story).to_have_attribute("data-scene",str(scene_index))
-                story.locator("audio").evaluate("a=>a.pause()")
-                expect(story.get_by_text(scene["caption"]["hi"],exact=True)).to_be_visible()
-                assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": Hindi story overflow"
-            set_language(page,"en")
-        story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
-        story.get_by_role("button", name="Open the practice lab", exact=True).click()
-        for task_index, task in enumerate(chapter["tasks"]):
-            seen_kinds.add(task["kind"])
-            practice = page.locator(f'[data-new-mission="{slug}"]')
-            expect(practice).to_have_attribute("data-stage", str(task_index))
-            board = practice.locator('[data-task-kind]')
-            if GRADE == 9:
-                blank_check(practice,board,task,activity_events)
-            hindi = task["kind"] not in seen_hindi
-            if hindi:
-                page.get_by_role("button", name="हिन्दी", exact=True).click()
-                page.wait_for_function("document.documentElement.lang==='hi'")
-            solve(board, task, chapter["solutions"][task_index], "hi" if hindi else "en")
-            expect(practice).to_have_attribute("data-ready", "true")
-            if hindi:
-                expect(practice.locator('[data-result="correct"]')).to_contain_text(task["success"]["hi"])
-                seen_hindi.add(task["kind"])
-                page.get_by_role("button", name="English", exact=True).click()
-                page.wait_for_function("document.documentElement.lang==='en'")
-                expect(practice).to_have_attribute("data-ready", "true")
-            if index == 0 and task_index == 0:
-                page.reload()
-                practice = page.locator(f'[data-new-mission="{slug}"]')
-                # A correct first response survives reload; retrying cannot replace it.
-                expect(practice).to_have_attribute("data-stage", "0")
-                solve(practice.locator('[data-task-kind]'), task, chapter["solutions"][task_index], require_untested=False)
-                expect(practice).to_have_attribute("data-ready", "true")
-            assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": practice overflow"
-            if index < 4 and task_index == 1:
-                page.screenshot(path=str(OUT / f'{slug}-practice.png'), full_page=True)
-            practice.get_by_role("button", name="Review mission" if task_index == 2 else "Next challenge", exact=True).click()
-        ready = page.locator(f'[data-mission-ready="{slug}"]')
-        expect(ready).to_be_visible()
-        for task_index, lines in enumerate(chapter["evidence"]):
-            notebook = ready.locator(f'[data-class8-evidence="{task_index}"]')
-            for line in lines:
-                expect(notebook).to_contain_text(line["value"]["en"])
-        if index == 0 or GRADE == 9:
+            class_name = "8B"
+        roll = "QA" + str(time.time_ns())[-12:]
+        issued = teacher.request.post(BASE + "/api/students", data={"className": class_name, "students": [{"rollNo": roll, "name": "Future Lab QA Learner"}]})
+        assert issued.status == 201, issued.text()
+        access_code = issued.json()["students"][0]["accessCode"]
+        login = student.request.post(BASE + "/api/auth/student", data={"school": "dps-rkp", "className": class_name, "rollNo": roll, "password": access_code})
+        assert login.status == 200, login.text()
+        student_id = login.json()["student"]["id"]
+        workspace = teacher.request.get(BASE + "/api/lms/assignments").json()
+        class_id = next(row["id"] for row in workspace["classes"] if row["name"] == class_name)
+        selected_modules = ["cyber-" + next(row["slug"] for row in cases if row["strand"] == subject) for subject in ["Cybersecurity", "Artificial Intelligence", "Computational Thinking", "Cyber Fraud"]]
+        created = teacher.request.post(BASE + "/api/lms/assignments", data={"title": f"Class {GRADE} browser verification", "instructions": "Complete the selected Future Lab chapters.", "classId": class_id, "moduleIds": selected_modules, "questions": [], "dueAt": int((time.time()+86400)*1000), "totalMarks": 100, "publish": True})
+        assert created.status == 201, created.text()
+        assignment_id = created.json()["assignment"]["id"]
+        page = student.new_page()
+        page.set_default_timeout(25000)
+        errors = []
+        page.on("pageerror", lambda error: errors.append(str(error)))
+        page.goto(BASE + f"/grade/{GRADE}", timeout=120000)
+        expect(page.locator(f'a[href^="/grade/{GRADE}/"]')).to_have_count(6 if GRADE == 10 else 4)
+        activity_events = []
+        def capture_activity(request):
+            if request.url.endswith("/api/activity") and request.method == "POST":
+                body = request.post_data_json
+                activity_events.extend(body.get("events",[body]))
+        page.on("request",capture_activity)
+        seen_kinds = set()
+        seen_hindi = set()
+        for index, chapter in enumerate(cases):
+            slug = chapter["slug"]
+            script_path = ROOT / "app/module/cyber/lessons/new/story/chapters" / (slug + ".json")
+            deadline = time.monotonic() + 1800
+            while True:
+                script = json.loads(script_path.read_text())
+                if script.get("duration", 0) > 0 and (ROOT / "public/audio/cyber" / slug / "story.mp3").exists():
+                    break
+                if time.monotonic() > deadline:
+                    raise TimeoutError("Measured narration missing: " + slug)
+                time.sleep(2)
+            page.set_viewport_size({"width": 390 if index % 2 else 1440, "height": 1000})
+            page.goto(BASE + "/module/cyber/" + slug + f"?grade={GRADE}", timeout=120000)
+            story = page.locator(f'[data-story-player="{slug}"]')
+            expect(story).to_be_visible()
+            if GRADE == 10:
+                portraits = story.locator('[data-class10-characters]')
+                expect(portraits).to_be_visible()
+                expect(portraits).to_contain_text("Aditi")
+                expect(portraits).to_contain_text("Vihaan")
+            elif GRADE == 9:
+                portraits = story.locator('svg[role="img"]').filter(has_text="Reva")
+                expect(portraits).to_have_count(1)
+                expect(portraits).to_contain_text("Nikhil")
+                assert portraits.locator("path").count() >= 8
+            assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": story overflow"
+            page.wait_for_function("() => {const a=document.querySelector('audio');return a && a.readyState>=1 && Number.isFinite(a.duration) && a.duration>0}")
+            duration = page.locator("audio").evaluate("a=>a.duration")
+            assert abs(duration-script["duration"]) < 0.2, (slug, duration, script["duration"])
             page.get_by_role("button", name="हिन्दी", exact=True).click()
             page.wait_for_function("document.documentElement.lang==='hi'")
-            for task_index, lines in enumerate(chapter["evidence"]):
-                for line in lines:
-                    expect(ready.locator(f'[data-class8-evidence="{task_index}"]')).to_contain_text(line["value"]["hi"])
-            page.reload()
+            expect(story.get_by_text(chapter["scenes"][0]["caption"]["hi"], exact=True)).to_be_visible()
+            page.get_by_role("button", name="English", exact=True).click()
+            page.wait_for_function("document.documentElement.lang==='en'")
+            story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
+            expect(story).to_have_attribute("data-scene", "3")
+            story.locator("audio").evaluate("a=>a.pause()")
+            decision = story.locator('[data-task-kind="choice"]')
+            blank_check(story,decision,chapter["decision"],activity_events)
+            if GRADE >= 9:
+                for language in ("en","hi"):
+                    set_language(page,language)
+                    for item in chapter["storyWrongs"]:
+                        wrong_then_edit(story,decision,chapter["decision"],item["answer"],item["diagnosis"],chapter["decision"]["correct"],language)
+                        expect(story).to_have_attribute("data-solved","false")
+                set_language(page,"en")
+                # Keyboard selection and checking are real button interactions.
+                decision.get_by_role("button",name=next(o["label"]["en"] for o in chapter["decision"]["options"] if o["id"] == chapter["decision"]["correct"]),exact=True).focus()
+                page.keyboard.press("Enter")
+            elif index == 0:
+                solve(decision,chapter["decision"],chapter["storyWrongs"][0]["answer"])
+                expect(story).to_have_attribute("data-solved","false")
+            solve(decision, chapter["decision"], chapter["decision"]["correct"])
+            expect(story).to_have_attribute("data-solved", "true")
+            if GRADE >= 9:
+                set_language(page,"hi")
+                for scene_index, scene in enumerate(chapter["scenes"]):
+                    story.locator("nav button").nth(scene_index).click()
+                    expect(story).to_have_attribute("data-scene",str(scene_index))
+                    story.locator("audio").evaluate("a=>a.pause()")
+                    expect(story.get_by_text(scene["caption"]["hi"],exact=True)).to_be_visible()
+                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": Hindi story overflow"
+                set_language(page,"en")
+            story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
+            story.get_by_role("button", name="Open the practice lab", exact=True).click()
+            for task_index, task in enumerate(chapter["tasks"]):
+                seen_kinds.add(task["kind"])
+                practice = page.locator(f'[data-new-mission="{slug}"]')
+                expect(practice).to_have_attribute("data-stage", str(task_index))
+                board = practice.locator('[data-task-kind]')
+                if GRADE >= 9:
+                    blank_check(practice,board,task,activity_events)
+                hindi = task["kind"] not in seen_hindi
+                if hindi:
+                    page.get_by_role("button", name="हिन्दी", exact=True).click()
+                    page.wait_for_function("document.documentElement.lang==='hi'")
+                solve(board, task, chapter["solutions"][task_index], "hi" if hindi else "en")
+                expect(practice).to_have_attribute("data-ready", "true")
+                if hindi:
+                    expect(practice.locator('[data-result="correct"]')).to_contain_text(task["success"]["hi"])
+                    seen_hindi.add(task["kind"])
+                    page.get_by_role("button", name="English", exact=True).click()
+                    page.wait_for_function("document.documentElement.lang==='en'")
+                    expect(practice).to_have_attribute("data-ready", "true")
+                if index == 0 and task_index == 0:
+                    page.reload()
+                    practice = page.locator(f'[data-new-mission="{slug}"]')
+                    # A correct first response survives reload; retrying cannot replace it.
+                    expect(practice).to_have_attribute("data-stage", "0")
+                    solve(practice.locator('[data-task-kind]'), task, chapter["solutions"][task_index], require_untested=False)
+                    expect(practice).to_have_attribute("data-ready", "true")
+                assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": practice overflow"
+                if index < 4 and task_index == 1:
+                    page.screenshot(path=str(OUT / f'{slug}-practice.png'), full_page=True)
+                practice.get_by_role("button", name="Review mission" if task_index == 2 else "Next challenge", exact=True).click()
             ready = page.locator(f'[data-mission-ready="{slug}"]')
             expect(ready).to_be_visible()
             for task_index, lines in enumerate(chapter["evidence"]):
+                notebook = ready.locator(f'[data-class8-evidence="{task_index}"]')
                 for line in lines:
-                    expect(ready.locator(f'[data-class8-evidence="{task_index}"]')).to_contain_text(line["value"]["hi"])
-            page.get_by_role("button", name="English", exact=True).click()
-            page.wait_for_function("document.documentElement.lang==='en'")
-            ready.get_by_label("Explain it in your own words", exact=True).fill("I checked the stated purpose, tested the plan and used evidence to explain the result.")
-            ready.get_by_role("button", name="Save reflection", exact=True).click()
-            expect(ready.get_by_role("button", name="Reflection saved", exact=True)).to_be_disabled()
-        ready.get_by_role("button", name="Finish chapter", exact=True).click()
+                    expect(notebook).to_contain_text(line["value"]["en"])
+            if index == 0 or GRADE >= 9:
+                page.get_by_role("button", name="हिन्दी", exact=True).click()
+                page.wait_for_function("document.documentElement.lang==='hi'")
+                for task_index, lines in enumerate(chapter["evidence"]):
+                    for line in lines:
+                        expect(ready.locator(f'[data-class8-evidence="{task_index}"]')).to_contain_text(line["value"]["hi"])
+                page.reload()
+                ready = page.locator(f'[data-mission-ready="{slug}"]')
+                expect(ready).to_be_visible()
+                for task_index, lines in enumerate(chapter["evidence"]):
+                    for line in lines:
+                        expect(ready.locator(f'[data-class8-evidence="{task_index}"]')).to_contain_text(line["value"]["hi"])
+                page.get_by_role("button", name="English", exact=True).click()
+                page.wait_for_function("document.documentElement.lang==='en'")
+                ready.get_by_label("Explain it in your own words", exact=True).fill("I checked the stated purpose, tested the plan and used evidence to explain the result.")
+                ready.get_by_role("button", name="Save reflection", exact=True).click()
+                expect(ready.get_by_role("button", name="Reflection saved", exact=True)).to_be_disabled()
+            ready.get_by_role("button", name="Finish chapter", exact=True).click()
+            expect(page.locator(f'[data-mission-complete="{slug}"]')).to_be_visible()
+            print(f'PASS {index+1}/32 {slug}: story gate, English audio, Hindi text, three tasks, completion', flush=True)
+        if GRADE >= 9:
+            preview_negatives(teacher,browser,errors)
+        assert seen_kinds == {"choice", "select", "match", "order", "number", "binary", "grid", "route", "model"}, seen_kinds
+        assert seen_hindi == seen_kinds, seen_hindi
+        deadline = time.monotonic()+45
+        while True:
+            progress = student.request.get(BASE + "/api/lms/progress").json()
+            complete = [row for row in progress["attempts"] if row["moduleId"].startswith(f"cyber-class{GRADE}-") and row["completedAt"] is not None]
+            if len(complete) == 32 or time.monotonic()>deadline:
+                break
+            time.sleep(1)
+        assert len(complete) == 32, len(complete)
+        assert all(row["score"] == 100 for row in complete), [(row["moduleId"],row["score"]) for row in complete]
+        assert any(json.loads(row["payload"]).get("reflection") for row in progress["events"]), "Reflection not persisted"
+        report = teacher.request.get(BASE + f"/api/lms/assignments/{assignment_id}").json()
+        learner = next(row for row in report["students"] if row["id"] == student_id)
+        assert learner["progress"]["marks"] == 100, learner["progress"]
+        teacher_history = teacher.request.get(BASE + f"/api/lms/students/{student_id}").json()
+        teacher_evidence = [{**json.loads(row["payload"]),"_attemptId":row["attemptId"],"_moduleId":next(a["moduleId"] for a in teacher_history["attempts"] if a["id"]==row["attemptId"])} for row in teacher_history["events"] if row["type"] == "story_feedback" and json.loads(row["payload"]).get("evidence")]
+        for chapter in cases:
+            for task_index, task in enumerate(chapter["tasks"]):
+                parts = [row for row in teacher_evidence if row["_moduleId"] == "cyber-"+chapter["slug"] and row["_attemptId"] == next(a["id"] for a in complete if a["moduleId"] == "cyber-"+chapter["slug"]) and row.get("question") == task["prompt"]["en"][:300] and row.get("category") == chapter["topics"][task_index]["en"][:150]]
+                assert parts, (chapter["slug"], task_index, "Teacher evidence missing")
+                # A reload can repeat an already checked response. Compare one complete snapshot.
+                part_count = parts[0]["evidenceParts"]
+                snapshot = "".join(next(row["feedback"] for row in parts if row["evidencePart"] == part) for part in range(1, part_count+1))
+                for line in chapter["evidence"][task_index]:
+                    assert line["value"]["en"] in snapshot and line["value"]["hi"] in snapshot, (chapter["slug"], task_index, line)
+        # A new attempt keeps its wrong first answer even after a successful retry.
+        chapter = next(row for row in cases if "cyber-"+row["slug"] in selected_modules) if GRADE >= 9 else next(row for row in cases if row["slug"] == "class8-account-control")
+        slug = chapter["slug"]
+        page.goto(BASE + "/module/cyber/" + slug + f"?grade={GRADE}")
+        # Wait for stored-state restoration before interacting with the frame controls.
         expect(page.locator(f'[data-mission-complete="{slug}"]')).to_be_visible()
-        print(f'PASS {index+1}/32 {slug}: story gate, English audio, Hindi text, three tasks, completion', flush=True)
-    if GRADE == 9:
-        preview_negatives(teacher,browser,errors)
-    assert seen_kinds == {"choice", "select", "match", "order", "number", "binary", "grid", "route", "model"}, seen_kinds
-    assert seen_hindi == seen_kinds, seen_hindi
-    deadline = time.monotonic()+45
-    while True:
-        progress = student.request.get(BASE + "/api/lms/progress").json()
-        complete = [row for row in progress["attempts"] if row["moduleId"].startswith(f"cyber-class{GRADE}-") and row["completedAt"] is not None]
-        if len(complete) == 32 or time.monotonic()>deadline:
-            break
-        time.sleep(1)
-    assert len(complete) == 32, len(complete)
-    assert all(row["score"] == 100 for row in complete), [(row["moduleId"],row["score"]) for row in complete]
-    assert any(json.loads(row["payload"]).get("reflection") for row in progress["events"]), "Reflection not persisted"
-    report = teacher.request.get(BASE + f"/api/lms/assignments/{assignment_id}").json()
-    learner = next(row for row in report["students"] if row["id"] == student_id)
-    assert learner["progress"]["marks"] == 100, learner["progress"]
-    teacher_history = teacher.request.get(BASE + f"/api/lms/students/{student_id}").json()
-    teacher_evidence = [{**json.loads(row["payload"]),"_attemptId":row["attemptId"],"_moduleId":next(a["moduleId"] for a in teacher_history["attempts"] if a["id"]==row["attemptId"])} for row in teacher_history["events"] if row["type"] == "story_feedback" and json.loads(row["payload"]).get("evidence")]
-    for chapter in cases:
+        page.get_by_role("button", name="Start over", exact=True).click()
+        story = page.locator(f'[data-story-player="{slug}"]')
+        expect(story).to_be_visible()
+        story.get_by_role("button", name="Skip to practice", exact=True).click()
+        practice = page.locator(f'[data-new-mission="{slug}"]')
+        first_task = chapter["tasks"][0]
+        wrong_answer = chapter["wrongs"][0][0]
+        solve(practice.locator('[data-task-kind]'), first_task, wrong_answer)
+        expect(practice).to_have_attribute("data-ready", "false")
+        expect(practice.locator('[data-result="retry"]')).to_be_visible()
         for task_index, task in enumerate(chapter["tasks"]):
-            parts = [row for row in teacher_evidence if row["_moduleId"] == "cyber-"+chapter["slug"] and row["_attemptId"] == next(a["id"] for a in complete if a["moduleId"] == "cyber-"+chapter["slug"]) and row.get("question") == task["prompt"]["en"][:300] and row.get("category") == chapter["topics"][task_index]["en"][:150]]
-            assert parts, (chapter["slug"], task_index, "Teacher evidence missing")
-            # A reload can repeat an already checked response. Compare one complete snapshot.
-            part_count = parts[0]["evidenceParts"]
-            snapshot = "".join(next(row["feedback"] for row in parts if row["evidencePart"] == part) for part in range(1, part_count+1))
-            for line in chapter["evidence"][task_index]:
-                assert line["value"]["en"] in snapshot and line["value"]["hi"] in snapshot, (chapter["slug"], task_index, line)
-    # A new attempt keeps its wrong first answer even after a successful retry.
-    chapter = next(row for row in cases if "cyber-"+row["slug"] in selected_modules) if GRADE == 9 else next(row for row in cases if row["slug"] == "class8-account-control")
-    slug = chapter["slug"]
-    page.goto(BASE + "/module/cyber/" + slug + f"?grade={GRADE}")
-    # Wait for stored-state restoration before interacting with the frame controls.
-    expect(page.locator(f'[data-mission-complete="{slug}"]')).to_be_visible()
-    page.get_by_role("button", name="Start over", exact=True).click()
-    story = page.locator(f'[data-story-player="{slug}"]')
-    expect(story).to_be_visible()
-    story.get_by_role("button", name="Skip to practice", exact=True).click()
-    practice = page.locator(f'[data-new-mission="{slug}"]')
-    first_task = chapter["tasks"][0]
-    wrong_answer = chapter["wrongs"][0][0]
-    solve(practice.locator('[data-task-kind]'), first_task, wrong_answer)
-    expect(practice).to_have_attribute("data-ready", "false")
-    expect(practice.locator('[data-result="retry"]')).to_be_visible()
-    for task_index, task in enumerate(chapter["tasks"]):
-        solve(practice.locator('[data-task-kind]'), task, chapter["solutions"][task_index])
-        expect(practice).to_have_attribute("data-ready", "true")
-        practice.get_by_role("button", name="Review mission" if task_index == 2 else "Next challenge", exact=True).click()
-    page.locator(f'[data-mission-ready="{slug}"]').get_by_role("button", name="Finish chapter", exact=True).click()
-    deadline = time.monotonic()+45
-    while True:
-        retried = student.request.get(BASE + "/api/lms/progress").json()
-        attempts = sorted([row for row in retried["attempts"] if row["moduleId"] == "cyber-"+slug and row["completedAt"] is not None], key=lambda row: row["startedAt"])
-        if len(attempts) == 2 or time.monotonic()>deadline:
-            break
-        time.sleep(1)
-    assert len(attempts) == 2, attempts
-    assert attempts[0]["score"] == 100 and abs(attempts[1]["score"] - 200/3) < 0.01, attempts
-    responses = [json.loads(row["payload"]) for row in retried["events"] if row["attemptId"] == attempts[1]["id"] and row["type"] == "question_answered" and json.loads(row["payload"]).get("id") == slug+"-challenge-1"]
-    assert any(row["correct"] is False for row in responses) and any(row["correct"] is True and row.get("retry") for row in responses), responses
-    retry_history = teacher.request.get(BASE+f"/api/lms/students/{student_id}").json()
-    wrong_parts = [json.loads(row["payload"]) for row in retry_history["events"] if row["attemptId"] == attempts[1]["id"] and row["type"] == "story_feedback" and json.loads(row["payload"]).get("evidence") and json.loads(row["payload"]).get("correct") is False and json.loads(row["payload"]).get("question") == first_task["prompt"]["en"][:300]]
-    assert wrong_parts, "Teacher history lost the wrong first submission"
-    wrong_snapshot = "".join(next(part["feedback"] for part in wrong_parts if part["evidencePart"] == i) for i in range(1,wrong_parts[0]["evidenceParts"]+1))
-    for language in ("en","hi"):
-        for issue in chapter["wrongDiagnoses"][0][0]["issues"]:
-            assert issue["label"][language] in wrong_snapshot and issue["reason"][language] in wrong_snapshot, issue
-    retry_report = teacher.request.get(BASE + f"/api/lms/assignments/{assignment_id}").json()
-    retry_learner = next(row for row in retry_report["students"] if row["id"] == student_id)
-    assert abs(retry_learner["progress"]["marks"] - 91.67) < 0.01, retry_learner["progress"]
-    forbidden_modules = [("flowchart-architect","cyber-middle-ct-flowchart-architect"),("your-digital-risk-map","cyber-class-11-your-digital-risk-map")]
-    if GRADE == 9:
-        forbidden_modules += [("email-header-inspector","cyber-upper-security-email-header-inspector"),("class8-account-control","cyber-class8-account-control")]
-    for forbidden, module_id in forbidden_modules:
-        assert student.request.get(BASE + f"/module/cyber/{forbidden}?grade={GRADE}").status in (403,404)
-        activity = student.request.post(BASE + "/api/activity",data={"moduleId":module_id,"type":"question_answered","payload":{"id":"denied","correct":True}})
-        assert activity.status in (403,404), (module_id,activity.status,activity.text())
-        completion = student.request.post(BASE + "/api/module-runs",data={"moduleId":module_id})
-        assert completion.status in (403,404), (module_id,completion.status,completion.text())
-    for restricted_grade in ([8,10,11,12] if GRADE == 9 else [11]):
-        assert student.request.get(BASE + f"/grade/{restricted_grade}").status in (403,404)
-    if GRADE == 9:
-        assert student.request.get(BASE + "/module/cyber/class8-account-control?grade=8").status in (403,404)
-    page.set_viewport_size({"width":390,"height":1000})
-    page.goto(BASE + "/learn/progress")
-    expect(page.get_by_role("heading", name="Sections to focus on", exact=True)).to_be_visible()
-    page.get_by_role("button", name="हिन्दी", exact=True).click()
-    page.wait_for_function("document.documentElement.lang==='hi'")
-    page.reload()
-    page.wait_for_function("document.documentElement.lang==='hi'")
-    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), "Hindi report overflow"
-    page.screenshot(path=str(OUT / "progress-hindi-mobile.png"), full_page=True)
-    page.screenshot(path=str(OUT / "progress-hindi-mobile-viewport.png"))
-    assert not errors, errors
-    print("PASS all 32 chapters / 96 practice tasks / 9 mechanics in English and Hindi; measured audio, bilingual notebook reload, actual teacher evidence, saved reflection, wrong-first retry grading, assignment marks and grade restrictions", flush=True)
-    browser.close()
+            solve(practice.locator('[data-task-kind]'), task, chapter["solutions"][task_index])
+            expect(practice).to_have_attribute("data-ready", "true")
+            practice.get_by_role("button", name="Review mission" if task_index == 2 else "Next challenge", exact=True).click()
+        page.locator(f'[data-mission-ready="{slug}"]').get_by_role("button", name="Finish chapter", exact=True).click()
+        deadline = time.monotonic()+45
+        while True:
+            retried = student.request.get(BASE + "/api/lms/progress").json()
+            attempts = sorted([row for row in retried["attempts"] if row["moduleId"] == "cyber-"+slug and row["completedAt"] is not None], key=lambda row: row["startedAt"])
+            if len(attempts) == 2 or time.monotonic()>deadline:
+                break
+            time.sleep(1)
+        assert len(attempts) == 2, attempts
+        assert attempts[0]["score"] == 100 and abs(attempts[1]["score"] - 200/3) < 0.01, attempts
+        responses = [json.loads(row["payload"]) for row in retried["events"] if row["attemptId"] == attempts[1]["id"] and row["type"] == "question_answered" and json.loads(row["payload"]).get("id") == slug+"-challenge-1"]
+        assert any(row["correct"] is False for row in responses) and any(row["correct"] is True and row.get("retry") for row in responses), responses
+        retry_history = teacher.request.get(BASE+f"/api/lms/students/{student_id}").json()
+        wrong_parts = [json.loads(row["payload"]) for row in retry_history["events"] if row["attemptId"] == attempts[1]["id"] and row["type"] == "story_feedback" and json.loads(row["payload"]).get("evidence") and json.loads(row["payload"]).get("correct") is False and json.loads(row["payload"]).get("question") == first_task["prompt"]["en"][:300]]
+        assert wrong_parts, "Teacher history lost the wrong first submission"
+        wrong_snapshot = "".join(next(part["feedback"] for part in wrong_parts if part["evidencePart"] == i) for i in range(1,wrong_parts[0]["evidenceParts"]+1))
+        for language in ("en","hi"):
+            for issue in chapter["wrongDiagnoses"][0][0]["issues"]:
+                assert issue["label"][language] in wrong_snapshot and issue["reason"][language] in wrong_snapshot, issue
+        retry_report = teacher.request.get(BASE + f"/api/lms/assignments/{assignment_id}").json()
+        retry_learner = next(row for row in retry_report["students"] if row["id"] == student_id)
+        assert abs(retry_learner["progress"]["marks"] - 91.67) < 0.01, retry_learner["progress"]
+        forbidden_modules = [("flowchart-architect","cyber-middle-ct-flowchart-architect"),("your-digital-risk-map","cyber-class-11-your-digital-risk-map")]
+        if GRADE >= 9:
+            forbidden_modules += [("email-header-inspector","cyber-upper-security-email-header-inspector"),("class8-account-control","cyber-class8-account-control")]
+        if GRADE == 10:
+            forbidden_modules += [(cases9_slug, "cyber-"+cases9_slug) for cases9_slug in ["class9-ai-measurable-question"]]
+        for forbidden, module_id in forbidden_modules:
+            assert student.request.get(BASE + f"/module/cyber/{forbidden}?grade={GRADE}").status in (403,404)
+            activity = student.request.post(BASE + "/api/activity",data={"moduleId":module_id,"type":"question_answered","payload":{"id":"denied","correct":True}})
+            assert activity.status in (403,404), (module_id,activity.status,activity.text())
+            completion = student.request.post(BASE + "/api/module-runs",data={"moduleId":module_id})
+            assert completion.status in (403,404), (module_id,completion.status,completion.text())
+        if GRADE == 10:
+            for path in ("/grade/10/mathematics", "/grade/10/english"):
+                assert student.request.get(BASE + path).status == 200, path
+                page.goto(BASE+path)
+                expect(page.locator('section[aria-labelledby="chapter-library-title"] .moduleNameCard')).to_have_count(14 if path.endswith('mathematics') else 9)
+        for restricted_grade in ([8,9,11,12] if GRADE == 10 else [8,10,11,12] if GRADE == 9 else [11]):
+            assert student.request.get(BASE + f"/grade/{restricted_grade}").status in (403,404)
+        if GRADE >= 9:
+            assert student.request.get(BASE + "/module/cyber/class8-account-control?grade=8").status in (403,404)
+        page.set_viewport_size({"width":390,"height":1000})
+        page.goto(BASE + "/learn/progress")
+        expect(page.get_by_role("heading", name="Sections to focus on", exact=True)).to_be_visible()
+        page.get_by_role("button", name="हिन्दी", exact=True).click()
+        page.wait_for_function("document.documentElement.lang==='hi'")
+        page.reload()
+        page.wait_for_function("document.documentElement.lang==='hi'")
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), "Hindi report overflow"
+        page.screenshot(path=str(OUT / "progress-hindi-mobile.png"), full_page=True)
+        page.screenshot(path=str(OUT / "progress-hindi-mobile-viewport.png"))
+        assert not errors, errors
+        print("PASS all 32 chapters / 96 practice tasks / 9 mechanics in English and Hindi; measured audio, bilingual notebook reload, actual teacher evidence, saved reflection, wrong-first retry grading, assignment marks and grade restrictions", flush=True)
+        browser.close()

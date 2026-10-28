@@ -1,0 +1,93 @@
+{
+  "duration": 106.308,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "bbb5844a2b637d93df71d9343fd6ef38c3840b82f7ffad52f3e528c2a1b85c00",
+  "scenes": [
+    {
+      "id": "class10-fraud-familiar-voice-1",
+      "label": "Meet the team",
+      "title": "A familiar sound",
+      "mood": "thinking",
+      "caption": "In the Decision Lab, Vihaan hears a fictional message claiming to be his older cousin. It asks for urgent money. Recognition creates confidence, although the recording supplies no independent identity evidence.",
+      "speech": "In the Decision Lab, Vihaan hears a fictional message claiming to be his older cousin. It asks for urgent money. Recognition creates confidence, although the recording supplies no independent identity evidence.",
+      "dialogue": "Recognition is a reason to check carefully.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.056
+    },
+    {
+      "id": "class10-fraud-familiar-voice-2",
+      "label": "The problem",
+      "title": "Keep this secret",
+      "mood": "surprise",
+      "caption": "The message tells him not to involve adults and offers a new callback contact. Vihaan feels worried about delaying help. Their teacher names the isolation request gently: a person can seek support without accepting a caller’s demand for secrecy.",
+      "speech": "The message tells him not to involve adults and offers a new callback contact. Vihaan feels worried about delaying help. Their teacher names the isolation request gently: a person can seek support without accepting a caller’s demand for secrecy.",
+      "dialogue": "You can ask for help while uncertain.",
+      "status": "Class 10 Decision Lab",
+      "tone": "trouble",
+      "start": 16.706,
+      "duration": 18.576
+    },
+    {
+      "id": "class10-fraud-familiar-voice-3",
+      "label": "How it works",
+      "title": "Two contact cards",
+      "mood": "thinking",
+      "caption": "Aditi separates the supplied new contact from a number already saved in the family directory. The directory route is independent. Glitches or accents cannot prove whether the voice is synthetic.",
+      "speech": "Aditi separates the supplied new contact from a number already saved in the family directory. The directory route is independent. Glitches or accents cannot prove whether the voice is synthetic.",
+      "dialogue": "Compare where each route came from.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 35.932,
+      "duration": 14.808
+    },
+    {
+      "id": "class10-fraud-familiar-voice-4",
+      "label": "Your decision",
+      "title": "Pause the request",
+      "mood": "thinking",
+      "caption": "The learner chooses to pause the transfer request and bring a trusted adult into the check. Nobody sends money or a private code. The teacher helps contact separately, without negotiating evidence with the recording.",
+      "speech": "The learner chooses to pause the transfer request and bring a trusted adult into the check. Nobody sends money or a private code. The teacher helps contact separately, without negotiating evidence with the recording.",
+      "dialogue": "Support does not require obeying the message.",
+      "status": "Class 10 Decision Lab",
+      "tone": "normal",
+      "start": 51.39,
+      "duration": 15.864
+    },
+    {
+      "id": "class10-fraud-familiar-voice-5",
+      "label": "What changes",
+      "title": "A separate answer",
+      "mood": "happy",
+      "caption": "In the supplied callback record, the cousin answers through the previously known route and denies asking for money. This contradicts the request’s claimed origin. It does not explain how the message was produced or identify whoever sent it to Vihaan.",
+      "speech": "In the supplied callback record, the cousin answers through the previously known route and denies asking for money. This contradicts the request’s claimed origin. It does not explain how the message was produced or identify whoever sent it to Vihaan.",
+      "dialogue": "The callback verifies a narrow fact.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 67.904,
+      "duration": 17.952
+    },
+    {
+      "id": "class10-fraud-familiar-voice-6",
+      "label": "Enter the lab",
+      "title": "Write the limits",
+      "mood": "happy",
+      "caption": "Their identity-check plan records the independent contact and the cousin’s answer. Aditi leaves the voice technology unresolved. Vihaan thanks the adult for helping without blame, and keeps only the relevant fictional message details for a private follow-up with the teacher.",
+      "speech": "Their identity-check plan records the independent contact and the cousin’s answer. Aditi leaves the voice technology unresolved. Vihaan thanks the adult for helping without blame, and keeps only the relevant fictional message details for a private follow-up with the teacher.",
+      "dialogue": "Reject the request without inventing its mechanism.",
+      "status": "Class 10 Decision Lab",
+      "tone": "resolved",
+      "start": 86.506,
+      "duration": 19.152
+    }
+  ]
+}

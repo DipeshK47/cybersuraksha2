@@ -82,7 +82,7 @@ export function begin(){cursor=0;pending=[];dirty=false;}
 export function useState(initial){const i=cursor++;if(!(i in slots))slots[i]=typeof initial==='function'?initial():initial;return [slots[i],value=>{const next=typeof value==='function'?value(slots[i]):value;if(!Object.is(next,slots[i])){slots[i]=next;dirty=true;}}];}
 export function useRef(initial){const i=cursor++;return slots[i]??(slots[i]={current:initial});}
 export function useEffect(effect,deps){const i=cursor++,old=slots[i];if(!old||!deps||deps.some((v,j)=>!Object.is(v,old.deps?.[j])))pending.push(()=>{old?.cleanup?.();slots[i]={deps,cleanup:effect()};});}
-export function flush(){for(const effect of pending)effect();return dirty;}
+export function flush(){if(dirty)return true;for(const effect of pending)effect();return dirty;}
 export function unmount(){for(const slot of slots)slot?.cleanup?.();slots=[];}
 export const jsx=(type,props)=>({type,props});export const jsxs=jsx;export const Fragment='fragment';`;
 const boardBundle=await build({stdin:{contents:`export { TaskBoard } from './app/module/cyber/lessons/class8/TaskBoard'; export {begin,flush,unmount} from 'test-hooks';`,resolveDir:root,loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,jsx:'automatic',loader:{'.module.css':'empty'},logLevel:'silent',plugins:[{name:'hook-host',setup(builder){
@@ -96,16 +96,65 @@ const boardApi=await loadSource(boardBundle.outputFiles[0].text);
 function elements(tree){if(!tree||typeof tree!=='object')return [];if(Array.isArray(tree))return tree.flatMap(elements);return [tree,...elements(tree.props?.children)];}
 function containsText(tree,text){if(Array.isArray(tree))return tree.some(x=>containsText(x,text));if(typeof tree==='string')return tree===text;return tree&&typeof tree==='object'&&containsText(tree.props?.children,text);}
 test('TaskBoard exports only the current test and invalidates edits, configuration changes and keyed remounts',()=>{
- let answer=['right','right'],task=structuredClone(route),reports=[],checks=0,tree;
- const render=()=>{for(let attempts=0;attempts<10;attempts++){boardApi.begin();tree=boardApi.TaskBoard({task,answer,onChange:value=>{answer=value;},onCheck:()=>checks++,onSimulationChange:value=>reports.push(value)});if(!boardApi.flush())return;}assert.fail('effect caused a render loop');};
+ let answer=['right','right'],task=structuredClone(route),reports=[],checks=0,disabled=false,tree;
+ const render=()=>{for(let attempts=0;attempts<10;attempts++){boardApi.begin();tree=boardApi.TaskBoard({task,answer,disabled,onChange:value=>{answer=value;},onCheck:()=>checks++,onSimulationChange:value=>reports.push(value)});if(!boardApi.flush())return;}assert.fail('effect caused a render loop');};
  const button=text=>elements(tree).find(node=>node.type==='button'&&containsText(node,text));
  render(); assert.equal(reports.at(-1),null); assert.equal(button('Check my evidence').props.disabled,true);
  button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');assert.deepEqual(reports.at(-1).result,api.simulateRoute(task,answer));assert.equal(button('Check my evidence').props.disabled,false);
  const count=reports.length;render();assert.equal(reports.length,count,'changing callback identity must not report repeatedly');
  button('Check my evidence').props.onClick();assert.equal(checks,1);
+ disabled=true;render();assert.equal(reports.length,count,'ready/disabled and callback changes must preserve the tested snapshot');assert.equal(reports.at(-1).kind,'route');disabled=false;render();assert.equal(button('Check my evidence').props.disabled,false);
  button('Undo last step').props.onClick();render();assert.equal(reports.at(-1),null);assert.equal(button('Check my evidence').props.disabled,true);
  answer=['right','right'];render();assert.equal(button('Check my evidence').props.disabled,true,'restoring an old answer requires another test');
  button('Run the test').props.onClick();render();task={...task,maxCost:1};render();assert.equal(reports.at(-1),null);assert.equal(button('Check my evidence').props.disabled,true);
  button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');boardApi.unmount();assert.equal(reports.at(-1),null);
  render();assert.equal(button('Check my evidence').props.disabled,true);boardApi.unmount();
+});
+
+// Exercise StoryPlayer's real navigation and native-event handlers with the
+// microsecond-rounded seek observed in Chrome, without timing or sleeps.
+const playerHooks = hooks + `
+export const useLayoutEffect=useEffect;
+export function useMemo(factory,deps){const i=cursor++,old=slots[i];if(!old||deps.some((v,j)=>!Object.is(v,old.deps[j])))slots[i]={deps,value:factory()};return slots[i].value;}
+export function useSyncExternalStore(subscribe,snapshot,serverSnapshot){return serverSnapshot();}
+`;
+const playerBundle=await build({stdin:{contents:`export {StoryPlayer} from './app/module/cyber/lessons/new/story/StoryPlayer'; export {begin,flush,unmount} from 'test-hooks';`,resolveDir:root,loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,jsx:'automatic',loader:{'.module.css':'empty'},logLevel:'silent',plugins:[{name:'player-host',setup(builder){
+ builder.onResolve({filter:/^(react|react\/jsx-runtime|test-hooks)$/},()=>({path:'hooks',namespace:'player-fixture'}));
+ builder.onLoad({filter:/.*/,namespace:'player-fixture'},()=>({contents:playerHooks,loader:'js'}));
+ builder.onResolve({filter:/^motion\/react$/},()=>({path:'motion',namespace:'player-motion'}));
+ builder.onLoad({filter:/.*/,namespace:'player-motion'},()=>({contents:'export const AnimatePresence="presence",motion={div:"div"};export function useReducedMotion(){return false;}',loader:'js'}));
+ builder.onResolve({filter:/^lucide-react$/},()=>({path:'icons',namespace:'player-icons'}));
+ builder.onLoad({filter:/.*/,namespace:'player-icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Pause="icon",Play="icon",RotateCcw="icon",Volume2="icon",VolumeX="icon";',loader:'js'}));
+ builder.onLoad({filter:/story\/StoryCharacter.tsx$/},()=>({contents:'export const StoryCharacter="character";',loader:'ts'}));
+}}]});
+const playerApi=await loadSource(playerBundle.outputFiles[0].text);
+test('native microsecond seek rounding does not cross scenes on timeupdate or immediate diagram pause',async()=>{
+ const script=JSON.parse(readFileSync(root+'app/module/cyber/lessons/new/story/chapters/class10-ai-moving-window.json','utf8'));
+ const World=()=>null,activity=[];
+ const chapter={script,interactionScene:3,World,icon:'icon',character:{},lockedHint:'Locked'};
+ let tree;
+ const render=()=>{for(let n=0;n<10;n++){playerApi.begin();tree=playerApi.StoryPlayer({slug:'rounding',chapter,onBegin:()=>assert.fail('advanced'),onActivity:type=>activity.push(type)});if(!playerApi.flush())return;}assert.fail('render loop');};
+ const node=type=>elements(tree).find(n=>n.type===type);
+ const audio={currentTime:0,readyState:4,play:async()=>{},pause:()=>{}};
+ render();node('audio').props.ref.current=audio;
+ await elements(node('nav')).filter(n=>n.type==='button')[5].props.onClick();render();
+ assert.equal(tree.props['data-scene'],3);assert.equal(tree.props['data-solved'],false);
+ // Observed Chrome ordering: jump commits exact 65.526, then seek timeupdate
+ // reports 65.525999 before playback advances and exploration pauses it.
+ audio.currentTime=65.525999;node('audio').props.onTimeUpdate();render();
+ assert.equal(tree.props['data-scene'],3,'native seek precision must not send the story to scene 2');
+ audio.currentTime=65.544274;node(World).props.media.pause();render();
+ assert.equal(tree.props['data-scene'],3);assert.equal(tree.props['data-playing'],false);
+ assert.equal(tree.props['data-solved'],false);assert.deepEqual(activity,['story_viewed']);
+ // Every authored boundary accepts native rounding only within one microsecond.
+ // Real backward seeks outside that precision and ordinary forward seeks still work.
+ for(let index=1;index<=3;index++)for(const [offset,expected] of [[-.000002,index-1],[-.000001,index],[0,index],[.000002,index]]){
+  audio.currentTime=script.scenes[index].start+offset;node('audio').props.onTimeUpdate();render();
+  assert.equal(tree.props['data-scene'],expected,`boundary ${index}, offset ${offset}`);
+ }
+ // Existing unsolved gate clamp still owns the actual media position.
+ audio.currentTime=script.scenes[4].start+1;node('audio').props.onTimeUpdate();render();
+ assert.equal(tree.props['data-scene'],3);assert.equal(tree.props['data-waiting'],true);
+ assert.equal(audio.currentTime,script.scenes[4].start-.05);
+ playerApi.unmount();
 });
