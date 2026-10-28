@@ -1,0 +1,93 @@
+{
+  "duration": 111.012,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c0dfb20c0a75dd5f25e4416cca745d3da71fb037a447db418ced40c6a892a8c2",
+  "scenes": [
+    {
+      "id": "class9-ai-group-errors-1",
+      "label": "Meet the team",
+      "title": "Two reading stations",
+      "mood": "thinking",
+      "caption": "Nikhil and Reva compare fictional request cards at stations. Group A contains typed cards; group B contains scans. The sorter makes 2 wrong category predictions in each group. Equal counts make the stations appear equally served.",
+      "speech": "Nikhil and Reva compare fictional request cards at stations. Group A contains typed cards; group B contains scans. The sorter makes 2 wrong category predictions in each group. Equal counts make the stations appear equally served.",
+      "dialogue": "Look beneath the count.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.288
+    },
+    {
+      "id": "class9-ai-group-errors-2",
+      "label": "The problem",
+      "title": "Different group totals",
+      "mood": "surprise",
+      "caption": "A has 20 test cards, while B has 5. Reva divides wrong predictions by each group’s own total. The fractions 2 out of 20 and 2 out of 5 describe different rates, despite equal error counts.",
+      "speech": "A has 20 test cards, while B has 5. Reva divides wrong predictions by each group’s own total. The fractions 2 out of 20 and 2 out of 5 describe different rates, despite equal error counts.",
+      "dialogue": "The denominator belongs to its group.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.938,
+      "duration": 15.936
+    },
+    {
+      "id": "class9-ai-group-errors-3",
+      "label": "How it works",
+      "title": "Name the measured error",
+      "mood": "thinking",
+      "caption": "Error here means a predicted category differs from its checked label. No abstentions occur. These are overall error rates, not false alarm rates; the latter would need a positive category definition and a denominator counting negative cases.",
+      "speech": "Error here means a predicted category differs from its checked label. No abstentions occur. These are overall error rates, not false alarm rates; the latter would need a positive category definition and a denominator counting negative cases.",
+      "dialogue": "A rate needs a definition.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 35.524,
+      "duration": 17.832
+    },
+    {
+      "id": "class9-ai-group-errors-4",
+      "label": "Your decision",
+      "title": "A tempting fairness badge",
+      "mood": "thinking",
+      "caption": "A poster calls the sorter fair because both groups have 2 errors. Choose whether those counts justify the badge. The rate difference matters, but the tiny scanned sample cannot establish future outcomes or explain its cause.",
+      "speech": "A poster calls the sorter fair because both groups have 2 errors. Choose whether those counts justify the badge. The rate difference matters, but the tiny scanned sample cannot establish future outcomes or explain its cause.",
+      "dialogue": "Question the claim and its evidence.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 54.006,
+      "duration": 16.92
+    },
+    {
+      "id": "class9-ai-group-errors-5",
+      "label": "What changes",
+      "title": "Review the disagreement",
+      "mood": "happy",
+      "caption": "A disputed category goes to a teacher reviewer; an unreadable scan needs a clearer permitted copy. If the checked label itself is wrong, document its correction. Reva keeps these correction paths available without hiding records.",
+      "speech": "A disputed category goes to a teacher reviewer; an unreadable scan needs a clearer permitted copy. If the checked label itself is wrong, document its correction. Reva keeps these correction paths available without hiding records.",
+      "dialogue": "A person can challenge the output.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 71.576,
+      "duration": 17.304
+    },
+    {
+      "id": "class9-ai-group-errors-6",
+      "label": "Enter the lab",
+      "title": "Evidence before a badge",
+      "mood": "happy",
+      "caption": "In the lab, calculate rates, identify missing evidence and assign reviews. Seek more representative tests and inspect error types. Keep sample sizes and limitations beside percentages; neither an isolated gap nor an equal result settles fairness for every use.",
+      "speech": "In the lab, calculate rates, identify missing evidence and assign reviews. Seek more representative tests and inspect error types. Keep sample sizes and limitations beside percentages; neither an isolated gap nor an equal result settles fairness for every use.",
+      "dialogue": "Keep review available while investigating.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 89.53,
+      "duration": 20.832
+    }
+  ]
+}

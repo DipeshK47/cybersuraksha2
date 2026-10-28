@@ -1,0 +1,24 @@
+.edition { --studio-ink:#302d46; --studio-accent:#65558a; color:var(--studio-ink); }
+.edition [data-new-mission] { --practice-ink:#302d46; }
+.edition [data-new-mission] > div:first-child { background:linear-gradient(110deg,#e6e7f5,#f3e4c7); }
+.edition [data-new-mission] > div:first-child p { color:#4c4667; opacity:1; }
+.edition [data-class8-world] { background:#fcfaf3; border-color:#b5a5d0; color:#302d46; }
+.edition [data-class8-world] > header { color:#65558a; }
+.world { background:#fcfaf3; border:2px solid #c6bedb; border-radius:1.25rem; padding:clamp(1rem,2vw,1.6rem); color:#302d46; }
+.world header { display:flex; align-items:center; gap:.6rem; color:#65558a; font-weight:800; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
+.world h2 { font-size:clamp(1.3rem,2vw,1.9rem); line-height:1.2; margin:1rem 0; }
+.world h3 { font-size:1.15rem; line-height:1.5; margin:1.25rem 0 .8rem; }
+.topics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; margin-top:1.2rem; }
+.topics div { padding:.85rem; border-radius:.7rem; background:#edebf5; border-top:3px solid #8b7da7; font-size:.9rem; line-height:1.45; }
+.topics b { display:block; color:#76668b; font-size:.7rem; margin-bottom:.45rem; }
+.result { padding:1rem; border-radius:.8rem; background:#e2eee5; color:#28584c; line-height:1.6; }
+.illustration { margin:0; overflow:hidden; border:2px solid #a294bc; background:#f9f7ed; border-radius:1rem; }
+.illustration svg { display:block; width:100%; height:auto; max-height:280px; }
+.illustration figcaption { padding:.8rem 1rem; text-align:center; line-height:1.5; color:#403952; font-size:.92rem; border-top:1px solid #d9d1e5; }
+.characters { width:100%; max-height:340px; overflow:visible; }
+.characters [data-mood] { transition:transform .2s; }
+.characters[data-animated="true"] .reva { animation:studio-breathe 3.2s ease-in-out infinite; transform-origin:98px 255px; }
+.characters[data-animated="true"] .nikhil { animation:studio-breathe 3.8s ease-in-out infinite reverse; transform-origin:246px 255px; }
+@keyframes studio-breathe { 50% { transform:translateY(-2px) rotate(.4deg); } }
+@media(max-width:640px) { .topics { grid-template-columns:1fr; } .world { padding:1rem; } .characters { max-height:260px; } }
+@media(prefers-reduced-motion:reduce) { .characters * { animation:none!important; transition:none!important; } }

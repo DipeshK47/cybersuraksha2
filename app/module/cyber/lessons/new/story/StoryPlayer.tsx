@@ -91,7 +91,7 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   }
   async function markSolved() {
     if (solvedRef.current) return;
-    onActivity?.("story_answered", { id: `${slug}-story`, correct: true, category: scenes[gate].title, feedback: "Story exercise solved." });
+    if (!chapter.managedFeedback) onActivity?.("story_answered", { id: `${slug}-story`, correct: true, category: scenes[gate].title, feedback: "Story exercise solved." });
     const resume = playing || waiting;
     solvedRef.current = true;
     setSolved(true); setWaiting(false); setHint("");
@@ -124,11 +124,11 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     <div className={s.stage} data-chapter={current.id} data-tone={current.tone}>
       <div className={s.actor}>
         <div className={s.speech} key={scene}>{current.dialogue}</div>
-        <StoryCharacter asset={chapter.character.asset} name={chapter.character.name} mood={mood} playing={playing} />
+        {chapter.Character ? <chapter.Character mood={mood} playing={playing} reduced={reduced} /> : <StoryCharacter asset={chapter.character.asset} name={chapter.character.name} mood={mood} playing={playing} />}
         <div className={s.name}><span>{chapter.character.name}</span><span>{current.status}</span></div>
       </div>
       <div className={s.storyWorld}>
-        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} reduced={reduced} />
+        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} onActivity={onActivity} reduced={reduced} />
       </div>
     </div>
     <div className={s.storyText}>

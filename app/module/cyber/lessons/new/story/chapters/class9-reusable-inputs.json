@@ -1,0 +1,93 @@
+{
+  "duration": 106.692,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "4d4438c6fc48aadc948e4f8d1fa6daa2743a3062909b6a76c3c63f2c2743e306",
+  "scenes": [
+    {
+      "id": "class9-reusable-inputs-1",
+      "label": "Meet the team",
+      "title": "The repeated calculation",
+      "mood": "thinking",
+      "caption": "Nikhil keeps rewriting a calculation for the pretend lending desk: multiply group size by kits per person, then add reserve kits. Reva suggests naming this step so different desk cards can use the same calculation with their own supplied numbers.",
+      "speech": "Nikhil keeps rewriting a calculation for the pretend lending desk: multiply group size by kits per person, then add reserve kits. Reva suggests naming this step so different desk cards can use the same calculation with their own supplied numbers.",
+      "dialogue": "What must every caller supply?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.784
+    },
+    {
+      "id": "class9-reusable-inputs-2",
+      "label": "The problem",
+      "title": "Names for inputs",
+      "mood": "surprise",
+      "caption": "Their function accepts people, per_person and reserve as parameters. Each call supplies arguments in that stated order. The function uses only these values, so its rule does not depend on the previously opened desk card.",
+      "speech": "Their function accepts people, per_person and reserve as parameters. Each call supplies arguments in that stated order. The function uses only these values, so its rule does not depend on the previously opened desk card.",
+      "dialogue": "A parameter is a named input inside the function.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.434,
+      "duration": 17.784
+    },
+    {
+      "id": "class9-reusable-inputs-3",
+      "label": "How it works",
+      "title": "Return to the caller",
+      "mood": "thinking",
+      "caption": "The function calculates a total and returns it. Returning does not automatically print a label or pack a box; the caller decides how to use the result. Reva draws a return arrow to the waiting instruction that will store the number.",
+      "speech": "The function calculates a total and returns it. Returning does not automatically print a label or pack a box; the caller decides how to use the result. Reva draws a return arrow to the waiting instruction that will store the number.",
+      "dialogue": "Where will the returned value be stored?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 36.868,
+      "duration": 17.064
+    },
+    {
+      "id": "class9-reusable-inputs-4",
+      "label": "Your decision",
+      "title": "A hidden memory",
+      "mood": "thinking",
+      "caption": "An alternative draft quietly adds the previous call’s total. Its first example looks correct because the remembered total starts empty. Choose a test that challenges hidden memory instead of repeatedly testing fresh calls.",
+      "speech": "An alternative draft quietly adds the previous call’s total. Its first example looks correct because the remembered total starts empty. Choose a test that challenges hidden memory instead of repeatedly testing fresh calls.",
+      "dialogue": "A later call is a different test condition.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 54.582,
+      "duration": 16.752
+    },
+    {
+      "id": "class9-reusable-inputs-5",
+      "label": "What changes",
+      "title": "Swap the calls",
+      "mood": "happy",
+      "caption": "They run a small request and then a larger request, reset the simulation, and reverse the order. Each input should keep its own output. If an unchanged request produces a different result, undeclared state is influencing the calculation.",
+      "speech": "They run a small request and then a larger request, reset the simulation, and reverse the order. Each input should keep its own output. If an unchanged request produces a different result, undeclared state is influencing the calculation.",
+      "dialogue": "Same arguments should give the same result here.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 71.984,
+      "duration": 17.976
+    },
+    {
+      "id": "class9-reusable-inputs-6",
+      "label": "Enter the lab",
+      "title": "A reusable test card",
+      "mood": "happy",
+      "caption": "Their function card states argument order, permitted whole numbers and the returned formula. They keep tests for an ordinary group and an empty group with a reserve. A reusable step needs visible inputs and effects.",
+      "speech": "Their function card states argument order, permitted whole numbers and the returned formula. They keep tests for an ordinary group and an empty group with a reserve. A reusable step needs visible inputs and effects.",
+      "dialogue": "Write the contract beside the function name.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 90.61,
+      "duration": 15.432
+    }
+  ]
+}

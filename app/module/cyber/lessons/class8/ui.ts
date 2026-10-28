@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { l } from "../../../../data/class8/types";
+import { l } from "../../../../data/class8/types.ts";
 export const ui = {
   answer: l("Submitted answer", "दिया गया जवाब"),
   signalEvidence: l("Signal bits", "सिग्नल बिट"),
@@ -8,6 +8,11 @@ export const ui = {
   finalPosition: l("Final position", "आख़िरी जगह"),
   collectedStops: l("Collected stops", "लिए गए पड़ाव"),
   failedMove: l("Failed move number", "गलत कदम का नंबर"),
+  routeCost: l("Route cost", "रास्ते का खर्च"),
+  costBudget: l("Cost budget", "खर्च की सीमा"),
+  cellEntryCost: l("Entry cost", "खाने में जाने का खर्च"),
+  startFree: l("Starting cell is free; every later entry costs again, including repeat visits.", "शुरुआती खाना मुफ़्त है; बाद में किसी खाने में जाने पर हर बार खर्च जुड़ता है, दोबारा जाने पर भी।"),
+  supported: l("Parts supported by your evidence", "आपकी जानकारी से सही ठहरे हिस्से"),
   lab: l("Class 8 Future Lab", "क्लास 8 फ़्यूचर लैब"),
   check: l("Check my evidence", "मेरी जानकारी चेक करें"),
   test: l("Run the test", "टेस्ट चलाएँ"),
@@ -22,7 +27,8 @@ export const ui = {
   uncertain: l("Not enough evidence: ask a person", "जानकारी काफ़ी नहीं है: किसी व्यक्ति से पूछें"),
   training: l("Choose training examples", "ट्रेनिंग के उदाहरण चुनें"),
   testing: l("Separate test examples", "अलग टेस्ट वाले उदाहरण"),
-  modelNote: l("This classroom model picks the label of the nearest selected number. Equally close conflicting labels make it abstain. It is a small simulation, not a real recycling system.", "यह क्लासरूम मॉडल चुने हुए सबसे नज़दीकी नंबर का लेबल लेता है। बराबर दूरी पर अलग लेबल मिलने पर यह जवाब नहीं देता। यह छोटा सिम्युलेशन है, असली रीसाइक्लिंग सिस्टम नहीं।"),
+  validation: l("Validation examples used for development", "सुधार के लिए इस्तेमाल किए जाने वाले वैलिडेशन उदाहरण"),
+  modelNote: l("This classroom model picks the label of the nearest selected number. Equally close conflicting labels make it abstain. Use this small classroom simulation to compare examples and inspect predictions.", "यह क्लासरूम मॉडल चुने हुए सबसे नज़दीकी नंबर का लेबल लेता है। बराबर दूरी पर अलग लेबल मिलने पर यह जवाब नहीं देता। इस छोटे क्लासरूम सिम्युलेशन में उदाहरण मिलाएँ और अनुमानों को जाँचें।"),
   lamp: l("Signal lamps", "सिग्नल लाइटें"),
   total: l("Current total", "अभी का कुल"),
   target: l("Target number", "लक्ष्य नंबर"),

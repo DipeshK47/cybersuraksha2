@@ -1,12 +1,12 @@
-# Class 9 Signal Studio: proposed course design
+# Class 9 Signal Studio: approved course design
 
-Status: approved by the user on 27 October 2026, including the course outline, Reva/Nikhil cast, shared feedback improvements and Indian English voice. Implementation in progress.
+Status: approved by the user on 27 October 2026 and implemented. The course outline, Reva/Nikhil cast, shared feedback improvements and Indian English voice are delivered. Verification and maintenance instructions are in [the delivery notes](class-9-delivery.md).
 
 ## Scope carried forward from Class 8
 
 Replace Class 9's shared eight-mission delivery with 32 original chapters: eight each in Cybersecurity, Artificial Intelligence, Computational Thinking and Cyber Fraud. Keep English and conversational Hindi text. Supply English narration in an Indian English voice.
 
-The actual current Grade 9 library exports two modules per subject, eight visible modules in total. Its lesson catalogue allows 11 older lesson entries. The replacement must make both delivery and access registration consistent at 32 new chapters, while retaining old IDs for historical reports and other grades.
+Before implementation, the Grade 9 library exported two modules per subject, eight visible modules in total, while its lesson catalogue allowed 11 older lesson entries. The replacement makes both delivery and access registration consistent at 32 new chapters, while retaining old IDs for historical reports and other grades.
 
 Each chapter retains the established 40-minute lesson format: three topics and outcomes, six story scenes, an explained story decision, three practical activities, a learner evidence notebook, a reflection, a family activity and teacher guidance with a three-point rubric. Target 200–225 English caption words per story, with audio timing measured from the finished recordings. Narration is one part of the lesson.
 

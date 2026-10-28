@@ -1,0 +1,93 @@
+{
+  "duration": 112.644,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5e39fe81b37dda5ce8b39a684b7c3352f80f7f5d34ba71802e8837c163983f01",
+  "scenes": [
+    {
+      "id": "class9-condition-edges-1",
+      "label": "Meet the team",
+      "title": "Two stamps appear",
+      "mood": "thinking",
+      "caption": "At the simulated kit counter, Reva finds a request stamped both approve and review. Nikhil checks the card rather than blaming the volunteer. Independent rules can both run; a correct comparison alone cannot guarantee one outcome.",
+      "speech": "At the simulated kit counter, Reva finds a request stamped both approve and review. Nikhil checks the card rather than blaming the volunteer. Independent rules can both run; a correct comparison alone cannot guarantee one outcome.",
+      "dialogue": "Can both branches run on this card?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.376
+    },
+    {
+      "id": "class9-condition-edges-2",
+      "label": "The problem",
+      "title": "Combine requirements",
+      "mood": "surprise",
+      "caption": "Complete requests qualify only when their token total is at most eight AND the group is registered. A small total cannot compensate for missing registration. Reva writes both truth values before combining them, making the reason for each rejection visible.",
+      "speech": "Complete requests qualify only when their token total is at most eight AND the group is registered. A small total cannot compensate for missing registration. Reva writes both truth values before combining them, making the reason for each rejection visible.",
+      "dialogue": "AND needs every required part.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.026,
+      "duration": 18.744
+    },
+    {
+      "id": "class9-condition-edges-3",
+      "label": "How it works",
+      "title": "Reject conditions",
+      "mood": "thinking",
+      "caption": "The same rejection rule can be written as total above eight OR NOT registered. OR needs only one failing requirement. Nikhil tests a registered oversized request and an unregistered small request; both require review for different, explicitly recorded reasons.",
+      "speech": "The same rejection rule can be written as total above eight OR NOT registered. OR needs only one failing requirement. Nikhil tests a registered oversized request and an unregistered small request; both require review for different, explicitly recorded reasons.",
+      "dialogue": "NOT reverses the registration truth value.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 37.42,
+      "duration": 19.896
+    },
+    {
+      "id": "class9-condition-edges-4",
+      "label": "Your decision",
+      "title": "Give unknowns priority",
+      "mood": "thinking",
+      "caption": "A card has an unknown total and a valid registration mark. Guessing a numeric value would invent evidence. Choose the branch plan that handles missing information first, then evaluates the complete request, with only one final output for that card.",
+      "speech": "A card has an unknown total and a valid registration mark. Guessing a numeric value would invent evidence. Choose the branch plan that handles missing information first, then evaluates the complete request, with only one final output for that card.",
+      "dialogue": "Unknown is not a passing number.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 57.966,
+      "duration": 18.36
+    },
+    {
+      "id": "class9-condition-edges-5",
+      "label": "What changes",
+      "title": "Touch the boundary",
+      "mood": "happy",
+      "caption": "They prepare totals just below, exactly at and just above the limit while holding registration fixed. This isolates the comparison error. Testing only small requests cannot reveal accidentally excluded equality.",
+      "speech": "They prepare totals just below, exactly at and just above the limit while holding registration fixed. This isolates the comparison error. Testing only small requests cannot reveal accidentally excluded equality.",
+      "dialogue": "Change one feature when testing a boundary.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 76.976,
+      "duration": 16.8
+    },
+    {
+      "id": "class9-condition-edges-6",
+      "label": "Enter the lab",
+      "title": "A single outcome",
+      "mood": "happy",
+      "caption": "Their corrected decision sheet records the first applicable branch and stops. Every output includes its reason, so review does not hide whether data was missing or a condition failed. Keep those reasons when you test a later policy change.",
+      "speech": "Their corrected decision sheet records the first applicable branch and stops. Every output includes its reason, so review does not hide whether data was missing or a condition failed. Keep those reasons when you test a later policy change.",
+      "dialogue": "The branch order is part of the rule.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 94.426,
+      "duration": 17.568
+    }
+  ]
+}

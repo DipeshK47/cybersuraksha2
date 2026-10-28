@@ -12,7 +12,7 @@ test("Class 8 library replaces shared missions with 32 original assignable chapt
   const chapters = assignmentChapters.filter(row => row.grades.includes(8));
   assert.equal(chapters.length, 32);
   assert.ok(chapters.every(row => row.id.startsWith("cyber-class8-")));
-  for (const [grade, count] of [[5,8], [6,8], [7,8], [9,8], [10,8], [11,32], [12,32]]) assert.equal(assignmentChapters.filter(row => row.grades.includes(grade)).length, count, `Grade ${grade} changed`);
+  for (const [grade, count] of [[5,8], [6,8], [7,8], [9,32], [10,8], [11,32], [12,32]]) assert.equal(assignmentChapters.filter(row => row.grades.includes(grade)).length, count, `Grade ${grade} changed`);
 });
 
 test("every Class 8 chapter has original bilingual teaching and three solvable tasks", async () => {

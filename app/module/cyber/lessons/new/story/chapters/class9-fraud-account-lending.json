@@ -1,0 +1,93 @@
+{
+  "duration": 111.516,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5b2b6a6809b888d0105dad9d5bffa1d526bbe2c6bf1ef918eaaec4ed8ca7c0b9",
+  "scenes": [
+    {
+      "id": "class9-fraud-account-lending-1",
+      "label": "Meet the team",
+      "title": "A favour with a fee",
+      "mood": "thinking",
+      "caption": "Reva reads a fictional message offering easy commission for helping a seller. It asks the account holder to receive payments and pass most onward. Nikhil notices that the proposed work is not selling anything; it is supplying an account route.",
+      "speech": "Reva reads a fictional message offering easy commission for helping a seller. It asks the account holder to receive payments and pass most onward. Nikhil notices that the proposed work is not selling anything; it is supplying an account route.",
+      "dialogue": "Name what the account would do.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.424
+    },
+    {
+      "id": "class9-fraud-account-lending-2",
+      "label": "The problem",
+      "title": "The invented chain",
+      "mood": "surprise",
+      "caption": "The teacher draws the supplied arrows between account cards. The middle card belongs to the recruited person. Reva marks incoming and outgoing requests without creating routes or ways to hide movement.",
+      "speech": "The teacher draws the supplied arrows between account cards. The middle card belongs to the recruited person. Reva marks incoming and outgoing requests without creating routes or ways to hide movement.",
+      "dialogue": "Understand the risk, not an evasion method.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.074,
+      "duration": 15.144
+    },
+    {
+      "id": "class9-fraud-account-lending-3",
+      "label": "How it works",
+      "title": "Access is also a request",
+      "mood": "thinking",
+      "caption": "Another card asks to borrow the account login so the helper can manage transfers. Nikhil identifies a second exposure: account control. Calling the arrangement a temporary favour does not make sharing access or moving somebody else’s funds a harmless task.",
+      "speech": "Another card asks to borrow the account login so the helper can manage transfers. Nikhil identifies a second exposure: account control. Calling the arrangement a temporary favour does not make sharing access or moving somebody else’s funds a harmless task.",
+      "dialogue": "A friendly label does not remove control.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 33.868,
+      "duration": 19.248
+    },
+    {
+      "id": "class9-fraud-account-lending-4",
+      "label": "Your decision",
+      "title": "An unexpected credit",
+      "mood": "thinking",
+      "caption": "The simulation adds an incoming credit that the participant did not expect. The sender asks for an urgent onward transfer. Reva pauses the instruction. The record alone cannot establish the original source or explain why the account was chosen.",
+      "speech": "The simulation adds an incoming credit that the participant did not expect. The sender asks for an urgent onward transfer. Reva pauses the instruction. The record alone cannot establish the original source or explain why the account was chosen.",
+      "dialogue": "Do not resolve uncertainty by forwarding.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 53.766,
+      "duration": 19.104
+    },
+    {
+      "id": "class9-fraud-account-lending-5",
+      "label": "What changes",
+      "title": "A supported response",
+      "mood": "happy",
+      "caption": "A trusted adult helps the participant contact the financial provider through its known route and describe the unexpected credit and request. They do not move, spend or independently return those funds. The provider can advise on the case without children investigating strangers.",
+      "speech": "A trusted adult helps the participant contact the financial provider through its known route and describe the unexpected credit and request. They do not move, spend or independently return those funds. The provider can advise on the case without children investigating strangers.",
+      "dialogue": "Let known support guide the next action.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 73.52,
+      "duration": 20.136
+    },
+    {
+      "id": "class9-fraud-account-lending-6",
+      "label": "Enter the lab",
+      "title": "A private risk map",
+      "mood": "happy",
+      "caption": "Their risk map records requested account use, known arrows, unresolved source and help sought. Reva and Nikhil keep identifiers private. They ask for prompt help without assigning blame or promising an outcome.",
+      "speech": "Their risk map records requested account use, known arrows, unresolved source and help sought. Reva and Nikhil keep identifiers private. They ask for prompt help without assigning blame or promising an outcome.",
+      "dialogue": "A factual map supports a safer response.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 94.306,
+      "duration": 16.56
+    }
+  ]
+}

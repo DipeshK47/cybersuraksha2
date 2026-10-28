@@ -1,0 +1,93 @@
+{
+  "duration": 105.588,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "38fd0cac4d699da4982d3fca4914cdf925b2fadb9bd15131c21dfc218aa46911",
+  "scenes": [
+    {
+      "id": "class9-ai-queue-statistics-1",
+      "label": "Meet the team",
+      "title": "The paper queue",
+      "mood": "thinking",
+      "caption": "Reva records 5 fictional exhibition waits: 2, 3, 3, 4 and 18 minutes. Nikhil notices the last wait is much longer. Their teacher requests a summary, but first they must decide its question.",
+      "speech": "Reva records 5 fictional exhibition waits: 2, 3, 3, 4 and 18 minutes. Nikhil notices the last wait is much longer. Their teacher requests a summary, but first they must decide its question.",
+      "dialogue": "One list can answer different questions.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.488
+    },
+    {
+      "id": "class9-ai-queue-statistics-2",
+      "label": "The problem",
+      "title": "Share the total",
+      "mood": "surprise",
+      "caption": "The total is 30 minutes across 5 records. Dividing 30 by 5 gives a mean of 6 minutes. This spreads the total evenly; it does not claim that any particular visitor waited that long.",
+      "speech": "The total is 30 minutes across 5 records. Dividing 30 by 5 gives a mean of 6 minutes. This spreads the total evenly; it does not claim that any particular visitor waited that long.",
+      "dialogue": "The mean shares the total.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 17.138,
+      "duration": 15.312
+    },
+    {
+      "id": "class9-ai-queue-statistics-3",
+      "label": "How it works",
+      "title": "Find the middle",
+      "mood": "thinking",
+      "caption": "The times are ordered. The third value, 3, is the median, with 2 observations on either side. Reva keeps the 18 minute record visible: choosing a middle value does not justify erasing a long wait.",
+      "speech": "The times are ordered. The third value, 3, is the median, with 2 observations on either side. Reva keeps the 18 minute record visible: choosing a middle value does not justify erasing a long wait.",
+      "dialogue": "The median keeps its place in the list.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 33.1,
+      "duration": 16.2
+    },
+    {
+      "id": "class9-ai-queue-statistics-4",
+      "label": "Your decision",
+      "title": "What is typical here?",
+      "mood": "thinking",
+      "caption": "Nikhil asks for the middle observed wait, rather than an equal share of total time. Choose the statistic that answers. They will report both summaries with the full list and explain how the unusually long wait affects the mean.",
+      "speech": "Nikhil asks for the middle observed wait, rather than an equal share of total time. Choose the statistic that answers. They will report both summaries with the full list and explain how the unusually long wait affects the mean.",
+      "dialogue": "Name the question before the statistic.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 49.95,
+      "duration": 16.536
+    },
+    {
+      "id": "class9-ai-queue-statistics-5",
+      "label": "What changes",
+      "title": "A bag with 6 tickets",
+      "mood": "happy",
+      "caption": "A shuffled bag contains 3 blue tickets, 2 red tickets and 1 gold ticket. Each individual ticket is equally likely on a blind draw. Reva counts all 6 tickets as outcomes, rather than counting only the 3 colour names.",
+      "speech": "A shuffled bag contains 3 blue tickets, 2 red tickets and 1 gold ticket. Each individual ticket is equally likely on a blind draw. Reva counts all 6 tickets as outcomes, rather than counting only the 3 colour names.",
+      "dialogue": "Count outcomes, not just colour names.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 67.136,
+      "duration": 17.376
+    },
+    {
+      "id": "class9-ai-queue-statistics-6",
+      "label": "Enter the lab",
+      "title": "Keep the trial explicit",
+      "mood": "happy",
+      "caption": "Blue has 3 favourable tickets out of 6, giving probability one half. A later draw without replacement would need a changed denominator. In the lab, calculate the original summaries and ticket probabilities, explaining exactly which records and outcomes you counted.",
+      "speech": "Blue has 3 favourable tickets out of 6, giving probability one half. A later draw without replacement would need a changed denominator. In the lab, calculate the original summaries and ticket probabilities, explaining exactly which records and outcomes you counted.",
+      "dialogue": "The denominator belongs to this trial.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 85.162,
+      "duration": 19.776
+    }
+  ]
+}

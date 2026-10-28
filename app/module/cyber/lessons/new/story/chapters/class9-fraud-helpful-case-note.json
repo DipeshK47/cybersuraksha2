@@ -1,0 +1,93 @@
+{
+  "duration": 111.876,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "93d4b79bad64b3d9a12d8a3dafb93796db182f5cee32e93a5291785098c414b4",
+  "scenes": [
+    {
+      "id": "class9-fraud-helpful-case-note-1",
+      "label": "Meet the team",
+      "title": "A learner needs help",
+      "mood": "thinking",
+      "caption": "Nikhil reads a fictional case about a learner ashamed after following false support instructions. Reva starts a calm help note. They need no perfect explanation before involving a trusted adult.",
+      "speech": "Nikhil reads a fictional case about a learner ashamed after following false support instructions. Reva starts a calm help note. They need no perfect explanation before involving a trusted adult.",
+      "dialogue": "The person deserves help now.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.096
+    },
+    {
+      "id": "class9-fraud-helpful-case-note-2",
+      "label": "The problem",
+      "title": "The supplied timeline",
+      "mood": "surprise",
+      "caption": "The teacher distributes event cards showing when a message arrived, when an action occurred and when help was requested. Reva orders the stated times. Nikhil labels the sender’s identity unknown rather than adding a guess about who caused the incident.",
+      "speech": "The teacher distributes event cards showing when a message arrived, when an action occurred and when help was requested. Reva orders the stated times. Nikhil labels the sender’s identity unknown rather than adding a guess about who caused the incident.",
+      "dialogue": "A timeline records events, not invented motives.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 15.746,
+      "duration": 17.856
+    },
+    {
+      "id": "class9-fraud-helpful-case-note-3",
+      "label": "How it works",
+      "title": "Enough detail to act",
+      "mood": "thinking",
+      "caption": "Their note includes the requested action, the type of information shared and the help already sought. It leaves out actual codes, passwords and unrelated family details. With adult help, relevant original messages can be preserved privately rather than forwarded around the class.",
+      "speech": "Their note includes the requested action, the type of information shared and the help already sought. It leaves out actual codes, passwords and unrelated family details. With adult help, relevant original messages can be preserved privately rather than forwarded around the class.",
+      "dialogue": "Preserve evidence without spreading exposure.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 34.252,
+      "duration": 20.376
+    },
+    {
+      "id": "class9-fraud-helpful-case-note-4",
+      "label": "Your decision",
+      "title": "The harm changes",
+      "mood": "thinking",
+      "caption": "A new record shows an unauthorised payment. Reva updates the plan: the responsible adult promptly contacts the financial provider through its known route. Account protection and payment support may both matter; children should not negotiate with strangers.",
+      "speech": "A new record shows an unauthorised payment. Reva updates the plan: the responsible adult promptly contacts the financial provider through its known route. Account protection and payment support may both matter; children should not negotiate with strangers.",
+      "dialogue": "Respond to the newly recorded harm.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 55.278,
+      "duration": 19.008
+    },
+    {
+      "id": "class9-fraud-helpful-case-note-5",
+      "label": "What changes",
+      "title": "A second promise",
+      "mood": "happy",
+      "caption": "The simulation introduces a stranger guaranteeing recovery for an advance fee. Nikhil adds the offer to the private note and stops further contact. A guarantee from a stranger is not evidence of recovery, and paying another fee would create another exposure.",
+      "speech": "The simulation introduces a stranger guaranteeing recovery for an advance fee. Nikhil adds the offer to the private note and stops further contact. A guarantee from a stranger is not evidence of recovery, and paying another fee would create another exposure.",
+      "dialogue": "Recovery cannot be guaranteed.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 74.936,
+      "duration": 18.552
+    },
+    {
+      "id": "class9-fraud-helpful-case-note-6",
+      "label": "Enter the lab",
+      "title": "A useful handover",
+      "mood": "happy",
+      "caption": "They finish with known facts, uncertainties and next actions agreed with the adult. The teacher checks accuracy separately from the practice score. The note supports follow-up and kindness without unsupported blame or promised outcomes.",
+      "speech": "They finish with known facts, uncertainties and next actions agreed with the adult. The teacher checks accuracy separately from the practice score. The note supports follow-up and kindness without unsupported blame or promised outcomes.",
+      "dialogue": "Accuracy and support belong together.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 94.138,
+      "duration": 17.088
+    }
+  ]
+}

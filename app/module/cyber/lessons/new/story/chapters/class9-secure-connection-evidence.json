@@ -1,0 +1,93 @@
+{
+  "duration": 112.476,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "01cbcbbabb0b73f169f4d4abca43e3ad8a1194cf2333b3bd6e28c2742dfbaaae",
+  "scenes": [
+    {
+      "id": "class9-secure-connection-evidence-1",
+      "label": "Meet the team",
+      "title": "An upload decision",
+      "mood": "thinking",
+      "caption": "Reva needs to upload fictional repair totals from a shared network. Nikhil sees a secure connection message and calls the page trustworthy. The teacher asks them to separate the connection, destination and information being sent.",
+      "speech": "Reva needs to upload fictional repair totals from a shared network. Nikhil sees a secure connection message and calls the page trustworthy. The teacher asks them to separate the connection, destination and information being sent.",
+      "dialogue": "One observation cannot answer every question.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.8
+    },
+    {
+      "id": "class9-secure-connection-evidence-2",
+      "label": "The problem",
+      "title": "What encryption covers",
+      "mood": "surprise",
+      "caption": "The browser’s secure connection notice concerns protected transport to the displayed hostname. It does not establish that the school approved the page or that every claim on it is true. A misleading destination can also use an encrypted connection.",
+      "speech": "The browser’s secure connection notice concerns protected transport to the displayed hostname. It does not establish that the school approved the page or that every claim on it is true. A misleading destination can also use an encrypted connection.",
+      "dialogue": "Transport protection is a limited claim.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 17.45,
+      "duration": 17.664
+    },
+    {
+      "id": "class9-secure-connection-evidence-3",
+      "label": "How it works",
+      "title": "Read the hostname",
+      "mood": "thinking",
+      "caption": "Their supplied school card names desk.school.example as the approved host. Another card shows desk.school.example.helper.example with a copied crest. Reva compares complete hostnames instead of familiar fragments. These are classroom examples, not addresses anyone needs to visit.",
+      "speech": "Their supplied school card names desk.school.example as the approved host. Another card shows desk.school.example.helper.example with a copied crest. Reva compares complete hostnames instead of familiar fragments. These are classroom examples, not addresses anyone needs to visit.",
+      "dialogue": "A copied crest does not change the host.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 35.764,
+      "duration": 25.032
+    },
+    {
+      "id": "class9-secure-connection-evidence-4",
+      "label": "Your decision",
+      "title": "A warning matters",
+      "mood": "thinking",
+      "caption": "A third card includes a certificate warning. Nikhil proposes bypassing it because the totals are fictional. The teacher keeps the exercise on supplied cards and asks for the approved route to be checked before any upload.",
+      "speech": "A third card includes a certificate warning. Nikhil proposes bypassing it because the totals are fictional. The teacher keeps the exercise on supplied cards and asks for the approved route to be checked before any upload.",
+      "dialogue": "Pause at an unexplained warning.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 61.446,
+      "duration": 15.888
+    },
+    {
+      "id": "class9-secure-connection-evidence-5",
+      "label": "What changes",
+      "title": "More than a network label",
+      "mood": "happy",
+      "caption": "Switching networks would not repair a wrong hostname or a bad sharing audience. The team instead uses the saved school route, checks the connection notice and sends only approved totals. The destination still receives whatever the team chooses to upload.",
+      "speech": "Switching networks would not repair a wrong hostname or a bad sharing audience. The team instead uses the saved school route, checks the connection notice and sends only approved totals. The destination still receives whatever the team chooses to upload.",
+      "dialogue": "Check destination and data together.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 77.984,
+      "duration": 18.216
+    },
+    {
+      "id": "class9-secure-connection-evidence-6",
+      "label": "Enter the lab",
+      "title": "Build an evidence sheet",
+      "mood": "happy",
+      "caption": "Inspect the fictional host cards, connect observations to justified claims and revise the upload plan. State what remains unproven, including page content and whether the recipient should receive personal records.",
+      "speech": "Inspect the fictional host cards, connect observations to justified claims and revise the upload plan. State what remains unproven, including page content and whether the recipient should receive personal records.",
+      "dialogue": "State the boundary of the evidence.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 96.85,
+      "duration": 14.976
+    }
+  ]
+}

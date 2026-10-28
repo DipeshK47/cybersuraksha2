@@ -3,6 +3,7 @@ import { newMissions } from "./new-missions";
 import { class12Subjects } from "./class-12-curriculum";
 import { class11Subjects } from "./class-11-curriculum";
 import { class8Subjects } from "./class-8-curriculum";
+import { class9Subjects } from "./class-9-curriculum";
 
 export type CurriculumStrand =
   | "Computational Thinking"
@@ -519,6 +520,7 @@ export const curriculum: GradeCurriculum[] = [
     .map((entry) => {
       const grade = entry.grade + 3;
       if (grade === 8) return { ...entry, grade, title: "Future Lab", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
+      if (grade === 9) return { ...entry, grade, title: "Signal Studio", description: "Test systems, explain decisions and recognise pressure through 32 original chapters.", modules: [], subjects: class9Subjects };
       const otherSubjects = sourceCurriculum
         .find((existing) => existing.grade === grade)
         ?.subjects?.filter((subject) => !subject.strand || subject.strand === "English") ?? [];

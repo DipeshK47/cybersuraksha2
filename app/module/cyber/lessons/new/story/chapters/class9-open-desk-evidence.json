@@ -1,0 +1,93 @@
+{
+  "duration": 108.42,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c13e45077689a9ac809c34f23d16512504b81fb169ec6cc1b935057c096c1af3",
+  "scenes": [
+    {
+      "id": "class9-open-desk-evidence-1",
+      "label": "Meet the team",
+      "title": "Opening morning",
+      "mood": "thinking",
+      "caption": "Reva brings the readiness sheet to Nikhil: approved update status, a tested backup and named access roles. The teacher asks for current evidence, because a tick written before a change may describe a plan that no longer exists.",
+      "speech": "Reva brings the readiness sheet to Nikhil: approved update status, a tested backup and named access roles. The teacher asks for current evidence, because a tick written before a change may describe a plan that no longer exists.",
+      "dialogue": "Readiness has a date and a configuration.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.344
+    },
+    {
+      "id": "class9-open-desk-evidence-2",
+      "label": "The problem",
+      "title": "A changed helper",
+      "mood": "surprise",
+      "caption": "A replacement takes over the afternoon ticket work. Yesterday’s tests used the old account. Reva checks that the former helper is blocked and the replacement can complete the task, without granting either person the teacher’s contact permissions.",
+      "speech": "A replacement takes over the afternoon ticket work. Yesterday’s tests used the old account. Reva checks that the former helper is blocked and the replacement can complete the task, without granting either person the teacher’s contact permissions.",
+      "dialogue": "Test both removal and the new work path.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 16.994,
+      "duration": 17.424
+    },
+    {
+      "id": "class9-open-desk-evidence-3",
+      "label": "How it works",
+      "title": "A failed handover",
+      "mood": "thinking",
+      "caption": "The first simulation shows that the former helper can still edit tickets. Nikhil suggests opening anyway because the backup is ready. Reva points out that a backup does not remove live editing rights. The failed permission test needs its own repair and retest.",
+      "speech": "The first simulation shows that the former helper can still edit tickets. Nikhil suggests opening anyway because the backup is ready. Reva points out that a backup does not remove live editing rights. The failed permission test needs its own repair and retest.",
+      "dialogue": "One control cannot stand in for another.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 35.068,
+      "duration": 19.464
+    },
+    {
+      "id": "class9-open-desk-evidence-4",
+      "label": "Your decision",
+      "title": "Repair before declaring readiness",
+      "mood": "thinking",
+      "caption": "The teacher removes the old grant, configures the replacement’s limited role and repeats both tests. Public totals remain visible; private contacts remain blocked. The team records current results beside the changed ledger.",
+      "speech": "The teacher removes the old grant, configures the replacement’s limited role and repeats both tests. Public totals remain visible; private contacts remain blocked. The team records current results beside the changed ledger.",
+      "dialogue": "Evidence must match the plan being opened.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 55.182,
+      "duration": 17.112
+    },
+    {
+      "id": "class9-open-desk-evidence-5",
+      "label": "What changes",
+      "title": "A named unresolved issue",
+      "mood": "happy",
+      "caption": "A review still has not established whether someone copied an earlier public contact sheet. The teacher owns that follow-up and keeps the affected records restricted. Current tests can support limited desk operation without claiming that the earlier incident is fully resolved.",
+      "speech": "A review still has not established whether someone copied an earlier public contact sheet. The teacher owns that follow-up and keeps the affected records restricted. Current tests can support limited desk operation without claiming that the earlier incident is fully resolved.",
+      "dialogue": "State the limit and its responsible owner.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 72.944,
+      "duration": 18.888
+    },
+    {
+      "id": "class9-open-desk-evidence-6",
+      "label": "Enter the lab",
+      "title": "Your readiness review",
+      "mood": "happy",
+      "caption": "Run the permission simulation, repair the handover and judge a changed opening proposal. Record the tested scope and one unresolved issue. Explain what may proceed and which untested action must wait.",
+      "speech": "Run the permission simulation, repair the handover and judge a changed opening proposal. Record the tested scope and one unresolved issue. Explain what may proceed and which untested action must wait.",
+      "dialogue": "Open only the work the evidence supports.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 92.482,
+      "duration": 15.288
+    }
+  ]
+}

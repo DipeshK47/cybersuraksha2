@@ -1,0 +1,93 @@
+{
+  "duration": 103.356,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "3ac3e52929bbc0f1f663ec24f151d371f991aaef1c150895be07aaf1305a4d8c",
+  "scenes": [
+    {
+      "id": "class9-weighted-routes-1",
+      "label": "Meet the team",
+      "title": "A paper delivery map",
+      "mood": "thinking",
+      "caption": "Reva maps a fictional delivery cart across the makers fair. Nikhil draws the most direct route to the collection desk. Their classroom token has a pretend battery budget, making each route a useful calculation.",
+      "speech": "Reva maps a fictional delivery cart across the makers fair. Nikhil draws the most direct route to the collection desk. Their classroom token has a pretend battery budget, making each route a useful calculation.",
+      "dialogue": "What does a move cost here?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.84
+    },
+    {
+      "id": "class9-weighted-routes-2",
+      "label": "The problem",
+      "title": "Unequal entries",
+      "mood": "surprise",
+      "caption": "Some floor cells cost more tokens to enter than others. Fewer moves can therefore spend more battery. Reva lists the entered cells in order and adds their individual costs, keeping the move count in a separate column.",
+      "speech": "Some floor cells cost more tokens to enter than others. Fewer moves can therefore spend more battery. Reva lists the entered cells in order and adds their individual costs, keeping the move count in a separate column.",
+      "dialogue": "Distance and cost answer different questions.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 16.49,
+      "duration": 15.864
+    },
+    {
+      "id": "class9-weighted-routes-3",
+      "label": "How it works",
+      "title": "State the convention",
+      "mood": "thinking",
+      "caption": "The starting cell is free before movement begins. Every later entry costs its listed amount, even when the cart returns to a previously visited cell. Unmarked cells cost one token. A blocked cell cannot be crossed, whatever battery remains in the budget.",
+      "speech": "The starting cell is free before movement begins. Every later entry costs its listed amount, even when the cart returns to a previously visited cell. Unmarked cells cost one token. A blocked cell cannot be crossed, whatever battery remains in the budget.",
+      "dialogue": "Returning to start is another paid entry.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 33.004,
+      "duration": 19.416
+    },
+    {
+      "id": "class9-weighted-routes-4",
+      "label": "Your decision",
+      "title": "Choose the evidence",
+      "mood": "thinking",
+      "caption": "Nikhil wants to accept a route because its arrows look short. Reva asks for a completed simulation with visited cells, total moves and total cost. Choose a check that reveals an expensive shortcut before approval.",
+      "speech": "Nikhil wants to accept a route because its arrows look short. Reva asks for a completed simulation with visited cells, total moves and total cost. Choose a check that reveals an expensive shortcut before approval.",
+      "dialogue": "A drawn arrow has not spent any tokens yet.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 53.07,
+      "duration": 16.296
+    },
+    {
+      "id": "class9-weighted-routes-5",
+      "label": "What changes",
+      "title": "The price changes",
+      "mood": "happy",
+      "caption": "A new floor notice raises one cell’s entry cost. The old route still reaches the desk, yet it may now exceed the battery budget. They preserve its earlier result and run a revised route under the new costs.",
+      "speech": "A new floor notice raises one cell’s entry cost. The old route still reaches the desk, yet it may now exceed the battery budget. They preserve its earlier result and run a revised route under the new costs.",
+      "dialogue": "Reaching the goal is only one requirement.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 70.016,
+      "duration": 15.648
+    },
+    {
+      "id": "class9-weighted-routes-6",
+      "label": "Enter the lab",
+      "title": "More than one answer",
+      "mood": "happy",
+      "caption": "Different valid routes can meet the same limits. Their evidence sheet stores the actual moves and cost rather than a single preferred arrow pattern. Compare another working route and explain which expensive entries each avoids.",
+      "speech": "Different valid routes can meet the same limits. Their evidence sheet stores the actual moves and cost rather than a single preferred arrow pattern. Compare another working route and explain which expensive entries each avoids.",
+      "dialogue": "Validate the route you actually built.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 86.314,
+      "duration": 16.392
+    }
+  ]
+}

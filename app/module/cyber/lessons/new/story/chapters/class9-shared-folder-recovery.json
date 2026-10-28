@@ -1,0 +1,93 @@
+{
+  "duration": 112.548,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "27720ef6163f0162cd03c571e26378caa41e3be874be5e52590415dc5921eb06",
+  "scenes": [
+    {
+      "id": "class9-shared-folder-recovery-1",
+      "label": "Meet the team",
+      "title": "A changed folder",
+      "mood": "thinking",
+      "caption": "Reva finds renamed ticket files in the fictional repair folder. Nikhil sees a changed sharing setting too. They stop ordinary editing rather than trying random repairs that could overwrite useful evidence about the change.",
+      "speech": "Reva finds renamed ticket files in the fictional repair folder. Nikhil sees a changed sharing setting too. They stop ordinary editing rather than trying random repairs that could overwrite useful evidence about the change.",
+      "dialogue": "Unexpected change deserves a careful pause.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.104
+    },
+    {
+      "id": "class9-shared-folder-recovery-2",
+      "label": "The problem",
+      "title": "Facts before guesses",
+      "mood": "surprise",
+      "caption": "The log records filenames, times and permission changes but does not identify who caused them. Reva writes observations and leaves the cause unknown. A suspicious pattern can justify reporting without proving a specific accusation.",
+      "speech": "The log records filenames, times and permission changes but does not identify who caused them. Reva writes observations and leaves the cause unknown. A suspicious pattern can justify reporting without proving a specific accusation.",
+      "dialogue": "Unknown is an honest entry.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 16.754,
+      "duration": 17.448
+    },
+    {
+      "id": "class9-shared-folder-recovery-3",
+      "label": "How it works",
+      "title": "Ask the responsible adult",
+      "mood": "thinking",
+      "caption": "They inform the teacher through the known school route and preserve the supplied change details. The teacher follows the school response to limit further sharing. Learners do not delete the folder, confront a suspected classmate or experiment on the affected account.",
+      "speech": "They inform the teacher through the known school route and preserve the supplied change details. The teacher follows the school response to limit further sharing. Learners do not delete the folder, confront a suspected classmate or experiment on the affected account.",
+      "dialogue": "Containment belongs in the school process.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 34.852,
+      "duration": 18.48
+    },
+    {
+      "id": "class9-shared-folder-recovery-4",
+      "label": "Your decision",
+      "title": "Choose recovery evidence",
+      "mood": "thinking",
+      "caption": "Nikhil selects the newest backup because its date looks reassuring. Reva compares a checked earlier copy with the damaged version. Newness does not establish a good recovery point; records must be usable and match the expected ticket list.",
+      "speech": "Nikhil selects the newest backup because its date looks reassuring. Reva compares a checked earlier copy with the damaged version. Newness does not establish a good recovery point; records must be usable and match the expected ticket list.",
+      "dialogue": "Test contents, not just dates.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 53.982,
+      "duration": 17.688
+    },
+    {
+      "id": "class9-shared-folder-recovery-5",
+      "label": "What changes",
+      "title": "A separate test copy",
+      "mood": "happy",
+      "caption": "The teacher opens the candidate backup in a separate test location. Expected files open, ticket counts match and access is restricted before ordinary work resumes. The team records missing later edits for review instead of pretending the backup contains everything ever changed.",
+      "speech": "The teacher opens the candidate backup in a separate test location. Expected files open, ticket counts match and access is restricted before ordinary work resumes. The team records missing later edits for review instead of pretending the backup contains everything ever changed.",
+      "dialogue": "Recovery may leave a gap to reconcile.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 72.32,
+      "duration": 20.088
+    },
+    {
+      "id": "class9-shared-folder-recovery-6",
+      "label": "Enter the lab",
+      "title": "State the limitation",
+      "mood": "happy",
+      "caption": "Distinguish observation, containment and tested restoration in your recovery record. Use the backup cards and state one unresolved issue. Restoring readable records does not establish whether earlier copies were taken or replace the teacher’s incident review.",
+      "speech": "Distinguish observation, containment and tested restoration in your recovery record. Use the backup cards and state one unresolved issue. Restoring readable records does not establish whether earlier copies were taken or replace the teacher’s incident review.",
+      "dialogue": "A working folder is not the whole investigation.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 93.058,
+      "duration": 18.84
+    }
+  ]
+}

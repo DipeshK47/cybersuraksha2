@@ -1,0 +1,93 @@
+{
+  "duration": 106.404,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "ab55f6dd4702547cb41dc28f5045657e55c2f6323b5ce88ed60adbd831fdb61b",
+  "scenes": [
+    {
+      "id": "class9-request-specification-1",
+      "label": "Meet the team",
+      "title": "A vague note",
+      "mood": "thinking",
+      "caption": "Reva opens a pretend fair lending desk. Nikhil brings a note asking for a small kit for each group. Before sorting paper tools, they ask what small means and what the desk should produce.",
+      "speech": "Reva opens a pretend fair lending desk. Nikhil brings a note asking for a small kit for each group. Before sorting paper tools, they ask what small means and what the desk should produce.",
+      "dialogue": "Could two volunteers pack different kits?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.496
+    },
+    {
+      "id": "class9-request-specification-2",
+      "label": "The problem",
+      "title": "Name the inputs",
+      "mood": "surprise",
+      "caption": "The supplied list names each group and its requested tool counts. These are inputs, not promises about the result. Reva proposes an output card showing the packed counts and whether the request fits the available carrying box.",
+      "speech": "The supplied list names each group and its requested tool counts. These are inputs, not promises about the result. Reva proposes an output card showing the packed counts and whether the request fits the available carrying box.",
+      "dialogue": "An input starts the work; an output records it.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 15.146,
+      "duration": 16.704
+    },
+    {
+      "id": "class9-request-specification-3",
+      "label": "How it works",
+      "title": "A measurable limit",
+      "mood": "thinking",
+      "caption": "Their fictional box holds at most eight space tokens. Each paper clamp uses two tokens and each ruler uses one. A request for three clamps and two rulers fills the box exactly, so equality must count as fitting.",
+      "speech": "Their fictional box holds at most eight space tokens. Each paper clamp uses two tokens and each ruler uses one. A request for three clamps and two rulers fills the box exactly, so equality must count as fitting.",
+      "dialogue": "Write the unit beside the limit.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 32.5,
+      "duration": 16.944
+    },
+    {
+      "id": "class9-request-specification-4",
+      "label": "Your decision",
+      "title": "Resolve the disagreement",
+      "mood": "thinking",
+      "caption": "Nikhil suggests accepting anything that looks light. Reva wants the same token calculation for every request. Choose a specification that different volunteers can apply consistently, including a clear response when a request exceeds the box limit.",
+      "speech": "Nikhil suggests accepting anything that looks light. Reva wants the same token calculation for every request. Choose a specification that different volunteers can apply consistently, including a clear response when a request exceeds the box limit.",
+      "dialogue": "A rule needs an observable result.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 50.094,
+      "duration": 18.696
+    },
+    {
+      "id": "class9-request-specification-5",
+      "label": "What changes",
+      "title": "Tests reveal meanings",
+      "mood": "happy",
+      "caption": "They try an empty request, a box filled exactly and an oversized request. Those cases separate possible interpretations of small. An empty kit is allowed in this simulation; negative counts are outside the accepted input rules and need correction.",
+      "speech": "They try an empty request, a box filled exactly and an oversized request. Those cases separate possible interpretations of small. An empty kit is allowed in this simulation; negative counts are outside the accepted input rules and need correction.",
+      "dialogue": "Record the expected response before checking.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 69.44,
+      "duration": 18.888
+    },
+    {
+      "id": "class9-request-specification-6",
+      "label": "Enter the lab",
+      "title": "A specification card",
+      "mood": "happy",
+      "caption": "Their final card names the inputs, token formula, inclusive limit and possible outputs. Another volunteer can check new requests without guessing the writer’s intention. Keep passing and failing examples beside it.",
+      "speech": "Their final card names the inputs, token formula, inclusive limit and possible outputs. Another volunteer can check new requests without guessing the writer’s intention. Keep passing and failing examples beside it.",
+      "dialogue": "Can someone else repeat your test?",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 88.978,
+      "duration": 16.776
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 109.38,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "66ff8669d3baa7a7285f56b8b8f36cee33ee02fde1fe641af52c2cb2557f7795",
+  "scenes": [
+    {
+      "id": "class9-fraud-parcel-detour-1",
+      "label": "Meet the team",
+      "title": "A parcel interruption",
+      "mood": "thinking",
+      "caption": "While Reva and Nikhil design a cardboard delivery town, a fictional message arrives. It says a parcel is held for an address fee. Their order card provides a record to compare before following instructions.",
+      "speech": "While Reva and Nikhil design a cardboard delivery town, a fictional message arrives. It says a parcel is held for an address fee. Their order card provides a record to compare before following instructions.",
+      "dialogue": "Start with the order record.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.312
+    },
+    {
+      "id": "class9-fraud-parcel-detour-2",
+      "label": "The problem",
+      "title": "Two different records",
+      "mood": "surprise",
+      "caption": "The supplied order card names a bookshop, a parcel reference and delivery already paid. The message names a different reference and demands another charge. Nikhil records both mismatches, without concluding that every unexpected delivery message must be fraudulent.",
+      "speech": "The supplied order card names a bookshop, a parcel reference and delivery already paid. The message names a different reference and demands another charge. Nikhil records both mismatches, without concluding that every unexpected delivery message must be fraudulent.",
+      "dialogue": "A mismatch needs checking.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 15.962,
+      "duration": 19.224
+    },
+    {
+      "id": "class9-fraud-parcel-detour-3",
+      "label": "How it works",
+      "title": "Where the address leads",
+      "mood": "thinking",
+      "caption": "The teacher supplies a printed fictional web address. Its path contains the bookshop name, but its host belongs to a different example domain. Reva circles the host. Familiar words elsewhere in an address do not change that destination.",
+      "speech": "The teacher supplies a printed fictional web address. Its path contains the bookshop name, but its host belongs to a different example domain. Reva circles the host. Familiar words elsewhere in an address do not change that destination.",
+      "dialogue": "Read the host, not the decoration.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 35.836,
+      "duration": 18.336
+    },
+    {
+      "id": "class9-fraud-parcel-detour-4",
+      "label": "Your decision",
+      "title": "The offered helper",
+      "mood": "thinking",
+      "caption": "The message also supplies a support number. Nikhil suggests calling it to settle the fee question. Reva points out that the same message supplied both the demand and that contact, so neither independently confirms the other’s authority.",
+      "speech": "The message also supplies a support number. Nikhil suggests calling it to settle the fee question. Reva points out that the same message supplied both the demand and that contact, so neither independently confirms the other’s authority.",
+      "dialogue": "Choose a route known beforehand.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 54.822,
+      "duration": 17.064
+    },
+    {
+      "id": "class9-fraud-parcel-detour-5",
+      "label": "What changes",
+      "title": "An independent route",
+      "mood": "happy",
+      "caption": "They show the cards to their teacher, who uses the shop contact already printed in the school purchase record. No payment app opens. While waiting, they keep the mismatched reference and destination in a private verification note for review.",
+      "speech": "They show the cards to their teacher, who uses the shop contact already printed in the school purchase record. No payment app opens. While waiting, they keep the mismatched reference and destination in a private verification note for review.",
+      "dialogue": "Checking does not require a test payment.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 72.536,
+      "duration": 16.944
+    },
+    {
+      "id": "class9-fraud-parcel-detour-6",
+      "label": "Enter the lab",
+      "title": "A matching reference",
+      "mood": "happy",
+      "caption": "A new classroom card now matches the real order reference. Reva revises the note: that mismatch disappears, but the changed destination and payment demand still need checking. Their trail shows exactly which evidence changed and which questions remain open.",
+      "speech": "A new classroom card now matches the real order reference. Reva revises the note: that mismatch disappears, but the changed destination and payment demand still need checking. Their trail shows exactly which evidence changed and which questions remain open.",
+      "dialogue": "One match does not settle every question.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 90.13,
+      "duration": 18.6
+    }
+  ]
+}

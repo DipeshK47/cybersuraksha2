@@ -93,3 +93,7 @@
  .world { min-height:300px; }
 }
 @media(prefers-reduced-motion:reduce) { .illustration [data-float] { animation:none; } }
+.result[data-result="retry"] { color:#703e2f; background:#fff0e3; border:1px solid #bc7958; }
+.result[data-result="incomplete"] { color:#575025; background:#fff8db; border:1px solid #b8a46a; }
+.result h3 { margin:0 0 .65rem; line-height:1.45; }
+.result li + li { margin-top:.55rem; }

@@ -151,6 +151,11 @@ export function usePractice({ lesson, runtime }: PracticeProps) {
     setFeedbackCorrect(false);
   }
 
+  function clearFeedback() {
+    setFeedback("");
+    setFeedbackCorrect(false);
+  }
+
   function finish() {
     runtime.completeLesson({
       title: `${lesson.title} complete`,
@@ -158,7 +163,7 @@ export function usePractice({ lesson, runtime }: PracticeProps) {
     });
   }
 
-  return { stage, feedback, feedbackCorrect, ready, submit, continuePractice, finish };
+  return { stage, feedback, feedbackCorrect, ready, submit, clearFeedback, continuePractice, finish };
 }
 
 export function PracticeShell({
@@ -176,6 +181,7 @@ export function PracticeShell({
   tone = "logic",
   art = false,
   evidence,
+  feedbackContent,
 }: {
   props: PracticeProps;
   stage: number;
@@ -191,6 +197,7 @@ export function PracticeShell({
   tone?: "logic" | "safety";
   art?: "station" | "phone" | "morning" | "lab" | "market" | "vault" | "fair-vault" | "ai" | "media" | false;
   evidence?: ReactNode;
+  feedbackContent?: ReactNode;
 }) {
   const { lesson, runtime } = props;
   const arc = storyArcs[lesson.slug];
@@ -255,7 +262,7 @@ export function PracticeShell({
         </div>
         <fieldset className={styles.activity} aria-labelledby={`practice-prompt-${lesson.slug}-${stage}`} disabled={ready}>{children}</fieldset>
         <div className={styles.feedbackRow}>
-          <p role="status" aria-live="polite" className={feedback ? styles.feedback : styles.feedbackEmpty} data-result={feedback ? feedbackCorrect ? "correct" : "retry" : undefined}>{feedback && (feedbackCorrect ? <Check aria-hidden="true" /> : <RotateCcw aria-hidden="true" />)}{feedback}</p>
+          {feedbackContent ?? <p role="status" aria-live="polite" className={feedback ? styles.feedback : styles.feedbackEmpty} data-result={feedback ? feedbackCorrect ? "correct" : "retry" : undefined}>{feedback && (feedbackCorrect ? <Check aria-hidden="true" /> : <RotateCcw aria-hidden="true" />)}{feedback}</p>}
           {ready ? <button className={styles.primary} onClick={onContinue} type="button">{stage === 2 ? "Review mission" : "Next challenge"}<ArrowRight aria-hidden="true" /></button> : null}
         </div>
       </div>

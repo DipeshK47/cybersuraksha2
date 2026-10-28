@@ -16,10 +16,11 @@ export type MatchTask = TaskBase & {
 export type OrderTask = TaskBase & { kind: "order"; items: { id: string; label: L }[]; expected: string[]; stepReasons?: L[] };
 export type NumberTask = TaskBase & { kind: "number"; fields: { id: string; label: L; answer: number; min?: number; max?: number; explanation?: L }[] };
 export type BinaryTask = TaskBase & { kind: "binary"; target: number; bits: 8 };
-export type GridTask = TaskBase & { kind: "grid"; width: number; height: number; expected: number[]; blocked?: number[]; caption: L };
+export type GridTask = TaskBase & { kind: "grid"; width: number; height: number; expected: number[]; blocked?: number[]; caption: L; cellReasons?: Record<string,L> };
 export type RouteTask = TaskBase & { kind: "route"; width: number; height: number; start: number; goal: number; blocked: number[]; stops?: number[]; maxSteps: number; cellCosts?: Record<string, number>; maxCost?: number };
 export type ModelTask = TaskBase & {
   kind: "model";
+  checkRole?: "validation" | "test";
   feature: L;
   labels: { id: string; label: L }[];
   examples: { id: string; value: number; label: string }[];

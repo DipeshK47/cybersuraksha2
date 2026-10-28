@@ -41,6 +41,8 @@ export type StoryWorldProps = {
   markSolved: () => void;
   hint: string;
   setHint: (hint: string, correct?: boolean) => void;
+  /** Managed worlds record complete checked answers and bounded evidence directly. */
+  onActivity?: (type: string, payload?: unknown) => void;
   reduced: boolean;
 };
 
@@ -52,6 +54,8 @@ export type StoryChapter = {
   title: string;
   icon: LucideIcon;
   character: { asset: CharacterAsset; name: string };
+  /** An edition can supply original vector characters instead of an existing atlas. */
+  Character?: ComponentType<{ mood: string; playing: boolean; reduced: boolean }>;
   /** Scene index where narration pauses until the learner completes the task. */
   interactionScene: number;
   /** Final-scene button label, e.g. "Practise with Rohan". */
@@ -60,6 +64,8 @@ export type StoryChapter = {
   waitingText: string;
   /** Hint shown when the learner tries to skip past the task. */
   lockedHint: string;
+  /** The world supplies its own diagnosis panel and complete-answer activity. */
+  managedFeedback?: boolean;
   /** Expression while on the task scene after it is solved. Defaults to "happy". */
   solvedMood?: string;
   World: ComponentType<StoryWorldProps>;

@@ -1,4 +1,5 @@
 import type { Class8Task, L, MatchTask, ModelTask, RouteTask, TaskAnswer } from "../../../../data/class8/types";
+export { diagnoseTask } from "./task-feedback.ts";
 
 const exactSet = (actual: readonly unknown[], expected: readonly unknown[]) => actual.length === expected.length && new Set(actual).size === actual.length && expected.every(id => actual.includes(id));
 const strings = (answer: TaskAnswer): answer is string[] => Array.isArray(answer) && answer.every(id => typeof id === "string");
@@ -28,16 +29,18 @@ export function testPermissions(task: MatchTask, answers: Record<string, string>
 export function simulateRoute(task: RouteTask, moves: readonly string[]) {
   const path = [task.start];
   let position = task.start;
+  let cost = 0;
   for (const move of moves) {
     const x = position % task.width, y = Math.floor(position / task.width);
     const [dx, dy] = move === "up" ? [0, -1] : move === "right" ? [1, 0] : move === "down" ? [0, 1] : move === "left" ? [-1, 0] : [NaN, NaN];
     const nx = x + dx, ny = y + dy;
     const next = ny * task.width + nx;
-    if (!Number.isFinite(next) || nx < 0 || nx >= task.width || ny < 0 || ny >= task.height || task.blocked.includes(next)) return { valid: false, position, path, failedAt: path.length };
+    if (!Number.isFinite(next) || nx < 0 || nx >= task.width || ny < 0 || ny >= task.height || task.blocked.includes(next)) return { valid: false, position, path, cost, failedAt: path.length };
     position = next;
+    cost += task.cellCosts?.[String(next)] ?? 1;
     path.push(position);
   }
-  return { valid: true, position, path, failedAt: null };
+  return { valid: true, position, path, cost, failedAt: null };
 }
 
 export function evaluateTask(task: Class8Task, answer: TaskAnswer): { correct: boolean; feedback: L } {
@@ -72,7 +75,7 @@ export function evaluateTask(task: Class8Task, answer: TaskAnswer): { correct: b
     case "route": {
       if (strings(answer) && answer.length <= task.maxSteps) {
         const result = simulateRoute(task, answer);
-        correct = result.valid && result.position === task.goal && (task.stops ?? []).every(stop => result.path.includes(stop));
+        correct = result.valid && result.position === task.goal && (task.stops ?? []).every(stop => result.path.includes(stop)) && (task.maxCost == null || result.cost <= task.maxCost);
       }
       break;
     }

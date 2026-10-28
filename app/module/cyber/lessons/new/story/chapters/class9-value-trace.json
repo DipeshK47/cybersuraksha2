@@ -1,0 +1,93 @@
+{
+  "duration": 110.868,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "a849773f2dc0f3fe6bb017ca31af81a6a0e0af32e2567e6debd55ad0513edc48",
+  "scenes": [
+    {
+      "id": "class9-value-trace-1",
+      "label": "Meet the team",
+      "title": "A surprising display",
+      "mood": "thinking",
+      "caption": "Nikhil builds a paper stock screen for a fictional badge desk. Reva notices that the written count and the display label disagree. Instead of guessing which is right, they keep a table showing the value after every instruction.",
+      "speech": "Nikhil builds a paper stock screen for a fictional badge desk. Reva notices that the written count and the display label disagree. Instead of guessing which is right, they keep a table showing the value after every instruction.",
+      "dialogue": "Which line produced that value?",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.368
+    },
+    {
+      "id": "class9-value-trace-2",
+      "label": "The problem",
+      "title": "Assignment replaces",
+      "mood": "surprise",
+      "caption": "Their trace starts with stock equal to fourteen and reserved equal to four. Assigning stock minus reserved to available gives ten. A later assignment can replace available; the variable does not remember an arithmetic promise that updates itself automatically.",
+      "speech": "Their trace starts with stock equal to fourteen and reserved equal to four. Assigning stock minus reserved to available gives ten. A later assignment can replace available; the variable does not remember an arithmetic promise that updates itself automatically.",
+      "dialogue": "Read assignment as store this result now.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 17.018,
+      "duration": 19.392
+    },
+    {
+      "id": "class9-value-trace-3",
+      "label": "How it works",
+      "title": "The expression matters",
+      "mood": "thinking",
+      "caption": "Nikhil calculates a batch score using multiplication before addition. Parentheses can change that order, so the exact expression belongs beside the trace. Reva keeps numeric values as numbers until the display instruction deliberately converts the final count into text.",
+      "speech": "Nikhil calculates a batch score using multiplication before addition. Parentheses can change that order, so the exact expression belongs beside the trace. Reva keeps numeric values as numbers until the display instruction deliberately converts the final count into text.",
+      "dialogue": "Text that looks numeric is still text.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 37.06,
+      "duration": 20.856
+    },
+    {
+      "id": "class9-value-trace-4",
+      "label": "Your decision",
+      "title": "A stale label",
+      "mood": "thinking",
+      "caption": "The draft creates its label before subtracting newly lent badges. The numeric count then changes while the text stays unchanged. Choose a repair that creates the label from the final count, rather than altering the input just to match the display.",
+      "speech": "The draft creates its label before subtracting newly lent badges. The numeric count then changes while the text stays unchanged. Choose a repair that creates the label from the final count, rather than altering the input just to match the display.",
+      "dialogue": "The label is a snapshot, not a live link.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 58.566,
+      "duration": 17.856
+    },
+    {
+      "id": "class9-value-trace-5",
+      "label": "What changes",
+      "title": "Change an input",
+      "mood": "happy",
+      "caption": "A revised reservation list arrives. Reva restarts from the supplied initial values and repeats every dependent line. Editing only the answer conceals which operation caused the difference and leaves no useful evidence.",
+      "speech": "A revised reservation list arrives. Reva restarts from the supplied initial values and repeats every dependent line. Editing only the answer conceals which operation caused the difference and leaves no useful evidence.",
+      "dialogue": "A fresh input needs a fresh trace.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 77.072,
+      "duration": 16.248
+    },
+    {
+      "id": "class9-value-trace-6",
+      "label": "Enter the lab",
+      "title": "Keep both kinds",
+      "mood": "happy",
+      "caption": "Their notebook now has separate columns for line, numeric values and displayed text. The screen becomes explainable because every output has a source. A matching result alone cannot prove the calculation was sound.",
+      "speech": "Their notebook now has separate columns for line, numeric values and displayed text. The screen becomes explainable because every output has a source. A matching result alone cannot prove the calculation was sound.",
+      "dialogue": "Show the line, value and type.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 93.97,
+      "duration": 16.248
+    }
+  ]
+}

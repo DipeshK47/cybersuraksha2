@@ -1,0 +1,93 @@
+{
+  "duration": 117.492,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "scenes": [
+    {
+      "id": "class9-ai-prediction-errors-1",
+      "label": "Meet the team",
+      "title": "Requests on rails",
+      "mood": "thinking",
+      "caption": "Reva and Nikhil build a paper railway for fictional club requests. Each carries a score and checked label: routine or review. Their toy model copies the nearest selected training score’s label. No private messages are involved.",
+      "speech": "Reva and Nikhil build a paper railway for fictional club requests. Each carries a score and checked label: routine or review. Their toy model copies the nearest selected training score’s label. No private messages are involved.",
+      "dialogue": "Watch exactly how it predicts.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 18.0
+    },
+    {
+      "id": "class9-ai-prediction-errors-2",
+      "label": "The problem",
+      "title": "4 training anchors",
+      "mood": "surprise",
+      "caption": "Training anchors are 0 routine, 4 review, 8 routine and 12 review. Visible validation checks use 1, 5, 9 and 11. Selecting every anchor predicts all 4 labels correctly. These checks guide selection; they are development evidence.",
+      "speech": "Training anchors are 0 routine, 4 review, 8 routine and 12 review. Visible validation checks use 1, 5, 9 and 11. Selecting every anchor predicts all 4 labels correctly. These checks guide selection; they are development evidence.",
+      "dialogue": "A result needs its configuration.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.65,
+      "duration": 20.28
+    },
+    {
+      "id": "class9-ai-prediction-errors-3",
+      "label": "How it works",
+      "title": "A difficult new score",
+      "mood": "thinking",
+      "caption": "A new checked request scores 7 and needs review. Its nearest anchor, 8 routine, produces a miss. At 6, anchors 4 review and 8 routine tie; conflicting labels make this model abstain. A reviewer handles uncertainty.",
+      "speech": "A new checked request scores 7 and needs review. Its nearest anchor, 8 routine, produces a miss. At 6, anchors 4 review and 8 routine tie; conflicting labels make this model abstain. A reviewer handles uncertainty.",
+      "dialogue": "A tie is not a confident guess.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 39.58,
+      "duration": 18.912
+    },
+    {
+      "id": "class9-ai-prediction-errors-4",
+      "label": "Your decision",
+      "title": "Define positive first",
+      "mood": "thinking",
+      "caption": "Positive means needs human review. A routine request predicted review is a false alarm; a review request predicted routine is a miss. Choose whether earlier correct predictions justify automatically dismissing the new request without reading it.",
+      "speech": "Positive means needs human review. A routine request predicted review is a false alarm; a review request predicted routine is a miss. Choose whether earlier correct predictions justify automatically dismissing the new request without reading it.",
+      "dialogue": "The label definition fixes the error names.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 59.142,
+      "duration": 18.048
+    },
+    {
+      "id": "class9-ai-prediction-errors-5",
+      "label": "What changes",
+      "title": "Compare the review load",
+      "mood": "happy",
+      "caption": "On a fixed 5 request pack, the nearest model misses 1 review with no false alarms. Sending everything for review avoids misses but adds 2 false alarms. The teacher prioritises catching requests and can read every output.",
+      "speech": "On a fixed 5 request pack, the nearest model misses 1 review with no false alarms. Sending everything for review avoids misses but adds 2 false alarms. The teacher prioritises catching requests and can read every output.",
+      "dialogue": "Error costs depend on the purpose.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 77.84,
+      "duration": 17.832
+    },
+    {
+      "id": "class9-ai-prediction-errors-6",
+      "label": "Enter the lab",
+      "title": "An inspectable record",
+      "mood": "happy",
+      "caption": "In the lab, adjust training, count mistakes and compare settings. Reusing visible checks makes their score a validation result. After tuning, fix the selection and evaluate a separate unseen batch for independent performance evidence. Keep accountable human review.",
+      "speech": "In the lab, adjust training, count mistakes and compare settings. Reusing visible checks makes their score a validation result. After tuning, fix the selection and evaluate a separate unseen batch for independent performance evidence. Keep accountable human review.",
+      "dialogue": "Count, explain and keep a reviewer.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 96.322,
+      "duration": 20.52
+    }
+  ],
+  "narrationHash": "7d5ebcfac33b58f88c0e6ba31045cb5695be4f2775021253d9edeac5ace3ed72"
+}

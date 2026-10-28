@@ -1,6 +1,7 @@
-import { l, type Class8Task, type TaskAnswer, type L } from "../../../../data/class8/types";
-import { simulateRoute, testModel, testPermissions } from "./task-evaluation";
-import { ui } from "./ui";
+import { l, type Class8Task, type TaskAnswer, type L } from "../../../../data/class8/types.ts";
+import { simulateRoute, testModel, testPermissions } from "./task-evaluation.ts";
+import { ui } from "./ui.ts";
+import { diagnoseTask } from "./task-feedback.ts";
 
 type EvidenceLine = { label: L; value: L };
 const literal = (value: unknown) => l(String(value), String(value));
@@ -27,7 +28,10 @@ export function buildTaskEvidence(task: Class8Task, answer: TaskAnswer): Evidenc
       add(ui.plan, join(moves.map((move, i) => identified(`${i + 1}. ${move}`, ui[move as "up" | "right" | "down" | "left"]))));
       add(ui.trace, join(result.path.map(position))); add(ui.finalPosition, position(result.position));
       add(ui.collectedStops, join((task.stops ?? []).filter(cell => result.path.includes(cell)).map(position)));
-      add(ui.failedMove, literal(result.failedAt ?? "—")); break;
+      add(ui.failedMove, literal(result.failedAt ?? "—"));
+      add(ui.routeCost, literal(result.cost));
+      if (task.maxCost != null) add(ui.costBudget, literal(task.maxCost));
+      break;
     }
     case "model": {
       add(ui.training, join(selected.map(id => {
@@ -51,4 +55,17 @@ export function evidenceFeedbackChunks(lines: readonly string[], maxChars = 900)
   }
   if (chunk) chunks.push(chunk);
   return chunks;
+}
+
+/** Incomplete controls never create submission evidence. Complete attempts retain every checked value. */
+export function recordTaskEvidence(task: Class8Task, answer: TaskAnswer, track: (type: string, payload?: unknown) => void, category: string) {
+  const diagnosis = diagnoseTask(task, answer);
+  if (!diagnosis.complete) return diagnosis;
+  const lines = buildTaskEvidence(task, answer).map(line => `${line.label.en}: ${line.value.en} / ${line.label.hi}: ${line.value.hi}`);
+  lines.push(`${diagnosis.summary.en} / ${diagnosis.summary.hi}`);
+  for (const issue of diagnosis.issues) lines.push(`${issue.label.en}: ${issue.reason.en} / ${issue.label.hi}: ${issue.reason.hi}`);
+  lines.push(`${diagnosis.next.en} / ${diagnosis.next.hi}`);
+  const chunks = evidenceFeedbackChunks(lines);
+  chunks.forEach((feedback, i) => track("story_feedback", { evidence: true, correct: diagnosis.correct, category: category.slice(0, 150), question: task.prompt.en.slice(0, 300), feedback, evidencePart: i + 1, evidenceParts: chunks.length }));
+  return diagnosis;
 }

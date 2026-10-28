@@ -1,0 +1,93 @@
+{
+  "duration": 116.34,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "af1f30aa6c62f3e741707a107bba484f2fa95f4b50e15c3155b2ec919d8591e3",
+  "scenes": [
+    {
+      "id": "class9-ai-pixels-1",
+      "label": "Meet the team",
+      "title": "The glowing mosaic",
+      "mood": "thinking",
+      "caption": "Nikhil builds a mosaic for Reva’s imaginary museum. Each square stores grayscale brightness from 0 to 255, with larger values brighter. The grid records measurements; it cannot establish a doorway interpretation.",
+      "speech": "Nikhil builds a mosaic for Reva’s imaginary museum. Each square stores grayscale brightness from 0 to 255, with larger values brighter. The grid records measurements; it cannot establish a doorway interpretation.",
+      "dialogue": "A stored value is an observation.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.832
+    },
+    {
+      "id": "class9-ai-pixels-2",
+      "label": "The problem",
+      "title": "8 places for brightness",
+      "mood": "surprise",
+      "caption": "A sample square has brightness 173. Its binary places are 128, 64, 32, 16, 8, 4, 2 and 1. Reva selects places adding to the supplied value. The resulting bits encode a number, rather than meaning.",
+      "speech": "A sample square has brightness 173. Its binary places are 128, 64, 32, 16, 8, 4, 2 and 1. Reva selects places adding to the supplied value. The resulting bits encode a number, rather than meaning.",
+      "dialogue": "Bits encode the number, not its meaning.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 18.482,
+      "duration": 21.744
+    },
+    {
+      "id": "class9-ai-pixels-3",
+      "label": "How it works",
+      "title": "A visible stripe",
+      "mood": "thinking",
+      "caption": "The first 3 by 3 image has a bright centre column and dark pixels elsewhere. Nikhil’s rule detects a stripe only when every centre pixel is bright. This checks positions, rather than proving the picture contains a doorway.",
+      "speech": "The first 3 by 3 image has a bright centre column and dark pixels elsewhere. Nikhil’s rule detects a stripe only when every centre pixel is bright. This checks positions, rather than proving the picture contains a doorway.",
+      "dialogue": "Write what the rule actually checks.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 40.876,
+      "duration": 17.04
+    },
+    {
+      "id": "class9-ai-pixels-4",
+      "label": "Your decision",
+      "title": "Move the same pattern",
+      "mood": "thinking",
+      "caption": "Reva shifts the bright stripe left without changing its shape. The centre column becomes dark. Choose whether the original rule still detects it. A human may describe the shifted pattern as similar while the rule returns differently.",
+      "speech": "Reva shifts the bright stripe left without changing its shape. The centre column becomes dark. Choose whether the original rule still detects it. A human may describe the shifted pattern as similar while the rule returns differently.",
+      "dialogue": "Similar to us may differ to a rule.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 58.566,
+      "duration": 17.424
+    },
+    {
+      "id": "class9-ai-pixels-5",
+      "label": "What changes",
+      "title": "Observation and interpretation",
+      "mood": "happy",
+      "caption": "The notebook separates observing bright centre pixels from interpreting them as a doorway. Only the observation follows directly from the supplied numbers. The interpretation needs context, a definition and comparisons with pictures that could produce the same feature.",
+      "speech": "The notebook separates observing bright centre pixels from interpreting them as a doorway. Only the observation follows directly from the supplied numbers. The interpretation needs context, a definition and comparisons with pictures that could produce the same feature.",
+      "dialogue": "Do not smuggle a story into a pixel.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 76.64,
+      "duration": 18.96
+    },
+    {
+      "id": "class9-ai-pixels-6",
+      "label": "Enter the lab",
+      "title": "Keep a feature record",
+      "mood": "happy",
+      "caption": "In the lab, encode brightness, mark the original feature and test the shifted input. Record where the rule fails. This experiment demonstrates a representation limit; it does not show that every image model behaves identically or understands every picture.",
+      "speech": "In the lab, encode brightness, mark the original feature and test the shifted input. Record where the rule fails. This experiment demonstrates a representation limit; it does not show that every image model behaves identically or understands every picture.",
+      "dialogue": "Test the claim under a change.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 96.25,
+      "duration": 19.44
+    }
+  ]
+}

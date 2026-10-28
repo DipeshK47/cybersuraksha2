@@ -1,0 +1,93 @@
+{
+  "duration": 119.748,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "scenes": [
+    {
+      "id": "class9-ai-repair-pilot-1",
+      "label": "Meet the team",
+      "title": "A paper repair desk",
+      "mood": "thinking",
+      "caption": "Reva and Nikhil run a fictional museum repair desk. Requests concern furniture cards or sign cards. Their prototype suggests a teacher tray; it never diagnoses equipment, authorises repairs or tells children how to fix an object.",
+      "speech": "Reva and Nikhil run a fictional museum repair desk. Requests concern furniture cards or sign cards. Their prototype suggests a teacher tray; it never diagnoses equipment, authorises repairs or tells children how to fix an object.",
+      "dialogue": "Routing is the whole permitted purpose.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0.0,
+      "duration": 18.432
+    },
+    {
+      "id": "class9-ai-repair-pilot-2",
+      "label": "The problem",
+      "title": "Repair the training coverage",
+      "mood": "surprise",
+      "caption": "Initial training contains only furniture requests. The teacher supplies permitted training cards with checked sign labels. Reva adds missing coverage. Visible validation labels guide her choices, so their score measures development progress, not independent performance on unseen requests.",
+      "speech": "Initial training contains only furniture requests. The teacher supplies permitted training cards with checked sign labels. Reva adds missing coverage. Visible validation labels guide her choices, so their score measures development progress, not independent performance on unseen requests.",
+      "dialogue": "Validation guides development; reserve a fresh final evaluation.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 19.082,
+      "duration": 22.152
+    },
+    {
+      "id": "class9-ai-repair-pilot-3",
+      "label": "How it works",
+      "title": "A deliberately small feature",
+      "mood": "thinking",
+      "caption": "Each request has a count of words matching a fixed sign vocabulary. The nearest selected count supplies its category. This small feature makes the experiment transparent, but counting can miss meaning, which the project card records.",
+      "speech": "Each request has a count of words matching a fixed sign vocabulary. The nearest selected count supplies its category. This small feature makes the experiment transparent, but counting can miss meaning, which the project card records.",
+      "dialogue": "A feature is a chosen simplification.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 41.884,
+      "duration": 17.256
+    },
+    {
+      "id": "class9-ai-repair-pilot-4",
+      "label": "Your decision",
+      "title": "Write the pilot contract",
+      "mood": "thinking",
+      "caption": "The contract permits 1 classroom session with fictional cards, 3 correct validation predictions and teacher review of every suggestion. This rehearsal score cannot establish deployment performance. New categories, personal data or absent review stop the pilot; manual trays remain ready.",
+      "speech": "The contract permits 1 classroom session with fictional cards, 3 correct validation predictions and teacher review of every suggestion. This rehearsal score cannot establish deployment performance. New categories, personal data or absent review stop the pilot; manual trays remain ready.",
+      "dialogue": "A pilot needs a stopping rule.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 59.79,
+      "duration": 21.168
+    },
+    {
+      "id": "class9-ai-repair-pilot-5",
+      "label": "What changes",
+      "title": "A request outside the boundary",
+      "mood": "happy",
+      "caption": "A new request asks for electrical fault diagnosis. Choose whether the routing score authorises this different purpose. Reva stops that use and hands the request to the teacher, keeping human handling within the boundary.",
+      "speech": "A new request asks for electrical fault diagnosis. Choose whether the routing score authorises this different purpose. Reva stops that use and hands the request to the teacher, keeping human handling within the boundary.",
+      "dialogue": "A changed purpose needs a new decision.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 81.608,
+      "duration": 16.104
+    },
+    {
+      "id": "class9-ai-repair-pilot-6",
+      "label": "Enter the lab",
+      "title": "Review before continuing",
+      "mood": "happy",
+      "caption": "In the lab, revise training and apply the pilot criteria. Log predictions and stopping events. After tuning, fix the selection and use a separate unseen batch for independent evaluation. Review may mean revision or stopping; keep the teacher and manual fallback.",
+      "speech": "In the lab, revise training and apply the pilot criteria. Log predictions and stopping events. After tuning, fix the selection and use a separate unseen batch for independent evaluation. Review may mean revision or stopping; keep the teacher and manual fallback.",
+      "dialogue": "Monitoring can change the project.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 98.362,
+      "duration": 20.736
+    }
+  ],
+  "narrationHash": "bcbb3519ad5e1ec2495d47a26a8683323a49ca1bc8561f13dba07cbbc113c754"
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 112.404,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "f15c82b37a6e2c3d4280519ed0aab555642ef58d9679e7254df39786283889ac",
+  "scenes": [
+    {
+      "id": "class9-fraud-appeal-source-1",
+      "label": "Meet the team",
+      "title": "An urgent appeal",
+      "mood": "thinking",
+      "caption": "Reva sees a fictional community-book appeal with a picture of children beside empty shelves. Nikhil wants to respond quickly. The teacher asks what the picture actually establishes about this request.",
+      "speech": "Reva sees a fictional community-book appeal with a picture of children beside empty shelves. Nikhil wants to respond quickly. The teacher asks what the picture actually establishes about this request.",
+      "dialogue": "Care can include careful checking.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.24
+    },
+    {
+      "id": "class9-fraud-appeal-source-2",
+      "label": "The problem",
+      "title": "Claims on the card",
+      "mood": "surprise",
+      "caption": "The appeal claims an organiser, purpose and deadline. It supplies a contact button and copied photograph, but no library confirmation. Reva lists each claim separately so sympathy does not become identity evidence.",
+      "speech": "The appeal claims an organiser, purpose and deadline. It supplies a contact button and copied photograph, but no library confirmation. Reva lists each claim separately so sympathy does not become identity evidence.",
+      "dialogue": "Separate the organiser from the claimed need.",
+      "status": "Class 9 Signal Studio",
+      "tone": "trouble",
+      "start": 15.89,
+      "duration": 16.944
+    },
+    {
+      "id": "class9-fraud-appeal-source-3",
+      "label": "How it works",
+      "title": "What a picture cannot settle",
+      "mood": "thinking",
+      "caption": "Nikhil recognises that a photograph could be reused in another context. A familiar image therefore cannot confirm who controls the appeal or where support would go. Missing details leave questions open; they do not by themselves prove deliberate deception.",
+      "speech": "Nikhil recognises that a photograph could be reused in another context. A familiar image therefore cannot confirm who controls the appeal or where support would go. Missing details leave questions open; they do not by themselves prove deliberate deception.",
+      "dialogue": "A copied picture is not a payment audit.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 33.484,
+      "duration": 18.48
+    },
+    {
+      "id": "class9-fraud-appeal-source-4",
+      "label": "Your decision",
+      "title": "Choosing an independent source",
+      "mood": "thinking",
+      "caption": "The teacher has the library contact from an earlier school visit. Reva proposes asking through that route whether the appeal is authorised and how its purpose is recorded. The appeal’s own contact could repeat the claim, but cannot independently establish it.",
+      "speech": "The teacher has the library contact from an earlier school visit. Reva proposes asking through that route whether the appeal is authorised and how its purpose is recorded. The appeal’s own contact could repeat the claim, but cannot independently establish it.",
+      "dialogue": "Check this appeal, not a similar campaign.",
+      "status": "Class 9 Signal Studio",
+      "tone": "normal",
+      "start": 52.614,
+      "duration": 18.144
+    },
+    {
+      "id": "class9-fraud-appeal-source-5",
+      "label": "What changes",
+      "title": "A private review note",
+      "mood": "happy",
+      "caption": "They prepare a minimal note for a trusted adult: the claimed organiser, the stated purpose, the source still needed and the requested action. They omit children’s names and faces. Asking publicly for personal documents would expose people without resolving the source question.",
+      "speech": "They prepare a minimal note for a trusted adult: the claimed organiser, the stated purpose, the source still needed and the requested action. They omit children’s names and faces. Asking publicly for personal documents would expose people without resolving the source question.",
+      "dialogue": "Verify the claim without spreading private lives.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 71.408,
+      "duration": 19.728
+    },
+    {
+      "id": "class9-fraud-appeal-source-6",
+      "label": "Enter the lab",
+      "title": "A limited reply",
+      "mood": "happy",
+      "caption": "The library confirms that it runs a book programme, but has not yet confirmed this particular appeal. Nikhil updates only that fact. Reva keeps the authorisation question open and postpones action, showing that a partial answer deserves a precise, limited conclusion.",
+      "speech": "The library confirms that it runs a book programme, but has not yet confirmed this particular appeal. Nikhil updates only that fact. Reva keeps the authorisation question open and postpones action, showing that a partial answer deserves a precise, limited conclusion.",
+      "dialogue": "A real programme does not verify every appeal.",
+      "status": "Class 9 Signal Studio",
+      "tone": "resolved",
+      "start": 91.786,
+      "duration": 19.968
+    }
+  ]
+}

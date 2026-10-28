@@ -27,25 +27,26 @@ function walk(dir) {
       function strings(value) {
         if (typeof value === 'string') add(value,file);
         else if (Array.isArray(value)) value.forEach(strings);
-        else if (value && typeof value==='object') Object.entries(value).filter(([key])=>key!=='narrationHash').forEach(([,child])=>strings(child));
+        else if (value && typeof value==='object') Object.entries(value).filter(([key])=>!['narrationHash','narration','speech'].includes(key)).forEach(([,child])=>strings(child));
       }
       strings(JSON.parse(fs.readFileSync(file,'utf8'))); continue;
     }
     if (!/\.tsx?$/.test(file) || /\.generated\.ts$/.test(file)) continue;
     const source=fs.readFileSync(file,'utf8');
     const ast=ts.createSourceFile(file,source,ts.ScriptTarget.Latest,true,file.endsWith('.tsx')?ts.ScriptKind.TSX:ts.ScriptKind.TS);
-    const bilingualContent = file.startsWith(path.join('app','data','class8')+path.sep) || file===path.join('app','module','cyber','lessons','class8','ui.ts');
+    const bilingualContent = ['class8','class9'].some(grade=>file.startsWith(path.join('app','data',grade)+path.sep)||file===path.join('app','module','cyber','lessons',grade,'ui.ts'));
+    const bilingualComposites = ['task-feedback.ts','task-evidence.ts'].some(name=>file===path.join('app','module','cyber','lessons','class8',name));
     function visit(node) {
       if (ts.isImportDeclaration(node)||ts.isTypeAliasDeclaration(node)||ts.isInterfaceDeclaration(node)) return;
       // A programming range invariant is not rendered learner-facing copy.
       if (ts.isNewExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === 'RangeError') return;
       // The explicit bilingual contract stores both languages and technical IDs
       // together. Only l(en, hi)'s English argument is translatable source copy.
-      if (bilingualContent) {
+      if (bilingualContent || bilingualComposites) {
         if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text==='l') {
           const english=node.arguments[0];
           if (english && (ts.isStringLiteral(english)||ts.isNoSubstitutionTemplateLiteral(english))) add(english.text,file);
-          else if (english) throw new Error(`Bilingual source must use a literal English message: ${file}`);
+          else if (english && !bilingualComposites) throw new Error(`Bilingual source must use a literal English message: ${file}`);
           return;
         }
         ts.forEachChild(node,visit); return;
@@ -64,8 +65,8 @@ function walk(dir) {
         const p=node.parent;
         if (ts.isLiteralTypeNode(p)) return;
         if (ts.isCaseClause(p) && ts.isSwitchStatement(p.parent.parent) && ts.isPropertyAccessExpression(p.parent.parent.expression) && p.parent.parent.expression.name.text==='kind') return;
-        if (ts.isBinaryExpression(p) && p.right===node && ((ts.isPropertyAccessExpression(p.left) && ['kind','presentation','sceneTheme'].includes(p.left.name.text)) || (ts.isIdentifier(p.left) && p.left.text==='theme'))) return;
-        if (ts.isArrayLiteralExpression(p) && ts.isPropertyAccessExpression(p.parent) && p.parent.name.text==='includes' && ts.isCallExpression(p.parent.parent) && p.parent.parent.arguments.some(argument=>ts.isPropertyAccessExpression(argument)&&argument.name.text==='kind')) return;
+        if (ts.isBinaryExpression(p) && p.right===node && ((ts.isPropertyAccessExpression(p.left) && ['kind','presentation','sceneTheme','checkRole'].includes(p.left.name.text)) || (ts.isIdentifier(p.left) && p.left.text==='theme'))) return;
+        if (ts.isArrayLiteralExpression(p) && ts.isPropertyAccessExpression(p.parent) && p.parent.name.text==='includes' && ts.isCallExpression(p.parent.parent) && p.parent.parent.arguments.some(argument=>(ts.isPropertyAccessExpression(argument)&&argument.name.text==='kind')||(ts.isIdentifier(argument)&&['theme','mood'].includes(argument.text)))) return;
         if ((ts.isPropertyAssignment(p)&&p.name===node)||(ts.isElementAccessExpression(p)&&p.argumentExpression===node)) return;
         if (node.text!=='use client') add(node.text,file);
         return;
