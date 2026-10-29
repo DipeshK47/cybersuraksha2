@@ -40,8 +40,14 @@ import { Class9Lesson } from "./class9/Class9Lesson";
 import { CLASS9_LESSON_SLUGS } from "../../../data/class-9-missions";
 import { Class10Lesson } from "./class10/Class10Lesson";
 import { CLASS10_LESSON_SLUGS } from "../../../data/class-10-missions";
+import { Class6Lesson } from "./class6/Class6Lesson";
+import { Class7Lesson } from "./class7/Class7Lesson";
+import { CLASS7_LESSON_SLUGS } from "../../../data/class-7-missions";
+import { CLASS6_LESSON_SLUGS } from "../../../data/class-6-missions";
 
 const lessonComponents: Record<CyberLessonSlug, ComponentType<CyberLessonComponentProps>> = {
+  ...Object.fromEntries(CLASS6_LESSON_SLUGS.map(slug => [slug, Class6Lesson])),
+  ...Object.fromEntries(CLASS7_LESSON_SLUGS.map(slug => [slug, Class7Lesson])),
   ...Object.fromEntries(CLASS8_LESSON_SLUGS.map(slug => [slug, Class8Lesson])),
   ...Object.fromEntries(CLASS9_LESSON_SLUGS.map(slug => [slug, Class9Lesson])),
   ...Object.fromEntries(CLASS10_LESSON_SLUGS.map(slug => [slug, Class10Lesson])),

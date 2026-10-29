@@ -1,0 +1,93 @@
+{
+  "duration": 98.508,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "f22f0512a83eae84866ad12239a91b2f095cae7f03cabfcd2f93cbcdb05745ab",
+  "scenes": [
+    {
+      "id": "class6-fraud-free-reward-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "A fictional game message promises Kabir a rare outfit for free. The large picture shows a reward, but the small instructions ask for an account password. Meera reads the requested action aloud before thinking about how exciting the prize looks.",
+      "speech": "A fictional game message promises Kabir a rare outfit for free. The large picture shows a reward, but the small instructions ask for an account password. Meera reads the requested action aloud before thinking about how exciting the prize looks.",
+      "dialogue": "Reward claims",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.904
+    },
+    {
+      "id": "class6-fraud-free-reward-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A reward claim and a requested action are different parts of an offer. Free in a heading does not mean there is no cost or risk. Giving a password can hand over account control even when no money changes hands in the story.",
+      "speech": "A reward claim and a requested action are different parts of an offer. Free in a heading does not mean there is no cost or risk. Giving a password can hand over account control even when no money changes hands in the story.",
+      "dialogue": "Hidden demands",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.554,
+      "duration": 16.248
+    },
+    {
+      "id": "class6-fraud-free-reward-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The club uses pretend messages to practise pausing. Students do not click links, pay fees or share real secrets to see whether a claim is genuine. They ask a trusted adult and use a known game or school route when a real offer needs checking.",
+      "speech": "The club uses pretend messages to practise pausing. Students do not click links, pay fees or share real secrets to see whether a claim is genuine. They ask a trusted adult and use a known game or school route when a real offer needs checking.",
+      "dialogue": "A pause before action",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 35.452,
+      "duration": 17.592
+    },
+    {
+      "id": "class6-fraud-free-reward-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The offer asks for an account password to claim a free outfit. It is not inside a known approved reward process. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The offer asks for an account password to claim a free outfit. It is not inside a known approved reward process. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "What should Kabir do with the reward message?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 53.694,
+      "duration": 14.088
+    },
+    {
+      "id": "class6-fraud-free-reward-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Keep the password private, stop interacting and ask a trusted adult. A free reward is not a reason to give someone control of an account.",
+      "speech": "Keep the password private, stop interacting and ask a trusted adult. A free reward is not a reason to give someone control of an account.",
+      "dialogue": "Recognise pressure and account-secret requests.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 68.432,
+      "duration": 10.776
+    },
+    {
+      "id": "class6-fraud-free-reward-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through reward claims, then hidden demands, then a pause before action. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through reward claims, then hidden demands, then a pause before action. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "What can an offer cost even when it says free?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 79.858,
+      "duration": 18
+    }
+  ]
+}

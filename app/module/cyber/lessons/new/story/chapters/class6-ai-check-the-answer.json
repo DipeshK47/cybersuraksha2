@@ -1,0 +1,93 @@
+{
+  "duration": 103.86,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "416f32c303ef6702fe30c5932c09db5f08c43625a568e5b8aa264c76c73d0f13",
+  "scenes": [
+    {
+      "id": "class6-ai-check-the-answer-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Meera asks a pretend assistant to draft a note about the club garden. It writes smoothly that the club planted twenty seeds. The teacher’s source card records twelve seeds, so Kabir checks the number before copying the answer into the magazine.",
+      "speech": "Meera asks a pretend assistant to draft a note about the club garden. It writes smoothly that the club planted twenty seeds. The teacher’s source card records twelve seeds, so Kabir checks the number before copying the answer into the magazine.",
+      "dialogue": "Claims and evidence",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.448
+    },
+    {
+      "id": "class6-ai-check-the-answer-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A language tool can produce convincing sentences without checking the club’s real record. Confidence, length and polite wording are not supporting evidence. The team separates each claim from the source that could support it, instead of trusting the paragraph as a single block.",
+      "speech": "A language tool can produce convincing sentences without checking the club’s real record. Confidence, length and polite wording are not supporting evidence. The team separates each claim from the source that could support it, instead of trusting the paragraph as a single block.",
+      "dialogue": "Source checking",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.098,
+      "duration": 19.344
+    },
+    {
+      "id": "class6-ai-check-the-answer-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The source card supports twelve planted seeds, not a claim that every seed will grow. The students keep the supported fact, remove the invented guarantee and acknowledge that a tool helped draft the note. All examples are offline; no live assistant account is needed.",
+      "speech": "The source card supports twelve planted seeds, not a claim that every seed will grow. The students keep the supported fact, remove the invented guarantee and acknowledge that a tool helped draft the note. All examples are offline; no live assistant account is needed.",
+      "dialogue": "A corrected answer",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 38.092,
+      "duration": 19.368
+    },
+    {
+      "id": "class6-ai-check-the-answer-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "Assistant draft says twenty seeds. Supplied checked garden record says twelve. There is no second record supporting twenty. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "Assistant draft says twenty seeds. Supplied checked garden record says twelve. There is no second record supporting twenty. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "What number should the note report?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 58.11,
+      "duration": 15.336
+    },
+    {
+      "id": "class6-ai-check-the-answer-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Use twelve from the supplied checked record and explain the correction. The assistant’s fluent wording does not outweigh the evidence for this fictional garden.",
+      "speech": "Use twelve from the supplied checked record and explain the correction. The assistant’s fluent wording does not outweigh the evidence for this fictional garden.",
+      "dialogue": "Check a claim against a supplied source.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 74.096,
+      "duration": 10.536
+    },
+    {
+      "id": "class6-ai-check-the-answer-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through claims and evidence, then source checking, then a corrected answer. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through claims and evidence, then source checking, then a corrected answer. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why does a confident sentence still need a source?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 85.282,
+      "duration": 17.928
+    }
+  ]
+}

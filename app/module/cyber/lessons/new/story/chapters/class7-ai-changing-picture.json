@@ -1,0 +1,93 @@
+{
+  "duration": 102.036,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "746b0a9ac2b8e3a6a9e6f5d6c22d72744bdf1a43b8a60133978c498bea4b154c",
+  "scenes": [
+    {
+      "id": "class7-ai-changing-picture-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The club’s fictional leaf helper succeeds on a pale table but struggles when the same leaf is placed on dark card. Tara asks whether the helper learned useful leaf features or merely followed a background that happened to appear in its training pictures.",
+      "speech": "The club’s fictional leaf helper succeeds on a pale table but struggles when the same leaf is placed on dark card. Tara asks whether the helper learned useful leaf features or merely followed a background that happened to appear in its training pictures.",
+      "dialogue": "Object and background",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.68
+    },
+    {
+      "id": "class7-ai-changing-picture-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Background can be a shortcut that fails in a new setting. The class compares shape and edge information with table colour, then marks object cells in an explicitly described practice grid. The story illustration sets the scene; the numbered cell description supplies the exact task evidence.",
+      "speech": "Background can be a shortcut that fails in a new setting. The class compares shape and edge information with table colour, then marks object cells in an explicitly described practice grid. The story illustration sets the scene; the numbered cell description supplies the exact task evidence.",
+      "dialogue": "Mask the object",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 17.33,
+      "duration": 21.096
+    },
+    {
+      "id": "class7-ai-changing-picture-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The teacher moves the object to a different column while keeping its identity unchanged. Neel must update the selected mask rather than repeat old cell positions. Testing changed backgrounds and positions helps investigate the shortcut, but a few successful pictures still do not establish performance in every environment.",
+      "speech": "The teacher moves the object to a different column while keeping its identity unchanged. Neel must update the selected mask rather than repeat old cell positions. Testing changed backgrounds and positions helps investigate the shortcut, but a few successful pictures still do not establish performance in every environment.",
+      "dialogue": "Retest a changed position",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.076,
+      "duration": 22.536
+    },
+    {
+      "id": "class7-ai-changing-picture-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The same leaf was recognised on pale card but not dark card. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The same leaf was recognised on pale card but not dark card. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What is the most useful next check?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 62.262,
+      "duration": 10.368
+    },
+    {
+      "id": "class7-ai-changing-picture-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Retest the same object with varied backgrounds and record the differences. This investigates a possible shortcut without changing the label to hide the error.",
+      "speech": "Retest the same object with varied backgrounds and record the differences. This investigates a possible shortcut without changing the label to hide the error.",
+      "dialogue": "Use a supplied cell map to select an object mask.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 73.28,
+      "duration": 11.832
+    },
+    {
+      "id": "class7-ai-changing-picture-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate object and background, then mask the object, then retest a changed position. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate object and background, then mask the object, then retest a changed position. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "What changed between the two masks, and what stayed the same?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 85.762,
+      "duration": 15.624
+    }
+  ]
+}

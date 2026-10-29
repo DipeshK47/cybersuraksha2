@@ -1,0 +1,93 @@
+{
+  "duration": 107.22,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "32c2145003d6bfbb307535456247e9c7613d2ce2d989ddabb8f5bb55313a6ea6",
+  "scenes": [
+    {
+      "id": "class7-ai-generated-explanation-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab asks a fictional text helper to explain a classroom water-filter demonstration. Its paragraph sounds confident and includes an impressive-looking reference. Tara opens the teacher’s source card before adding the paragraph to the project guide. Fluency alone cannot verify what the helper says.",
+      "speech": "The Connection Lab asks a fictional text helper to explain a classroom water-filter demonstration. Its paragraph sounds confident and includes an impressive-looking reference. Tara opens the teacher’s source card before adding the paragraph to the project guide. Fluency alone cannot verify what the helper says.",
+      "dialogue": "Claims need evidence",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 23.112
+    },
+    {
+      "id": "class7-ai-generated-explanation-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "The source card records that visible particles were removed in the demonstration. It does not establish that the water is safe to drink, and the quoted reference is absent. Neel separates the observed result from the unsupported claim instead of copying both into a polished answer.",
+      "speech": "The source card records that visible particles were removed in the demonstration. It does not establish that the water is safe to drink, and the quoted reference is absent. Neel separates the observed result from the unsupported claim instead of copying both into a polished answer.",
+      "dialogue": "Check a source",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 23.762,
+      "duration": 19.488
+    },
+    {
+      "id": "class7-ai-generated-explanation-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The class uses only this supplied fictional text and does not test drinking water. Tara rewrites the explanation from checked evidence, marks the limitation and acknowledges the helper’s role. Private learner details are unnecessary in the request, and the learner remains responsible for the submitted explanation.",
+      "speech": "The class uses only this supplied fictional text and does not test drinking water. Tara rewrites the explanation from checked evidence, marks the limitation and acknowledges the helper’s role. Private learner details are unnecessary in the request, and the learner remains responsible for the submitted explanation.",
+      "dialogue": "Own the explanation",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 43.9,
+      "duration": 21.648
+    },
+    {
+      "id": "class7-ai-generated-explanation-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The supplied source supports removal of visible particles only. It does not establish drinking safety. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The supplied source supports removal of visible particles only. It does not establish drinking safety. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What can the guide responsibly say?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 66.198,
+      "duration": 13.68
+    },
+    {
+      "id": "class7-ai-generated-explanation-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Describe the observed particle removal and state the limit. Do not turn a generated claim or invented citation into evidence of drinking safety.",
+      "speech": "Describe the observed particle removal and state the limit. Do not turn a generated claim or invented citation into evidence of drinking safety.",
+      "dialogue": "Reject a citation absent from the supplied source.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 80.528,
+      "duration": 10.944
+    },
+    {
+      "id": "class7-ai-generated-explanation-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate claims need evidence, then check a source, then own the explanation. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate claims need evidence, then check a source, then own the explanation. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why is a convincing reference name different from a checked source?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 92.122,
+      "duration": 14.448
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 99.732,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "4bd510b4aa5f2d8a650ce070ba5a8de28ed281dea0779eb86bc688f0011ac426",
+  "scenes": [
+    {
+      "id": "class6-ai-or-instructions-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Meera brings a timer to the discovery club, while Kabir shows a picture sorter. Both respond without a person pressing every step. The team asks how each tool produces its answer instead of deciding from a shiny screen or a friendly voice.",
+      "speech": "Meera brings a timer to the discovery club, while Kabir shows a picture sorter. Both respond without a person pressing every step. The team asks how each tool produces its answer instead of deciding from a shiny screen or a friendly voice.",
+      "dialogue": "Fixed instructions",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.88
+    },
+    {
+      "id": "class6-ai-or-instructions-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "The timer follows a fixed countdown instruction. The prepared sorter was built using labelled examples. These descriptions tell the team more than the word smart on a box. An automatic action alone does not show whether a system learned a pattern.",
+      "speech": "The timer follows a fixed countdown instruction. The prepared sorter was built using labelled examples. These descriptions tell the team more than the word smart on a box. An automatic action alone does not show whether a system learned a pattern.",
+      "dialogue": "Learned patterns",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.53,
+      "duration": 18.768
+    },
+    {
+      "id": "class6-ai-or-instructions-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "Some tools combine ordinary rules with learned models. When the teacher shows a mystery device with no explanation, the honest answer is that more evidence is needed. Students can describe what they observe without inventing a hidden learning process.",
+      "speech": "Some tools combine ordinary rules with learned models. When the teacher shows a mystery device with no explanation, the honest answer is that more evidence is needed. Students can describe what they observe without inventing a hidden learning process.",
+      "dialogue": "Missing evidence",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 37.948,
+      "duration": 17.976
+    },
+    {
+      "id": "class6-ai-or-instructions-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The box describes a voice but gives no information about examples, rules or how responses are produced. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The box describes a voice but gives no information about examples, rules or how responses are produced. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "A talking toy says it is smart. Is that enough evidence of AI?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 56.574,
+      "duration": 13.008
+    },
+    {
+      "id": "class6-ai-or-instructions-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Ask how the toy produces responses. Speech and advertising are not enough to establish that a model learned patterns from examples.",
+      "speech": "Ask how the toy produces responses. Speech and advertising are not enough to establish that a model learned patterns from examples.",
+      "dialogue": "Recognise learning from labelled examples.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 70.232,
+      "duration": 10.248
+    },
+    {
+      "id": "class6-ai-or-instructions-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through fixed instructions, then learned patterns, then missing evidence. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through fixed instructions, then learned patterns, then missing evidence. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "What would you ask before calling an unfamiliar tool AI?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 81.13,
+      "duration": 17.952
+    }
+  ]
+}

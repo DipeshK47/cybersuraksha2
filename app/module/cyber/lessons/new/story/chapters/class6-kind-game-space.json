@@ -1,0 +1,93 @@
+{
+  "duration": 104.364,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "cfbe356fb83fcc29dbc78454642840f19a87a68edaacc6380a140dae6bf9c5d2",
+  "scenes": [
+    {
+      "id": "class6-kind-game-space-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "A new player praises Kabir’s building skills, then asks him to leave the game chat and keep their conversation secret. Meera says friendly language does not mean a person is entitled to private contact, photos or personal details.",
+      "speech": "A new player praises Kabir’s building skills, then asks him to leave the game chat and keep their conversation secret. Meera says friendly language does not mean a person is entitled to private contact, photos or personal details.",
+      "dialogue": "Contact boundaries",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.536
+    },
+    {
+      "id": "class6-kind-game-space-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A boundary is a rule about what contact feels appropriate and safe. Children can stop a conversation without winning an argument. Threats, repeated insults or requests for secrets are reasons to get help, even when the other person seems familiar.",
+      "speech": "A boundary is a rule about what contact feels appropriate and safe. Children can stop a conversation without winning an argument. Threats, repeated insults or requests for secrets are reasons to get help, even when the other person seems familiar.",
+      "dialogue": "Useful evidence",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.186,
+      "duration": 18.24
+    },
+    {
+      "id": "class6-kind-game-space-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The teacher practises calm reporting with fictional cards. Keep the message and sender information for an adult, without reposting harmful material to classmates. An adult can help use block and report controls. Asking for help does not make the learner responsible for someone else’s behaviour.",
+      "speech": "The teacher practises calm reporting with fictional cards. Keep the message and sender information for an adult, without reposting harmful material to classmates. An adult can help use block and report controls. Asking for help does not make the learner responsible for someone else’s behaviour.",
+      "dialogue": "Trusted help",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 36.076,
+      "duration": 21.984
+    },
+    {
+      "id": "class6-kind-game-space-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The player asks for a private secret conversation. Kabir is uncomfortable and has not shared any personal information. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The player asks for a private secret conversation. Kabir is uncomfortable and has not shared any personal information. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "What is Kabir’s safest next step?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 58.71,
+      "duration": 14.4
+    },
+    {
+      "id": "class6-kind-game-space-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Stop responding and tell a trusted adult, who can help preserve the message and use block or report controls. Kabir does not owe the player secrecy.",
+      "speech": "Stop responding and tell a trusted adult, who can help preserve the message and use block or report controls. Kabir does not owe the player secrecy.",
+      "dialogue": "Choose evidence without spreading harmful content.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 73.76,
+      "duration": 11.376
+    },
+    {
+      "id": "class6-kind-game-space-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through contact boundaries, then useful evidence, then trusted help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through contact boundaries, then useful evidence, then trusted help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why can you stop a conversation even if the person calls you a friend?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 85.786,
+      "duration": 17.928
+    }
+  ]
+}

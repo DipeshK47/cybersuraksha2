@@ -25,7 +25,7 @@ test("delivery supports Classes 3–12 and every cyber chapter is playable and a
     const subjects = entry.subjects.filter(subject => subject.strand && subject.strand !== "English");
     assert.deepEqual(subjects.map(subject => subject.strand).sort(), strands);
     for (const subject of subjects) {
-      assert.equal(subject.modules.length, entry.grade >= 8 ? 8 : 2);
+      assert.equal(subject.modules.length, entry.grade >= 6 ? 8 : 2);
       for (const chapter of subject.modules) {
         const playable = getPlayableModule(entry.grade, chapter.title);
         assert.ok(playable, `Class ${entry.grade}: ${chapter.title}`);

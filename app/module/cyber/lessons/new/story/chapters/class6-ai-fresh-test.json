@@ -1,0 +1,93 @@
+{
+  "duration": 100.14,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "1dac51cd769df8396d770a12fff304ba9e4b8996011d7ff2e6c666d67b68fa76",
+  "scenes": [
+    {
+      "id": "class6-ai-fresh-test-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Kabir practises a sorter on four shape cards until it gets all four right. He wants to announce perfect performance. Meera asks whether repeating those same cards shows what will happen on drawings the sorter has not already practised.",
+      "speech": "Kabir practises a sorter on four shape cards until it gets all four right. He wants to announce perfect performance. Meera asks whether repeating those same cards shows what will happen on drawings the sorter has not already practised.",
+      "dialogue": "Learning examples",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.688
+    },
+    {
+      "id": "class6-ai-fresh-test-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "Learning examples help build or improve a model. Fresh checks ask a different question: can the resulting model handle separate examples? The club puts its check cards in another envelope before practising so the two sets do not quietly become the same.",
+      "speech": "Learning examples help build or improve a model. Fresh checks ask a different question: can the resulting model handle separate examples? The club puts its check cards in another envelope before practising so the two sets do not quietly become the same.",
+      "dialogue": "Fresh checks",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.338,
+      "duration": 18.24
+    },
+    {
+      "id": "class6-ai-fresh-test-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The fresh envelope contains five cards, and one prediction is wrong. The team reports four correct out of five, names the small test and keeps the failure. They do not claim that this result guarantees every future drawing will be handled correctly.",
+      "speech": "The fresh envelope contains five cards, and one prediction is wrong. The team reports four correct out of five, names the small test and keeps the failure. They do not claim that this result guarantees every future drawing will be handled correctly.",
+      "dialogue": "An honest result",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 37.228,
+      "duration": 17.856
+    },
+    {
+      "id": "class6-ai-fresh-test-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "One envelope contains cards used for practice. Another was kept separate before the model was prepared. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "One envelope contains cards used for practice. Another was kept separate before the model was prepared. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Which check better tests a new example?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 55.734,
+      "duration": 13.32
+    },
+    {
+      "id": "class6-ai-fresh-test-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Use the separate check envelope and report all outcomes. Repeating memorised examples cannot establish how well the model handles fresh cases.",
+      "speech": "Use the separate check envelope and report all outcomes. Repeating memorised examples cannot establish how well the model handles fresh cases.",
+      "dialogue": "Count correct and incorrect outcomes.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 69.704,
+      "duration": 11.088
+    },
+    {
+      "id": "class6-ai-fresh-test-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through learning examples, then fresh checks, then an honest result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through learning examples, then fresh checks, then an honest result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why should learning cards and fresh checks have different roles?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 81.442,
+      "duration": 18.048
+    }
+  ]
+}

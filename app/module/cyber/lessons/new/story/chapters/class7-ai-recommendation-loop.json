@@ -1,0 +1,93 @@
+{
+  "duration": 97.74,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e8eb121b87680d2eacfa0627319c62a9a56a04cd488ff52b4704f5f45d17d64f",
+  "scenes": [
+    {
+      "id": "class7-ai-recommendation-loop-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "Neel selects several building pictures in a fictional classroom feed. The next set contains even more buildings. Tara notices that the feed is responding to earlier choices, then giving Neel more opportunities to repeat the same kind of choice.",
+      "speech": "Neel selects several building pictures in a fictional classroom feed. The next set contains even more buildings. Tara notices that the feed is responding to earlier choices, then giving Neel more opportunities to repeat the same kind of choice.",
+      "dialogue": "Signals from choices",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.664
+    },
+    {
+      "id": "class7-ai-recommendation-loop-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "This feedback loop can make a feed narrower without showing what matters most. A predicted interest is not a fact check, a judgement of quality or an instruction to keep watching. The visible classroom rule counts selected topics; real systems can use many other signals.",
+      "speech": "This feedback loop can make a feed narrower without showing what matters most. A predicted interest is not a fact check, a judgement of quality or an instruction to keep watching. The visible classroom rule counts selected topics; real systems can use many other signals.",
+      "dialogue": "A narrowing loop",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.314,
+      "duration": 20.064
+    },
+    {
+      "id": "class7-ai-recommendation-loop-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The team compares a repeated feed with a deliberately varied reading list. Neel chooses a different checked source and sets a stopping point for the activity. Learners can inspect the reason for a suggestion and make their own decision rather than treating the next item as a command.",
+      "speech": "The team compares a repeated feed with a deliberately varied reading list. Neel chooses a different checked source and sets a stopping point for the activity. Learners can inspect the reason for a suggestion and make their own decision rather than treating the next item as a command.",
+      "dialogue": "Deliberate choices",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.028,
+      "duration": 19.152
+    },
+    {
+      "id": "class7-ai-recommendation-loop-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The fictional feed counted earlier building selections and used them to choose the next item. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The fictional feed counted earlier building selections and used them to choose the next item. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What does another building suggestion establish?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 58.83,
+      "duration": 11.568
+    },
+    {
+      "id": "class7-ai-recommendation-loop-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "It reflects the feed’s prediction of interest. It does not establish that the item is true, best or worth more time than your intended task.",
+      "speech": "It reflects the feed’s prediction of interest. It does not establish that the item is true, best or worth more time than your intended task.",
+      "dialogue": "Explain why a suggestion is not proof of truth or importance.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 71.048,
+      "duration": 10.584
+    },
+    {
+      "id": "class7-ai-recommendation-loop-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate signals from choices, then a narrowing loop, then deliberate choices. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate signals from choices, then a narrowing loop, then deliberate choices. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "How can a feed become narrower without learning everything about a person?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 82.282,
+      "duration": 14.808
+    }
+  ]
+}

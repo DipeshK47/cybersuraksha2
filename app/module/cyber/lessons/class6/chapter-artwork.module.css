@@ -1,0 +1,9 @@
+.artwork { width:100%; max-width:880px; margin:0 auto; overflow:hidden; border-radius:14px; background:#f7f1e3; }
+.artwork img { display:block; width:100%; height:auto; aspect-ratio:1400/788; object-fit:cover; }
+.artwork figcaption { padding:.85rem 1rem; color:#21494d; background:#fffdf6; font-size:.95rem; line-height:1.6; text-align:center; }
+.libraryCard { overflow:hidden; }
+.cover { display:block; width:calc(100% + 44px); max-width:none; height:auto; aspect-ratio:16/9; object-fit:cover; margin:-22px -22px 1rem; }
+a.libraryCard:focus-visible { outline:3px solid #176b64; outline-offset:4px; }
+@media(max-width:600px) {
+  .artwork figcaption { padding:.7rem .8rem; font-size:.9rem; }
+}

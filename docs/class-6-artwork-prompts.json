@@ -1,0 +1,270 @@
+{
+  "generator": "Built-in image_gen",
+  "style": "Use case: illustration-story. Asset: one original full-bleed landscape 16:9 chapter illustration for Indian Class 6 CyberShiksha, ages 11–12. Premium warm cinematic stylised 3D animated-film still matching the supplied style reference: tactile paper and wood, richly detailed believable school/home discovery-club environment, soft afternoon light, cream and deep teal with coral/amber accents, emotionally natural expressive faces. Recurring children: Meera, Indian girl age 11–12, brown skin, dark hair tied in a low ponytail, coral overshirt over cream shirt; Kabir, Indian boy age 11–12, brown skin, short curly dark hair, teal overshirt over cream shirt. A supportive Indian adult when the scene calls for one. Important action inside central 80% for mobile. No legible writing, letters, digits, logos or watermarks. No hacker graphics, floating shields/padlocks, holograms or binary decoration. Not a flat vector, not a UI screenshot, not a collage or multi-panel sheet. Use the reference only for art direction and child appearance; CREATE A NEW distinct composition and activity for this chapter. ",
+  "reference": "Initial class6-private-information illustration; original sources retained in the local generated-image archive.",
+  "chapters": [
+    {
+      "slug": "class6-private-information",
+      "alt": {
+        "en": "Children remove location and travel details from an artwork poster before sharing.",
+        "hi": "बच्चे चित्र वाले पोस्टर से जगह और यात्रा की जानकारी हटाते हैं।"
+      },
+      "scene": "At a wooden classroom table Meera covers a house-location card and bus-route card with opaque paper on a club poster; Kabir holds a clean artwork-only poster. A tablet is beside them. The contrast is purposeful creative sharing versus unnecessary private location details."
+    },
+    {
+      "slug": "class6-account-keys",
+      "alt": {
+        "en": "Meera helps Kabir keep an account secret private when a game message asks for access.",
+        "hi": "गेम मैसेज प्रवेश माँगे तो मीरा कबीर को अकाउंट रहस्य निजी रखने में मदद करती है।"
+      },
+      "scene": "Kabir sits at a laptop showing a friendly-looking game avatar requesting access through abstract message bubbles. He keeps a small closed personal notebook facing away, not handing it to the screen. Meera raises a calm stop hand and points toward a trusted teacher nearby. No actual passwords or codes shown."
+    },
+    {
+      "slug": "class6-shared-device",
+      "alt": {
+        "en": "A learner ends her session before handing a library computer to the next student.",
+        "hi": "विद्यार्थी अगले को लाइब्रेरी कंप्यूटर सौंपने से पहले अपना सेशन खत्म करती है।"
+      },
+      "scene": "In a school library computer corner, Meera has saved her artwork and ends her account session; the monitor shows a neutral blank sign-in silhouette, not private work. Kabir waits beside the next chair holding his own folder. Teacher gestures at a simple paper handover checklist made of blank boxes. Show an orderly handover, not two children sharing account credentials."
+    },
+    {
+      "slug": "class6-app-permissions",
+      "alt": {
+        "en": "The children compare a drawing app’s task with unrelated contacts access.",
+        "hi": "बच्चे ड्रॉइंग ऐप के काम और असंबंधित संपर्क प्रवेश को मिलाते हैं।"
+      },
+      "scene": "On a shared tablet Meera uses a leaf drawing canvas. A separate request panel shows an address-book pictogram; she pauses before approving it. Kabir compares a leaf sketch with the unnecessary contacts-card stack set aside on the table. Teacher gives guidance. Clear distinction between a drawing tool and unrelated address-book access."
+    },
+    {
+      "slug": "class6-link-detour",
+      "alt": {
+        "en": "Meera checks an unexpected sign-in page against the teacher’s established school route.",
+        "hi": "मीरा अचानक लॉगिन पेज को टीचर के पहले दिए स्कूल रास्ते से जाँचती है।"
+      },
+      "scene": "At a classroom laptop Meera pauses at an unfamiliar sign-in page made of blank rectangles. Kabir holds the teacher's old school-route reference card while a teacher points to an established school bookmark on a second screen. Show independent checking rather than typing into the questionable page. No legible addresses, browser text or real credentials."
+    },
+    {
+      "slug": "class6-kind-game-space",
+      "alt": {
+        "en": "A supportive teacher is available to help with game-chat boundaries and kind online behaviour.",
+        "hi": "मदद करने वाले टीचर गेम चैट की सीमाएँ और अच्छा ऑनलाइन व्यवहार समझाने के लिए उपलब्ध हैं।"
+      },
+      "scene": "Kabir steps away from a tablet game showing abstract insistent chat bubbles. Meera accompanies him to a calm supportive teacher at the classroom table, who listens at the child's eye level. Tablet is set down, no person is shamed or frightening imagery. The scene clearly communicates stopping unwanted contact and seeking trusted support."
+    },
+    {
+      "slug": "class6-backup-copy",
+      "alt": {
+        "en": "The children restore a project from a separate school backup and check the recovered drawing.",
+        "hi": "बच्चे अलग स्कूल बैकअप से प्रोजेक्ट वापस लाकर चित्र जाँचते हैं।"
+      },
+      "scene": "School makerspace desk: Kabir connects a small external school backup drive to a replacement laptop while Meera compares the recovered club drawing with a paper reference. Another closed unavailable laptop sits farther away. Teacher supervises. Make the separate backup drive and visible recovered artwork the focal story; no magical cloud graphics or data text."
+    },
+    {
+      "slug": "class6-club-safety-check",
+      "alt": {
+        "en": "The club checks an edited page, permissions and a shared device before publishing.",
+        "hi": "क्लब जारी करने से पहले बदला पेज, अनुमति और साझा डिवाइस जाँचता है।"
+      },
+      "scene": "Meera, Kabir and teacher conduct a final club-page review at a broad school table. A clean artwork poster, tablet permission panel with unrelated contact card set aside, and signed-out shared laptop sit in three clear groups. Teacher inspects a short paper checklist. Show several separate repairs being checked together, not one generic padlock symbol."
+    },
+    {
+      "slug": "class6-ai-or-instructions",
+      "alt": {
+        "en": "The club compares a fixed countdown timer with a picture sorter learned from examples.",
+        "hi": "क्लब तय गिनती टाइमर और उदाहरण से सीखे चित्र छँटाई साधन को मिलाता है।"
+      },
+      "scene": "On the classroom discovery table Meera demonstrates a simple mechanical countdown timer and a lamp operated by a fixed switch diagram, while Kabir groups labelled shape-picture cards beside a small classroom sorter display. A teacher compares these different mechanisms. No humanoid AI robot, no speech claiming all automation is AI, no numbers or text."
+    },
+    {
+      "slug": "class6-ai-label-cards",
+      "alt": {
+        "en": "The children label clear leaf drawings and place a smudged example aside for review.",
+        "hi": "बच्चे साफ़ पत्ता चित्रों को लेबल देते हैं और धुँधला उदाहरण जाँच के लिए अलग रखते हैं।"
+      },
+      "scene": "Over a classroom nature-study table Meera sorts clear round and pointed leaf drawings into two picture-labelled trays. Kabir holds one genuinely smudged ambiguous leaf card above a separate review tray, not forcing it into either group. Several visible clear cards establish the feature-label task. Warm tactile paper, close educational composition."
+    },
+    {
+      "slug": "class6-ai-spot-pattern",
+      "alt": {
+        "en": "The children compare red and green apples with pears to check a colour-only rule.",
+        "hi": "बच्चे केवल रंग वाला नियम जाँचने के लिए लाल और हरे सेब को नाशपाती से मिलाते हैं।"
+      },
+      "scene": "Classroom tabletop fruit-card investigation: red apple cards have been placed into an apple pictogram tray and green pear cards into a pear pictogram tray. Meera points to a green apple card wrongly sitting in the pear tray; Kabir compares it with a real-looking green apple illustration card. Teacher gestures toward its actual shape. Make the specific colour shortcut error clear; no text or numeric scores."
+    },
+    {
+      "slug": "class6-ai-fresh-test",
+      "alt": {
+        "en": "Separate envelopes keep learning cards apart from unseen checking examples.",
+        "hi": "अलग लिफ़ाफ़े सीखने के कार्ड और नए जाँच उदाहरण अलग रखते हैं।"
+      },
+      "scene": "Meera practises a paper shape sorter with cards from one open teal envelope. Kabir opens a physically separate amber envelope containing different unseen shape drawings for checking. Teacher observes and records one mismatch using simple coloured marks, no legible digits. Both distinct envelopes and non-identical card sets are central; no mixing train and test piles."
+    },
+    {
+      "slug": "class6-ai-missing-examples",
+      "alt": {
+        "en": "Small pale leaf drawings expose a gap in a sorter trained on large dark leaves.",
+        "hi": "छोटे हल्के पत्ते, बड़े गहरे पत्तों से सीखे साधन की कमी दिखाते हैं।"
+      },
+      "scene": "Nature-study classroom table: one learning tray contains only large dark leaf drawings. Meera adds a separate collection of small pale leaves of varied shapes while Kabir compares the visibly different groups and notes errors on paper using coloured marks. Show missing relevant object variation, not demographics or children's personal data."
+    },
+    {
+      "slug": "class6-ai-check-the-answer",
+      "alt": {
+        "en": "The children compare an assistant’s garden claim with the checked seed record.",
+        "hi": "बच्चे सहायक के बगीचे दावे को जाँचे बीज रिकॉर्ड से मिलाते हैं।"
+      },
+      "scene": "At a school garden desk, a tablet displays an abstract fluent assistant paragraph made of unreadable lines. Meera compares it against a physical seed packet and a teacher-checked paper record with simple pictorial seed marks; Kabir crosses out an unsupported paragraph on a separate draft using a pencil. A small seedling tray grounds the task. No exact counts or text embedded in the image."
+    },
+    {
+      "slug": "class6-ai-safe-request",
+      "alt": {
+        "en": "A recycling-poster request includes a clear task while leaving out a class contact list.",
+        "hi": "रीसाइक्लिंग पोस्टर की माँग में साफ़ काम है, क्लास संपर्क सूची बाहर है।"
+      },
+      "scene": "Meera and Kabir compose recycling-poster ideas on a classroom tablet. A paper with anonymous contact-row shapes is deliberately covered and moved away; the central workspace contains a recycling drawing and three blank slogan cards. Teacher reviews their draft. Focus on useful task context without sharing private class records; no legible prompts."
+    },
+    {
+      "slug": "class6-ai-club-review",
+      "alt": {
+        "en": "The club compares a fictional leaf helper with manual sorting under teacher review.",
+        "hi": "क्लब टीचर की जाँच में काल्पनिक पत्ता सहायक और हाथ की छँटाई मिलाता है।"
+      },
+      "scene": "Wide school discovery-table scene: Meera sorts leaf drawings by hand into trays, Kabir checks the same kind of synthetic cards against a tablet suggestion, and their teacher reviews a separate test envelope and small paper checklist. Show a practical comparison with people responsible, not an autonomous robot deciding about children."
+    },
+    {
+      "slug": "class6-break-the-task",
+      "alt": {
+        "en": "The children break a display project into sign locations, labels and a visitor check.",
+        "hi": "बच्चे प्रदर्शन प्रोजेक्ट को संकेत की जगह, लेबल और आगंतुक जाँच में बाँटते हैं।"
+      },
+      "scene": "Overhead-oblique view of a school club display planning table: Meera arranges a room map with three activity tables, Kabir lays out three distinct blank signboards and coloured paper task cards linked by simple string. In background a teacher tries a visitor route through the real room. Visual decomposition into practical jobs; no written labels or numbers."
+    },
+    {
+      "slug": "class6-pattern-rule",
+      "alt": {
+        "en": "A repeating ribbon and growing card towers show two different pattern rules.",
+        "hi": "दोहराता रिबन और बढ़ते कार्ड टावर अलग पैटर्न नियम दिखाते हैं।"
+      },
+      "scene": "Meera arranges a clearly repeated blue-yellow-yellow ribbon unit along a classroom table; Kabir builds a neat series of towers with increasing card levels nearby. Show the entire ribbon unit repeated cleanly and a visibly growing construction sequence. Both children explain by pointing to the unit and added pieces. No written sequences or numbers."
+    },
+    {
+      "slug": "class6-exact-instructions",
+      "alt": {
+        "en": "An open box, a card and a closing lid show why packing instructions need an exact order.",
+        "hi": "खुला डिब्बा, कार्ड और बंद होता ढक्कन पैकिंग निर्देश का सही क्रम दिखाते हैं।"
+      },
+      "scene": "Close classroom tabletop: Meera holds a hinged cardboard box open while Kabir places one blue card inside. Nearby a paper instruction strip uses only three simple action drawings for opening, inserting and closing. Show the necessary physical dependency clearly: the lid is open while the card enters. No real robot machinery or written commands."
+    },
+    {
+      "slug": "class6-if-then-desk",
+      "alt": {
+        "en": "The club routes page-count cards to two trays and sends an unreadable card for review.",
+        "hi": "क्लब पन्ने वाले कार्ड दो ट्रे में रखता है और न पढ़ने वाला कार्ड समीक्षा में भेजता है।"
+      },
+      "scene": "Meera and Kabir operate a tabletop paper branching sorter with a fork-shaped path leading to two colour-coded book trays. A damaged card with no readable count is held by the teacher over a separate review tray. Use stacks of page sheets as concrete quantities but no exact numeric claims, digits or text. The physical fork and separate unknown route are focal."
+    },
+    {
+      "slug": "class6-repeat-with-a-count",
+      "alt": {
+        "en": "A paper garden helper stamps one label per pot and stops when all items are complete.",
+        "hi": "कागज़ी बगीचा सहायक हर गमले का एक लेबल लगाकर पूरा होने पर रुकता है।"
+      },
+      "scene": "School garden activity desk: a row of small empty paper model pots each has exactly one matching stamped paper label, while Meera moves a counter token along a short unnumbered track. Kabir holds the stamp above the last unlabelled model pot; beyond it an empty tray shows no further work. Teacher supervises the paper-only counted activity. No actual powered watering robot."
+    },
+    {
+      "slug": "class6-grid-delivery",
+      "alt": {
+        "en": "The children trace a paper delivery route around blocked grid squares.",
+        "hi": "बच्चे बंद खानों से बचकर कागज़ी डिलीवरी रास्ता चलाते हैं।"
+      },
+      "scene": "Overhead-oblique classroom table with a clean three-by-three grid. A small toy delivery token starts at a corner, the centre square has a solid wooden obstacle, and a coloured string route follows outside neighbouring squares to the opposite corner. Meera traces one valid orthogonal step while Kabir checks the route. No diagonal route, no impossible jumps, no text or digits."
+    },
+    {
+      "slug": "class6-debug-the-plan",
+      "alt": {
+        "en": "The team compares expected and observed counter traces to repair the first wrong action.",
+        "hi": "टीम पहला गलत कदम सुधारने के लिए अपेक्षित और देखी गिनती के रिकॉर्ड मिलाती है।"
+      },
+      "scene": "Meera and Kabir inspect two parallel rows of physical counting-token piles on a classroom desk: one expected row and one observed row. The first mismatching pile is clearly highlighted by a small amber paper frame; a misplaced instruction card is lifted for correction, not merely the last result covered. Teacher points to the earliest mismatch. No numeric writing."
+    },
+    {
+      "slug": "class6-trail-builder",
+      "alt": {
+        "en": "A discovery trail visits a stamp station while avoiding an obstacle before reaching the finish.",
+        "hi": "डिस्कवरी रास्ता रुकावट से बचकर मुहर पड़ाव से अंत तक जाता है।"
+      },
+      "scene": "Large three-by-three paper trail grid at a school club table, a small wooden delivery token, one clear obstacle in the centre, a distinct stamp station at top right, finish flag at bottom right and start at top left. Meera routes a string along top edge to the stamp then right edge to finish. Kabir holds a spare obstacle to show a forthcoming changed-map test. No diagonal lines, text or digits."
+    },
+    {
+      "slug": "class6-fraud-free-reward",
+      "alt": {
+        "en": "A tempting game prize asks for an account secret, and the children pause before responding.",
+        "hi": "लुभावना गेम इनाम अकाउंट रहस्य माँगता है और बच्चे जवाब से पहले रुकते हैं।"
+      },
+      "scene": "On a classroom tablet a fictional game outfit prize is shown beside abstract message bubbles and an empty secret-entry shape. Kabir is tempted but pauses with his hand away from the screen; Meera points to the hidden demand area rather than the colourful reward picture. A teacher is accessible nearby. No actual password, readable text, payment action or scary villain."
+    },
+    {
+      "slug": "class6-fraud-hurry-secret",
+      "alt": {
+        "en": "A pressured message tries to rush a child and keep a trusted adult out of the conversation.",
+        "hi": "दबाव वाला मैसेज बच्चे को जल्दी कराकर भरोसेमंद बड़े से दूर रखने की कोशिश करता है।"
+      },
+      "scene": "Meera holds a tablet with an abstract urgent warning message while an ordinary small hourglass sits nearby suggesting time pressure. Instead of interacting with its bright button, she turns to a supportive teacher; Kabir brings a short paper note. Show calm independent help overcoming urgency and secrecy. No giant alarming numbers, no threat text, no frightening characters."
+    },
+    {
+      "slug": "class6-fraud-code-keeper",
+      "alt": {
+        "en": "The children distinguish a private sign-in code message from a public event reference.",
+        "hi": "बच्चे निजी लॉगिन कोड मैसेज और पब्लिक कार्यक्रम संदर्भ को अलग करते हैं।"
+      },
+      "scene": "At a club table Kabir keeps a phone with abstract private sign-in message facing toward himself while Meera compares a public exhibition poster containing only artwork with a separate message request on a tablet. A teacher calmly points to the phone's stated-purpose area represented by shapes. No readable codes, no digits; nobody forwards or displays a secret to another device."
+    },
+    {
+      "slug": "class6-fraud-familiar-name",
+      "alt": {
+        "en": "An adult checks a familiar-looking message using an already established family contact.",
+        "hi": "बड़े परिचित दिखते मैसेज को परिवार के पहले से ज्ञात संपर्क से जाँचते हैं।"
+      },
+      "scene": "In a warm home study corner Meera and Kabir show a caregiver an unfamiliar tablet message whose profile image resembles a family photo in a nearby frame. The caregiver uses a separate already-owned phone and old address book to check independently, without using the new message's supplied route. Subtle image impersonation story, no legible contacts or numbers."
+    },
+    {
+      "slug": "class6-fraud-shop-evidence",
+      "alt": {
+        "en": "The children and an adult compare a polished kit advert with an independent contents record.",
+        "hi": "बच्चे और बड़े सुंदर किट विज्ञापन को अलग सामग्री रिकॉर्ड से मिलाते हैं।"
+      },
+      "scene": "Classroom-family club planning desk: a tablet displays a polished fictional craft-kit advert with appealing product pictures, but a separate printed review card shows a visibly different set of kit items. Meera points to the missing component while Kabir and a trusted adult compare the two sources. No payment, prices, logos, legible reviews or fake guarantee symbols."
+    },
+    {
+      "slug": "class6-fraud-pop-up-help",
+      "alt": {
+        "en": "The learner steps away from an alarming repair advertisement and asks the school teacher.",
+        "hi": "विद्यार्थी डराने वाले सुधार विज्ञापन से हटकर स्कूल टीचर से पूछता है।"
+      },
+      "scene": "School computer desk: a browser page shows a clearly page-contained red repair advertisement using only abstract rectangles and a bright button. Kabir takes his hand away from the keyboard while Meera asks the nearby teacher for help; a familiar school support folder sits on the teacher's desk. No malware monsters, actual downloads, payment or remote-control session."
+    },
+    {
+      "slug": "class6-fraud-help-without-blame",
+      "alt": {
+        "en": "A worried child reports a mistake and receives calm support without exposing the secret again.",
+        "hi": "परेशान बच्चा गलती बताता है और रहस्य फिर खोले बिना शांत सहायता पाता है।"
+      },
+      "scene": "Supportive school discussion at eye level: worried Kabir tells Meera and a kindly teacher about a pretend account incident. Meera listens without blame, teacher helps write a brief note containing only abstract time and request symbols, and the tablet is set aside. No password digits or exposed message contents, no shaming, no promise of guaranteed recovery."
+    },
+    {
+      "slug": "class6-fraud-club-case",
+      "alt": {
+        "en": "The club connects a copied identity, reward, urgency and code demand before seeking trusted help.",
+        "hi": "क्लब नकल पहचान, इनाम, जल्दी और कोड माँग जोड़कर भरोसेमंद मदद लेता है।"
+      },
+      "scene": "Final classroom investigation table: Meera and Kabir compare an abstract teacher-photo message on a tablet with four separate paper clue cards showing a portrait, gift, hourglass and empty secret-entry shape. A real teacher beside them verifies using the familiar school laptop. Calm analytical teamwork, no accusations, arrows made of simple physical string, no text or digits."
+    }
+  ],
+  "refinements": {
+    "class6-ai-fresh-test": "A classroom shape-sorting activity. Meera works with round and triangular picture cards from a teal paper envelope. Kabir holds a clearly separate amber paper envelope with different round and triangular picture cards for a later check. The envelopes sit far apart on a wooden table. A teacher watches the two separate sets. Focus on physical envelopes and different drawings; no writing or numbers.",
+    "class6-club-safety-check": "Edit only the permission toggles on the tablet screen in this illustration. Every tablet permission toggle must be visibly OFF: a grey track with the white knob at the left. In particular the address-book/people/contacts icon row at the bottom must have a grey OFF toggle, never green or enabled. Keep the children, teacher, classroom, poster, lighting, checklist and all other elements exactly as they are. This school lesson teaches reviewing requests and refusing unnecessary access; do not add writing, numbers or new controls. Preserve landscape composition and art quality.",
+    "class6-if-then-desk": "At a school library activity desk Meera and Kabir sort anonymous book-shaped paper cards along a large fork-shaped tabletop path into two separate trays. A teacher holds a crumpled blank card above a third review tray marked only with a magnifying-glass picture. Show a conditional branch and a separate review route using physical paper objects. No written labels, digits or personal records.",
+    "class6-kind-game-space": "Use case: illustration-story. One premium landscape 16:9 warm cinematic stylised 3D animated-film still for an Indian school digital-safety lesson. An adult Indian woman teacher in her thirties, dark tied-back hair, modest cream kurta with a deep teal shawl, is seated at a sunlit classroom guidance desk. She smiles calmly and gestures towards a tablet resting flat on the desk showing a colourful block-building cooperative game with no text, no messages and no visible usernames. Beside it are an ordinary paper notebook, simple blank rule cards, pencils, and two empty student chairs. This image represents a trusted teacher available to help with game-chat boundaries and kind online behaviour. Only the single adult teacher appears in the image; no other people. Tactile wooden desk, leafy plants, blurred classroom shelves, warm afternoon light, cream/teal/coral accents, polished detailed storytelling, natural hands and face, central action safe for mobile cropping. No text, letters, digits, logos, watermark, fear, threats, violent elements or hacker graphics.",
+    "class6-debug-the-plan": "Make a precise correction to the highlighted card in this classroom counting-trace illustration. On the LOWER row, the THIRD card from the left has an amber frame and currently contains three red counting counters. Remove exactly one of those red counters so this highlighted lower card contains EXACTLY TWO clearly separate red counters. The upper card directly above it must keep THREE yellow counters. The first and second paired cards in both rows stay identical to their current matching counts. Keep all other people, hands, classroom, cards, piles, lighting and composition unchanged. This makes the amber frame mark the FIRST count disagreement between the expected upper trace and observed lower trace. No numbers, letters or new labels."
+  }
+}

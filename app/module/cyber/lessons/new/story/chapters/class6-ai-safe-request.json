@@ -1,0 +1,93 @@
+{
+  "duration": 104.292,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "1aae035b2a6f5599ea6380694c8a78544e7e81d4b462b4538b7b4479794d5a29",
+  "scenes": [
+    {
+      "id": "class6-ai-safe-request-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Kabir wants ideas for a recycling poster. His first request includes the class contact list, although the tool only needs to suggest short slogans. Meera rewrites the task using an invented club name and a clear limit on the output.",
+      "speech": "Kabir wants ideas for a recycling poster. His first request includes the class contact list, although the tool only needs to suggest short slogans. Meera rewrites the task using an invented club name and a clear limit on the output.",
+      "dialogue": "A clear task",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.808
+    },
+    {
+      "id": "class6-ai-safe-request-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A useful request describes the goal, relevant context and desired form. More detail can help only when it is appropriate. Passwords, addresses and private school records are not needed for general poster ideas and should not be placed in a request.",
+      "speech": "A useful request describes the goal, relevant context and desired form. More detail can help only when it is appropriate. Passwords, addresses and private school records are not needed for general poster ideas and should not be placed in a request.",
+      "dialogue": "Private details to omit",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.458,
+      "duration": 18.264
+    },
+    {
+      "id": "class6-ai-safe-request-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The team asks for three short fictional slogans in simple words. They inspect the output, check any factual claims and choose wording they can explain themselves. A tool suggestion does not remove the learner’s responsibility to follow school rules or acknowledge permitted assistance.",
+      "speech": "The team asks for three short fictional slogans in simple words. They inspect the output, check any factual claims and choose wording they can explain themselves. A tool suggestion does not remove the learner’s responsibility to follow school rules or acknowledge permitted assistance.",
+      "dialogue": "Human review",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 37.372,
+      "duration": 20.208
+    },
+    {
+      "id": "class6-ai-safe-request-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The task is three short recycling poster ideas. No student identity or contact information is needed to complete it. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The task is three short recycling poster ideas. No student identity or contact information is needed to complete it. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Which request is useful and privacy-aware?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 58.23,
+      "duration": 14.688
+    },
+    {
+      "id": "class6-ai-safe-request-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Ask for three short fictional recycling slogans in simple language. Leave out personal records and review the suggestions before choosing the final text.",
+      "speech": "Ask for three short fictional recycling slogans in simple language. Leave out personal records and review the suggestions before choosing the final text.",
+      "dialogue": "Omit secrets and personal records from requests.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 73.568,
+      "duration": 11.304
+    },
+    {
+      "id": "class6-ai-safe-request-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through a clear task, then private details to omit, then human review. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through a clear task, then private details to omit, then human review. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Which details help a request without identifying a real person?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 85.522,
+      "duration": 18.12
+    }
+  ]
+}

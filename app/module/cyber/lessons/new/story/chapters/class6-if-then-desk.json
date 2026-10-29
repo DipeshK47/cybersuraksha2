@@ -1,0 +1,93 @@
+{
+  "duration": 99.684,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "394011867e3ba0ffeaeb209cece3201faa662a9c273bd622f9e6856f962f449c",
+  "scenes": [
+    {
+      "id": "class6-if-then-desk-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "The club sorts reading cards by page count. Its stated rule is at least ten pages goes to the long tray; fewer than ten goes to the short tray. Meera writes the condition so another learner can apply it without guessing.",
+      "speech": "The club sorts reading cards by page count. Its stated rule is at least ten pages goes to the long tray; fewer than ten goes to the short tray. Meera writes the condition so another learner can apply it without guessing.",
+      "dialogue": "Conditions",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.368
+    },
+    {
+      "id": "class6-if-then-desk-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "An if/otherwise branch selects one action when a condition is true and another when it is false. Kabir handles nine and eleven easily, but ten needs careful reading. At least ten includes ten itself, so equality belongs with the long tray.",
+      "speech": "An if/otherwise branch selects one action when a condition is true and another when it is false. Kabir handles nine and eleven easily, but ten needs careful reading. At least ten includes ten itself, so equality belongs with the long tray.",
+      "dialogue": "Exact boundaries",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.018,
+      "duration": 18.048
+    },
+    {
+      "id": "class6-if-then-desk-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "A damaged card has no readable page count. Missing is not the same as zero or fewer than ten. The teacher supplies a separate review route. The team records the input, selected branch and reason, then tests the exact boundary before approving the sorter.",
+      "speech": "A damaged card has no readable page count. Missing is not the same as zero or fewer than ten. The teacher supplies a separate review route. The team records the input, selected branch and reason, then tests the exact boundary before approving the sorter.",
+      "dialogue": "Missing inputs",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 35.716,
+      "duration": 19.896
+    },
+    {
+      "id": "class6-if-then-desk-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The written rule says at least ten pages means long. The page count is known and equals ten exactly. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The written rule says at least ten pages means long. The page count is known and equals ten exactly. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Where does a ten-page card go?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 56.262,
+      "duration": 13.416
+    },
+    {
+      "id": "class6-if-then-desk-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Ten belongs in the long tray because at least includes the boundary value. Testing only nine and eleven would miss this important equality case.",
+      "speech": "Ten belongs in the long tray because at least includes the boundary value. Testing only nine and eleven would miss this important equality case.",
+      "dialogue": "Include equality when the rule says at least.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 70.328,
+      "duration": 10.536
+    },
+    {
+      "id": "class6-if-then-desk-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through conditions, then exact boundaries, then missing inputs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through conditions, then exact boundaries, then missing inputs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why should a missing value not silently become zero?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 81.514,
+      "duration": 17.52
+    }
+  ]
+}

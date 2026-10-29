@@ -15,6 +15,9 @@ import {
   type CurriculumStrand,
 } from "../../../data/curriculum";
 import { getPlayableModule } from "../../../data/module-registry";
+import { getClass6Artwork } from "../../../data/class6/artwork";
+import { getClass7Artwork } from "../../../data/class7/artwork";
+import artworkStyles from "../../../module/cyber/lessons/class6/chapter-artwork.module.css";
 
 /**
  * Library for one subject. It supports textbook chapters and interactive
@@ -131,8 +134,10 @@ export default async function SubjectPage({
             <div className="moduleCardGrid">
               {subject.modules?.map((module, index) => {
                 const playable = getPlayableModule(grade.grade, module.title);
+                const artwork = playable && (grade.grade === 6 || grade.grade === 7) ? (grade.grade === 6 ? getClass6Artwork : getClass7Artwork)(playable.href.split('/').at(-1)!) : undefined;
                 const body = (
                   <>
+                    {artwork ? <img className={artworkStyles.cover} src={artwork.preview} width={640} height={360} loading="lazy" decoding="async" alt={artwork.alt.en} /> : null}
                     <span className="moduleCardNumber">
                       W{firstWeek + index}
                     </span>
@@ -152,7 +157,7 @@ export default async function SubjectPage({
 
                 return playable ? (
                   <Link
-                    className="moduleNameCard moduleNameCardPlayable"
+                    className={`moduleNameCard moduleNameCardPlayable${artwork ? ` ${artworkStyles.libraryCard}` : ''}`}
                     href={`${playable.href}${roleQuery}&grade=${grade.grade}`}
                     key={module.title}
                   >

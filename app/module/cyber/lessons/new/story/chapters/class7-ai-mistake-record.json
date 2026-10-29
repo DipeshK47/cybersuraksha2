@@ -1,0 +1,93 @@
+{
+  "duration": 98.556,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "fa00cbcc2dab2144e39d1f71ec182a5191d2cd8fb06bca81ac50328ca4cd3421",
+  "scenes": [
+    {
+      "id": "class7-ai-mistake-record-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "Tara’s classroom helper correctly sorts four of six invented picture cards. Neel writes four successes on the display and leaves the other cards in a drawer. The teacher asks how a visitor could understand that report without knowing how many checks were attempted.",
+      "speech": "Tara’s classroom helper correctly sorts four of six invented picture cards. Neel writes four successes on the display and leaves the other cards in a drawer. The teacher asks how a visitor could understand that report without knowing how many checks were attempted.",
+      "dialogue": "Expected and predicted",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.264
+    },
+    {
+      "id": "class7-ai-mistake-record-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "A useful mistake record keeps the checked label beside the prediction for every card. Agreement is a correct result; disagreement is an error to investigate. The total includes both kinds. Removing hard cases after seeing the outcome changes the story that the evidence tells.",
+      "speech": "A useful mistake record keeps the checked label beside the prediction for every card. Agreement is a correct result; disagreement is an error to investigate. The total includes both kinds. Removing hard cases after seeing the outcome changes the story that the evidence tells.",
+      "dialogue": "Count every check",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.914,
+      "duration": 21.072
+    },
+    {
+      "id": "class7-ai-mistake-record-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The team reports four correct and two incorrect out of six, then describes the mistaken cards. It proposes a new check rather than promising perfect future performance. Even a run with no mistakes would describe only the cases tested, not every possible drawing the helper might encounter.",
+      "speech": "The team reports four correct and two incorrect out of six, then describes the mistaken cards. It proposes a new check rather than promising perfect future performance. Even a run with no mistakes would describe only the cases tested, not every possible drawing the helper might encounter.",
+      "dialogue": "Report the limits",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 40.636,
+      "duration": 20.496
+    },
+    {
+      "id": "class7-ai-mistake-record-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Six checks were run: four correct and two incorrect. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Six checks were run: four correct and two incorrect. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Which report matches the record?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 61.782,
+      "duration": 9.672
+    },
+    {
+      "id": "class7-ai-mistake-record-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Report four correct and two incorrect out of six, with the remaining limitations. A success count without the total hides relevant evidence.",
+      "speech": "Report four correct and two incorrect out of six, with the remaining limitations. A success count without the total hides relevant evidence.",
+      "dialogue": "Report correct, incorrect and total counts consistently.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 72.104,
+      "duration": 10.176
+    },
+    {
+      "id": "class7-ai-mistake-record-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate expected and predicted, then count every check, then report the limits. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate expected and predicted, then count every check, then report the limits. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why must a success count include how many checks were attempted?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 82.93,
+      "duration": 14.976
+    }
+  ]
+}

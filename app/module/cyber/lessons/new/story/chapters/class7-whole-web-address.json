@@ -1,0 +1,93 @@
+{
+  "duration": 102.348,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c5575ea0c845aea73b0fd96aac98aaea428c3da91deb32abbe6b816d9e00320e",
+  "scenes": [
+    {
+      "id": "class7-whole-web-address-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "A message says the makers-fair guide has moved. Its page repeats the school colours and puts the familiar name at the start of a longer host. Tara compares the complete address with the teacher’s printed reference instead of stopping at the first matching word.",
+      "speech": "A message says the makers-fair guide has moved. Its page repeats the school colours and puts the familiar name at the start of a longer host. Tara compares the complete address with the teacher’s printed reference instead of stopping at the first matching word.",
+      "dialogue": "The complete host",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.88
+    },
+    {
+      "id": "class7-whole-web-address-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "A host is the address part identifying the site being contacted. Added endings or changed words can point somewhere different. The class uses reserved example names on paper only, so nobody needs to open a suspicious page or enter a password to complete the comparison.",
+      "speech": "A host is the address part identifying the site being contacted. Added endings or changed words can point somewhere different. The class uses reserved example names on paper only, so nobody needs to open a suspicious page or enter a password to complete the comparison.",
+      "dialogue": "Connection versus trust",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.53,
+      "duration": 20.184
+    },
+    {
+      "id": "class7-whole-web-address-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "A secure connection protects data travelling to the selected site; it does not confirm every claim made there. Neel returns through the established school bookmark and asks the teacher about the supposed change. Repeating the message’s own link would not be an independent check.",
+      "speech": "A secure connection protects data travelling to the selected site; it does not confirm every claim made there. Neel returns through the established school bookmark and asks the teacher about the supposed change. Repeating the message’s own link would not be an independent check.",
+      "dialogue": "A known independent route",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.364,
+      "duration": 19.608
+    },
+    {
+      "id": "class7-whole-web-address-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The host differs from the teacher’s exact reference. No change was announced through the known school channel. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The host differs from the teacher’s exact reference. No change was announced through the known school channel. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What should Tara do with the longer host?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 59.622,
+      "duration": 13.32
+    },
+    {
+      "id": "class7-whole-web-address-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Pause and return through the established school route, then ask about the change. A familiar prefix and connection icon do not establish that the new request is legitimate.",
+      "speech": "Pause and return through the established school route, then ask about the change. A familiar prefix and connection icon do not establish that the new request is legitimate.",
+      "dialogue": "Explain why encrypted connection does not prove an honest claim.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 73.592,
+      "duration": 12.264
+    },
+    {
+      "id": "class7-whole-web-address-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate the complete host, then connection versus trust, then a known independent route. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate the complete host, then connection versus trust, then a known independent route. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "What does a secure connection fail to prove about a message?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 86.506,
+      "duration": 15.192
+    }
+  ]
+}

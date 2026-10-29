@@ -1,0 +1,93 @@
+{
+  "duration": 100.044,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "1e8c1d3bd419dacc669853517d3fbe36e6dfc7dbcd673c7dd1c17b04ee19d1c1",
+  "scenes": [
+    {
+      "id": "class7-digital-trail-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "Tara and Neel are preparing a makers-fair guide in the Connection Lab. One photo shows a club badge; another shows a familiar pickup landmark. Neither includes a home address, yet together they reveal a learner’s regular route.",
+      "speech": "Tara and Neel are preparing a makers-fair guide in the Connection Lab. One photo shows a club badge; another shows a familiar pickup landmark. Neither includes a home address, yet together they reveal a learner’s regular route.",
+      "dialogue": "Clues in combination",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.8
+    },
+    {
+      "id": "class7-digital-trail-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Privacy checks need the whole collection, not just each post alone. A detail that seems ordinary can become revealing when joined to another clue. The team also asks whether everyone pictured agreed to this particular public use of the image.",
+      "speech": "Privacy checks need the whole collection, not just each post alone. A detail that seems ordinary can become revealing when joined to another clue. The team also asks whether everyone pictured agreed to this particular public use of the image.",
+      "dialogue": "Consent and audience",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 17.45,
+      "duration": 17.952
+    },
+    {
+      "id": "class7-digital-trail-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "Consent and audience answer different questions. Permission to photograph a classroom activity does not automatically cover every later publication. Tara makes an artwork-only version, removes the travel clue and asks the teacher to review the intended audience and permissions again.",
+      "speech": "Consent and audience answer different questions. Permission to photograph a classroom activity does not automatically cover every later publication. Tara makes an artwork-only version, removes the travel clue and asks the teacher to review the intended audience and permissions again.",
+      "dialogue": "A revised public guide",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 36.052,
+      "duration": 19.896
+    },
+    {
+      "id": "class7-digital-trail-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The guide needs project artwork. The travel landmark is unnecessary, and consent for the new public audience has not been checked. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The guide needs project artwork. The travel landmark is unnecessary, and consent for the new public audience has not been checked. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Which version belongs in the public guide?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 56.598,
+      "duration": 14.976
+    },
+    {
+      "id": "class7-digital-trail-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Use the artwork-only version and obtain the teacher’s review of audience and consent. Removing a name alone would leave the combined location clues unresolved.",
+      "speech": "Use the artwork-only version and obtain the teacher’s review of audience and consent. Removing a name alone would leave the combined location clues unresolved.",
+      "dialogue": "Check consent separately from the sharing audience.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 72.224,
+      "duration": 11.4
+    },
+    {
+      "id": "class7-digital-trail-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate clues in combination, then consent and audience, then a revised public guide. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate clues in combination, then consent and audience, then a revised public guide. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why can two ordinary details become private when combined?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 84.274,
+      "duration": 15.12
+    }
+  ]
+}

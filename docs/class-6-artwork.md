@@ -1,0 +1,11 @@
+# Class 6 chapter artwork
+
+The course has 32 original chapter-specific illustrations generated with the built-in ImageGen tool. They follow the warm cinematic school-story style of the senior courses, with Class 6 children, purposeful objects and supportive adults. Each image depicts its chapter’s setting or decision; it does not supply the scored answers.
+
+Final files are in `public/cyber-missions/class-6/`. Every chapter has a 1400px WebP illustration and a separate 640px preview under `previews/`. Full illustrations total approximately 4.02 MiB; previews total 1.18 MiB. Conversion uses WebP quality 82 for full images and 76 for previews. The project does not request images from an external service during lessons.
+
+The illustrations appear in each chapter’s story, practical work and subject-library card. Responsive sources use the smaller files on narrow screens. The story layout displays the chapter scene instead of the former unrelated portrait and generic classroom drawing. Alt descriptions are authored in English/Hindi; the image itself has no embedded teaching text that would need translation. Exact rules, numbers, source records and feedback remain accessible HTML.
+
+The generation specification and per-chapter scenes are in [class-6-artwork-prompts.json](class-6-artwork-prompts.json); final hashes and sizes are in [class-6-artwork-manifest.json](class-6-artwork-manifest.json). Refinements include keeping unapproved permissions visibly off and making the first count mismatch visible in the debugging scene. The private-information image was used as the character/style reference. Original PNGs remain in the local generated-image archive; deployed assets are self-contained WebPs in this repository.
+
+Asset checks require all 32 chapter identities, distinct image hashes, valid local full/preview files and bilingual descriptions. The browser delivery runner is `tests/class-6-browser-qa.py`: it checks all images on desktop/mobile, previews, keyboard focus and translated descriptions, then runs the complete learner/LMS regression. Use a disposable localhost server with `CYBERSURAKSHA_EPHEMERAL_WORKERS=1`, the supported Node runtime in `NODE24`, and `BASE_URL` set to that server.

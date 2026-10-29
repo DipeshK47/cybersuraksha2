@@ -1,0 +1,93 @@
+{
+  "duration": 92.436,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5c2e61fec513a9647dbc4dd3c8d7259640ccd55d97fe679ea75531428a27d7e6",
+  "scenes": [
+    {
+      "id": "class6-private-information-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Meera and Kabir are making a poster for the discovery club. Their drawing is ready, but the draft also includes a home address. They ask who really needs that detail before putting the poster online.",
+      "speech": "Meera and Kabir are making a poster for the discovery club. Their drawing is ready, but the draft also includes a home address. They ask who really needs that detail before putting the poster online.",
+      "dialogue": "Personal details",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 14.88
+    },
+    {
+      "id": "class6-private-information-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A public post may reach people outside the class. A nickname does not hide a school badge, location or daily travel time. Several small clues together can reveal more than the writer intended to share.",
+      "speech": "A public post may reach people outside the class. A nickname does not hide a school badge, location or daily travel time. Several small clues together can reveal more than the writer intended to share.",
+      "dialogue": "Audience choices",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 15.53,
+      "duration": 15.504
+    },
+    {
+      "id": "class6-private-information-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The team separates the event title from contact details. A teacher can share a school contact through an approved channel. Before posting, they inspect the audience setting and the whole picture, including writing in the background.",
+      "speech": "The team separates the event title from contact details. A teacher can share a school contact through an approved channel. Before posting, they inspect the audience setting and the whole picture, including writing in the background.",
+      "dialogue": "A safer poster",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 31.684,
+      "duration": 16.68
+    },
+    {
+      "id": "class6-private-information-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The club needs to show its artwork. The home address and daily bus time are unrelated to that purpose. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The club needs to show its artwork. The home address and daily bus time are unrelated to that purpose. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Which version can go on the public club page?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 49.014,
+      "duration": 13.344
+    },
+    {
+      "id": "class6-private-information-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Show the artwork and club title; leave out the home address and travel details. The teacher checks the audience before publication.",
+      "speech": "Show the artwork and club title; leave out the home address and travel details. The teacher checks the audience before publication.",
+      "dialogue": "Match information to its intended audience.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 63.008,
+      "duration": 10.032
+    },
+    {
+      "id": "class6-private-information-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through personal details, then audience choices, then a safer poster. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through personal details, then audience choices, then a safer poster. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "How can two harmless-looking clues reveal a routine?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 73.69,
+      "duration": 18.096
+    }
+  ]
+}

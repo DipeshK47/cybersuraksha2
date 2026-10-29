@@ -5,6 +5,8 @@ import { class11Subjects } from "./class-11-curriculum";
 import { class8Subjects } from "./class-8-curriculum";
 import { class9Subjects } from "./class-9-curriculum";
 import { class10Subjects } from "./class-10-curriculum";
+import { class6Subjects } from "./class-6-curriculum";
+import { class7Subjects } from "./class-7-curriculum";
 
 export type CurriculumStrand =
   | "Computational Thinking"
@@ -520,6 +522,8 @@ export const curriculum: GradeCurriculum[] = [
     .filter((entry) => entry.grade >= 3 && entry.grade <= 7)
     .map((entry) => {
       const grade = entry.grade + 3;
+      if (grade === 6) return { ...entry, grade, title: "Discovery Club", description: "Build safe digital habits and solve everyday problems through 32 original chapters.", modules: [], subjects: class6Subjects };
+      if (grade === 7) return { ...entry, grade, title: "Connection Lab", description: "Connect ideas, test evidence and explain decisions through 32 original chapters.", modules: [], subjects: class7Subjects };
       if (grade === 8) return { ...entry, grade, title: "Future Lab", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
       if (grade === 9) return { ...entry, grade, title: "Signal Studio", description: "Test systems, explain decisions and recognise pressure through 32 original chapters.", modules: [], subjects: class9Subjects };
       const otherSubjects = sourceCurriculum

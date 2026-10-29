@@ -1,0 +1,93 @@
+{
+  "duration": 106.62,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "bd536c62d287d5c6a4e8678d053cba6f73c702fa28ce3cc25dd931c8b3ac1cf0",
+  "scenes": [
+    {
+      "id": "class6-ai-missing-examples-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "The club sorter has seen only large dark leaf drawings. Small pale drawings appear in the next activity, and it makes more mistakes. Meera asks whether the learning set represented the kinds of drawings the class now expects it to handle.",
+      "speech": "The club sorter has seen only large dark leaf drawings. Small pale drawings appear in the next activity, and it makes more mistakes. Meera asks whether the learning set represented the kinds of drawings the class now expects it to handle.",
+      "dialogue": "Example coverage",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.712
+    },
+    {
+      "id": "class6-ai-missing-examples-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A model cannot be assumed to work equally well on examples missing from its preparation. The team counts mistakes for each supplied group and keeps the group totals beside them. A single overall score can hide a problem with one kind of input.",
+      "speech": "A model cannot be assumed to work equally well on examples missing from its preparation. The team counts mistakes for each supplied group and keeps the group totals beside them. A single overall score can hide a problem with one kind of input.",
+      "dialogue": "Different test groups",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.362,
+      "duration": 17.784
+    },
+    {
+      "id": "class6-ai-missing-examples-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "They add relevant illustrated objects with varied sizes and shades, then plan another separate check. They do not collect faces, names or addresses. Better coverage is about the task’s examples, while claims about people need much more care than this small classroom activity can provide.",
+      "speech": "They add relevant illustrated objects with varied sizes and shades, then plan another separate check. They do not collect faces, names or addresses. Better coverage is about the task’s examples, while claims about people need much more care than this small classroom activity can provide.",
+      "dialogue": "A better collection plan",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 36.796,
+      "duration": 21.264
+    },
+    {
+      "id": "class6-ai-missing-examples-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The learning set has large dark leaves only. The task also includes small pale leaf drawings, but no personal information is needed. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The learning set has large dark leaves only. The task also includes small pale leaf drawings, but no personal information is needed. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "What should the club add next?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 58.71,
+      "duration": 15.48
+    },
+    {
+      "id": "class6-ai-missing-examples-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Add checked small pale drawings and other relevant variations, then test separately. This addresses the missing examples without gathering unrelated private information.",
+      "speech": "Add checked small pale drawings and other relevant variations, then test separately. This addresses the missing examples without gathering unrelated private information.",
+      "dialogue": "Compare errors with group totals visible.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 74.84,
+      "duration": 12.048
+    },
+    {
+      "id": "class6-ai-missing-examples-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through example coverage, then different test groups, then a better collection plan. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through example coverage, then different test groups, then a better collection plan. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why can a good overall score hide a weak group of examples?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 87.538,
+      "duration": 18.432
+    }
+  ]
+}

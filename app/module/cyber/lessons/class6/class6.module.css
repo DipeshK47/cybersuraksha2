@@ -1,0 +1,6 @@
+.edition [data-new-mission],
+.edition [data-mission-ready],
+.edition [data-mission-complete] { --practice-scene:none !important; background:#f7f5ed; }
+.edition [data-new-mission] > div:first-child p { color:#355b60; opacity:1; }
+.edition [data-story-stage] { grid-template-columns:minmax(0,1fr); }
+.edition [data-story-actor] { display:none; }

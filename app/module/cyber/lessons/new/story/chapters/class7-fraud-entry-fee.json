@@ -1,0 +1,93 @@
+{
+  "duration": 101.58,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "7fac765592ec0a9897ca8259f7847c09680dc407cd10ebf23d1560d9338383f8",
+  "scenes": [
+    {
+      "id": "class7-fraud-entry-fee-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab receives a fictional offer of a free art kit. Below the colourful prize picture, the message asks for a small entry fee and says the offer must be kept secret. Tara reads the requested action before deciding whether the reward matters.",
+      "speech": "The Connection Lab receives a fictional offer of a free art kit. Below the colourful prize picture, the message asks for a small entry fee and says the offer must be kept secret. Tara reads the requested action before deciding whether the reward matters.",
+      "dialogue": "Promise and demand",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.48
+    },
+    {
+      "id": "class7-fraud-entry-fee-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Neel thinks a small payment might be a harmless way to test the claim. The teacher explains that making the requested payment is already acting on an unverified demand. A short deadline and a secrecy request increase pressure; neither proves that the sender has authority to offer anything.",
+      "speech": "Neel thinks a small payment might be a harmless way to test the claim. The teacher explains that making the requested payment is already acting on an unverified demand. A short deadline and a secrecy request increase pressure; neither proves that the sender has authority to offer anything.",
+      "dialogue": "Pressure tactics",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 19.13,
+      "duration": 20.784
+    },
+    {
+      "id": "class7-fraud-entry-fee-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The team pauses, keeps a minimal record and asks a trusted adult to check through an already known school contact. It does not use a new contact supplied by the same message as independent proof. Learners use pretend tokens only; real purchase decisions belong with responsible adults.",
+      "speech": "The team pauses, keeps a minimal record and asks a trusted adult to check through an already known school contact. It does not use a new contact supplied by the same message as independent proof. Learners use pretend tokens only; real purchase decisions belong with responsible adults.",
+      "dialogue": "Independent checking",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 40.564,
+      "duration": 21.36
+    },
+    {
+      "id": "class7-fraud-entry-fee-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The unverified message promises a free kit but demands payment and secrecy. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The unverified message promises a free kit but demands payment and secrecy. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Should the club pay a small fee to test the offer?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 62.574,
+      "duration": 11.376
+    },
+    {
+      "id": "class7-fraud-entry-fee-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Pause and verify through a trusted adult using a known route. Paying even a small amount would follow the unverified demand rather than independently check it.",
+      "speech": "Pause and verify through a trusted adult using a known route. Paying even a small amount would follow the unverified demand rather than independently check it.",
+      "dialogue": "Identify urgency and secrecy as reasons to pause.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 74.6,
+      "duration": 11.256
+    },
+    {
+      "id": "class7-fraud-entry-fee-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate promise and demand, then pressure tactics, then independent checking. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate promise and demand, then pressure tactics, then independent checking. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why is paying a small amount different from independently verifying a claim?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 86.506,
+      "duration": 14.424
+    }
+  ]
+}

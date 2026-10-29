@@ -1,0 +1,295 @@
+{
+  "generator": "Built-in image_gen",
+  "style": "Use case: illustration-story. Create ONE original landscape 16:9 premium warm cinematic stylised 3D animated-film still for Indian Class 7 learners aged 12–13, matching the supplied reference's tactile materials, rich school setting and polished educational storybook craft. NEW recurring Class 7 students: Tara, Indian girl age 12–13, medium brown skin, long dark hair in a single braid, mustard-yellow overshirt over cream tee; Neel, Indian boy age 12–13, medium brown skin, short wavy dark hair, navy overshirt over pale teal tee. Do not copy the younger children or their coral/teal outfits from the reference. Supportive adult Indian teacher/caregiver as the scene requires. Warm afternoon light, natural expressive faces and hands, tactile wood and paper, cream/teal/amber palette. All important action in central 80% so mobile can show it. No readable writing, letters, digits, logos, watermarks, real credentials, payment details, floating cyber symbols, hacker graphics, holograms or scary imagery. Not a flat vector or collage. Screens show abstract pictograms and shapes only; teaching labels and exact values will be separate accessible HTML. Use the reference for style only, and create a DISTINCT composition and objects for this chapter. ",
+  "reference": "Class 6 private-information artwork, used only for the established illustration style.",
+  "chapters": [
+    {
+      "slug": "class7-digital-trail",
+      "title": "Your digital trail connects",
+      "alt": {
+        "en": "The students compare small clues in separate photos before sharing a public club guide.",
+        "hi": "विद्यार्थी पब्लिक क्लब गाइड में डालने से पहले अलग तस्वीरों के छोटे संकेत मिलाते हैं।"
+      },
+      "scene": "Tara compares a harmless-looking club artwork photo with a second paper photo showing a school-route landmark. Neel notices that the two separate clues together reveal a routine, so they set the second photo aside before sharing. A teacher reviews the cleaned guide. No addresses or identifying text."
+    },
+    {
+      "slug": "class7-sign-in-and-recovery",
+      "title": "Stronger sign-in, safer recovery",
+      "alt": {
+        "en": "Tara and Neel review separate sign-in and recovery safeguards with their teacher.",
+        "hi": "तारा और नील टीचर के साथ लॉगिन और रिकवरी के अलग सुरक्षा उपाय जाँचते हैं।"
+      },
+      "scene": "A school laptop and separate phone show abstract sign-in confirmation shapes. Tara keeps an opaque closed recovery envelope in a separate teacher-approved drawer while Neel checks the official account settings with an adult. No actual credentials, codes, numbers or approval messages shown as text."
+    },
+    {
+      "slug": "class7-access-for-the-job",
+      "title": "Access for the job",
+      "alt": {
+        "en": "The club gives readers and editors different access to shared work.",
+        "hi": "क्लब साझा काम पढ़ने और बदलने वालों को अलग प्रवेश देता है।"
+      },
+      "scene": "A teacher and the students arrange physical folder cards and role cards on a wooden table: one learner reads a printed draft, a second edits a working copy, while the original master folder remains with the teacher. Show task-limited access and distinct roles, not everyone holding the same account key."
+    },
+    {
+      "slug": "class7-whole-web-address",
+      "title": "Check the whole web address",
+      "alt": {
+        "en": "The students compare an unexpected page with a teacher-provided reference route.",
+        "hi": "विद्यार्थी अचानक मिले पेज को टीचर के दिए संदर्भ रास्ते से मिलाते हैं।"
+      },
+      "scene": "At a school laptop Tara pauses at a copied-looking page, while Neel places a physical reference card next to it and the teacher opens the established school bookmark on a separate tablet. Addresses are abstract unreadable lines. The two independently sourced routes are clear; no entered password."
+    },
+    {
+      "slug": "class7-before-the-download",
+      "title": "Before the download",
+      "alt": {
+        "en": "The class checks a file’s source and purpose before allowing a download.",
+        "hi": "क्लास डाउनलोड की अनुमति से पहले फ़ाइल का स्रोत और मकसद जाँचती है।"
+      },
+      "scene": "A laptop shows a tempting craft-tool download as an abstract file tile. Tara stops her hand before clicking, while Neel compares it with an approved school resource folder held by a teacher. Paper file cards with simple document versus application pictograms distinguish purposes. No real executable names or readable links."
+    },
+    {
+      "slug": "class7-unfamiliar-session",
+      "title": "The unfamiliar account session",
+      "alt": {
+        "en": "A teacher helps the learners review an unfamiliar session without inventing who used it.",
+        "hi": "टीचर अनजान सेशन की जाँच में मदद करते हैं; विद्यार्थी इस्तेमाल करने वाले का नाम नहीं गढ़ते।"
+      },
+      "scene": "The teacher helps Tara and Neel review a laptop account-session panel made of anonymous device silhouettes. One unfamiliar device card is separated for review; a known shared library computer is visible behind them. Calm investigation and ending unneeded access, no accusation or frightening hacker."
+    },
+    {
+      "slug": "class7-copies-and-versions",
+      "title": "Copies and versions",
+      "alt": {
+        "en": "Two saved project versions and a separate backup support a checked recovery.",
+        "hi": "प्रोजेक्ट के दो सेव रूप और अलग बैकअप जाँचकर काम वापस लाने में मदद करते हैं।"
+      },
+      "scene": "Tara compares an earlier and a newer craft-guide drawing on two physical draft cards while Neel connects a separate backup drive to a school laptop. The recovered version is opened and compared against the teacher's paper reference; no file deletion or exact timestamps."
+    },
+    {
+      "slug": "class7-publish-the-guide",
+      "title": "Publish the club guide safely",
+      "alt": {
+        "en": "The team reviews permission, audience, source and recovery checks before publishing a guide.",
+        "hi": "टीम गाइड जारी करने से पहले अनुमति, दर्शक, स्रोत और रिकवरी की जाँच करती है।"
+      },
+      "scene": "A final school makers-fair guide review: Tara holds a cleaned artwork page, Neel checks a sharing-role board and a separate backup drive, teacher confirms consent with blank paper checkboxes. A photo card awaiting consent stays apart from the final pile. Purposeful complete release review, no secrets displayed."
+    },
+    {
+      "slug": "class7-ai-choose-a-helper",
+      "title": "Choose the right kind of helper",
+      "alt": {
+        "en": "The club compares a fixed rule, manual method and learned sorter for different tasks.",
+        "hi": "क्लब अलग काम के लिए तय नियम, हाथ का तरीका और सीखा छँटाई साधन मिलाता है।"
+      },
+      "scene": "Tara uses a simple fixed-rule paper checklist, Neel compares object example cards with a tablet sorter suggestion, and the teacher points between a manual tray and the proposed tool. Same measurable goal, multiple approaches; no humanoid AI robot or magical symbols."
+    },
+    {
+      "slug": "class7-ai-data-table",
+      "title": "Build a useful data table",
+      "alt": {
+        "en": "The students clean a fictional object table and set conflicting records aside.",
+        "hi": "विद्यार्थी काल्पनिक चीज़ों की तालिका साफ़ करते हैं और अलग दावे वाले रिकॉर्ड जाँच के लिए रखते हैं।"
+      },
+      "scene": "On a classroom desk Tara arranges anonymous material-object cards in a clear table of feature columns and picture labels. Neel separates two duplicate cards with conflicting labels into a review tray. Teacher removes an unrelated personal-contact card from the learning set. No actual names or text."
+    },
+    {
+      "slug": "class7-ai-train-the-sorter",
+      "title": "Train a tiny sorter",
+      "alt": {
+        "en": "The class uses short and long paper examples to test a visible classroom model.",
+        "hi": "क्लास छोटे और लंबे कागज़ के उदाहरण से दिखने वाला क्लास मॉडल जाँचती है।"
+      },
+      "scene": "Tara selects short and long paper strips as learning examples in two trays. Neel tests different strips held in a separate envelope against a tablet showing only simple length-based predicted groups. The teacher compares both groups, clearly a small physical learning activity with no real personal data."
+    },
+    {
+      "slug": "class7-ai-mistake-record",
+      "title": "Read the mistake record",
+      "alt": {
+        "en": "A prediction board keeps both successful and mistaken outcomes visible.",
+        "hi": "अनुमान बोर्ड पर सही और गलत दोनों नतीजे दिखते हैं।"
+      },
+      "scene": "A school tabletop comparison board pairs object drawings with prediction cards. Tara places a green token by a matching pair and Neel frames one mismatching pair with an amber card. Teacher keeps every record on the board rather than hiding errors. No embedded counts, percentages or numeric scores."
+    },
+    {
+      "slug": "class7-ai-changing-picture",
+      "title": "A picture changes, the object stays",
+      "alt": {
+        "en": "The same object is checked against different backgrounds and lighting.",
+        "hi": "एक ही चीज़ अलग पृष्ठभूमि और रोशनी में जाँची जाती है।"
+      },
+      "scene": "Tara presents the same wooden toy leaf against a pale background and Neel against a darker one; a desk lamp changes illumination while the object itself remains the same. Teacher compares the two illustrated photo cards with a tablet classifier. Clearly test background shortcuts, no face photography."
+    },
+    {
+      "slug": "class7-ai-recommendation-loop",
+      "title": "Why did it recommend that?",
+      "alt": {
+        "en": "The learners inspect how repeated choices can narrow a fictional recommendation feed.",
+        "hi": "विद्यार्थी देखते हैं कि बार-बार वही चुनने से काल्पनिक सुझाव फ़ीड कैसे सीमित हो सकती है।"
+      },
+      "scene": "Tara's tablet feed contains repeated illustrated building-game cards while Neel lays out a more varied set of nature, craft and reading cards beside it. A teacher helps compare the learner's prior choice tokens with the repeated feed. No readable social-media branding or like counts."
+    },
+    {
+      "slug": "class7-ai-generated-explanation",
+      "title": "Check a generated explanation",
+      "alt": {
+        "en": "The students compare a generated science paragraph with a checked source card.",
+        "hi": "विद्यार्थी तैयार विज्ञान अनुच्छेद को जाँचे स्रोत कार्ड से मिलाते हैं।"
+      },
+      "scene": "A tablet displays unreadable generated paragraph lines about a school water experiment. Tara compares the claim with a teacher-approved pictorial experiment record, while Neel revises an unsupported draft sentence on paper. A small clear water-measuring setup grounds the source-checking scene; no actual quantities in the illustration."
+    },
+    {
+      "slug": "class7-ai-fair-helper",
+      "title": "A fair helper for everyone",
+      "alt": {
+        "en": "The club checks whether a fictional object helper works across different drawing styles.",
+        "hi": "क्लब जाँचता है कि काल्पनिक चीज़ सहायक अलग चित्र शैलियों पर काम करता है या नहीं।"
+      },
+      "scene": "At a school table Tara compares bright high-contrast object drawings with faint pencil drawings of the same kinds of objects. Neel displays errors separately for each drawing set using unnumbered token rows, and a teacher plans more representative examples. No judging real children or demographic categories."
+    },
+    {
+      "slug": "class7-model-what-matters",
+      "title": "Model what matters",
+      "alt": {
+        "en": "A simplified club map retains entrances, obstacles and accessible paths.",
+        "hi": "क्लब के आसान नक्शे में प्रवेश, रुकावट और पहुँचने योग्य रास्ते रखे हैं।"
+      },
+      "scene": "Tara simplifies a detailed school fair scene into a paper room map showing only doorways, table obstacles and a wide accessible route. Neel puts decorative tree and wall-colour cards aside because they are irrelevant to route planning. Teacher traces the required wide pathway; no written map labels."
+    },
+    {
+      "slug": "class7-test-a-pattern",
+      "title": "Make and test a pattern",
+      "alt": {
+        "en": "Growing tile constructions are compared with their stated construction rule.",
+        "hi": "बढ़ती टाइल रचनाएँ दिए बनाने के नियम से मिलाई जाती हैं।"
+      },
+      "scene": "The students build successive small tile displays by adding one paired extension each time. Tara points to the newly added pair; Neel checks a later construction against the earlier ones using loose tiles. No written number sequences or claim that a finite list proves one universal pattern."
+    },
+    {
+      "slug": "class7-message-with-bits",
+      "title": "Send a message with bits",
+      "alt": {
+        "en": "The class combines on and off signal lamps to represent a message.",
+        "hi": "क्लास चालू और बंद सिग्नल लाइट जोड़कर संदेश का रूप बनाती है।"
+      },
+      "scene": "A tabletop board has eight physical signal lamps in a clear horizontal row, some amber on and others grey off. Tara changes one safe paper switch while Neel matches the lamp pattern with an unlabelled message card. Teacher explains the shared encoding convention. No binary digits, encryption claims or neon hacker decorations."
+    },
+    {
+      "slug": "class7-two-conditions",
+      "title": "Two conditions, one decision",
+      "alt": {
+        "en": "The club tests a two-condition rule using a branching paper decision board.",
+        "hi": "क्लब शाखा वाले कागज़ी बोर्ड से दो शर्त वाला नियम जाँचता है।"
+      },
+      "scene": "Tara and Neel use two coloured condition tokens at a tabletop branching decision board: the route to an equipment tray requires both tokens, while a separate review route holds a blank missing-information card. Teacher tests one condition changing while the other stays fixed. No numeric rule text."
+    },
+    {
+      "slug": "class7-loops-and-totals",
+      "title": "Loops that change a total",
+      "alt": {
+        "en": "The learners trace a growing total after each repeated supply-pack action.",
+        "hi": "विद्यार्थी सामान पैक करने का कदम दोहराकर हर बार बदलता कुल देखते हैं।"
+      },
+      "scene": "At a makers-fair packing table Tara adds the same small bundle of paper tokens repeatedly to a tray. Neel moves a counter along an unnumbered row and records the current pile after each action. Teacher holds an empty tray for the zero-item case. No real machinery or exact written totals."
+    },
+    {
+      "slug": "class7-ordered-list",
+      "title": "Keep a list in order",
+      "alt": {
+        "en": "The team orders book cards using a stated primary rule and a clear tie-break.",
+        "hi": "टीम बताए मुख्य नियम और बराबरी के साफ़ दूसरे नियम से किताब कार्ड क्रम में रखती है।"
+      },
+      "scene": "Tara and Neel rearrange physical book-shaped cards into a clearly increasing sequence of page-stack thicknesses. Two equal-thickness cards have different coloured corner badges to indicate a stated tie-break, and a teacher checks the completed row. No legible titles or numeric page counts."
+    },
+    {
+      "slug": "class7-search-plan",
+      "title": "Search with a plan",
+      "alt": {
+        "en": "A learner checks a sorted row systematically while keeping a record of each probe.",
+        "hi": "विद्यार्थी हर जाँच का रिकॉर्ड रखकर क्रम वाली पंक्ति में व्यवस्थित खोज करता है।"
+      },
+      "scene": "A row of anonymous ordered library cards is spread on a table. Tara checks cards from left to right with a movable paper marker; Neel keeps one token per checked card beside the target card. A teacher shows a missing target as a separate card, without pretending it has been found. No numbers or misleading random search arrows."
+    },
+    {
+      "slug": "class7-rover-challenge",
+      "title": "The delivery rover challenge",
+      "alt": {
+        "en": "A paper rover route visits a required stop and avoids blocked squares.",
+        "hi": "कागज़ी रोवर रास्ता ज़रूरी पड़ाव जाता है और बंद खाने छोड़ता है।"
+      },
+      "scene": "Overhead-oblique school table: a four-by-four paper grid has a small wooden rover at a corner, two clear obstacle blocks and a separate stamp station before a finish flag. Tara plans a strictly orthogonal string route around obstacles, Neel holds a new obstacle for a changed-map test. Keep the physical grid coherent; no diagonal shortcuts or numbers."
+    },
+    {
+      "slug": "class7-fraud-entry-fee",
+      "title": "The giveaway entry fee",
+      "alt": {
+        "en": "The learners inspect the demand hidden beneath a fictional prize offer.",
+        "hi": "विद्यार्थी काल्पनिक इनाम के नीचे छिपी माँग देखते हैं।"
+      },
+      "scene": "A school tablet shows a colourful fictional craft-kit prize advert made of pictures and abstract lines. Tara points past the gift illustration to a separate fee-demand card, while Neel keeps the pretend payment tokens on the table rather than sending them. Teacher reviews the offer with them. No real checkout, prices or payment codes."
+    },
+    {
+      "slug": "class7-fraud-familiar-sender",
+      "title": "When the sender sounds familiar",
+      "alt": {
+        "en": "An adult checks a familiar-looking request through an already known contact.",
+        "hi": "बड़े पहले से ज्ञात संपर्क से परिचित दिखती माँग जाँचते हैं।"
+      },
+      "scene": "In a warm family study corner Tara shows an unfamiliar tablet message using a familiar portrait. A caregiver uses a separate existing phone and old paper contact book to check, while Neel keeps the new message's supplied contact card apart. No actual phone numbers, personal contacts or readable messages."
+    },
+    {
+      "slug": "class7-fraud-qr-purpose",
+      "title": "A QR code does not tell the whole story",
+      "alt": {
+        "en": "The team checks what a scanned request would do before any action.",
+        "hi": "टीम कोई कदम लेने से पहले जाँचती है कि स्कैन की माँग क्या करेगी।"
+      },
+      "scene": "A teacher demonstrates a nonfunctional abstract square-pattern card beside a tablet showing separate link and outgoing-request pictograms. Tara and Neel inspect a paper purpose card before touching any control. The square pattern must be decorative and not a scannable real QR code. No payment confirmation, readable code, account number or PIN."
+    },
+    {
+      "slug": "class7-fraud-support-control",
+      "title": "The helper who wants control",
+      "alt": {
+        "en": "A trusted adult helps the students avoid an unverified remote-control request.",
+        "hi": "भरोसेमंद बड़े विद्यार्थियों को बिना जाँची दूर नियंत्रण की माँग से बचने में मदद करते हैं।"
+      },
+      "scene": "At a school help desk a browser window shows an abstract repair advert with a remote-control pictogram. Neel keeps his hand away from its button while Tara consults the real school teacher holding the familiar support folder. Calm practical support; no frightening malware, downloaded software or actual remote access."
+    },
+    {
+      "slug": "class7-fraud-copied-reviews",
+      "title": "The shop with copied reviews",
+      "alt": {
+        "en": "The club compares seller-controlled praise with separate product evidence.",
+        "hi": "क्लब दुकान की अपनी तारीफ़ और अलग उत्पाद सबूत को मिलाता है।"
+      },
+      "scene": "Tara compares several suspiciously identical-looking review cards on a fictional seller tablet with an independent teacher-supplied contents photo. Neel points to a craft-kit component missing from the outside record. Show a claim-versus-evidence comparison, no rating numbers, real company logos or purchase action."
+    },
+    {
+      "slug": "class7-fraud-recurring-price",
+      "title": "A subscription is more than one price",
+      "alt": {
+        "en": "The learners lay out a first payment and later recurring payments before asking an adult.",
+        "hi": "विद्यार्थी बड़े से पूछने से पहले पहला और बाद के बार-बार भुगतान अलग रखते हैं।"
+      },
+      "scene": "A classroom budgeting simulation using pretend tokens: Tara places a small introductory-price card next to several later weekly payment cards in a timeline, and Neel groups the total tokens with an adult reviewing the full commitment. No written prices, currency values, real bank cards or live purchase screen."
+    },
+    {
+      "slug": "class7-fraud-useful-record",
+      "title": "Keep a useful incident record",
+      "alt": {
+        "en": "A supportive teacher helps record facts without copying account secrets.",
+        "hi": "मदद करने वाले टीचर अकाउंट रहस्य कॉपी किए बिना तथ्य लिखने में मदद करते हैं।"
+      },
+      "scene": "At a calm school guidance table Tara and Neel make a short fictional incident note with simple time, channel and request pictograms. Teacher helps separate observed facts from an empty unknown-information card; a closed envelope represents private secrets that are not copied. No actual credentials, blame or guarantees of recovery."
+    },
+    {
+      "slug": "class7-fraud-refund-case",
+      "title": "The club trip refund message",
+      "alt": {
+        "en": "The club checks an urgent refund claim using a known school contact route.",
+        "hi": "क्लब ज्ञात स्कूल संपर्क से तुरंत रिफंड के दावे की जाँच करता है।"
+      },
+      "scene": "Final school club case review: Tara and Neel arrange separate clue cards for a copied portrait, refund gift, timer and outgoing request beside a fictional tablet message. A real teacher checks the existing school record on a separate laptop. No live financial transaction, scannable QR, readable codes or accusatory imagery."
+    }
+  ]
+}

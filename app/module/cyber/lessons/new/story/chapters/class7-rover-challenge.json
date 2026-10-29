@@ -1,0 +1,93 @@
+{
+  "duration": 103.14,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "ea11fd0d335a335e3e44f44a9c5b9efe845a9b3a9b7582bb6d22a5e76def9e86",
+  "scenes": [
+    {
+      "id": "class7-rover-challenge-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab’s paper rover must deliver a pretend parcel across a four-by-four grid. Tara identifies the start and finish, then Neel adds a required stamp stop. Three blocked squares and an eight-move budget make reaching the finish only one part of the challenge.",
+      "speech": "The Connection Lab’s paper rover must deliver a pretend parcel across a four-by-four grid. Tara identifies the start and finish, then Neel adds a required stamp stop. Three blocked squares and an eight-move budget make reaching the finish only one part of the challenge.",
+      "dialogue": "The whole goal",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.816
+    },
+    {
+      "id": "class7-rover-challenge-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "The rover moves only between neighbouring squares, one row or column at a time. A diagonal jump is not allowed, and a blocked square cannot be entered. The team traces each move and checks whether the required stop was visited before approving the delivery as successful.",
+      "speech": "The rover moves only between neighbouring squares, one row or column at a time. A diagonal jump is not allowed, and a blocked square cannot be entered. The team traces each move and checks whether the required stop was visited before approving the delivery as successful.",
+      "dialogue": "Build a valid route",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 19.466,
+      "duration": 19.032
+    },
+    {
+      "id": "class7-rover-challenge-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "After the first route works, the teacher blocks an additional square and moves the stamp to the bottom-left corner. Tara rechecks the new model instead of reusing old commands. This capstone combines modelling, conditions, sequences and testing; any route meeting every stated constraint is acceptable.",
+      "speech": "After the first route works, the teacher blocks an additional square and moves the stamp to the bottom-left corner. Tara rechecks the new model instead of reusing old commands. This capstone combines modelling, conditions, sequences and testing; any route meeting every stated constraint is acceptable.",
+      "dialogue": "Retest changed constraints",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.148,
+      "duration": 21.792
+    },
+    {
+      "id": "class7-rover-challenge-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The written goal requires the stamp, finish, valid neighbouring moves and at most eight moves. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The written goal requires the stamp, finish, valid neighbouring moves and at most eight moves. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "A route reaches the finish but misses the stamp. Is it complete?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 61.59,
+      "duration": 12.312
+    },
+    {
+      "id": "class7-rover-challenge-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "No. Revise and retest the route against every condition, including the required stop. Reaching the finish cannot compensate for missing part of the goal.",
+      "speech": "No. Revise and retest the route against every condition, including the required stop. Reaching the finish cannot compensate for missing part of the goal.",
+      "dialogue": "Construct a valid four-by-four route with a required stop.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 74.552,
+      "duration": 12.336
+    },
+    {
+      "id": "class7-rover-challenge-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate the whole goal, then build a valid route, then retest changed constraints. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate the whole goal, then build a valid route, then retest changed constraints. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Which changed constraint forced you to revise the route, and how did you test the repair?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 87.538,
+      "duration": 14.952
+    }
+  ]
+}

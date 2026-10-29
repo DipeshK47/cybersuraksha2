@@ -1,0 +1,93 @@
+{
+  "duration": 100.86,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "92917c5e4f83e47fd3c0b0f29f1c54719557b7bd3b9c3309816ac7778bab2cb3",
+  "scenes": [
+    {
+      "id": "class7-ai-train-the-sorter-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "Neel builds a tiny paper-strip sorter in the Connection Lab. Its visible rule predicts the label of the nearest selected length. This is a classroom model with invented numbers, not a claim that every AI system learns in exactly this way.",
+      "speech": "Neel builds a tiny paper-strip sorter in the Connection Lab. Its visible rule predicts the label of the nearest selected length. This is a classroom model with invented numbers, not a claim that every A I system learns in exactly this way.",
+      "dialogue": "Nearest-number predictions",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.448
+    },
+    {
+      "id": "class7-ai-train-the-sorter-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "At first, Neel selects only a short-strip example. The model then predicts short even for a much longer strip. Tara adds checked examples from both categories and compares predictions again. More copies of the first example would not supply the missing coverage of longer strips.",
+      "speech": "At first, Neel selects only a short-strip example. The model then predicts short even for a much longer strip. Tara adds checked examples from both categories and compares predictions again. More copies of the first example would not supply the missing coverage of longer strips.",
+      "dialogue": "Training coverage",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.098,
+      "duration": 21.072
+    },
+    {
+      "id": "class7-ai-train-the-sorter-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The check cards are separate from the selectable training cards. The team records both correct predictions and mistakes, then tries a changed set. Passing these few invented checks supports a narrow classroom result; unfamiliar lengths and different tasks still need review before any wider use.",
+      "speech": "The check cards are separate from the selectable training cards. The team records both correct predictions and mistakes, then tries a changed set. Passing these few invented checks supports a narrow classroom result; unfamiliar lengths and different tasks still need review before any wider use.",
+      "dialogue": "Changed examples",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.82,
+      "duration": 20.712
+    },
+    {
+      "id": "class7-ai-train-the-sorter-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Long check strips are being predicted as short because the selected training set contains no long example. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Long check strips are being predicted as short because the selected training set contains no long example. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Only short examples were selected. What should change?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 61.182,
+      "duration": 12.768
+    },
+    {
+      "id": "class7-ai-train-the-sorter-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Add checked long examples and rerun the check. This supplies relevant coverage, while copying short examples would leave the same gap.",
+      "speech": "Add checked long examples and rerun the check. This supplies relevant coverage, while copying short examples would leave the same gap.",
+      "dialogue": "Improve a toy model by including examples from both labels.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 74.6,
+      "duration": 9.96
+    },
+    {
+      "id": "class7-ai-train-the-sorter-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate nearest-number predictions, then training coverage, then changed examples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate nearest-number predictions, then training coverage, then changed examples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Which selected example changed a prediction, and why?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 85.21,
+      "duration": 15
+    }
+  ]
+}

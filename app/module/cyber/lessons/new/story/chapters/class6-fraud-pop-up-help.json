@@ -1,0 +1,93 @@
+{
+  "duration": 102.396,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "80809a0a712e693baa45a9d52101213f209764d823865f631bb65a923c675355",
+  "scenes": [
+    {
+      "id": "class6-fraud-pop-up-help-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "A pretend browser page flashes a red warning while Meera reads a club article. It claims hundreds of problems and offers a repair button. Kabir notices that the warning is part of the webpage, not a diagnosis from the school’s approved device support.",
+      "speech": "A pretend browser page flashes a red warning while Meera reads a club article. It claims hundreds of problems and offers a repair button. Kabir notices that the warning is part of the webpage, not a diagnosis from the school’s approved device support.",
+      "dialogue": "Alarming claims",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.048
+    },
+    {
+      "id": "class6-fraud-pop-up-help-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "An alarming claim can push a learner to download a program, call an unfamiliar number or allow remote control. These actions may give someone more access. A loud warning does not make the claimed diagnosis true or make the advertised helper trustworthy.",
+      "speech": "An alarming claim can push a learner to download a program, call an unfamiliar number or allow remote control. These actions may give someone more access. A loud warning does not make the claimed diagnosis true or make the advertised helper trustworthy.",
+      "dialogue": "Access demands",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.698,
+      "duration": 18.456
+    },
+    {
+      "id": "class6-fraud-pop-up-help-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The teacher practises stepping away from the page without pressing its repair controls. Students ask for help and use the school’s known support process. They do not test the warning by installing anything, paying a fee or handing over the device during this fictional lesson.",
+      "speech": "The teacher practises stepping away from the page without pressing its repair controls. Students ask for help and use the school’s known support process. They do not test the warning by installing anything, paying a fee or handing over the device during this fictional lesson.",
+      "dialogue": "Known device help",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 37.804,
+      "duration": 18.768
+    },
+    {
+      "id": "class6-fraud-pop-up-help-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The claim appears inside an article page and asks for a download. No trusted adult has confirmed a device problem. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The claim appears inside an article page and asks for a download. No trusted adult has confirmed a device problem. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Should Meera press the advertised repair button?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 57.222,
+      "duration": 14.424
+    },
+    {
+      "id": "class6-fraud-pop-up-help-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Pause and ask the teacher through known support. Do not use the page’s download or remote-control offer as proof that its alarming claim is correct.",
+      "speech": "Pause and ask the teacher through known support. Do not use the page’s download or remote-control offer as proof that its alarming claim is correct.",
+      "dialogue": "Identify payment, download and remote-access demands.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 72.296,
+      "duration": 10.8
+    },
+    {
+      "id": "class6-fraud-pop-up-help-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through alarming claims, then access demands, then known device help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through alarming claims, then access demands, then known device help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why is an offered repair not proof of a real device fault?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 83.746,
+      "duration": 18
+    }
+  ]
+}

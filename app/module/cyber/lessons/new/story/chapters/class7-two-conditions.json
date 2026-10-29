@@ -1,0 +1,93 @@
+{
+  "duration": 97.044,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "a7722a19806c4b1790e759595ce5800e823de5de0ee54d7d6d68ceebedd4bdd9",
+  "scenes": [
+    {
+      "id": "class7-two-conditions-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab lends imaginary field kits only when a learner has permission and has completed training. Tara writes both checks separately. Neel sees permission on a practice card and approves the loan without reading the training field, which is marked no.",
+      "speech": "The Connection Lab lends imaginary field kits only when a learner has permission and has completed training. Tara writes both checks separately. Neel sees permission on a practice card and approves the loan without reading the training field, which is marked no.",
+      "dialogue": "Both conditions",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.288
+    },
+    {
+      "id": "class7-two-conditions-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "The supplied AND rule requires both conditions to be true. One true condition does not compensate for a false one. The team traces complete yes-or-no cases first, then puts a card with missing training information aside for review rather than inventing a value to finish the table.",
+      "speech": "The supplied AND rule requires both conditions to be true. One true condition does not compensate for a false one. The team traces complete yes-or-no cases first, then puts a card with missing training information aside for review rather than inventing a value to finish the table.",
+      "dialogue": "Either condition",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.938,
+      "duration": 19.752
+    },
+    {
+      "id": "class7-two-conditions-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The teacher introduces a separate pretend badge rule: a drawing or a poem is enough. This OR rule accepts either condition and also accepts both. Tara labels the changed rule clearly. A correct answer under one rule can become incorrect when the connecting word changes.",
+      "speech": "The teacher introduces a separate pretend badge rule: a drawing or a poem is enough. This OR rule accepts either condition and also accepts both. Tara labels the changed rule clearly. A correct answer under one rule can become incorrect when the connecting word changes.",
+      "dialogue": "Unknown inputs",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.34,
+      "duration": 20.4
+    },
+    {
+      "id": "class7-two-conditions-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The kit rule requires permission AND completed training. Both values are known. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The kit rule requires permission AND completed training. Both values are known. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Permission is yes and training is no. Can the kit be lent?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 60.39,
+      "duration": 12.12
+    },
+    {
+      "id": "class7-two-conditions-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "No. The training condition is false, so the supplied AND rule is not satisfied even though permission is true.",
+      "speech": "No. The training condition is false, so the supplied AND rule is not satisfied even though permission is true.",
+      "dialogue": "Distinguish OR from AND under a changed rule.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 73.16,
+      "duration": 8.4
+    },
+    {
+      "id": "class7-two-conditions-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate both conditions, then either condition, then unknown inputs. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate both conditions, then either condition, then unknown inputs. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "How can changing AND to OR change the same case’s outcome?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 82.21,
+      "duration": 14.184
+    }
+  ]
+}

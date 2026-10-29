@@ -1,0 +1,93 @@
+{
+  "duration": 105.636,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "9a5c079aef4cb93e0834b4454eaf0727d1cfbc3805059ff8742244c60f5618bf",
+  "scenes": [
+    {
+      "id": "class7-fraud-recurring-price-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "A classroom mock-up advertises a digital art pack for two pretend tokens. Neel calls that the total price, but Tara reads the full schedule: two tokens for week one, then four tokens at the start of each later week while the pretend plan continues.",
+      "speech": "A classroom mock-up advertises a digital art pack for two pretend tokens. Neel calls that the total price, but Tara reads the full schedule: two tokens for week one, then four tokens at the start of each later week while the pretend plan continues.",
+      "dialogue": "First and later prices",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.88
+    },
+    {
+      "id": "class7-fraud-recurring-price-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "The first advertised charge is not the same as the cost of a longer period. For four weeks, the schedule contains one introductory charge and three later charges. The team places each charge on a timeline so it does not accidentally count four introductory weeks or forget the repeated payments.",
+      "speech": "The first advertised charge is not the same as the cost of a longer period. For four weeks, the schedule contains one introductory charge and three later charges. The team places each charge on a timeline so it does not accidentally count four introductory weeks or forget the repeated payments.",
+      "dialogue": "Count the full period",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.53,
+      "duration": 21.336
+    },
+    {
+      "id": "class7-fraud-recurring-price-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "All amounts and terms belong to this invented exercise, with no real subscription or purchase. The teacher changes the planned duration to six weeks, requiring a new total. Learners also identify unclear terms for adult review rather than assuming that a low first price explains every later obligation.",
+      "speech": "All amounts and terms belong to this invented exercise, with no real subscription or purchase. The teacher changes the planned duration to six weeks, requiring a new total. Learners also identify unclear terms for adult review rather than assuming that a low first price explains every later obligation.",
+      "dialogue": "Change the duration",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 40.516,
+      "duration": 22.344
+    },
+    {
+      "id": "class7-fraud-recurring-price-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Schedule: week 1 costs 2 tokens; each later week costs 4 while the plan continues. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Schedule: week 1 costs 2 tokens; each later week costs 4 while the plan continues. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What does the two-token headline establish?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 63.51,
+      "duration": 12.552
+    },
+    {
+      "id": "class7-fraud-recurring-price-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "It states the introductory week’s charge, not the total for any longer duration. Read the full schedule and ask an adult to review unclear terms before a real commitment.",
+      "speech": "It states the introductory week’s charge, not the total for any longer duration. Read the full schedule and ask an adult to review unclear terms before a real commitment.",
+      "dialogue": "Calculate the total under an explicit fictional schedule.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 76.712,
+      "duration": 12.6
+    },
+    {
+      "id": "class7-fraud-recurring-price-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate first and later prices, then count the full period, then change the duration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate first and later prices, then count the full period, then change the duration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why does a low first price fail to describe the full cost of a longer plan?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 89.962,
+      "duration": 15.024
+    }
+  ]
+}

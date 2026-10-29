@@ -1,0 +1,93 @@
+{
+  "duration": 103.068,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5cecee544058aedb471a8409334bdbebdebd8f2187d1e004c547df3f5d1de3ba",
+  "scenes": [
+    {
+      "id": "class7-access-for-the-job-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The makers-fair guide has an editor, a reviewer and a former volunteer. Neel suggests giving everyone editing access to avoid delays. Tara points out that reading a draft, correcting it and having finished a job are three different reasons for access.",
+      "speech": "The makers-fair guide has an editor, a reviewer and a former volunteer. Neel suggests giving everyone editing access to avoid delays. Tara points out that reading a draft, correcting it and having finished a job are three different reasons for access.",
+      "dialogue": "Reader and editor roles",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.264
+    },
+    {
+      "id": "class7-access-for-the-job-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Least necessary access means matching permissions to the actual task. A reviewer can read without changing the master copy; an editor needs to change the working draft. A former volunteer no longer needs the shared folder merely because their name appears on an old team list.",
+      "speech": "Least necessary access means matching permissions to the actual task. A reviewer can read without changing the master copy; an editor needs to change the working draft. A former volunteer no longer needs the shared folder merely because their name appears on an old team list.",
+      "dialogue": "Tested permissions",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 18.914,
+      "duration": 19.8
+    },
+    {
+      "id": "class7-access-for-the-job-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The teacher tests the role plan using fictional accounts and documents. Students inspect both a permitted reading action and a denied edit. They also check the end date, because a correct permission can become unnecessary when the assignment changes or the person leaves the team.",
+      "speech": "The teacher tests the role plan using fictional accounts and documents. Students inspect both a permitted reading action and a denied edit. They also check the end date, because a correct permission can become unnecessary when the assignment changes or the person leaves the team.",
+      "dialogue": "Access that ends",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.364,
+      "duration": 19.512
+    },
+    {
+      "id": "class7-access-for-the-job-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Editor changes the working draft. Reviewer reads only. Former volunteer has completed all work and has no current task. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Editor changes the working draft. Reviewer reads only. Former volunteer has completed all work and has no current task. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Which permission plan fits these jobs?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 59.526,
+      "duration": 15.672
+    },
+    {
+      "id": "class7-access-for-the-job-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Give the editor editing, the reviewer reading and the former volunteer no current access. Test the plan and revisit it when the work changes or finishes.",
+      "speech": "Give the editor editing, the reviewer reading and the former volunteer no current access. Test the plan and revisit it when the work changes or finishes.",
+      "dialogue": "Test permitted and denied actions against a role plan.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 75.848,
+      "duration": 10.872
+    },
+    {
+      "id": "class7-access-for-the-job-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate reader and editor roles, then tested permissions, then access that ends. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate reader and editor roles, then tested permissions, then access that ends. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why can a once-correct permission become unnecessary?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 87.37,
+      "duration": 15.048
+    }
+  ]
+}

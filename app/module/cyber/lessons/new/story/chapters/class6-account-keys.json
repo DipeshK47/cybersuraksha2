@@ -1,0 +1,93 @@
+{
+  "duration": 94.86,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "24b3490cb6b377b807f14eeb824c7da23212b2d969503c21ec5de299ff09fe19",
+  "scenes": [
+    {
+      "id": "class6-account-keys-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Kabir wants to join a club game. Another player offers to build his profile if Kabir sends the password. Meera notices that helping with a picture does not require taking control of the whole account.",
+      "speech": "Kabir wants to join a club game. Another player offers to build his profile if Kabir sends the password. Meera notices that helping with a picture does not require taking control of the whole account.",
+      "dialogue": "Secret account keys",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 15.288
+    },
+    {
+      "id": "class6-account-keys-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A password is an account key, not a friendship test. A login code can also open an account. Sharing either in a message can let another person act as the owner or lock the owner out.",
+      "speech": "A password is an account key, not a friendship test. A login code can also open an account. Sharing either in a message can let another person act as the owner or lock the owner out.",
+      "dialogue": "Unique passphrases",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 15.938,
+      "duration": 14.568
+    },
+    {
+      "id": "class6-account-keys-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The teacher demonstrates made-up passphrases using unrelated words. Longer, unique secrets are useful; a birthday is predictable. An adult can help set up and recover an account through approved tools without asking children to display real secrets in class.",
+      "speech": "The teacher demonstrates made-up passphrases using unrelated words. Longer, unique secrets are useful; a birthday is predictable. An adult can help set up and recover an account through approved tools without asking children to display real secrets in class.",
+      "dialogue": "Safe account help",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 31.156,
+      "duration": 19.512
+    },
+    {
+      "id": "class6-account-keys-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The player wants a password through chat. No teacher or caregiver has approved account access. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The player wants a password through chat. No teacher or caregiver has approved account access. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "How should Kabir respond to the player?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 51.318,
+      "duration": 12.816
+    },
+    {
+      "id": "class6-account-keys-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Keep the password private and ask a trusted adult about the offer. Helpful artwork can be shared without handing over account control.",
+      "speech": "Keep the password private and ask a trusted adult about the offer. Helpful artwork can be shared without handing over account control.",
+      "dialogue": "Explain why separate accounts need different secrets.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 64.784,
+      "duration": 10.248
+    },
+    {
+      "id": "class6-account-keys-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through secret account keys, then unique passphrases, then safe account help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through secret account keys, then unique passphrases, then safe account help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why can a one-time code be as private as a password?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 75.682,
+      "duration": 18.528
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 102.924,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e4ecb58992291f4f60e4b75dc8001c519bea57446ddd53f77a606050fa624e80",
+  "scenes": [
+    {
+      "id": "class6-fraud-familiar-name-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "A new account copies Meera’s cousin’s photo and demands a voucher. It says the old phone is broken and offers a new number for checking. Kabir asks whether the suggested checking route is controlled by the same unverified sender.",
+      "speech": "A new account copies Meera’s cousin’s photo and demands a voucher. It says the old phone is broken and offers a new number for checking. Kabir asks whether the suggested checking route is controlled by the same unverified sender.",
+      "dialogue": "Identity claims",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.56
+    },
+    {
+      "id": "class6-fraud-familiar-name-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A name, photograph or familiar detail can be copied or learned. Recognition is a useful clue, but it is not independent confirmation of an unusual request. The team separates what the message claims from what a trusted person can verify through a route already known before the message.",
+      "speech": "A name, photograph or familiar detail can be copied or learned. Recognition is a useful clue, but it is not independent confirmation of an unusual request. The team separates what the message claims from what a trusted person can verify through a route already known before the message.",
+      "dialogue": "A known contact route",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.21,
+      "duration": 20.424
+    },
+    {
+      "id": "class6-fraud-familiar-name-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "Meera asks a caregiver to contact the cousin using the family’s saved number. She does not send a voucher, code or private detail while waiting. The class does not try to trap or accuse the sender; the goal is a safe independent check.",
+      "speech": "Meera asks a caregiver to contact the cousin using the family’s saved number. She does not send a voucher, code or private detail while waiting. The class does not try to trap or accuse the sender; the goal is a safe independent check.",
+      "dialogue": "Evidence before trust",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 38.284,
+      "duration": 17.832
+    },
+    {
+      "id": "class6-fraud-familiar-name-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The new account supplies a new checking number. The family already has an older saved contact for the cousin. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The new account supplies a new checking number. The family already has an older saved contact for the cousin. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Which contact route is independent?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 56.766,
+      "duration": 13.608
+    },
+    {
+      "id": "class6-fraud-familiar-name-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Ask a caregiver to use the pre-existing saved contact. A new number supplied inside the suspicious request is not an independent check of that same request.",
+      "speech": "Ask a caregiver to use the pre-existing saved contact. A new number supplied inside the suspicious request is not an independent check of that same request.",
+      "dialogue": "Choose a pre-existing independent verification route.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 71.024,
+      "duration": 11.712
+    },
+    {
+      "id": "class6-fraud-familiar-name-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through identity claims, then a known contact route, then evidence before trust. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through identity claims, then a known contact route, then evidence before trust. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why is asking the same sender again not independent verification?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 83.386,
+      "duration": 18.888
+    }
+  ]
+}

@@ -26,7 +26,7 @@ test('Class 10 registers 32 original chapters and retains Mathematics and Englis
   }
   assert.equal(new Set(lessons.flatMap(l=>l.assessmentIds)).size,96);
   for(const number of [8,9,11,12])assert.equal(getCyberLessonsForGrade(number).length,32);
-  for(const number of [6,7])assert.equal(getGradeCurriculum(number).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,8);
+  for(const [number,count] of [[6,32],[7,32]])assert.equal(getGradeCurriculum(number).subjects.filter(s=>subjects.includes(s.name)).flatMap(s=>s.modules).length,count);
   assert.ok(cyberLessons.some(l=>!l.slug.startsWith('class10-')&&l.grades.includes(10)),'Historical lesson identities remain');
 });
 

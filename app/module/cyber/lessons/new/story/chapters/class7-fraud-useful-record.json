@@ -1,0 +1,93 @@
+{
+  "duration": 106.692,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "d3836c85ae13b4333c34c4b1aede8ff967751c70fd78b7fa8ae1b711eddbf183",
+  "scenes": [
+    {
+      "id": "class7-fraud-useful-record-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "A fictional learner tells the Connection Lab teacher that an unusual message requested an account code. The teacher thanks the learner for speaking up. Tara helps prepare a minimal practice record containing the approximate time, communication channel and what action the message requested.",
+      "speech": "A fictional learner tells the Connection Lab teacher that an unusual message requested an account code. The teacher thanks the learner for speaking up. Tara helps prepare a minimal practice record containing the approximate time, communication channel and what action the message requested.",
+      "dialogue": "Facts and unknowns",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 19.944
+    },
+    {
+      "id": "class7-fraud-useful-record-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "The record distinguishes observed facts from unknowns. A displayed name is visible, but the sender’s real identity is not established by that name. If a secret was entered, the useful note describes its category without writing the actual password, code or recovery value into a shared worksheet.",
+      "speech": "The record distinguishes observed facts from unknowns. A displayed name is visible, but the sender’s real identity is not established by that name. If a secret was entered, the useful note describes its category without writing the actual password, code or recovery value into a shared worksheet.",
+      "dialogue": "Minimum useful record",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 20.594,
+      "duration": 21.672
+    },
+    {
+      "id": "class7-fraud-useful-record-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The teacher uses the school’s established support process and keeps sensitive handling with responsible adults. The class does not promise a guaranteed recovery or accuse a person from incomplete evidence. Calm, prompt help makes a better response than public embarrassment, secrecy or a demand that the learner investigate alone.",
+      "speech": "The teacher uses the school’s established support process and keeps sensitive handling with responsible adults. The class does not promise a guaranteed recovery or accuse a person from incomplete evidence. Calm, prompt help makes a better response than public embarrassment, secrecy or a demand that the learner investigate alone.",
+      "dialogue": "Support without blame",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 42.916,
+      "duration": 23.64
+    },
+    {
+      "id": "class7-fraud-useful-record-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The record needs to explain the kind of exposure without spreading the secret itself. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The record needs to explain the kind of exposure without spreading the secret itself. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What should a shared practice record say about an entered code?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 67.206,
+      "duration": 11.52
+    },
+    {
+      "id": "class7-fraud-useful-record-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Record that an account code was entered, without copying the actual value. A trusted adult handles the real incident through the approved process.",
+      "speech": "Record that an account code was entered, without copying the actual value. A trusted adult handles the real incident through the approved process.",
+      "dialogue": "Record the category of a disclosed secret without copying its value.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 79.376,
+      "duration": 10.776
+    },
+    {
+      "id": "class7-fraud-useful-record-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate facts and unknowns, then minimum useful record, then support without blame. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate facts and unknowns, then minimum useful record, then support without blame. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "How can a record remain useful without containing the actual secret?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 90.802,
+      "duration": 15.24
+    }
+  ]
+}

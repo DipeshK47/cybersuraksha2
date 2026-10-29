@@ -1,0 +1,93 @@
+{
+  "duration": 109.068,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e83a653907efebe6978094889ade679b5f498df87689cbe6804ecab9324db9fd",
+  "scenes": [
+    {
+      "id": "class7-fraud-copied-reviews-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab considers a fictional craft kit shown in an online shop mock-up. Six review panels repeat the same sentence and picture. Neel counts them as six independent recommendations, while Tara asks whether they may be copies controlled by the same seller.",
+      "speech": "The Connection Lab considers a fictional craft kit shown in an online shop mock-up. Six review panels repeat the same sentence and picture. Neel counts them as six independent recommendations, while Tara asks whether they may be copies controlled by the same seller.",
+      "dialogue": "Who controls the source?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 19.536
+    },
+    {
+      "id": "class7-fraud-copied-reviews-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Repetition can make praise feel stronger without adding new evidence. The class identifies who controls each source and compares the product description with a separate teacher-provided record. An attractive shop page is not proof of delivery, and one suspicious feature does not establish every fact about the seller.",
+      "speech": "Repetition can make praise feel stronger without adding new evidence. The class identifies who controls each source and compares the product description with a separate teacher-provided record. An attractive shop page is not proof of delivery, and one suspicious feature does not establish every fact about the seller.",
+      "dialogue": "Repeated praise",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 20.186,
+      "duration": 22.656
+    },
+    {
+      "id": "class7-fraud-copied-reviews-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The separate record conflicts with the advertised kit contents. Tara pauses the pretend order and asks an adult to investigate rather than buying quickly or publishing an accusation. The responsible conclusion is that evidence is unresolved. Real spending decisions need adult review; classroom tokens never leave this exercise.",
+      "speech": "The separate record conflicts with the advertised kit contents. Tara pauses the pretend order and asks an adult to investigate rather than buying quickly or publishing an accusation. The responsible conclusion is that evidence is unresolved. Real spending decisions need adult review; classroom tokens never leave this exercise.",
+      "dialogue": "Check before commitment",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 43.492,
+      "duration": 24.456
+    },
+    {
+      "id": "class7-fraud-copied-reviews-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "All six panels repeat the same sentence and picture on a seller-controlled page. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "All six panels repeat the same sentence and picture on a seller-controlled page. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Do six copied review panels equal six independent checks?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 68.598,
+      "duration": 11.352
+    },
+    {
+      "id": "class7-fraud-copied-reviews-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "No. They repeat one claim rather than establish six independent sources. Pause and seek separate evidence instead of treating repetition as verification.",
+      "speech": "No. They repeat one claim rather than establish six independent sources. Pause and seek separate evidence instead of treating repetition as verification.",
+      "dialogue": "Explain why copied reviews are a reason to investigate.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 80.6,
+      "duration": 12.312
+    },
+    {
+      "id": "class7-fraud-copied-reviews-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate who controls the source?, then repeated praise, then check before commitment. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate who controls the source?, then repeated praise, then check before commitment. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why can repeated praise feel convincing without increasing independent evidence?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 93.562,
+      "duration": 14.856
+    }
+  ]
+}

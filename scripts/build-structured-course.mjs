@@ -8,7 +8,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {collectMessages,canReuseNarration,expandSpeech,normalizeMessage,mergeOwnedMessages} from './class9-assets-lib.mjs';
 
 export async function compileStructuredCourse({grade,manualMessages={},speech=expandSpeech}) {
-  if(![9,10].includes(grade))throw new RangeError('This compiler supports Classes 9 and 10');
+  if(![6,7,9,10].includes(grade))throw new RangeError('This compiler supports Classes 6, 7, 9 and 10');
   const root=fileURLToPath(new URL('../',import.meta.url));
   const subjectIndex=process.argv.indexOf('--subject');
   const subject=subjectIndex<0?null:process.argv[subjectIndex+1];

@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright, expect
 expect.set_options(timeout=60000)
 
 GRADE = int(os.environ.get("COURSE_QA_GRADE", "8"))
-assert GRADE in (8, 9, 10)
+assert GRADE in (6, 7, 8, 9, 10)
 ROOT = Path(__file__).resolve().parent.parent
 BASE = os.environ.get("BASE_URL", "http://localhost:3218")
 if not re.match(r"^http://(localhost|127\.0\.0\.1):\d+$", BASE):
@@ -34,6 +34,7 @@ console.log(JSON.stringify(chapters.map(c=>{const solutions=c.tasks.map(t=>solve
     return sorted(rows, key=lambda row: row["slug"])
 
 cases = load_cases()
+expected_kinds = {task["kind"] for chapter in cases for task in chapter["tasks"]} if GRADE == 6 else {"choice", "select", "match", "order", "number", "binary", "grid", "route", "model"}
 
 def label(language, en, hi):
     return en if language == "en" else hi
@@ -175,7 +176,7 @@ def preview_negatives(teacher, browser, errors):
             expect(practice).to_have_attribute("data-ready","true")
             practice.get_by_role("button",name="Review mission" if i==2 else "Next challenge",exact=True).click()
         preview.locator(f'[data-mission-ready="{slug}"]').get_by_role("button",name="Finish chapter",exact=True).click()
-    assert covered == {"choice","select","match","order","number","binary","grid","route","model"}, covered
+    assert covered == expected_kinds, covered
     print(f"PASS authenticated teacher preview: {count} wrong submissions, all single-choice alternatives, all mechanics in EN/HI",flush=True)
     preview.close()
 
@@ -185,7 +186,7 @@ if __name__ == "__main__":
         student = browser.new_context(viewport={"width": 1440, "height": 1000}, reduced_motion="reduce")
         teacher = browser.new_context(viewport={"width": 1440, "height": 1000})
         assert teacher.request.post(BASE + "/api/auth/teacher", data={"email": "teacher@dpsrkp.edu.in", "password": "Teacher@123"}).status == 200
-        if GRADE >= 9:
+        if GRADE != 8:
             classes_response = teacher.request.get(BASE + "/api/admin/classes")
             assert classes_response.status == 200, classes_response.text()
             existing = next((row for row in classes_response.json()["classes"] if row["grade"] == GRADE),None)
@@ -255,7 +256,7 @@ if __name__ == "__main__":
             assert abs(duration-script["duration"]) < 0.2, (slug, duration, script["duration"])
             page.get_by_role("button", name="हिन्दी", exact=True).click()
             page.wait_for_function("document.documentElement.lang==='hi'")
-            expect(story.get_by_text(chapter["scenes"][0]["caption"]["hi"], exact=True)).to_be_visible()
+            expect(story.locator('p[aria-live="polite"]').filter(has_text=re.compile('^'+re.escape(chapter["scenes"][0]["caption"]["hi"])+ '$'))).to_be_visible()
             page.get_by_role("button", name="English", exact=True).click()
             page.wait_for_function("document.documentElement.lang==='en'")
             story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
@@ -263,7 +264,7 @@ if __name__ == "__main__":
             story.locator("audio").evaluate("a=>a.pause()")
             decision = story.locator('[data-task-kind="choice"]')
             blank_check(story,decision,chapter["decision"],activity_events)
-            if GRADE >= 9:
+            if GRADE != 8:
                 for language in ("en","hi"):
                     set_language(page,language)
                     for item in chapter["storyWrongs"]:
@@ -278,13 +279,13 @@ if __name__ == "__main__":
                 expect(story).to_have_attribute("data-solved","false")
             solve(decision, chapter["decision"], chapter["decision"]["correct"])
             expect(story).to_have_attribute("data-solved", "true")
-            if GRADE >= 9:
+            if GRADE != 8:
                 set_language(page,"hi")
                 for scene_index, scene in enumerate(chapter["scenes"]):
                     story.locator("nav button").nth(scene_index).click()
                     expect(story).to_have_attribute("data-scene",str(scene_index))
                     story.locator("audio").evaluate("a=>a.pause()")
-                    expect(story.get_by_text(scene["caption"]["hi"],exact=True)).to_be_visible()
+                    expect(story.locator('p[aria-live="polite"]').filter(has_text=re.compile('^'+re.escape(scene["caption"]["hi"])+ '$'))).to_be_visible()
                     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), slug + ": Hindi story overflow"
                 set_language(page,"en")
             story.get_by_role("button", name=re.compile(r"^Scene 6:")).click()
@@ -294,7 +295,7 @@ if __name__ == "__main__":
                 practice = page.locator(f'[data-new-mission="{slug}"]')
                 expect(practice).to_have_attribute("data-stage", str(task_index))
                 board = practice.locator('[data-task-kind]')
-                if GRADE >= 9:
+                if GRADE != 8:
                     blank_check(practice,board,task,activity_events)
                 hindi = task["kind"] not in seen_hindi
                 if hindi:
@@ -325,7 +326,7 @@ if __name__ == "__main__":
                 notebook = ready.locator(f'[data-class8-evidence="{task_index}"]')
                 for line in lines:
                     expect(notebook).to_contain_text(line["value"]["en"])
-            if index == 0 or GRADE >= 9:
+            if index == 0 or GRADE != 8:
                 page.get_by_role("button", name="हिन्दी", exact=True).click()
                 page.wait_for_function("document.documentElement.lang==='hi'")
                 for task_index, lines in enumerate(chapter["evidence"]):
@@ -345,9 +346,9 @@ if __name__ == "__main__":
             ready.get_by_role("button", name="Finish chapter", exact=True).click()
             expect(page.locator(f'[data-mission-complete="{slug}"]')).to_be_visible()
             print(f'PASS {index+1}/32 {slug}: story gate, English audio, Hindi text, three tasks, completion', flush=True)
-        if GRADE >= 9:
+        if GRADE != 8:
             preview_negatives(teacher,browser,errors)
-        assert seen_kinds == {"choice", "select", "match", "order", "number", "binary", "grid", "route", "model"}, seen_kinds
+        assert seen_kinds == expected_kinds, seen_kinds
         assert seen_hindi == seen_kinds, seen_hindi
         deadline = time.monotonic()+45
         while True:
@@ -374,7 +375,7 @@ if __name__ == "__main__":
                 for line in chapter["evidence"][task_index]:
                     assert line["value"]["en"] in snapshot and line["value"]["hi"] in snapshot, (chapter["slug"], task_index, line)
         # A new attempt keeps its wrong first answer even after a successful retry.
-        chapter = next(row for row in cases if "cyber-"+row["slug"] in selected_modules) if GRADE >= 9 else next(row for row in cases if row["slug"] == "class8-account-control")
+        chapter = next(row for row in cases if "cyber-"+row["slug"] in selected_modules) if GRADE != 8 else next(row for row in cases if row["slug"] == "class8-account-control")
         slug = chapter["slug"]
         page.goto(BASE + "/module/cyber/" + slug + f"?grade={GRADE}")
         # Wait for stored-state restoration before interacting with the frame controls.
@@ -416,7 +417,7 @@ if __name__ == "__main__":
         retry_learner = next(row for row in retry_report["students"] if row["id"] == student_id)
         assert abs(retry_learner["progress"]["marks"] - 91.67) < 0.01, retry_learner["progress"]
         forbidden_modules = [("flowchart-architect","cyber-middle-ct-flowchart-architect"),("your-digital-risk-map","cyber-class-11-your-digital-risk-map")]
-        if GRADE >= 9:
+        if GRADE != 8:
             forbidden_modules += [("email-header-inspector","cyber-upper-security-email-header-inspector"),("class8-account-control","cyber-class8-account-control")]
         if GRADE == 10:
             forbidden_modules += [(cases9_slug, "cyber-"+cases9_slug) for cases9_slug in ["class9-ai-measurable-question"]]
@@ -431,9 +432,9 @@ if __name__ == "__main__":
                 assert student.request.get(BASE + path).status == 200, path
                 page.goto(BASE+path)
                 expect(page.locator('section[aria-labelledby="chapter-library-title"] .moduleNameCard')).to_have_count(14 if path.endswith('mathematics') else 9)
-        for restricted_grade in ([8,9,11,12] if GRADE == 10 else [8,10,11,12] if GRADE == 9 else [11]):
+        for restricted_grade in ([8,9,11,12] if GRADE == 10 else [8,10,11,12] if GRADE == 9 else [7,8,9,10,11,12] if GRADE == 6 else [6,8,9,10,11,12] if GRADE == 7 else [11]):
             assert student.request.get(BASE + f"/grade/{restricted_grade}").status in (403,404)
-        if GRADE >= 9:
+        if GRADE != 8:
             assert student.request.get(BASE + "/module/cyber/class8-account-control?grade=8").status in (403,404)
         page.set_viewport_size({"width":390,"height":1000})
         page.goto(BASE + "/learn/progress")
@@ -446,5 +447,5 @@ if __name__ == "__main__":
         page.screenshot(path=str(OUT / "progress-hindi-mobile.png"), full_page=True)
         page.screenshot(path=str(OUT / "progress-hindi-mobile-viewport.png"))
         assert not errors, errors
-        print("PASS all 32 chapters / 96 practice tasks / 9 mechanics in English and Hindi; measured audio, bilingual notebook reload, actual teacher evidence, saved reflection, wrong-first retry grading, assignment marks and grade restrictions", flush=True)
+        print("PASS all 32 chapters / 96 practice tasks / all authored mechanics in English and Hindi; measured audio, bilingual notebook reload, actual teacher evidence, saved reflection, wrong-first retry grading, assignment marks and grade restrictions", flush=True)
         browser.close()

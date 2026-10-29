@@ -84,8 +84,8 @@ async def narrate(path, force, semaphore):
 
 async def main(grade=9):
     global SETTINGS
-    if grade not in (9, 10):
-        raise ValueError("Only Classes 9 and 10 use this narration engine")
+    if grade not in (6, 7, 9, 10):
+        raise ValueError("Only Classes 6, 7, 9 and 10 use this narration engine")
     SETTINGS = json.loads((ROOT / f"scripts/class{grade}-voice.json").read_text())
     parser = argparse.ArgumentParser(description=f"Generate measured Indian English narration for Class {grade}")
     parser.add_argument("slugs", nargs="*")

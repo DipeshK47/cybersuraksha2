@@ -1,0 +1,93 @@
+{
+  "duration": 98.148,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "62de9f369b8d9410ccc955bde3a2be759e9dd976557bbb86529be57168178f94",
+  "scenes": [
+    {
+      "id": "class6-exact-instructions-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "The club’s paper robot understands only exact commands. Kabir tells it to put things nicely and gets no useful result. Meera replaces the vague instruction with pick up the blue card, place it on the tray and close the lid.",
+      "speech": "The club’s paper robot understands only exact commands. Kabir tells it to put things nicely and gets no useful result. Meera replaces the vague instruction with pick up the blue card, place it on the tray and close the lid.",
+      "dialogue": "Precise actions",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.944
+    },
+    {
+      "id": "class6-exact-instructions-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "An algorithm is an ordered method for completing a task. Each instruction must be clear enough for the intended helper. Closing the lid before placing the card prevents the next action, even though the same words appear somewhere in both lists.",
+      "speech": "An algorithm is an ordered method for completing a task. Each instruction must be clear enough for the intended helper. Closing the lid before placing the card prevents the next action, even though the same words appear somewhere in both lists.",
+      "dialogue": "Sequence matters",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.594,
+      "duration": 17.088
+    },
+    {
+      "id": "class6-exact-instructions-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "The team traces the commands on a pretend tray and records what changes after each action. They use small safe objects, not real machinery. When an instruction fails, they inspect the earliest failing step instead of adding more commands at random to the end.",
+      "speech": "The team traces the commands on a pretend tray and records what changes after each action. They use small safe objects, not real machinery. When an instruction fails, they inspect the earliest failing step instead of adding more commands at random to the end.",
+      "dialogue": "Trace the result",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 35.332,
+      "duration": 18.744
+    },
+    {
+      "id": "class6-exact-instructions-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The tray is open and the blue card is on the table. The helper has no rule for the word nicely. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The tray is open and the blue card is on the table. The helper has no rule for the word nicely. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Which instruction is precise enough to test?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 54.726,
+      "duration": 12.744
+    },
+    {
+      "id": "class6-exact-instructions-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Tell the helper to place the blue card in the open tray. The object, action and destination are stated, so another learner can test the instruction.",
+      "speech": "Tell the helper to place the blue card in the open tray. The object, action and destination are stated, so another learner can test the instruction.",
+      "dialogue": "Order steps with required dependencies.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 68.12,
+      "duration": 10.656
+    },
+    {
+      "id": "class6-exact-instructions-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through precise actions, then sequence matters, then trace the result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through precise actions, then sequence matters, then trace the result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why can the same actions produce different results in a different order?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 79.426,
+      "duration": 18.072
+    }
+  ]
+}

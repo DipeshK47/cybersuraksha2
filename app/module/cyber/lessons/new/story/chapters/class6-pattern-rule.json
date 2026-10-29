@@ -1,0 +1,93 @@
+{
+  "duration": 101.436,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "a39955f3d1576f8e7e7119a5fb7f3419d6ce93aecb33d874b74cf0a0043f3054",
+  "scenes": [
+    {
+      "id": "class6-pattern-rule-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "Meera decorates a display with a blue, yellow, yellow ribbon pattern. Kabir builds card towers containing three, five and seven cards. Both are patterns, but one repeats a unit while the other changes a count according to a stated rule.",
+      "speech": "Meera decorates a display with a blue, yellow, yellow ribbon pattern. Kabir builds card towers containing three, five and seven cards. Both are patterns, but one repeats a unit while the other changes a count according to a stated rule.",
+      "dialogue": "Repeating units",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 17.592
+    },
+    {
+      "id": "class6-pattern-rule-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "The team says its rule aloud instead of simply guessing the next item. For the towers, start with three and add two each time. For the ribbon, repeat the whole three-colour unit. Describing the unit or change makes the prediction testable.",
+      "speech": "The team says its rule aloud instead of simply guessing the next item. For the towers, start with three and add two each time. For the ribbon, repeat the whole three-colour unit. Describing the unit or change makes the prediction testable.",
+      "dialogue": "Growing counts",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 18.242,
+      "duration": 18
+    },
+    {
+      "id": "class6-pattern-rule-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "A short list can fit more than one invented rule, so the teacher provides the construction rule for these tasks. Learners check all supplied cases and a later example. If one case disagrees, they revise their explanation rather than hiding the awkward value.",
+      "speech": "A short list can fit more than one invented rule, so the teacher provides the construction rule for these tasks. Learners check all supplied cases and a later example. If one case disagrees, they revise their explanation rather than hiding the awkward value.",
+      "dialogue": "Testing a rule",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 36.892,
+      "duration": 18.624
+    },
+    {
+      "id": "class6-pattern-rule-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "Construction rule: start at three and add two cards per tower. Supplied counts are three, five and seven. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "Construction rule: start at three and add two cards per tower. Supplied counts are three, five and seven. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "The tower rule adds two. What comes after seven?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 56.166,
+      "duration": 13.848
+    },
+    {
+      "id": "class6-pattern-rule-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "The next tower uses nine cards because seven plus two is nine. The prediction follows the supplied construction rule, not an assumption that every pattern must double.",
+      "speech": "The next tower uses nine cards because seven plus two is nine. The prediction follows the supplied construction rule, not an assumption that every pattern must double.",
+      "dialogue": "Continue a supplied growing pattern.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 70.664,
+      "duration": 12.024
+    },
+    {
+      "id": "class6-pattern-rule-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through repeating units, then growing counts, then testing a rule. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through repeating units, then growing counts, then testing a rule. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why should you test a rule on a later example?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 83.338,
+      "duration": 17.448
+    }
+  ]
+}

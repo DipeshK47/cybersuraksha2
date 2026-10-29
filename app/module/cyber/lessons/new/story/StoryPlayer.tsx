@@ -157,8 +157,8 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     <nav className={s.chapters} aria-label="Story scenes">
       {scenes.map((item, index) => <button key={item.id} aria-current={scene === index ? "step" : undefined} aria-label={`Scene ${index + 1}: ${item.label}`} onClick={() => void jump(index)} type="button"><span>{index + 1}</span><span>{item.label}</span></button>)}
     </nav>
-    <div className={s.stage} data-chapter={current.id} data-tone={current.tone}>
-      <div className={s.actor}>
+    <div className={s.stage} data-story-stage data-chapter={current.id} data-tone={current.tone}>
+      <div className={s.actor} data-story-actor>
         <div className={s.speech} key={scene}>{current.dialogue}</div>
         {chapter.Character ? <chapter.Character mood={mood} playing={playing} reduced={reduced} /> : <StoryCharacter asset={chapter.character.asset} name={chapter.character.name} mood={mood} playing={playing} />}
         <div className={s.name}><span>{chapter.character.name}</span><span>{current.status}</span></div>

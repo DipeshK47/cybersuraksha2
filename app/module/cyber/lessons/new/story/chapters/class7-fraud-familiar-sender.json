@@ -1,0 +1,93 @@
+{
+  "duration": 102.42,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c3af069447832f6348687a75ae56b7b1ffbf6e9eb02d55ccbeb79377e802849f",
+  "scenes": [
+    {
+      "id": "class7-fraud-familiar-sender-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "A fictional message appears to come from Neel’s aunt. It uses her name and a familiar-looking profile picture, but asks for urgent help through a new contact. Tara notices that the identity claim and the requested action come from the same unverified source.",
+      "speech": "A fictional message appears to come from Neel’s aunt. It uses her name and a familiar-looking profile picture, but asks for urgent help through a new contact. Tara notices that the identity claim and the requested action come from the same unverified source.",
+      "dialogue": "Identity claims",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 18.6
+    },
+    {
+      "id": "class7-fraud-familiar-sender-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "Names and pictures can be copied, and a familiar-sounding voice still needs context and checking. Neel should not be expected to decide authenticity from appearance alone. The teacher suggests involving a trusted adult and using contact information already known before this message arrived.",
+      "speech": "Names and pictures can be copied, and a familiar-sounding voice still needs context and checking. Neel should not be expected to decide authenticity from appearance alone. The teacher suggests involving a trusted adult and using contact information already known before this message arrived.",
+      "dialogue": "Independent contact",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 19.25,
+      "duration": 20.496
+    },
+    {
+      "id": "class7-fraud-familiar-sender-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The new number inside the request leads back to the same claim, so it is not an independent check. The adult uses the existing contact list to ask about the request separately. The class records what is known and what remains uncertain without accusing a named person on the basis of an image.",
+      "speech": "The new number inside the request leads back to the same claim, so it is not an independent check. The adult uses the existing contact list to ask about the request separately. The class records what is known and what remains uncertain without accusing a named person on the basis of an image.",
+      "dialogue": "Pause the pressure",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 40.396,
+      "duration": 20.976
+    },
+    {
+      "id": "class7-fraud-familiar-sender-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "The message supplies a new number; a trusted adult already has the relative’s earlier contact details. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "The message supplies a new number; a trusted adult already has the relative’s earlier contact details. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Which contact route provides an independent check?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 62.022,
+      "duration": 13.008
+    },
+    {
+      "id": "class7-fraud-familiar-sender-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Ask the adult to use the previously known contact. Replying to the new number only asks the same unverified source to confirm itself.",
+      "speech": "Ask the adult to use the previously known contact. Replying to the new number only asks the same unverified source to confirm itself.",
+      "dialogue": "Reject a new number supplied by the same request as independent verification.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 75.68,
+      "duration": 10.704
+    },
+    {
+      "id": "class7-fraud-familiar-sender-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate identity claims, then independent contact, then pause the pressure. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate identity claims, then independent contact, then pause the pressure. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why is a contact supplied by the same message not an independent check?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 87.034,
+      "duration": 14.736
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "duration": 100.644,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e060bd9141300ecdf8d8025b74103b055ce425f95ce44c40b044e83396a11f98",
+  "scenes": [
+    {
+      "id": "class7-loops-and-totals-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab prepares supply packs. Tara starts a counter at one and adds two for each pretend pack. Neel writes two after the first pack, forgetting the starting value. The teacher asks them to record the current total before and after every update.",
+      "speech": "The Connection Lab prepares supply packs. Tara starts a counter at one and adds two for each pretend pack. Neel writes two after the first pack, forgetting the starting value. The teacher asks them to record the current total before and after every update.",
+      "dialogue": "Initial state",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 19.536
+    },
+    {
+      "id": "class7-loops-and-totals-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "A loop repeats an action while the state can change each time. Starting at one, four add-two updates produce three, five, seven and nine. The repetition count is four, not nine: one number counts actions, while the other records the resulting total after those actions.",
+      "speech": "A loop repeats an action while the state can change each time. Starting at one, four add-two updates produce three, five, seven and nine. The repetition count is four, not nine: one number counts actions, while the other records the resulting total after those actions.",
+      "dialogue": "Repeated update",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 20.186,
+      "duration": 20.088
+    },
+    {
+      "id": "class7-loops-and-totals-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The team checks zero repetitions and one repetition before trying a new starting value. With no updates, the initial one remains unchanged. These boundary checks reveal a forgotten start or an extra action. When the instruction changes, the trace must be recalculated rather than copied from the earlier run.",
+      "speech": "The team checks zero repetitions and one repetition before trying a new starting value. With no updates, the initial one remains unchanged. These boundary checks reveal a forgotten start or an extra action. When the instruction changes, the trace must be recalculated rather than copied from the earlier run.",
+      "dialogue": "Boundary checks",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 40.924,
+      "duration": 22.752
+    },
+    {
+      "id": "class7-loops-and-totals-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Initial value 1; repeat add 2 exactly four times. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Initial value 1; repeat add 2 exactly four times. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "What is the total after four add-two updates from one?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 64.326,
+      "duration": 10.392
+    },
+    {
+      "id": "class7-loops-and-totals-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "The total is nine: one becomes three, five, seven, then nine. Four counts updates; nine is the final state.",
+      "speech": "The total is nine: one becomes three, five, seven, then nine. Four counts updates; nine is the final state.",
+      "dialogue": "Trace a total after each repeated update.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 75.368,
+      "duration": 9.624
+    },
+    {
+      "id": "class7-loops-and-totals-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate initial state, then repeated update, then boundary checks. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate initial state, then repeated update, then boundary checks. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Why is the final total different from the number of repetitions?",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 85.642,
+      "duration": 14.352
+    }
+  ]
+}

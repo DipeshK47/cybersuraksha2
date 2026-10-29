@@ -1,0 +1,93 @@
+{
+  "duration": 101.028,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "e6e6ece746870356155b4f29db1bce59e8c454df83e0690939af84139c191488",
+  "scenes": [
+    {
+      "id": "class6-ai-label-cards-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "The discovery club makes illustrated leaf cards. Their task is to sort drawings as round or pointed. Meera records the visible shape, while Kabir wonders whether the artist’s home address would help the sorter choose the right group.",
+      "speech": "The discovery club makes illustrated leaf cards. Their task is to sort drawings as round or pointed. Meera records the visible shape, while Kabir wonders whether the artist’s home address would help the sorter choose the right group.",
+      "dialogue": "Features to observe",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.728
+    },
+    {
+      "id": "class6-ai-label-cards-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "A feature is information used to make a prediction. A label is the answer supplied for an example during learning. Shape is relevant here; a home address is unnecessary. Collecting more private information does not automatically make a useful learning dataset.",
+      "speech": "A feature is information used to make a prediction. A label is the answer supplied for an example during learning. Shape is relevant here; a home address is unnecessary. Collecting more private information does not automatically make a useful learning dataset.",
+      "dialogue": "Labels to teach",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.378,
+      "duration": 19.632
+    },
+    {
+      "id": "class6-ai-label-cards-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "One drawing is smudged so neither shape is clear. The teacher keeps it aside for review instead of forcing an answer. A confident invented label could teach the wrong connection. A smaller clear set is more useful than a larger set containing hidden guesses.",
+      "speech": "One drawing is smudged so neither shape is clear. The teacher keeps it aside for review instead of forcing an answer. A confident invented label could teach the wrong connection. A smaller clear set is more useful than a larger set containing hidden guesses.",
+      "dialogue": "Uncertain examples",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 37.66,
+      "duration": 19.176
+    },
+    {
+      "id": "class6-ai-label-cards-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "The sorting task has two shape labels, but the drawing does not show enough detail to decide either one. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "The sorting task has two shape labels, but the drawing does not show enough detail to decide either one. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "What should happen to the smudged drawing?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 57.486,
+      "duration": 12.48
+    },
+    {
+      "id": "class6-ai-label-cards-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "Keep the unclear example for review rather than inventing a label. Uncertainty should remain visible so the team can improve the example later.",
+      "speech": "Keep the unclear example for review rather than inventing a label. Uncertainty should remain visible so the team can improve the example later.",
+      "dialogue": "Choose relevant information for a stated sorting task.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 70.616,
+      "duration": 10.344
+    },
+    {
+      "id": "class6-ai-label-cards-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through features to observe, then labels to teach, then uncertain examples. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through features to observe, then labels to teach, then uncertain examples. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "Why is an honest unknown better than a made-up training label?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 81.61,
+      "duration": 18.768
+    }
+  ]
+}

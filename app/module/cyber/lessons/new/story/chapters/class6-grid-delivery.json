@@ -1,0 +1,93 @@
+{
+  "duration": 100.716,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "c846822a77c7a9d4c57f1237bfe9cdb991ece164a0bb519554df4a9a6c69e363",
+  "scenes": [
+    {
+      "id": "class6-grid-delivery-1",
+      "label": "Meet the team",
+      "title": "The discovery club",
+      "mood": "thinking",
+      "caption": "The discovery club draws a delivery robot on a three-by-three paper grid. It starts in the top left and must reach the bottom right. The middle square is blocked, so a straight-looking shortcut through that square is not an allowed route.",
+      "speech": "The discovery club draws a delivery robot on a three-by-three paper grid. It starts in the top left and must reach the bottom right. The middle square is blocked, so a straight-looking shortcut through that square is not an allowed route.",
+      "dialogue": "Grid positions",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 0,
+      "duration": 16.416
+    },
+    {
+      "id": "class6-grid-delivery-2",
+      "label": "The problem",
+      "title": "A problem to solve",
+      "mood": "surprise",
+      "caption": "The robot understands up, down, left and right, with one command moving one neighbouring square. Diagonal jumps and moves beyond the edge are not available. Meera records the position after each command so the plan can be checked before any route is approved.",
+      "speech": "The robot understands up, down, left and right, with one command moving one neighbouring square. Diagonal jumps and moves beyond the edge are not available. Meera records the position after each command so the plan can be checked before any route is approved.",
+      "dialogue": "Valid moves",
+      "status": "Class 6 Discovery Club",
+      "tone": "trouble",
+      "start": 17.066,
+      "duration": 18.552
+    },
+    {
+      "id": "class6-grid-delivery-3",
+      "label": "How it works",
+      "title": "Try the idea",
+      "mood": "thinking",
+      "caption": "Kabir tests a four-step route around the outside. When the teacher blocks a different square, the old successful route may no longer work. The team changes the plan and tests again, rather than treating a previous success as permanent permission to ignore the new obstacle.",
+      "speech": "Kabir tests a four-step route around the outside. When the teacher blocks a different square, the old successful route may no longer work. The team changes the plan and tests again, rather than treating a previous success as permanent permission to ignore the new obstacle.",
+      "dialogue": "A changed obstacle",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 36.268,
+      "duration": 19.2
+    },
+    {
+      "id": "class6-grid-delivery-4",
+      "label": "Your decision",
+      "title": "Choose and explain",
+      "mood": "thinking",
+      "caption": "Only up, down, left and right are available. The middle square is blocked in this supplied three-by-three grid. Compare the actions, then inspect the explanation before moving on.",
+      "speech": "Only up, down, left and right are available. The middle square is blocked in this supplied three-by-three grid. Compare the actions, then inspect the explanation before moving on.",
+      "dialogue": "Can the robot move diagonally across the middle?",
+      "status": "Class 6 Discovery Club",
+      "tone": "normal",
+      "start": 56.118,
+      "duration": 13.848
+    },
+    {
+      "id": "class6-grid-delivery-5",
+      "label": "What changes",
+      "title": "See the consequence",
+      "mood": "happy",
+      "caption": "No. Use the allowed neighbouring moves and avoid the blocked square. A visually short path is not valid when it breaks the movement rules.",
+      "speech": "No. Use the allowed neighbouring moves and avoid the blocked square. A visually short path is not valid when it breaks the movement rules.",
+      "dialogue": "Reach a goal without entering blocked cells.",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 70.616,
+      "duration": 10.968
+    },
+    {
+      "id": "class6-grid-delivery-6",
+      "label": "Enter the lab",
+      "title": "Your turn in the lab",
+      "mood": "happy",
+      "caption": "Now open the practice lab. Work through grid positions, then valid moves, then a changed obstacle. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "speech": "Now open the practice lab. Work through grid positions, then valid moves, then a changed obstacle. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "dialogue": "What changed when the second obstacle was added?",
+      "status": "Class 6 Discovery Club",
+      "tone": "resolved",
+      "start": 82.234,
+      "duration": 17.832
+    }
+  ]
+}

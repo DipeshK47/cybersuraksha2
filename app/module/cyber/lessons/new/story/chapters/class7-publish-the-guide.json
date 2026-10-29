@@ -1,0 +1,93 @@
+{
+  "duration": 102.132,
+  "narration": {
+    "voice": "en-IN-NeerjaNeural",
+    "rate": "+0%",
+    "gapSeconds": 0.65,
+    "sampleRate": 48000,
+    "bitrate": "128k",
+    "targetLufs": -18,
+    "peakDb": -1.5
+  },
+  "narrationHash": "5d101071975b3c4e477824b4f309eee69b901d853f34147e1f13f376585ffc4a",
+  "scenes": [
+    {
+      "id": "class7-publish-the-guide-1",
+      "label": "Meet the team",
+      "title": "The Connection Lab",
+      "mood": "thinking",
+      "caption": "The Connection Lab’s guide is almost ready. Its artwork is clean, but a former volunteer still has editing access and one photo lacks agreement for public use. Neel wants to publish because the privacy section passed yesterday; Tara checks the other conditions.",
+      "speech": "The Connection Lab’s guide is almost ready. Its artwork is clean, but a former volunteer still has editing access and one photo lacks agreement for public use. Neel wants to publish because the privacy section passed yesterday; Tara checks the other conditions.",
+      "dialogue": "A connected risk review",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 0,
+      "duration": 19.368
+    },
+    {
+      "id": "class7-publish-the-guide-2",
+      "label": "The problem",
+      "title": "What changed?",
+      "mood": "surprise",
+      "caption": "A release decision combines several kinds of evidence. Removing a location clue does not end an old session, and a correct permission does not supply photo consent. The team lists each remaining issue, its owner and the observation that would show a repair worked.",
+      "speech": "A release decision combines several kinds of evidence. Removing a location clue does not end an old session, and a correct permission does not supply photo consent. The team lists each remaining issue, its owner and the observation that would show a repair worked.",
+      "dialogue": "Evidence of each repair",
+      "status": "Class 7 Connection Lab",
+      "tone": "trouble",
+      "start": 20.018,
+      "duration": 18.504
+    },
+    {
+      "id": "class7-publish-the-guide-3",
+      "label": "How it works",
+      "title": "Follow the evidence",
+      "mood": "thinking",
+      "caption": "The teacher checks the final public preview, current role list and tested approved backup. An unapproved photo stays out. When a new editor or audience is proposed, the team reviews again instead of treating yesterday’s approval as permanent proof for a different plan.",
+      "speech": "The teacher checks the final public preview, current role list and tested approved backup. An unapproved photo stays out. When a new editor or audience is proposed, the team reviews again instead of treating yesterday’s approval as permanent proof for a different plan.",
+      "dialogue": "Changed release conditions",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 39.172,
+      "duration": 19.368
+    },
+    {
+      "id": "class7-publish-the-guide-4",
+      "label": "Your decision",
+      "title": "Decide and explain",
+      "mood": "thinking",
+      "caption": "Former-volunteer editing access and missing photo consent remain unresolved. The proposed audience is now public. Compare the actions, then explain which evidence supports your decision.",
+      "speech": "Former-volunteer editing access and missing photo consent remain unresolved. The proposed audience is now public. Compare the actions, then explain which evidence supports your decision.",
+      "dialogue": "Is yesterday’s privacy pass enough to publish today?",
+      "status": "Class 7 Connection Lab",
+      "tone": "normal",
+      "start": 59.19,
+      "duration": 14.232
+    },
+    {
+      "id": "class7-publish-the-guide-5",
+      "label": "What changes",
+      "title": "Check the consequence",
+      "mood": "happy",
+      "caption": "Complete and verify the remaining repairs with the teacher before release. A previous check of one issue does not establish readiness for a changed whole plan.",
+      "speech": "Complete and verify the remaining repairs with the teacher before release. A previous check of one issue does not establish readiness for a changed whole plan.",
+      "dialogue": "Connect each repair with an observable check.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 74.072,
+      "duration": 11.136
+    },
+    {
+      "id": "class7-publish-the-guide-6",
+      "label": "Enter the lab",
+      "title": "Investigate in the lab",
+      "mood": "happy",
+      "caption": "Investigate a connected risk review, then evidence of each repair, then changed release conditions. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "speech": "Investigate a connected risk review, then evidence of each repair, then changed release conditions. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "dialogue": "Name a risk, its repair and the evidence that would show the repair worked.",
+      "status": "Class 7 Connection Lab",
+      "tone": "resolved",
+      "start": 85.858,
+      "duration": 15.624
+    }
+  ]
+}
