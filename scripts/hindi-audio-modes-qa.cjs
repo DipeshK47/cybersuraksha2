@@ -1,4 +1,6 @@
-// Run against a local dev/demo server: BASE_URL=http://localhost:3000 node scripts/hindi-audio-modes-qa.cjs
+// Run against a local dev/demo server:
+//   QA_TEACHER_EMAIL=... QA_TEACHER_PASSWORD=... BASE_URL=http://localhost:3000 node scripts/hindi-audio-modes-qa.cjs
+// The local demo school's teacher login is listed in README.md ("Demo logins"); it is seeded in development only.
 // Checks the three language modes (English, हिन्दी, English + हिन्दी ऑडियो) against real story pages.
 const assert = require('node:assert/strict');
 const playwright = require('playwright');
@@ -7,6 +9,8 @@ const base = process.env.BASE_URL || 'http://localhost:3000';
 const lesson = 'class6-private-information';
 const hindi = manifest[lesson];
 const errors = [];
+const { QA_TEACHER_EMAIL: teacherEmail, QA_TEACHER_PASSWORD: teacherPassword } = process.env;
+if (!teacherEmail || !teacherPassword) { console.error('Set QA_TEACHER_EMAIL and QA_TEACHER_PASSWORD (see README.md, "Demo logins").'); process.exit(2); }
 
 const url = (slug, grade) => `${base}/module/cyber/${slug}?grade=${grade}&role=teacher`;
 const hasDevanagari = text => /[ऀ-ॿ]/.test(text);
@@ -31,7 +35,7 @@ const htmlLang = page => page.locator('html').getAttribute('lang');
 async function main() {
   const browser = await playwright.chromium.launch();
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, reducedMotion: 'reduce' });
-  const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: 'teacher@dpsrkp.edu.in', password: 'Teacher@123' } });
+  const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: teacherEmail, password: teacherPassword } });
   assert.ok(login.ok(), `teacher login ${login.status()}`);
   const page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));

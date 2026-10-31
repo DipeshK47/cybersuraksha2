@@ -13,6 +13,8 @@ const target = `${base}/module/cyber/your-digital-risk-map?grade=11&role=teacher
 const output = path.resolve('.story-qa/hindi-audio');
 fs.mkdirSync(output, { recursive: true });
 const errors = [];
+const { QA_TEACHER_EMAIL: teacherEmail, QA_TEACHER_PASSWORD: teacherPassword } = process.env;
+if (!teacherEmail || !teacherPassword) { console.error('Set QA_TEACHER_EMAIL and QA_TEACHER_PASSWORD (see README.md, "Demo logins").'); process.exit(2); }
 
 async function ready(page, hindi) {
   await page.waitForFunction(hindi => {
@@ -29,7 +31,7 @@ async function position(page, expected) {
 async function checks(browser, width) {
   const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
   // Lesson pages need a session; the local demo school's teacher account is seeded in development.
-  const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: process.env.QA_TEACHER_EMAIL || 'teacher@dpsrkp.edu.in', password: process.env.QA_TEACHER_PASSWORD || 'Teacher@123' } });
+  const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: teacherEmail, password: teacherPassword } });
   assert.ok(login.ok(), `teacher login ${login.status()}`);
   const page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
@@ -111,7 +113,7 @@ async function checks(browser, width) {
     await checks(browser, 1280);
     await checks(browser, 390);
     const context = await browser.newContext();
-    const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: process.env.QA_TEACHER_EMAIL || 'teacher@dpsrkp.edu.in', password: process.env.QA_TEACHER_PASSWORD || 'Teacher@123' } });
+    const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: teacherEmail, password: teacherPassword } });
     assert.ok(login.ok(), `teacher login ${login.status()}`);
     const page = await context.newPage();
     page.on('pageerror', error => errors.push(error.message));
