@@ -28,6 +28,9 @@ async function position(page, expected) {
 }
 async function checks(browser, width) {
   const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
+  // Lesson pages need a session; the local demo school's teacher account is seeded in development.
+  const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: process.env.QA_TEACHER_EMAIL || 'teacher@dpsrkp.edu.in', password: process.env.QA_TEACHER_PASSWORD || 'Teacher@123' } });
+  assert.ok(login.ok(), `teacher login ${login.status()}`);
   const page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(target, { waitUntil: 'networkidle' });
@@ -107,7 +110,10 @@ async function checks(browser, width) {
   try {
     await checks(browser, 1280);
     await checks(browser, 390);
-    const page = await browser.newPage();
+    const context = await browser.newContext();
+    const login = await context.request.post(`${base}/api/auth/teacher`, { data: { email: process.env.QA_TEACHER_EMAIL || 'teacher@dpsrkp.edu.in', password: process.env.QA_TEACHER_PASSWORD || 'Teacher@123' } });
+    assert.ok(login.ok(), `teacher login ${login.status()}`);
+    const page = await context.newPage();
     page.on('pageerror', error => errors.push(error.message));
     await page.route('**/story-hi.mp3', route => route.abort());
     await page.goto(target, { waitUntil: 'networkidle' });

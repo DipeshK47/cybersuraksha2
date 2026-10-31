@@ -1,0 +1,2342 @@
+{
+ "class6-account-keys": {
+  "src": "/audio/cyber/class6-account-keys/story-hi.mp3",
+  "duration": 95.868,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.8
+   },
+   {
+    "start": 13.45,
+    "duration": 16.4
+   },
+   {
+    "start": 30.5,
+    "duration": 19.12
+   },
+   {
+    "start": 50.27,
+    "duration": 15.04
+   },
+   {
+    "start": 65.96,
+    "duration": 10.08
+   },
+   {
+    "start": 76.69,
+    "duration": 18.528
+   }
+  ]
+ },
+ "class6-ai-check-the-answer": {
+  "src": "/audio/cyber/class6-ai-check-the-answer/story-hi.mp3",
+  "duration": 95.108,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.84
+   },
+   {
+    "start": 14.49,
+    "duration": 16.16
+   },
+   {
+    "start": 31.3,
+    "duration": 16.96
+   },
+   {
+    "start": 48.91,
+    "duration": 17.28
+   },
+   {
+    "start": 66.84,
+    "duration": 9.04
+   },
+   {
+    "start": 76.53,
+    "duration": 17.928
+   }
+  ]
+ },
+ "class6-ai-club-review": {
+  "src": "/audio/cyber/class6-ai-club-review/story-hi.mp3",
+  "duration": 97.14,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.04
+   },
+   {
+    "start": 15.69,
+    "duration": 15.44
+   },
+   {
+    "start": 31.78,
+    "duration": 16.48
+   },
+   {
+    "start": 48.91,
+    "duration": 17.36
+   },
+   {
+    "start": 66.92,
+    "duration": 10.08
+   },
+   {
+    "start": 77.65,
+    "duration": 18.84
+   }
+  ]
+ },
+ "class6-ai-fresh-test": {
+  "src": "/audio/cyber/class6-ai-fresh-test/story-hi.mp3",
+  "duration": 87.228,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.96
+   },
+   {
+    "start": 13.61,
+    "duration": 15.44
+   },
+   {
+    "start": 29.7,
+    "duration": 13.28
+   },
+   {
+    "start": 43.63,
+    "duration": 15.2
+   },
+   {
+    "start": 59.48,
+    "duration": 8.4
+   },
+   {
+    "start": 68.53,
+    "duration": 18.048
+   }
+  ]
+ },
+ "class6-ai-label-cards": {
+  "src": "/audio/cyber/class6-ai-label-cards/story-hi.mp3",
+  "duration": 97.068,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.32
+   },
+   {
+    "start": 14.97,
+    "duration": 17.2
+   },
+   {
+    "start": 32.82,
+    "duration": 17.76
+   },
+   {
+    "start": 51.23,
+    "duration": 15.28
+   },
+   {
+    "start": 67.16,
+    "duration": 9.84
+   },
+   {
+    "start": 77.65,
+    "duration": 18.768
+   }
+  ]
+ },
+ "class6-ai-missing-examples": {
+  "src": "/audio/cyber/class6-ai-missing-examples/story-hi.mp3",
+  "duration": 97.612,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.32
+   },
+   {
+    "start": 14.97,
+    "duration": 15.28
+   },
+   {
+    "start": 30.9,
+    "duration": 17.36
+   },
+   {
+    "start": 48.91,
+    "duration": 17.36
+   },
+   {
+    "start": 66.92,
+    "duration": 10.96
+   },
+   {
+    "start": 78.53,
+    "duration": 18.432
+   }
+  ]
+ },
+ "class6-ai-or-instructions": {
+  "src": "/audio/cyber/class6-ai-or-instructions/story-hi.mp3",
+  "duration": 96.892,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 14.56
+   },
+   {
+    "start": 30.58,
+    "duration": 17.68
+   },
+   {
+    "start": 48.91,
+    "duration": 19.04
+   },
+   {
+    "start": 68.6,
+    "duration": 9.04
+   },
+   {
+    "start": 78.29,
+    "duration": 17.952
+   }
+  ]
+ },
+ "class6-ai-safe-request": {
+  "src": "/audio/cyber/class6-ai-safe-request/story-hi.mp3",
+  "duration": 93.78,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.12
+   },
+   {
+    "start": 13.77,
+    "duration": 15.28
+   },
+   {
+    "start": 29.7,
+    "duration": 16.32
+   },
+   {
+    "start": 46.67,
+    "duration": 17.52
+   },
+   {
+    "start": 64.84,
+    "duration": 9.52
+   },
+   {
+    "start": 75.01,
+    "duration": 18.12
+   }
+  ]
+ },
+ "class6-ai-spot-pattern": {
+  "src": "/audio/cyber/class6-ai-spot-pattern/story-hi.mp3",
+  "duration": 87.42,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.08
+   },
+   {
+    "start": 12.73,
+    "duration": 14.24
+   },
+   {
+    "start": 27.62,
+    "duration": 14.48
+   },
+   {
+    "start": 42.75,
+    "duration": 16.4
+   },
+   {
+    "start": 59.8,
+    "duration": 8.08
+   },
+   {
+    "start": 68.53,
+    "duration": 18.24
+   }
+  ]
+ },
+ "class6-app-permissions": {
+  "src": "/audio/cyber/class6-app-permissions/story-hi.mp3",
+  "duration": 92.268,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.88
+   },
+   {
+    "start": 13.53,
+    "duration": 16.4
+   },
+   {
+    "start": 30.58,
+    "duration": 16.4
+   },
+   {
+    "start": 47.63,
+    "duration": 15.84
+   },
+   {
+    "start": 64.12,
+    "duration": 8.32
+   },
+   {
+    "start": 73.09,
+    "duration": 18.528
+   }
+  ]
+ },
+ "class6-backup-copy": {
+  "src": "/audio/cyber/class6-backup-copy/story-hi.mp3",
+  "duration": 91.396,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.04
+   },
+   {
+    "start": 13.69,
+    "duration": 17.6
+   },
+   {
+    "start": 31.94,
+    "duration": 14.32
+   },
+   {
+    "start": 46.91,
+    "duration": 15.92
+   },
+   {
+    "start": 63.48,
+    "duration": 8.16
+   },
+   {
+    "start": 72.29,
+    "duration": 18.456
+   }
+  ]
+ },
+ "class6-break-the-task": {
+  "src": "/audio/cyber/class6-break-the-task/story-hi.mp3",
+  "duration": 95.06,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 14.96
+   },
+   {
+    "start": 30.98,
+    "duration": 16.96
+   },
+   {
+    "start": 48.59,
+    "duration": 15.84
+   },
+   {
+    "start": 65.08,
+    "duration": 10.8
+   },
+   {
+    "start": 76.53,
+    "duration": 17.88
+   }
+  ]
+ },
+ "class6-club-safety-check": {
+  "src": "/audio/cyber/class6-club-safety-check/story-hi.mp3",
+  "duration": 93.676,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.08
+   },
+   {
+    "start": 12.73,
+    "duration": 14.64
+   },
+   {
+    "start": 28.02,
+    "duration": 16.4
+   },
+   {
+    "start": 45.07,
+    "duration": 18.08
+   },
+   {
+    "start": 63.8,
+    "duration": 10.24
+   },
+   {
+    "start": 74.69,
+    "duration": 18.336
+   }
+  ]
+ },
+ "class6-debug-the-plan": {
+  "src": "/audio/cyber/class6-debug-the-plan/story-hi.mp3",
+  "duration": 88.692,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.76
+   },
+   {
+    "start": 14.41,
+    "duration": 12.8
+   },
+   {
+    "start": 27.86,
+    "duration": 14.64
+   },
+   {
+    "start": 43.15,
+    "duration": 16.4
+   },
+   {
+    "start": 60.2,
+    "duration": 8.88
+   },
+   {
+    "start": 69.73,
+    "duration": 18.312
+   }
+  ]
+ },
+ "class6-exact-instructions": {
+  "src": "/audio/cyber/class6-exact-instructions/story-hi.mp3",
+  "duration": 86.532,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.76
+   },
+   {
+    "start": 14.41,
+    "duration": 13.04
+   },
+   {
+    "start": 28.1,
+    "duration": 14.56
+   },
+   {
+    "start": 43.31,
+    "duration": 14.64
+   },
+   {
+    "start": 58.6,
+    "duration": 8.56
+   },
+   {
+    "start": 67.81,
+    "duration": 18.072
+   }
+  ]
+ },
+ "class6-fraud-club-case": {
+  "src": "/audio/cyber/class6-fraud-club-case/story-hi.mp3",
+  "duration": 97.364,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.84
+   },
+   {
+    "start": 14.49,
+    "duration": 15.12
+   },
+   {
+    "start": 30.26,
+    "duration": 17.76
+   },
+   {
+    "start": 48.67,
+    "duration": 17.68
+   },
+   {
+    "start": 67.0,
+    "duration": 10.32
+   },
+   {
+    "start": 77.97,
+    "duration": 18.744
+   }
+  ]
+ },
+ "class6-fraud-code-keeper": {
+  "src": "/audio/cyber/class6-fraud-code-keeper/story-hi.mp3",
+  "duration": 88.868,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.44
+   },
+   {
+    "start": 14.09,
+    "duration": 14.64
+   },
+   {
+    "start": 29.38,
+    "duration": 14.96
+   },
+   {
+    "start": 44.99,
+    "duration": 14.96
+   },
+   {
+    "start": 60.6,
+    "duration": 8.56
+   },
+   {
+    "start": 69.81,
+    "duration": 18.408
+   }
+  ]
+ },
+ "class6-fraud-familiar-name": {
+  "src": "/audio/cyber/class6-fraud-familiar-name/story-hi.mp3",
+  "duration": 94.388,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.8
+   },
+   {
+    "start": 15.45,
+    "duration": 16.56
+   },
+   {
+    "start": 32.66,
+    "duration": 16.8
+   },
+   {
+    "start": 50.11,
+    "duration": 16.0
+   },
+   {
+    "start": 66.76,
+    "duration": 7.44
+   },
+   {
+    "start": 74.85,
+    "duration": 18.888
+   }
+  ]
+ },
+ "class6-fraud-free-reward": {
+  "src": "/audio/cyber/class6-fraud-free-reward/story-hi.mp3",
+  "duration": 86.3,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.12
+   },
+   {
+    "start": 13.77,
+    "duration": 13.92
+   },
+   {
+    "start": 28.34,
+    "duration": 14.08
+   },
+   {
+    "start": 43.07,
+    "duration": 14.96
+   },
+   {
+    "start": 58.68,
+    "duration": 8.32
+   },
+   {
+    "start": 67.65,
+    "duration": 18.0
+   }
+  ]
+ },
+ "class6-fraud-help-without-blame": {
+  "src": "/audio/cyber/class6-fraud-help-without-blame/story-hi.mp3",
+  "duration": 93.708,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.64
+   },
+   {
+    "start": 13.29,
+    "duration": 16.56
+   },
+   {
+    "start": 30.5,
+    "duration": 15.28
+   },
+   {
+    "start": 46.43,
+    "duration": 15.12
+   },
+   {
+    "start": 62.2,
+    "duration": 10.96
+   },
+   {
+    "start": 73.81,
+    "duration": 19.248
+   }
+  ]
+ },
+ "class6-fraud-hurry-secret": {
+  "src": "/audio/cyber/class6-fraud-hurry-secret/story-hi.mp3",
+  "duration": 95.228,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.84
+   },
+   {
+    "start": 14.49,
+    "duration": 15.12
+   },
+   {
+    "start": 30.26,
+    "duration": 15.92
+   },
+   {
+    "start": 46.83,
+    "duration": 17.52
+   },
+   {
+    "start": 65.0,
+    "duration": 10.4
+   },
+   {
+    "start": 76.05,
+    "duration": 18.528
+   }
+  ]
+ },
+ "class6-fraud-pop-up-help": {
+  "src": "/audio/cyber/class6-fraud-pop-up-help/story-hi.mp3",
+  "duration": 94.46,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.28
+   },
+   {
+    "start": 15.93,
+    "duration": 15.68
+   },
+   {
+    "start": 32.26,
+    "duration": 15.76
+   },
+   {
+    "start": 48.67,
+    "duration": 16.96
+   },
+   {
+    "start": 66.28,
+    "duration": 8.88
+   },
+   {
+    "start": 75.81,
+    "duration": 18.0
+   }
+  ]
+ },
+ "class6-fraud-shop-evidence": {
+  "src": "/audio/cyber/class6-fraud-shop-evidence/story-hi.mp3",
+  "duration": 91.684,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.72
+   },
+   {
+    "start": 13.37,
+    "duration": 14.64
+   },
+   {
+    "start": 28.66,
+    "duration": 15.92
+   },
+   {
+    "start": 45.23,
+    "duration": 17.04
+   },
+   {
+    "start": 62.92,
+    "duration": 8.96
+   },
+   {
+    "start": 72.53,
+    "duration": 18.504
+   }
+  ]
+ },
+ "class6-grid-delivery": {
+  "src": "/audio/cyber/class6-grid-delivery/story-hi.mp3",
+  "duration": 92.132,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.44
+   },
+   {
+    "start": 14.09,
+    "duration": 15.84
+   },
+   {
+    "start": 30.58,
+    "duration": 15.6
+   },
+   {
+    "start": 46.83,
+    "duration": 17.52
+   },
+   {
+    "start": 65.0,
+    "duration": 8.0
+   },
+   {
+    "start": 73.65,
+    "duration": 17.832
+   }
+  ]
+ },
+ "class6-if-then-desk": {
+  "src": "/audio/cyber/class6-if-then-desk/story-hi.mp3",
+  "duration": 96.86,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.48
+   },
+   {
+    "start": 15.13,
+    "duration": 18.08
+   },
+   {
+    "start": 33.86,
+    "duration": 16.64
+   },
+   {
+    "start": 51.15,
+    "duration": 17.04
+   },
+   {
+    "start": 68.84,
+    "duration": 9.2
+   },
+   {
+    "start": 78.69,
+    "duration": 17.52
+   }
+  ]
+ },
+ "class6-kind-game-space": {
+  "src": "/audio/cyber/class6-kind-game-space/story-hi.mp3",
+  "duration": 95.988,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.24
+   },
+   {
+    "start": 14.89,
+    "duration": 16.16
+   },
+   {
+    "start": 31.7,
+    "duration": 18.16
+   },
+   {
+    "start": 50.51,
+    "duration": 15.92
+   },
+   {
+    "start": 67.08,
+    "duration": 9.68
+   },
+   {
+    "start": 77.41,
+    "duration": 17.928
+   }
+  ]
+ },
+ "class6-link-detour": {
+  "src": "/audio/cyber/class6-link-detour/story-hi.mp3",
+  "duration": 93.988,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.4
+   },
+   {
+    "start": 13.05,
+    "duration": 18.24
+   },
+   {
+    "start": 31.94,
+    "duration": 16.96
+   },
+   {
+    "start": 49.55,
+    "duration": 16.0
+   },
+   {
+    "start": 66.2,
+    "duration": 8.32
+   },
+   {
+    "start": 75.17,
+    "duration": 18.168
+   }
+  ]
+ },
+ "class6-pattern-rule": {
+  "src": "/audio/cyber/class6-pattern-rule/story-hi.mp3",
+  "duration": 96.628,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 15.6
+   },
+   {
+    "start": 31.78,
+    "duration": 16.08
+   },
+   {
+    "start": 48.51,
+    "duration": 18.56
+   },
+   {
+    "start": 67.72,
+    "duration": 10.16
+   },
+   {
+    "start": 78.53,
+    "duration": 17.448
+   }
+  ]
+ },
+ "class6-private-information": {
+  "src": "/audio/cyber/class6-private-information/story-hi.mp3",
+  "duration": 100.636,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.28
+   },
+   {
+    "start": 15.93,
+    "duration": 17.2
+   },
+   {
+    "start": 33.78,
+    "duration": 18.24
+   },
+   {
+    "start": 52.67,
+    "duration": 16.4
+   },
+   {
+    "start": 69.72,
+    "duration": 11.52
+   },
+   {
+    "start": 81.89,
+    "duration": 18.096
+   }
+  ]
+ },
+ "class6-repeat-with-a-count": {
+  "src": "/audio/cyber/class6-repeat-with-a-count/story-hi.mp3",
+  "duration": 94.396,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.92
+   },
+   {
+    "start": 16.57,
+    "duration": 14.24
+   },
+   {
+    "start": 31.46,
+    "duration": 16.16
+   },
+   {
+    "start": 48.27,
+    "duration": 16.96
+   },
+   {
+    "start": 65.88,
+    "duration": 9.12
+   },
+   {
+    "start": 75.65,
+    "duration": 18.096
+   }
+  ]
+ },
+ "class6-shared-device": {
+  "src": "/audio/cyber/class6-shared-device/story-hi.mp3",
+  "duration": 97.332,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.32
+   },
+   {
+    "start": 14.97,
+    "duration": 14.64
+   },
+   {
+    "start": 30.26,
+    "duration": 20.24
+   },
+   {
+    "start": 51.15,
+    "duration": 17.6
+   },
+   {
+    "start": 69.4,
+    "duration": 8.8
+   },
+   {
+    "start": 78.85,
+    "duration": 17.832
+   }
+  ]
+ },
+ "class6-trail-builder": {
+  "src": "/audio/cyber/class6-trail-builder/story-hi.mp3",
+  "duration": 98.62,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.2
+   },
+   {
+    "start": 15.85,
+    "duration": 14.96
+   },
+   {
+    "start": 31.46,
+    "duration": 16.0
+   },
+   {
+    "start": 48.11,
+    "duration": 19.92
+   },
+   {
+    "start": 68.68,
+    "duration": 10.4
+   },
+   {
+    "start": 79.73,
+    "duration": 18.24
+   }
+  ]
+ },
+ "class7-access-for-the-job": {
+  "src": "/audio/cyber/class7-access-for-the-job/story-hi.mp3",
+  "duration": 91.908,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.44
+   },
+   {
+    "start": 16.09,
+    "duration": 14.88
+   },
+   {
+    "start": 31.62,
+    "duration": 15.6
+   },
+   {
+    "start": 47.87,
+    "duration": 16.8
+   },
+   {
+    "start": 65.32,
+    "duration": 10.24
+   },
+   {
+    "start": 76.21,
+    "duration": 15.048
+   }
+  ]
+ },
+ "class7-ai-changing-picture": {
+  "src": "/audio/cyber/class7-ai-changing-picture/story-hi.mp3",
+  "duration": 93.524,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 18.08
+   },
+   {
+    "start": 34.5,
+    "duration": 17.44
+   },
+   {
+    "start": 52.59,
+    "duration": 13.76
+   },
+   {
+    "start": 67.0,
+    "duration": 9.6
+   },
+   {
+    "start": 77.25,
+    "duration": 15.624
+   }
+  ]
+ },
+ "class7-ai-choose-a-helper": {
+  "src": "/audio/cyber/class7-ai-choose-a-helper/story-hi.mp3",
+  "duration": 92.18,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.24
+   },
+   {
+    "start": 16.89,
+    "duration": 17.12
+   },
+   {
+    "start": 34.66,
+    "duration": 16.4
+   },
+   {
+    "start": 51.71,
+    "duration": 13.92
+   },
+   {
+    "start": 66.28,
+    "duration": 10.08
+   },
+   {
+    "start": 77.01,
+    "duration": 14.52
+   }
+  ]
+ },
+ "class7-ai-data-table": {
+  "src": "/audio/cyber/class7-ai-data-table/story-hi.mp3",
+  "duration": 93.82,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.08
+   },
+   {
+    "start": 18.73,
+    "duration": 15.68
+   },
+   {
+    "start": 35.06,
+    "duration": 18.08
+   },
+   {
+    "start": 53.79,
+    "duration": 13.6
+   },
+   {
+    "start": 68.04,
+    "duration": 9.6
+   },
+   {
+    "start": 78.29,
+    "duration": 14.88
+   }
+  ]
+ },
+ "class7-ai-fair-helper": {
+  "src": "/audio/cyber/class7-ai-fair-helper/story-hi.mp3",
+  "duration": 95.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.84
+   },
+   {
+    "start": 16.49,
+    "duration": 16.48
+   },
+   {
+    "start": 33.62,
+    "duration": 19.52
+   },
+   {
+    "start": 53.79,
+    "duration": 14.0
+   },
+   {
+    "start": 68.44,
+    "duration": 9.92
+   },
+   {
+    "start": 79.01,
+    "duration": 15.72
+   }
+  ]
+ },
+ "class7-ai-generated-explanation": {
+  "src": "/audio/cyber/class7-ai-generated-explanation/story-hi.mp3",
+  "duration": 96.348,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 19.28
+   },
+   {
+    "start": 19.93,
+    "duration": 16.96
+   },
+   {
+    "start": 37.54,
+    "duration": 17.84
+   },
+   {
+    "start": 56.03,
+    "duration": 15.92
+   },
+   {
+    "start": 72.6,
+    "duration": 8.0
+   },
+   {
+    "start": 81.25,
+    "duration": 14.448
+   }
+  ]
+ },
+ "class7-ai-mistake-record": {
+  "src": "/audio/cyber/class7-ai-mistake-record/story-hi.mp3",
+  "duration": 87.996,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 16.24
+   },
+   {
+    "start": 32.66,
+    "duration": 16.08
+   },
+   {
+    "start": 49.39,
+    "duration": 13.2
+   },
+   {
+    "start": 63.24,
+    "duration": 8.48
+   },
+   {
+    "start": 72.37,
+    "duration": 14.976
+   }
+  ]
+ },
+ "class7-ai-recommendation-loop": {
+  "src": "/audio/cyber/class7-ai-recommendation-loop/story-hi.mp3",
+  "duration": 84.708,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.88
+   },
+   {
+    "start": 13.53,
+    "duration": 16.56
+   },
+   {
+    "start": 30.74,
+    "duration": 15.84
+   },
+   {
+    "start": 47.23,
+    "duration": 13.2
+   },
+   {
+    "start": 61.08,
+    "duration": 7.52
+   },
+   {
+    "start": 69.25,
+    "duration": 14.808
+   }
+  ]
+ },
+ "class7-ai-train-the-sorter": {
+  "src": "/audio/cyber/class7-ai-train-the-sorter/story-hi.mp3",
+  "duration": 85.78,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.6
+   },
+   {
+    "start": 14.25,
+    "duration": 15.28
+   },
+   {
+    "start": 30.18,
+    "duration": 15.44
+   },
+   {
+    "start": 46.27,
+    "duration": 14.48
+   },
+   {
+    "start": 61.4,
+    "duration": 8.08
+   },
+   {
+    "start": 70.13,
+    "duration": 15.0
+   }
+  ]
+ },
+ "class7-before-the-download": {
+  "src": "/audio/cyber/class7-before-the-download/story-hi.mp3",
+  "duration": 87.436,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.44
+   },
+   {
+    "start": 14.09,
+    "duration": 15.04
+   },
+   {
+    "start": 29.78,
+    "duration": 14.88
+   },
+   {
+    "start": 45.31,
+    "duration": 16.72
+   },
+   {
+    "start": 62.68,
+    "duration": 8.24
+   },
+   {
+    "start": 71.57,
+    "duration": 15.216
+   }
+  ]
+ },
+ "class7-copies-and-versions": {
+  "src": "/audio/cyber/class7-copies-and-versions/story-hi.mp3",
+  "duration": 89.532,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.84
+   },
+   {
+    "start": 14.49,
+    "duration": 14.48
+   },
+   {
+    "start": 29.62,
+    "duration": 15.36
+   },
+   {
+    "start": 45.63,
+    "duration": 19.2
+   },
+   {
+    "start": 65.48,
+    "duration": 7.92
+   },
+   {
+    "start": 74.05,
+    "duration": 14.832
+   }
+  ]
+ },
+ "class7-digital-trail": {
+  "src": "/audio/cyber/class7-digital-trail/story-hi.mp3",
+  "duration": 91.02,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.08
+   },
+   {
+    "start": 14.73,
+    "duration": 15.28
+   },
+   {
+    "start": 30.66,
+    "duration": 16.32
+   },
+   {
+    "start": 47.63,
+    "duration": 17.6
+   },
+   {
+    "start": 65.88,
+    "duration": 8.72
+   },
+   {
+    "start": 75.25,
+    "duration": 15.12
+   }
+  ]
+ },
+ "class7-fraud-copied-reviews": {
+  "src": "/audio/cyber/class7-fraud-copied-reviews/story-hi.mp3",
+  "duration": 89.316,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.32
+   },
+   {
+    "start": 14.97,
+    "duration": 17.04
+   },
+   {
+    "start": 32.66,
+    "duration": 17.28
+   },
+   {
+    "start": 50.59,
+    "duration": 13.36
+   },
+   {
+    "start": 64.6,
+    "duration": 8.56
+   },
+   {
+    "start": 73.81,
+    "duration": 14.856
+   }
+  ]
+ },
+ "class7-fraud-entry-fee": {
+  "src": "/audio/cyber/class7-fraud-entry-fee/story-hi.mp3",
+  "duration": 88.324,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.28
+   },
+   {
+    "start": 13.93,
+    "duration": 16.4
+   },
+   {
+    "start": 30.98,
+    "duration": 16.88
+   },
+   {
+    "start": 48.51,
+    "duration": 14.96
+   },
+   {
+    "start": 64.12,
+    "duration": 8.48
+   },
+   {
+    "start": 73.25,
+    "duration": 14.424
+   }
+  ]
+ },
+ "class7-fraud-familiar-sender": {
+  "src": "/audio/cyber/class7-fraud-familiar-sender/story-hi.mp3",
+  "duration": 84.396,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.16
+   },
+   {
+    "start": 14.81,
+    "duration": 15.2
+   },
+   {
+    "start": 30.66,
+    "duration": 13.68
+   },
+   {
+    "start": 44.99,
+    "duration": 15.04
+   },
+   {
+    "start": 60.68,
+    "duration": 7.68
+   },
+   {
+    "start": 69.01,
+    "duration": 14.736
+   }
+  ]
+ },
+ "class7-fraud-qr-purpose": {
+  "src": "/audio/cyber/class7-fraud-qr-purpose/story-hi.mp3",
+  "duration": 91.052,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.24
+   },
+   {
+    "start": 14.89,
+    "duration": 17.68
+   },
+   {
+    "start": 33.22,
+    "duration": 16.88
+   },
+   {
+    "start": 50.75,
+    "duration": 15.36
+   },
+   {
+    "start": 66.76,
+    "duration": 8.4
+   },
+   {
+    "start": 75.81,
+    "duration": 14.592
+   }
+  ]
+ },
+ "class7-fraud-recurring-price": {
+  "src": "/audio/cyber/class7-fraud-recurring-price/story-hi.mp3",
+  "duration": 88.044,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.12
+   },
+   {
+    "start": 13.77,
+    "duration": 14.8
+   },
+   {
+    "start": 29.22,
+    "duration": 16.64
+   },
+   {
+    "start": 46.51,
+    "duration": 15.2
+   },
+   {
+    "start": 62.36,
+    "duration": 9.36
+   },
+   {
+    "start": 72.37,
+    "duration": 15.024
+   }
+  ]
+ },
+ "class7-fraud-refund-case": {
+  "src": "/audio/cyber/class7-fraud-refund-case/story-hi.mp3",
+  "duration": 97.116,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.44
+   },
+   {
+    "start": 16.09,
+    "duration": 18.08
+   },
+   {
+    "start": 34.82,
+    "duration": 18.24
+   },
+   {
+    "start": 53.71,
+    "duration": 16.24
+   },
+   {
+    "start": 70.6,
+    "duration": 10.0
+   },
+   {
+    "start": 81.25,
+    "duration": 15.216
+   }
+  ]
+ },
+ "class7-fraud-support-control": {
+  "src": "/audio/cyber/class7-fraud-support-control/story-hi.mp3",
+  "duration": 85.732,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.8
+   },
+   {
+    "start": 15.45,
+    "duration": 14.56
+   },
+   {
+    "start": 30.66,
+    "duration": 15.84
+   },
+   {
+    "start": 47.15,
+    "duration": 13.36
+   },
+   {
+    "start": 61.16,
+    "duration": 7.84
+   },
+   {
+    "start": 69.65,
+    "duration": 15.432
+   }
+  ]
+ },
+ "class7-fraud-useful-record": {
+  "src": "/audio/cyber/class7-fraud-useful-record/story-hi.mp3",
+  "duration": 96.18,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.48
+   },
+   {
+    "start": 17.13,
+    "duration": 17.92
+   },
+   {
+    "start": 35.7,
+    "duration": 19.04
+   },
+   {
+    "start": 55.39,
+    "duration": 15.04
+   },
+   {
+    "start": 71.08,
+    "duration": 8.56
+   },
+   {
+    "start": 80.29,
+    "duration": 15.24
+   }
+  ]
+ },
+ "class7-loops-and-totals": {
+  "src": "/audio/cyber/class7-loops-and-totals/story-hi.mp3",
+  "duration": 94.732,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 19.28
+   },
+   {
+    "start": 19.93,
+    "duration": 16.48
+   },
+   {
+    "start": 37.06,
+    "duration": 17.6
+   },
+   {
+    "start": 55.31,
+    "duration": 14.4
+   },
+   {
+    "start": 70.36,
+    "duration": 8.72
+   },
+   {
+    "start": 79.73,
+    "duration": 14.352
+   }
+  ]
+ },
+ "class7-message-with-bits": {
+  "src": "/audio/cyber/class7-message-with-bits/story-hi.mp3",
+  "duration": 91.62,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.56
+   },
+   {
+    "start": 15.21,
+    "duration": 16.0
+   },
+   {
+    "start": 31.86,
+    "duration": 16.72
+   },
+   {
+    "start": 49.23,
+    "duration": 15.84
+   },
+   {
+    "start": 65.72,
+    "duration": 10.32
+   },
+   {
+    "start": 76.69,
+    "duration": 14.28
+   }
+  ]
+ },
+ "class7-model-what-matters": {
+  "src": "/audio/cyber/class7-model-what-matters/story-hi.mp3",
+  "duration": 91.74,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.28
+   },
+   {
+    "start": 15.93,
+    "duration": 17.92
+   },
+   {
+    "start": 34.5,
+    "duration": 17.76
+   },
+   {
+    "start": 52.91,
+    "duration": 13.28
+   },
+   {
+    "start": 66.84,
+    "duration": 8.96
+   },
+   {
+    "start": 76.45,
+    "duration": 14.64
+   }
+  ]
+ },
+ "class7-ordered-list": {
+  "src": "/audio/cyber/class7-ordered-list/story-hi.mp3",
+  "duration": 90.836,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.76
+   },
+   {
+    "start": 14.41,
+    "duration": 17.52
+   },
+   {
+    "start": 32.58,
+    "duration": 18.88
+   },
+   {
+    "start": 52.11,
+    "duration": 15.84
+   },
+   {
+    "start": 68.6,
+    "duration": 6.8
+   },
+   {
+    "start": 76.05,
+    "duration": 14.136
+   }
+  ]
+ },
+ "class7-publish-the-guide": {
+  "src": "/audio/cyber/class7-publish-the-guide/story-hi.mp3",
+  "duration": 91.604,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.4
+   },
+   {
+    "start": 15.05,
+    "duration": 16.4
+   },
+   {
+    "start": 32.1,
+    "duration": 15.28
+   },
+   {
+    "start": 48.03,
+    "duration": 16.4
+   },
+   {
+    "start": 65.08,
+    "duration": 9.6
+   },
+   {
+    "start": 75.33,
+    "duration": 15.624
+   }
+  ]
+ },
+ "class7-rover-challenge": {
+  "src": "/audio/cyber/class7-rover-challenge/story-hi.mp3",
+  "duration": 98.132,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.44
+   },
+   {
+    "start": 18.09,
+    "duration": 15.04
+   },
+   {
+    "start": 33.78,
+    "duration": 18.08
+   },
+   {
+    "start": 52.51,
+    "duration": 19.2
+   },
+   {
+    "start": 72.36,
+    "duration": 9.52
+   },
+   {
+    "start": 82.53,
+    "duration": 14.952
+   }
+  ]
+ },
+ "class7-search-plan": {
+  "src": "/audio/cyber/class7-search-plan/story-hi.mp3",
+  "duration": 88.372,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 15.76
+   },
+   {
+    "start": 31.94,
+    "duration": 15.12
+   },
+   {
+    "start": 47.71,
+    "duration": 15.68
+   },
+   {
+    "start": 64.04,
+    "duration": 8.08
+   },
+   {
+    "start": 72.77,
+    "duration": 14.952
+   }
+  ]
+ },
+ "class7-sign-in-and-recovery": {
+  "src": "/audio/cyber/class7-sign-in-and-recovery/story-hi.mp3",
+  "duration": 92.26,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.0
+   },
+   {
+    "start": 14.65,
+    "duration": 15.44
+   },
+   {
+    "start": 30.74,
+    "duration": 15.04
+   },
+   {
+    "start": 46.43,
+    "duration": 17.36
+   },
+   {
+    "start": 64.44,
+    "duration": 9.84
+   },
+   {
+    "start": 74.93,
+    "duration": 16.68
+   }
+  ]
+ },
+ "class7-test-a-pattern": {
+  "src": "/audio/cyber/class7-test-a-pattern/story-hi.mp3",
+  "duration": 92.748,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.92
+   },
+   {
+    "start": 16.57,
+    "duration": 16.88
+   },
+   {
+    "start": 34.1,
+    "duration": 17.12
+   },
+   {
+    "start": 51.87,
+    "duration": 14.4
+   },
+   {
+    "start": 66.92,
+    "duration": 8.88
+   },
+   {
+    "start": 76.45,
+    "duration": 15.648
+   }
+  ]
+ },
+ "class7-two-conditions": {
+  "src": "/audio/cyber/class7-two-conditions/story-hi.mp3",
+  "duration": 90.244,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.92
+   },
+   {
+    "start": 16.57,
+    "duration": 16.32
+   },
+   {
+    "start": 33.54,
+    "duration": 16.64
+   },
+   {
+    "start": 50.83,
+    "duration": 16.16
+   },
+   {
+    "start": 67.64,
+    "duration": 7.12
+   },
+   {
+    "start": 75.41,
+    "duration": 14.184
+   }
+  ]
+ },
+ "class7-unfamiliar-session": {
+  "src": "/audio/cyber/class7-unfamiliar-session/story-hi.mp3",
+  "duration": 90.34,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.84
+   },
+   {
+    "start": 14.49,
+    "duration": 16.32
+   },
+   {
+    "start": 31.46,
+    "duration": 17.2
+   },
+   {
+    "start": 49.31,
+    "duration": 14.72
+   },
+   {
+    "start": 64.68,
+    "duration": 8.88
+   },
+   {
+    "start": 74.21,
+    "duration": 15.48
+   }
+  ]
+ },
+ "class7-whole-web-address": {
+  "src": "/audio/cyber/class7-whole-web-address/story-hi.mp3",
+  "duration": 91.572,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.36
+   },
+   {
+    "start": 16.01,
+    "duration": 15.76
+   },
+   {
+    "start": 32.42,
+    "duration": 15.28
+   },
+   {
+    "start": 48.35,
+    "duration": 16.0
+   },
+   {
+    "start": 65.0,
+    "duration": 10.08
+   },
+   {
+    "start": 75.73,
+    "duration": 15.192
+   }
+  ]
+ },
+ "class8-account-control": {
+  "src": "/audio/cyber/class8-account-control/story-hi.mp3",
+  "duration": 91.879,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.88
+   },
+   {
+    "start": 13.53,
+    "duration": 16.56
+   },
+   {
+    "start": 30.74,
+    "duration": 14.4
+   },
+   {
+    "start": 45.79,
+    "duration": 12.8
+   },
+   {
+    "start": 59.24,
+    "duration": 14.72
+   },
+   {
+    "start": 74.61,
+    "duration": 16.619
+   }
+  ]
+ },
+ "class8-ai-chatbot-claims": {
+  "src": "/audio/cyber/class8-ai-chatbot-claims/story-hi.mp3",
+  "duration": 102.161,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 17.6
+   },
+   {
+    "start": 33.78,
+    "duration": 15.68
+   },
+   {
+    "start": 50.11,
+    "duration": 14.72
+   },
+   {
+    "start": 65.48,
+    "duration": 17.76
+   },
+   {
+    "start": 83.89,
+    "duration": 17.621
+   }
+  ]
+ },
+ "class8-ai-picture-features": {
+  "src": "/audio/cyber/class8-ai-picture-features/story-hi.mp3",
+  "duration": 95.649,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 16.88
+   },
+   {
+    "start": 32.9,
+    "duration": 14.08
+   },
+   {
+    "start": 47.63,
+    "duration": 13.6
+   },
+   {
+    "start": 61.88,
+    "duration": 15.36
+   },
+   {
+    "start": 77.89,
+    "duration": 17.109
+   }
+  ]
+ },
+ "class8-ai-smart-automatic": {
+  "src": "/audio/cyber/class8-ai-smart-automatic/story-hi.mp3",
+  "duration": 91.889,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 12.64
+   },
+   {
+    "start": 28.66,
+    "duration": 13.28
+   },
+   {
+    "start": 42.59,
+    "duration": 15.84
+   },
+   {
+    "start": 59.08,
+    "duration": 15.68
+   },
+   {
+    "start": 75.41,
+    "duration": 15.829
+   }
+  ]
+ },
+ "class8-ai-train-test": {
+  "src": "/audio/cyber/class8-ai-train-test/story-hi.mp3",
+  "duration": 94.887,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 14.08
+   },
+   {
+    "start": 30.26,
+    "duration": 15.6
+   },
+   {
+    "start": 46.51,
+    "duration": 13.52
+   },
+   {
+    "start": 60.68,
+    "duration": 15.84
+   },
+   {
+    "start": 77.17,
+    "duration": 17.067
+   }
+  ]
+ },
+ "class8-ai-trustworthy-data": {
+  "src": "/audio/cyber/class8-ai-trustworthy-data/story-hi.mp3",
+  "duration": 94.961,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.2
+   },
+   {
+    "start": 15.85,
+    "duration": 14.48
+   },
+   {
+    "start": 30.98,
+    "duration": 15.76
+   },
+   {
+    "start": 47.39,
+    "duration": 12.8
+   },
+   {
+    "start": 60.84,
+    "duration": 15.84
+   },
+   {
+    "start": 77.33,
+    "duration": 16.981
+   }
+  ]
+ },
+ "class8-ai-useful-question": {
+  "src": "/audio/cyber/class8-ai-useful-question/story-hi.mp3",
+  "duration": 90.113,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.0
+   },
+   {
+    "start": 14.65,
+    "duration": 14.4
+   },
+   {
+    "start": 29.7,
+    "duration": 15.28
+   },
+   {
+    "start": 45.63,
+    "duration": 12.0
+   },
+   {
+    "start": 58.28,
+    "duration": 15.28
+   },
+   {
+    "start": 74.21,
+    "duration": 15.253
+   }
+  ]
+ },
+ "class8-app-permissions": {
+  "src": "/audio/cyber/class8-app-permissions/story-hi.mp3",
+  "duration": 97.836,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.32
+   },
+   {
+    "start": 14.97,
+    "duration": 15.68
+   },
+   {
+    "start": 31.3,
+    "duration": 14.96
+   },
+   {
+    "start": 46.91,
+    "duration": 17.04
+   },
+   {
+    "start": 64.6,
+    "duration": 16.0
+   },
+   {
+    "start": 81.25,
+    "duration": 15.936
+   }
+  ]
+ },
+ "class8-backup-restore": {
+  "src": "/audio/cyber/class8-backup-restore/story-hi.mp3",
+  "duration": 92.129,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.04
+   },
+   {
+    "start": 13.69,
+    "duration": 16.16
+   },
+   {
+    "start": 30.5,
+    "duration": 16.08
+   },
+   {
+    "start": 47.23,
+    "duration": 13.92
+   },
+   {
+    "start": 61.8,
+    "duration": 15.44
+   },
+   {
+    "start": 77.89,
+    "duration": 13.589
+   }
+  ]
+ },
+ "class8-digital-trail": {
+  "src": "/audio/cyber/class8-digital-trail/story-hi.mp3",
+  "duration": 94.108,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.44
+   },
+   {
+    "start": 16.09,
+    "duration": 14.88
+   },
+   {
+    "start": 31.62,
+    "duration": 16.08
+   },
+   {
+    "start": 48.35,
+    "duration": 13.84
+   },
+   {
+    "start": 62.84,
+    "duration": 15.76
+   },
+   {
+    "start": 79.25,
+    "duration": 14.208
+   }
+  ]
+ },
+ "class8-download-decision": {
+  "src": "/audio/cyber/class8-download-decision/story-hi.mp3",
+  "duration": 92.076,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.84
+   },
+   {
+    "start": 16.49,
+    "duration": 14.4
+   },
+   {
+    "start": 31.54,
+    "duration": 15.28
+   },
+   {
+    "start": 47.47,
+    "duration": 14.08
+   },
+   {
+    "start": 62.2,
+    "duration": 14.56
+   },
+   {
+    "start": 77.41,
+    "duration": 14.016
+   }
+  ]
+ },
+ "class8-link-check": {
+  "src": "/audio/cyber/class8-link-check/story-hi.mp3",
+  "duration": 95.783,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 21.12
+   },
+   {
+    "start": 37.54,
+    "duration": 13.84
+   },
+   {
+    "start": 52.03,
+    "duration": 13.36
+   },
+   {
+    "start": 66.04,
+    "duration": 12.72
+   },
+   {
+    "start": 79.41,
+    "duration": 15.723
+   }
+  ]
+ },
+ "class8-magazine-safety-review": {
+  "src": "/audio/cyber/class8-magazine-safety-review/story-hi.mp3",
+  "duration": 97.537,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.8
+   },
+   {
+    "start": 15.45,
+    "duration": 15.6
+   },
+   {
+    "start": 31.7,
+    "duration": 12.8
+   },
+   {
+    "start": 45.15,
+    "duration": 17.12
+   },
+   {
+    "start": 62.92,
+    "duration": 18.32
+   },
+   {
+    "start": 81.89,
+    "duration": 14.997
+   }
+  ]
+ },
+ "class8-shared-device": {
+  "src": "/audio/cyber/class8-shared-device/story-hi.mp3",
+  "duration": 90.801,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.16
+   },
+   {
+    "start": 14.81,
+    "duration": 14.16
+   },
+   {
+    "start": 29.62,
+    "duration": 15.36
+   },
+   {
+    "start": 45.63,
+    "duration": 14.56
+   },
+   {
+    "start": 60.84,
+    "duration": 15.52
+   },
+   {
+    "start": 77.01,
+    "duration": 13.141
+   }
+  ]
+ }
+}

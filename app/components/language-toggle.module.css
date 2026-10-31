@@ -2,14 +2,14 @@
 .control,.label,.options{display:flex;align-items:center;gap:8px}
 .label{font-size:13px;font-weight:600;line-height:1.5}
 .label svg{width:17px;height:17px}
-.options{gap:2px;padding:2px;border:1px solid #aec5bc;border-radius:8px}
+.options{flex-wrap:wrap;gap:2px;padding:2px;border:1px solid #aec5bc;border-radius:8px}
 .options button{min-width:70px;min-height:38px;padding:5px 12px;border:0;border-radius:5px;background:transparent;color:#173f43;font-size:14px;line-height:1.5;font-weight:600;cursor:pointer}
 .options button[aria-pressed=true]{background:#173f43;color:#fffdf5}
 .options button:hover:not([aria-pressed=true]){background:#e8f0e8}
 .options button:focus-visible{outline:3px solid #1e7670;outline-offset:2px}
 .options button:disabled{cursor:wait;opacity:.7}
-.options button[lang=hi]{font-family:'Noto Sans Devanagari',sans-serif}
+.options button[lang=hi],.options button.split{font-family:'Noto Sans Devanagari',sans-serif}
 .status{font-family:'Noto Sans Devanagari',sans-serif;font-size:13px;line-height:1.6;color:#763329}
 .status:empty{display:none}
-@media(max-width:480px){.bar{justify-content:center}.label{font-size:12px}.status{flex-basis:100%;text-align:center}}
+@media(max-width:480px){.bar{justify-content:center}.label{font-size:12px}.options{justify-content:center}.options button{padding:5px 10px}.status{flex-basis:100%;text-align:center}}
 @media print{.bar{display:none}}

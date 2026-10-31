@@ -5,15 +5,22 @@ import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from 
 import type { ReactNode } from "react";
 import { useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { StoryCharacter } from "./StoryCharacter";
-import type { StoryChapter, StoryMediaClock } from "./types";
+import type { HindiAudio, StoryChapter, StoryMediaClock } from "./types";
+import hindiAudioManifest from "./hindi-audio.generated.json";
+import { narrationLanguage } from "../../../../../lib/i18n/language-mode";
 import s from "./story-player.module.css";
+
+// Written by scripts/build-hindi-story-audio.py: lesson slug -> Hindi track and scene cues.
+const hindiAudioBySlug = hindiAudioManifest as Record<string, HindiAudio | undefined>;
 
 function subscribeLanguage(changed: () => void) {
   const observer = new MutationObserver(changed);
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang", "data-audio-language"] });
   return () => observer.disconnect();
 }
-const currentLanguage = () => document.documentElement.lang;
+// Narration follows the audio language. That is the page language unless the language control
+// chose English text with Hindi audio (data-audio-language="hi" while lang stays "en").
+const currentLanguage = () => narrationLanguage(document.documentElement.dataset.audioLanguage, document.documentElement.lang);
 const serverLanguage = () => "en";
 
 // Native media seeks can truncate an authored boundary by one microsecond
@@ -49,7 +56,9 @@ export function SceneSwap({ scene, reduced, children }: { scene: number; reduced
 export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: string; chapter: StoryChapter; onBegin: () => void; onActivity?: (type: string, payload?: unknown) => void }) {
   const { interactionScene: gate, World } = chapter;
   const language = useSyncExternalStore(subscribeLanguage, currentLanguage, serverLanguage);
-  const narration = language === "hi" ? chapter.hindiAudio : undefined;
+  const hindiNarration = chapter.hindiAudio ?? hindiAudioBySlug[slug];
+  // A lesson without Hindi recordings, or with cues that do not match its scenes, keeps its English audio.
+  const narration = language === "hi" && hindiNarration?.scenes.length === chapter.script.scenes.length ? hindiNarration : undefined;
   const [activeNarration, setActiveNarration] = useState(narration);
   const scenes = chapter.script.scenes.map((scene, index) => ({ ...scene, ...narration?.scenes[index] }));
   const duration = narration?.duration ?? chapter.script.duration;
