@@ -18,9 +18,13 @@ function ffprobeSeconds(path) {
   } catch { return null; }
 }
 
-test('Hindi story audio covers Classes 6, 7 and 8 lessons that have recordings', () => {
-  assert.ok(slugs.length >= 70, `expected at least 70 lessons, found ${slugs.length}`);
-  for (const slug of slugs) assert.match(slug, /^class(6|7|8)-/, slug);
+test('Hindi story audio covers Classes 6-8 (78 lessons) and Classes 11-12 (61 chapters)', () => {
+  const classes = slugs.filter(slug => /^class(6|7|8)-/.test(slug));
+  assert.equal(classes.length, 78, 'Classes 6-8 lessons');
+  assert.equal(slugs.length - classes.length, 61, 'Class 11 and 12 chapters in the manifest');
+  // Class 11 Chapter 1 keeps the recording that ships inside its own chapter JSON.
+  assert.ok(!slugs.includes('your-digital-risk-map'));
+  for (const slug of ['ai-evaluation-review', 'a-familiar-voice-asks-for-money', 'the-evidence-hearing']) assert.ok(slugs.includes(slug), slug);
   assert.deepEqual(slugs, [...slugs].sort(), 'manifest is sorted so rebuilds give small diffs');
 });
 

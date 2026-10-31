@@ -42,6 +42,10 @@ It normalises every clip to the English tracks' loudness (-18 LUFS), joins the s
 
 **Scene 06 (Practice Lab intro) is not recorded yet.** Until `<slug>-hi-06.mp3` exists, the Hindi track uses the English narration of that final scene (`--scene6 english`, the default) or silence (`--scene6 silent`). Generate the scene 06 clips and the remaining lessons (rest of Class 8, Classes 9 and 10) with the same pipeline, then re-run the build script; recorded clips replace the fallback automatically. Run `node --test tests/hindi-story-audio.test.mjs` to check the manifest, gaps, files and real MP3 lengths, and `node scripts/hindi-audio-modes-qa.cjs` against a dev server to check the three modes in a browser (it signs in as the demo teacher).
 
+### Classes 11 and 12 story recordings
+
+61 more chapters have Hindi tracks in the same manifest: Class 11 Cybersecurity chapters 4-8 and all of Class 11 AI, Computational Thinking and Cyber Fraud, plus all 32 Class 12 chapters. Every one has all six scenes recorded (no English fallback scene). They were built from `CyberSuraksha_Hindi_Voiceover class 11,12.zip` (clips named `class11_m2-ai_ch05_scene02_aj.mp3`): each folder maps to the chapter at that position in `app/data/class-11-curriculum.ts` / `class-12-curriculum.ts`, whose slugified title is the lesson slug, and the clips were staged as `<slug>-hi-NN.mp3` for `scripts/build-hindi-story-audio.py`. Class 11 Cybersecurity chapter 1 keeps its own recording (below); chapters 2 (*Identity beyond a password*) and 3 (*Who should have access?*) have no Hindi audio yet and play English.
+
 ### Class 11 Chapter 1
 
 

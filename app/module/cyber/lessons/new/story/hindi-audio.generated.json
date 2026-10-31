@@ -1,4 +1,304 @@
 {
+ "a-familiar-voice-asks-for-money": {
+  "src": "/audio/cyber/a-familiar-voice-asks-for-money/story-hi.mp3",
+  "duration": 99.5,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.4
+   },
+   {
+    "start": 17.05,
+    "duration": 16.64
+   },
+   {
+    "start": 34.34,
+    "duration": 19.68
+   },
+   {
+    "start": 54.67,
+    "duration": 12.72
+   },
+   {
+    "start": 68.04,
+    "duration": 17.04
+   },
+   {
+    "start": 85.73,
+    "duration": 13.12
+   }
+  ]
+ },
+ "ai-evaluation-review": {
+  "src": "/audio/cyber/ai-evaluation-review/story-hi.mp3",
+  "duration": 107.98,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.56
+   },
+   {
+    "start": 17.21,
+    "duration": 19.44
+   },
+   {
+    "start": 37.3,
+    "duration": 19.52
+   },
+   {
+    "start": 57.47,
+    "duration": 13.44
+   },
+   {
+    "start": 71.56,
+    "duration": 17.36
+   },
+   {
+    "start": 89.57,
+    "duration": 17.76
+   }
+  ]
+ },
+ "ai-go-revise-stop-review": {
+  "src": "/audio/cyber/ai-go-revise-stop-review/story-hi.mp3",
+  "duration": 96.94,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.76
+   },
+   {
+    "start": 14.41,
+    "duration": 15.52
+   },
+   {
+    "start": 30.58,
+    "duration": 20.64
+   },
+   {
+    "start": 51.87,
+    "duration": 11.92
+   },
+   {
+    "start": 64.44,
+    "duration": 17.6
+   },
+   {
+    "start": 82.69,
+    "duration": 13.6
+   }
+  ]
+ },
+ "algorithm-review-board": {
+  "src": "/audio/cyber/algorithm-review-board/story-hi.mp3",
+  "duration": 103.74,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.6
+   },
+   {
+    "start": 18.25,
+    "duration": 17.52
+   },
+   {
+    "start": 36.42,
+    "duration": 19.36
+   },
+   {
+    "start": 56.43,
+    "duration": 12.88
+   },
+   {
+    "start": 69.96,
+    "duration": 17.12
+   },
+   {
+    "start": 87.73,
+    "duration": 15.36
+   }
+  ]
+ },
+ "automation-design-review": {
+  "src": "/audio/cyber/automation-design-review/story-hi.mp3",
+  "duration": 94.54,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.6
+   },
+   {
+    "start": 16.25,
+    "duration": 16.64
+   },
+   {
+    "start": 33.54,
+    "duration": 15.28
+   },
+   {
+    "start": 49.47,
+    "duration": 12.16
+   },
+   {
+    "start": 62.28,
+    "duration": 15.92
+   },
+   {
+    "start": 78.85,
+    "duration": 15.04
+   }
+  ]
+ },
+ "before-you-approve-that-payment": {
+  "src": "/audio/cyber/before-you-approve-that-payment/story-hi.mp3",
+  "duration": 91.9,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 13.28
+   },
+   {
+    "start": 29.3,
+    "duration": 18.0
+   },
+   {
+    "start": 47.95,
+    "duration": 11.84
+   },
+   {
+    "start": 60.44,
+    "duration": 15.76
+   },
+   {
+    "start": 76.85,
+    "duration": 14.4
+   }
+  ]
+ },
+ "build-a-reliable-alerts-pipeline": {
+  "src": "/audio/cyber/build-a-reliable-alerts-pipeline/story-hi.mp3",
+  "duration": 91.74,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.6
+   },
+   {
+    "start": 18.25,
+    "duration": 13.52
+   },
+   {
+    "start": 32.42,
+    "duration": 16.8
+   },
+   {
+    "start": 49.87,
+    "duration": 9.68
+   },
+   {
+    "start": 60.2,
+    "duration": 20.08
+   },
+   {
+    "start": 80.93,
+    "duration": 10.16
+   }
+  ]
+ },
+ "can-this-assistant-be-trusted": {
+  "src": "/audio/cyber/can-this-assistant-be-trusted/story-hi.mp3",
+  "duration": 97.5,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.92
+   },
+   {
+    "start": 16.57,
+    "duration": 18.08
+   },
+   {
+    "start": 35.3,
+    "duration": 17.68
+   },
+   {
+    "start": 53.63,
+    "duration": 12.96
+   },
+   {
+    "start": 67.24,
+    "duration": 14.96
+   },
+   {
+    "start": 82.85,
+    "duration": 14.0
+   }
+  ]
+ },
+ "check-the-investment-story": {
+  "src": "/audio/cyber/check-the-investment-story/story-hi.mp3",
+  "duration": 94.78,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.92
+   },
+   {
+    "start": 16.57,
+    "duration": 18.48
+   },
+   {
+    "start": 35.7,
+    "duration": 19.52
+   },
+   {
+    "start": 55.87,
+    "duration": 9.2
+   },
+   {
+    "start": 65.72,
+    "duration": 13.6
+   },
+   {
+    "start": 79.97,
+    "duration": 14.16
+   }
+  ]
+ },
+ "choose-the-right-data-model": {
+  "src": "/audio/cyber/choose-the-right-data-model/story-hi.mp3",
+  "duration": 102.3,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.88
+   },
+   {
+    "start": 19.53,
+    "duration": 18.88
+   },
+   {
+    "start": 39.06,
+    "duration": 20.56
+   },
+   {
+    "start": 60.27,
+    "duration": 10.72
+   },
+   {
+    "start": 71.64,
+    "duration": 18.96
+   },
+   {
+    "start": 91.25,
+    "duration": 10.4
+   }
+  ]
+ },
  "class6-account-keys": {
   "src": "/audio/cyber/class6-account-keys/story-hi.mp3",
   "duration": 95.868,
@@ -2336,6 +2636,1536 @@
    {
     "start": 77.01,
     "duration": 13.141
+   }
+  ]
+ },
+ "data-has-a-lifecycle": {
+  "src": "/audio/cyber/data-has-a-lifecycle/story-hi.mp3",
+  "duration": 99.743292,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.568979
+   },
+   {
+    "start": 16.218979,
+    "duration": 13.322458
+   },
+   {
+    "start": 30.191437,
+    "duration": 18.755917
+   },
+   {
+    "start": 49.597354,
+    "duration": 11.807354
+   },
+   {
+    "start": 62.054708,
+    "duration": 17.632667
+   },
+   {
+    "start": 80.337375,
+    "duration": 18.755917
+   }
+  ]
+ },
+ "decompose-the-scholarship-desk": {
+  "src": "/audio/cyber/decompose-the-scholarship-desk/story-hi.mp3",
+  "duration": 103.34,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.56
+   },
+   {
+    "start": 19.21,
+    "duration": 15.36
+   },
+   {
+    "start": 35.22,
+    "duration": 19.68
+   },
+   {
+    "start": 55.55,
+    "duration": 13.04
+   },
+   {
+    "start": 69.24,
+    "duration": 16.8
+   },
+   {
+    "start": 86.69,
+    "duration": 16.0
+   }
+  ]
+ },
+ "defend-your-decision": {
+  "src": "/audio/cyber/defend-your-decision/story-hi.mp3",
+  "duration": 91.42,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.4
+   },
+   {
+    "start": 17.05,
+    "duration": 13.76
+   },
+   {
+    "start": 31.46,
+    "duration": 16.24
+   },
+   {
+    "start": 48.35,
+    "duration": 10.56
+   },
+   {
+    "start": 59.56,
+    "duration": 14.48
+   },
+   {
+    "start": 74.69,
+    "duration": 16.08
+   }
+  ]
+ },
+ "design-prevention-that-can-be-tested": {
+  "src": "/audio/cyber/design-prevention-that-can-be-tested/story-hi.mp3",
+  "duration": 93.26,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.76
+   },
+   {
+    "start": 16.41,
+    "duration": 16.96
+   },
+   {
+    "start": 34.02,
+    "duration": 16.0
+   },
+   {
+    "start": 50.67,
+    "duration": 11.2
+   },
+   {
+    "start": 62.52,
+    "duration": 16.24
+   },
+   {
+    "start": 79.41,
+    "duration": 13.2
+   }
+  ]
+ },
+ "design-the-college-fest-portal": {
+  "src": "/audio/cyber/design-the-college-fest-portal/story-hi.mp3",
+  "duration": 98.3,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.28
+   },
+   {
+    "start": 17.93,
+    "duration": 17.6
+   },
+   {
+    "start": 36.18,
+    "duration": 15.92
+   },
+   {
+    "start": 52.75,
+    "duration": 13.2
+   },
+   {
+    "start": 66.6,
+    "duration": 17.68
+   },
+   {
+    "start": 84.93,
+    "duration": 12.72
+   }
+  ]
+ },
+ "devices-updates-and-backups": {
+  "src": "/audio/cyber/devices-updates-and-backups/story-hi.mp3",
+  "duration": 92.063312,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.930625
+   },
+   {
+    "start": 13.580625,
+    "duration": 13.557562
+   },
+   {
+    "start": 27.788187,
+    "duration": 18.912667
+   },
+   {
+    "start": 47.350854,
+    "duration": 13.244083
+   },
+   {
+    "start": 61.244937,
+    "duration": 13.322458
+   },
+   {
+    "start": 75.217396,
+    "duration": 16.195917
+   }
+  ]
+ },
+ "do-not-confuse-a-pattern-with-a-cause": {
+  "src": "/audio/cyber/do-not-confuse-a-pattern-with-a-cause/story-hi.mp3",
+  "duration": 87.26,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 13.76
+   },
+   {
+    "start": 29.94,
+    "duration": 15.76
+   },
+   {
+    "start": 46.35,
+    "duration": 12.32
+   },
+   {
+    "start": 59.32,
+    "duration": 14.72
+   },
+   {
+    "start": 74.69,
+    "duration": 11.92
+   }
+  ]
+ },
+ "frame-a-useful-ai-problem": {
+  "src": "/audio/cyber/frame-a-useful-ai-problem/story-hi.mp3",
+  "duration": 95.171854,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.680813
+   },
+   {
+    "start": 15.330813,
+    "duration": 16.274292
+   },
+   {
+    "start": 32.255104,
+    "duration": 17.005729
+   },
+   {
+    "start": 49.910833,
+    "duration": 12.434292
+   },
+   {
+    "start": 62.995125,
+    "duration": 15.568979
+   },
+   {
+    "start": 79.214104,
+    "duration": 15.30775
+   }
+  ]
+ },
+ "from-personal-safety-to-system-risk": {
+  "src": "/audio/cyber/from-personal-safety-to-system-risk/story-hi.mp3",
+  "duration": 108.7,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.8
+   },
+   {
+    "start": 19.45,
+    "duration": 17.6
+   },
+   {
+    "start": 37.7,
+    "duration": 19.84
+   },
+   {
+    "start": 58.19,
+    "duration": 15.68
+   },
+   {
+    "start": 74.52,
+    "duration": 17.36
+   },
+   {
+    "start": 92.53,
+    "duration": 15.52
+   }
+  ]
+ },
+ "help-after-harm": {
+  "src": "/audio/cyber/help-after-harm/story-hi.mp3",
+  "duration": 91.42,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.24
+   },
+   {
+    "start": 14.89,
+    "duration": 17.28
+   },
+   {
+    "start": 32.82,
+    "duration": 16.32
+   },
+   {
+    "start": 49.79,
+    "duration": 11.84
+   },
+   {
+    "start": 62.28,
+    "duration": 16.32
+   },
+   {
+    "start": 79.25,
+    "duration": 11.52
+   }
+  ]
+ },
+ "how-a-model-learns": {
+  "src": "/audio/cyber/how-a-model-learns/story-hi.mp3",
+  "duration": 109.460875,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.050625
+   },
+   {
+    "start": 18.700625,
+    "duration": 15.882458
+   },
+   {
+    "start": 35.233083,
+    "duration": 23.719188
+   },
+   {
+    "start": 59.602271,
+    "duration": 14.210625
+   },
+   {
+    "start": 74.462896,
+    "duration": 19.330625
+   },
+   {
+    "start": 94.443521,
+    "duration": 14.367354
+   }
+  ]
+ },
+ "how-a-scam-builds-pressure": {
+  "src": "/audio/cyber/how-a-scam-builds-pressure/story-hi.mp3",
+  "duration": 93.82,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.4
+   },
+   {
+    "start": 17.05,
+    "duration": 16.0
+   },
+   {
+    "start": 33.7,
+    "duration": 12.56
+   },
+   {
+    "start": 46.91,
+    "duration": 16.4
+   },
+   {
+    "start": 63.96,
+    "duration": 14.56
+   },
+   {
+    "start": 79.17,
+    "duration": 14.0
+   }
+  ]
+ },
+ "how-work-grows-with-input-size": {
+  "src": "/audio/cyber/how-work-grows-with-input-size/story-hi.mp3",
+  "duration": 88.06,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.36
+   },
+   {
+    "start": 14.01,
+    "duration": 16.72
+   },
+   {
+    "start": 31.38,
+    "duration": 17.44
+   },
+   {
+    "start": 49.47,
+    "duration": 10.96
+   },
+   {
+    "start": 61.08,
+    "duration": 14.08
+   },
+   {
+    "start": 75.81,
+    "duration": 11.6
+   }
+  ]
+ },
+ "identity-and-authority-can-be-manufactured": {
+  "src": "/audio/cyber/identity-and-authority-can-be-manufactured/story-hi.mp3",
+  "duration": 94.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.6
+   },
+   {
+    "start": 16.25,
+    "duration": 16.64
+   },
+   {
+    "start": 33.54,
+    "duration": 17.2
+   },
+   {
+    "start": 51.39,
+    "duration": 11.6
+   },
+   {
+    "start": 63.64,
+    "duration": 14.64
+   },
+   {
+    "start": 78.93,
+    "duration": 14.8
+   }
+  ]
+ },
+ "integrated-case-the-college-fest-incident": {
+  "src": "/audio/cyber/integrated-case-the-college-fest-incident/story-hi.mp3",
+  "duration": 104.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.0
+   },
+   {
+    "start": 18.65,
+    "duration": 15.84
+   },
+   {
+    "start": 35.14,
+    "duration": 20.08
+   },
+   {
+    "start": 55.87,
+    "duration": 12.4
+   },
+   {
+    "start": 68.92,
+    "duration": 18.8
+   },
+   {
+    "start": 88.37,
+    "duration": 15.36
+   }
+  ]
+ },
+ "integrated-case-the-festival-refund": {
+  "src": "/audio/cyber/integrated-case-the-festival-refund/story-hi.mp3",
+  "duration": 102.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.72
+   },
+   {
+    "start": 17.37,
+    "duration": 17.92
+   },
+   {
+    "start": 35.94,
+    "duration": 17.92
+   },
+   {
+    "start": 54.51,
+    "duration": 15.52
+   },
+   {
+    "start": 70.68,
+    "duration": 17.12
+   },
+   {
+    "start": 88.45,
+    "duration": 13.28
+   }
+  ]
+ },
+ "is-ai-needed-here": {
+  "src": "/audio/cyber/is-ai-needed-here/story-hi.mp3",
+  "duration": 101.65025,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.837563
+   },
+   {
+    "start": 15.487563,
+    "duration": 17.475917
+   },
+   {
+    "start": 33.613479,
+    "duration": 18.912667
+   },
+   {
+    "start": 53.176146,
+    "duration": 13.322458
+   },
+   {
+    "start": 67.148604,
+    "duration": 18.991021
+   },
+   {
+    "start": 86.789625,
+    "duration": 14.210625
+   }
+  ]
+ },
+ "make-failure-visible": {
+  "src": "/audio/cyber/make-failure-visible/story-hi.mp3",
+  "duration": 103.26,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 16.48
+   },
+   {
+    "start": 32.66,
+    "duration": 18.8
+   },
+   {
+    "start": 52.11,
+    "duration": 12.48
+   },
+   {
+    "start": 65.24,
+    "duration": 19.52
+   },
+   {
+    "start": 85.41,
+    "duration": 17.2
+   }
+  ]
+ },
+ "make-the-rules-explicit": {
+  "src": "/audio/cyber/make-the-rules-explicit/story-hi.mp3",
+  "duration": 100.94,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.2
+   },
+   {
+    "start": 17.85,
+    "duration": 13.6
+   },
+   {
+    "start": 32.1,
+    "duration": 18.32
+   },
+   {
+    "start": 51.07,
+    "duration": 15.52
+   },
+   {
+    "start": 67.24,
+    "duration": 16.56
+   },
+   {
+    "start": 84.45,
+    "duration": 15.84
+   }
+  ]
+ },
+ "measure-mistakes-not-confidence": {
+  "src": "/audio/cyber/measure-mistakes-not-confidence/story-hi.mp3",
+  "duration": 88.508979,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.288979
+   },
+   {
+    "start": 14.938979,
+    "duration": 15.04
+   },
+   {
+    "start": 30.628979,
+    "duration": 16.24
+   },
+   {
+    "start": 47.518979,
+    "duration": 11.76
+   },
+   {
+    "start": 59.928979,
+    "duration": 14.4
+   },
+   {
+    "start": 74.978979,
+    "duration": 12.88
+   }
+  ]
+ },
+ "model-only-what-matters": {
+  "src": "/audio/cyber/model-only-what-matters/story-hi.mp3",
+  "duration": 92.54,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.64
+   },
+   {
+    "start": 15.29,
+    "duration": 14.24
+   },
+   {
+    "start": 30.18,
+    "duration": 14.24
+   },
+   {
+    "start": 45.07,
+    "duration": 12.88
+   },
+   {
+    "start": 58.6,
+    "duration": 17.04
+   },
+   {
+    "start": 76.29,
+    "duration": 15.6
+   }
+  ]
+ },
+ "protect-the-evaluation": {
+  "src": "/audio/cyber/protect-the-evaluation/story-hi.mp3",
+  "duration": 95.02,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.72
+   },
+   {
+    "start": 15.37,
+    "duration": 15.52
+   },
+   {
+    "start": 31.54,
+    "duration": 22.24
+   },
+   {
+    "start": 54.43,
+    "duration": 9.2
+   },
+   {
+    "start": 64.28,
+    "duration": 15.76
+   },
+   {
+    "start": 80.69,
+    "duration": 13.68
+   }
+  ]
+ },
+ "protect-the-whole-dependency-chain": {
+  "src": "/audio/cyber/protect-the-whole-dependency-chain/story-hi.mp3",
+  "duration": 96.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 17.12
+   },
+   {
+    "start": 33.54,
+    "duration": 18.72
+   },
+   {
+    "start": 52.91,
+    "duration": 10.64
+   },
+   {
+    "start": 64.2,
+    "duration": 17.12
+   },
+   {
+    "start": 81.97,
+    "duration": 13.76
+   }
+  ]
+ },
+ "recover-and-learn": {
+  "src": "/audio/cyber/recover-and-learn/story-hi.mp3",
+  "duration": 105.82,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.48
+   },
+   {
+    "start": 19.13,
+    "duration": 17.44
+   },
+   {
+    "start": 37.22,
+    "duration": 19.44
+   },
+   {
+    "start": 57.31,
+    "duration": 12.88
+   },
+   {
+    "start": 70.84,
+    "duration": 19.36
+   },
+   {
+    "start": 90.85,
+    "duration": 14.32
+   }
+  ]
+ },
+ "repair-the-dataset": {
+  "src": "/audio/cyber/repair-the-dataset/story-hi.mp3",
+  "duration": 97.731854,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.490625
+   },
+   {
+    "start": 16.140625,
+    "duration": 15.386125
+   },
+   {
+    "start": 32.17675,
+    "duration": 18.520813
+   },
+   {
+    "start": 51.347562,
+    "duration": 13.400813
+   },
+   {
+    "start": 65.398375,
+    "duration": 16.195917
+   },
+   {
+    "start": 82.244292,
+    "duration": 14.837563
+   }
+  ]
+ },
+ "retest-after-a-change": {
+  "src": "/audio/cyber/retest-after-a-change/story-hi.mp3",
+  "duration": 93.02,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.08
+   },
+   {
+    "start": 16.73,
+    "duration": 18.88
+   },
+   {
+    "start": 36.26,
+    "duration": 14.24
+   },
+   {
+    "start": 51.15,
+    "duration": 10.24
+   },
+   {
+    "start": 62.04,
+    "duration": 16.96
+   },
+   {
+    "start": 79.65,
+    "duration": 12.72
+   }
+  ]
+ },
+ "reuse-a-reliable-step": {
+  "src": "/audio/cyber/reuse-a-reliable-step/story-hi.mp3",
+  "duration": 97.1,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.64
+   },
+   {
+    "start": 15.29,
+    "duration": 16.96
+   },
+   {
+    "start": 32.9,
+    "duration": 18.32
+   },
+   {
+    "start": 51.87,
+    "duration": 12.48
+   },
+   {
+    "start": 65.0,
+    "duration": 16.08
+   },
+   {
+    "start": 81.73,
+    "duration": 14.72
+   }
+  ]
+ },
+ "search-and-sort-with-purpose": {
+  "src": "/audio/cyber/search-and-sort-with-purpose/story-hi.mp3",
+  "duration": 99.9,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.72
+   },
+   {
+    "start": 17.37,
+    "duration": 13.12
+   },
+   {
+    "start": 31.14,
+    "duration": 18.48
+   },
+   {
+    "start": 50.27,
+    "duration": 14.64
+   },
+   {
+    "start": 65.56,
+    "duration": 17.44
+   },
+   {
+    "start": 83.65,
+    "duration": 15.6
+   }
+  ]
+ },
+ "secure-by-design": {
+  "src": "/audio/cyber/secure-by-design/story-hi.mp3",
+  "duration": 108.54,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.56
+   },
+   {
+    "start": 17.21,
+    "duration": 20.0
+   },
+   {
+    "start": 37.86,
+    "duration": 16.48
+   },
+   {
+    "start": 54.99,
+    "duration": 14.56
+   },
+   {
+    "start": 70.2,
+    "duration": 21.52
+   },
+   {
+    "start": 92.37,
+    "duration": 15.52
+   }
+  ]
+ },
+ "security-assurance-review": {
+  "src": "/audio/cyber/security-assurance-review/story-hi.mp3",
+  "duration": 103.9,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.2
+   },
+   {
+    "start": 17.85,
+    "duration": 17.52
+   },
+   {
+    "start": 36.02,
+    "duration": 16.96
+   },
+   {
+    "start": 53.63,
+    "duration": 12.72
+   },
+   {
+    "start": 67.0,
+    "duration": 19.12
+   },
+   {
+    "start": 86.77,
+    "duration": 16.48
+   }
+  ]
+ },
+ "security-design-review": {
+  "src": "/audio/cyber/security-design-review/story-hi.mp3",
+  "duration": 93.55225,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.960812
+   },
+   {
+    "start": 16.610812,
+    "duration": 16.117562
+   },
+   {
+    "start": 33.378375,
+    "duration": 16.431021
+   },
+   {
+    "start": 50.459396,
+    "duration": 11.46775
+   },
+   {
+    "start": 62.577146,
+    "duration": 14.915917
+   },
+   {
+    "start": 78.143062,
+    "duration": 14.759187
+   }
+  ]
+ },
+ "set-a-decision-and-a-baseline": {
+  "src": "/audio/cyber/set-a-decision-and-a-baseline/story-hi.mp3",
+  "duration": 108.86,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 20.48
+   },
+   {
+    "start": 21.13,
+    "duration": 17.6
+   },
+   {
+    "start": 39.38,
+    "duration": 20.88
+   },
+   {
+    "start": 60.91,
+    "duration": 12.64
+   },
+   {
+    "start": 74.2,
+    "duration": 20.16
+   },
+   {
+    "start": 95.01,
+    "duration": 13.2
+   }
+  ]
+ },
+ "test-the-boundaries": {
+  "src": "/audio/cyber/test-the-boundaries/story-hi.mp3",
+  "duration": 104.94,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.12
+   },
+   {
+    "start": 17.77,
+    "duration": 16.64
+   },
+   {
+    "start": 35.06,
+    "duration": 20.8
+   },
+   {
+    "start": 56.51,
+    "duration": 14.4
+   },
+   {
+    "start": 71.56,
+    "duration": 18.24
+   },
+   {
+    "start": 90.45,
+    "duration": 13.84
+   }
+  ]
+ },
+ "the-breach-tabletop": {
+  "src": "/audio/cyber/the-breach-tabletop/story-hi.mp3",
+  "duration": 97.5,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.52
+   },
+   {
+    "start": 16.17,
+    "duration": 18.24
+   },
+   {
+    "start": 35.06,
+    "duration": 19.2
+   },
+   {
+    "start": 54.91,
+    "duration": 12.16
+   },
+   {
+    "start": 67.72,
+    "duration": 14.08
+   },
+   {
+    "start": 82.45,
+    "duration": 14.4
+   }
+  ]
+ },
+ "the-duplicate-registration-problem": {
+  "src": "/audio/cyber/the-duplicate-registration-problem/story-hi.mp3",
+  "duration": 102.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.6
+   },
+   {
+    "start": 16.25,
+    "duration": 17.28
+   },
+   {
+    "start": 34.18,
+    "duration": 18.72
+   },
+   {
+    "start": 53.55,
+    "duration": 11.76
+   },
+   {
+    "start": 65.96,
+    "duration": 21.2
+   },
+   {
+    "start": 87.81,
+    "duration": 13.92
+   }
+  ]
+ },
+ "the-easy-money-recruitment-chain": {
+  "src": "/audio/cyber/the-easy-money-recruitment-chain/story-hi.mp3",
+  "duration": 95.1,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.28
+   },
+   {
+    "start": 13.93,
+    "duration": 16.56
+   },
+   {
+    "start": 31.14,
+    "duration": 18.96
+   },
+   {
+    "start": 50.75,
+    "duration": 9.68
+   },
+   {
+    "start": 61.08,
+    "duration": 16.88
+   },
+   {
+    "start": 78.61,
+    "duration": 15.84
+   }
+  ]
+ },
+ "the-evidence-hearing": {
+  "src": "/audio/cyber/the-evidence-hearing/story-hi.mp3",
+  "duration": 94.38,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.04
+   },
+   {
+    "start": 15.69,
+    "duration": 13.36
+   },
+   {
+    "start": 29.7,
+    "duration": 17.6
+   },
+   {
+    "start": 47.95,
+    "duration": 11.76
+   },
+   {
+    "start": 60.36,
+    "duration": 18.72
+   },
+   {
+    "start": 79.73,
+    "duration": 14.0
+   }
+  ]
+ },
+ "the-internship-that-pays-too-well": {
+  "src": "/audio/cyber/the-internship-that-pays-too-well/story-hi.mp3",
+  "duration": 94.06,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.36
+   },
+   {
+    "start": 16.01,
+    "duration": 15.44
+   },
+   {
+    "start": 32.1,
+    "duration": 16.08
+   },
+   {
+    "start": 48.83,
+    "duration": 14.24
+   },
+   {
+    "start": 63.72,
+    "duration": 15.52
+   },
+   {
+    "start": 79.89,
+    "duration": 13.52
+   }
+  ]
+ },
+ "the-model-that-scores-95-percent": {
+  "src": "/audio/cyber/the-model-that-scores-95-percent/story-hi.mp3",
+  "duration": 101.74,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 18.56
+   },
+   {
+    "start": 34.98,
+    "duration": 19.68
+   },
+   {
+    "start": 55.31,
+    "duration": 12.72
+   },
+   {
+    "start": 68.68,
+    "duration": 17.28
+   },
+   {
+    "start": 86.61,
+    "duration": 14.48
+   }
+  ]
+ },
+ "the-source-grounded-research-assistant": {
+  "src": "/audio/cyber/the-source-grounded-research-assistant/story-hi.mp3",
+  "duration": 99.26,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.16
+   },
+   {
+    "start": 16.81,
+    "duration": 18.8
+   },
+   {
+    "start": 36.26,
+    "duration": 17.2
+   },
+   {
+    "start": 54.11,
+    "duration": 13.44
+   },
+   {
+    "start": 68.2,
+    "duration": 14.32
+   },
+   {
+    "start": 83.17,
+    "duration": 15.44
+   }
+  ]
+ },
+ "the-suspicious-login": {
+  "src": "/audio/cyber/the-suspicious-login/story-hi.mp3",
+  "duration": 98.77675,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.568979
+   },
+   {
+    "start": 16.218979,
+    "duration": 15.30775
+   },
+   {
+    "start": 32.176729,
+    "duration": 17.397562
+   },
+   {
+    "start": 50.224292,
+    "duration": 14.680813
+   },
+   {
+    "start": 65.555104,
+    "duration": 18.364083
+   },
+   {
+    "start": 84.569187,
+    "duration": 13.557562
+   }
+  ]
+ },
+ "trace-a-pattern-without-accusing": {
+  "src": "/audio/cyber/trace-a-pattern-without-accusing/story-hi.mp3",
+  "duration": 91.34,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.88
+   },
+   {
+    "start": 17.53,
+    "duration": 16.0
+   },
+   {
+    "start": 34.18,
+    "duration": 15.36
+   },
+   {
+    "start": 50.19,
+    "duration": 9.84
+   },
+   {
+    "start": 60.68,
+    "duration": 15.44
+   },
+   {
+    "start": 76.77,
+    "duration": 13.92
+   }
+  ]
+ },
+ "trace-and-debug-a-decision": {
+  "src": "/audio/cyber/trace-and-debug-a-decision/story-hi.mp3",
+  "duration": 86.3,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.36
+   },
+   {
+    "start": 14.01,
+    "duration": 13.6
+   },
+   {
+    "start": 28.26,
+    "duration": 15.28
+   },
+   {
+    "start": 44.19,
+    "duration": 12.72
+   },
+   {
+    "start": 57.56,
+    "duration": 14.32
+   },
+   {
+    "start": 72.53,
+    "duration": 13.12
+   }
+  ]
+ },
+ "vision-networks-and-changing-inputs": {
+  "src": "/audio/cyber/vision-networks-and-changing-inputs/story-hi.mp3",
+  "duration": 91.82,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.12
+   },
+   {
+    "start": 15.77,
+    "duration": 12.56
+   },
+   {
+    "start": 28.98,
+    "duration": 18.24
+   },
+   {
+    "start": 47.87,
+    "duration": 12.0
+   },
+   {
+    "start": 60.52,
+    "duration": 16.16
+   },
+   {
+    "start": 77.33,
+    "duration": 13.84
+   }
+  ]
+ },
+ "what-a-browser-can-tell-you": {
+  "src": "/audio/cyber/what-a-browser-can-tell-you/story-hi.mp3",
+  "duration": 86.185729,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 13.087354
+   },
+   {
+    "start": 13.737354,
+    "duration": 13.635917
+   },
+   {
+    "start": 28.023271,
+    "duration": 15.151021
+   },
+   {
+    "start": 43.824292,
+    "duration": 12.591021
+   },
+   {
+    "start": 57.065313,
+    "duration": 14.02775
+   },
+   {
+    "start": 71.743063,
+    "duration": 13.792667
+   }
+  ]
+ },
+ "what-to-do-after-a-loss": {
+  "src": "/audio/cyber/what-to-do-after-a-loss/story-hi.mp3",
+  "duration": 98.62,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 14.88
+   },
+   {
+    "start": 15.53,
+    "duration": 19.12
+   },
+   {
+    "start": 35.3,
+    "duration": 17.44
+   },
+   {
+    "start": 53.39,
+    "duration": 14.08
+   },
+   {
+    "start": 68.12,
+    "duration": 17.68
+   },
+   {
+    "start": 86.45,
+    "duration": 11.52
+   }
+  ]
+ },
+ "when-instructions-arrive-inside-data": {
+  "src": "/audio/cyber/when-instructions-arrive-inside-data/story-hi.mp3",
+  "duration": 98.86,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.04
+   },
+   {
+    "start": 17.69,
+    "duration": 15.6
+   },
+   {
+    "start": 33.94,
+    "duration": 18.4
+   },
+   {
+    "start": 52.99,
+    "duration": 11.36
+   },
+   {
+    "start": 65.0,
+    "duration": 16.4
+   },
+   {
+    "start": 82.05,
+    "duration": 16.16
+   }
+  ]
+ },
+ "when-logs-disagree": {
+  "src": "/audio/cyber/when-logs-disagree/story-hi.mp3",
+  "duration": 104.22,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 18.8
+   },
+   {
+    "start": 19.45,
+    "duration": 16.08
+   },
+   {
+    "start": 36.18,
+    "duration": 18.56
+   },
+   {
+    "start": 55.39,
+    "duration": 13.6
+   },
+   {
+    "start": 69.64,
+    "duration": 18.24
+   },
+   {
+    "start": 88.53,
+    "duration": 15.04
+   }
+  ]
+ },
+ "when-the-message-looks-official": {
+  "src": "/audio/cyber/when-the-message-looks-official/story-hi.mp3",
+  "duration": 81.02,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 12.48
+   },
+   {
+    "start": 13.13,
+    "duration": 14.72
+   },
+   {
+    "start": 28.5,
+    "duration": 14.08
+   },
+   {
+    "start": 43.23,
+    "duration": 10.48
+   },
+   {
+    "start": 54.36,
+    "duration": 11.36
+   },
+   {
+    "start": 66.37,
+    "duration": 14.0
+   }
+  ]
+ },
+ "who-benefits-who-is-missed": {
+  "src": "/audio/cyber/who-benefits-who-is-missed/story-hi.mp3",
+  "duration": 103.82,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.32
+   },
+   {
+    "start": 16.97,
+    "duration": 18.48
+   },
+   {
+    "start": 36.1,
+    "duration": 20.56
+   },
+   {
+    "start": 57.31,
+    "duration": 12.8
+   },
+   {
+    "start": 70.76,
+    "duration": 17.12
+   },
+   {
+    "start": 88.53,
+    "duration": 14.64
+   }
+  ]
+ },
+ "whose-examples-are-missing": {
+  "src": "/audio/cyber/whose-examples-are-missing/story-hi.mp3",
+  "duration": 101.74,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 16.4
+   },
+   {
+    "start": 17.05,
+    "duration": 13.84
+   },
+   {
+    "start": 31.54,
+    "duration": 18.48
+   },
+   {
+    "start": 50.67,
+    "duration": 15.68
+   },
+   {
+    "start": 67.0,
+    "duration": 19.04
+   },
+   {
+    "start": 86.69,
+    "duration": 14.4
    }
   ]
  }

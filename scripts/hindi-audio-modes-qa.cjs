@@ -106,6 +106,14 @@ async function main() {
   await expectSrc(page, '/audio/cyber/your-digital-risk-map/story-hi.mp3', 'Class 11 Hindi recording in split mode');
   console.log('PASS the existing Class 11 Hindi recording follows the same mode');
 
+  // 8b. A Class 12 chapter recorded with all six scenes (no English fallback scene).
+  const senior = 'ai-go-revise-stop-review';
+  assert.equal(manifest[senior].scenes.length, 6);
+  await page.goto(url(senior, 12), { waitUntil: 'networkidle' });
+  await expectSrc(page, manifest[senior].src, 'Class 12 chapter plays its Hindi track in split mode');
+  assert.equal(await htmlLang(page), 'en');
+  console.log('PASS a Class 12 chapter follows the same mode');
+
   // 9. Phone layout: the three-way control fits without sideways scrolling.
   const phone = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
   await phone.addCookies(await context.cookies());
