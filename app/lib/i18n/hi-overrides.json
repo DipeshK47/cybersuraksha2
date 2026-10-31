@@ -452,5 +452,8 @@
   "No published assignments are available for your classes. Create an assignment in Classroom to set a deadline.": "आपकी कक्षाओं के लिए कोई प्रकाशित असाइनमेंट नहीं है। अंतिम तिथि तय करने के लिए क्लासरूम में असाइनमेंट बनाएँ।",
   "No school timetable has been configured. Open Classroom to see actual published assignments and their deadlines.": "विद्यालय की समय-सारणी अभी तय नहीं है। प्रकाशित असाइनमेंट और उनकी अंतिम तिथियाँ देखने के लिए क्लासरूम खोलें।",
   "Published assignment deadlines: {{0}} Open Classroom for each student’s completion and marks.": "प्रकाशित असाइनमेंट की अंतिम तिथियाँ: {{0}} हर विद्यार्थी का काम और अंक देखने के लिए क्लासरूम खोलें।",
-  "Lesson activity": "पाठ की गतिविधि"
+  "Lesson activity": "पाठ की गतिविधि",
+  "English + हिन्दी ऑडियो": "English + हिन्दी ऑडियो",
+  "English + हिन्दी ऑडियो, English text with Hindi audio": "English + हिन्दी ऑडियो, अंग्रेज़ी टेक्स्ट के साथ हिन्दी ऑडियो",
+  "English text, Hindi audio / अंग्रेज़ी टेक्स्ट, हिन्दी ऑडियो": "English text, Hindi audio / अंग्रेज़ी टेक्स्ट, हिन्दी ऑडियो"
 }

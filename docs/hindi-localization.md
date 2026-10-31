@@ -16,9 +16,42 @@ Code, formula notation, URLs, reference IDs, entered form values, user chat mess
 
 ## Hindi narration
 
+### Language modes
+
+The language control above every page has three options:
+
+| Option | Text | Narration |
+|---|---|---|
+| **English** | English | English |
+| **हिन्दी** | Hindi | Hindi (where recorded) |
+| **English + हिन्दी ऑडियो** | English | Hindi (where recorded) |
+
+The text choice is still saved in `cybersuraksha-language`. The third option also saves `cybersuraksha-audio-language` = `hi`; choosing English or हिन्दी clears it. The control sets `data-audio-language` on `<html>` (`lang` keeps describing the text), and the story player follows that attribute, falling back to `lang`. The mode logic is in `app/lib/i18n/language-mode.ts`. A lesson with no Hindi recording keeps its English audio in every mode. Both settings sync across tabs and survive reloads.
+
+### Classes 6-8 story recordings
+
+`public/audio/cyber/<lesson-slug>/story-hi.mp3` sits next to the English `story.mp3` for 78 lessons: Class 6 and 7 (all 64 lessons) and Class 8 Cybersecurity plus AI lessons 1-6. Their cues live in `app/module/cyber/lessons/new/story/hindi-audio.generated.json` (slug to `src`, `duration`, six `{start, duration}` scene cues). The manifest is separate from the generated chapter JSON, so rebuilding a class's assets cannot erase it. A chapter that carries its own `hindiAudio` (Class 11 Chapter 1) takes precedence over the manifest.
+
+The recordings were made from `CyberShiksha_Hindi_Narration_Classes_6_to_10.pdf` with the pipeline in `scripts/hindi-voiceover/` (ElevenLabs `eleven_v4`; Pari for lessons whose first named character is female, AJ for male or unnamed). Build the tracks from a folder of per-scene clips:
+
+```
+python3 scripts/build-hindi-story-audio.py --clips <folder with <slug>-hi-01.mp3 ...> [--scene6 english|silent]
+```
+
+It normalises every clip to the English tracks' loudness (-18 LUFS), joins the scenes with the house 0.65-second gap, measures the cues from the decoded clips and merges them into the manifest. Re-running it for more lessons keeps the existing entries.
+
+**Scene 06 (Practice Lab intro) is not recorded yet.** Until `<slug>-hi-06.mp3` exists, the Hindi track uses the English narration of that final scene (`--scene6 english`, the default) or silence (`--scene6 silent`). Generate the scene 06 clips and the remaining lessons (rest of Class 8, Classes 9 and 10) with the same pipeline, then re-run the build script; recorded clips replace the fallback automatically. Run `node --test tests/hindi-story-audio.test.mjs` to check the manifest, gaps, files and real MP3 lengths, and `node scripts/hindi-audio-modes-qa.cjs` against a dev server to check the three modes in a browser (it signs in as the demo teacher).
+
+### Classes 11 and 12 story recordings
+
+61 more chapters have Hindi tracks in the same manifest: Class 11 Cybersecurity chapters 4-8 and all of Class 11 AI, Computational Thinking and Cyber Fraud, plus all 32 Class 12 chapters. Every one has all six scenes recorded (no English fallback scene). They were built from `CyberSuraksha_Hindi_Voiceover class 11,12.zip` (clips named `class11_m2-ai_ch05_scene02_aj.mp3`): each folder maps to the chapter at that position in `app/data/class-11-curriculum.ts` / `class-12-curriculum.ts`, whose slugified title is the lesson slug, and the clips were staged as `<slug>-hi-NN.mp3` for `scripts/build-hindi-story-audio.py`. Class 11 Cybersecurity chapter 1 keeps its own recording (below); chapters 2 (*Identity beyond a password*) and 3 (*Who should have access?*) have no Hindi audio yet and play English.
+
+### Class 11 Chapter 1
+
+
 Class 11 → Cybersecurity → Chapter 1, **Your digital risk map**, now uses the supplied Hindi recordings when हिन्दी is selected. The six files `c11_L1_s1.mp3` through `c11_L1_s6.mp3` were assembled in that order into `public/audio/cyber/your-digital-risk-map/story-hi.mp3`, with the house 0.65-second gap between sections. Cue times in the chapter JSON come from the decoded recordings, rather than the shorter English narration. The Hindi timeline is 111.342 seconds long.
 
-The existing scene buttons, captions, decision pause and replay use the selected narration's timing. Switching languages pauses at the start of the current section while retaining the learner's decision and activity state. The original English audio remains available through English. Other chapters retain their existing audio until their Hindi recordings are supplied. No runtime speech service is used.
+The existing scene buttons, captions, decision pause and replay use the selected narration's timing. Switching languages pauses at the start of the current section while retaining the learner's decision and activity state. The original English audio remains available through English. Chapters without a Hindi recording (see Classes 6-8 above for the 78 that have one) retain their existing audio. No runtime speech service is used.
 
 Run `node scripts/hindi-audio-qa.cjs` against the local server to check all six cues, playback, the locked decision/resume, switching during playback, mute, ending/replay, saved language on reload, another chapter's existing audio and recovery from an unavailable Hindi track. These checks passed at 1280px and 390px; the 13 localization/Class 11 security tests, touched-file ESLint and production build also passed after connecting this narration.
 
