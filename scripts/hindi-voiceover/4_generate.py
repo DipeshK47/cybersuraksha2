@@ -13,9 +13,10 @@ def voice_ids():
     mine = {v['name']: v['voice_id'] for v in r.json()['voices']}
     out = {}
     for key, name in common.VOICE_NAMES.items():
-        if name not in mine:
+        hit = common.find_voice(mine, name)
+        if not hit:
             sys.exit(f'Voice "{name}" is not in My Voices')
-        out[key] = mine[name]
+        out[key] = hit[1]
     return out
 
 
@@ -55,8 +56,8 @@ def main():
         open(tmp, 'wb').write(r.content); os.replace(tmp, path)
         c = int(r.headers.get('x-character-count', len(j['text'])))
         made += 1; credits += c
-        print(f"[{i + 1}/{len(jobs)}] saved {common.out_path(j)} ({c} credits)", flush=True)
-    print(f'DONE made={made} credits={credits}')
+        print(f"[{i + 1}/{len(jobs)}] saved {common.out_path(j)} ({c} characters)", flush=True)
+    print(f'DONE made={made} characters={credits} (about {round(credits*0.4)} credits)')
 
 
 if __name__ == '__main__':

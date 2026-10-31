@@ -13,8 +13,9 @@ def main():
     mine = {v['name']: v['voice_id'] for v in r.json()['voices']}
     ok = True
     for key, name in common.VOICE_NAMES.items():
-        if name in mine:
-            print(f'voice {key}: "{name}" OK')
+        hit = common.find_voice(mine, name)
+        if hit:
+            print(f'voice {key}: "{hit[0]}" OK')
         else:
             ok = False
             cand = [n for n in mine if n.lower().startswith(key)]

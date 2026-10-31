@@ -52,6 +52,18 @@ def prepare_text(t):
     return re.sub(r'\s+', ' ', t).strip()
 
 
+def norm(s):
+    return re.sub(r'\s+', ' ', s).strip().lower()
+
+
+def find_voice(mine, name):
+    """mine: {voice name: id}. Matches ignoring case and repeated spaces; returns (name, id) or None."""
+    for n, vid in mine.items():
+        if norm(n) == norm(name):
+            return n, vid
+    return None
+
+
 def api_key():
     k = os.environ.get('ELEVENLABS_API_KEY', '').strip()
     if not k:
