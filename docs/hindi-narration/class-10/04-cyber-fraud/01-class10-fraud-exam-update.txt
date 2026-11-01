@@ -1,0 +1,11 @@
+अदिति Decision Lab में practice exam के notices की chain खोलती है। सबसे पहले दिए source card पर Cedar Hall लिखा है। विहान बाद में आए forwards उसके पास रखता है और सबके source labels दिखाता है। एक बात बार-बार आने से वह अपने आप confirm नहीं हो जाती।
+
+एक प्रति जगह मेपल रूम कर देती है और रजिस्ट्रेशन link जोड़ती है। दूसरी सिर्फ़ कमरा बदलती है। अदिति दोनों अंतर अलग चिन्हित करती है क्योंकि एक जैसा शीर्षक यह नहीं बताता कि नई हिदायत किसने जोड़ी।
+
+Original source card पर Cedar Hall लिखा है। उसमें registration का instruction नहीं है। विहान हर version की बात अलग लिखता है। Original card पर link न होना एक difference दिखाता है। सिर्फ़ इस difference से यह नहीं पता चलता कि link किसने जोड़ा या क्यों जोड़ा।
+
+फ़ॉरवर्ड का जवाब बटन तुरंत सफ़ाई का वादा करता है। teacher कक्षा निर्देशिका में पहले से छपा स्कूल कार्यालय contact लेते हैं। बच्चे आगे भेजना रोकते हैं और जगह और नए रजिस्ट्रेशन निर्देश के अलग सवाल बनाते हैं।
+
+दिए office reply में Cedar Hall confirm होता है और exam की practice date वही रहती है। Reply यह नहीं बताता कि link किसने जोड़ा। अदिति लिखती है कि Maple Room वाला दावा इस reply से गलत साबित हुआ। Link का सवाल अभी खुला है, इसलिए वह किसी खास sender पर आरोप नहीं लगाती।
+
+विहान correction में सिर्फ़ confirmed venue और वही date लिखता है। Registration वाला नया instruction clarification मिलने तक उसमें शामिल नहीं करता। Record में हर claim के साथ उसका source और status रखता है। एक हिस्से का जवाब मिलना, बाकी claims की approval नहीं है।

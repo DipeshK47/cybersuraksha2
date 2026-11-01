@@ -1,0 +1,11 @@
+निखिल और रेवा संग्रहालय स्टेशनों के काल्पनिक request कार्ड मिलाते हैं। समूह A में टाइप कार्ड और B में स्कैन हैं। model हर समूह में 2 गलत श्रेणी prediction देता है। बराबर गिनती से पहले दोनों की सेवा समान लगती है।
+
+A में 20 test कार्ड और B में 5 हैं। रेवा गलत prediction को हर समूह के अपने कुल से बाँटती है। 20 में 2 और 5 में 2 की देखी दर अलग है, भले गलती का अंश समान है।
+
+यहाँ error का मतलब है कि model की predicted category, teacher के checked label से अलग है। इस example में model कोई जवाब रोक नहीं रहा। हम overall error rate निकाल रहे हैं। False alarm rate अलग है। उसके लिए पहले positive category तय करनी होगी, फिर negative cases का total, यानी denominator लेना होगा।
+
+poster दोनों समूह में 2 गलतियों के कारण model को fair कहता है। चुनें कि गिनती बैज सही ठहराती है या नहीं। दर का अंतर ज़रूरी है, पर छोटा स्कैन नमूना भविष्य के सभी नतीजे या कारण नहीं बताता।
+
+विवादित श्रेणी teacher समीक्षक को और अपठनीय स्कैन ज़्यादा साफ़ permission वाली प्रति के लिए जाता है। जाँचा label गलत हो तो पुष्ट सुधार दर्ज होता है। रेवा दोष देने या record छिपाने के बजाय सुधार के रास्ते खुला रखती है।
+
+Lab में error rates निकालें, missing evidence पहचानें और review की ज़िम्मेदारी तय करें। ऐसे और tests माँगें जिनमें intended users का सही representation हो। Errors किस तरह के हैं, यह भी देखें। Percentage के साथ sample size और limitations बताएँ। सिर्फ़ बराबर result या एक difference से हर use के लिए fairness तय नहीं होती।

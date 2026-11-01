@@ -1,0 +1,11 @@
+कबीर club के game में शामिल होना चाहता है। एक खिलाड़ी कहता है कि password भेज दो, मैं तुम्हारी profile बना दूँगा। मीरा पूछती है, सिर्फ़ picture बनाने में मदद के लिए किसी को पूरे account का access क्यों चाहिए?
+
+Password आपके account की चाबी है। दोस्ती साबित करने के लिए इसे share करना ज़रूरी नहीं है। Login code से भी कोई account खोल सकता है। अगर इनमें से कोई secret message पर भेज दिया जाए, तो दूसरा व्यक्ति account पर control ले सकता है या आपका access रोक सकता है।
+
+Teacher practice के लिए अलग-अलग शब्दों से बनी passphrase दिखाते हैं। लंबी और unique passphrase मदद करती है। Birthday जैसी जानकारी का कोई अंदाज़ा लगा सकता है। Account बनाने या वापस पाने में भरोसेमंद बड़े की मदद लें। इस activity में कोई असली password या secret नहीं बताना है।
+
+खिलाड़ी चैट पर password चाहता है। teacher या अभिभावक ने account के access की permission नहीं दी है। कबीर खिलाड़ी को क्या जवाब दे? अब दिए हुए options में अपना जवाब चुनें और उसे check करें। आगे जाने से पहले feedback पढ़ें।
+
+Password private रखें और उस offer के बारे में किसी भरोसेमंद बड़े से पूछें। Profile की picture बनाने में मदद मिल सकती है, बिना account का control किसी को दिए।
+
+अब practice lab में आपकी बारी है। यहाँ तीन हिस्से हैं। पहला, account की गुप्त चाबियाँ। दूसरा, अलग passphrase। और तीसरा, account की safe मदद। हर जवाब check करें और feedback पढ़ें। ज़रूरत हो तो फिर कोशिश करें। अपना record save करें। एक फ़ैसला अपने शब्दों में समझाएँ।

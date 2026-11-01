@@ -1,0 +1,11 @@
+अदिति Decision Lab में practice display strips के लिए एक helper सुझाती है। इसका अकेला input, दिया गया contrast value है। Output teacher को review या pass का सुझाव देता है। यह tool equipment certify करने, fault diagnose करने या असली लोगों के बारे में फैसले लेने के लिए नहीं है।
+
+विहान training में 2 पर review और 8 पर pass वाले examples चुनता है। यह छोटा model nearest selected value का label देता है। अगर दो अलग labels की दूरी बराबर हो, तो model जवाब रोकता है। अलग validation inputs 3, 4, 6 और 9 हैं। Predictions review, review, pass और pass आते हैं। Checked labels भी यही हैं, लेकिन यह अभी development का result है।
+
+हर review या बिना निर्णय वाले मामले को इंसानी जाँच चाहिए। सामान्य validation बैच की queue में 2 पट्टियाँ हैं, जो teacher की क्षमता 2 से मिलती हैं। अदिति output गिनती है; सही prediction से यह नहीं मानती कि सामग्री किसी को जाँचनी नहीं।
+
+सीमित काम, असल विकास सबूत और teacher की ज़िम्मेदारी रखने वाला model कार्ड चुनें। मंज़ूर input सीमा 0 से 10 है। rule में input बाहर हो या ज़रूरी review उपलब्ध क्षमता से ज़्यादा हो तो पूरा बैच रोकना है।
+
+बदले batch के inputs हैं 3, 5, 6 और 20। Model, 5 पर जवाब रोकता है और 20 पर pass कहता है। लेकिन यह input allowed range के बाहर है। विहान stop rule लगाता है। कोई numeric output मिल जाना, range से बाहर की strip को approve करने की वजह नहीं है।
+
+teacher को रुका बैच और model कार्ड मिलता है। तरीका तय करने के बाद नया प्रतिनिधि evaluation, निगरानी और वैकल्पिक व्यवस्था अभी अनसुलझे हैं। class की validation सफलता ठीक दर्ज होती है और असली इस्तेमाल का फैसला ज़िम्मेदार इंसानी review के पास रहता है।

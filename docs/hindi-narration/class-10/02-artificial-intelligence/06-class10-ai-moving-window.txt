@@ -1,0 +1,11 @@
+विहान Decision Lab में एक practice image का grey patch खोलता है। इसकी rows हैं [10, 20, 30], [40, 50, 60] और [70, 80, 90]। अदिति हर pixel की value और उसकी जगह साथ रखती है। इससे calculation करते समय पड़ोसी pixels सही पहचाने जाते हैं।
+
+बीच वाले pixel की value 50 है। आठ bit positions के weights हैं 128, 64, 32, 16, 8, 4, 2 और 1। वे 32, 16 और 2 वाली positions on करते हैं। Binary में इसे बोलेंगे: शून्य, शून्य, एक, एक, शून्य, शून्य, एक, शून्य। शुरू के zero भी रखें, क्योंकि इस representation की width तय है।
+
+अब दो बाई दो की window को image पर खिसकाएँ। हर जगह window के अंदर आने वाले pixels की values जोड़ें। Window सिर्फ़ वहीं रखें जहाँ वह image के अंदर पूरी आती है। बाहर padding नहीं जोड़ना है। यह हाथ से तय किया गया local calculation है, कोई trained convolutional neural network नहीं।
+
+ऊपर दाईं window का output दिखाने से पहले उसका जोड़ निकालें। इसमें 20, 30, 50 और 60 वाले pixels हैं। विहान calculation दिखाता है और अदिति window move करती है। सिर्फ़ patch को देखकर brightness का अंदाज़ा लगाना, यह तय calculation दोहराना नहीं है।
+
+Output की rows हैं [120, 160] और [240, 280]। Practice feature rule कहता है कि कम से कम 200 का sum होना चाहिए। इसलिए नीचे वाली row के outputs चुने जाएँगे। अदिति output positions को input pixels से अलग label करती है, ताकि rule गलत grid पर apply न हो।
+
+अब बीच वाले pixel को 0 करें। नई output rows [70, 110] और [190, 230] होंगी। सिर्फ़ आखिरी output rule पूरा करता है। इस calculation से पता चलता है कि एक pixel बदलने पर output कैसे बदलता है। इससे system को तस्वीर की object identity या उसका इंसानों वाला meaning समझ में आना साबित नहीं होता।

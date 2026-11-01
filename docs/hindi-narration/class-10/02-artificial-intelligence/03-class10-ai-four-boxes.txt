@@ -1,0 +1,11 @@
+अदिति डिसीज़न lab की मेज़ पर 20 काल्पनिक पढ़ने के कार्ड रखती है। positive का मतलब इंसानी पठन जाँच चाहिए। विहान model के prediction और जाँचे label अलग रखता है; कोई कॉलम विद्यार्थी या उसकी क्षमता नहीं बताता।
+
+बड़ी संख्या 20 में से 16 सही बताती है। विहान पूछता है कि हर गलती समान काम बनाती है क्या। अदिति दिखाती है कि कुछ negative चिन्हित हुए और कुछ positive छूटे। सिर्फ़ accuracy इन गलतियों को अलग नहीं करती।
+
+अब हर checked label और prediction की जोड़ी को सही box में रखें। True positive, यानी टी पी, के 6 cards हैं। False positive, यानी एफ़ पी, के 2; false negative, यानी एफ़ एन, के 2; और true negative, यानी टी एन, के 10। Predicted positive cards पहले दो boxes में हैं। Checked positive cards टी पी और एफ़ एन में हैं। इन groups को अलग देखने से denominator गलती से नहीं बदलता।
+
+review क्षमता 10 और अधिकतम 2 छूट की शर्त में setting चुनें। A review में 8 कार्ड भेजती और 2 छोड़ती है; B 11 भेजती और 1 छोड़ती है। कम छूट क्षमता का उल्लंघन नहीं मिटाती।
+
+इस pack की accuracy 80 परसेंट है। Precision, recall और एफ़ वन, तीनों 75 परसेंट हैं। अदिति सिर्फ़ बड़ी percentage याद नहीं करती। वह हर calculation को उसके boxes से जोड़ती है। अगर किसी ज़रूरी calculation का denominator शून्य हो, तो उस rate को undefined लिखना होगा। यहाँ denominator खाली नहीं है, इसलिए ये rates निकाले जा सकते हैं।
+
+notebook सिर्फ़ दिए पैक की शर्तों के लिए A सुझाती है। पूर्ण पहचान का वादा करने के बजाय बची positive छूट और इंसानी समीक्षक दर्ज हैं। सीमित pilot सोचने से पहले विकास के बाद नया independent evaluation फिर भी चाहिए।

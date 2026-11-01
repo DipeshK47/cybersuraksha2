@@ -1,0 +1,11 @@
+विहान को Decision Lab में एक practice payment screenshot मिलता है। उसमें reference B22 के साथ 750 रुपये और success का banner दिखता है। अदिति इसे sender का claim लिखती है। सिर्फ़ screenshot से recipient के असली provider account या transaction history का पता नहीं चलता।
+
+दिए provider record में B22 का status pending है, completed नहीं। Teacher उन्हें known provider का record पढ़ने को कहते हैं। इस class में सिर्फ़ paper records हैं। वे यह अंदाज़ा नहीं लगाते कि pending status कब बदलेगा।
+
+अदिति reference और amount मिलाकर screenshot को सही record row से जोड़ती है। दोनों fields का match मिलना, pending payment को completed नहीं बनाता। विहान difference मिटाता नहीं। वह sender का success claim और provider का अलग status, दोनों साथ रखता है।
+
+बच्चा काल्पनिक आरक्षण देने से पहले teacher के साथ पाने वाले का record जाँचता है। जानबूझकर धोखे का सबूत न हो तब भी सफ़ाई माँगना उपयोगी है। सबूत की यह कमी भरने को न भेजने वाले पर आरोप चाहिए, न दूसरा भुगतान।
+
+बाकी rows में B21 के 480 रुपये और B24 के 220 रुपये completed हैं। B23 में पहले 320 रुपये credit हुए, फिर उतने ही 320 रुपये reverse हुए। अदिति reversal को सही reference से जोड़ती है। वापस चली गई रकम को account में बचा पैसा नहीं गिनना है।
+
+विहान सिर्फ़ completed और account में बचे credits जोड़ता है। Total 700 रुपये है। Pending payment के screenshot वाला claim इस confirmed total में नहीं जुड़ता। उनकी table में reference, status और calculation अलग हैं। बाद में verified provider record बदले, तो वे reconciliation फिर कर सकते हैं।

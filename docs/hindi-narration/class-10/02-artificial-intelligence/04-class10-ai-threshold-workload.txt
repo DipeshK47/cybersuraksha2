@@ -1,0 +1,11 @@
+विहान Decision Lab में छह practice notice cards रखता है। दिए गए scores हैं 90, 80, 70, 60, 40 और 20। ये scores cards की ranking बताते हैं। इन्हें verified probability नहीं माना गया है।
+
+अदिति positive को विशेषज्ञ review चाहिए वाली सूचना कहती है। जाँचे positive A, C, D और F हैं। सीमा 70 पर बराबर या ऊपर वाले A, B और C चिन्हित हैं। बराबरी चिन्हित तरफ़ आती है।
+
+boundary 50 करने से D review queue में जुड़ता है। फिर 30 करने से E जुड़ता है। जाँचे label वही रहते हैं, इसलिए काम और गलतियों का बदलना उन्हीं कार्ड पर फैसले की boundary खिसकने से है।
+
+team अधिकतम 3 कार्ड जाँच सकती है और अधिकतम 1 positive छूट मंज़ूर है। चुनें कि कोई दी सीमा दोनों condition पूरी करती है क्या। अदिति सिर्फ़ छूट सुधरने पर setting को स्वीकार्य नहीं कहती।
+
+सीमा 70 पर 3 review और 2 positive छूट हैं। सीमा 50 पर 4 review और 1 छूट है। सीमा 30 पर 5 review और 1 छूट है। निचली सीमाएँ एक छूट घटाती हैं पर उपलब्ध review क्षमता पार करती हैं।
+
+इन settings में कोई भी दोनों conditions एक साथ पूरी नहीं करती। विहान इस conflict को लिखता है। Pilot से पहले plan में सुधार, ज़्यादा representative evidence और human review का विकल्प चाहिए। इसी visible validation pack पर tuning करने से नए, अनदेखे cases की performance तय नहीं होती।

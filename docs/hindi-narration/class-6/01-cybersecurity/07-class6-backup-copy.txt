@@ -1,0 +1,11 @@
+class अभ्यास में club लैपटॉप का काल्पनिक project folder खो जाता है। कबीर डेस्कटॉप शॉर्टकट दिखाता है, पर वह उसी गायब file तक जाता है। मीरा देखती है कि अलग मंज़ूर copy खुल सकती है या नहीं।
+
+Backup ऐसी copy है जिसे approved तरीके से रखा गया हो और ज़रूरत पर वापस पाया जा सके। सिर्फ़ दूसरा icon बना देना backup नहीं है। दोनों copies एक ही device पर हों, तो device खोने पर दोनों जा सकती हैं। पहले सोचें कि backup को किस problem के दौरान बचना चाहिए।
+
+Teacher practice file restore करके उसकी contents check करते हैं। Update के लिए भी known device settings और किसी बड़े की approval लें। अचानक दिखी web warning, repair tool download करने या remote access देने की permission नहीं है।
+
+teacher का मंज़ूर backup अलग स्कूल सिस्टम पर है। डेस्कटॉप शॉर्टकट और दूसरा folder लैपटॉप पर ही हैं। club लैपटॉप खोने पर कौन सी copy बचेगी? अब दिए हुए options में अपना जवाब चुनें और उसे check करें। आगे जाने से पहले feedback पढ़ें।
+
+अलग मंज़ूर backup लें और वापस मिली file जाँचें। copy तभी उपयोगी है जब समस्या में बचे और ज़रूरी काम रखे।
+
+अब practice lab में आपकी बारी है। यहाँ तीन हिस्से हैं। पहला, मूल और backup। दूसरा, वापसी की जाँच। और तीसरा, safe update आदतें। हर जवाब check करें और feedback पढ़ें। ज़रूरत हो तो फिर कोशिश करें। अपना record save करें। एक फ़ैसला अपने शब्दों में समझाएँ।
