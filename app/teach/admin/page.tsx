@@ -1,10 +1,10 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useState } from "react";
+import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { Copy, ShieldCheck } from "lucide-react";
 import { SchoolCurriculum } from "../../components/lms/SchoolCurriculum";
 import { TeacherHeader } from "../../components/TeacherHeader";
-import { readJson } from "../../lib/read-json";
+import { getJson, readJson } from "../../lib/read-json";
 
 /**
  * School-admin console: teacher onboarding (invites), account status, class
@@ -67,6 +67,10 @@ export default function AdminPage() {
   const [assignTeacherId, setAssignTeacherId] = useState("");
   const [assignedIds, setAssignedIds] = useState<number[]>([]);
   const [assignLoading, setAssignLoading] = useState(false);
+  // The teacher whose classes are on screen right now. A slower reply for a
+  // previously selected teacher must never replace these checkboxes, or Save
+  // would grant this teacher the other teacher's classes.
+  const selectedTeacherRef = useRef("");
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -173,19 +177,27 @@ export default function AdminPage() {
   }
 
   async function selectTeacherForAssignment(teacherId: string) {
+    selectedTeacherRef.current = teacherId;
     setAssignTeacherId(teacherId);
     setAssignedIds([]);
-    if (!teacherId) return;
-    setAssignLoading(true);
-    const response = await fetch(`/api/admin/teachers/${teacherId}/classes`);
-    if (response.ok) {
-      const payload = await readJson<{
-        classes?: { id: number }[];
-        error?: string;
-      }>(response);
-      setAssignedIds((payload.classes ?? []).map((item) => item.id));
+    if (!teacherId) {
+      setAssignLoading(false);
+      return;
     }
+    setAssignLoading(true);
+    const payload = await getJson<{ classes?: { id: number }[]; error?: string }>(
+      `/api/admin/teachers/${teacherId}/classes`,
+    );
+    if (selectedTeacherRef.current !== teacherId) return; // stale reply
     setAssignLoading(false);
+    if (!payload.classes) {
+      // Without the current assignments, Save would overwrite them blindly.
+      setStatus(payload.error ?? "Unable to load that teacher’s classes.");
+      selectedTeacherRef.current = "";
+      setAssignTeacherId("");
+      return;
+    }
+    setAssignedIds(payload.classes.map((item) => item.id));
   }
 
   async function saveAssignments() {

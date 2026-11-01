@@ -1,5 +1,5 @@
 import { and, asc, eq, inArray, isNull, sql } from "drizzle-orm";
-import { getDb } from ".";
+import { getDb, inChunks } from ".";
 import { assignments, assignmentStudents, assignmentSubmissions, classes, learningAttempts, learningEvents, students } from "./schema";
 import { cyberLessons } from "../app/data/cyber-lessons";
 import { attemptSummary, assignmentSummary } from "../app/lib/lms-summary";
@@ -74,10 +74,12 @@ export async function assignmentCounts(rows: typeof assignments.$inferSelect[]) 
   if (!rows.length) return [];
   const db = getDb();
   const ids = rows.map(row => row.id);
-  const recipients = await db.select().from(assignmentStudents).where(inArray(assignmentStudents.assignmentId, ids));
+  const [recipients, submissions] = await Promise.all([
+    inChunks(ids, chunk => db.select().from(assignmentStudents).where(inArray(assignmentStudents.assignmentId, chunk))),
+    inChunks(ids, chunk => db.select().from(assignmentSubmissions).where(inArray(assignmentSubmissions.assignmentId, chunk))),
+  ]);
   const studentIds = [...new Set(recipients.map(row => row.studentId))];
-  const attempts = studentIds.length ? await db.select().from(learningAttempts).where(inArray(learningAttempts.studentId, studentIds)) : [];
-  const submissions = await db.select().from(assignmentSubmissions).where(inArray(assignmentSubmissions.assignmentId, ids));
+  const attempts = await inChunks(studentIds, chunk => db.select().from(learningAttempts).where(inArray(learningAttempts.studentId, chunk)));
   return rows.map(row => {
     const assigned = recipients.filter(r => r.assignmentId === row.id);
     const progress = assigned.map(r => assignmentSummary(row, attempts.filter(a => a.studentId === r.studentId), Date.now(), submissions.find(s => s.assignmentId === row.id && s.studentId === r.studentId)));

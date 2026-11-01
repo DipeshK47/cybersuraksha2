@@ -2,19 +2,25 @@ import { getScopedAcademyData } from "../../../db/academy";
 import { getDb } from "../../../db";
 import { assignments } from "../../../db/schema";
 import { and, asc, eq, inArray, isNotNull } from "drizzle-orm";
-import { scopedClassIds } from "../../lib/auth";
-import { scopedStudentIds } from "../../lib/auth";
+import { z } from "zod";
+import { scopedClassIdsQuery, scopedStudentIds } from "../../lib/auth";
 import { getSession } from "../../lib/session";
 import type { SessionTeacher } from "../../lib/session";
-import { searchStudentHandbooks, type HandbookSource } from "../../lib/handbook-search";
+import { getStudentSession } from "../../lib/student-session";
+import { enforceKeyedRateLimit } from "../../lib/rate-limit";
+import { parseJson } from "../../lib/validation";
+import { handbookGrades, searchStudentHandbooks, type HandbookSource } from "../../lib/handbook-search";
 
-type ChatRequest = {
-  message?: string;
-  mode?: "handbook" | "web";
-  grade?: number;
-  language?: "en" | "hi";
-  history?: Array<{ role: "user" | "assistant"; text: string }>;
-};
+// Every field is bounded: the provider is billed per token, so an unbounded
+// history would let one request carry an arbitrarily large prompt.
+const chatSchema = z.object({
+  message: z.string().trim().min(1, "Ask a question between 1 and 800 characters.").max(800, "Ask a question between 1 and 800 characters."),
+  mode: z.enum(["handbook", "web"]).optional(),
+  language: z.enum(["en", "hi"]).optional(),
+  history: z.array(z.object({ role: z.enum(["user", "assistant"]), text: z.string().max(1500) })).max(6).optional(),
+});
+const MAX_BODY_BYTES = 16_000;
+const PROVIDER_TIMEOUT_MS = 20_000;
 
 type GroqResponse = {
   error?: { message?: string };
@@ -70,9 +76,8 @@ async function teacherAnswer(question: string, teacher: SessionTeacher) {
     };
   }
   if (/deadline|due|pending work/.test(query)) {
-    const classIds = await scopedClassIds(teacher);
-    const rows = classIds.length ? await getDb().select({ title: assignments.title, dueAt: assignments.dueAt }).from(assignments)
-      .where(and(eq(assignments.schoolId, teacher.schoolId), inArray(assignments.classId, classIds), isNotNull(assignments.publishedAt))).orderBy(asc(assignments.dueAt)).limit(10) : [];
+    const rows = await getDb().select({ title: assignments.title, dueAt: assignments.dueAt }).from(assignments)
+      .where(and(eq(assignments.schoolId, teacher.schoolId), inArray(assignments.classId, scopedClassIdsQuery(teacher)), isNotNull(assignments.publishedAt))).orderBy(asc(assignments.dueAt)).limit(10);
     return {
       answer: rows.length ? `Published assignment deadlines:\n${rows.map(row => `• ${row.title} — ${new Date(row.dueAt).toISOString()}`).join("\n")}\n\nOpen Classroom for each student’s completion and marks.` : "No published assignments are available for your classes. Create an assignment in Classroom to set a deadline.",
       sources: [], provider: "teacher-data",
@@ -132,15 +137,35 @@ function buildLocalAnswer(grade: number, sources: HandbookSource[], includeRefer
   ].filter(Boolean).join("\n\n");
 }
 
+/**
+ * Shiksha Guide. Only signed-in users reach it: teachers get answers from their
+ * own scoped class data, students get their own class's handbook (the grade
+ * comes from the verified student record, never from the request). Each user
+ * has a request quota so the provider key cannot be drained.
+ */
 export async function POST(request: Request) {
-  let payload: ChatRequest;
-  try { payload = (await request.json()) as ChatRequest; } catch { return Response.json({ error: "Send a valid question." }, { status: 400 }); }
-  const message = payload.message?.trim() ?? "";
-  const grade = Number(payload.grade);
-  const hindi = payload.language === "hi";
-  if (!message || message.length > 800) return Response.json({ error: "Ask a question between 1 and 800 characters." }, { status: 400 });
-
+  if (Number(request.headers.get("content-length") ?? 0) > MAX_BODY_BYTES) {
+    return Response.json({ error: "That conversation is too long. Start a new question." }, { status: 413 });
+  }
   const teacherSession = await getSession(request);
+  const studentSession = teacherSession ? null : await getStudentSession(request);
+  if (!teacherSession && !studentSession) {
+    return Response.json({ error: "Sign in to use Shiksha Guide." }, { status: 401 });
+  }
+  // ponytail: per-isolate quota (see rate-limit.ts); move to a Durable Object or WAF rule for a hard global cap.
+  const limited = enforceKeyedRateLimit(
+    teacherSession ? `chat:teacher:${teacherSession.teacher.id}` : `chat:student:${studentSession!.student.id}`,
+    20,
+    10 * 60_000,
+  );
+  if (limited) return limited;
+
+  const parsed = await parseJson(request, chatSchema);
+  if (parsed.error) return parsed.error;
+  const payload = parsed.data;
+  const message = payload.message;
+  const hindi = payload.language === "hi";
+
   if (teacherSession) {
     try {
       return Response.json(
@@ -149,7 +174,17 @@ export async function POST(request: Request) {
     }
     catch { return Response.json({ error: "Teacher data is unavailable right now." }, { status: 502 }); }
   }
-  if (!Number.isInteger(grade) || grade < 3 || grade > 8) return Response.json({ error: "Choose a class from 3 to 8." }, { status: 400 });
+  const grade = Number.parseInt(studentSession!.student.className, 10);
+  if (!handbookGrades.has(grade)) {
+    const covered = [...handbookGrades].filter(value => value >= 6).join(", ");
+    return Response.json({
+      answer: hindi
+        ? `शिक्षा गाइड की हैंडबुक अभी सिर्फ़ क्लास ${covered} के लिए है। अपने चैप्टर से जुड़े सवाल अपने टीचर से पूछें।`
+        : `Shiksha Guide’s handbooks currently cover Classes ${covered} only, so it can’t answer for your class yet. Ask your teacher about your chapter.`,
+      sources: [],
+      provider: "local",
+    });
+  }
   if (containsPersonalData(message)) return Response.json({ answer: hindi ? "अपना नाम, कॉन्टैक्ट डिटेल्स, पता, पासवर्ड और दूसरी निजी जानकारी हटाएँ। फिर सिर्फ़ सीखने से जुड़ा सवाल पूछें।" : "Please remove your name, contact details, address, password, or other personal information, then ask the learning question again.", sources: [] });
 
   const sources = searchStudentHandbooks(message, grade, 5, hindi ? "hi" : "en");
@@ -174,6 +209,7 @@ export async function POST(request: Request) {
   try {
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
+      signal: AbortSignal.timeout(PROVIDER_TIMEOUT_MS),
       headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({
         model,

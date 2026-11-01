@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { build } from 'esbuild';
-import { Miniflare } from 'miniflare';
+import { Miniflare, convertV4MiniflareOptions } from 'miniflare';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
@@ -16,13 +16,15 @@ const routes = [
   ['/api/students', 'students'], ['/api/schools', 'schools'], ['/api/chat', 'chat'],
   ['/api/lms/assignments', 'lms/assignments'], ['/api/lms/inbox', 'lms/inbox'],
   ['/api/lms/marks', 'lms/marks'], ['/api/lms/progress', 'lms/progress'],
-  ['/api/activity', 'activity'], ['/api/module-runs', 'module-runs']
+  ['/api/activity', 'activity'], ['/api/module-runs', 'module-runs'],
+  ['/api/academy', 'academy'], ['/api/analytics', 'analytics']
 ];
 const dynamic = [
   ['^/api/lms/assignments/(\\d+)$', 'lms/assignments/[id]', ['id']],
   ['^/api/lms/inbox/(\\d+)$', 'lms/inbox/[id]', ['id']],
   ['^/api/lms/students/(\\d+)$', 'lms/students/[id]', ['id']],
   ['^/api/lms/assignments/(\\d+)/submissions/(\\d+)$', 'lms/assignments/[id]/submissions/[studentId]', ['id', 'studentId']],
+  ['^/api/students/(\\d+)/reset$', 'students/[id]/reset', ['id']],
 ];
 const imports = [...routes, ...dynamic].map(([,path], i) => `import * as route${i} from './app/api/${path}/route.ts';`).join('\n');
 const entry = `${imports}
@@ -36,12 +38,13 @@ export default { async fetch(request) {
 const bundle = await build({ stdin: { contents: entry, resolveDir: root }, bundle: true, write: false, format: 'esm', platform: 'neutral', conditions: ['workerd', 'worker'], external: ['cloudflare:workers', 'node:*'], define: { 'process.env.NODE_ENV': '"development"' }, plugins: [{ name: 'sql', setup(builder) { builder.onResolve({filter:/\.sql\?raw$/}, args => ({path:fileURLToPath(new URL(args.path.replace('?raw',''), `file://${args.resolveDir}/`)),namespace:'sql'})); builder.onLoad({filter:/.*/,namespace:'sql'}, async args => ({contents:await readFile(args.path,'utf8'),loader:'text'})); } }] });
 
 test('school isolation, assignments, grading, marks and curriculum enforcement', async t => {
- const mf = new Miniflare({ modules: true, script: bundle.outputFiles[0].text, compatibilityDate: '2026-05-15', compatibilityFlags: ['nodejs_compat'], d1Databases: ['DB'] });
+ // Miniflare 5 (shipped by current wrangler) takes a new options shape; convert the classic one.
+ const mf = new Miniflare(convertV4MiniflareOptions({ modules: true, script: bundle.outputFiles[0].text, compatibilityDate: '2026-05-15', compatibilityFlags: ['nodejs_compat'], d1Databases: ['DB'] }));
  const request = (path, cookie, method='GET', body) => mf.dispatchFetch('http://school.test'+path,{method, headers:{...(cookie?{cookie}:{}),...(body?{'content-type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
  const json = async (path, cookie, method='GET', body, status=200) => { const r = await request(path,cookie,method,body); const p = await r.json(); assert.equal(r.status,status,JSON.stringify(p)); return p; };
  const login = async (kind,body) => {const r=await request('/api/auth/'+kind,null,'POST',body);assert.equal(r.status,200,await r.clone().text());return r.headers.getSetCookie()[0].split(';')[0];};
  try {
- const admin = await login('teacher',{email:'teacher@dpsrkp.edu.in',password:'Teacher@123'});
+ const admin = await login('teacher',{email:'admin@dpsrkp.edu.in',password:'Admin@123'});
  const student = await login('student',{school:'dps-rkp',className:'7A',rollNo:'20',password:'DPS20SAFE'});
  const workspace = await json('/api/lms/assignments',admin);
  const classroom = workspace.classes.find(c=>c.name==='7A');
@@ -193,6 +196,36 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
    assert.equal((await request('/api/module-runs',tenthCookie,'POST',{moduleId})).status,403);
   }
   assert.equal((await request('/api/activity',tenthCookie,'POST',{moduleId:current[0].id,type:'module_started',payload:{}})).status,200);
+ });
+ await t.test('security review regressions: resets, roster limits, login CSRF and the assistant',async()=>{
+  // A school-sized import: one request, 120 learners, a 12-character roll each.
+  const roster=Array.from({length:120},(_,i)=>({rollNo:`R${String(i).padStart(11,'0')}`,name:`Bulk learner ${i}`}));
+  const {students:issued}=await json('/api/students',admin,'POST',{className:'7A',students:roster},201);
+  assert.equal(issued.length,120);
+  assert.equal((await json('/api/academy',admin)).students.filter(s=>s.name.startsWith('Bulk learner')).length,120,'roster beyond 100 students');
+  assert.ok((await json('/api/analytics',admin)).students.length>120);
+  await json('/api/lms/assignments',admin);
+  await json('/api/lms/marks',admin);
+  // Reset: the random part survives a long roll, and earlier sessions end.
+  const target=issued[0];
+  const before=await login('student',{school:'dps-rkp',className:'7A',rollNo:target.rollNo,password:target.accessCode});
+  assert.equal((await request('/api/lms/progress',before)).status,200);
+  const codes=new Set();
+  for(let i=0;i<3;i++) codes.add((await json(`/api/students/${target.id}/reset`,admin,'POST',{})).student.accessCode);
+  assert.equal(codes.size,3,'reset codes are random');
+  for(const code of codes) assert.equal(code.length,12);
+  assert.equal((await request('/api/lms/progress',before)).status,401,'reset revokes existing sessions');
+  // Login CSRF: a text/plain form or a foreign Origin cannot sign anyone in.
+  const creds=JSON.stringify({school:'dps-rkp',className:'7A',rollNo:'20',password:'DPS20SAFE'});
+  assert.equal((await mf.dispatchFetch('http://school.test/api/auth/student',{method:'POST',headers:{'content-type':'text/plain'},body:creds})).status,415);
+  assert.equal((await mf.dispatchFetch('http://school.test/api/auth/student',{method:'POST',headers:{'content-type':'application/json',origin:'http://evil.test'},body:creds})).status,403);
+  assert.equal((await mf.dispatchFetch('http://school.test/api/auth/student',{method:'POST',headers:{'content-type':'application/json',origin:'http://school.test'},body:creds})).status,200);
+  // The assistant needs a session and validates its body.
+  assert.equal((await request('/api/chat',null,'POST',{message:'What is a pattern?'})).status,401);
+  assert.equal((await mf.dispatchFetch('http://school.test/api/chat',{method:'POST',headers:{cookie:student,'content-type':'application/json'},body:'null'})).status,400);
+  assert.equal((await request('/api/chat',student,'POST',{message:123})).status,400);
+  assert.equal((await request('/api/chat',student,'POST',{message:'Hi',history:[{role:'user',text:'x'.repeat(5000)}]})).status,400);
+  assert.ok((await json('/api/chat',student,'POST',{message:'What is a pattern?'})).answer);
  });
  await t.test('school curriculum changes take effect on APIs immediately',async()=>{
   const settings=await json('/api/admin/school',admin);

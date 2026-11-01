@@ -76,9 +76,9 @@ test("the module includes motion and honors reduced-motion preferences", async (
   assert.match(css, /@keyframes/);
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /var\(--sl-canvas\)/);
+  // The site ships a single light theme.
   assert.match(themeCss, /color-scheme: light/);
-  assert.match(themeCss, /html\[data-theme="dark"\]/);
-  assert.match(themeCss, /color-scheme: dark/);
+  assert.doesNotMatch(themeCss, /color-scheme: dark/);
 });
 
 test("handbook geometry uses shared figures and the exact source crop", async () => {

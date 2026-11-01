@@ -8,9 +8,7 @@ import {
   Bot,
   BrainCircuit,
   CalendarDays,
-  CheckSquare2,
   ClipboardCheck,
-  Clock3,
   FileChartColumn,
   Flame,
   GraduationCap,
@@ -28,7 +26,6 @@ import { AssignmentNotification } from "../components/lms/LmsPortal";
 import {
   chapterCount,
   curriculum,
-  moduleCount,
   subjectModuleCount,
   type CurriculumStrand,
 } from "../data/curriculum";
@@ -126,7 +123,7 @@ export default async function DashboardPage() {
           <nav className="dashboardNavRight" aria-label={`${role} navigation`}>
             {role === "teacher" ? (
               <>
-                <span className="dashboardOrg">{access.schoolName}</span>
+                <span className="dashboardOrg" title={access.schoolName}>{access.schoolName}</span>
                 <Link className="dashboardGhost" href="/teach">
                   My classes
                 </Link>
@@ -139,15 +136,14 @@ export default async function DashboardPage() {
               </>
             ) : (
               <>
-                <span className="dashboardOrg">
-                  {className ? `Class ${className}` : "Student"}
-                </span>
+                {className ? <span className="dashboardOrg">Class {className}</span> : null}
                 <AssignmentNotification />
                 <Link className="dashboardGhost" href="/learn/progress">
                   My progress
                 </Link>
               </>
             )}
+            <div data-language-slot />
             <Link className="dashboardGhost" href="/logout">
               Log out
             </Link>
@@ -396,15 +392,13 @@ export default async function DashboardPage() {
       </div>
 
       <footer className="dashboardFoot">
-        <span>
-          <Clock3 aria-hidden="true" /> <b>{moduleCount}</b> planned modules
-        </span>
-        <span>
-          <CheckSquare2 aria-hidden="true" /> Interactive, not slides
-        </span>
-        <span>
-          <ShieldCheck aria-hidden="true" /> Real scenarios, safe practice
-        </span>
+        <figure>
+          <blockquote>
+            Learning gives creativity, creativity leads to thinking, thinking
+            provides knowledge, knowledge makes you great.
+          </blockquote>
+          <figcaption>Dr. A.P.J. Abdul Kalam</figcaption>
+        </figure>
       </footer>
     </main>
   );

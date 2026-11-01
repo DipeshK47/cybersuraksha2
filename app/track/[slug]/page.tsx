@@ -43,6 +43,7 @@ export default async function TrackPage({
       <header className="trackNav">
         <Link href={`/dashboard?${roleQuery}`}>← CyberShiksha</Link>
         <div>
+          <div data-language-slot />
           <Link href="/logout">Log out</Link>
         </div>
       </header>

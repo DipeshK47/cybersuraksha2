@@ -1,5 +1,5 @@
 import { and, asc, desc, eq, inArray } from "drizzle-orm";
-import { getDb } from "../../db";
+import { getDb, inChunks } from "../../db";
 import { activityEvents, learningAttempts, learningEvents } from "../../db/schema";
 
 /**
@@ -183,17 +183,19 @@ export type StudentActivitySummary = {
 export async function summarizeActivity(
   studentIds: number[],
 ): Promise<StudentActivitySummary[]> {
-  if (studentIds.length === 0) return [];
-  const rows = await getDb()
-    .select({
-      studentId: activityEvents.studentId,
-      type: activityEvents.type,
-      payload: activityEvents.payload,
-      createdAt: activityEvents.createdAt,
-    })
-    .from(activityEvents)
-    .where(inArray(activityEvents.studentId, studentIds))
-    .orderBy(asc(activityEvents.id));
+  // Each student falls in exactly one chunk, so per-student order is kept.
+  const rows = await inChunks(studentIds, (chunk) =>
+    getDb()
+      .select({
+        studentId: activityEvents.studentId,
+        type: activityEvents.type,
+        payload: activityEvents.payload,
+        createdAt: activityEvents.createdAt,
+      })
+      .from(activityEvents)
+      .where(inArray(activityEvents.studentId, chunk))
+      .orderBy(asc(activityEvents.id)),
+  );
 
   const byStudent = new Map<
     number,

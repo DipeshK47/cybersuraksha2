@@ -29,6 +29,27 @@ export async function parseJson<T>(
   return { data: result.data };
 }
 
+/**
+ * Login CSRF guard for the endpoints that *issue* sessions (SameSite cookies do
+ * not protect those). A foreign page can post a `text/plain` form without a
+ * CORS preflight, so require a JSON content type, and refuse a browser Origin
+ * that is not this site. Returns a ready Response when the request is refused.
+ */
+export function rejectCrossSiteJson(request: Request): Response | null {
+  const type = request.headers.get("content-type") ?? "";
+  if (!type.toLowerCase().startsWith("application/json")) {
+    return Response.json({ error: "Send the form as JSON." }, { status: 415 });
+  }
+  const origin = request.headers.get("origin");
+  let sameSite = request.headers.get("sec-fetch-site") !== "cross-site";
+  if (origin) {
+    // `new URL("null")` (sandboxed frames, file pages) throws, which refuses too.
+    try { sameSite = new URL(origin).host === new URL(request.url).host; } catch { sameSite = false; }
+  }
+  if (!sameSite) return Response.json({ error: "Cross-site sign-in is not allowed." }, { status: 403 });
+  return null;
+}
+
 const email = z.string().trim().toLowerCase().email();
 const nonEmpty = z.string().min(1);
 

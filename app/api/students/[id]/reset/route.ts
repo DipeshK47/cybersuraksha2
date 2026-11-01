@@ -1,20 +1,16 @@
 import { eq } from "drizzle-orm";
 import { getDb } from "../../../../../db";
-import { students } from "../../../../../db/schema";
+import { studentSessions, students } from "../../../../../db/schema";
 import { getAccessibleStudent, requireTeacher } from "../../../../lib/auth";
 import { writeAudit } from "../../../../lib/audit";
 import { hashPassword } from "../../../../lib/password";
-
-function newAccessCode(rollNo: string) {
-  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  const bytes = crypto.getRandomValues(new Uint8Array(7));
-  const suffix = Array.from(bytes, (byte) => alphabet[byte % alphabet.length]).join("");
-  return `DPS${rollNo}${suffix}`.slice(0, 12);
-}
+import { newAccessCode } from "../../../../lib/tokens";
 
 /**
  * Reset a student's password. Returns the new plaintext access code exactly
- * once (for the printed slip); only its hash is stored.
+ * once (for the printed slip); only its hash is stored. Every existing session
+ * for the learner is revoked in the same batch, so whoever held the old
+ * credentials is signed out too.
  */
 export async function POST(
   request: Request,
@@ -35,10 +31,11 @@ export async function POST(
   }
 
   const accessCode = newAccessCode(student.rollNo);
-  await getDb()
-    .update(students)
-    .set({ passwordHash: await hashPassword(accessCode) })
-    .where(eq(students.id, studentId));
+  const db = getDb();
+  await db.batch([
+    db.update(students).set({ passwordHash: await hashPassword(accessCode) }).where(eq(students.id, studentId)),
+    db.delete(studentSessions).where(eq(studentSessions.studentId, studentId)),
+  ]);
 
   await writeAudit({
     actorTeacherId: auth.id,

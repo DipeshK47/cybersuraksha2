@@ -54,17 +54,13 @@ function getViewerRole() {
     : "student";
 }
 
-function getInitialGrade() {
-  if (typeof window === "undefined") return 7;
-  try {
-    const stored = sessionStorage.getItem("cybersuraksha-student");
-    const student = stored ? (JSON.parse(stored) as { className?: string }) : null;
-    const grade = Number.parseInt(student?.className ?? "", 10);
-    return grade >= 6 && grade <= 8 ? grade : 7;
-  } catch {
-    return 7;
-  }
+/** Who is signed in on this tab, as far as the client knows. */
+function viewerIdentity() {
+  return `${sessionStorage.getItem("cybersuraksha-role") ?? ""}|${sessionStorage.getItem("cybersuraksha-student") ?? ""}`;
 }
+
+// Visiting any of these means someone is signing in or out on this device.
+const authPaths = new Set(["/logout", "/student-login", "/teacher-login", "/accept-invite"]);
 
 function getSessionId() {
   const key = "cybersuraksha-guide-session";
@@ -85,7 +81,6 @@ export function HandbookChatbot({
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState<"handbook" | "web">("handbook");
-  const [grade, setGrade] = useState(getInitialGrade);
   const [messages, setMessages] = useState<Message[]>([welcome]);
   const [question, setQuestion] = useState("");
   const [sending, setSending] = useState(false);
@@ -93,6 +88,25 @@ export function HandbookChatbot({
   const [viewerRole, setViewerRole] = useState<"student" | "teacher">("student");
   const inputRef = useRef<HTMLInputElement>(null);
   const conversationRef = useRef<HTMLDivElement>(null);
+  const identityRef = useRef<string | null>(null);
+  // Bumped on every reset so a reply still in flight is dropped, not shown.
+  const generationRef = useRef(0);
+
+  // The widget lives in the root layout and survives client navigation, so a
+  // conversation (which may hold a teacher's class report) must not outlive
+  // the person who had it on a shared classroom computer.
+  useEffect(() => {
+    const identity = viewerIdentity();
+    const changed = identityRef.current !== null && identityRef.current !== identity;
+    identityRef.current = identity;
+    if (!changed && !authPaths.has(pathname)) return;
+    generationRef.current += 1;
+    setMessages([welcome]);
+    setQuestion("");
+    setStatus("");
+    setSending(false);
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (open) {
@@ -138,10 +152,11 @@ export function HandbookChatbot({
       role: "user",
       text,
     };
+    const generation = generationRef.current;
     const history = messages
       .filter((message) => message.id !== "welcome")
       .slice(-6)
-      .map((message) => ({ role: message.role, text: message.text }));
+      .map((message) => ({ role: message.role, text: message.text.slice(0, 1500) }));
     setMessages((current) => [...current, userMessage]);
     setQuestion("");
     setSending(true);
@@ -154,7 +169,6 @@ export function HandbookChatbot({
         body: JSON.stringify({
           message: text,
           mode,
-          grade,
           history,
           sessionId: getSessionId(),
           language: document.documentElement.lang === "hi" ? "hi" : "en",
@@ -166,6 +180,7 @@ export function HandbookChatbot({
         provider?: "groq" | "teacher-data";
         sources?: Source[];
       }>(response);
+      if (generation !== generationRef.current) return;
       setMessages((current) => [
         ...current,
         {
@@ -183,6 +198,7 @@ export function HandbookChatbot({
         setStatus("Local handbook answer with approved official research links.");
       }
     } catch {
+      if (generation !== generationRef.current) return;
       setMessages((current) => [
         ...current,
         {
@@ -192,7 +208,7 @@ export function HandbookChatbot({
         },
       ]);
     } finally {
-      setSending(false);
+      if (generation === generationRef.current) setSending(false);
     }
   }
 
@@ -238,20 +254,6 @@ export function HandbookChatbot({
             </div>
           ) : (
           <div className="surakshaGuideControls">
-            <label>
-              <span>Class</span>
-              <select
-                aria-label="Choose class"
-                onChange={(event) => setGrade(Number(event.target.value))}
-                value={grade}
-              >
-                {[6, 7, 8].map((value) => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </select>
-            </label>
             <div aria-label="Answer sources" className="surakshaGuideMode" role="group">
               <button
                 aria-pressed={mode === "handbook"}

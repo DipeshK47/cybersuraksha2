@@ -12,6 +12,18 @@ export function randomToken(): string {
 }
 
 /**
+ * A printable student access code: up to four characters of the roll number
+ * (so the slip is easy to match) followed by eight random characters. The
+ * random part is never truncated, so long roll numbers stay unguessable.
+ */
+export function newAccessCode(rollNo: string): string {
+  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // 32 symbols: byte % 32 is unbiased
+  const bytes = crypto.getRandomValues(new Uint8Array(8));
+  const suffix = Array.from(bytes, (byte) => alphabet[byte % alphabet.length]).join("");
+  return `${rollNo.slice(0, 4)}${suffix}`;
+}
+
+/**
  * SHA-256 hex digest. Only the hash of a token is ever persisted, so leaking
  * the database does not leak usable credentials.
  */

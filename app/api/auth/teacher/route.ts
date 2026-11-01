@@ -5,8 +5,9 @@ import { ensureAcademySeeded } from "../../../../db/academy";
 import { teachers } from "../../../../db/schema";
 import { hashPassword, needsRehash, verifyPassword } from "../../../lib/password";
 import { createSession } from "../../../lib/session";
+import { requireTeacher } from "../../../lib/auth";
 import { enforceRateLimit } from "../../../lib/rate-limit";
-import { parseJson, teacherLoginSchema } from "../../../lib/validation";
+import { parseJson, rejectCrossSiteJson, teacherLoginSchema } from "../../../lib/validation";
 
 /**
  * Teacher / school-admin login. Looks the account up by email, verifies the
@@ -15,6 +16,8 @@ import { parseJson, teacherLoginSchema } from "../../../lib/validation";
  * password", and "not yet approved" to avoid account enumeration.
  */
 export async function POST(request: Request) {
+  const crossSite = rejectCrossSiteJson(request);
+  if (crossSite) return crossSite;
   const limited = enforceRateLimit(request, "auth:teacher", 10, 10_000);
   if (limited) return limited;
 
@@ -69,4 +72,11 @@ export async function POST(request: Request) {
     },
     { headers },
   );
+}
+
+/** The signed-in teacher's role, so the header shows Admin only to a school_admin. */
+export async function GET(request: Request) {
+  const auth = await requireTeacher(request);
+  if (auth instanceof Response) return auth;
+  return Response.json({ role: auth.role });
 }

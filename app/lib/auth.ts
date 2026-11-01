@@ -46,23 +46,28 @@ export async function requireRole(
   return auth;
 }
 
-/** The set of class ids a teacher may access, scoped by school + assignment. */
-export async function scopedClassIds(
-  teacher: SessionTeacher,
-): Promise<number[]> {
+/**
+ * The teacher's class scope as a SQL subquery (school + assignment). Callers
+ * embed it with `inArray(column, ...)` so a large school never expands into
+ * one bound parameter per id — D1 allows only 100 per statement.
+ */
+export function scopedClassIdsQuery(teacher: SessionTeacher) {
   const db = getDb();
   if (teacher.role === "school_admin") {
-    const rows = await db
-      .select({ id: classes.id })
-      .from(classes)
-      .where(eq(classes.schoolId, teacher.schoolId));
-    return rows.map((row) => row.id);
+    return db.select({ id: classes.id }).from(classes).where(eq(classes.schoolId, teacher.schoolId));
   }
-  const rows = await db
+  return db
     .select({ id: teacherClasses.classId })
     .from(teacherClasses)
     .innerJoin(classes, eq(classes.id, teacherClasses.classId))
     .where(and(eq(teacherClasses.teacherId, teacher.id), eq(classes.schoolId, teacher.schoolId)));
+}
+
+/** The set of class ids a teacher may access, scoped by school + assignment. */
+export async function scopedClassIds(
+  teacher: SessionTeacher,
+): Promise<number[]> {
+  const rows = await scopedClassIdsQuery(teacher);
   return rows.map((row) => row.id);
 }
 
@@ -103,15 +108,18 @@ export async function getAccessibleStudent(
   return null;
 }
 
+/** The teacher's student scope as a SQL subquery; see `scopedClassIdsQuery`. */
+export function scopedStudentIdsQuery(teacher: SessionTeacher) {
+  return getDb()
+    .select({ id: students.id })
+    .from(students)
+    .where(and(eq(students.schoolId, teacher.schoolId), inArray(students.classId, scopedClassIdsQuery(teacher))));
+}
+
 /** All student ids the teacher may see (used to scope roster / analytics). */
 export async function scopedStudentIds(
   teacher: SessionTeacher,
 ): Promise<number[]> {
-  const classIds = await scopedClassIds(teacher);
-  if (classIds.length === 0) return [];
-  const rows = await getDb()
-    .select({ id: students.id })
-    .from(students)
-    .where(and(eq(students.schoolId, teacher.schoolId), inArray(students.classId, classIds)));
+  const rows = await scopedStudentIdsQuery(teacher);
   return rows.map((row) => row.id);
 }

@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, Suspense, useState } from "react";
 import { AuthCard } from "../components/AuthCard";
-import { readJson } from "../lib/read-json";
+import { postJson } from "../lib/read-json";
 
 /**
  * Landing page for the one-time invite link issued by /api/admin/invites.
@@ -26,14 +26,14 @@ function AcceptInviteForm() {
       return;
     }
     setSubmitting(true);
-    const response = await fetch("/api/auth/accept-invite", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ token, name: form.get("name"), password }),
+    // postJson turns a dropped connection into an error, so the button recovers.
+    const { ok, payload } = await postJson<{ error?: string }>("/api/auth/accept-invite", {
+      token,
+      name: form.get("name"),
+      password,
     });
-    const payload = await readJson<{ error?: string }>(response);
     setSubmitting(false);
-    if (!response.ok) {
+    if (!ok) {
       setError(payload.error ?? "This invite could not be accepted.");
       return;
     }

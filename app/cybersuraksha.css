@@ -570,7 +570,7 @@ button {
 .authPage {
   position: relative !important;
   min-height: 100svh !important;
-  padding: 88px 22px !important;
+  padding: 48px 20px !important;
   color: var(--sl-ink) !important;
   background-color: var(--sl-canvas) !important;
   background-image:
@@ -787,6 +787,19 @@ button {
   backdrop-filter: blur(12px) !important;
 }
 
+/* globals.css caps these at 1140px, which insets them against the full-bleed dashboard nav.
+   Full width, content on the same 1320px column as .dashboardNavInner. */
+.gradeNav,
+.teacherHeader,
+.studentReportNav,
+.resultsNav,
+.trackNav,
+.modulePreviewNav {
+  width: 100% !important;
+  margin: 0 !important;
+  padding-inline: max(clamp(18px, 4vw, 48px), calc((100% - 1320px) / 2)) !important;
+}
+
 .dashboardNavInner {
   width: min(1320px, 100%) !important;
   min-height: 42px !important;
@@ -843,8 +856,23 @@ button {
 
 .dashboardNavRight {
   display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   gap: 10px !important;
+}
+
+/* On phones the navbar wraps to several rows; sticking it would eat the screen. */
+@media (max-width: 700px) {
+  .dashboardNav,
+  .gradeNav,
+  .teacherHeader,
+  .studentReportNav,
+  .resultsNav,
+  .trackNav,
+  .modulePreviewNav {
+    position: static !important;
+  }
 }
 
 .dashboardOrg,
@@ -860,9 +888,16 @@ button {
   font-size: 0.74rem !important;
   font-weight: 700 !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
 }
 
+/* A long school name truncates instead of wrapping the navbar onto two lines. */
 .dashboardOrg {
+  display: inline-block !important;
+  max-width: 220px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 34px !important;
   background: var(--sl-mint) !important;
   color: #171e19 !important;
 }
@@ -875,7 +910,7 @@ button {
 .dashboardWrap {
   width: min(1320px, calc(100% - 40px)) !important;
   margin: 0 auto !important;
-  padding: 44px 0 70px !important;
+  padding: 28px 0 32px !important;
   display: grid !important;
   grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
   gap: 24px !important;
@@ -1030,8 +1065,8 @@ button {
 
 .missionProgressCard {
   grid-column: span 8 !important;
-  min-height: 330px !important;
-  padding: clamp(30px, 4vw, 48px) !important;
+  min-height: 280px !important;
+  padding: clamp(22px, 3vw, 34px) !important;
   background: var(--sl-surface) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -1287,9 +1322,9 @@ button {
   position: relative !important;
   grid-column: span 4 !important;
   order: 1 !important;
-  min-height: 340px !important;
+  min-height: 290px !important;
   margin: 0 !important;
-  padding: clamp(30px, 4vw, 48px) !important;
+  padding: clamp(22px, 3vw, 34px) !important;
   border: 2px solid var(--sl-line) !important;
   color: #171e19 !important;
   background: var(--sl-yellow) !important;
@@ -1369,8 +1404,8 @@ button {
 .gradeCardAssigned {
   grid-column: span 8 !important;
   order: 2 !important;
-  min-height: 340px !important;
-  padding: clamp(30px, 4vw, 48px) !important;
+  min-height: 290px !important;
+  padding: clamp(22px, 3vw, 34px) !important;
   color: #171e19 !important;
   background: var(--sl-coral) !important;
   border-radius: var(--sl-radius-lg) !important;
@@ -1517,12 +1552,20 @@ button {
 
 .gradeMeta {
   margin: 22px 0 0 !important;
+  color: inherit !important;
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
   font-family: var(--font-mono), monospace !important;
   font-size: 0.66rem !important;
   text-transform: uppercase !important;
+}
+
+/* globals.css tints these with the tone accent, which vanishes on the coral assigned card. */
+.gradeMeta b,
+.gradeMeta i,
+.gradeCta svg {
+  color: inherit !important;
 }
 
 .gradeMeta i {
@@ -1535,6 +1578,7 @@ button {
 
 .gradeCta {
   margin-top: 16px !important;
+  color: inherit !important;
   padding-top: 14px !important;
   border-top: 2px solid currentColor !important;
   display: flex !important;
@@ -1551,26 +1595,37 @@ button {
 .dashboardFoot {
   width: min(1320px, calc(100% - 40px)) !important;
   margin: 0 auto !important;
-  padding: 24px 0 86px !important;
+  padding: 20px 0 16px !important;
   border-top: 2px solid var(--sl-line) !important;
   color: var(--sl-muted) !important;
   display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 28px !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.dashboardFoot figure {
+  margin: 0 !important;
+}
+
+.dashboardFoot blockquote {
+  max-width: 60ch !important;
+  margin: 0 auto !important;
+  color: var(--sl-ink) !important;
+  font-family: var(--font-display), sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.dashboardFoot blockquote::before { content: "\201C"; }
+.dashboardFoot blockquote::after { content: "\201D"; }
+
+.dashboardFoot figcaption {
+  margin-top: 6px !important;
   font-family: var(--font-mono), monospace !important;
   font-size: 0.68rem !important;
+  letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
-}
-
-.dashboardFoot span {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-.dashboardFoot svg {
-  width: 18px !important;
-  color: var(--sl-indigo) !important;
 }
 
 /* Grade and module library */
@@ -1645,12 +1700,12 @@ button {
 .teacherShell {
   width: min(1240px, calc(100% - 40px)) !important;
   margin: 0 auto !important;
-  padding: 46px 0 90px !important;
+  padding: 28px 0 48px !important;
 }
 
 .gradeIntro {
   position: relative !important;
-  padding: clamp(30px, 5vw, 58px) !important;
+  padding: clamp(22px, 3vw, 36px) !important;
   border: 2px solid var(--sl-line) !important;
   color: #fff !important;
   background: var(--sl-indigo) !important;
@@ -1659,7 +1714,7 @@ button {
   display: grid !important;
   grid-template-columns: auto 1fr auto !important;
   align-items: center !important;
-  gap: clamp(24px, 4vw, 50px) !important;
+  gap: clamp(18px, 3vw, 32px) !important;
   overflow: hidden !important;
 }
 
@@ -1730,11 +1785,12 @@ button {
 }
 
 .moduleLibrary {
-  margin-top: 70px !important;
+  margin-top: 32px !important;
+  padding-top: 0 !important;
 }
 
 .moduleLibraryHeading {
-  margin: 0 0 28px !important;
+  margin: 0 0 20px !important;
   display: flex !important;
   align-items: flex-end !important;
   justify-content: space-between !important;
@@ -1878,7 +1934,7 @@ button {
 /* Track and sample module */
 
 .trackIntro {
-  padding: clamp(30px, 5vw, 58px) !important;
+  padding: clamp(22px, 3vw, 36px) !important;
   border: 2px solid var(--sl-line) !important;
   color: #171e19 !important;
   background: var(--sl-yellow) !important;
@@ -2034,7 +2090,7 @@ button {
 .modulePreviewCard {
   width: min(720px, calc(100% - 40px)) !important;
   margin: auto !important;
-  padding: clamp(34px, 6vw, 64px) !important;
+  padding: clamp(22px, 3vw, 36px) !important;
   border: 2px solid var(--sl-line) !important;
   color: #171e19 !important;
   background: var(--sl-yellow) !important;
@@ -2086,14 +2142,6 @@ button {
 
 /* Teacher workspace, results, reports */
 
-.teacherHeader .teacherWordmark small {
-  color: var(--sl-muted) !important;
-  font-family: var(--font-mono), monospace !important;
-  font-size: 0.58rem !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
 .teacherHeader nav a,
 .studentReportNav nav a,
 .resultsNav nav a {
@@ -2118,8 +2166,8 @@ button {
 }
 
 .teacherIntro {
-  margin-bottom: 34px !important;
-  padding: clamp(28px, 5vw, 50px) !important;
+  margin-bottom: 24px !important;
+  padding: clamp(22px, 3vw, 36px) !important;
   border: 2px solid var(--sl-line) !important;
   color: #171e19 !important;
   background: var(--sl-yellow) !important;
@@ -2521,7 +2569,7 @@ button {
 
 .parentReportPaper {
   width: min(920px, calc(100% - 40px)) !important;
-  margin: 46px auto 90px !important;
+  margin: 28px auto 48px !important;
   border: 2px solid var(--sl-line) !important;
   color: var(--sl-ink) !important;
   background: var(--sl-surface) !important;
@@ -2532,7 +2580,7 @@ button {
 
 .parentReportHero {
   position: relative !important;
-  padding: clamp(34px, 6vw, 64px) !important;
+  padding: clamp(22px, 3vw, 36px) !important;
   color: #171e19 !important;
   background: var(--sl-yellow) !important;
 }
@@ -2584,7 +2632,7 @@ button {
 }
 
 .parentReportBody {
-  padding: clamp(32px, 6vw, 64px) !important;
+  padding: clamp(22px, 3vw, 36px) !important;
 }
 
 .parentSectionTitle {
@@ -3061,32 +3109,6 @@ button {
   gap: 8px;
 }
 
-.surakshaGuideControls label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.surakshaGuideControls label > span {
-  color: var(--sl-muted);
-  font-family: var(--font-mono), monospace;
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.surakshaGuideControls select {
-  height: 34px;
-  min-width: 54px;
-  padding: 0 8px;
-  border: 2px solid var(--sl-line);
-  color: var(--sl-ink);
-  background: var(--sl-surface);
-  border-radius: 9px;
-  font-weight: 800;
-}
-
 .surakshaGuideMode {
   padding: 3px;
   border: 2px solid var(--sl-line);
@@ -3346,10 +3368,6 @@ button {
   .surakshaGuideControls {
     align-items: stretch;
     flex-direction: column;
-  }
-
-  .surakshaGuideControls label {
-    justify-content: space-between;
   }
 
   .surakshaGuideMode {
@@ -3660,5 +3678,5 @@ body:has(.teacherPage, .dashboardPage) .surakshaGuide:not(.surakshaGuideOpen):no
   display: flex;
   justify-content: flex-end;
   width: min(1240px, calc(100% - 28px));
-  margin: 18px auto;
+  margin: 0 auto 16px;
 }

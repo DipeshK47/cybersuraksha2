@@ -109,7 +109,10 @@ export default async function GradePage({
           All classes
         </Link>
         <div>
-          <span>CyberShiksha · Class {grade.grade}</span>
+          <span>
+            <Link href={`/dashboard${roleQuery}`}>CyberShiksha · Class {grade.grade}</Link>
+          </span>
+          <div data-language-slot />
           <Link href="/logout">Log out</Link>
         </div>
       </header>

@@ -61,9 +61,9 @@ test("every chapter has a playable story opening and a three-turn narrative arc"
 
 test("fraud practice preserves the precise QR and reporting rules", async () => {
   const source = await readFile(new URL("../app/module/cyber/lessons/new/FraudMissions.tsx", import.meta.url), "utf8");
-  assert.match(source, /share my own QR to receive/);
-  assert.match(source, /never scan and enter a PIN to receive/);
-  assert.match(source, /call 1930 quickly if money was lost/);
+  assert.match(source, /Attach the shop’s own QR/);
+  assert.match(source, /Receiving money does not require your PIN/);
+  assert.match(source, /If money was lost, (?:an adult should )?call 1930 quickly/);
   assert.match(source, /cybercrime\.gov\.in/);
   assert.doesNotMatch(source, /window\.open|getUserMedia|geolocation/);
 });

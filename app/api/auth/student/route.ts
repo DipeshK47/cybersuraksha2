@@ -5,8 +5,8 @@ import { ensureAcademySeeded } from "../../../../db/academy";
 import { schools, students } from "../../../../db/schema";
 import { hashPassword, needsRehash, verifyPassword } from "../../../lib/password";
 import { createStudentSession } from "../../../lib/student-session";
-import { enforceRateLimit } from "../../../lib/rate-limit";
-import { parseJson, studentLoginSchema } from "../../../lib/validation";
+import { enforceKeyedRateLimit, enforceRateLimit } from "../../../lib/rate-limit";
+import { parseJson, rejectCrossSiteJson, studentLoginSchema } from "../../../lib/validation";
 
 /**
  * Student login. Looks the student up by school + class + roll number, then
@@ -18,7 +18,12 @@ import { parseJson, studentLoginSchema } from "../../../lib/validation";
  * wrong learner and lock out every duplicate roll number after the first.
  */
 export async function POST(request: Request) {
-  const limited = enforceRateLimit(request, "auth:student", 10, 10_000);
+  const crossSite = rejectCrossSiteJson(request);
+  if (crossSite) return crossSite;
+  // A whole classroom usually shares one public IP, so the per-IP burst is
+  // sized for a class of ~40 signing in together (with typos); guessing one
+  // account is limited separately below.
+  const limited = enforceRateLimit(request, "auth:student", 60, 60_000);
   if (limited) return limited;
 
   await ensureAcademySeeded();
@@ -26,6 +31,8 @@ export async function POST(request: Request) {
   const parsed = await parseJson(request, studentLoginSchema);
   if (parsed.error) return parsed.error;
   const { school, className, rollNo, password } = parsed.data;
+  const accountLimited = enforceKeyedRateLimit(`auth:student-account:${school}:${className}:${rollNo}`, 8, 5 * 60_000);
+  if (accountLimited) return accountLimited;
 
   const invalid = Response.json(
     { error: "Class, roll number, or password is incorrect." },

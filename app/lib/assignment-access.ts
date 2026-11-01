@@ -1,7 +1,7 @@
 import { and, eq, inArray, isNotNull } from "drizzle-orm";
 import { getDb } from "../../db";
 import { assignments, assignmentStudents } from "../../db/schema";
-import { requireTeacher, scopedClassIds } from "./auth";
+import { requireTeacher, scopedClassIdsQuery } from "./auth";
 import { requireStudent } from "./student-session";
 import { schoolContent, studentContent } from "./content-access";
 import { permitsModule, type ContentAccess } from "./content-policy";
@@ -10,9 +10,8 @@ import { getPlayableModuleById } from "../data/module-registry";
 export async function teacherAssignment(request: Request, id: number, write = false) {
   const auth = await requireTeacher(request);
   if (auth instanceof Response) return auth;
-  const ids = await scopedClassIds(auth);
-  if (!Number.isSafeInteger(id) || id <= 0 || !ids.length) return Response.json({ error: "Assignment not found." }, { status: 404 });
-  const [assignment] = await getDb().select().from(assignments).where(and(eq(assignments.id, id), inArray(assignments.classId, ids), eq(assignments.schoolId, auth.schoolId)));
+  if (!Number.isSafeInteger(id) || id <= 0) return Response.json({ error: "Assignment not found." }, { status: 404 });
+  const [assignment] = await getDb().select().from(assignments).where(and(eq(assignments.id, id), inArray(assignments.classId, scopedClassIdsQuery(auth)), eq(assignments.schoolId, auth.schoolId)));
   if (!assignment) return Response.json({ error: "Assignment not found." }, { status: 404 });
   if (write && assignment.teacherId !== auth.id && auth.role !== "school_admin") return Response.json({ error: "Only the assignment author or school administrator can change it." }, { status: 403 });
   return { auth, assignment };
