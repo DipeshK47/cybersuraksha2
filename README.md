@@ -145,7 +145,7 @@ invite produces a one-time `/accept-invite?token=…` link, shown once.
 
 ## School backend and client handoff
 
-See [School backend handoff](docs/SCHOOL_BACKEND_HANDOFF.md) for school-specific grades and subjects, teacher permissions, custom assignments, grading, marks exports, student progress, local checks, and the remaining AWS integration. Configure curriculum in **Admin**, then use **Classroom** for teaching and assessment. University workflows are outside the current delivery.
+See [School backend handoff](https://github.com/DipeshK47/cybersuraksha2/blob/archive/docs-and-unused-assets/docs/SCHOOL_BACKEND_HANDOFF.md) (kept on the archive branch; see [ARCHIVE.md](ARCHIVE.md)) for school-specific grades and subjects, teacher permissions, custom assignments, grading, marks exports, student progress, local checks, and the remaining AWS integration. Configure curriculum in **Admin**, then use **Classroom** for teaching and assessment. University workflows are outside the current delivery.
 
 ## 7. Local database
 
