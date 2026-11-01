@@ -29,6 +29,8 @@ export function LanguageToggle() {
   const pathname = usePathname();
   // Pages with a navbar give it a [data-language-slot]; the one toggle moves in there.
   const [slot, setSlot] = useState<HTMLElement | null>(null);
+  // The slot is DOM that only exists after render, so it has to be read in an effect.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setSlot(document.querySelector<HTMLElement>('[data-language-slot]')), [pathname]);
 
   async function choose(next: LanguageMode) {
