@@ -10,15 +10,15 @@ async function course() {
   return loaded??=await loadSource(`export {class10Chapters} from './app/data/class10'; export {getGradeCurriculum} from './app/data/curriculum'; export {getCyberLessonsForGrade,cyberLessons} from './app/data/cyber-lessons'; export {playableModules,assignmentChapters} from './app/data/module-registry'; export {evaluateTask} from './app/module/cyber/lessons/class8/task-evaluation';`);
 }
 
-test('Class 10 registers 32 original chapters and retains Mathematics and English',async()=>{
+test('Class 10 registers 32 original chapters and no longer lists Mathematics or English',async()=>{
   const {class10Chapters,getGradeCurriculum,getCyberLessonsForGrade,playableModules,assignmentChapters,cyberLessons}=await course();
   assert.equal(class10Chapters.length,32);
   assert.equal(new Set(class10Chapters.map(c=>c.slug)).size,32);
   const grade=getGradeCurriculum(10);
   assert.deepEqual(grade.subjects.filter(s=>subjects.includes(s.name)).map(s=>s.name),subjects);
   assert.ok(grade.subjects.filter(s=>subjects.includes(s.name)).every(s=>s.modules.length===8));
-  assert.equal(grade.subjects.find(s=>s.slug==='mathematics').chapters.length,14);
-  assert.equal(grade.subjects.find(s=>s.slug==='english').chapters.length,9);
+  assert.equal(grade.subjects.length,4);
+  assert.ok(!grade.subjects.some(s=>['mathematics','english'].includes(s.slug)));
   const lessons=getCyberLessonsForGrade(10),playable=playableModules.filter(m=>m.grades.includes(10)&&m.strand!=='Mathematics'&&m.strand!=='English'),assigned=assignmentChapters.filter(m=>m.grades.includes(10));
   for(const list of [lessons,playable,assigned]){
     assert.equal(list.length,32);

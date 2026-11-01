@@ -50,10 +50,16 @@ test("the shifted bands retain shared chapters and stable progress identities", 
   assert.deepEqual(getCyberLesson("the-almost-real-login-page").grades, [10]);
 });
 
-test("Classes 11–12 and the Class 10 textbook libraries are preserved", () => {
+test("Classes 11–12 are preserved and no class has an English or Mathematics subject", () => {
   assert.deepEqual(getGradeCurriculum(11).subjects, class11Subjects);
   assert.deepEqual(getGradeCurriculum(12).subjects, class12Subjects);
-  const subjects = getGradeCurriculum(10).subjects;
-  assert.equal(subjects.find(subject => subject.slug === "mathematics").chapters.length, 14);
-  assert.equal(subjects.find(subject => subject.slug === "english").chapters.length, 9);
+  assert.deepEqual(
+    getGradeCurriculum(10).subjects.map(subject => subject.slug),
+    ["cybersecurity", "artificial-intelligence", "computational-thinking-lab", "cyber-fraud"],
+  );
+  for (const grade of [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) {
+    for (const subject of getGradeCurriculum(grade).subjects ?? []) {
+      assert.ok(!["english", "mathematics"].includes(subject.slug), `Class ${grade} still lists ${subject.slug}`);
+    }
+  }
 });

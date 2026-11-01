@@ -171,7 +171,7 @@ test("ships reusable mistake teaching, progressive hints, and concept animations
   assert.match(supportStyles, /var\(--sl-surface\)/);
 });
 
-test("ships the Class 10 subject and chapter tier", async () => {
+test("ships the Class 10 subject tier without the NCERT textbook subjects", async () => {
   const [curriculum, dashboard, gradePage, subjectPage, cybersuraksha, globals] =
     await Promise.all([
       readFile(new URL("../app/data/curriculum.ts", import.meta.url), "utf8"),
@@ -185,23 +185,13 @@ test("ships the Class 10 subject and chapter tier", async () => {
       readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     ]);
 
-  // Class 10 is subject-organised: two subjects, 14 + 9 verified NCERT chapters.
-  assert.match(curriculum, /grade: 10/);
-  assert.match(curriculum, /slug: "mathematics"/);
-  assert.match(curriculum, /slug: "english"/);
-  for (const chapter of [
-    "Real Numbers",
-    "Pair of Linear Equations in Two Variables",
-    "Some Applications of Trigonometry",
-    "Surface Areas and Volumes",
-    "Probability",
-    "A Letter to God",
-    "Nelson Mandela: Long Walk to Freedom",
-    "Glimpses of India",
-    "The Sermon at Benares",
-    "The Proposal",
-  ]) {
-    assert.ok(curriculum.includes(chapter), `missing chapter: ${chapter}`);
+  // Class 10 is the four-subject CyberShiksha course. Mathematics and English
+  // were taken out of the repository (archive/english-mathematics keeps them),
+  // so no NCERT textbook subject may be defined or listed.
+  assert.doesNotMatch(curriculum, /slug: "mathematics"/);
+  assert.doesNotMatch(curriculum, /slug: "english"/);
+  for (const chapter of ["Real Numbers", "A Letter to God", "The Proposal"]) {
+    assert.ok(!curriculum.includes(chapter), `Class 10 textbook chapter should be gone: ${chapter}`);
   }
 
   // A grade whose icon is missing must never render `<undefined />` and take

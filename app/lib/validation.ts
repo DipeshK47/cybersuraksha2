@@ -105,21 +105,6 @@ export const activitySchema = z.union([
   activityEventSchema,
 ]);
 
-/**
- * A practice answer.
- *
- * Note what is NOT here: `correct`, and any notion of marks. The client reports
- * only which option it clicked; the server looks the question up in the bank
- * and grades it. Accepting a client-supplied verdict would let a student post a
- * perfect score with curl.
- */
-export const practiceAttemptSchema = z.object({
-  questionId: z.string().min(1).max(80),
-  chosen: z.string().min(1).max(200),
-  timeTakenMs: z.coerce.number().int().min(0).max(3_600_000).optional(),
-  hintsUsed: z.coerce.number().int().min(0).max(50).optional(),
-});
-
 export const moduleRunSchema = z.object({
   moduleId: z.string().min(1).max(80),
   rank: z.string().max(20).optional(),

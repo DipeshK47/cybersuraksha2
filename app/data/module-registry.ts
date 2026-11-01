@@ -53,13 +53,6 @@ export const playableModules: PlayableModule[] = [
     strand: "Computational Thinking",
     href: "/module/nani-maa-vacation-challenge",
   },
-  {
-    id: "grade-3-english-badal-and-moti",
-    title: "Badal and Moti",
-    grades: [3],
-    strand: "English",
-    href: "/module/badal-and-moti",
-  },
   ...cyberLessons.map((lesson) => ({
     id: lesson.id,
     title: lesson.title,

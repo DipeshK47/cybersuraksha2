@@ -16,7 +16,7 @@ const routes = [
   ['/api/students', 'students'], ['/api/schools', 'schools'], ['/api/chat', 'chat'],
   ['/api/lms/assignments', 'lms/assignments'], ['/api/lms/inbox', 'lms/inbox'],
   ['/api/lms/marks', 'lms/marks'], ['/api/lms/progress', 'lms/progress'],
-  ['/api/activity', 'activity'], ['/api/module-runs', 'module-runs'], ['/api/practice-attempt', 'practice-attempt'],
+  ['/api/activity', 'activity'], ['/api/module-runs', 'module-runs']
 ];
 const dynamic = [
   ['^/api/lms/assignments/(\\d+)$', 'lms/assignments/[id]', ['id']],
@@ -200,7 +200,6 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
   assert.equal((await json('/api/lms/assignments',admin)).classes.length,0);
   assert.equal((await request('/api/activity',student,'POST',{moduleId:chapter.id,type:'module_started',payload:{}})).status,403);
   assert.equal((await request('/api/module-runs',student,'POST',{moduleId:chapter.id})).status,403);
-  assert.equal((await request('/api/practice-attempt',student,'POST',{questionId:'why-word',chosen:'three · sides · measure'})).status,403);
   assert.equal((await request(`/api/lms/inbox/${assignment.id}`,student)).status,403);
   assert.equal((await json('/api/lms/inbox',student)).assignments.length,0);
   assert.equal((await request('/api/admin/classes',admin,'POST',{grade:7,section:'X'})).status,400);

@@ -182,32 +182,6 @@ const sourceCurriculum: GradeCurriculum[] = [
       ct("Surajkund Mirror Maze"),
     ],
     subjects: [
-      {
-        slug: "english",
-        name: "English",
-        description:
-          "Grammar from every chapter of Santoor — yesterday words, end marks, word pairs and more — taught with animations, games and exercises.",
-        book: "NCERT Santoor — Textbook of English for Class 3",
-        chapters: [
-          { number: 1, title: "Colours", note: "Unit 1 · Fun with Friends · Poem" },
-          {
-            number: 2,
-            title: "Badal and Moti",
-            note: "Unit 1 · Fun with Friends · -ed words · ? and . · word pairs",
-            href: "/module/badal-and-moti",
-          },
-          { number: 3, title: "Best Friends", note: "Unit 1 · Fun with Friends · Poem" },
-          { number: 4, title: "Out in the Garden", note: "Unit 2 · Toys and Games" },
-          { number: 5, title: "Talking Toys", note: "Unit 2 · Toys and Games" },
-          { number: 6, title: "Paper Boats", note: "Unit 2 · Toys and Games · Poem" },
-          { number: 7, title: "The Big Laddoo", note: "Unit 3 · Good Food" },
-          { number: 8, title: "Thank God", note: "Unit 3 · Good Food · Poem" },
-          { number: 9, title: "Madhu’s Wish", note: "Unit 3 · Good Food" },
-          { number: 10, title: "Night", note: "Unit 4 · The Sky · Poem" },
-          { number: 11, title: "Chanda Mama Counts the Stars", note: "Unit 4 · The Sky" },
-          { number: 12, title: "Chandrayaan", note: "Unit 4 · The Sky" },
-        ],
-      },
       ...cyberSubjectsForGrade(3),
     ],
   },
@@ -327,177 +301,6 @@ const sourceCurriculum: GradeCurriculum[] = [
     ],
   },
   {
-    grade: 10,
-    title: "Board Scholars",
-    description:
-      "Mathematics and English, chapter by chapter, straight from the NCERT Class X books.",
-    tone: "lime",
-    modules: [],
-    subjects: [
-      {
-        slug: "mathematics",
-        name: "Mathematics",
-        description:
-          "Number systems, algebra, geometry, trigonometry, mensuration, statistics and probability.",
-        book: "NCERT Mathematics — Textbook for Class X",
-        chapters: [
-          { number: 1, title: "Real Numbers" },
-          { number: 2, title: "Polynomials" },
-          { number: 3, title: "Pair of Linear Equations in Two Variables" },
-          { number: 4, title: "Quadratic Equations" },
-          { number: 5, title: "Arithmetic Progressions" },
-          { number: 6, title: "Triangles" },
-          { number: 7, title: "Coordinate Geometry" },
-          {
-            number: 8,
-            title: "Introduction to Trigonometry",
-            slug: "introduction-to-trigonometry",
-            video: "/videos/lesson-8-2-final.mp4",
-            poster: "/videos/lesson-8-2-poster.png",
-            duration: "5:56",
-            // `at` values come from timing.json — the narration beat starts.
-            topics: [
-              {
-                short: "Why", title: "Why trigonometry exists", section: "8.1",
-                video: "/videos/lesson-8-1-why.mp4",
-                poster: "/videos/lesson-8-1-why-poster.png",
-                panel: "why",
-              },
-              {
-                short: "Hidden", title: "The hidden right triangle", section: "8.1",
-                video: "/videos/lesson-8-1-hidden.mp4",
-                poster: "/videos/lesson-8-1-hidden-poster.png",
-                panel: "hidden",
-              },
-              { short: "Naming", title: "Naming the three sides", section: "8.2", at: 73, panel: "naming" },
-              { short: "Swap", title: "Why the names swap with the angle", section: "8.2", at: 108, panel: "swap" },
-              { short: "Ratios", title: "The three ratios · SOH CAH TOA", section: "8.2", at: 138, panel: "ratios" },
-              { short: "Size", title: "Why size never changes a ratio", section: "8.2", at: 178, panel: "size" },
-              { short: "Flip", title: "cosec, sec, cot — the other three", section: "8.2", at: 225, panel: "recip" },
-              { short: "Numbers", title: "Real numbers on a 3-4-5 triangle", section: "8.2", at: 263, panel: "numbers" },
-              { short: "One→Six", title: "Know one ratio, find all six", section: "8.2", at: 290, panel: "kmethod" },
-              { short: "Limits", title: "sin A ≤ 1, and what tan can do", section: "8.2", at: 310, panel: "limits" },
-              { short: "Recap", title: "Three things to keep", section: "8.2", at: 334, panel: "recap" },
-              {
-                short: "45°", title: "Ratios of 45°", section: "8.3",
-                video: "/videos/lesson-8-3-45.mp4",
-                poster: "/videos/lesson-8-3-45-poster.png",
-                duration: "3:50",
-                panel: "ratios45",
-              },
-              {
-                short: "30/60", title: "Ratios of 30° and 60°", section: "8.3",
-                video: "/videos/lesson-8-3-30-60.mp4",
-                poster: "/videos/lesson-8-3-30-60-poster.png",
-                duration: "3:50",
-                panel: "ratios3060",
-              },
-              {
-                short: "0/90", title: "Ratios of 0° and 90°", section: "8.3",
-                video: "/videos/lesson-8-3-0-90.mp4",
-                poster: "/videos/lesson-8-3-0-90-poster.png",
-                duration: "1:52",
-                panel: "ratios0090",
-              },
-              {
-                short: "Table", title: "Table 8.1 — the values to know cold", section: "8.3",
-                video: "/videos/lesson-8-3-table.mp4",
-                poster: "/videos/lesson-8-3-table-poster.png",
-                duration: "1:40",
-                panel: "table81",
-              },
-              {
-                short: "Identity", title: "The three identities", section: "8.4",
-                video: "/videos/lesson-8-4-identities.mp4",
-                poster: "/videos/lesson-8-4-identities-poster.png",
-                duration: "1:43",
-                panel: "identity",
-              },
-              {
-                short: "Proving", title: "Proving an identity", section: "8.4",
-                video: "/videos/lesson-8-4-proving.mp4",
-                poster: "/videos/lesson-8-4-proving-poster.png",
-                duration: "1:51",
-                panel: "proving",
-              },
-              {
-                short: "Summary", title: "Chapter summary", section: "8.5",
-                video: "/videos/lesson-8-summary.mp4",
-                poster: "/videos/lesson-8-summary-poster.png",
-                duration: "1:55",
-                panel: "summary",
-              },
-            ],
-          },
-          { number: 9, title: "Some Applications of Trigonometry" },
-          { number: 10, title: "Circles" },
-          { number: 11, title: "Areas Related to Circles" },
-          { number: 12, title: "Surface Areas and Volumes" },
-          { number: 13, title: "Statistics" },
-          { number: 14, title: "Probability" },
-        ],
-      },
-      {
-        slug: "english",
-        name: "English",
-        description:
-          "Prose, drama and the poems printed alongside each chapter of First Flight.",
-        book: "NCERT First Flight — Textbook in English for Class X",
-        chapters: [
-          {
-            number: 1,
-            title: "A Letter to God",
-            note: "Poems · Dust of Snow · Fire and Ice",
-            slug: "a-letter-to-god",
-            video: "/videos/a-letter-to-god.mp4",
-            poster: "/videos/a-letter-to-god-poster.jpg",
-            duration: "20:49",
-            topics: [
-              {
-                short: "Film lesson",
-                title: "A Letter to God — complete chapter lesson",
-                section: "1.1",
-                at: 0,
-              },
-            ],
-          },
-          {
-            number: 2,
-            title: "Nelson Mandela: Long Walk to Freedom",
-            note: "Poem · A Tiger in the Zoo",
-          },
-          {
-            number: 3,
-            title: "Two Stories about Flying",
-            note: "I. His First Flight · II. Black Aeroplane — Poems · How to Tell Wild Animals · The Ball Poem",
-          },
-          {
-            number: 4,
-            title: "From the Diary of Anne Frank",
-            note: "Poem · Amanda!",
-          },
-          {
-            number: 5,
-            title: "Glimpses of India",
-            note: "I. A Baker from Goa · II. Coorg · III. Tea from Assam — Poem · The Trees",
-          },
-          { number: 6, title: "Mijbil the Otter", note: "Poem · Fog" },
-          {
-            number: 7,
-            title: "Madam Rides the Bus",
-            note: "Poem · The Tale of Custard the Dragon",
-          },
-          {
-            number: 8,
-            title: "The Sermon at Benares",
-            note: "Poem · For Anne Gregory",
-          },
-          { number: 9, title: "The Proposal", note: "One-act play" },
-        ],
-      },
-    ],
-  },
-  {
     grade: 11,
     title: "Digital Decision Makers",
     description: "Investigate risks, evaluate AI, test algorithms and verify suspicious requests through four practical modules.",
@@ -526,15 +329,12 @@ export const curriculum: GradeCurriculum[] = [
       if (grade === 7) return { ...entry, grade, title: "Connection Lab", description: "Connect ideas, test evidence and explain decisions through 32 original chapters.", modules: [], subjects: class7Subjects };
       if (grade === 8) return { ...entry, grade, title: "Future Lab", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
       if (grade === 9) return { ...entry, grade, title: "Signal Studio", description: "Test systems, explain decisions and recognise pressure through 32 original chapters.", modules: [], subjects: class9Subjects };
-      const otherSubjects = sourceCurriculum
-        .find((existing) => existing.grade === grade)
-        ?.subjects?.filter((subject) => !subject.strand || subject.strand === "English") ?? [];
-      if (grade === 10) return { ...entry, grade, title: "Decision Lab", description: "Compare alternatives, explain consequences and defend decisions through 32 original chapters.", modules: [], subjects: [...class10Subjects, ...otherSubjects] };
+      if (grade === 10) return { ...entry, grade, title: "Decision Lab", description: "Compare alternatives, explain consequences and defend decisions through 32 original chapters.", modules: [], subjects: class10Subjects };
       return {
         ...entry,
         grade,
         modules: [],
-        subjects: [...cyberSubjectsForGrade(grade), ...otherSubjects],
+        subjects: cyberSubjectsForGrade(grade),
       };
     }),
   ...sourceCurriculum.filter((entry) => entry.grade >= 11),

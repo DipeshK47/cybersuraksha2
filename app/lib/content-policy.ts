@@ -1,5 +1,5 @@
 export const schoolGrades = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-export const schoolSubjects = ["Computational Thinking", "Artificial Intelligence", "Cybersecurity", "Cyber Fraud", "English", "Mathematics"];
+export const schoolSubjects = ["Computational Thinking", "Artificial Intelligence", "Cybersecurity", "Cyber Fraud"];
 export type ContentAccess = { schoolName: string; grades: number[]; subjects: string[] };
 
 export function permitsModule(access: ContentAccess, module: { grades: readonly number[]; strand: string }) {
