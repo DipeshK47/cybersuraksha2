@@ -302,6 +302,9 @@ using measured cue times and the existing English / हिन्दी / English
 - Class 10: the first 24 lessons have six Hindi scenes. `class10-fraud-exam-update`
   has Hindi scene 1 and English scenes 2–6. The remaining seven Cyber Fraud
   lessons retain English audio because their recordings were not supplied.
+- Class 11: all 32 lessons have six Hindi scenes. The recovery and access lessons
+  use ElevenLabs Pari M narration; their reviewed scripts and generation settings
+  are in `scripts/hindi-voiceover/class11-recovery-access.json`.
 
 To import an extracted recording archive with `index.csv`, install FFmpeg and run:
 

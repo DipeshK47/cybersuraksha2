@@ -5316,6 +5316,36 @@
    }
   ]
  },
+ "identity-beyond-a-password": {
+  "src": "/audio/cyber/identity-beyond-a-password/story-hi.mp3",
+  "duration": 115.1,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 15.04
+   },
+   {
+    "start": 15.69,
+    "duration": 16.48
+   },
+   {
+    "start": 32.82,
+    "duration": 23.12
+   },
+   {
+    "start": 56.59,
+    "duration": 16.24
+   },
+   {
+    "start": 73.48,
+    "duration": 19.2
+   },
+   {
+    "start": 93.33,
+    "duration": 21.12
+   }
+  ]
+ },
  "integrated-case-the-college-fest-incident": {
   "src": "/audio/cyber/integrated-case-the-college-fest-incident/story-hi.mp3",
   "duration": 104.38,
@@ -6393,6 +6423,36 @@
    {
     "start": 88.53,
     "duration": 14.64
+   }
+  ]
+ },
+ "who-should-have-access": {
+  "src": "/audio/cyber/who-should-have-access/story-hi.mp3",
+  "duration": 104.3,
+  "scenes": [
+   {
+    "start": 0.0,
+    "duration": 17.76
+   },
+   {
+    "start": 18.41,
+    "duration": 14.8
+   },
+   {
+    "start": 33.86,
+    "duration": 19.6
+   },
+   {
+    "start": 54.11,
+    "duration": 13.52
+   },
+   {
+    "start": 68.28,
+    "duration": 18.72
+   },
+   {
+    "start": 87.65,
+    "duration": 16.0
    }
   ]
  },

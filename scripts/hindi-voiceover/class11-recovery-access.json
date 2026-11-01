@@ -1,0 +1,111 @@
+{
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v4",
+  "voice_id": "qvpwA9RPy9Ye4s4xjdrA",
+  "voice_name": "Pari M – Regional Bank Support",
+  "language_code": "hi",
+  "output_format": "mp3_44100_128",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1.0
+  },
+  "jobs": [
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 1,
+      "source": "Kabir uses an individual festival account. His password manager stores a unique password, and his phone provides another sign-in factor. The team is ready until the phone goes missing.",
+      "caption": "कबीर फेस्टिवल के लिए अपना अलग अकाउंट इस्तेमाल करता है। उसका पासवर्ड मैनेजर एक अलग पासवर्ड स्टोर करता है और फ़ोन साइन-इन का एक और फ़ैक्टर देता है। सब तैयार है, लेकिन तभी फ़ोन गुम हो जाता है।",
+      "text": "कबीर फेस्टिवल के लिए अपना अलग अकाउंट इस्तेमाल करता है। उसका पासवर्ड मैनेजर एक अलग पासवर्ड स्टोर करता है और फ़ोन साइन-इन का एक और फ़ैक्टर देता है। सब तैयार है, लेकिन तभी फ़ोन गुम हो जाता है।",
+      "file": "identity-beyond-a-password-hi-01.mp3"
+    },
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 2,
+      "source": "Kabir cannot use the missing phone. His account has a recovery code, but a screenshot stored only on that phone would be unavailable too. Posting the code to the team group would give other people a powerful account key.",
+      "caption": "कबीर गुम हुआ फ़ोन इस्तेमाल नहीं कर सकता। उसके अकाउंट का एक रिकवरी कोड है, लेकिन उसकी स्क्रीनशॉट कॉपी सिर्फ़ उसी फ़ोन पर हो तो वह भी नहीं मिलेगी। कोड को टीम ग्रुप में पोस्ट करने से दूसरों को अकाउंट की एक ताक़तवर चाबी मिल जाएगी।",
+      "text": "कबीर गुम हुआ फ़ोन इस्तेमाल नहीं कर सकता। उसके अकाउंट का एक रिकवरी कोड है, लेकिन उसकी स्क्रीनशॉट कॉपी सिर्फ़ उसी फ़ोन पर हो तो वह भी नहीं मिलेगी। कोड को टीम ग्रुप में पोस्ट करने से दूसरों को अकाउंट की एक ताक़तवर चाबी मिल जाएगी।",
+      "file": "identity-beyond-a-password-hi-02.mp3"
+    },
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 3,
+      "source": "A long unique password limits reuse risk. M F A or a supported passkey adds sign-in protection. Recovery options must remain private and available after a device is lost. Protecting sign-in and planning recovery are part of one design.",
+      "caption": "लंबा और अलग पासवर्ड, वही पासवर्ड दोबारा इस्तेमाल होने का रिस्क कम करता है। एमएफए या सपोर्टेड पासकी साइन-इन की प्रोटेक्शन बढ़ाती है। डिवाइस गुम हो जाए तब भी रिकवरी ऑप्शन्स प्राइवेट रहने चाहिए और ज़रूरत पर मिलने चाहिए। साइन-इन की सिक्योरिटी और रिकवरी का प्लान एक ही डिज़ाइन के हिस्से हैं।",
+      "text": "लंबा और अलग पासवर्ड, वही पासवर्ड दोबारा इस्तेमाल होने का रिस्क कम करता है। एम एफ ए या सपोर्टेड पासकी साइन-इन की प्रोटेक्शन बढ़ाती है। डिवाइस गुम हो जाए तब भी रिकवरी ऑप्शन्स प्राइवेट रहने चाहिए और ज़रूरत पर मिलने चाहिए। साइन-इन की सिक्योरिटी और रिकवरी का प्लान एक ही डिज़ाइन के हिस्से हैं।",
+      "file": "identity-beyond-a-password-hi-03.mp3"
+    },
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 4,
+      "source": "Choose storage for a fictional recovery code. The sign-in phone is unavailable and the festival group includes people who should not control this account. Find a route that remains private and usable.",
+      "caption": "प्रैक्टिस वाले रिकवरी कोड को कहाँ रखना चाहिए? साइन-इन वाला फ़ोन उपलब्ध नहीं है और फेस्टिवल ग्रुप में ऐसे लोग भी हैं जिन्हें यह अकाउंट कंट्रोल नहीं करना चाहिए। ऐसा तरीका चुनें जो प्राइवेट रहे और ज़रूरत पर काम आए।",
+      "text": "प्रैक्टिस वाले रिकवरी कोड को कहाँ रखना चाहिए? साइन-इन वाला फ़ोन उपलब्ध नहीं है और फेस्टिवल ग्रुप में ऐसे लोग भी हैं जिन्हें यह अकाउंट कंट्रोल नहीं करना चाहिए। ऐसा तरीका चुनें जो प्राइवेट रहे और ज़रूरत पर काम आए।",
+      "file": "identity-beyond-a-password-hi-04.mp3"
+    },
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 5,
+      "source": "Kabir opens the known provider recovery page on a trusted device and proves ownership using a private recovery method. He reviews and revokes the lost device sessions, then registers a replacement method and refreshes recovery options.",
+      "caption": "कबीर एक भरोसेमंद डिवाइस पर प्रोवाइडर का जाना-पहचाना रिकवरी पेज खोलता है। प्राइवेट रिकवरी मेथड से वह साबित करता है कि अकाउंट उसी का है। फिर गुम हुए डिवाइस के सेशन्स चेक करके रद्द करता है, नया मेथड रजिस्टर करता है और रिकवरी ऑप्शन्स अपडेट करता है।",
+      "text": "कबीर एक भरोसेमंद डिवाइस पर प्रोवाइडर का जाना-पहचाना रिकवरी पेज खोलता है। प्राइवेट रिकवरी मेथड से वह साबित करता है कि अकाउंट उसी का है। फिर गुम हुए डिवाइस के सेशन्स चेक करके रद्द करता है, नया मेथड रजिस्टर करता है और रिकवरी ऑप्शन्स अपडेट करता है।",
+      "file": "identity-beyond-a-password-hi-05.mp3"
+    },
+    {
+      "slug": "identity-beyond-a-password",
+      "scene": 6,
+      "source": "The service now knows it is Kabir, but that does not mean he can open every folder. Authentication checks identity. Authorisation decides what that identity may do. Test account protection, recovery and access decisions in the lab.",
+      "caption": "अब सर्विस को पता है कि यह कबीर ही है, लेकिन इसका मतलब यह नहीं कि वह हर फ़ोल्डर खोल सकता है। ऑथेंटिकेशन आइडेंटिटी चेक करता है। ऑथराइज़ेशन तय करता है कि उस आइडेंटिटी को क्या करने की परमिशन है। लैब में अकाउंट प्रोटेक्शन, रिकवरी और एक्सेस के डिसीज़न्स टेस्ट करें।",
+      "text": "अब सर्विस को पता है कि यह कबीर ही है, लेकिन इसका मतलब यह नहीं कि वह हर फ़ोल्डर खोल सकता है। ऑथेंटिकेशन आइडेंटिटी चेक करता है। ऑथराइज़ेशन तय करता है कि उस आइडेंटिटी को क्या करने की परमिशन है। लैब में अकाउंट प्रोटेक्शन, रिकवरी और एक्सेस के डिसीज़न्स टेस्ट करें।",
+      "file": "identity-beyond-a-password-hi-06.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 1,
+      "source": "Asha manages registrations, a teacher reads progress and a supplier delivers equipment. Their tasks are different. The festival drive should give each person only the information and actions needed for their task.",
+      "caption": "आशा रजिस्ट्रेशन सँभालती है, एक टीचर प्रोग्रेस देखते हैं और एक सप्लायर सामान पहुँचाता है। तीनों के काम अलग हैं। फेस्टिवल की शेयर की गई ड्राइव में हर व्यक्ति को सिर्फ़ वही जानकारी और परमिशन मिलनी चाहिए जो उसके काम के लिए ज़रूरी है।",
+      "text": "आशा रजिस्ट्रेशन सँभालती है, एक टीचर प्रोग्रेस देखते हैं और एक सप्लायर सामान पहुँचाता है। तीनों के काम अलग हैं। फेस्टिवल की शेयर की गई ड्राइव में हर व्यक्ति को सिर्फ़ वही जानकारी और परमिशन मिलनी चाहिए जो उसके काम के लिए ज़रूरी है।",
+      "file": "who-should-have-access-hi-01.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 2,
+      "source": "The team made everyone an editor. A supplier can read private contacts and a guest can change the registration file. Dev has left the team, but the organiser group still includes his account.",
+      "caption": "टीम ने सबको एडिटर बना दिया। अब सप्लायर प्राइवेट कॉन्टैक्ट पढ़ सकता है और एक गेस्ट रजिस्ट्रेशन फ़ाइल बदल सकता है। देव टीम छोड़ चुका है, लेकिन ऑर्गनाइज़र ग्रुप में उसका अकाउंट अब भी शामिल है।",
+      "text": "टीम ने सबको एडिटर बना दिया। अब सप्लायर प्राइवेट कॉन्टैक्ट पढ़ सकता है और एक गेस्ट रजिस्ट्रेशन फ़ाइल बदल सकता है। देव टीम छोड़ चुका है, लेकिन ऑर्गनाइज़र ग्रुप में उसका अकाउंट अब भी शामिल है।",
+      "file": "who-should-have-access-hi-02.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 3,
+      "source": "Asha needs edit access. The oversight teacher needs view access. The supplier does not need registration data. A guest can receive a separate programme link that expires after the event. Start with the task, then choose the permission.",
+      "caption": "आशा को एडिट एक्सेस चाहिए। निगरानी करने वाले टीचर को सिर्फ़ व्यू एक्सेस चाहिए। सप्लायर को रजिस्ट्रेशन डेटा की ज़रूरत नहीं है। गेस्ट के लिए प्रोग्राम का अलग लिंक दिया जा सकता है, जो इवेंट के बाद एक्सपायर हो जाए। पहले काम समझें, फिर परमिशन चुनें।",
+      "text": "आशा को एडिट एक्सेस चाहिए। निगरानी करने वाले टीचर को सिर्फ़ व्यू एक्सेस चाहिए। सप्लायर को रजिस्ट्रेशन डेटा की ज़रूरत नहीं है। गेस्ट के लिए प्रोग्राम का अलग लिंक दिया जा सकता है, जो इवेंट के बाद एक्सपायर हो जाए। पहले काम समझें, फिर परमिशन चुनें।",
+      "file": "who-should-have-access-hi-03.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 4,
+      "source": "The team removes Dev from a direct share. However, the organiser group still grants him access to the folder. Is the removal complete? Choose a change and test your decision.",
+      "caption": "टीम ने देव का डायरेक्ट शेयर हटा दिया है। फिर भी ऑर्गनाइज़र ग्रुप से उसे फ़ोल्डर का एक्सेस मिल रहा है। क्या उसका एक्सेस पूरी तरह हट गया? बदलाव चुनें और अपना फ़ैसला टेस्ट करें।",
+      "text": "टीम ने देव का डायरेक्ट शेयर हटा दिया है। फिर भी ऑर्गनाइज़र ग्रुप से उसे फ़ोल्डर का एक्सेस मिल रहा है। क्या उसका एक्सेस पूरी तरह हट गया? बदलाव चुनें और अपना फ़ैसला टेस्ट करें।",
+      "file": "who-should-have-access-hi-04.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 5,
+      "source": "Asha removes the departed member from the relevant group and checks direct shares and public links. She tests access as the affected role. A change is useful only if the resulting permissions match the intended task.",
+      "caption": "आशा टीम छोड़ चुके सदस्य को सही ग्रुप से हटाती है। फिर डायरेक्ट शेयर और पब्लिक लिंक चेक करती है। वह उस व्यक्ति की भूमिका से एक्सेस टेस्ट करती है। बदलाव तभी काम का है, जब असली परमिशन उस काम के लिए तय की गई परमिशन से मेल खाएँ।",
+      "text": "आशा टीम छोड़ चुके सदस्य को सही ग्रुप से हटाती है। फिर डायरेक्ट शेयर और पब्लिक लिंक चेक करती है। वह उस व्यक्ति की भूमिका से एक्सेस टेस्ट करती है। बदलाव तभी काम का है, जब असली परमिशन उस काम के लिए तय की गई परमिशन से मेल खाएँ।",
+      "file": "who-should-have-access-hi-05.mp3"
+    },
+    {
+      "slug": "who-should-have-access",
+      "scene": 6,
+      "source": "The team can still organise the festival with fewer permissions. Suppliers get delivery information and guests get the programme. In the lab, configure three sharing cases and test the people whose access matters.",
+      "caption": "कम परमिशन देकर भी टीम फेस्टिवल का काम कर सकती है। सप्लायर को डिलीवरी की जानकारी मिलती है और गेस्ट को प्रोग्राम। लैब में शेयरिंग के तीन केस सेट करें। फिर जाँचें कि संबंधित लोग क्या खोल सकते हैं।",
+      "text": "कम परमिशन देकर भी टीम फेस्टिवल का काम कर सकती है। सप्लायर को डिलीवरी की जानकारी मिलती है और गेस्ट को प्रोग्राम। लैब में शेयरिंग के तीन केस सेट करें। फिर जाँचें कि संबंधित लोग क्या खोल सकते हैं।",
+      "file": "who-should-have-access-hi-06.mp3"
+    }
+  ]
+}

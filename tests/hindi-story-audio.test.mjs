@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import test from 'node:test';
+import { class11Missions } from '../app/data/class-11-missions.ts';
 import {
   AUDIO_LANGUAGE_KEY, LANGUAGE_KEY, audioLanguageOf, modeFrom, narrationLanguage, textLanguageOf,
 } from '../app/lib/i18n/language-mode.ts';
@@ -18,7 +19,7 @@ function ffprobeSeconds(path) {
   } catch { return null; }
 }
 
-test('Hindi story audio covers Classes 6-10 (153 lessons) and Classes 11-12 (61 chapters)', () => {
+test('Hindi story audio covers Classes 6-10 (153 lessons) and Classes 11-12 (63 chapters)', () => {
   const classes = slugs.filter(slug => /^class(6|7|8|9|10)-/.test(slug));
   assert.equal(classes.length, 153, 'Classes 6-10 lessons');
   for (const [grade, count] of [[6, 32], [7, 32], [8, 32], [9, 32], [10, 25]]) {
@@ -26,7 +27,7 @@ test('Hindi story audio covers Classes 6-10 (153 lessons) and Classes 11-12 (61 
   }
   assert.deepEqual(manifest['class10-fraud-exam-update'].englishScenes, [2, 3, 4, 5, 6]);
   assert.ok(!manifest['class10-fraud-help-without-fees'], 'unrecorded chapters retain English audio');
-  assert.equal(slugs.length - classes.length, 61, 'Class 11 and 12 chapters in the manifest');
+  assert.equal(slugs.length - classes.length, 63, 'Class 11 and 12 chapters in the manifest');
   // Class 11 Chapter 1 keeps the recording that ships inside its own chapter JSON.
   assert.ok(!slugs.includes('your-digital-risk-map'));
   for (const slug of ['ai-evaluation-review', 'a-familiar-voice-asks-for-money', 'the-evidence-hearing']) assert.ok(slugs.includes(slug), slug);
@@ -37,6 +38,42 @@ test('complete imported lessons have all six cues without English fallback', () 
   for (const slug of ['class8-ai-data-left-out', 'class8-ai-design-fair', 'class9-ai-language-context', 'class10-file-access-paths']) {
     assert.equal(manifest[slug].scenes.length, 6, slug);
     assert.equal(manifest[slug].englishScenes, undefined, slug);
+  }
+});
+
+test('the two new Class 11 recordings have six reviewed Hindi paragraphs each', () => {
+  const recording = JSON.parse(read('scripts/hindi-voiceover/class11-recovery-access.json'));
+  const overrides = JSON.parse(read('app/lib/i18n/hi-overrides.json'));
+  const catalogue = JSON.parse(read('public/locales/hi.json')).messages;
+  assert.equal(recording.language_code, 'hi');
+  assert.match(recording.voice_name, /^Pari M/);
+  assert.equal(recording.jobs.length, 12);
+  for (const slug of ['identity-beyond-a-password', 'who-should-have-access']) {
+    const chapter = JSON.parse(read(`app/module/cyber/lessons/new/story/chapters/${slug}.json`));
+    const jobs = recording.jobs.filter(job => job.slug === slug);
+    assert.deepEqual(jobs.map(job => job.scene), [1, 2, 3, 4, 5, 6]);
+    for (const [index, job] of jobs.entries()) {
+      const source = chapter.scenes[index].caption.replace(/\s+/g, ' ').trim();
+      assert.equal(job.source, source, `${slug}: source changed`);
+      assert.equal(job.caption, overrides[source] ?? catalogue[source], `${slug}: caption drift`);
+      assert.equal(job.text, job.caption.replace('एमएफए', 'एम एफ ए'));
+      assert.match(job.text, /[\u0900-\u097f]/u);
+    }
+  }
+  const departure = recording.jobs.find(job => job.slug === 'who-should-have-access' && job.scene === 5);
+  assert.match(departure.caption, /टीम छोड़ चुके/);
+  assert.doesNotMatch(departure.caption, /दिवंगत/);
+});
+
+test('all 32 Class 11 lessons have six Hindi scenes and a local audio track', () => {
+  assert.equal(class11Missions.length, 32);
+  for (const lesson of class11Missions) {
+    const chapter = JSON.parse(read(`app/module/cyber/lessons/new/story/chapters/${lesson.slug}.json`));
+    const hindi = chapter.hindiAudio ?? manifest[lesson.slug];
+    assert.ok(hindi, lesson.slug);
+    assert.equal(hindi.scenes.length, 6, lesson.slug);
+    assert.ok(!hindi.englishScenes?.length, `${lesson.slug}: all scenes are Hindi`);
+    assert.ok(statSync(new URL(`public${hindi.src}`, root)).size > 200_000, lesson.slug);
   }
 });
 

@@ -105,7 +105,7 @@ async function main() {
   console.log('PASS lessons without Hindi audio keep English audio');
 
   // The new indexed export supplies all six scenes, plus one partially recorded chapter.
-  for (const [slug, grade] of [['class8-ai-data-left-out', 8], ['class9-ai-language-context', 9], ['class10-file-access-paths', 10], ['class10-fraud-exam-update', 10]]) {
+  for (const [slug, grade] of [['class8-ai-data-left-out', 8], ['class9-ai-language-context', 9], ['class10-file-access-paths', 10], ['class10-fraud-exam-update', 10], ['identity-beyond-a-password', 11], ['who-should-have-access', 11]]) {
     await page.goto(url(slug, grade), { waitUntil: 'networkidle' });
     await expectSrc(page, manifest[slug].src, `${slug}: imported Hindi track`);
     const player = page.locator('[data-story-player]');
