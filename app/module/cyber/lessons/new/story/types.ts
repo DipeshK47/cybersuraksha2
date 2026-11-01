@@ -30,7 +30,11 @@ export type StoryScene = {
 export type StoryScript = { duration: number; scenes: StoryScene[] };
 
 /** One lesson's Hindi narration: a single track plus a start/duration cue for every English scene, in the same order. */
-export type HindiAudio = { src: string; duration: number; scenes: { start: number; duration: number }[] };
+export type HindiAudio = {
+  src: string; duration: number; scenes: { start: number; duration: number }[];
+  /** One-based scene numbers that retain English while Hindi recordings are incomplete. */
+  englishScenes?: number[];
+};
 
 /** A scene-local, audio-authoritative clock for an optional concept visualization. */
 export type StoryMediaClock = { readElapsed: () => number; duration: number; pause: () => void; resume: () => void };

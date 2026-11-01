@@ -289,6 +289,31 @@ students, but locally completed module runs are not shared through Git.
 Stop the development server, run `npm ci`, and start `npm run dev` again.
 Also confirm that the browser is using the port printed in the terminal.
 
+## Hindi story audio
+
+The November 1, 2026 recording import adds 445 Hindi clips across 75 lessons,
+using measured cue times and the existing English / हिन्दी / English + हिन्दी
+ऑडियो controls. Existing recordings are preserved.
+
+- Classes 6–7: 32 Hindi story tracks each; the practice-lab scene remains English.
+- Class 8: all 32 story tracks; 18 have six Hindi scenes, while the earlier 14
+  retain an English practice-lab scene.
+- Class 9: all 32 lessons have six Hindi scenes.
+- Class 10: the first 24 lessons have six Hindi scenes. `class10-fraud-exam-update`
+  has Hindi scene 1 and English scenes 2–6. The remaining seven Cyber Fraud
+  lessons retain English audio because their recordings were not supplied.
+
+To import an extracted recording archive with `index.csv`, install FFmpeg and run:
+
+```bash
+python3 scripts/build-hindi-story-audio.py --clips /path/to/extracted/folder --index /path/to/extracted/folder/index.csv --allow-partial
+```
+
+This writes `public/audio/cyber/<lesson-slug>/story-hi.mp3` and updates
+`app/module/cyber/lessons/new/story/hindi-audio.generated.json`. Missing scenes
+use their original English audio with `--allow-partial`; the manifest records
+their one-based scene numbers in `englishScenes`.
+
 ## Project rule
 
 Keep implementation, previews, builds, and tests local. Do not deploy or

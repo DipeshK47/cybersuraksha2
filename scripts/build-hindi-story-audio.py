@@ -16,8 +16,11 @@ track uses `--scene6 english` (the English narration of that scene, cut from sto
 `--scene6 silent` (silence of the same length). Re-run this script once Hindi scene 06 clips exist and
 they replace the fallback automatically. Existing manifest entries for other lessons are kept.
 Needs ffmpeg and ffprobe on PATH.
+
+For an indexed recording export, pass --index <index.csv> with --clips pointing to its folder.
+Use --allow-partial to keep the original English narration for any unrecorded scenes.
 """
-import argparse, json, subprocess, sys, tempfile, wave
+import argparse, csv, json, re, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -44,18 +47,42 @@ def duration(path):
     return float(out.stdout.strip())
 
 
-def build(slug, clips, scene6):
+def indexed_clips(index, folder):
+    """Resolve each CSV row's lesson identity and scene; reject ambiguous or unsafe inputs."""
+    clips = {}
+    folder = folder.resolve()
+    with index.open(encoding='utf-8-sig', newline='') as source:
+        for row in csv.DictReader(source):
+            match = re.search(r'\((class(?:6|7|8|9|10)-[a-z0-9-]+)\)$', row['chapter_title'])
+            if not match or not re.fullmatch(r'scene0[1-6]', row['scene']):
+                raise ValueError(f'Invalid lesson or scene: {row["chapter_title"]}: {row["scene"]}')
+            slug, number = match[1], int(row['scene'][5:])
+            path = (folder / row['file']).resolve()
+            if (not slug.startswith(row['class'] + '-') or not path.is_relative_to(folder)
+                    or path.suffix.lower() != '.mp3' or not path.is_file()
+                    or not (CHAPTERS / f'{slug}.json').is_file()):
+                raise ValueError(f'Invalid clip: {row["file"]}')
+            if (slug, number) in clips:
+                raise ValueError(f'Duplicate clip: {slug} scene {number}')
+            clips[(slug, number)] = path
+    if not clips:
+        raise ValueError('No clips found in index')
+    return clips
+
+
+def build(slug, clips, scene6, allow_partial=False):
     chapter = json.loads((CHAPTERS / f'{slug}.json').read_text(encoding='utf-8'))
     english = AUDIO / slug / 'story.mp3'
     count = len(chapter['scenes'])
-    pcm = []
+    pcm, english_scenes = [], []
     for n in range(1, count + 1):
         clip = clips.get((slug, n))
         if clip:
             pcm.append(decode(clip))
-        elif n == count and scene6 == 'english':
-            cue = chapter['scenes'][-1]
+        elif (n == count and scene6 == 'english') or (n < count and allow_partial):
+            cue = chapter['scenes'][n - 1]
             pcm.append(decode(english, cue['start'], cue['duration']))
+            english_scenes.append(n)
         elif n == count and scene6 == 'silent':
             pcm.append(b'\0\0' * int(RATE * chapter['scenes'][-1]['duration']))
         else:
@@ -75,21 +102,26 @@ def build(slug, clips, scene6):
     actual = duration(out)
     if abs(actual - time) > 0.15:
         raise SystemExit(f'{slug}: encoded length {actual:.3f}s differs from cue timeline {time:.3f}s')
-    fallback = clips.get((slug, count)) is None
-    return {'src': f'/audio/cyber/{slug}/story-hi.mp3', 'duration': round(time, 6), 'scenes': cues}, fallback
+    entry = {'src': f'/audio/cyber/{slug}/story-hi.mp3', 'duration': round(time, 6), 'scenes': cues}
+    if english_scenes:
+        entry['englishScenes'] = english_scenes
+    return entry, clips.get((slug, count)) is None or bool(english_scenes)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--clips', required=True, type=Path)
+    parser.add_argument('--index', type=Path, help='CSV export with chapter_title, scene and file columns')
+    parser.add_argument('--allow-partial', action='store_true', help='use original English for missing scenes')
     parser.add_argument('--scene6', choices=['english', 'silent'], default='english')
     parser.add_argument('--slugs', help='comma-separated lesson slugs (default: every lesson with clips 01-05)')
     args = parser.parse_args()
 
-    clips = {}
-    for path in args.clips.rglob('*-hi-[0-9][0-9].mp3'):
-        slug, _, number = path.stem.rpartition('-hi-')
-        clips[(slug, int(number))] = path
+    clips = indexed_clips(args.index, args.clips) if args.index else {}
+    if not args.index:
+        for path in args.clips.rglob('*-hi-[0-9][0-9].mp3'):
+            slug, _, number = path.stem.rpartition('-hi-')
+            clips[(slug, int(number))] = path
     slugs = sorted({slug for slug, _ in clips})
     if args.slugs:
         slugs = [s for s in args.slugs.split(',') if s]
@@ -98,14 +130,15 @@ def main():
     for slug in slugs:
         if not (CHAPTERS / f'{slug}.json').exists():
             print(f'skip {slug}: no story chapter'); continue
-        if not all((slug, n) in clips for n in range(1, 6)):
+        if not args.allow_partial and not all((slug, n) in clips for n in range(1, 6)):
             print(f'skip {slug}: needs clips 01-05'); continue
-        entry, fallback = build(slug, clips, args.scene6)
+        entry, fallback = build(slug, clips, args.scene6, args.allow_partial)
         manifest[slug] = entry
         built += 1; fallbacks += fallback
-        print(f'{slug:<48} {entry["duration"]:7.2f}s' + ('  (scene 06 fallback: ' + args.scene6 + ')' if fallback else ''), flush=True)
+        note = f'  (English scenes: {entry["englishScenes"]})' if entry.get('englishScenes') else ('  (scene 06: silent)' if fallback else '')
+        print(f'{slug:<48} {entry["duration"]:7.2f}s' + note, flush=True)
     MANIFEST.write_text(json.dumps(dict(sorted(manifest.items())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-    print(f'built {built} lessons ({fallbacks} with a scene 06 fallback); manifest has {len(manifest)} lessons')
+    print(f'built {built} lessons ({fallbacks} with missing-scene fallbacks); manifest has {len(manifest)} lessons')
 
 
 if __name__ == '__main__':

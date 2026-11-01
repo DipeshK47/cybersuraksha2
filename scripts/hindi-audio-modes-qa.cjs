@@ -97,13 +97,27 @@ async function main() {
   console.log('PASS English changes text and audio back');
 
   // 7. A lesson with no Hindi recording keeps its English audio in the split mode.
-  const missing = 'class9-private-information';
+  const missing = 'class10-fraud-help-without-fees';
   assert.ok(!(missing in manifest));
   await split(page).click();
-  await page.goto(url('class9-ai-language-context', 9), { waitUntil: 'networkidle' });
-  assert.ok(!('class9-ai-language-context' in manifest));
-  await expectSrc(page, '/audio/cyber/class9-ai-language-context/story.mp3', 'English fallback where Hindi audio is missing');
+  await page.goto(url(missing, 10), { waitUntil: 'networkidle' });
+  await expectSrc(page, `/audio/cyber/${missing}/story.mp3`, 'English fallback where Hindi audio is missing');
   console.log('PASS lessons without Hindi audio keep English audio');
+
+  // The new indexed export supplies all six scenes, plus one partially recorded chapter.
+  for (const [slug, grade] of [['class8-ai-data-left-out', 8], ['class9-ai-language-context', 9], ['class10-file-access-paths', 10], ['class10-fraud-exam-update', 10]]) {
+    await page.goto(url(slug, grade), { waitUntil: 'networkidle' });
+    await expectSrc(page, manifest[slug].src, `${slug}: imported Hindi track`);
+    const player = page.locator('[data-story-player]');
+    await player.getByRole('button', { name: 'Play story', exact: true }).click();
+    await page.waitForFunction(() => document.querySelector('[data-story-player] audio').currentTime > 0.3);
+    for (const index of [1, 2, 3]) {
+      await player.locator('nav button').nth(index).click();
+      const at = await player.locator('audio').evaluate(audio => audio.currentTime);
+      assert.ok(Math.abs(at - manifest[slug].scenes[index].start) < 0.8, `${slug}: scene ${index + 1} seek`);
+    }
+    console.log(`PASS ${slug}: imported track plays and scene buttons use measured Hindi cues`);
+  }
 
   // 8. A chapter that carries its own hindiAudio still works in the split mode.
   await page.goto(url('your-digital-risk-map', 11), { waitUntil: 'networkidle' });

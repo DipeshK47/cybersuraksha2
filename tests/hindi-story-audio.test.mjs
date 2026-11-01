@@ -18,14 +18,26 @@ function ffprobeSeconds(path) {
   } catch { return null; }
 }
 
-test('Hindi story audio covers Classes 6-8 (78 lessons) and Classes 11-12 (61 chapters)', () => {
-  const classes = slugs.filter(slug => /^class(6|7|8)-/.test(slug));
-  assert.equal(classes.length, 78, 'Classes 6-8 lessons');
+test('Hindi story audio covers Classes 6-10 (153 lessons) and Classes 11-12 (61 chapters)', () => {
+  const classes = slugs.filter(slug => /^class(6|7|8|9|10)-/.test(slug));
+  assert.equal(classes.length, 153, 'Classes 6-10 lessons');
+  for (const [grade, count] of [[6, 32], [7, 32], [8, 32], [9, 32], [10, 25]]) {
+    assert.equal(classes.filter(slug => slug.startsWith(`class${grade}-`)).length, count, `Class ${grade}`);
+  }
+  assert.deepEqual(manifest['class10-fraud-exam-update'].englishScenes, [2, 3, 4, 5, 6]);
+  assert.ok(!manifest['class10-fraud-help-without-fees'], 'unrecorded chapters retain English audio');
   assert.equal(slugs.length - classes.length, 61, 'Class 11 and 12 chapters in the manifest');
   // Class 11 Chapter 1 keeps the recording that ships inside its own chapter JSON.
   assert.ok(!slugs.includes('your-digital-risk-map'));
   for (const slug of ['ai-evaluation-review', 'a-familiar-voice-asks-for-money', 'the-evidence-hearing']) assert.ok(slugs.includes(slug), slug);
   assert.deepEqual(slugs, [...slugs].sort(), 'manifest is sorted so rebuilds give small diffs');
+});
+
+test('complete imported lessons have all six cues without English fallback', () => {
+  for (const slug of ['class8-ai-data-left-out', 'class8-ai-design-fair', 'class9-ai-language-context', 'class10-file-access-paths']) {
+    assert.equal(manifest[slug].scenes.length, 6, slug);
+    assert.equal(manifest[slug].englishScenes, undefined, slug);
+  }
 });
 
 test('every Hindi track has one cue per English scene, the house gap and a real file next to the English track', () => {
