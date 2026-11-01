@@ -3061,32 +3061,6 @@ button {
   gap: 8px;
 }
 
-.surakshaGuideControls label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.surakshaGuideControls label > span {
-  color: var(--sl-muted);
-  font-family: var(--font-mono), monospace;
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.surakshaGuideControls select {
-  height: 34px;
-  min-width: 54px;
-  padding: 0 8px;
-  border: 2px solid var(--sl-line);
-  color: var(--sl-ink);
-  background: var(--sl-surface);
-  border-radius: 9px;
-  font-weight: 800;
-}
-
 .surakshaGuideMode {
   padding: 3px;
   border: 2px solid var(--sl-line);
@@ -3346,10 +3320,6 @@ button {
   .surakshaGuideControls {
     align-items: stretch;
     flex-direction: column;
-  }
-
-  .surakshaGuideControls label {
-    justify-content: space-between;
   }
 
   .surakshaGuideMode {

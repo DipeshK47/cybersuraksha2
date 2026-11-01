@@ -15,6 +15,9 @@ export type HandbookSource = {
 
 type HandbookPage = (typeof handbookPages)[number];
 
+/** Classes that have a student handbook the assistant can answer from. */
+export const handbookGrades = new Set((handbookPages as HandbookPage[]).map((page) => page.grade));
+
 const stopwords = new Set(
   "a an and are as at be by can did do does for from had has have how i in is it me my of on or our should that the their them there they this to was we were what when where which who why will with you your एक और है हैं था थी थे का की के को में से पर यह वह क्या कैसे क्यों कब कहाँ कौन आप आपका आपकी मुझे मेरा मेरी हम हमारे कि भी तो लिए करें होता होती होते".split(
     " ",

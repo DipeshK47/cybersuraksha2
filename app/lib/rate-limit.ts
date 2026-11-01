@@ -52,7 +52,16 @@ export function enforceRateLimit(
   limit: number,
   windowMs: number,
 ): Response | null {
-  if (allow(clientKey(request, scope), limit, windowMs)) return null;
+  return enforceKeyedRateLimit(clientKey(request, scope), limit, windowMs);
+}
+
+/** Same as `enforceRateLimit`, for a caller-chosen key (an account, a user). */
+export function enforceKeyedRateLimit(
+  key: string,
+  limit: number,
+  windowMs: number,
+): Response | null {
+  if (allow(key, limit, windowMs)) return null;
   return Response.json(
     { error: "Too many attempts. Please wait a moment and try again." },
     {

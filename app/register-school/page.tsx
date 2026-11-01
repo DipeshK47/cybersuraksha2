@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { BrandLogo } from "../components/BrandLogo";
-import { readJson } from "../lib/read-json";
+import { postJson } from "../lib/read-json";
 
 export default function RegisterSchoolPage() {
   const [status, setStatus] = useState("");
@@ -11,26 +11,23 @@ export default function RegisterSchoolPage() {
 
   async function submitRequest(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    // React clears `currentTarget` once the handler awaits; keep the element.
+    const formElement = event.currentTarget;
     setSubmitting(true);
     setStatus("");
-    const form = new FormData(event.currentTarget);
-    const response = await fetch("/api/register-school", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        schoolName: form.get("schoolName"),
-        contactName: form.get("contactName"),
-        contactEmail: form.get("contactEmail"),
-        studentCount: Number(form.get("studentCount")) || null,
-      }),
+    const form = new FormData(formElement);
+    const { ok, payload } = await postJson<{ error?: string }>("/api/register-school", {
+      schoolName: form.get("schoolName"),
+      contactName: form.get("contactName"),
+      contactEmail: form.get("contactEmail"),
+      studentCount: Number(form.get("studentCount")) || null,
     });
-    const payload = await readJson<{ error?: string }>(response);
     setSubmitting(false);
-    if (!response.ok) {
+    if (!ok) {
       setStatus(payload.error ?? "Unable to submit the request.");
       return;
     }
-    event.currentTarget.reset();
+    formElement.reset();
     setStatus(
       "Request received. The CyberShiksha team will verify the school and contact you.",
     );

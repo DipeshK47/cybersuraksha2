@@ -1,7 +1,8 @@
-import { and, asc, eq, gt, inArray } from "drizzle-orm";
+import { and, asc, eq, gt, inArray, max } from "drizzle-orm";
 import { getDb } from "../../../db";
 import { activityEvents, students } from "../../../db/schema";
-import { requireTeacher, scopedStudentIds } from "../../lib/auth";
+import { requireTeacher, scopedStudentIdsQuery } from "../../lib/auth";
+import { getSession, type SessionTeacher } from "../../lib/session";
 
 /**
  * Real-time class activity feed for the signed-in teacher, delivered as
@@ -15,6 +16,10 @@ import { requireTeacher, scopedStudentIds } from "../../lib/auth";
  * upgrade is a Durable Object per class that holds the roster in memory and
  * fans out over WebSockets — the client contract (one JSON event per activity)
  * stays identical, so only this endpoint changes.
+ *
+ * Every poll re-reads the session and the teacher's class scope, so logout,
+ * expiry, suspension or a removed class assignment ends the feed within one
+ * poll instead of when the browser happens to reconnect.
  */
 
 const POLL_INTERVAL_MS = 2_000;
@@ -32,11 +37,10 @@ type LiveEvent = {
 };
 
 async function fetchSince(
-  studentIds: number[],
+  teacher: SessionTeacher,
   afterId: number,
 ): Promise<LiveEvent[]> {
-  if (studentIds.length === 0) return [];
-  const rows = await getDb()
+  return getDb()
     .select({
       id: activityEvents.id,
       studentId: activityEvents.studentId,
@@ -51,24 +55,24 @@ async function fetchSince(
     .innerJoin(students, eq(activityEvents.studentId, students.id))
     .where(
       and(
-        inArray(activityEvents.studentId, studentIds),
+        inArray(activityEvents.studentId, scopedStudentIdsQuery(teacher)),
         gt(activityEvents.id, afterId),
       ),
     )
     .orderBy(asc(activityEvents.id))
     .limit(BATCH_LIMIT);
-  return rows;
 }
 
 export async function GET(request: Request) {
   const auth = await requireTeacher(request);
   if (auth instanceof Response) return auth;
 
-  const studentIds = await scopedStudentIds(auth);
-
   // Start from the current tail so only NEW activity is streamed.
-  const initial = await fetchSince(studentIds, 0);
-  let lastId = initial.reduce((max, event) => Math.max(max, event.id), 0);
+  const [tail] = await getDb()
+    .select({ id: max(activityEvents.id) })
+    .from(activityEvents)
+    .where(inArray(activityEvents.studentId, scopedStudentIdsQuery(auth)));
+  let lastId = tail?.id ?? 0;
 
   const encoder = new TextEncoder();
   let closed = false;
@@ -80,8 +84,7 @@ export async function GET(request: Request) {
   const stream = new ReadableStream({
     async start(controller) {
       const send = (line: string) => controller.enqueue(encoder.encode(line));
-      send(`retry: 3000\n`);
-      send(`: connected ${studentIds.length} students\n\n`);
+      send(`retry: 3000\n\n`); // first bytes open the stream for the browser
 
       const poll = async () => {
         if (closed) {
@@ -93,7 +96,15 @@ export async function GET(request: Request) {
           return;
         }
         try {
-          const events = await fetchSince(studentIds, lastId);
+          const session = await getSession(request);
+          if (!session) {
+            // Signed out, expired or suspended: end the feed. The browser's
+            // reconnect then receives a 401 and stops.
+            stop();
+            controller.close();
+            return;
+          }
+          const events = await fetchSince(session.teacher, lastId);
           for (const event of events) {
             lastId = Math.max(lastId, event.id);
             send(`event: activity\ndata: ${JSON.stringify(event)}\n\n`);

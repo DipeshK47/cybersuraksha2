@@ -2,13 +2,15 @@ import { destroyStudentSession } from "../../../lib/student-session";
 import { acceptInvite } from "../../../lib/invites";
 import { createSession } from "../../../lib/session";
 import { enforceRateLimit } from "../../../lib/rate-limit";
-import { acceptInviteSchema, parseJson } from "../../../lib/validation";
+import { acceptInviteSchema, parseJson, rejectCrossSiteJson } from "../../../lib/validation";
 
 /**
  * Accept a teacher invite: set name + password, create an active account, and
  * sign the new teacher in immediately.
  */
 export async function POST(request: Request) {
+  const crossSite = rejectCrossSiteJson(request);
+  if (crossSite) return crossSite;
   const limited = enforceRateLimit(request, "auth:accept-invite", 10, 10_000);
   if (limited) return limited;
 

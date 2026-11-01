@@ -7,13 +7,7 @@ import { writeAudit } from "../../lib/audit";
 import { hashPassword } from "../../lib/password";
 import { createStudentsSchema, parseJson } from "../../lib/validation";
 import { schoolContent } from "../../lib/content-access";
-
-function makeAccessCode(rollNo: string) {
-  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  const bytes = crypto.getRandomValues(new Uint8Array(6));
-  const suffix = Array.from(bytes, (byte) => alphabet[byte % alphabet.length]).join("");
-  return `${rollNo.slice(0, 4)}${suffix}`;
-}
+import { newAccessCode } from "../../lib/tokens";
 
 /**
  * Create student accounts in one of the teacher's classes.
@@ -89,7 +83,7 @@ export async function POST(request: Request) {
   const codeByRoll = new Map<string, string>();
   const insertRows = await Promise.all(
     rows.map(async (student) => {
-      const accessCode = makeAccessCode(student.rollNo);
+      const accessCode = newAccessCode(student.rollNo);
       codeByRoll.set(student.rollNo, accessCode);
       return {
         schoolId: auth.schoolId,
@@ -102,16 +96,25 @@ export async function POST(request: Request) {
     }),
   );
 
-  const created = await db
-    .insert(students)
-    .values(insertRows)
-    .onConflictDoNothing()
-    .returning({
-      id: students.id,
-      className: students.className,
-      rollNo: students.rollNo,
-      name: students.name,
-    });
+  // D1 binds at most 100 parameters per statement and each learner row binds
+  // seven, so insert 14 rows per statement and run them as one atomic batch.
+  const ROWS_PER_INSERT = 14;
+  const inserts = [];
+  for (let start = 0; start < insertRows.length; start += ROWS_PER_INSERT) {
+    inserts.push(
+      db
+        .insert(students)
+        .values(insertRows.slice(start, start + ROWS_PER_INSERT))
+        .onConflictDoNothing()
+        .returning({
+          id: students.id,
+          className: students.className,
+          rollNo: students.rollNo,
+          name: students.name,
+        }),
+    );
+  }
+  const created = (await db.batch(inserts as [typeof inserts[number], ...typeof inserts])).flat();
 
   const issued = created.map((student) => ({
     ...student,

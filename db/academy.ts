@@ -1,5 +1,5 @@
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
-import { getDb } from ".";
+import { getDb, inChunks } from ".";
 import { ensureMigrated } from "./migrate";
 import { classes, runs, schools, students, teachers } from "./schema";
 import { hashPassword } from "../app/lib/password";
@@ -290,17 +290,18 @@ export async function getScopedAcademyData(studentIds: number[]): Promise<{
   if (studentIds.length === 0) return { students: [], runs: [] };
   const db = getDb();
   const [studentRows, runRows] = await Promise.all([
-    db
-      .select(safeStudentColumns)
-      .from(students)
-      .where(inArray(students.id, studentIds))
-      .orderBy(asc(students.className), asc(students.rollNo)),
-    db
-      .select()
-      .from(runs)
-      .where(inArray(runs.studentId, studentIds))
-      .orderBy(asc(runs.studentId), asc(runs.completedAt)),
+    inChunks(studentIds, (chunk) =>
+      db.select(safeStudentColumns).from(students).where(inArray(students.id, chunk)),
+    ),
+    inChunks(studentIds, (chunk) =>
+      db.select().from(runs).where(inArray(runs.studentId, chunk)),
+    ),
   ]);
+  // Chunks are fetched separately, so restore the global order here
+  // (plain comparison matches SQLite's default BINARY collation).
+  const cmp = <T extends string | number>(a: T, b: T) => (a < b ? -1 : a > b ? 1 : 0);
+  studentRows.sort((a, b) => cmp(a.className, b.className) || cmp(a.rollNo, b.rollNo));
+  runRows.sort((a, b) => cmp(a.studentId, b.studentId) || cmp(a.completedAt, b.completedAt));
   return { students: studentRows, runs: runRows };
 }
 

@@ -2,7 +2,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { getDb } from "../../db";
 import { classes, schools, schoolSettings } from "../../db/schema";
 import { schoolGrades, schoolSubjects, type ContentAccess } from "./content-policy";
-import { scopedClassIds } from "./auth";
+import { scopedClassIdsQuery } from "./auth";
 import type { SessionTeacher } from "./session";
 import type { StudentSession } from "./student-session";
 
@@ -22,7 +22,6 @@ export async function studentContent(student: StudentSession["student"]) {
 export async function teacherContent(teacher: SessionTeacher) {
   const access = await schoolContent(teacher.schoolId);
   if (teacher.role === "school_admin") return access;
-  const ids = await scopedClassIds(teacher);
-  const rows = ids.length ? await getDb().select().from(classes).where(inArray(classes.id, ids)) : [];
+  const rows = await getDb().select().from(classes).where(inArray(classes.id, scopedClassIdsQuery(teacher)));
   return { ...access, grades: access.grades.filter(grade => rows.some(row => row.grade === grade)) };
 }
