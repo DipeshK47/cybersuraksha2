@@ -112,6 +112,13 @@ terminal to stop the server.
 - Page: `/teacher-login`
 - Email: `teacher@dpsrkp.edu.in`
 - Password: `Teacher@123`
+- Plain teacher: sees classes 7A and 8B only, no admin console.
+
+### School admin
+
+- Page: `/teacher-login`
+- Email: `admin@dpsrkp.edu.in`
+- Password: `Admin@123`
 
 ### Student
 
@@ -126,7 +133,7 @@ are **only seeded in development** — see "Demo data vs real data" below.
 
 ### School admin console
 
-The demo teacher account is a `school_admin`. Sign in and open **Admin** in the
+Sign in with the demo school admin account and open **Admin** in the
 teacher navigation (`/teach/admin`) to invite teachers, approve or suspend
 accounts, create classes, and choose which classes each teacher can see. An
 invite produces a one-time `/accept-invite?token=…` link, shown once.

@@ -1,5 +1,5 @@
 .page{min-height:100vh;background:var(--sl-canvas);color:var(--sl-ink)}
-.shell{width:min(1180px,calc(100% - 48px));margin:auto;padding:38px 0 70px}
+.shell{width:min(1180px,calc(100% - 48px));margin:auto;padding:28px 0 48px}
 .back{display:inline-flex;align-items:center;gap:8px;color:var(--sl-muted);margin-bottom:26px;font-size:.9rem;text-decoration:none}
 .intro{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:30px}
 .eyebrow{font-size:.75rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:var(--sl-muted);margin:0 0 10px}

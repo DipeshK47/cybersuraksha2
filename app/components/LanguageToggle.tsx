@@ -1,7 +1,9 @@
 "use client";
 
-import { Languages } from 'lucide-react';
+import { Languages, Volume2 } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { createHindiTranslator, type HindiCatalogue } from '../lib/i18n/translate';
 import { createPageLocalizer } from '../lib/i18n/localize-dom';
 import { readJson } from '../lib/read-json';
@@ -24,6 +26,10 @@ export function LanguageToggle() {
   const localizer = useRef<ReturnType<typeof createPageLocalizer> | null>(null);
   const loading = useRef<Promise<void> | null>(null);
   const requestId = useRef(0);
+  const pathname = usePathname();
+  // Pages with a navbar give it a [data-language-slot]; the one toggle moves in there.
+  const [slot, setSlot] = useState<HTMLElement | null>(null);
+  useEffect(() => setSlot(document.querySelector<HTMLElement>('[data-language-slot]')), [pathname]);
 
   async function choose(next: LanguageMode) {
     const request = ++requestId.current;
@@ -66,6 +72,15 @@ export function LanguageToggle() {
     return () => { window.clearTimeout(restore); requests.current++; window.removeEventListener('storage', sync); controller.current?.dispose(); };
   }, []);
 
+  const status = <span className={styles.status} role="status">{error || (busy ? 'हिन्दी लोड हो रही है…' : '')}</span>;
+  if (slot) return createPortal(<div className={styles.compact} role="group" aria-label="Website language / वेबसाइट की भाषा" aria-busy={busy} translate="no" data-no-translate>
+    <Languages aria-hidden="true" />
+    <button type="button" lang="en" aria-label="English" aria-pressed={mode === 'en'} disabled={busy} onClick={() => void choose('en')}>EN</button>
+    <button type="button" lang="hi" aria-label="हिन्दी" aria-pressed={mode === 'hi'} disabled={busy} onClick={() => void choose('hi')}>हिं</button>
+    <button type="button" className={styles.split} aria-label="English + हिन्दी ऑडियो, English text with Hindi audio" title="English text, Hindi audio / अंग्रेज़ी टेक्स्ट, हिन्दी ऑडियो" aria-pressed={mode === 'en-hi-audio'} disabled={busy} onClick={() => void choose('en-hi-audio')}>EN<Volume2 aria-hidden="true" />हिं</button>
+    {status}
+  </div>, slot);
+
   return <div className={styles.bar} translate="no" data-no-translate>
     <div className={styles.control} role="group" aria-label="Website language / वेबसाइट की भाषा" aria-busy={busy}>
       <span className={styles.label}><Languages aria-hidden="true" />Language / भाषा</span>
@@ -75,6 +90,6 @@ export function LanguageToggle() {
         <button type="button" className={styles.split} aria-label="English + हिन्दी ऑडियो, English text with Hindi audio" title="English text, Hindi audio / अंग्रेज़ी टेक्स्ट, हिन्दी ऑडियो" aria-pressed={mode === 'en-hi-audio'} disabled={busy} onClick={() => void choose('en-hi-audio')}>English + हिन्दी ऑडियो</button>
       </div>
     </div>
-    <span className={styles.status} role="status">{error || (busy ? 'हिन्दी लोड हो रही है…' : '')}</span>
+    {status}
   </div>;
 }

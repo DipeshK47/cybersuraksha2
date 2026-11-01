@@ -44,7 +44,7 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
  const json = async (path, cookie, method='GET', body, status=200) => { const r = await request(path,cookie,method,body); const p = await r.json(); assert.equal(r.status,status,JSON.stringify(p)); return p; };
  const login = async (kind,body) => {const r=await request('/api/auth/'+kind,null,'POST',body);assert.equal(r.status,200,await r.clone().text());return r.headers.getSetCookie()[0].split(';')[0];};
  try {
- const admin = await login('teacher',{email:'teacher@dpsrkp.edu.in',password:'Teacher@123'});
+ const admin = await login('teacher',{email:'admin@dpsrkp.edu.in',password:'Admin@123'});
  const student = await login('student',{school:'dps-rkp',className:'7A',rollNo:'20',password:'DPS20SAFE'});
  const workspace = await json('/api/lms/assignments',admin);
  const classroom = workspace.classes.find(c=>c.name==='7A');

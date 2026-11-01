@@ -70,6 +70,7 @@ export function CyberLessonFrame({
           <button onClick={runtime.resetLesson} type="button">
             <RotateCcw aria-hidden="true" /> Start over
           </button>
+          <div data-language-slot />
         </div>
       </header>
 

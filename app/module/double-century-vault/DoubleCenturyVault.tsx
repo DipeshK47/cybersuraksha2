@@ -362,6 +362,7 @@ export function DoubleCenturyVault({
           <button className={styles.resetButton} onClick={reset} type="button">
             <RotateCcw aria-hidden="true" /> Start over
           </button>
+          <div data-language-slot />
           <HandbookChatbot placement="inline" />
         </div>
       </header>

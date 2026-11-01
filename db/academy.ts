@@ -1,14 +1,15 @@
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { getDb, inChunks } from ".";
 import { ensureMigrated } from "./migrate";
-import { classes, runs, schools, students, teachers } from "./schema";
+import { classes, runs, schools, students, teacherClasses, teachers } from "./schema";
 import { hashPassword } from "../app/lib/password";
 
 /**
  * Database bootstrap for an empty database. Two mutually exclusive paths:
  *
- *   Demo    — one school, its classes, a well-known school-admin, and sample
- *             students/runs so the dashboards are explorable. Development only.
+ *   Demo    — one school, its classes, a well-known school-admin, a plain
+ *             teacher assigned to the demo classes, and sample students/runs so
+ *             the dashboards are explorable. Development only.
  *   Real    — a single school_admin provisioned from environment variables,
  *             for an actual deployment. No demo password ever exists.
  *
@@ -23,10 +24,18 @@ const DEMO_SCHOOL = {
 
 // Well-known development account. Never created in production — see demoSeedAllowed().
 const DEMO_ADMIN = {
+  name: "Rohit Kapoor",
+  email: "admin@dpsrkp.edu.in",
+  password: "Admin@123",
+  role: "school_admin" as const,
+};
+
+// Plain teacher: sees only the demo classes and has no admin console.
+const DEMO_TEACHER = {
   name: "Ananya Sharma",
   email: "teacher@dpsrkp.edu.in",
   password: "Teacher@123",
-  role: "school_admin" as const,
+  role: "teacher" as const,
 };
 
 function demoSeedAllowed(): boolean {
@@ -173,22 +182,29 @@ async function seedDemoAcademy(): Promise<void> {
     [school] = await db.insert(schools).values(DEMO_SCHOOL).returning();
   }
 
-  // 2. School-admin (first approved teacher account)
-  const [existingAdmin] = await db
-    .select({ id: teachers.id })
-    .from(teachers)
-    .where(eq(teachers.email, DEMO_ADMIN.email))
-    .limit(1);
-  if (!existingAdmin) {
-    await db.insert(teachers).values({
-      schoolId: school.id,
-      name: DEMO_ADMIN.name,
-      email: DEMO_ADMIN.email,
-      passwordHash: await hashPassword(DEMO_ADMIN.password),
-      role: DEMO_ADMIN.role,
-      status: "active",
-      emailVerifiedAt: new Date().toISOString(),
-    });
+  // 2. School-admin and plain teacher. A database seeded before the split has the
+  //    teacher login as school_admin, so the role is corrected on every run.
+  const teacherIdByEmail = new Map<string, number>();
+  for (const account of [DEMO_ADMIN, DEMO_TEACHER]) {
+    let [row] = await db
+      .select({ id: teachers.id, role: teachers.role })
+      .from(teachers)
+      .where(eq(teachers.email, account.email))
+      .limit(1);
+    if (!row) {
+      [row] = await db.insert(teachers).values({
+        schoolId: school.id,
+        name: account.name,
+        email: account.email,
+        passwordHash: await hashPassword(account.password),
+        role: account.role,
+        status: "active",
+        emailVerifiedAt: new Date().toISOString(),
+      }).returning({ id: teachers.id, role: teachers.role });
+    } else if (row.role !== account.role) {
+      await db.update(teachers).set({ role: account.role }).where(eq(teachers.id, row.id));
+    }
+    teacherIdByEmail.set(account.email, row.id);
   }
 
   // 3. Classes referenced by the demo students
@@ -210,6 +226,10 @@ async function seedDemoAcademy(): Promise<void> {
     }
     classByName.set(className, row.id);
   }
+  const demoTeacherId = teacherIdByEmail.get(DEMO_TEACHER.email)!;
+  await db.insert(teacherClasses)
+    .values([...classByName.values()].map((classId) => ({ teacherId: demoTeacherId, classId })))
+    .onConflictDoNothing();
 
   // 4. Students (password hashed; plaintext demo code never persisted)
   const [studentCountRow] = await db

@@ -469,5 +469,10 @@
   "That conversation is too long. Start a new question.": "यह बातचीत बहुत लंबी हो गई है। नया सवाल पूछें।",
   "Unable to load that teacher’s classes.": "उस टीचर की क्लास लोड नहीं हो सकीं।",
   "You are not signed out yet: the server could not be reached.": "आप अभी साइन आउट नहीं हुए हैं: सर्वर तक पहुँच नहीं हो सकी।",
-  "origin": "ओरिजिन"
+  "origin": "ओरिजिन",
+  "EN": "EN",
+  "[data-language-slot]": "[data-language-slot]",
+  "Rohit Kapoor": "रोहित कपूर",
+  "Dr. A.P.J. Abdul Kalam": "डॉ. ए.पी.जे. अब्दुल कलाम",
+  "Learning gives creativity, creativity leads to thinking, thinking provides knowledge, knowledge makes you great.": "सीखने से रचनात्मकता आती है, रचनात्मकता से सोच आती है, सोच से ज्ञान मिलता है और ज्ञान आपको महान बनाता है।"
 }

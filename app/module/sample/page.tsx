@@ -20,7 +20,9 @@ export default async function SampleModulePage({
     <main className="modulePreviewPage">
       <header className="modulePreviewNav">
         <Link href={`/track/${track}?${roleQuery}`}>← Exit</Link>
-        <span>CyberShiksha · Sample</span>
+        <span>
+          <Link href={`/dashboard?${roleQuery}`}>CyberShiksha · Sample</Link>
+        </span>
       </header>
       <section className="modulePreviewCard">
         <span className="modulePreviewIcon">

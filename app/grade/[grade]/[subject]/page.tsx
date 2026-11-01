@@ -92,8 +92,11 @@ export default async function SubjectPage({
         </Link>
         <div>
           <span>
-            CyberShiksha · Class {grade.grade} · {subject.name}
+            <Link href={`/dashboard${roleQuery}`}>
+              CyberShiksha · Class {grade.grade} · {subject.name}
+            </Link>
           </span>
+          <div data-language-slot />
           <Link href="/logout">Log out</Link>
         </div>
       </header>

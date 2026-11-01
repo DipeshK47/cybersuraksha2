@@ -680,7 +680,7 @@ select {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  padding-bottom: 44px;
+  padding-bottom: 24px;
 }
 
 .trackCard {
@@ -836,25 +836,6 @@ select {
   border-top: 1px solid var(--line);
 }
 
-.dashboardFoot span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted-dashboard);
-  font-size: 12.5px;
-}
-
-.dashboardFoot b {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.dashboardFoot svg {
-  width: 15px;
-  height: 15px;
-  stroke-width: 1.6;
-}
-
 .trackProgress {
   align-self: flex-start;
   color: var(--track-accent);
@@ -919,7 +900,7 @@ select {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
 }
 
 .gradeCard {
@@ -1786,11 +1767,6 @@ a.missionCard:hover {
 
 .teacherWordmark b {
   color: var(--accent);
-}
-
-.teacherWordmark small {
-  color: var(--muted);
-  font: inherit;
 }
 
 .teacherHeader nav,
