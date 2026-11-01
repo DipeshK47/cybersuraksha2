@@ -10,3 +10,4 @@
  */
 export const SESSION_COOKIE = "cybersuraksha_session";
 export const STUDENT_SESSION_COOKIE = "cybersuraksha_student_session";
+export const PLATFORM_SESSION_COOKIE = "cybersuraksha_platform_session";

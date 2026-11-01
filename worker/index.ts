@@ -1,7 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
-import { SESSION_COOKIE } from "../app/lib/cookie-names";
+import { PLATFORM_SESSION_COOKIE, SESSION_COOKIE } from "../app/lib/cookie-names";
 
 interface Env {
   ASSETS: Fetcher;
@@ -50,8 +50,8 @@ function isSecure(request: Request, url: URL): boolean {
   );
 }
 
-function hasTeacherSession(request: Request): boolean {
-  const pattern = new RegExp(`(?:^|;\\s*)${SESSION_COOKIE}=[^;\\s]+`);
+function hasCookie(request: Request, name: string): boolean {
+  const pattern = new RegExp(`(?:^|;\\s*)${name}=[^;\\s]+`);
   return pattern.test(request.headers.get("cookie") ?? "");
 }
 
@@ -60,6 +60,10 @@ function harden(response: Response, request: Request, url: URL): Response {
   const headers = new Headers(response.headers);
   if (url.pathname.startsWith("/api/") || request.headers.get("cookie")) headers.set("Cache-Control", "private, no-store");
   headers.set("X-Content-Type-Options", "nosniff");
+  // The company panel and its API are never meant to be found by search engines.
+  if (url.pathname.startsWith("/admins") || url.pathname.startsWith("/api/platform")) {
+    headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
   headers.set("X-Frame-Options", "DENY");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set(
@@ -101,8 +105,16 @@ const worker = {
     // loads to the login screen. The real authorization gate is per-API and
     // session-verified; this only avoids rendering an empty shell.
     if (url.pathname === "/teach" || url.pathname.startsWith("/teach/")) {
-      if (!hasTeacherSession(request)) {
+      if (!hasCookie(request, SESSION_COOKIE)) {
         return Response.redirect(new URL("/teacher-login", url).toString(), 302);
+      }
+    }
+
+    // Same UX guard for the company panel; its APIs verify the session and 2FA.
+    if (url.pathname === "/admins" || url.pathname.startsWith("/admins/")) {
+      const open = url.pathname === "/admins/login" || url.pathname === "/admins/setup";
+      if (!open && !hasCookie(request, PLATFORM_SESSION_COOKIE)) {
+        return Response.redirect(new URL("/admins/login", url).toString(), 302);
       }
     }
 

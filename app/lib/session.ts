@@ -22,13 +22,13 @@ export type ActiveSession = {
   teacher: SessionTeacher;
 };
 
-function isSecureRequest(request: Request): boolean {
+export function isSecureRequest(request: Request): boolean {
   const url = new URL(request.url);
   if (url.protocol === "https:") return true;
   return (request.headers.get("x-forwarded-proto") ?? "").includes("https");
 }
 
-function readCookie(header: string | null, name: string): string | null {
+export function readCookie(header: string | null, name: string): string | null {
   for (const part of (header ?? "").split(";")) {
     const [key, ...rest] = part.trim().split("=");
     if (key === name) { try { return decodeURIComponent(rest.join("=")); } catch { return null; } }
