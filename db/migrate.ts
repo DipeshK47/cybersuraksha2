@@ -4,6 +4,7 @@ import studentSessions from "../drizzle/0001_student_sessions.sql?raw";
 import assessment from "../drizzle/0002_keen_zaladane.sql?raw";
 import lms from "../drizzle/0003_aspiring_hiroim.sql?raw";
 import schoolLms from "../drizzle/0004_icy_toro.sql?raw";
+import platformAdmin from "../drizzle/0005_platform_admin.sql?raw";
 
 /**
  * In-app D1 migrator.
@@ -24,6 +25,8 @@ const MIGRATIONS: Array<{ tag: string; sql: string }> = [
   { tag: "0002_keen_zaladane", sql: assessment },
   { tag: "0003_aspiring_hiroim", sql: lms },
   { tag: "0004_icy_toro", sql: schoolLms },
+  // platform admin panel: staff identities, school controls, lead pipeline
+  { tag: "0005_platform_admin", sql: platformAdmin },
 ];
 
 let migrationPromise: Promise<void> | null = null;

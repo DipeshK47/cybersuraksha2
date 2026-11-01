@@ -18,6 +18,17 @@ export const schools = sqliteTable(
     id: integer("id").primaryKey({ autoIncrement: true }),
     name: text("name").notNull(),
     slug: text("slug").notNull(),
+    /** Set from the platform panel; suspended blocks every login in the school. */
+    status: text("status", { enum: ["active", "suspended"] }).notNull().default("active"),
+    /** Contract details and limits (null limit = unlimited), set from the platform panel. */
+    plan: text("plan"),
+    seatLimit: integer("seat_limit"),
+    teacherLimit: integer("teacher_limit"),
+    classLimit: integer("class_limit"),
+    contractEndsAt: text("contract_ends_at"),
+    contactName: text("contact_name"),
+    contactEmail: text("contact_email"),
+    notes: text("notes"),
     createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   },
   (table) => [uniqueIndex("schools_slug_idx").on(table.slug)],
@@ -249,7 +260,7 @@ export const activityEvents = sqliteTable(
   ],
 );
 
-/** Audit trail for teacher-initiated account actions. */
+/** Audit trail for teacher and platform-admin actions. */
 export const auditLog = sqliteTable(
   "audit_log",
   {
@@ -257,6 +268,11 @@ export const auditLog = sqliteTable(
     actorTeacherId: integer("actor_teacher_id").references(() => teachers.id, {
       onDelete: "set null",
     }),
+    actorPlatformAdminId: integer("actor_platform_admin_id").references(() => platformAdmins.id, {
+      onDelete: "set null",
+    }),
+    ip: text("ip"),
+    userAgent: text("user_agent"),
     action: text("action").notNull(),
     targetType: text("target_type").notNull(),
     targetId: text("target_id"),
@@ -272,8 +288,65 @@ export const schoolRequests = sqliteTable("school_requests", {
   contactName: text("contact_name").notNull(),
   contactEmail: text("contact_email").notNull(),
   studentCount: integer("student_count"),
+  status: text("status", { enum: ["new", "contacted", "converted", "rejected"] }).notNull().default("new"),
+  /** The school this lead became, once converted. */
+  schoolId: integer("school_id").references(() => schools.id, { onDelete: "set null" }),
+  notes: text("notes"),
   createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
 });
+
+/**
+ * CyberSuraksha staff who run the platform from /admins. A separate identity
+ * from teachers: no school, no class scope, its own sessions. An admin is
+ * `pending` until they open their one-time setup link, choose a password and
+ * enrol a TOTP authenticator.
+ */
+export const platformAdmins = sqliteTable(
+  "platform_admins",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    name: text("name").notNull(),
+    email: text("email").notNull(),
+    passwordHash: text("password_hash").notNull().default(""),
+    totpSecret: text("totp_secret"),
+    /** Last accepted TOTP time step; any code at or before it is refused (replay guard). */
+    totpLastStep: integer("totp_last_step").notNull().default(0),
+    status: text("status", { enum: ["pending", "active", "suspended"] }).notNull().default("pending"),
+    setupTokenHash: text("setup_token_hash"),
+    setupExpiresAt: integer("setup_expires_at"),
+    lastLoginAt: text("last_login_at"),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    uniqueIndex("platform_admins_email_idx").on(table.email),
+    uniqueIndex("platform_admins_setup_token_idx").on(table.setupTokenHash),
+  ],
+);
+
+/**
+ * Platform-admin sessions; same hashed-token model as teacher `sessions`. A
+ * session starts with `mfaPassedAt` null after the password step and can only
+ * reach the TOTP endpoint until that step sets it.
+ */
+export const platformSessions = sqliteTable(
+  "platform_sessions",
+  {
+    id: text("id").primaryKey(),
+    adminId: integer("admin_id")
+      .notNull()
+      .references(() => platformAdmins.id, { onDelete: "cascade" }),
+    tokenHash: text("token_hash").notNull(),
+    expiresAt: integer("expires_at").notNull(),
+    mfaPassedAt: text("mfa_passed_at"),
+    ip: text("ip"),
+    userAgent: text("user_agent"),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    uniqueIndex("platform_sessions_token_hash_idx").on(table.tokenHash),
+    index("platform_sessions_admin_idx").on(table.adminId),
+  ],
+);
 
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -529,6 +602,10 @@ export const schoolSettings = sqliteTable("school_settings", {
   schoolId: integer("school_id").primaryKey().references(() => schools.id, { onDelete: "cascade" }),
   grades: text("grades").notNull(),
   subjects: text("subjects").notNull(),
+  /** JSON array of module ids hidden for this school. */
+  hiddenModules: text("hidden_modules").notNull().default("[]"),
+  /** JSON object of feature switches; a missing key means on. */
+  features: text("features").notNull().default("{}"),
 });
 
 export const assignmentSubmissions = sqliteTable("assignment_submissions", {
