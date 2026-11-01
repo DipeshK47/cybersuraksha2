@@ -14,7 +14,8 @@
     "handbooks:index": "node scripts/build-handbook-chat-index.mjs",
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit",
-    "test:backend": "node --test tests/school-backend.test.mjs tests/school-migration.test.mjs tests/assessment.test.mjs tests/lms-summary.test.mjs"
+    "test:backend": "node --test tests/school-backend.test.mjs tests/school-migration.test.mjs tests/assessment.test.mjs tests/lms-summary.test.mjs",
+    "smoke": "node scripts/smoke-test.mjs"
   },
   "dependencies": {
     "@rive-app/canvas": "^2.42.1",

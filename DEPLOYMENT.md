@@ -4,6 +4,39 @@ CyberSuraksha runs on **Cloudflare Workers** with a **D1 (SQLite)** database. Th
 app is a Next.js 16 / React 19 build produced by `vinext`. This document covers
 taking it from local development to a hardened production deployment.
 
+## Go-live runbook (Cloudflare Workers + D1)
+
+Verified locally on the real Workers runtime: `npx wrangler deploy --dry-run` succeeds (bundle 3,012 KiB compressed, 1,399 asset files, no file over 25 MiB) and `scripts/smoke-test.mjs` passes 25/25. Start on the Free plan; see *Free plan or Paid?* below.
+
+Credentials: either run `npx wrangler login` on your machine, or export `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (wrangler reads both automatically). Never commit a token.
+
+1. **Create the database** (once): `npx wrangler d1 create cybersuraksha` and note the `database_id` it prints.
+2. **Build with that id**:
+   ```bash
+   CYBERSURAKSHA_D1_DATABASE_ID=<database_id> CYBERSURAKSHA_D1_DATABASE_NAME=cybersuraksha npm run build
+   ```
+3. **Deploy**: `npx wrangler deploy`. The first deploy creates the Worker `cybersuraksha` at `https://cybersuraksha.<your-subdomain>.workers.dev`.
+4. **Set the first admin** as secrets (secrets survive redeploys; plain variables do not). Choose a strong, unique password: there is no in-app password change yet.
+   ```bash
+   npx wrangler secret put CYBERSURAKSHA_SCHOOL_NAME
+   npx wrangler secret put CYBERSURAKSHA_ADMIN_NAME
+   npx wrangler secret put CYBERSURAKSHA_ADMIN_EMAIL
+   npx wrangler secret put CYBERSURAKSHA_ADMIN_PASSWORD
+   ```
+   Do **not** set `CYBERSURAKSHA_DEMO_SEED`. Leave `GROQ_API_KEY` unset for now (the chatbot then answers from the local handbook and costs nothing).
+5. **Smoke test** (this creates the database tables and the admin on first request):
+   ```bash
+   SMOKE_ADMIN_EMAIL=<admin email> SMOKE_ADMIN_PASSWORD='<admin password>' node scripts/smoke-test.mjs https://cybersuraksha.<your-subdomain>.workers.dev
+   ```
+   All checks must pass. Then open a lesson in a browser and confirm the narration plays.
+6. **Remove the bootstrap password**: `npx wrangler secret delete CYBERSURAKSHA_ADMIN_PASSWORD`. It is only needed once.
+7. **Custom domain**: Cloudflare dashboard, Workers & Pages, `cybersuraksha`, Settings, Domains & Routes, Add, Custom domain. The domain must be on Cloudflare. Re-run the smoke test against it (it also checks HSTS and the Secure cookie flag).
+8. **Rate limit logins**: dashboard, Security, WAF, Rate limiting rules: match URI path starts with `/api/auth/`, about 10 requests per minute per IP, block for 10 minutes. The in-app limiter is only per instance.
+9. **Check the real CPU cost**: dashboard, Workers & Pages, `cybersuraksha`, Metrics. Log in a few times and open lessons; look for CPU-limit errors (code 1102).
+10. **Before every later deploy**: `npx wrangler d1 export cybersuraksha --remote --output backup-$(date +%F).sql`. D1 also keeps point-in-time recovery (Time Travel). To undo a bad deploy: `npx wrangler rollback`.
+
+**Free plan or Paid?** Try Free first. Move to Workers Paid (about $5/month) if any request fails with a CPU-limit error (1102), if a deploy is refused as too large (the bundle is only about 60 KiB under 3 MiB), or before students log in. Students also require the work listed under *Planned security work* below.
+
 ## 1. Prerequisites
 
 - Node.js **22.13+** (`node --version`)
@@ -23,10 +56,9 @@ deployment:
 - **Managed hosting (OpenAI/Codex control plane):** the platform injects the D1
   binding values at deploy time — no manual ID needed. This is the default path
   (`db/index.ts` reads `env.DB`).
-- **Manual Cloudflare deploy:** replace the placeholder
-  `SITE_CREATOR_PLACEHOLDER_DATABASE_ID` in `vite.config.ts` with the real
-  `database_id`, or supply a `wrangler.jsonc` (template below) and deploy with
-  `wrangler deploy`.
+- **Manual Cloudflare deploy:** build with `CYBERSURAKSHA_D1_DATABASE_ID` set to the real
+  `database_id` (see the go-live runbook above), or supply a `wrangler.jsonc`
+  (template below) and deploy with `wrangler deploy`.
 
 ### `wrangler.jsonc` template (manual path)
 
