@@ -480,5 +480,9 @@
   "SHA-1": "SHA-1",
   "sign": "sign",
   "CyberSuraksha Admin": "CyberSuraksha एडमिन",
-  "Invalid base32 secret.": "base32 सीक्रेट सही नहीं है।"
+  "Invalid base32 secret.": "base32 सीक्रेट सही नहीं है।",
+  "contacted": "संपर्क किया",
+  "converted": "कन्वर्ट हुआ",
+  "features": "फ़ीचर्स",
+  "rejected": "रिजेक्ट किया"
 }
