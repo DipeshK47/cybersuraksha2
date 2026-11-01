@@ -8,11 +8,28 @@
  * invalidating existing hashes.
  *
  * Encoded format:  pbkdf2$<iterations>$<saltB64>$<hashB64>
+ *
+ * Work factor. The Workers Free plan allows 10 ms of CPU per request, and one
+ * PBKDF2 pass costs about 0.55 ms per 1,000 iterations, so the default is
+ * deliberately low (10,000, roughly 6 ms). That is far below OWASP's 600,000 for
+ * PBKDF2-HMAC-SHA256: it is a launch trade-off for a teachers-only pilot on the
+ * Free plan, NOT a long-term setting. Cloudflare's runtime has also been reported
+ * to reject more than 100,000 iterations, so the value is capped there.
+ *
+ * To strengthen hashing (Workers Paid plan, before students log in) set the
+ * CYBERSURAKSHA_PBKDF2_ITERATIONS variable (1,000-100,000). Existing hashes keep
+ * working and are upgraded to the new work factor the next time their owner logs
+ * in (`needsRehash`). The planned stronger design (the browser does the heavy
+ * hashing) is described in DEPLOYMENT.md under "Planned security work".
  */
 
 const ALGORITHM = "PBKDF2";
 const HASH = "SHA-256";
-const DEFAULT_ITERATIONS = 210_000; // OWASP 2023 guidance for PBKDF2-SHA256
+/** Fits the Workers Free plan's 10 ms CPU limit; see the note above. */
+export const DEFAULT_ITERATIONS = 10_000;
+export const MIN_ITERATIONS = 1_000;
+/** Highest PBKDF2 work factor Cloudflare's runtime is reported to accept. */
+export const MAX_ITERATIONS = 100_000;
 const KEY_LENGTH_BITS = 256;
 const SALT_BYTES = 16;
 
@@ -49,10 +66,33 @@ async function deriveBits(
   return new Uint8Array(bits);
 }
 
+/**
+ * The work factor used for new hashes: CYBERSURAKSHA_PBKDF2_ITERATIONS when it
+ * is a valid number, clamped to [MIN_ITERATIONS, MAX_ITERATIONS], else the default.
+ */
+export function configuredIterations(): number {
+  const raw = typeof process !== "undefined" ? process.env?.CYBERSURAKSHA_PBKDF2_ITERATIONS : undefined;
+  const parsed = raw ? Number.parseInt(raw, 10) : Number.NaN;
+  if (!Number.isFinite(parsed)) return DEFAULT_ITERATIONS;
+  return Math.min(MAX_ITERATIONS, Math.max(MIN_ITERATIONS, parsed));
+}
+
+/**
+ * True when a stored hash uses fewer iterations than the configured work factor,
+ * so it should be re-hashed after a successful login. Stronger hashes are never
+ * downgraded.
+ */
+export function needsRehash(stored: string): boolean {
+  const parts = stored.split("$");
+  if (parts.length !== 4 || parts[0] !== "pbkdf2") return false;
+  const iterations = Number.parseInt(parts[1], 10);
+  return Number.isInteger(iterations) && iterations < configuredIterations();
+}
+
 /** Hash a plaintext password into a self-describing, storable string. */
 export async function hashPassword(
   password: string,
-  iterations = DEFAULT_ITERATIONS,
+  iterations = configuredIterations(),
 ): Promise<string> {
   const salt = crypto.getRandomValues(new Uint8Array(SALT_BYTES));
   const hash = await deriveBits(password, salt, iterations);

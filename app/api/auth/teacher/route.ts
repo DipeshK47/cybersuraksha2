@@ -3,7 +3,7 @@ import { eq } from "drizzle-orm";
 import { getDb } from "../../../../db";
 import { ensureAcademySeeded } from "../../../../db/academy";
 import { teachers } from "../../../../db/schema";
-import { verifyPassword } from "../../../lib/password";
+import { hashPassword, needsRehash, verifyPassword } from "../../../lib/password";
 import { createSession } from "../../../lib/session";
 import { enforceRateLimit } from "../../../lib/rate-limit";
 import { parseJson, teacherLoginSchema } from "../../../lib/validation";
@@ -48,6 +48,11 @@ export async function POST(request: Request) {
   }
   if (teacher.status !== "active") {
     return Response.json({ error: "This account is not active." }, { status: 403 });
+  }
+
+  // After the work factor is raised, upgrade this account's hash on its next login.
+  if (needsRehash(teacher.passwordHash)) {
+    await getDb().update(teachers).set({ passwordHash: await hashPassword(password) }).where(eq(teachers.id, teacher.id));
   }
 
   const cookie = await createSession(request, teacher.id);

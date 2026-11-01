@@ -3,7 +3,7 @@ import { and, eq } from "drizzle-orm";
 import { getDb } from "../../../../db";
 import { ensureAcademySeeded } from "../../../../db/academy";
 import { schools, students } from "../../../../db/schema";
-import { verifyPassword } from "../../../lib/password";
+import { hashPassword, needsRehash, verifyPassword } from "../../../lib/password";
 import { createStudentSession } from "../../../lib/student-session";
 import { enforceRateLimit } from "../../../lib/rate-limit";
 import { parseJson, studentLoginSchema } from "../../../lib/validation";
@@ -55,6 +55,11 @@ export async function POST(request: Request) {
 
   const ok = await verifyPassword(password, student.passwordHash);
   if (!ok) return invalid;
+
+  // After the work factor is raised, upgrade this account's hash on its next login.
+  if (needsRehash(student.passwordHash)) {
+    await db.update(students).set({ passwordHash: await hashPassword(password) }).where(eq(students.id, student.id));
+  }
 
   const cookie = await createStudentSession(request, student.id);
   const headers = new Headers();

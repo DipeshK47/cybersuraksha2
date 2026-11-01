@@ -74,6 +74,7 @@ Never commit secrets. Set them per environment.
 | `GROQ_MODEL` / `GROQ_WEB_MODEL` | Model overrides for Suraksha Guide | Optional |
 | `CYBERSURAKSHA_ADMIN_EMAIL` / `CYBERSURAKSHA_ADMIN_PASSWORD` | Provisions the first `school_admin` on an empty production database. | Recommended |
 | `CYBERSURAKSHA_ADMIN_NAME` / `CYBERSURAKSHA_SCHOOL_NAME` | Display name and school for that account. | Optional |
+| `CYBERSURAKSHA_PBKDF2_ITERATIONS` | Password-hashing work factor, 1,000-100,000. Defaults to **10,000** so a login fits the Workers Free plan's 10 ms CPU limit. Raise it (for example 100,000) on the Workers Paid plan; existing hashes upgrade on each user's next login. | Optional |
 | `CYBERSURAKSHA_DEMO_SEED` | Set to `1` to force demo seeding in a production build. Leave unset. | Never in production |
 
 ```bash
@@ -116,8 +117,9 @@ npx wrangler deploy
 
 ## 7. Security posture (implemented)
 
-- PBKDF2-hashed passwords (teachers + students); plaintext access codes shown
-  once and never stored.
+- PBKDF2-hashed passwords (teachers + students) at a deliberately low work factor
+  for the Workers Free plan (see *Password hashing* below); plaintext access codes
+  shown once and never stored.
 - Opaque, hashed, HttpOnly server sessions for teachers and students.
 - Per-teacher tenancy: every student/run/analytics query is scoped to the
   teacher's assigned classes; `school_admin` scoped to their school.
@@ -126,6 +128,37 @@ npx wrangler deploy
   spoofed); all student writes bound to the verified session.
 - Zod validation on all mutating endpoints; audit log for account actions;
   security headers + CSP + HSTS.
+
+## 7a. Password hashing on Workers (read before students log in)
+
+Passwords use PBKDF2-HMAC-SHA256 via Web Crypto (`app/lib/password.ts`). The work factor is a trade-off with Cloudflare's limits:
+
+| Iterations | Time here | Fits Free plan (10 ms CPU)? |
+|---|---|---|
+| 10,000 (**current default**) | ~6 ms | Yes |
+| 100,000 (highest Cloudflare is reported to accept) | ~51 ms | No: needs the Paid plan |
+| 210,000 (previous value) | ~112 ms | No, and above the reported 100,000 cap |
+| 600,000 (OWASP recommendation) | ~317 ms | No |
+
+**10,000 is weak.** It is acceptable only for the current teachers-only pilot, with strong teacher and admin passwords, because a stolen copy of the database could be attacked about 60 times faster than at OWASP's strength. Student access codes are only ~30 bits of randomness, so at this work factor **student accounts must not go live until hashing is strengthened** (below).
+
+Measure the real cost after the first deploy: read the CPU time of a login request in the Cloudflare dashboard. If logins fail with a CPU-limit error (1102) on the Free plan, either move to the Workers Paid plan (about $5/month) or implement the planned design below.
+
+## 7b. Planned security work
+
+**Before students log in**
+1. Move to the **Workers Paid plan** and set `CYBERSURAKSHA_PBKDF2_ITERATIONS=100000`. Hashes upgrade on each account's next login. (Or implement client-side stretching, below, which removes the limit.)
+2. Fix the audit findings that only matter once student accounts exist: teacher-reset access codes are partly or fully predictable for long roll numbers (`app/api/students/[id]/reset/route.ts`); a student's old session survives a password reset; students can self-report scores (`/api/module-runs`); add per-account lockout.
+3. Load-test the marks reports with the largest expected roster.
+
+**Planned design: client-side password stretching (not built yet)**
+The browser derives a key from the password with a high work factor (for example 600,000 iterations, 0.3 to 2 s on a phone) and sends only the derived key. The server stores a fast hash of that key (under 1 ms of CPU). Effects:
+- No heavy hashing on the Worker, so no Free-plan CPU problem and no 100,000-iteration cap.
+- A stolen database still costs an attacker the full 600,000 iterations per guess.
+- Closes the login timing leak (use a deterministic fake salt for unknown accounts).
+Work involved: a salt-lookup step before login; client-side derivation in the teacher and student login forms; changes to `app/lib/password.ts` and both login routes; migration for existing hashes (re-derive at next login); tests. Roughly a day with testing.
+
+**Other options considered:** Cloudflare Access (Zero Trust SSO, no passwords for teachers; student codes still need hashing) and simply paying for the Paid plan.
 
 ## 8. Real-time feed scaling
 
