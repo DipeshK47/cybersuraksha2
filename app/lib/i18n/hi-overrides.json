@@ -484,5 +484,19 @@
   "contacted": "संपर्क किया",
   "converted": "कन्वर्ट हुआ",
   "features": "फ़ीचर्स",
-  "rejected": "रिजेक्ट किया"
+  "rejected": "रिजेक्ट किया",
+  "Platform admin": "प्लेटफ़ॉर्म एडमिन",
+  "That code does not match. Add the key to your authenticator app and enter the current code.": "यह कोड मेल नहीं खाता। की को अपने ऑथेंटिकेटर ऐप में जोड़ें और मौजूदा कोड डालें।",
+  "That code is not valid. Check your authenticator app and try again.": "यह कोड सही नहीं है। अपना ऑथेंटिकेटर ऐप देखें और फिर से कोशिश करें।",
+  "This setup link is invalid, used or expired. Ask a teammate for a new one.": "यह सेटअप लिंक गलत है, इस्तेमाल हो चुका है या एक्सपायर हो गया है। किसी टीममेट से नया लिंक माँगें।",
+  "Use at least 12 characters.": "कम से कम 12 कैरेक्टर इस्तेमाल करें।",
+  "[admins] Finish setting up the first platform admin ({{0}}) within 7 days: {{1}}": "[admins] पहले प्लेटफ़ॉर्म एडमिन ({{0}}) का सेटअप 7 दिनों के अंदर पूरा करें: {{1}}",
+  "platform.admin.setup": "platform.admin.setup",
+  "platform.login.failure": "platform.login.failure",
+  "platform.login.success": "platform.login.success",
+  "platform.logout": "platform.logout",
+  "platform.mfa.failure": "platform.mfa.failure",
+  "platform:login": "platform:login",
+  "platform:setup": "platform:setup",
+  "platform:totp": "platform:totp"
 }
