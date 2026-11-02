@@ -169,7 +169,7 @@ function ChartArt({ a, lang }: { a: Chart; lang: Lang }) {
     {a.cut != null && <><rect x="0" y="0" width={a.cut} height="60" className={w.zoneA} /><rect x={a.cut} y="0" width={100 - a.cut} height="60" className={w.zoneB} /><line x1={a.cut} y1="0" x2={a.cut} y2="60" className={w.cutLine} vectorEffect="non-scaling-stroke" /></>}
   </svg>
     {(a.pts ?? []).map((p, i) => <i key={i} className={w.dot} data-c={p.c ?? "a"} {...fx(`${a.id}:p${i}`, { left: `${p.x}%`, top: `${100 - p.y}%` })}>{p.c === "q" ? "?" : p.t ?? ""}</i>)}
-    {a.zones && a.cut != null && <><small className={w.zoneL} style={{ left: ".6rem" }}>{pick(a.zones[0], lang)}</small><small className={w.zoneR} style={{ left: `calc(${a.cut}% + .6rem)` }}>{pick(a.zones[1], lang)}</small></>}
+    {a.zones && a.cut != null && <><small className={w.zoneL} style={{ left: ".6rem" }}>{pick(a.zones[0], lang)}</small>{a.cut < 82 && <small className={w.zoneR} style={{ left: `calc(${a.cut}% + .6rem)` }}>{pick(a.zones[1], lang)}</small>}</>}
     {a.axes && <><small className={w.axisX}>{pick(a.axes[0], lang)} →</small><small className={w.axisY}>{pick(a.axes[1], lang)} →</small></>}</div>;
   if (a.look === "line") {
     const v = a.line ?? [], hi = Math.max(max, ...v), step = 100 / Math.max(1, v.length - 1);
