@@ -49,7 +49,7 @@ export function createStructuredStory(chapter: Class8Chapter, script: StoryScrip
     return <div className={`${s.lesson} ${options.className ?? ""}`}><section className={s.world} data-class8-world={chapter.slug}>
       <header><FlaskConical size={19} aria-hidden="true" />{options.labTitle ?? ui.lab.en}</header>
       <h2>{current.title.en}</h2>
-      {world ? <LessonStage world={world} scene={props.scene} preview={props.scene === 3 && !props.solved ? picked : null} strand={chapter.strand} solved={props.solved} />
+      {world ? <LessonStage world={world} scene={props.scene} preview={props.scene === 3 && !props.solved ? picked : null} strand={chapter.strand} solved={props.solved} playing={props.playing} duration={script.scenes[props.scene]?.duration} />
         : Explanation ? <Explanation {...props} chapter={chapter} /> : <Illustration theme={chapter.sceneTheme} caption={current.dialogue.en} resolved={props.solved} />}
       {props.scene === 3 && !props.solved && (world
         ? <DecisionDeck task={chapter.decision} picked={picked} locked={false} onPick={id => { setPicked(id); setDiagnosis(null); props.setHint(""); }} onLock={() => check(picked)} />

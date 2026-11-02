@@ -17,11 +17,20 @@ export function applyPatch(art: readonly Artifact[], patch: Patch | undefined): 
   });
 }
 
+/** Notes and emphasis belong to one moment; they never carry over to the next scene or option. */
+function withoutNotes(art: readonly Artifact[]): Artifact[] {
+  return art.map(item => { const { note: _note, noteTone: _tone, focus: _focus, ...rest } = item as Artifact & { note?: unknown; noteTone?: unknown; focus?: unknown }; void _note; void _tone; void _focus; return rest as Artifact; });
+}
+
 /** The stage for a scene: base art plus every patch up to and including `scene`, plus an optional decision preview. */
 export function resolveStage(world: World, scene: number, preview?: string | null): Artifact[] {
   let art: Artifact[] = world.art.map(item => ({ ...item }));
-  for (let i = 0; i <= Math.min(scene, world.sc.length - 1); i++) art = applyPatch(art, world.sc[i]);
-  if (preview && world.out[preview]) art = applyPatch(art, world.out[preview]);
+  const last = Math.min(scene, world.sc.length - 1);
+  for (let i = 0; i <= last; i++) {
+    if (i === last) art = withoutNotes(art);
+    art = applyPatch(art, world.sc[i]);
+  }
+  if (preview && world.out[preview]) art = applyPatch(withoutNotes(art), world.out[preview]);
   return art;
 }
 
