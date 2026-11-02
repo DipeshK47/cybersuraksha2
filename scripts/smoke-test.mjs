@@ -18,7 +18,8 @@ const json = (path, body, headers = {}) => get(path, { method: 'POST', headers: 
 const home = await get('/student-login');
 check('login page loads', home.status === 200, `HTTP ${home.status}`);
 const h = Object.fromEntries(home.headers);
-check('security headers present', h['x-content-type-options'] === 'nosniff' && h['x-frame-options'] === 'DENY' && !!h['content-security-policy'] && !!h['referrer-policy'] && !!h['permissions-policy']);
+// Cloudflare zone rules may rewrite X-Frame-Options to SAMEORIGIN; framing stays blocked by CSP frame-ancestors 'none'.
+check('security headers present', h['x-content-type-options'] === 'nosniff' && ['DENY', 'SAMEORIGIN'].includes(h['x-frame-options']) && /frame-ancestors 'none'/.test(h['content-security-policy'] || '') && !!h['referrer-policy'] && !!h['permissions-policy']);
 if (https) check('HSTS sent over https', !!h['strict-transport-security'], h['strict-transport-security'] || 'missing');
 
 // 2. No demo accounts or demo data in production.
