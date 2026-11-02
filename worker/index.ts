@@ -2,6 +2,7 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { SESSION_COOKIE } from "../app/lib/cookie-names";
+import { guardUnsafeApiRequest } from "../app/lib/request-guard";
 
 interface Env {
   ASSETS: Fetcher;
@@ -105,6 +106,10 @@ const worker = {
         return Response.redirect(new URL("/teacher-login", url).toString(), 302);
       }
     }
+
+    // Refuse forged state-changing API requests before they reach any route.
+    const refused = guardUnsafeApiRequest(request, url);
+    if (refused) return harden(refused, request, url);
 
     const response = await handler.fetch(request, env, ctx);
     return harden(response, request, url);

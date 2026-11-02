@@ -29,6 +29,12 @@ for (const [role, demoEmail, demoPassword] of [['admin', 'admin@dpsrkp.edu.in', 
 const schools = await (await get('/api/schools')).json();
 check('no demo school is listed', !(schools.schools || []).some(s => s.slug === 'dps-rkp'), JSON.stringify((schools.schools || []).map(s => s.slug)));
 
+// 2b. Forged-request guard: a plain-text body or a request from another site is refused.
+const forged = await get('/api/auth/logout', { method: 'POST', headers: { 'content-type': 'text/plain' }, body: '{}' });
+check('a text/plain API request is refused', forged.status === 415, `HTTP ${forged.status}`);
+const foreign = await get('/api/auth/logout', { method: 'POST', headers: { origin: 'https://evil.example' } });
+check('a request from another origin is refused', foreign.status === 403, `HTTP ${foreign.status}`);
+
 // 3. Private files are not served.
 for (const p of ['/.env', '/.git/config', '/wrangler.json', '/package.json', '/dist/server/index.js', '/db/schema.ts', '/__debug']) {
   const r = await get(p); const type = r.headers.get('content-type') || '';
