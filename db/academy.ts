@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray, sql } from "drizzle-orm";
+import { asc, eq, inArray, sql } from "drizzle-orm";
 import { getDb, inChunks } from ".";
 import { ensureMigrated } from "./migrate";
 import { classes, runs, schools, students, teacherClasses, teachers } from "./schema";
@@ -42,6 +42,9 @@ const DEMO_TEACHER = {
 // Production demo (CYBERSURAKSHA_DEMO_TEACHER=1): a separate demo school with ONLY a plain
 // teacher login (no demo admin) and sample students nobody can sign in as. Safe to run
 // next to real schools: school/class scoping keeps its data apart.
+// Grades the production demo teacher can open (every class the app serves).
+const DEMO_GRADES = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
 const SAFE_DEMO_SCHOOL = {
   name: "CyberShiksha Demo School",
   slug: "cybershiksha-demo",
@@ -233,28 +236,34 @@ async function seedDemoAcademy(safe: boolean): Promise<void> {
     teacherIdByEmail.set(account.email, row.id);
   }
 
-  // 3. Classes referenced by the demo students
-  const classNames = Array.from(new Set(seedStudents.map((s) => s.className)));
-  const classByName = new Map<string, number>();
-  for (const className of classNames) {
-    let [row] = await db
-      .select({ id: classes.id })
-      .from(classes)
-      .where(and(eq(classes.schoolId, school.id), eq(classes.name, className)))
-      .limit(1);
-    if (!row) {
-      const grade = Number.parseInt(className, 10);
-      const section = className.replace(/^\d+/, "");
-      [row] = await db
-        .insert(classes)
-        .values({ schoolId: school.id, grade, section, name: className })
-        .returning({ id: classes.id });
-    }
-    classByName.set(className, row.id);
+  // 3. Classes: the ones the demo students sit in. The production demo also gets one class
+  //    per grade, so the demo teacher can open every class's lessons (a teacher only sees
+  //    the grades of the classes they are assigned to).
+  const classNames = Array.from(new Set([
+    ...seedStudents.map((s) => s.className),
+    ...(safe ? DEMO_GRADES.map((grade) => `${grade}A`) : []),
+  ]));
+  const existingClasses = await db
+    .select({ id: classes.id, name: classes.name })
+    .from(classes)
+    .where(eq(classes.schoolId, school.id));
+  const classByName = new Map(existingClasses.map((row) => [row.name, row.id]));
+  const missingClasses = classNames.filter((name) => !classByName.has(name));
+  if (missingClasses.length) {
+    const inserted = await db
+      .insert(classes)
+      .values(missingClasses.map((name) => ({
+        schoolId: school.id,
+        grade: Number.parseInt(name, 10),
+        section: name.replace(/^\d+/, ""),
+        name,
+      })))
+      .returning({ id: classes.id, name: classes.name });
+    for (const row of inserted) classByName.set(row.name, row.id);
   }
   const demoTeacherId = teacherIdByEmail.get(DEMO_TEACHER.email)!;
   await db.insert(teacherClasses)
-    .values([...classByName.values()].map((classId) => ({ teacherId: demoTeacherId, classId })))
+    .values(classNames.map((name) => ({ teacherId: demoTeacherId, classId: classByName.get(name)! })))
     .onConflictDoNothing();
 
   // 4. Students (password hashed; plaintext demo code never persisted)

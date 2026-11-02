@@ -37,6 +37,12 @@ if (demoOn) {
     check('demo teacher cannot reach the admin console', (await get('/api/admin/teachers', { headers: { cookie: demoCookie } })).status === 403);
     const roster = JSON.stringify(await (await get('/api/academy', { headers: { cookie: demoCookie } })).json());
     check('demo teacher sees only demo students', /Aarav Mehta/.test(roster) && !/alice|admin/i.test(roster));
+    const blocked = [];
+    for (let grade = 3; grade <= 12; grade++) {
+      const page = await get(`/grade/${grade}?role=teacher`, { headers: { cookie: demoCookie } });
+      if (page.status !== 200 || (await page.text()).includes('This classroom is not available')) blocked.push(grade);
+    }
+    check('demo teacher can open every class, 3 to 12', blocked.length === 0, blocked.length ? `blocked: ${blocked.join(', ')}` : '');
     await get('/api/auth/logout', { method: 'POST', headers: { cookie: demoCookie } });
   }
   const demoStudent = await json('/api/auth/student', { school: 'cybershiksha-demo', className: '7A', rollNo: '20', password: 'DPS20SAFE' });

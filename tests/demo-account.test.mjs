@@ -39,3 +39,10 @@ test('the settings are documented for operators', async () => {
   const doc = await readFile(new URL('../DEPLOYMENT.md', import.meta.url), 'utf8');
   for (const name of ['CYBERSURAKSHA_DEMO_TEACHER', 'CYBERSURAKSHA_DEMO_TEACHER_PASSWORD']) assert.ok(doc.includes(name), name);
 });
+
+test('the production demo gives the demo teacher a class in every grade 3 to 12 (not just 7 and 8)', () => {
+  assert.match(academy, /const DEMO_GRADES = \[3, 4, 5, 6, 7, 8, 9, 10, 11, 12\];/);
+  assert.match(academy, /\.\.\.\(safe \? DEMO_GRADES\.map\(\(grade\) => `\$\{grade\}A`\) : \[\]\)/, 'only the safe demo adds them');
+  assert.match(academy, /classNames\.map\(\(name\) => \(\{ teacherId: demoTeacherId, classId: classByName\.get\(name\)! \}\)\)/, 'and assigns the teacher to all of them');
+});
+
