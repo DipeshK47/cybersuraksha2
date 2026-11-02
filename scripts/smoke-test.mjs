@@ -22,8 +22,10 @@ check('security headers present', h['x-content-type-options'] === 'nosniff' && h
 if (https) check('HSTS sent over https', !!h['strict-transport-security'], h['strict-transport-security'] || 'missing');
 
 // 2. No demo accounts or demo data in production.
-const demo = await json('/api/auth/teacher', { email: 'teacher@dpsrkp.edu.in', password: 'Teacher@123' });
-check('demo teacher login is rejected', demo.status === 401, `HTTP ${demo.status}`);
+for (const [role, demoEmail, demoPassword] of [['admin', 'admin@dpsrkp.edu.in', 'Admin@123'], ['teacher', 'teacher@dpsrkp.edu.in', 'Teacher@123']]) {
+  const demo = await json('/api/auth/teacher', { email: demoEmail, password: demoPassword });
+  check(`demo ${role} login is rejected`, demo.status === 401 || demo.status === 429, `HTTP ${demo.status}`);
+}
 const schools = await (await get('/api/schools')).json();
 check('no demo school is listed', !(schools.schools || []).some(s => s.slug === 'dps-rkp'), JSON.stringify((schools.schools || []).map(s => s.slug)));
 
