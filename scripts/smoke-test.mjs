@@ -22,12 +22,30 @@ check('security headers present', h['x-content-type-options'] === 'nosniff' && h
 if (https) check('HSTS sent over https', !!h['strict-transport-security'], h['strict-transport-security'] || 'missing');
 
 // 2. No demo accounts or demo data in production.
-for (const [role, demoEmail, demoPassword] of [['admin', 'admin@dpsrkp.edu.in', 'Admin@123'], ['teacher', 'teacher@dpsrkp.edu.in', 'Teacher@123']]) {
-  const demo = await json('/api/auth/teacher', { email: demoEmail, password: demoPassword });
-  check(`demo ${role} login is rejected`, demo.status === 401 || demo.status === 429, `HTTP ${demo.status}`);
+// SMOKE_DEMO=1 means the public demo teacher login is deliberately enabled
+// (CYBERSURAKSHA_DEMO_TEACHER=1). The demo ADMIN must be rejected either way.
+const demoOn = process.env.SMOKE_DEMO === '1';
+const demoTeacherPassword = process.env.SMOKE_DEMO_PASSWORD || 'Teacher@123';
+const demoAdmin = await json('/api/auth/teacher', { email: 'admin@dpsrkp.edu.in', password: 'Admin@123' });
+check('demo admin login is rejected', demoAdmin.status === 401 || demoAdmin.status === 429, `HTTP ${demoAdmin.status}`);
+const demoTeacher = await json('/api/auth/teacher', { email: 'teacher@dpsrkp.edu.in', password: demoTeacherPassword });
+if (demoOn) {
+  check('demo teacher can sign in (demo enabled)', demoTeacher.status === 200, `HTTP ${demoTeacher.status}`);
+  const demoCookie = (demoTeacher.headers.getSetCookie?.().find(c => c.startsWith('cybersuraksha_session=')) || '').split(';')[0];
+  if (demoCookie) {
+    check('demo teacher cannot reach the admin console', (await get('/api/admin/teachers', { headers: { cookie: demoCookie } })).status === 403);
+    const roster = JSON.stringify(await (await get('/api/academy', { headers: { cookie: demoCookie } })).json());
+    check('demo teacher sees only demo students', /Aarav Mehta/.test(roster) && !/alice|admin/i.test(roster));
+    await get('/api/auth/logout', { method: 'POST', headers: { cookie: demoCookie } });
+  }
+  const demoStudent = await json('/api/auth/student', { school: 'cybershiksha-demo', className: '7A', rollNo: '20', password: 'DPS20SAFE' });
+  check('demo students cannot sign in', demoStudent.status === 401 || demoStudent.status === 429, `HTTP ${demoStudent.status}`);
+} else {
+  check('demo teacher login is rejected (demo disabled)', demoTeacher.status === 401 || demoTeacher.status === 429, `HTTP ${demoTeacher.status}`);
 }
 const schools = await (await get('/api/schools')).json();
-check('no demo school is listed', !(schools.schools || []).some(s => s.slug === 'dps-rkp'), JSON.stringify((schools.schools || []).map(s => s.slug)));
+check(demoOn ? 'only the demo school and your own school are listed' : 'no demo school is listed',
+  demoOn ? (schools.schools || []).every(s => s.slug !== 'dps-rkp') : !(schools.schools || []).some(s => /demo|dps/.test(s.slug)), JSON.stringify((schools.schools || []).map(s => s.slug)));
 
 // 2b. Forged-request guard: a plain-text body or a request from another site is refused.
 const forged = await get('/api/auth/logout', { method: 'POST', headers: { 'content-type': 'text/plain' }, body: '{}' });

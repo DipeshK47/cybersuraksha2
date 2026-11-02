@@ -23,6 +23,7 @@ function walk(dir) {
     const file = path.join(dir,entry.name);
     if (entry.isDirectory()) { if (entry.name !== 'i18n') walk(file); continue; }
     if (file.endsWith('/handbook-hi.json')) continue;
+    if (file.endsWith('/demo-account.json')) continue; // password hashes, not learner-facing copy
     if (file.endsWith('.json')) {
       function strings(value) {
         if (typeof value === 'string') add(value,file);

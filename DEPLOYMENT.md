@@ -23,17 +23,26 @@ Credentials: either run `npx wrangler login` on your machine, or export `CLOUDFL
    npx wrangler secret put CYBERSURAKSHA_ADMIN_EMAIL
    npx wrangler secret put CYBERSURAKSHA_ADMIN_PASSWORD
    ```
-   Do **not** set `CYBERSURAKSHA_DEMO_SEED`. Leave `GROQ_API_KEY` unset for now (the chatbot then answers from the local handbook and costs nothing).
+   To show the product to prospective schools, also add the public demo login (see *About the public demo login* below): `npx wrangler secret put CYBERSURAKSHA_DEMO_TEACHER` with the value `1`.
+   Do **not** set `CYBERSURAKSHA_DEMO_SEED`: it is the development demo, and it creates a demo *admin* with a public password. Leave `GROQ_API_KEY` unset for now (the chatbot then answers from the local handbook and costs nothing).
 5. **Smoke test** (this creates the database tables and the admin on first request):
    ```bash
    SMOKE_ADMIN_EMAIL=<admin email> SMOKE_ADMIN_PASSWORD='<admin password>' node scripts/smoke-test.mjs https://cybersuraksha.<your-subdomain>.workers.dev
    ```
-   All checks must pass. Then open a lesson in a browser and confirm the narration plays.
+   All checks must pass (add `SMOKE_DEMO=1` when the demo login is enabled, so the test expects it to work). Then open a lesson in a browser and confirm the narration plays.
 6. **Remove the bootstrap password**: `npx wrangler secret delete CYBERSURAKSHA_ADMIN_PASSWORD`. It is only needed once.
 7. **Custom domain**: Cloudflare dashboard, Workers & Pages, `cybersuraksha`, Settings, Domains & Routes, Add, Custom domain. The domain must be on Cloudflare. Re-run the smoke test against it (it also checks HSTS and the Secure cookie flag).
 8. **Rate limit logins**: dashboard, Security, WAF, Rate limiting rules: match URI path starts with `/api/auth/`, about 10 requests per minute per IP, block for 10 minutes. The in-app limiter is only per instance.
 9. **Check the real CPU cost**: dashboard, Workers & Pages, `cybersuraksha`, Metrics. Log in a few times and open lessons; look for CPU-limit errors (code 1102).
 10. **Before every later deploy**: `npx wrangler d1 export cybersuraksha --remote --output backup-$(date +%F).sql`. D1 also keeps point-in-time recovery (Time Travel). To undo a bad deploy: `npx wrangler rollback`.
+
+**About the public demo login.** `CYBERSURAKSHA_DEMO_TEACHER=1` creates a deliberately public account so people can try the product. What it can and cannot do:
+- It is a plain teacher in its own "CyberShiksha Demo School", assigned to two demo classes. School and class scoping (verified by the security audit) keep it away from real schools' data. It has no admin console and cannot invite anyone.
+- The sample students have no usable login, so only the teacher side can be demonstrated.
+- Anyone who knows the password can use every teacher feature in the demo school, including creating assignments and adding students. Never put real children's data in it, and expect a little clutter. To reset it, delete the demo school's rows (or the whole demo school) in D1 and the next request re-creates the sample data.
+- The demo teacher also unlocks all lesson content to anyone who has the password, so treat the credentials as public.
+- To change the password after it exists: delete the `teacher@dpsrkp.edu.in` row from `teachers` (`npx wrangler d1 execute cybersuraksha --remote --command "DELETE FROM teachers WHERE email='teacher@dpsrkp.edu.in'"`), set `CYBERSURAKSHA_DEMO_TEACHER_PASSWORD`, and make one request.
+- To turn the demo off: delete the secret `CYBERSURAKSHA_DEMO_TEACHER` and, if you want the account gone, delete that row. Existing accounts are not removed automatically.
 
 **Free plan or Paid?** Try Free first. Move to Workers Paid (about $5/month) if any request fails with a CPU-limit error (1102), if a deploy is refused as too large (the bundle is only about 60 KiB under 3 MiB), or before students log in. Students also require the work listed under *Planned security work* below.
 
@@ -107,6 +116,8 @@ Never commit secrets. Set them per environment.
 | `CYBERSURAKSHA_ADMIN_EMAIL` / `CYBERSURAKSHA_ADMIN_PASSWORD` | Provisions the first `school_admin` on an empty production database. | Recommended |
 | `CYBERSURAKSHA_ADMIN_NAME` / `CYBERSURAKSHA_SCHOOL_NAME` | Display name and school for that account. | Optional |
 | `CYBERSURAKSHA_PBKDF2_ITERATIONS` | Password-hashing work factor, 1,000-100,000. Defaults to **10,000** so a login fits the Workers Free plan's 10 ms CPU limit. Raise it (for example 100,000) on the Workers Paid plan; existing hashes upgrade on each user's next login. | Optional |
+| `CYBERSURAKSHA_DEMO_TEACHER` | Set to `1` to add a **public demo login**: a separate "CyberShiksha Demo School" with a plain teacher (`teacher@dpsrkp.edu.in`, password `Teacher@123`), two demo classes and sample students nobody can sign in as. It never creates a demo admin. | Optional (for showcasing) |
+| `CYBERSURAKSHA_DEMO_TEACHER_PASSWORD` | Different password for the demo teacher. Only read when the demo teacher is first created. | Optional |
 | `CYBERSURAKSHA_DEMO_SEED` | Set to `1` to force demo seeding in a production build. Leave unset. | Never in production |
 
 ```bash

@@ -3,6 +3,7 @@ import { getDb, inChunks } from ".";
 import { ensureMigrated } from "./migrate";
 import { classes, runs, schools, students, teacherClasses, teachers } from "./schema";
 import { hashPassword } from "../app/lib/password";
+import { DEMO_TEACHER_PASSWORD_HASH, UNUSABLE_STUDENT_HASH } from "../app/lib/demo-account";
 
 /**
  * Database bootstrap for an empty database. Two mutually exclusive paths:
@@ -37,6 +38,18 @@ const DEMO_TEACHER = {
   password: "Teacher@123",
   role: "teacher" as const,
 };
+
+// Production demo (CYBERSURAKSHA_DEMO_TEACHER=1): a separate demo school with ONLY a plain
+// teacher login (no demo admin) and sample students nobody can sign in as. Safe to run
+// next to real schools: school/class scoping keeps its data apart.
+const SAFE_DEMO_SCHOOL = {
+  name: "CyberShiksha Demo School",
+  slug: "cybershiksha-demo",
+};
+
+function demoTeacherEnabled(): boolean {
+  return process.env.CYBERSURAKSHA_DEMO_TEACHER === "1";
+}
 
 function demoSeedAllowed(): boolean {
   if (process.env.CYBERSURAKSHA_DEMO_SEED === "1") return true;
@@ -122,9 +135,10 @@ async function seedAcademy(): Promise<void> {
   await ensureMigrated();
 
   const realAdmin = realAdminFromEnv();
-  if (realAdmin) return seedRealAdmin(realAdmin);
-  if (!demoSeedAllowed()) return;
-  await seedDemoAcademy();
+  if (realAdmin) await seedRealAdmin(realAdmin);
+  else if (demoSeedAllowed()) return seedDemoAcademy(false);
+  // The opt-in production demo login; it never creates a demo admin.
+  if (demoTeacherEnabled()) await seedDemoAcademy(true);
 }
 
 /**
@@ -169,23 +183,35 @@ async function seedRealAdmin(admin: {
   });
 }
 
-async function seedDemoAcademy(): Promise<void> {
+/**
+ * Password hash for a demo account. The safe production demo uses the precomputed
+ * hash of the public demo password (no hashing CPU on the first request), unless
+ * CYBERSURAKSHA_DEMO_TEACHER_PASSWORD asks for a different one.
+ */
+async function demoAccountHash(account: { password: string }, safe: boolean): Promise<string> {
+  if (!safe) return hashPassword(account.password);
+  const custom = process.env.CYBERSURAKSHA_DEMO_TEACHER_PASSWORD;
+  return custom ? hashPassword(custom) : DEMO_TEACHER_PASSWORD_HASH;
+}
+
+async function seedDemoAcademy(safe: boolean): Promise<void> {
   const db = getDb();
+  const demoSchool = safe ? SAFE_DEMO_SCHOOL : DEMO_SCHOOL;
 
   // 1. School
   let [school] = await db
     .select()
     .from(schools)
-    .where(eq(schools.slug, DEMO_SCHOOL.slug))
+    .where(eq(schools.slug, demoSchool.slug))
     .limit(1);
   if (!school) {
-    [school] = await db.insert(schools).values(DEMO_SCHOOL).returning();
+    [school] = await db.insert(schools).values(demoSchool).returning();
   }
 
   // 2. School-admin and plain teacher. A database seeded before the split has the
   //    teacher login as school_admin, so the role is corrected on every run.
   const teacherIdByEmail = new Map<string, number>();
-  for (const account of [DEMO_ADMIN, DEMO_TEACHER]) {
+  for (const account of safe ? [DEMO_TEACHER] : [DEMO_ADMIN, DEMO_TEACHER]) {
     let [row] = await db
       .select({ id: teachers.id, role: teachers.role })
       .from(teachers)
@@ -196,7 +222,7 @@ async function seedDemoAcademy(): Promise<void> {
         schoolId: school.id,
         name: account.name,
         email: account.email,
-        passwordHash: await hashPassword(account.password),
+        passwordHash: await demoAccountHash(account, safe),
         role: account.role,
         status: "active",
         emailVerifiedAt: new Date().toISOString(),
@@ -243,7 +269,7 @@ async function seedDemoAcademy(): Promise<void> {
         className: student.className,
         rollNo: student.rollNo,
         name: student.name,
-        passwordHash: await hashPassword(student.accessCode),
+        passwordHash: safe ? UNUSABLE_STUDENT_HASH : await hashPassword(student.accessCode),
       })),
     );
     await db.insert(students).values(rows).onConflictDoNothing();

@@ -476,5 +476,6 @@
   "Dr. A.P.J. Abdul Kalam": "डॉ. ए.पी.जे. अब्दुल कलाम",
   "Learning gives creativity, creativity leads to thinking, thinking provides knowledge, knowledge makes you great.": "सीखने से रचनात्मकता आती है, रचनात्मकता से सोच आती है, सोच से ज्ञान मिलता है और ज्ञान आपको महान बनाता है।",
   "Cross-site requests are not allowed.": "दूसरी वेबसाइट से भेजे गए अनुरोध की अनुमति नहीं है।",
-  "Send JSON with Content-Type: application/json.": "JSON भेजें और Content-Type: application/json रखें।"
+  "Send JSON with Content-Type: application/json.": "JSON भेजें और Content-Type: application/json रखें।",
+  "CyberShiksha Demo School": "CyberShiksha डेमो स्कूल"
 }
