@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Check, FlaskConical, RotateCcw } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Check, FlaskConical, RotateCcw, Plus } from "lucide-react";
 import type { Class8Task, TaskAnswer } from "../../../../data/class8/types";
 import { buildTaskEvidence } from "./task-evidence";
 import { simulateRoute, testModel, testPermissions } from "./task-evaluation";
@@ -45,7 +45,20 @@ export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disab
   return <div className={s.task} data-task-kind={task.kind} translate="no">
     <div className={s.case}><span>{ui.source[evidenceLanguage]}</span><p>{task.context[evidenceLanguage]}</p></div>
     {task.kind === "choice" && <div className={s.choices}>{task.options.map(option => <button type="button" className={s.choice} aria-pressed={answer === option.id} disabled={disabled} key={option.id} onClick={() => onChange(option.id)}>{option.label[evidenceLanguage]}</button>)}</div>}
-    {task.kind === "select" && <div className={task.presentation === "redact" ? s.redaction : s.choices}>{task.items.map(item => <label className={s.selection} key={item.id}><input type="checkbox" disabled={disabled} checked={selected.includes(item.id)} onChange={() => toggle(item.id)} /><span>{item.label[evidenceLanguage]}{task.presentation === "redact" && <small>{selected.includes(item.id) ? ui.hidden[evidenceLanguage] : ui.visible[evidenceLanguage]}</small>}</span></label>)}</div>}
+    {task.kind === "select" && <>
+      <div className={s.tileBank} aria-label={evidenceLanguage === "hi" ? "जवाब बनाने के लिए कार्ड चुनें" : "Choose cards to build your answer"}>
+        {task.items.map(item => <label className={s.selection} key={item.id} data-selected={selected.includes(item.id)}>
+          <input type="checkbox" disabled={disabled} checked={selected.includes(item.id)} onChange={() => toggle(item.id)} />
+          <span>{item.label[evidenceLanguage]}</span><span className={s.tileMark} aria-hidden="true">{selected.includes(item.id) ? <Check /> : <Plus />}</span>
+        </label>)}
+      </div>
+      <figure className={task.presentation === "redact" ? s.redaction : s.answerTray} data-answer-workspace>
+        <figcaption>{evidenceLanguage === "hi" ? task.presentation === "redact" ? "आपका बदला हुआ ड्राफ़्ट" : "आपने ये कार्ड चुने" : task.presentation === "redact" ? "Your edited draft" : "Your chosen cards"}</figcaption>
+        {task.presentation === "redact"
+          ? task.items.map(item => <span key={item.id} className={s.draftLine} data-covered={selected.includes(item.id)}>{selected.includes(item.id) ? <><span className={s.coveredText} aria-hidden="true">{item.label[evidenceLanguage]}</span><small>{ui.hidden[evidenceLanguage]}</small></> : item.label[evidenceLanguage]}</span>)
+          : selected.length ? <ul>{selected.map(id => <li key={id}>{task.items.find(item => item.id === id)?.label[evidenceLanguage]}</li>)}</ul> : <p>{evidenceLanguage === "hi" ? "कार्ड चुनकर यहाँ रखें। हटाने के लिए उसी कार्ड को फिर चुनें।" : "Choose a card to place it here. Choose it again to take it back."}</p>}
+      </figure>
+    </>}
     {task.kind === "match" && <div className={s.matches} data-presentation={task.presentation}>{task.rows.map(row => <label className={s.match} key={row.id}><span>{row.label[evidenceLanguage]}</span><select value={values[row.id] ?? ""} disabled={disabled} onChange={event => onChange({ ...values, [row.id]: event.target.value })}><option value="">{ui.choose[evidenceLanguage]}</option>{task.options.map(option => <option value={option.id} key={option.id}>{option.label[evidenceLanguage]}</option>)}</select></label>)}</div>}
     {task.kind === "order" && <div className={s.sequence}><ol aria-label={ui.plan[evidenceLanguage]}>{task.expected.map((_, index) => <li key={index}><b>{index + 1}</b><span>{task.items.find(item => item.id === selected[index])?.label[evidenceLanguage] ?? "…"}</span></li>)}</ol><div className={s.choices}>{[...task.items].reverse().map(item => <button type="button" className={s.choice} key={item.id} disabled={disabled || selected.includes(item.id)} onClick={() => onChange([...selected, item.id])}>{item.label[evidenceLanguage]}</button>)}</div><button className={s.secondary} type="button" disabled={disabled || !selected.length} onClick={() => onChange(selected.slice(0, -1))}><RotateCcw aria-hidden="true" />{ui.undo[evidenceLanguage]}</button></div>}
     {task.kind === "number" && <div className={s.matches}>{task.fields.map(field => <label className={s.match} key={field.id}><span>{field.label[evidenceLanguage]}</span><input type="number" inputMode="decimal" step="any" value={values[field.id] ?? ""} min={field.min} max={field.max} disabled={disabled} onChange={event => onChange({ ...values, [field.id]: event.target.value })} /></label>)}</div>}

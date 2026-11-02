@@ -61,7 +61,7 @@ test('story player provides a memoized audio clock and captures exact pause time
  const types=readFileSync(root+'app/module/cyber/lessons/new/story/types.ts','utf8');
  assert.match(types,/export type StoryMediaClock/); assert.match(types,/media\?: StoryMediaClock/);
  assert.match(player,/if \(!audio.current \|\| audioUnavailable \|\| audio.current.readyState === 0\) return/);
- assert.match(player,/useMemo/); assert.match(player,/readElapsed/); assert.match(player,/media=\{media\}/); assert.match(player,/onPause=\{[^}]*trackAudio\(\)/);
+ assert.match(player,/useMemo/); assert.match(player,/readElapsed/); assert.match(player,/media=\{audioUnavailable \? undefined : media\}/); assert.match(player,/onPause=\{[^}]*trackAudio\(\)/);
 });
 
 const clockBundle = await build({stdin:{contents:`export { createStoryMediaClock } from './app/module/cyber/lessons/new/story/StoryPlayer';`,resolveDir:root,loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty','.module.css':'empty'},logLevel:'silent'});
@@ -89,7 +89,7 @@ const boardBundle=await build({stdin:{contents:`export { TaskBoard } from './app
  builder.onResolve({filter:/^(react|react\/jsx-runtime|test-hooks)$/},()=>({path:'hooks',namespace:'fixture'}));
  builder.onLoad({filter:/.*/,namespace:'fixture'},()=>({contents:hooks,loader:'js'}));
  builder.onResolve({filter:/^lucide-react$/},()=>({path:'icons',namespace:'icons'}));
- builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon";',loader:'js'}));
+ builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon",Plus="icon";',loader:'js'}));
  builder.onLoad({filter:/class8\/ui.ts$/},args=>({contents:readFileSync(args.path,'utf8').split('export function useEvidenceLanguage')[0]+'export function useEvidenceLanguage(){return "en";}',loader:'ts'}));
 }}]});
 const boardApi=await loadSource(boardBundle.outputFiles[0].text);
@@ -109,6 +109,21 @@ test('TaskBoard exports only the current test and invalidates edits, configurati
  button('Run the test').props.onClick();render();task={...task,maxCost:1};render();assert.equal(reports.at(-1),null);assert.equal(button('Check my evidence').props.disabled,true);
  button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');boardApi.unmount();assert.equal(reports.at(-1),null);
  render();assert.equal(button('Check my evidence').props.disabled,true);boardApi.unmount();
+});
+
+test('selection cards build a reversible answer and redaction shows the edited draft',()=>{
+ const task={...base,kind:'select',presentation:'redact',items:['address','title'].map(id=>({id,label:l(id),feedback:l('Review this detail')})),expected:['address']};
+ let answer=[],tree;
+ const render=()=>{for(let i=0;i<10;i++){boardApi.begin();tree=boardApi.TaskBoard({task,answer,onChange:value=>{answer=value;},onCheck:()=>{}});if(!boardApi.flush())return;}assert.fail('render loop');};
+ render();
+ assert.ok(elements(tree).some(node=>node.props?.['data-answer-workspace']));
+ elements(tree).find(node=>node.type==='input').props.onChange();render();
+ assert.deepEqual(answer,['address']);
+ assert.equal(elements(tree).filter(node=>node.props?.['data-covered']===true).length,1);
+ elements(tree).find(node=>node.type==='input').props.onChange();render();
+ assert.deepEqual(answer,[]);
+ assert.equal(elements(tree).filter(node=>node.props?.['data-covered']===true).length,0);
+ boardApi.unmount();
 });
 
 // Exercise StoryPlayer's real navigation and native-event handlers with the

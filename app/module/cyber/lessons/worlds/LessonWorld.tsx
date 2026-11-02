@@ -1,12 +1,13 @@
 "use client";
 
-import { AlertTriangle, Check, ChevronDown, Info, X } from "lucide-react";
-import { Fragment, createContext, createElement, useContext, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { AlertTriangle, Check, Info, X } from "lucide-react";
+import { Fragment, createContext, createElement, useCallback, useContext, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import type { StoryMediaClock } from "../new/story/types";
 import type { Artifact, Chart, Chat, Crowd, Doc, Flow, Grid, Ledger, Screen, Seq, Switches, Table, Time, Tone, World } from "../../../../data/worlds/types.ts";
 import { useEvidenceLanguage } from "../class8/ui";
 import { diffStage, splitNote } from "./diff";
 import { ICONS } from "./icons";
-import { pick, resolveStage } from "./resolve";
+import { pick, resolveStage, sceneCues } from "./resolve";
 import w from "./worlds.module.css";
 
 type Lang = "en" | "hi";
@@ -17,16 +18,14 @@ function Ico({ name, size = 16 }: { name?: string; size?: number }) {
   return createElement(ICONS[name], { size, "aria-hidden": true });
 }
 
-/** Which parts of the stage changed in this moment, and when each should appear. */
-type Fx = { order: Map<string, number>; step: number; parity: 0 | 1; after: number };
-const FxContext = createContext<Fx>({ order: new Map(), step: 0, parity: 0, after: 0 });
+/** Which parts of the current audio cue changed. */
+type Fx = { changed: Set<string>; parity: 0 | 1 };
+const FxContext = createContext<Fx>({ changed: new Set(), parity: 0 });
 type FxProps = { "data-changed"?: number; style?: CSSProperties };
 function useFx() {
   const fx = useContext(FxContext);
   return (key: string, extra?: CSSProperties): FxProps => {
-    const i = fx.order.get(key);
-    if (i === undefined) return extra ? { style: extra } : {};
-    return { "data-changed": fx.parity, style: { ...extra, ["--d" as string]: `${(i * fx.step).toFixed(2)}s` } };
+    return { ...(fx.changed.has(key) ? { "data-changed": fx.parity } : {}), ...(extra ? { style: extra } : {}) };
   };
 }
 
@@ -132,19 +131,20 @@ function SwitchArt({ a, lang }: { a: Switches; lang: Lang }) {
 /* ---------- Flow ---------- */
 function FlowArt({ a, lang }: { a: Flow; lang: Lang }) {
   const fx = useFx();
-  const at = (id: string) => a.nodes.find(n => n.id === id);
+  const shown = a.nodes.slice(0, a.upTo ?? a.nodes.length);
+  const at = (id: string) => shown.find(n => n.id === id);
   const cur = a.cur ? at(a.cur) : undefined;
   // Nodes sit inside an inner box so a label never hangs outside the object.
   const px = (x: number) => 16 + x * 0.68, py = (y: number) => 12 + y * 0.76;
-  return <div className={`${w.flow} ${w[`flow_${a.look ?? "graph"}`] ?? ""}`}>
+  return <div className={w.diagramViewport} data-flow-viewport tabIndex={0} role="region" aria-label={pick(a.title, lang) || (lang === "hi" ? "कहानी का डायग्राम" : "Story diagram")}><div className={`${w.flow} ${w[`flow_${a.look ?? "graph"}`] ?? ""}`}>
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
       {a.links.map(l => { const f = at(l.from), t = at(l.to); if (!f || !t) return null; const key = `${l.from}>${l.to}`; return <line key={key} x1={px(f.x)} y1={py(f.y)} x2={px(t.x)} y2={py(t.y)} data-link={a.link?.[key] ?? "on"} vectorEffect="non-scaling-stroke" {...fx(`${a.id}:${key}`)} />; })}
     </svg>
     {a.links.map(l => { const f = at(l.from), t = at(l.to); return l.t && f && t ? <span key={`${l.from}>${l.to}t`} className={w.linkLabel} style={{ left: `${(px(f.x) + px(t.x)) / 2}%`, top: `${(py(f.y) + py(t.y)) / 2}%` }}>{pick(l.t, lang)}</span> : null; })}
-    {a.nodes.map(n => <div key={n.id} className={w.node} data-state={a.state?.[n.id] ?? "plain"} {...fx(`${a.id}:${n.id}`, { left: `${px(n.x)}%`, top: `${py(n.y)}%` })}>
+    {shown.map(n => <div key={n.id} className={w.node} data-state={a.state?.[n.id] ?? "plain"} {...fx(`${a.id}:${n.id}`, { left: `${px(n.x)}%`, top: `${py(n.y)}%` })}>
       <span className={w.nodeIcon}><Ico name={n.icon} size={18} /></span><b>{pick(n.t, lang)}</b>{n.sub && <small>{n.sub}</small>}</div>)}
     {cur && <span className={w.cursor} style={{ left: `${px(cur.x)}%`, top: `${py(cur.y)}%` }} aria-hidden="true" />}
-  </div>;
+  </div></div>;
 }
 
 /* ---------- Table ---------- */
@@ -255,17 +255,14 @@ function SeqArt({ a, lang }: { a: Seq; lang: Lang }) {
 /* ---------- Callout: a short headline, then the detail ---------- */
 const NOTE_ICON: Record<string, ReactNode> = { ok: <Check size={16} />, risk: <AlertTriangle size={16} />, warn: <AlertTriangle size={16} />, info: <Info size={16} /> };
 function Note({ text, tone }: { text: string; tone?: Tone }) {
-  const fx = useContext(FxContext);
   const [head, rest] = splitNote(text);
-  return <p key={text} className={`${w.note}${toneClass(tone)}`} style={{ ["--d" as string]: `${fx.after.toFixed(2)}s` }}>
+  return <p key={text} className={`${w.note}${toneClass(tone)}`}>
     <span className={w.noteIcon} aria-hidden="true">{NOTE_ICON[tone ?? "info"] ?? NOTE_ICON.info}</span>
     <span className={w.noteBody}><strong>{head}</strong>{rest && <span>{rest}</span>}</span>
   </p>;
 }
 
-const titleOf = (a: Artifact, lang: Lang): string => pick(a.k === "chat" ? a.who : a.title ?? (a.k === "doc" ? undefined : undefined), lang) || pick(a.title, lang) || a.id;
-
-function Artifact({ a, lang, collapsed, onOpen, showNote }: { a: Artifact; lang: Lang; collapsed: boolean; onOpen: () => void; showNote: boolean }) {
+function Artifact({ a, lang, showNote }: { a: Artifact; lang: Lang; showNote: boolean }) {
   const fx = useFx();
   let body: ReactNode;
   switch (a.k) {
@@ -284,22 +281,14 @@ function Artifact({ a, lang, collapsed, onOpen, showNote }: { a: Artifact; lang:
   }
   const own = a.k === "doc" || a.k === "chat" || a.k === "screen";
   const [head] = a.note ? splitNote(pick(a.note, lang)) : [""];
-  return <figure className={w.art} data-k={a.k} data-focus={a.focus ?? false} data-collapsed={collapsed} {...fx(a.id)}>
-    {collapsed && <button type="button" className={w.artBar} aria-expanded="false" onClick={onOpen}><Ico name={a.icon ?? (a.k === "chat" ? "chat" : a.k === "screen" ? "devices" : "doc")} size={16} /><span>{titleOf(a, lang)}</span><ChevronDown size={16} aria-hidden="true" /></button>}
-    <div className={w.artBody} inert={collapsed || undefined}>
+  return <figure className={w.art} data-k={a.k} data-focus={a.focus ?? false} {...fx(a.id)}>
       <div className={w.artInner}>
         {a.title && !own && <figcaption><Ico name={a.icon} size={16} />{pick(a.title, lang)}</figcaption>}
         {body}
         {showNote && head && <p className={`${w.noteMini}${toneClass(a.noteTone)}`}><span aria-hidden="true">{NOTE_ICON[a.noteTone ?? "info"] ?? NOTE_ICON.info}</span>{head}</p>}
       </div>
-    </div>
   </figure>;
 }
-
-const KEY: Record<Lang, [string, string, string, string]> = {
-  en: ["Look here", "Problem", "Safe", "Decision made"],
-  hi: ["यहाँ देखें", "समस्या", "सुरक्षित", "फ़ैसला हो गया"],
-};
 
 export type StageProps = {
   world: World; scene: number; preview?: string | null; strand: string; solved: boolean;
@@ -307,55 +296,80 @@ export type StageProps = {
   playing?: boolean;
   /** Length of this scene's narration in seconds. */
   duration?: number;
+  media?: StoryMediaClock;
+  reduced?: boolean;
+  elapsed?: number;
 };
 
 /** The lesson's live scene. */
-export function LessonStage({ world, scene, preview, strand, solved, playing = false, duration = 12 }: StageProps) {
+export function LessonStage({ world, scene, preview, strand, solved, playing = false, duration = 12, media, reduced = false, elapsed = 0 }: StageProps) {
   const lang = useEvidenceLanguage();
-  const signature = `${scene}|${preview ?? ""}`;
+  const stage = useRef<HTMLDivElement>(null);
+  const count = useMemo(() => sceneCues(world, scene).length, [world, scene]);
+  const length = media?.duration ?? duration;
+  // shortcut: cues follow authored step order within measured scenes; use word timestamps for exact phrase alignment.
+  const cueAt = useCallback((elapsed: number) => Math.min(count, 1 + Math.floor(Math.max(0, elapsed) / Math.max(0.01, length * 0.7) * Math.max(1, count - 1))), [count, length]);
+  const [clock, setClock] = useState({ media, cue: count });
+  const cue = preview || reduced || !media ? count : clock.media === media ? clock.cue : playing ? cueAt(media.readElapsed()) : count;
+  const signature = `${scene}|${preview ?? ""}|${cue}`;
   const [seen, setSeen] = useState(signature);
   const [parity, setParity] = useState<0 | 1>(0);
   // A new scene or option flips the parity so the "this just changed" rings restart.
   if (seen !== signature) { setSeen(signature); setParity(parity === 0 ? 1 : 0); }
 
-  const art = useMemo(() => resolveStage(world, scene, preview), [world, scene, preview]);
+  const art = useMemo(() => resolveStage(world, scene, preview, cue), [world, scene, preview, cue]);
   const before = useMemo(() => {
     if (preview) return resolveStage(world, scene, null);
+    if (cue > 1 && media && !reduced) return resolveStage(world, scene, null, cue - 1);
     return scene > 0 ? resolveStage(world, scene - 1, null) : world.art.map(item => ({ ...item, hide: true }));
-  }, [world, scene, preview]);
+  }, [world, scene, preview, cue, media, reduced]);
   const keys = useMemo(() => diffStage(before, art), [before, art]);
-  // While the narration plays the changes appear one after another across the scene; otherwise quickly.
-  const step = keys.length ? Math.min(playing ? 1.5 : 0.16, Math.max(playing ? 0.3 : 0.12, (playing ? duration * 0.7 : 2.6) / keys.length)) : 0;
-  const fx = useMemo<Fx>(() => ({ order: new Map(keys.map((k, i) => [k, i])), step, parity, after: Math.min(6, keys.length * step + 0.15) }), [keys, step, parity]);
+  const fx = useMemo<Fx>(() => ({ changed: new Set(keys), parity }), [keys, parity]);
+
+  useLayoutEffect(() => {
+    if (!playing) return;
+    for (const viewport of stage.current?.querySelectorAll<HTMLElement>("[data-flow-viewport]") ?? []) {
+      const active = viewport.querySelector<HTMLElement>('[data-state="now"], [data-state="lit"]') ?? viewport.querySelector<HTMLElement>('[data-state="risk"], [data-state="bad"]');
+      if (active && viewport.scrollWidth > viewport.clientWidth) viewport.scrollTo({ left: active.offsetLeft - viewport.clientWidth / 2, behavior: reduced ? "instant" : "smooth" });
+    }
+  }, [signature, playing, reduced]);
+
+  useLayoutEffect(() => {
+    if (!stage.current || !media || reduced) return;
+    if (preview) {
+      stage.current.getAnimations({ subtree: true }).forEach(animation => animation.play());
+      return;
+    }
+    let frame = 0;
+    const sync = () => {
+      const elapsed = media.readElapsed();
+      const next = !playing && elapsed <= 0.001 ? count : cueAt(elapsed);
+      setClock(previous => previous.media === media && previous.cue === next ? previous : { media, cue: next });
+      // Before playback, show a readable still. During playback every effect follows audio time.
+      const cueStart = (next - 1) / Math.max(1, count - 1) * length * 0.7;
+      const time = Math.max(0, elapsed - cueStart) * 1000;
+      for (const animation of stage.current?.getAnimations({ subtree: true }) ?? []) {
+        animation.pause();
+        const end = animation.effect?.getComputedTiming().endTime;
+        // Pausing must leave newly introduced text readable, even at an entry animation's first frame.
+        animation.currentTime = !playing && typeof end === "number" && Number.isFinite(end) ? end : time;
+      }
+      if (playing) frame = requestAnimationFrame(sync);
+    };
+    sync();
+    return () => cancelAnimationFrame(frame);
+  }, [media, playing, reduced, preview, signature, lang, count, length, cueAt, elapsed]);
 
   const visible = art.filter(a => !a.hide);
   const slots = (["a", "b", "c"] as const).map(slot => visible.filter(a => (a.at ?? "a") === slot));
-  const key = KEY[lang];
   const touched = (a: Artifact) => keys.some(k => k === a.id || k.startsWith(`${a.id}:`));
-  // Focus: once a scene has changes, parts that did not change fold down to a title bar (tap to open).
-  // The first scene and the open decision always show everything.
-  const focusMode = keys.length > 0 && visible.length >= 2 && scene > 0 && !(scene === 3 && !preview);
-  const [opened, setOpened] = useState<{ sig: string; ids: string[] }>({ sig: signature, ids: [] });
-  const openIds = opened.sig === signature ? opened.ids : [];
-  const isFolded = (a: Artifact) => focusMode && !touched(a) && !openIds.includes(a.id);
-  const foldedArts = visible.filter(isFolded), openArts = visible.filter(a => !isFolded(a));
   // One callout at a time: the note of the part that changed first, else the first note.
   const withNote = visible.filter(a => a.note);
   const primary = withNote.find(touched) ?? withNote[0];
-  const hasMarks = visible.some(a => ["mark", "state", "link", "cell"].some(k => { const v = (a as unknown as Record<string, unknown>)[k]; return v && typeof v === "object" && Object.keys(v as object).length > 0; }));
   const callout = primary?.note ? <Note text={pick(primary.note, lang)} tone={primary.noteTone} /> : null;
-  return <div className={w.stage} data-world={world.slug} data-scene={world.scene} data-layout={world.layout ?? "one"} data-count={slots.filter(items => items.length > 0).length} data-strand={strand} data-solved={solved} data-step={scene} translate="no" role="group" aria-label={pick(world.label, lang)}>
-    <div className={w.stageBar}>
-      <span className={w.stageLabel}>{pick(world.label, lang)}</span>
-      {hasMarks && <span className={w.legend} aria-hidden="true"><i data-k="hl" />{key[0]}<i data-k="risk" />{key[1]}<i data-k="ok" />{key[2]}</span>}
-    </div>
-    <div className={w.backdrop} aria-hidden="true"><i /><i /><i /></div>
-    {solved && scene >= 4 && <span className={w.solvedChip}><Check size={14} aria-hidden="true" />{key[3]}</span>}
+  return <div ref={stage} className={w.stage} data-world={world.slug} data-scene={world.scene} data-layout={world.layout ?? "one"} data-count={slots.filter(items => items.length > 0).length} data-strand={strand} data-solved={solved} data-step={scene} data-cue={cue} translate="no" role="group" aria-label={pick(world.label, lang)}>
     <FxContext.Provider value={fx}>
-      {focusMode ? <>
-        {foldedArts.length > 0 && <div className={w.folded}>{foldedArts.map(a => <Artifact key={a.id} a={a} lang={lang} collapsed onOpen={() => setOpened({ sig: signature, ids: [...openIds, a.id] })} showNote={false} />)}</div>}
-        <div className={w.slots} data-open={openArts.length}>{openArts.map(a => <div key={a.id} className={w.slot}><Artifact a={a} lang={lang} collapsed={false} onOpen={() => undefined} showNote={a !== primary} /></div>)}</div>
-      </> : <div className={w.slots}>{slots.map((items, i) => items.length > 0 && <div key={i} className={w.slot} data-slot={"abc"[i]}>{items.map(a => <Artifact key={a.id} a={a} lang={lang} collapsed={false} onOpen={() => undefined} showNote={a !== primary} />)}</div>)}</div>}
+      <div className={w.slots}>{slots.map((items, i) => items.length > 0 && <div key={i} className={w.slot} data-slot={"abc"[i]}>{items.map(a => <Artifact key={a.id} a={a} lang={lang} showNote={a !== primary} />)}</div>)}</div>
       {callout}
     </FxContext.Provider>
   </div>;

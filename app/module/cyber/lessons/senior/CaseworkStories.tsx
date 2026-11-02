@@ -6,7 +6,6 @@ import { SceneSwap } from '../new/story/StoryPlayer';
 import type { StoryChapter, StoryScript, StoryWorldProps } from '../new/story/types';
 import { CLASS12_FRAUD_SLUGS } from '../../../../data/class-12-missions';
 import * as c from './casework-content';
-import { caseworkArtwork } from './casework-art';
 import k from '../new/story/story-player.module.css';
 import v from './security.module.css';
 import a from './ai.module.css';
@@ -33,17 +32,13 @@ export function CaseworkArtifact({ index, revised = false }: { index: number; re
   ];
   return <div className={v.artifact}><div className={v.appBar}><FolderSearch aria-hidden="true" /><strong>{headings[index]} · fictional case</strong></div>{packs[index].map(([label, value]) => <div className={v.artifactRow} key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>;
 }
-function CaseworkWorld({ index, script, scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { index: number; script: StoryScript }) {
+function CaseworkWorld({ index, script, scene, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { index: number; script: StoryScript }) {
   const [selected, setSelected] = useState<number | null>(null);
   const task = c.caseworkStoryTasks[index];
-  const artwork = caseworkArtwork[CLASS12_FRAUD_SLUGS[index]];
   return <SceneSwap scene={scene} reduced={reduced}><div className={v.storyBoard}>
     <div className={v.appBar}><FolderSearch aria-hidden="true" /><strong>Cyberpur · Class 12 private casework desk</strong></div>
     <h2 style={{ marginTop: 18 }}>{script.scenes[scene].title}</h2>
-    {scene === 0 ? <figure className={v.sceneIllustration}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" /><figcaption>{artwork.caption}</figcaption>
-    </figure> : scene === 2 || scene === 5 ? <div className={v.storyFacts}>{task.concepts.map((concept, item) => <div className={v.storyFact} data-active={!playing || elapsed >= item * 3} key={concept}><Check aria-hidden="true" /><span>{concept}</span></div>)}</div> : <CaseworkArtifact index={index} revised={scene >= 4} />}
+    {scene === 2 || scene === 5 ? <div className={v.storyFacts}>{task.concepts.map((concept, item) => <div className={v.storyFact} data-active={reduced || elapsed >= item * 3} key={concept}><Check aria-hidden="true" /><span>{concept}</span></div>)}</div> : <CaseworkArtifact index={index} revised={scene >= 4} />}
     {scene === 3 && !solved && <div className={v.board}><p className={a.storyQuestion}><strong>{task.question}</strong></p><div className={v.actionBank}>{task.choices.map((choice, item) => <button className={k.primary} type="button" aria-pressed={selected === item} key={choice} onClick={() => { setSelected(item); setHint(''); }}>{choice}</button>)}</div><button className={k.primary} disabled={selected === null} type="button" onClick={() => selected === task.answer ? markSolved() : setHint(task.why, false)}>Test my decision</button></div>}
     {hint && <p className={k.hint} role="status">{hint}</p>}
     <small className={k.note}>Fictional records only. No real transfer, identity upload, external contact, report submission or allegation.</small>

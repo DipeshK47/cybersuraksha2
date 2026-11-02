@@ -7,7 +7,6 @@ import type { StoryChapter, StoryScript, StoryWorldProps } from "../new/story/ty
 import k from "../new/story/story-player.module.css";
 import v from "./security.module.css";
 import { loginEvents, reviewControls } from "./security-content";
-import { securityArtwork } from "./security-art";
 
 type StoryData = { title: string; icon: LucideIcon; panels: { heading: string; facts: string[] }[]; task: string; choices: { label: string; why: string; correct?: boolean }[] };
 const stories: Record<string, StoryData> = {
@@ -171,23 +170,15 @@ function StoryArtifact({ slug, scene }: { slug: string; scene: number }) {
   </div>;
 }
 
-function SecurityWorld({ slug, data, scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { slug: string; data: StoryData }) {
+function SecurityWorld({ slug, data, scene, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { slug: string; data: StoryData }) {
   const [choice, setChoice] = useState("");
   const panel = data.panels[scene];
   const Icon = data.icon;
-  const artwork = securityArtwork[slug];
-  const illustrated = scene === 0 || (scene === 4 && slug === "devices-updates-and-backups");
   return <SceneSwap scene={scene} reduced={reduced}><div className={v.storyBoard}>
     <div className={v.appBar}><Icon aria-hidden="true" /><strong>Cyberpur · Class 11 festival team</strong></div>
     <h2 style={{ marginTop: 18 }}>{panel.heading}</h2>
-    {illustrated ? <figure className={v.sceneIllustration}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" />
-      <figcaption>{artwork.caption}</figcaption>
-    </figure> : <>
       <StoryArtifact slug={slug} scene={scene} />
-      <div className={v.storyFacts}>{panel.facts.map((fact, index) => <div className={v.storyFact} data-active={!playing || elapsed >= index * 3} key={fact}>{scene === 1 ? <TriangleAlert aria-hidden="true" /> : <Check aria-hidden="true" />}<span>{fact}</span></div>)}</div>
-    </>}
+      <div className={v.storyFacts}>{panel.facts.map((fact, index) => <div className={v.storyFact} data-active={reduced || elapsed >= index * 3} key={fact}>{scene === 1 ? <TriangleAlert aria-hidden="true" /> : <Check aria-hidden="true" />}<span>{fact}</span></div>)}</div>
     {scene === 3 && !solved && <div className={v.board}><p><strong>{data.task}</strong></p><div className={v.actionBank}>{data.choices.map(item => <button className={k.primary} type="button" aria-pressed={choice === item.label} key={item.label} onClick={() => { setChoice(item.label); setHint(""); }}>{item.label}</button>)}</div><button type="button" className={k.primary} disabled={!choice} onClick={() => { const answer = data.choices.find(item => item.label === choice)!; if (answer.correct) markSolved(); else setHint(answer.why, false); }}>Test my decision</button></div>}
     {hint && <p className={k.hint} role="status">{hint}</p>}
     <small className={k.note}>Fictional records and accounts. No personal credentials are needed.</small>

@@ -173,7 +173,7 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
         <div className={s.name}><span>{chapter.character.name}</span><span>{current.status}</span></div>
       </div>
       <div className={s.storyWorld}>
-        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} onActivity={onActivity} reduced={reduced} media={media} />
+        <World scene={scene} playing={playing} elapsed={Math.max(0, elapsed)} solved={solved} markSolved={() => void markSolved()} hint={hint} setHint={(message, correct) => { setHint(message); if (message) onActivity?.(correct === undefined ? "story_feedback" : "story_answered", { id: `${slug}-story`, correct, category: scenes[gate].title, feedback: message }); }} onActivity={onActivity} reduced={reduced} media={audioUnavailable ? undefined : media} />
       </div>
     </div>
     <div className={s.storyText}>

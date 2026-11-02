@@ -76,6 +76,8 @@ export type Flow = Base & {
   k: "flow";
   look?: "steps" | "graph";
   nodes: { id: string; t: T | string; icon?: Icon; x: number; y: number; sub?: string }[];
+  /** Reveal later events only when the narration reaches them. */
+  upTo?: number;
   links: { from: string; to: string; t?: T | string }[];
   state?: Record<string, "done" | "now" | "bad" | "ok" | "risk" | "muted" | "lit">;
   /** "a>b" -> on (bright), off (faded) or bad (red, broken). */

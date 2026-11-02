@@ -8,7 +8,6 @@ import { MatchTable, ControlChecklist } from './Class11Security';
 import { ChoiceTask } from './Class11AI';
 import { AssuranceArtifact, SchoolSources, InstructionBoundary, VisionPhoto } from './AssuranceStories';
 import * as c from './assurance-content';
-import { assuranceArtwork } from './assurance-art';
 import s from '../new/practice.module.css';
 import v from './security.module.css';
 import a from './ai.module.css';
@@ -119,7 +118,6 @@ export function Class12AI(props: CyberLessonComponentProps) {
   const slug = props.lesson.slug as keyof typeof activities;
   const chapter = c.assurancePractice[slug];
   const Activity = activities[slug];
-  const artwork = assuranceArtwork[slug];
   const evidenceKey = `evidence-${slug}`;
   const stored = props.runtime.state[evidenceKey];
   const evidence = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored as Record<string, string> : {};
@@ -127,14 +125,9 @@ export function Class12AI(props: CyberLessonComponentProps) {
     if (correct) props.runtime.updateState({ [evidenceKey]: { ...evidence, [practice.stage]: feedback } });
     practice.submit(correct, feedback, unsafe);
   }
-  const illustrated = practice.stage === 0 && ['set-a-decision-and-a-baseline', 'the-source-grounded-research-assistant'].includes(slug);
   return <PracticeShell props={props} stage={practice.stage} eyebrow="AI evidence and assurance lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="ai"
     evidence={<div className={v.evidence}><h2>Your AI assurance record</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol><p>Use this checked record with the module’s baseline, manifest, calculations and model card for your teacher’s individual review. Automatic checks assess structured decisions, not authorship or the oral defence. All results are prepared classroom evidence.</p></div>}>
-    <div className={`${a.lab} ${illustrated ? v.illustratedActivity : v.senior}`}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" /><figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={`${a.lab} ${v.senior}`}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} /></div>
     </div>
   </PracticeShell>;

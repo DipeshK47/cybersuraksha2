@@ -6,7 +6,6 @@ import { SceneSwap } from "../new/story/StoryPlayer";
 import type { StoryChapter, StoryScript, StoryWorldProps } from "../new/story/types";
 import { CLASS11_CT_SLUGS } from "../../../../data/class-11-missions";
 import * as c from "./ct-content";
-import { ctArtwork } from "./ct-art";
 import k from "../new/story/story-player.module.css";
 import v from "./security.module.css";
 import a from "./ai.module.css";
@@ -26,18 +25,14 @@ function CtArtifact({ index, scene }: { index: number; scene: number }) {
   return <div className={v.artifact}><div className={v.appBar}><Code2 aria-hidden="true" /><strong>{heading}</strong></div>{rows.map(([label, value]) => <div className={v.artifactRow} key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>;
 }
 
-function CtWorld({ index, script, scene, playing, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { index: number; script: StoryScript }) {
+function CtWorld({ index, script, scene, elapsed, solved, markSolved, hint, setHint, reduced }: StoryWorldProps & { index: number; script: StoryScript }) {
   const [selected, setSelected] = useState<number | null>(null);
   const data = c.ctStoryTasks[index];
-  const artwork = ctArtwork[CLASS11_CT_SLUGS[index]];
   const Icon = index === 4 ? Search : index === 6 || index === 7 ? ListChecks : GitBranch;
   return <SceneSwap scene={scene} reduced={reduced}><div className={v.storyBoard}>
     <div className={v.appBar}><Icon aria-hidden="true" /><strong>Cyberpur · Class 11 workflow desk</strong></div>
     <h2 style={{ marginTop: 18 }}>{script.scenes[scene].title}</h2>
-    {scene === 0 ? <figure className={v.sceneIllustration}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" /><figcaption>{artwork.caption}</figcaption>
-    </figure> : scene === 2 || scene === 5 ? <div className={v.storyFacts}>{data.concepts.map((concept, item) => <div className={v.storyFact} data-active={!playing || elapsed >= item * 3} key={concept}><Check aria-hidden="true" /><span>{concept}</span></div>)}</div> : <CtArtifact index={index} scene={scene} />}
+    {scene === 2 || scene === 5 ? <div className={v.storyFacts}>{data.concepts.map((concept, item) => <div className={v.storyFact} data-active={reduced || elapsed >= item * 3} key={concept}><Check aria-hidden="true" /><span>{concept}</span></div>)}</div> : <CtArtifact index={index} scene={scene} />}
     {scene === 3 && !solved && <div className={v.board}><p className={a.storyQuestion}><strong>{data.question}</strong></p><div className={v.actionBank}>{data.choices.map((choice, item) => <button className={k.primary} type="button" aria-pressed={selected === item} key={choice} onClick={() => { setSelected(item); setHint(""); }}>{choice}</button>)}</div><button className={k.primary} disabled={selected === null} type="button" onClick={() => selected === data.answer ? markSolved() : setHint(data.why, false)}>Test my decision</button></div>}
     {hint && <p className={k.hint} role="status">{hint}</p>}
     <small className={k.note}>Fictional records and criteria. The simulation makes no real awards or payments.</small>

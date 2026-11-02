@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, type ComponentType } from "react";
+import { SceneSwap } from "../new/story/StoryPlayer";
+import k from "../new/story/story-player.module.css";
 import { FlaskConical, ShieldCheck, BrainCircuit, Search } from "lucide-react";
 import type { LessonChapter } from "../../../../data/lesson-content";
 import type { Class8Chapter, TaskAnswer } from "../../../../data/class8/types";
@@ -23,11 +25,8 @@ export function createClass8Story(chapter: Class8Chapter, script: StoryScript): 
 
 export function createStructuredStory(chapter: Class8Chapter, script: StoryScript, options: {
   Illustration?: ComponentType<{theme:Class8Chapter["sceneTheme"];caption:string;resolved?:boolean}>;
-  Character?: StoryChapter["Character"];
+  character?: StoryChapter["character"];
   Explanation?: ComponentType<StoryWorldProps & { chapter: LessonChapter }>;
-  labTitle?: string;
-  teamName?: string;
-  className?: string;
   /** Lesson-specific live stages (see app/data/worlds). A lesson with an entry plays on its own stage. */
   worlds?: Record<string, World>;
 } = {}): StoryChapter {
@@ -46,10 +45,9 @@ export function createStructuredStory(chapter: Class8Chapter, script: StoryScrip
       props.onActivity?.("story_answered", { id: `${chapter.slug}-story`, correct: result.correct, category: chapter.title.en.slice(0, 150), question: chapter.decision.prompt.en.slice(0, 300), feedback: result.summary.en });
       if (result.correct) props.markSolved();
     }
-    return <div className={`${s.lesson} ${options.className ?? ""}`}><section className={s.world} data-class8-world={chapter.slug}>
-      <header><FlaskConical size={19} aria-hidden="true" />{options.labTitle ?? ui.lab.en}</header>
+    return <SceneSwap scene={props.scene} reduced={props.reduced}><section className={`${k.panel} ${s.lesson}`} data-class8-world={chapter.slug}>
       <h2>{current.title.en}</h2>
-      {world ? <LessonStage world={world} scene={props.scene} preview={props.scene === 3 && !props.solved ? picked : null} strand={chapter.strand} solved={props.solved} playing={props.playing} duration={script.scenes[props.scene]?.duration} />
+      {world ? <LessonStage world={world} scene={props.scene} preview={props.scene === 3 && !props.solved ? picked : null} strand={chapter.strand} solved={props.solved} playing={props.playing} media={props.media} reduced={props.reduced} elapsed={props.elapsed} />
         : Explanation ? <Explanation {...props} chapter={chapter} /> : <Illustration theme={chapter.sceneTheme} caption={current.dialogue.en} resolved={props.solved} />}
       {props.scene === 3 && !props.solved && (world
         ? <DecisionDeck task={chapter.decision} picked={picked} locked={false} onPick={id => { setPicked(id); setDiagnosis(null); props.setHint(""); }} onLock={() => check(picked)} />
@@ -57,11 +55,11 @@ export function createStructuredStory(chapter: Class8Chapter, script: StoryScrip
       {props.scene >= 3 && <FeedbackPanel diagnosis={diagnosis} />}
       {props.solved && props.scene >= 4 && <p className={s.result}>{chapter.decision.success.en}</p>}
       {props.scene === 5 && <div className={s.topics}>{chapter.topics.map((topic, index) => <div key={topic.en}><b>{index + 1}</b>{topic.en}</div>)}</div>}
-    </section></div>;
+    </section></SceneSwap>;
   }
   const icon = chapter.strand === "Cybersecurity" ? ShieldCheck : chapter.strand === "Artificial Intelligence" ? BrainCircuit : chapter.strand === "Cyber Fraud" ? Search : FlaskConical;
   return {
-    script, title: chapter.title.en, icon, character: { asset: "girl-expressions", name: options.teamName ?? "Meera & Kabir" }, Character: options.Character,
+    script, title: chapter.title.en, icon, character: options.character ?? { asset: "boy-emotions", name: "Kabir" },
     interactionScene: 3, beginLabel: ui.begin.en, waitingText: ui.storyWait.en, lockedHint: ui.storyLocked.en, managedFeedback: true,
     World: Class8World,
   };

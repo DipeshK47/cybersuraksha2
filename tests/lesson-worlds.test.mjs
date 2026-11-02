@@ -15,11 +15,11 @@ const m = await loadSource(`
   import { class8Worlds } from './app/data/worlds/class8.ts';
   import { class9Worlds } from './app/data/worlds/class9.ts';
   import { class10Worlds } from './app/data/worlds/class10.ts';
-  import { resolveStage } from './app/module/cyber/lessons/worlds/resolve.ts';
+  import { resolveStage, sceneCues } from './app/module/cyber/lessons/worlds/resolve.ts';
   export const chapters = [...class6Chapters, ...class7Chapters, ...class8Chapters, ...class9Chapters, ...class10Chapters];
   export const worlds = { ...class6Worlds, ...class7Worlds, ...class8Worlds, ...class9Worlds, ...class10Worlds };
   import { ICONS } from './app/module/cyber/lessons/worlds/icons.ts';
-  export { resolveStage, ICONS };
+  export { resolveStage, sceneCues, ICONS };
 `);
 const KINDS = ['doc', 'chat', 'screen', 'sw', 'flow', 'table', 'chart', 'grid', 'crowd', 'ledger', 'time', 'seq'];
 const isT = value => Array.isArray(value) && value.length === 2 && value.every(part => typeof part === 'string');
@@ -29,6 +29,30 @@ const strings = (value, path, out) => {
   if (Array.isArray(value)) value.forEach((v, i) => strings(v, `${path}[${i}]`, out));
   else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) { if (SKIP.has(k)) continue; if ((k === 'c' || k === 'tiles' || k === 'row2') && Array.isArray(v)) v.forEach((cell, i) => strings(cell, `${path}.${k}[${i}]`, out)); else strings(v, `${path}.${k}`, out); }
 };
+
+test('audio cues reach each complete authored scene without changing lesson data', () => {
+  const original = JSON.stringify(m.worlds);
+  for (const world of Object.values(m.worlds)) {
+    for (let scene = 0; scene < 6; scene++) {
+      const cues = m.sceneCues(world, scene);
+      assert.deepEqual(JSON.parse(JSON.stringify(m.resolveStage(world, scene, null, cues.length))), JSON.parse(JSON.stringify(m.resolveStage(world, scene))), `${world.slug} scene ${scene}: completed cues`);
+      for (let cue = 0; cue <= cues.length; cue++) assert.equal(m.resolveStage(world, scene, null, cue).length, world.art.length);
+    }
+  }
+  assert.equal(JSON.stringify(m.worlds), original);
+});
+
+test('the session story reveals later events in narration order', () => {
+  const world = m.worlds['class10-login-session-trace'];
+  const shown = scene => { const flow = m.resolveStage(world, scene).find(a => a.id === 'trace'); return flow.nodes.slice(0, flow.upTo).map(n => n.id); };
+  assert.deepEqual(shown(0), ['pw', 'card']);
+  assert.deepEqual(shown(1), ['pw', 'card', 'page']);
+  assert.deepEqual(shown(2), ['pw', 'card', 'page', 'lost']);
+  const first = m.resolveStage(world, 2, null, 0).find(a => a.id === 'sess');
+  const last = m.resolveStage(world, 2).find(a => a.id === 'sess');
+  assert.equal(first.hide, true);
+  assert.equal(last.hide, false);
+});
 
 test('every lesson with a stage matches its chapter', () => {
   const bySlug = new Map(m.chapters.map(chapter => [chapter.slug, chapter]));

@@ -8,7 +8,6 @@ import { MatchTable, SequenceBoard } from './Class11Security';
 import { ChoiceTask } from './Class11AI';
 import { PortalDiagram, SystemArtifact } from './SystemStories';
 import * as c from './system-content';
-import { systemArtwork } from './system-art';
 import s from '../new/practice.module.css';
 import v from './security.module.css';
 import a from './ai.module.css';
@@ -97,7 +96,6 @@ export function Class12Security(props: CyberLessonComponentProps) {
   const slug = props.lesson.slug as keyof typeof activities;
   const chapter = c.systemPractice[slug];
   const Activity = activities[slug];
-  const artwork = systemArtwork[slug];
   const evidenceKey = `evidence-${slug}`;
   const stored = props.runtime.state[evidenceKey];
   const evidence = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored as Record<string, string> : {};
@@ -105,14 +103,9 @@ export function Class12Security(props: CyberLessonComponentProps) {
     if (correct) props.runtime.updateState({ [evidenceKey]: { ...evidence, [practice.stage]: feedback } });
     practice.submit(correct, feedback, unsafe);
   }
-  const illustrated = practice.stage === 0 && ['from-personal-safety-to-system-risk', 'the-breach-tabletop'].includes(slug);
   return <PracticeShell props={props} stage={practice.stage} eyebrow="Portal design and incident lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="lab"
     evidence={<div className={v.evidence}><h2>Your system assurance record</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol><p>Use this checked evidence alongside the earlier portal, timeline and recovery chapter records for your individual explanation. Your teacher reviews the viva separately. All tests use fictional offline models.</p></div>}>
-    <div className={`${a.lab} ${illustrated ? v.illustratedActivity : v.senior}`}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" /><figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={`${a.lab} ${v.senior}`}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} /></div>
     </div>
   </PracticeShell>;

@@ -7,7 +7,6 @@ import { PracticeShell, usePractice } from "../new/PracticeShell";
 import { MatchTable, ControlChecklist, SequenceBoard } from "./Class11Security";
 import { ChoiceTask } from "./Class11AI";
 import * as c from "./ct-content";
-import { ctArtwork } from "./ct-art";
 import s from "../new/practice.module.css";
 import v from "./security.module.css";
 import a from "./ai.module.css";
@@ -157,22 +156,16 @@ export function Class11CT(props: CyberLessonComponentProps) {
   const slug = props.lesson.slug as keyof typeof activities;
   const chapter = c.ctPractice[slug];
   const Activity = activities[slug];
-  const artwork = ctArtwork[slug];
   const evidenceKey = `evidence-${slug}`;
   const stored = props.runtime.state[evidenceKey];
   const evidence = stored && typeof stored === "object" && !Array.isArray(stored) ? stored as Record<string, string> : {};
-  const illustrated = practice.stage === 0 && ["decompose-the-scholarship-desk", "model-only-what-matters"].includes(slug);
   function check(correct: boolean, feedback: string, unsafe = false) {
     if (correct) props.runtime.updateState({ [evidenceKey]: { ...evidence, [practice.stage]: feedback } });
     practice.submit(correct, feedback, unsafe);
   }
   return <PracticeShell props={props} stage={practice.stage} eyebrow="Scholarship workflow logic lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="lab"
     evidence={<div className={v.evidence}><h2>Your algorithm evidence record</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol><p>Use the trace, expected outcomes and revisions to explain your reasoning. Your teacher reviews the individual defence separately.</p></div>}>
-    <div className={`${a.lab} ${illustrated ? v.illustratedActivity : v.senior}`}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" /><figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={`${a.lab} ${v.senior}`}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} /></div>
     </div>
   </PracticeShell>;

@@ -5,7 +5,6 @@ import { useState, type ComponentType } from "react";
 import type { CyberLessonComponentProps } from "../../lesson-types";
 import { PracticeShell, usePractice } from "../new/PracticeShell";
 import * as content from "./security-content";
-import { securityArtwork } from "./security-art";
 import s from "../new/practice.module.css";
 import v from "./security.module.css";
 
@@ -204,9 +203,6 @@ export function Class11Security(props: CyberLessonComponentProps) {
   const practice = usePractice(props);
   const chapter = chapters[props.lesson.slug];
   const { Activity } = chapter;
-  const artwork = securityArtwork[props.lesson.slug];
-  const illustrated = (practice.stage === 0 && ["your-digital-risk-map", "identity-beyond-a-password"].includes(props.lesson.slug))
-    || (practice.stage === 1 && props.lesson.slug === "devices-updates-and-backups");
   const evidenceKey = `evidence-${props.lesson.slug}`;
   const stored = props.runtime.state[evidenceKey];
   const evidence: Record<string, string> = stored && typeof stored === "object" && !Array.isArray(stored) ? stored as Record<string, string> : {};
@@ -216,12 +212,7 @@ export function Class11Security(props: CyberLessonComponentProps) {
   }
   return <PracticeShell props={props} stage={practice.stage} eyebrow="Festival team security lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="lab"
     evidence={<div className={v.evidence}><h2>Your evidence record</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol><p>Use this record to explain your decisions to your teacher. Your explanation is reviewed separately from the automatic checks.</p></div>}>
-    <div className={illustrated ? v.illustratedActivity : v.senior}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" />
-        <figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={v.senior}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} /></div>
     </div>
   </PracticeShell>;

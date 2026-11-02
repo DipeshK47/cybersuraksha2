@@ -8,7 +8,6 @@ import { MatchTable, ControlChecklist, SequenceBoard } from './Class11Security';
 import { ChoiceTask } from './Class11AI';
 import { CaseworkArtifact, TransferRoutes } from './CaseworkStories';
 import * as c from './casework-content';
-import { caseworkArtwork } from './casework-art';
 import s from '../new/practice.module.css';
 import v from './security.module.css';
 import a from './ai.module.css';
@@ -111,7 +110,7 @@ const activities = {
 export function Class12Fraud(props: CyberLessonComponentProps) {
   const practice = usePractice(props);
   const slug = props.lesson.slug as keyof typeof activities;
-  const chapter = c.caseworkPractice[slug]; const Activity = activities[slug]; const artwork = caseworkArtwork[slug];
+  const chapter = c.caseworkPractice[slug]; const Activity = activities[slug];
   const evidenceKey = `evidence-${slug}`; const stored = props.runtime.state[evidenceKey];
   const evidence = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored as Record<string, string> : {};
   const draftKey = `dossier-${slug}`; const saved = props.runtime.state[draftKey];
@@ -122,14 +121,9 @@ export function Class12Fraud(props: CyberLessonComponentProps) {
     if (correct) props.runtime.updateState({ [evidenceKey]: { ...evidence, [practice.stage]: record } });
     practice.submit(correct, record, unsafe);
   }
-  const illustrated = practice.stage === 0 && ['the-easy-money-recruitment-chain', 'help-after-harm'].includes(slug);
   return <PracticeShell props={props} stage={practice.stage} eyebrow="Private evidence and response lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="lab"
     evidence={<div className={v.evidence}><h2>Your prevention and response case file</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol>{Object.keys(draft).length > 0 && <><h3>Dossier for teacher review</h3><ul>{c.dossierSources.map(([key, label]) => <li key={key}>{label}: {draft[key] === 'earlier' ? 'Earlier work, to show my teacher' : draft[key] === 'supplied' ? 'Supplied case pack' : 'Not labelled'}</li>)}</ul><p className={w.savedNote}>{draft.notes || 'No written reflection added; discuss with your teacher.'}</p></>}<p>Structured decisions are checked automatically. Your teacher reviews the actual case dossier, team briefing, individual defence and reflection. All records are fictional; no real contact, transfer or report occurs.</p></div>}>
-    <div className={`${a.lab} ${illustrated ? v.illustratedActivity : v.senior}`}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" /><figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={`${a.lab} ${v.senior}`}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} draft={draft} saveDraft={saveDraft} /></div>
     </div>
   </PracticeShell>;

@@ -46,6 +46,7 @@
 .shell .hero:after,.shell .hero:before{display:none}
 .hero h1{max-width:24ch;margin:0 0 10px;font-size:clamp(1.65rem,3.2vw,2.65rem);line-height:1.12;letter-spacing:-.025em}
 .heroCopy{max-width:690px}.heroCopy>p:last-child{font-size:.94rem;line-height:1.5;max-width:65ch;color:#f0f3df}
+.hero:not([data-art]) .heroCopy>p{color:#355b60}
 .practiceMeta{margin:0 0 12px;font-size:.72rem;font-weight:800;color:#f2cd89;line-height:1.5}
 .progress{gap:7px}.progress span{width:33px;height:33px;opacity:1;background:#1c4f50;color:#e6eeda;border-color:#7aaca5}.progress .active{background:#f9df9a;color:#193f43;border-color:#f9df9a}.progress .done{background:#c8e6ca;color:#254c39;border-color:#c8e6ca}
 .workbench{padding:24px 28px 28px;background:#fbf7eb}

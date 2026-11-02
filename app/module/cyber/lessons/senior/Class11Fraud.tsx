@@ -8,7 +8,6 @@ import { MatchTable, ControlChecklist } from './Class11Security';
 import { ChoiceTask } from './Class11AI';
 import { FraudArtifact } from './FraudStories';
 import * as c from './fraud-content';
-import { fraudArtwork } from './fraud-art';
 import s from '../new/practice.module.css';
 import v from './security.module.css';
 import a from './ai.module.css';
@@ -106,7 +105,6 @@ export function Class11Fraud(props: CyberLessonComponentProps) {
   const slug = props.lesson.slug as keyof typeof activities;
   const chapter = c.fraudPractice[slug];
   const Activity = activities[slug];
-  const artwork = fraudArtwork[slug];
   const evidenceKey = `evidence-${slug}`;
   const stored = props.runtime.state[evidenceKey];
   const evidence = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored as Record<string, string> : {};
@@ -120,14 +118,9 @@ export function Class11Fraud(props: CyberLessonComponentProps) {
     if (correct) props.runtime.updateState({ [evidenceKey]: { ...evidence, [practice.stage]: record } });
     practice.submit(correct, record, unsafe);
   }
-  const illustrated = practice.stage === 0 && ['how-a-scam-builds-pressure', 'a-familiar-voice-asks-for-money'].includes(slug);
   return <PracticeShell props={props} stage={practice.stage} eyebrow="Evidence and verification lab" brief={chapter.brief} prompt={chapter.prompts[Math.min(practice.stage, 2)]} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} ready={practice.ready} onContinue={practice.continuePractice} onFinish={practice.finish} art="lab"
     evidence={<div className={v.evidence}><h2>Your verification evidence record</h2><ol>{Object.values(evidence).map((item, index) => <li key={index}>{item}</li>)}</ol>{Object.keys(draft).length > 0 && <><h3>Portfolio for teacher review</h3><ul>{c.portfolioItems.map(([key, label]) => <li key={key}>{label}: {draft[key] === 'earlier' ? 'My earlier work, to show my teacher' : draft[key] === 'supplied' ? 'Supplied classroom replacement' : 'Not labelled'}</li>)}</ul><p className={f.savedNote}>{draft.notes || 'No written reflection added. Discuss the reflection with your teacher.'}</p></>}<p>Structured decisions are checked automatically. Your teacher reviews the actual portfolio, individual defence and reflection. All case records are fictional.</p></div>}>
-    <div className={`${a.lab} ${illustrated ? v.illustratedActivity : v.senior}`}>
-      {illustrated && <figure className={v.sceneIllustration}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={artwork.src} alt={artwork.alt} width={1400} height={788} decoding="async" loading="lazy" /><figcaption>{artwork.caption}</figcaption>
-      </figure>}
+    <div className={`${a.lab} ${v.senior}`}>
       <div className={v.senior}><Activity key={practice.stage} stage={Math.min(practice.stage, 2)} check={check} draft={draft} saveDraft={saveDraft} /></div>
     </div>
   </PracticeShell>;

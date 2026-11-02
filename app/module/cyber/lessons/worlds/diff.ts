@@ -46,7 +46,7 @@ export function diffStage(prev: readonly Artifact[] | null, cur: readonly Artifa
       }
       case "flow": {
         const q = p as typeof a;
-        for (const n of a.nodes) if ((a.state?.[n.id] ?? "plain") !== (q.state?.[n.id] ?? "plain")) add(n.id);
+        for (const n of a.nodes.slice(0, a.upTo ?? a.nodes.length)) if (!q.nodes.slice(0, q.upTo ?? q.nodes.length).some(old => old.id === n.id) || (a.state?.[n.id] ?? "plain") !== (q.state?.[n.id] ?? "plain")) add(n.id);
         for (const l of a.links) { const key = `${l.from}>${l.to}`; if ((a.link?.[key] ?? "on") !== (q.link?.[key] ?? "on")) add(key); }
         if (a.cur !== q.cur) add("cur");
         break;

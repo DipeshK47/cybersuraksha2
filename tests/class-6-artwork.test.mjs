@@ -27,12 +27,13 @@ test('all 32 Class 6 chapters have distinct local artwork and smaller library pr
   assert.equal(hashes.size,32,'A generic image must not stand in for several chapters');
 });
 
-test('story and practice use chapter artwork without the generic classroom illustration', () => {
+test('lessons retain the animated character format while library artwork remains available', () => {
   const story=readFileSync(join(root,'app/module/cyber/lessons/class6/Class6Stories.tsx'),'utf8');
   const practice=readFileSync(join(root,'app/module/cyber/lessons/class6/Class6Lesson.tsx'),'utf8');
-  assert.match(story,/Explanation: Class6StoryArtwork/);
-  assert.match(practice,/PracticeVisual=\{Class6PracticeArtwork\}/);
-  const component=readFileSync(join(root,'app/module/cyber/lessons/class6/Class6Artwork.tsx'),'utf8');
-  assert.match(component,/artwork\.alt\[language\]/);
-  assert.match(component,/srcSet=/);
+  assert.match(story,/asset: "boy-emotions"/);
+  assert.match(story,/worlds: class6Worlds/);
+  assert.doesNotMatch(story,/StoryArtwork/);
+  assert.doesNotMatch(practice,/PracticeArtwork/);
+  const edition=readFileSync(join(root,'app/module/cyber/lessons/class6/class6.module.css'),'utf8');
+  assert.doesNotMatch(edition,/data-story-actor.*display:none/);
 });
