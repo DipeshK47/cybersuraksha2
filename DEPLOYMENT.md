@@ -142,6 +142,29 @@ npm run build            # vinext build
 npx wrangler deploy
 ```
 
+## 5a. Automatic deploys from GitHub (Cloudflare Workers Builds)
+
+Every push to `main` can build and deploy the Worker by itself. This is a Cloudflare dashboard setting; nothing in the
+repo triggers it. The build needs to know which Worker and database it is for, so set these as **build variables**:
+
+| Build variable | Value for CyberShiksha |
+| --- | --- |
+| `CYBERSURAKSHA_WORKER_NAME` | `cybershiksha` (without it the build targets the package name, a different Worker) |
+| `CYBERSURAKSHA_D1_DATABASE_ID` | `39ae6e9b-e624-45e0-9d60-f04e0fb814bb` |
+| `CYBERSURAKSHA_D1_DATABASE_NAME` | `cybershiksha` |
+| `NODE_VERSION` | `22` (the app needs Node 22.13 or newer) |
+
+Dashboard: Workers & Pages → `cybershiksha` → Settings → Builds → Connect → GitHub, then:
+
+- Repository `DipeshK47/cybersuraksha2`, production branch `main`, root directory `/`.
+- Build command: `npm ci && npm run build`
+- Deploy command: `npx wrangler deploy`
+- Turn **off** builds for non-production branches, so working branches such as `remade` do not create preview versions.
+
+Runtime secrets (admin login, demo switch) live on the Worker and are not touched by a deploy. The custom domain stays attached.
+The first request after each deploy sets up any new database tables, so there is no migration step.
+Roll back from Workers & Pages → `cybershiksha` → Deployments.
+
 ## 6. First-run hardening checklist (production)
 
 - [ ] **Provision the first admin via `CYBERSURAKSHA_ADMIN_EMAIL` /

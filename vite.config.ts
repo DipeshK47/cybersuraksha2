@@ -12,6 +12,9 @@ const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
 const D1_DATABASE_ID =
   process.env.CYBERSURAKSHA_D1_DATABASE_ID || SITE_CREATOR_PLACEHOLDER_DATABASE_ID;
 const D1_DATABASE_NAME = process.env.CYBERSURAKSHA_D1_DATABASE_NAME || "site-creator-d1";
+// The Worker that `wrangler deploy` (or a Cloudflare Git build) publishes to. Without this the build
+// falls back to the package name, which is a different Worker. Set it for every real deploy.
+const WORKER_NAME = process.env.CYBERSURAKSHA_WORKER_NAME;
 
 const { d1, r2 } = hostingConfig;
 
@@ -19,6 +22,7 @@ const { d1, r2 } = hostingConfig;
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
+  ...(WORKER_NAME ? { name: WORKER_NAME } : {}),
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
