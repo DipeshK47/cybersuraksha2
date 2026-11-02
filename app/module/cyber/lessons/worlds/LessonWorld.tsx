@@ -1,10 +1,10 @@
 "use client";
 
 import { AlertTriangle, Check, X } from "lucide-react";
-import { Fragment, useMemo, type CSSProperties, type ReactNode } from "react";
+import { Fragment, createElement, useMemo, type CSSProperties, type ReactNode } from "react";
 import type { Artifact, Chart, Chat, Crowd, Doc, Flow, Grid, Ledger, Screen, Seq, Switches, Table, Time, Tone, World } from "../../../../data/worlds/types.ts";
 import { useEvidenceLanguage } from "../class8/ui";
-import { iconFor } from "./icons";
+import { ICONS } from "./icons";
 import { pick, resolveStage } from "./resolve";
 import w from "./worlds.module.css";
 
@@ -12,8 +12,8 @@ type Lang = "en" | "hi";
 const toneClass = (tone?: string) => (tone ? ` ${w[`t_${tone}`] ?? ""}` : "");
 
 function Ico({ name, size = 16 }: { name?: string; size?: number }) {
-  const Icon = iconFor(name);
-  return Icon ? <Icon size={size} aria-hidden="true" /> : null;
+  if (!name || !(name in ICONS)) return null;
+  return createElement(ICONS[name], { size, "aria-hidden": true });
 }
 
 /* ---------- Doc: poster, form, profile, notice, receipt ---------- */
@@ -41,7 +41,7 @@ function DocArt({ a, lang }: { a: Doc; lang: Lang }) {
 function ChatArt({ a, lang }: { a: Chat; lang: Lang }) {
   const shown = a.msgs.slice(0, a.upTo ?? a.msgs.length);
   return <div className={`${w.chat} ${w[`chat_${a.look ?? "phone"}`] ?? ""}`}>
-    <div className={w.chatHead}><span className={w.avatar}>{pick(a.who, lang).slice(0, 1)}</span><strong>{pick(a.who, lang)}</strong>{a.look === "call" && <Ico name="call" />}</div>
+    <div className={w.chatHead}><span className={w.avatar}>{pick(a.who, lang).replace(/^[^\p{L}\p{N}]+/u, "").slice(0, 1)}</span><strong>{pick(a.who, lang)}</strong>{a.look === "call" && <Ico name="call" />}</div>
     <div className={w.chatBody}>
       {shown.map((m, i) => <div key={`${i}-${m.t[0]}`} className={`${w.bubble} ${w[`from_${m.from}`]}${toneClass(m.flag)}`} data-flag={m.flag ?? "none"}>
         {m.sender && <b>{m.sender}</b>}{pick(m.t, lang)}
@@ -67,17 +67,17 @@ function ScreenArt({ a, lang }: { a: Screen; lang: Lang }) {
     <div className={w.blocks}>
       {blocks.map(b => {
         const mark = a.mark?.[b.id];
-        const common = { "data-mark": mark ?? "none", "data-type": b.type, key: b.id } as const;
-        if (b.type === "qr") return <div {...common} className={`${w.block} ${w.qrBlock}`}><div className={w.qr}>{qrCells(b.id + b.t[0]).map((on, i) => <u key={i} data-on={on} />)}</div><span>{pick(b.t, lang)}</span></div>;
-        if (b.type === "price") return <div {...common} className={`${w.block} ${w.priceBlock}`}><small>{pick(b.t, lang)}</small><strong>{pick(b.sub, lang)}</strong></div>;
-        if (b.type === "btn") return <div {...common} className={`${w.block} ${w.btnBlock}`}><span><Ico name={b.icon} size={15} />{pick(b.t, lang)}</span></div>;
-        if (b.type === "field") return <div {...common} className={`${w.block} ${w.fieldBlock}`}><small>{pick(b.t, lang)}</small><span>{pick(b.sub, lang) || "…"}</span></div>;
-        if (b.type === "popup") return <div {...common} className={`${w.block} ${w.popupBlock}`}><X size={14} className={w.popupX} aria-hidden="true" /><strong><Ico name={b.icon ?? "alert"} size={17} />{pick(b.t, lang)}</strong>{b.sub && <p>{pick(b.sub, lang)}</p>}</div>;
-        if (b.type === "banner") return <div {...common} className={`${w.block} ${w.bannerBlock}`}><Ico name={b.icon} size={16} /><span>{pick(b.t, lang)}{b.sub && <em>{pick(b.sub, lang)}</em>}</span></div>;
-        if (b.type === "app") return <div {...common} className={`${w.block} ${w.appBlock}`}><span className={w.appTile}><Ico name={b.icon} size={22} /></span><span>{pick(b.t, lang)}</span></div>;
-        if (b.type === "row") return <div {...common} className={`${w.block} ${w.rowBlock}`}><Ico name={b.icon} size={16} /><span><strong>{pick(b.t, lang)}</strong>{b.sub && <small>{pick(b.sub, lang)}</small>}</span></div>;
-        if (b.type === "bar") return <div {...common} className={`${w.block} ${w.barBlock}`}><small>{pick(b.t, lang)}</small><i><b style={{ width: `${Number.parseInt(String(b.sub?.[0] ?? "50"), 10) || 50}%` }} /></i></div>;
-        return <div {...common} className={`${w.block} ${w.textBlock}`}>{pick(b.t, lang)}</div>;
+        const common = { "data-mark": mark ?? "none", "data-type": b.type } as const;
+        if (b.type === "qr") return <div key={b.id} {...common} className={`${w.block} ${w.qrBlock}`}><div className={w.qr}>{qrCells(b.id + b.t[0]).map((on, i) => <u key={i} data-on={on} />)}</div><span>{pick(b.t, lang)}</span></div>;
+        if (b.type === "price") return <div key={b.id} {...common} className={`${w.block} ${w.priceBlock}`}><small>{pick(b.t, lang)}</small><strong>{pick(b.sub, lang)}</strong></div>;
+        if (b.type === "btn") return <div key={b.id} {...common} className={`${w.block} ${w.btnBlock}`}><span><Ico name={b.icon} size={15} />{pick(b.t, lang)}</span></div>;
+        if (b.type === "field") return <div key={b.id} {...common} className={`${w.block} ${w.fieldBlock}`}><small>{pick(b.t, lang)}</small><span>{pick(b.sub, lang) || "…"}</span></div>;
+        if (b.type === "popup") return <div key={b.id} {...common} className={`${w.block} ${w.popupBlock}`}><X size={14} className={w.popupX} aria-hidden="true" /><strong><Ico name={b.icon ?? "alert"} size={17} />{pick(b.t, lang)}</strong>{b.sub && <p>{pick(b.sub, lang)}</p>}</div>;
+        if (b.type === "banner") return <div key={b.id} {...common} className={`${w.block} ${w.bannerBlock}`}><Ico name={b.icon} size={16} /><span>{pick(b.t, lang)}{b.sub && <em>{pick(b.sub, lang)}</em>}</span></div>;
+        if (b.type === "app") return <div key={b.id} {...common} className={`${w.block} ${w.appBlock}`}><span className={w.appTile}><Ico name={b.icon} size={22} /></span><span>{pick(b.t, lang)}</span></div>;
+        if (b.type === "row") return <div key={b.id} {...common} className={`${w.block} ${w.rowBlock}`}><Ico name={b.icon} size={16} /><span><strong>{pick(b.t, lang)}</strong>{b.sub && <small>{pick(b.sub, lang)}</small>}</span></div>;
+        if (b.type === "bar") return <div key={b.id} {...common} className={`${w.block} ${w.barBlock}`}><small>{pick(b.t, lang)}</small><i><b style={{ width: `${Number.parseInt(String(b.sub?.[0] ?? "50"), 10) || 50}%` }} /></i></div>;
+        return <div key={b.id} {...common} className={`${w.block} ${w.textBlock}`}>{pick(b.t, lang)}</div>;
       })}
     </div>
   </div>;
@@ -102,14 +102,16 @@ function SwitchArt({ a, lang }: { a: Switches; lang: Lang }) {
 function FlowArt({ a, lang }: { a: Flow; lang: Lang }) {
   const at = (id: string) => a.nodes.find(n => n.id === id);
   const cur = a.cur ? at(a.cur) : undefined;
+  // Nodes sit inside an inner box so a label never hangs outside the object.
+  const px = (x: number) => 16 + x * 0.68, py = (y: number) => 12 + y * 0.76;
   return <div className={`${w.flow} ${w[`flow_${a.look ?? "graph"}`] ?? ""}`}>
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      {a.links.map(l => { const f = at(l.from), t = at(l.to); if (!f || !t) return null; const key = `${l.from}>${l.to}`; return <line key={key} x1={f.x} y1={f.y} x2={t.x} y2={t.y} data-link={a.link?.[key] ?? "on"} vectorEffect="non-scaling-stroke" />; })}
+      {a.links.map(l => { const f = at(l.from), t = at(l.to); if (!f || !t) return null; const key = `${l.from}>${l.to}`; return <line key={key} x1={px(f.x)} y1={py(f.y)} x2={px(t.x)} y2={py(t.y)} data-link={a.link?.[key] ?? "on"} vectorEffect="non-scaling-stroke" />; })}
     </svg>
-    {a.links.map(l => { const f = at(l.from), t = at(l.to); return l.t && f && t ? <span key={`${l.from}>${l.to}t`} className={w.linkLabel} style={{ left: `${(f.x + t.x) / 2}%`, top: `${(f.y + t.y) / 2}%` }}>{pick(l.t, lang)}</span> : null; })}
-    {a.nodes.map(n => <div key={n.id} className={w.node} data-state={a.state?.[n.id] ?? "plain"} style={{ left: `${n.x}%`, top: `${n.y}%` }}>
+    {a.links.map(l => { const f = at(l.from), t = at(l.to); return l.t && f && t ? <span key={`${l.from}>${l.to}t`} className={w.linkLabel} style={{ left: `${(px(f.x) + px(t.x)) / 2}%`, top: `${(py(f.y) + py(t.y)) / 2}%` }}>{pick(l.t, lang)}</span> : null; })}
+    {a.nodes.map(n => <div key={n.id} className={w.node} data-state={a.state?.[n.id] ?? "plain"} style={{ left: `${px(n.x)}%`, top: `${py(n.y)}%` }}>
       <span className={w.nodeIcon}><Ico name={n.icon} size={17} /></span><b>{pick(n.t, lang)}</b>{n.sub && <small>{n.sub}</small>}</div>)}
-    {cur && <span className={w.cursor} style={{ left: `${cur.x}%`, top: `${cur.y}%` }} aria-hidden="true" />}
+    {cur && <span className={w.cursor} style={{ left: `${px(cur.x)}%`, top: `${py(cur.y)}%` }} aria-hidden="true" />}
   </div>;
 }
 
