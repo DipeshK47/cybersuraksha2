@@ -21,7 +21,8 @@ function decode(text) { return text.replace(/&(?:amp|lt|gt|quot|apos|nbsp);/g, v
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {
     const file = path.join(dir,entry.name);
-    if (entry.isDirectory()) { if (entry.name !== 'i18n') walk(file); continue; }
+    // Lesson worlds pick their own [English, Hindi] pair at render time (see app/data/worlds/types.ts), so they carry no catalogue copy.
+    if (entry.isDirectory()) { if (entry.name !== 'i18n' && !(entry.name === 'worlds' && /app[\\/](data|module[\\/]cyber[\\/]lessons)$/.test(dir))) walk(file); continue; }
     if (file.endsWith('/handbook-hi.json')) continue;
     if (file.endsWith('/demo-account.json')) continue; // password hashes, not learner-facing copy
     if (file.endsWith('.json')) {

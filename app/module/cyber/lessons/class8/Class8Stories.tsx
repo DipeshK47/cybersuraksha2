@@ -11,10 +11,14 @@ import { recordTaskEvidence } from "./task-evidence";
 import type { TaskDiagnosis } from "./task-feedback";
 import { FeedbackPanel } from "./FeedbackPanel";
 import { ui } from "./ui";
+import type { World } from "../../../../data/worlds/types";
+import { LessonStage } from "../worlds/LessonWorld";
+import { DecisionDeck } from "../worlds/DecisionDeck";
+import { class8Worlds } from "../../../../data/worlds/class8";
 import s from "./class8.module.css";
 
 export function createClass8Story(chapter: Class8Chapter, script: StoryScript): StoryChapter {
-  return createStructuredStory(chapter, script);
+  return createStructuredStory(chapter, script, { worlds: class8Worlds });
 }
 
 export function createStructuredStory(chapter: Class8Chapter, script: StoryScript, options: {
@@ -24,15 +28,19 @@ export function createStructuredStory(chapter: Class8Chapter, script: StoryScrip
   labTitle?: string;
   teamName?: string;
   className?: string;
+  /** Lesson-specific live stages (see app/data/worlds). A lesson with an entry plays on its own stage. */
+  worlds?: Record<string, World>;
 } = {}): StoryChapter {
   const Illustration = options.Illustration ?? WorldIllustration;
   const Explanation = options.Explanation;
+  const world = options.worlds?.[chapter.slug];
   function Class8World(props: StoryWorldProps) {
     const [answer, setAnswer] = useState<TaskAnswer>(initialAnswer(chapter.decision));
     const [diagnosis, setDiagnosis] = useState<TaskDiagnosis | null>(null);
+    const [picked, setPicked] = useState("");
     const current = chapter.scenes[props.scene];
-    function check() {
-      const result = recordTaskEvidence(chapter.decision, answer, (type, payload) => props.onActivity?.(type, payload), chapter.title.en);
+    function check(value: TaskAnswer = answer) {
+      const result = recordTaskEvidence(chapter.decision, value, (type, payload) => props.onActivity?.(type, payload), chapter.title.en);
       setDiagnosis(result);
       if (!result.complete) return;
       props.onActivity?.("story_answered", { id: `${chapter.slug}-story`, correct: result.correct, category: chapter.title.en.slice(0, 150), question: chapter.decision.prompt.en.slice(0, 300), feedback: result.summary.en });
@@ -41,8 +49,11 @@ export function createStructuredStory(chapter: Class8Chapter, script: StoryScrip
     return <div className={`${s.lesson} ${options.className ?? ""}`}><section className={s.world} data-class8-world={chapter.slug}>
       <header><FlaskConical size={19} aria-hidden="true" />{options.labTitle ?? ui.lab.en}</header>
       <h2>{current.title.en}</h2>
-      {Explanation ? <Explanation {...props} chapter={chapter} /> : <Illustration theme={chapter.sceneTheme} caption={current.dialogue.en} resolved={props.solved} />}
-      {props.scene === 3 && !props.solved && <><h3 data-exercise-prompt>{chapter.decision.prompt.en}</h3><TaskBoard task={chapter.decision} answer={answer} onChange={value => { setAnswer(value); setDiagnosis(null); props.setHint(""); }} onCheck={check} /></>}
+      {world ? <LessonStage world={world} scene={props.scene} preview={props.scene === 3 && !props.solved ? picked : null} strand={chapter.strand} solved={props.solved} />
+        : Explanation ? <Explanation {...props} chapter={chapter} /> : <Illustration theme={chapter.sceneTheme} caption={current.dialogue.en} resolved={props.solved} />}
+      {props.scene === 3 && !props.solved && (world
+        ? <DecisionDeck task={chapter.decision} picked={picked} locked={false} onPick={id => { setPicked(id); setDiagnosis(null); props.setHint(""); }} onLock={() => check(picked)} />
+        : <><h3 data-exercise-prompt>{chapter.decision.prompt.en}</h3><TaskBoard task={chapter.decision} answer={answer} onChange={value => { setAnswer(value); setDiagnosis(null); props.setHint(""); }} onCheck={() => check()} /></>)}
       {props.scene >= 3 && <FeedbackPanel diagnosis={diagnosis} />}
       {props.solved && props.scene >= 4 && <p className={s.result}>{chapter.decision.success.en}</p>}
       {props.scene === 5 && <div className={s.topics}>{chapter.topics.map((topic, index) => <div key={topic.en}><b>{index + 1}</b>{topic.en}</div>)}</div>}
