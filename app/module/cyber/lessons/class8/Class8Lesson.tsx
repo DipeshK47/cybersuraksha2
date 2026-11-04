@@ -4,6 +4,8 @@ import type { CyberLessonComponentProps } from "../../lesson-types";
 import { useState, type ComponentType } from "react";
 import type { LessonChapter } from "../../../../data/lesson-content";
 import { getClass8Chapter } from "../../../../data/class8";
+import { getClass6Artwork } from "../../../../data/class6/artwork";
+import { getClass7Artwork } from "../../../../data/class7/artwork";
 import type { Class8Task, TaskAnswer } from "../../../../data/class8/types";
 import { PracticeShell, usePractice } from "../new/PracticeShell";
 import { TaskBoard, initialAnswer } from "./TaskBoard";
@@ -46,6 +48,10 @@ export function StructuredLesson({ chapter: suppliedChapter, labTitle = ui.lab.e
   const answer = props.runtime.state[draftKey] as TaskAnswer | undefined ?? initialAnswer(task);
   const boundary = JSON.stringify([props.runtime.runId, chapter.slug, practice.stage, task, answer]);
   const simulation = tested?.boundary === boundary ? tested.snapshot : null;
+  // Classes 6-7 have a picture per chapter. It sits beside the situation on the first and third challenge;
+  // the middle one is the board alone, so the practice does not look the same three times in a row.
+  const artwork = props.grade === 6 ? getClass6Artwork(chapter.slug) : props.grade === 7 ? getClass7Artwork(chapter.slug) : undefined;
+  const scene = artwork && (practice.stage === 0 || practice.stage === 2) ? { src: artwork.src, preview: artwork.preview, alt: artwork.alt } : undefined;
   const evidenceKey = `evidence-${chapter.slug}`;
   const evidence = (props.runtime.state[evidenceKey] ?? {}) as Record<string, string | ReturnType<typeof buildTaskEvidence>>;
   const reflectionKey = `reflection-${chapter.slug}`;
@@ -66,10 +72,10 @@ export function StructuredLesson({ chapter: suppliedChapter, labTitle = ui.lab.e
       props.runtime.updateState({ [`${reflectionKey}-saved`]: reflection });
     }}>{reflectionSaved ? "Reflection saved" : "Save reflection"}</button>
   </div>;
-  return <div className={s.lesson} data-class8-lesson={chapter.slug}><PracticeShell props={props} stage={practice.stage} eyebrow={labTitle} brief={chapter.summary.en} prompt={task.prompt.en} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} feedbackContent={<FeedbackPanel diagnosis={diagnosis} />} ready={practice.ready} onContinue={() => { setDiagnosis(null); practice.continuePractice(); }} onFinish={practice.finish} evidence={notebook}>
+  return <div className={s.lesson} data-class8-lesson={chapter.slug}><PracticeShell props={props} stage={practice.stage} eyebrow={labTitle.replace(/^Class \d+ /, "")} brief={chapter.summary.en} prompt={task.prompt.en} feedback={practice.feedback} feedbackCorrect={practice.feedbackCorrect} feedbackContent={<FeedbackPanel diagnosis={diagnosis} />} ready={practice.ready} onContinue={() => { setDiagnosis(null); practice.continuePractice(); }} onFinish={practice.finish} evidence={notebook}>
     <div className={s.topics} aria-label={ui.topics.en}>{chapter.topics.map((topic, index) => <div key={topic.en}><b>{index + 1}</b>{topic.en}</div>)}</div>
     {PracticeVisual && <PracticeVisual chapter={chapter} task={task} stage={practice.stage} answer={answer} ready={practice.ready} simulation={simulation} />}
-    <TaskBoard key={`${props.runtime.runId}-${practice.stage}`} task={task} answer={answer} onChange={value => { setDiagnosis(null); practice.clearFeedback(); props.runtime.updateState({ [draftKey]: value }); }} onCheck={check} disabled={practice.ready} onSimulationChange={snapshot => setTested({ boundary, snapshot })} />
+    <TaskBoard key={`${props.runtime.runId}-${practice.stage}`} task={task} answer={answer} onChange={value => { setDiagnosis(null); practice.clearFeedback(); props.runtime.updateState({ [draftKey]: value }); }} onCheck={check} disabled={practice.ready} onSimulationChange={snapshot => setTested({ boundary, snapshot })} diagnosis={diagnosis} band={props.grade <= 7 ? "junior" : "senior"} scene={scene} />
     <details onToggle={event => { if (event.currentTarget.open) props.runtime.trackActivity("hint_used", { category: chapter.topics[Math.min(practice.stage, 2)].en, feedback: task.hint.en }); }}><summary>{ui.taskHint.en}</summary><p>{task.hint.en}</p></details>
     {props.role === "teacher" && <details className={s.teacher}><summary>{ui.teacher.en}</summary><h3>{ui.objectives.en}</h3><ul>{chapter.outcomes.map(outcome => <li key={outcome.en}>{outcome.en}</li>)}</ul><p>{chapter.teacherPrompt.en}</p><ol>{chapter.rubric.map(point => <li key={point.en}>{point.en}</li>)}</ol></details>}
   </PracticeShell></div>;

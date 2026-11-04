@@ -3,12 +3,12 @@
 .lesson [data-mission-ready] > p,.lesson [data-mission-complete] > p { color:#37584f; }
 .lesson [data-new-mission^="class8-"], .lesson [data-mission-ready^="class8-"], .lesson [data-mission-complete^="class8-"] { --practice-scene:none !important; background:#f7f5ed; }
 .lesson [data-new-mission^="class8-"] > div:first-child p { color:#355b60; opacity:1; }
-.task { display:grid; gap:1.2rem; min-width:0; padding:clamp(1rem,3vw,1.8rem); background:#fffefa; border:1px solid #d6e0da; border-radius:22px; box-shadow:0 5px 0 #dce6dc; }
+.task { display:grid; grid-template-columns:minmax(0,1fr); gap:1.2rem; min-width:0; padding:clamp(1rem,3vw,1.8rem); background:#fffefa; border:1px solid #d6e0da; border-radius:22px; box-shadow:0 5px 0 #dce6dc; }
 .task button,.task input,.task select { font:inherit; }
 .task button:focus-visible,.task input:focus-visible,.task select:focus-visible,.notebook textarea:focus-visible { outline:3px solid #e8a12a; outline-offset:3px; }
 .case { padding:1rem 1.2rem; border-left:4px solid #2a806b; background:#edf4ed; border-radius:4px 12px 12px 4px; }
 .case > span { font-size:.73rem; letter-spacing:.1em; text-transform:uppercase; font-weight:800; color:#27604f; }
-.case p { margin:.5rem 0 0; line-height:1.75; }
+.case p { margin:.5rem 0 0; line-height:1.75; overflow-wrap:anywhere; }
 .choices { display:grid; gap:.65rem; }
 .choice,.selection { display:flex; gap:.8rem; align-items:center; width:100%; text-align:left; padding:1rem 1.1rem; border:1.5px solid #cbd8d7; border-radius:13px; background:#fff; color:#173c48; line-height:1.6; cursor:pointer; }
 .choice[aria-pressed="true"],.selection:has(input:checked) { background:#e8f4f2; border-color:#287b75; box-shadow:inset 4px 0 #287b75; }
@@ -66,7 +66,7 @@
 .robotCell small { font-size:.6rem; text-align:center; line-height:1.2; }
 .moveList { display:flex; gap:.4rem; flex-wrap:wrap; padding:0; margin:0; list-style:none; }
 .moveList li { font-size:.8rem; background:#edf2eb; border-radius:6px; padding:.4rem; }
-.result { background:#e8f1ec; border:1px solid #b6d1c3; border-radius:12px; padding:1rem; line-height:1.7; }
+.result { background:#e8f1ec; border:1px solid #b6d1c3; border-radius:12px; padding:1rem; line-height:1.7; overflow-wrap:anywhere; }
 .result h3 { margin:0 0 .6rem; }
 .model { display:grid; gap:.8rem; }
 .model > p { line-height:1.75; }
