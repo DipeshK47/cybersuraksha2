@@ -36,6 +36,8 @@ const CSP = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
+  // blob: lets the story player play a downloaded copy of its narration when a host cannot serve byte ranges.
+  "media-src 'self' blob:",
   "font-src 'self' data:",
   "connect-src 'self'",
   "frame-ancestors 'none'",
