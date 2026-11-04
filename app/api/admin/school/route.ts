@@ -4,14 +4,14 @@ import { getDb } from "../../../../db";
 import { schools, schoolSettings } from "../../../../db/schema";
 import { requireRole } from "../../../lib/auth";
 import { schoolContent } from "../../../lib/content-access";
-import { schoolGrades, schoolSubjects } from "../../../lib/content-policy";
+import { availableSchoolGrades, schoolSubjects } from "../../../lib/content-policy";
 import { writeAudit } from "../../../lib/audit";
 import { parseJson } from "../../../lib/validation";
 
 export async function GET(request: Request) {
   const auth = await requireRole(request, "school_admin");
   if (auth instanceof Response) return auth;
-  return Response.json({ ...await schoolContent(auth.schoolId), availableGrades: schoolGrades, availableSubjects: schoolSubjects });
+  return Response.json({ ...await schoolContent(auth.schoolId), availableGrades: availableSchoolGrades, availableSubjects: schoolSubjects });
 }
 
 export async function PUT(request: Request) {
@@ -19,7 +19,7 @@ export async function PUT(request: Request) {
   if (auth instanceof Response) return auth;
   const parsed = await parseJson(request, z.object({
     schoolName: z.string().trim().min(2).max(160),
-    grades: z.array(z.number().int().refine(value => schoolGrades.includes(value))).min(1).max(10),
+    grades: z.array(z.number().int().refine(value => availableSchoolGrades.includes(value))).min(1).max(10),
     subjects: z.array(z.string().refine(value => schoolSubjects.includes(value))).min(1).max(6),
   }));
   if (parsed.error) return parsed.error;
