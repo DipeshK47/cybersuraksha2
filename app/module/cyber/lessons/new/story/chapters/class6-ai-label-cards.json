@@ -19,7 +19,7 @@
       "caption": "The discovery club makes illustrated leaf cards. Their task is to sort drawings as round or pointed. Meera records the visible shape, while Kabir wonders whether the artist’s home address would help the sorter choose the right group.",
       "speech": "The discovery club makes illustrated leaf cards. Their task is to sort drawings as round or pointed. Meera records the visible shape, while Kabir wonders whether the artist’s home address would help the sorter choose the right group.",
       "dialogue": "Features to observe",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.728
@@ -32,7 +32,7 @@
       "caption": "A feature is information used to make a prediction. A label is the answer supplied for an example during learning. Shape is relevant here; a home address is unnecessary. Collecting more private information does not automatically make a useful learning dataset.",
       "speech": "A feature is information used to make a prediction. A label is the answer supplied for an example during learning. Shape is relevant here; a home address is unnecessary. Collecting more private information does not automatically make a useful learning dataset.",
       "dialogue": "Labels to teach",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 17.378,
       "duration": 19.632
@@ -45,7 +45,7 @@
       "caption": "One drawing is smudged so neither shape is clear. The teacher keeps it aside for review instead of forcing an answer. A confident invented label could teach the wrong connection. A smaller clear set is more useful than a larger set containing hidden guesses.",
       "speech": "One drawing is smudged so neither shape is clear. The teacher keeps it aside for review instead of forcing an answer. A confident invented label could teach the wrong connection. A smaller clear set is more useful than a larger set containing hidden guesses.",
       "dialogue": "Uncertain examples",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 37.66,
       "duration": 19.176
@@ -58,7 +58,7 @@
       "caption": "The sorting task has two shape labels, but the drawing does not show enough detail to decide either one. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The sorting task has two shape labels, but the drawing does not show enough detail to decide either one. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "What should happen to the smudged drawing?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 57.486,
       "duration": 12.48
@@ -71,7 +71,7 @@
       "caption": "Keep the unclear example for review rather than inventing a label. Uncertainty should remain visible so the team can improve the example later.",
       "speech": "Keep the unclear example for review rather than inventing a label. Uncertainty should remain visible so the team can improve the example later.",
       "dialogue": "Choose relevant information for a stated sorting task.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 70.616,
       "duration": 10.344
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through features to observe, then labels to teach, then uncertain examples. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through features to observe, then labels to teach, then uncertain examples. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why is an honest unknown better than a made-up training label?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 81.61,
       "duration": 18.768

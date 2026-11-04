@@ -22,6 +22,6 @@ export const class7Subjects: GradeSubject[] = [
     "name": "Cyber Fraud",
     "description": "Check identity, requested actions and recurring costs, then record facts and seek trusted support."
   }
-].map(subject => ({ ...subject, strand: subject.name as GradeSubject['strand'], book: 'CyberShiksha Connection Lab · Class 7', chapters: [],
+].map(subject => ({ ...subject, strand: subject.name as GradeSubject['strand'], book: 'CyberShiksha Interactive Curriculum · Class 7', chapters: [],
   modules: class7Chapters.filter(chapter => chapter.strand === subject.name).map(chapter => ({ title: chapter.title.en, strand: chapter.strand })),
 }));

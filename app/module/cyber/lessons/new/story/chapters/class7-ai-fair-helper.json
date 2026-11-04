@@ -19,7 +19,7 @@
       "caption": "The club tests an object helper on coloured drawings and outline sketches. It gets three of four coloured drawings right but only one of four outlines. Tara notices that one overall success count would hide a difference between the two kinds of material.",
       "speech": "The club tests an object helper on coloured drawings and outline sketches. It gets three of four coloured drawings right but only one of four outlines. Tara notices that one overall success count would hide a difference between the two kinds of material.",
       "dialogue": "Coverage across styles",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.144
@@ -32,7 +32,7 @@
       "caption": "The teacher asks for correct, incorrect and total counts for each style. The training collection contains many coloured examples and very few outlines. That gap is a reason to investigate, not proof that the tool works equally well for everyone or that one drawing style is less valuable.",
       "speech": "The teacher asks for correct, incorrect and total counts for each style. The training collection contains many coloured examples and very few outlines. That gap is a reason to investigate, not proof that the tool works equally well for everyone or that one drawing style is less valuable.",
       "dialogue": "Compare group results",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.794,
       "duration": 20.976
@@ -45,7 +45,7 @@
       "caption": "Neel adds relevant checked outline examples and proposes fresh checks before wider use. People can review and correct the helper’s suggestions. This classroom capstone evaluates fictional objects, never children’s ability or worth. The team must be willing to revise the helper or stop using it when evidence is inadequate.",
       "speech": "Neel adds relevant checked outline examples and proposes fresh checks before wider use. People can review and correct the helper’s suggestions. This classroom capstone evaluates fictional objects, never children’s ability or worth. The team must be willing to revise the helper or stop using it when evidence is inadequate.",
       "dialogue": "Use, revise or stop",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 40.42,
       "duration": 23.904
@@ -58,7 +58,7 @@
       "caption": "Results differ by style, and outline examples are poorly represented in training. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Results differ by style, and outline examples are poorly represented in training. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What should happen before wider use?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 64.974,
       "duration": 11.76
@@ -71,7 +71,7 @@
       "caption": "Improve relevant coverage, test fresh examples from both styles and keep human review. Do not hide the poorer result inside one overall number.",
       "speech": "Improve relevant coverage, test fresh examples from both styles and keep human review. Do not hide the poorer result inside one overall number.",
       "dialogue": "Identify a representation gap in object examples.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 77.384,
       "duration": 11.496
@@ -84,7 +84,7 @@
       "caption": "Investigate coverage across styles, then compare group results, then use, revise or stop. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate coverage across styles, then compare group results, then use, revise or stop. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "What can a group comparison reveal that one overall count hides?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 89.53,
       "duration": 15.72

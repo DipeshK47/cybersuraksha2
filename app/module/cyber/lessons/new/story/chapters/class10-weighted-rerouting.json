@@ -19,7 +19,7 @@
       "caption": "Aditi opens a fictional delivery map in the Decision Lab. Vihaan marks a start, a goal and two required collection stops. The goal alone cannot pass: evidence must show both stops and both budgets.",
       "speech": "Aditi opens a fictional delivery map in the Decision Lab. Vihaan marks a start, a goal and two required collection stops. The goal alone cannot pass: evidence must show both stops and both budgets.",
       "dialogue": "List every condition before drawing a path.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 15.504
@@ -32,7 +32,7 @@
       "caption": "The supplied alternatives enter different cells and may revisit a cell. Every entry charges its stated cost, while the initial start is free. Aditi records the actual sequence instead of multiplying the number of moves by an assumed uniform price.",
       "speech": "The supplied alternatives enter different cells and may revisit a cell. Every entry charges its stated cost, while the initial start is free. Aditi records the actual sequence instead of multiplying the number of moves by an assumed uniform price.",
       "dialogue": "Repeated entry is a new charge.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 16.154,
       "duration": 18.288
@@ -45,7 +45,7 @@
       "caption": "A central cell closes in the replay. A previously legal path now fails at its first attempt to enter that cell, even if its old totals fitted the budgets. Vihaan shows the failure instead of continuing through the obstacle.",
       "speech": "A central cell closes in the replay. A previously legal path now fails at its first attempt to enter that cell, even if its old totals fitted the budgets. Vihaan shows the failure instead of continuing through the obstacle.",
       "dialogue": "Old success is not evidence after a change.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 35.092,
       "duration": 16.536
@@ -58,7 +58,7 @@
       "caption": "Aditi proposes a detour that still visits both collection stops. Decide which checks must be repeated before accepting it. Avoiding the closure is necessary, but a longer or more expensive path can still break a budget or accidentally miss a required visit.",
       "speech": "Aditi proposes a detour that still visits both collection stops. Decide which checks must be repeated before accepting it. Avoiding the closure is necessary, but a longer or more expensive path can still break a budget or accidentally miss a required visit.",
       "dialogue": "Retest all route conditions.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 52.278,
       "duration": 18.84
@@ -71,7 +71,7 @@
       "caption": "The marker follows the revised cell sequence, adding each entered cost as it moves. Previously visited cells remain chargeable on return. Their trace records stops when reached, so the checklist uses actual simulation evidence.",
       "speech": "The marker follows the revised cell sequence, adding each entered cost as it moves. Previously visited cells remain chargeable on return. Their trace records stops when reached, so the checklist uses actual simulation evidence.",
       "dialogue": "Use the path that was actually tested.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 71.768,
       "duration": 17.64
@@ -84,7 +84,7 @@
       "caption": "They retain a failed closure test and a passing alternative, with both budgets and stops checked again. A later entry-cost change requires recalculation even when the geometry stays valid. Multiple routes pass when all constraints hold.",
       "speech": "They retain a failed closure test and a passing alternative, with both budgets and stops checked again. A later entry-cost change requires recalculation even when the geometry stays valid. Multiple routes pass when all constraints hold.",
       "dialogue": "Preserve both passing and failing evidence.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 90.058,
       "duration": 17.52

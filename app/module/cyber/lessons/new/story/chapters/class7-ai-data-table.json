@@ -19,7 +19,7 @@
       "caption": "The Connection Lab records fictional paper strips for a sorting activity. Each row has an example identifier, a measured length and a checked short-or-long label. Tara notices that the length describes an input feature, while the label is the result the helper should learn to predict.",
       "speech": "The Connection Lab records fictional paper strips for a sorting activity. Each row has an example identifier, a measured length and a checked short-or-long label. Tara notices that the length describes an input feature, while the label is the result the helper should learn to predict.",
       "dialogue": "Features and labels",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.968
@@ -32,7 +32,7 @@
       "caption": "One example appears twice. Another has no label, and the same identifier carries two conflicting measurements elsewhere. Neel wants to choose whichever value makes the table look tidy. The teacher instead asks the team to preserve the uncertainty and review the source record.",
       "speech": "One example appears twice. Another has no label, and the same identifier carries two conflicting measurements elsewhere. Neel wants to choose whichever value makes the table look tidy. The teacher instead asks the team to preserve the uncertainty and review the source record.",
       "dialogue": "Record quality",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.618,
       "duration": 20.736
@@ -45,7 +45,7 @@
       "caption": "A neat table can still contain poor evidence. Repeated copies do not create independent examples, and invented labels can teach mistakes. The team keeps only necessary object data, sets unresolved rows aside and documents repairs. Learners’ names and phone numbers have no role in this sorting task.",
       "speech": "A neat table can still contain poor evidence. Repeated copies do not create independent examples, and invented labels can teach mistakes. The team keeps only necessary object data, sets unresolved rows aside and documents repairs. Learners’ names and phone numbers have no role in this sorting task.",
       "dialogue": "Only necessary data",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 42.004,
       "duration": 23.4
@@ -58,7 +58,7 @@
       "caption": "The same example identifier has two different recorded lengths. The original measurement has not been checked. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The same example identifier has two different recorded lengths. The original measurement has not been checked. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What should happen to a conflicting row?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 66.054,
       "duration": 13.848
@@ -71,7 +71,7 @@
       "caption": "Hold the row for source review and document the correction. Guessing a convenient value would hide uncertainty rather than improve the evidence.",
       "speech": "Hold the row for source review and document the correction. Guessing a convenient value would hide uncertainty rather than improve the evidence.",
       "dialogue": "Identify duplicate, missing and conflicting records.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 80.552,
       "duration": 10.08
@@ -84,7 +84,7 @@
       "caption": "Investigate features and labels, then record quality, then only necessary data. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate features and labels, then record quality, then only necessary data. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Why can copying a row make a dataset larger without adding new evidence?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 91.282,
       "duration": 14.88

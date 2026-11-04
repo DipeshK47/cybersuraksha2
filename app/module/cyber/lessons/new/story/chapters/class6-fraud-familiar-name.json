@@ -19,7 +19,7 @@
       "caption": "A new account copies Meera’s cousin’s photo and demands a voucher. It says the old phone is broken and offers a new number for checking. Kabir asks whether the suggested checking route is controlled by the same unverified sender.",
       "speech": "A new account copies Meera’s cousin’s photo and demands a voucher. It says the old phone is broken and offers a new number for checking. Kabir asks whether the suggested checking route is controlled by the same unverified sender.",
       "dialogue": "Identity claims",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.56
@@ -32,7 +32,7 @@
       "caption": "A name, photograph or familiar detail can be copied or learned. Recognition is a useful clue, but it is not independent confirmation of an unusual request. The team separates what the message claims from what a trusted person can verify through a route already known before the message.",
       "speech": "A name, photograph or familiar detail can be copied or learned. Recognition is a useful clue, but it is not independent confirmation of an unusual request. The team separates what the message claims from what a trusted person can verify through a route already known before the message.",
       "dialogue": "A known contact route",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 17.21,
       "duration": 20.424
@@ -45,7 +45,7 @@
       "caption": "Meera asks a caregiver to contact the cousin using the family’s saved number. She does not send a voucher, code or private detail while waiting. The class does not try to trap or accuse the sender; the goal is a safe independent check.",
       "speech": "Meera asks a caregiver to contact the cousin using the family’s saved number. She does not send a voucher, code or private detail while waiting. The class does not try to trap or accuse the sender; the goal is a safe independent check.",
       "dialogue": "Evidence before trust",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 38.284,
       "duration": 17.832
@@ -58,7 +58,7 @@
       "caption": "The new account supplies a new checking number. The family already has an older saved contact for the cousin. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The new account supplies a new checking number. The family already has an older saved contact for the cousin. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Which contact route is independent?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 56.766,
       "duration": 13.608
@@ -71,7 +71,7 @@
       "caption": "Ask a caregiver to use the pre-existing saved contact. A new number supplied inside the suspicious request is not an independent check of that same request.",
       "speech": "Ask a caregiver to use the pre-existing saved contact. A new number supplied inside the suspicious request is not an independent check of that same request.",
       "dialogue": "Choose a pre-existing independent verification route.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 71.024,
       "duration": 11.712
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through identity claims, then a known contact route, then evidence before trust. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through identity claims, then a known contact route, then evidence before trust. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why is asking the same sender again not independent verification?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 83.386,
       "duration": 18.888

@@ -19,7 +19,7 @@
       "caption": "The discovery trail has a start, stamp station and finish on a paper grid. Meera breaks the challenge into reading the map, choosing a route and checking the stamp. Kabir adds the rule that blocked squares must never be entered.",
       "speech": "The discovery trail has a start, stamp station and finish on a paper grid. Meera breaks the challenge into reading the map, choosing a route and checking the stamp. Kabir adds the rule that blocked squares must never be entered.",
       "dialogue": "Combine the plan",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.128
@@ -32,7 +32,7 @@
       "caption": "Reaching the finish is not the only goal: the route must visit the stamp station within the move limit. The team keeps each constraint visible. They trace every move rather than assuming that a route which looks short must satisfy all of the requirements.",
       "speech": "Reaching the finish is not the only goal: the route must visit the stamp station within the move limit. The team keeps each constraint visible. They trace every move rather than assuming that a route which looks short must satisfy all of the requirements.",
       "dialogue": "Test the constraints",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.778,
       "duration": 18.096
@@ -45,7 +45,7 @@
       "caption": "The teacher moves an obstacle after the first successful test. The team records what changed, edits its route and checks the complete goal again. This final challenge combines earlier skills; the explanation should name the evidence that the finished plan satisfies each stated requirement.",
       "speech": "The teacher moves an obstacle after the first successful test. The team records what changed, edits its route and checks the complete goal again. This final challenge combines earlier skills; the explanation should name the evidence that the finished plan satisfies each stated requirement.",
       "dialogue": "Revise and explain",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 35.524,
       "duration": 20.52
@@ -58,7 +58,7 @@
       "caption": "The written goal requires both the stamp station and the finish within six moves. The tested route did not visit the station. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The written goal requires both the stamp station and the finish within six moves. The tested route did not visit the station. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "A route reaches the finish but misses the stamp. Has it succeeded?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 56.694,
       "duration": 14.328
@@ -71,7 +71,7 @@
       "caption": "No. Revise the route to visit the required stamp station and finish within the limit. Success must satisfy the whole goal, not just its easiest part.",
       "speech": "No. Revise the route to visit the required stamp station and finish within the limit. Success must satisfy the whole goal, not just its easiest part.",
       "dialogue": "Construct a valid route that visits a required stop.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 71.672,
       "duration": 12.408
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through combine the plan, then test the constraints, then revise and explain. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through combine the plan, then test the constraints, then revise and explain. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Name one changed requirement and the test that checks it.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 84.73,
       "duration": 18.24

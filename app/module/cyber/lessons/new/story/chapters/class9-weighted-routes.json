@@ -19,7 +19,7 @@
       "caption": "Reva maps a fictional delivery cart across the makers fair. Nikhil draws the most direct route to the collection desk. Their classroom token has a pretend battery budget, making each route a useful calculation.",
       "speech": "Reva maps a fictional delivery cart across the makers fair. Nikhil draws the most direct route to the collection desk. Their classroom token has a pretend battery budget, making each route a useful calculation.",
       "dialogue": "What does a move cost here?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 15.84
@@ -32,7 +32,7 @@
       "caption": "Some floor cells cost more tokens to enter than others. Fewer moves can therefore spend more battery. Reva lists the entered cells in order and adds their individual costs, keeping the move count in a separate column.",
       "speech": "Some floor cells cost more tokens to enter than others. Fewer moves can therefore spend more battery. Reva lists the entered cells in order and adds their individual costs, keeping the move count in a separate column.",
       "dialogue": "Distance and cost answer different questions.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 16.49,
       "duration": 15.864
@@ -45,7 +45,7 @@
       "caption": "The starting cell is free before movement begins. Every later entry costs its listed amount, even when the cart returns to a previously visited cell. Unmarked cells cost one token. A blocked cell cannot be crossed, whatever battery remains in the budget.",
       "speech": "The starting cell is free before movement begins. Every later entry costs its listed amount, even when the cart returns to a previously visited cell. Unmarked cells cost one token. A blocked cell cannot be crossed, whatever battery remains in the budget.",
       "dialogue": "Returning to start is another paid entry.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 33.004,
       "duration": 19.416
@@ -58,7 +58,7 @@
       "caption": "Nikhil wants to accept a route because its arrows look short. Reva asks for a completed simulation with visited cells, total moves and total cost. Choose a check that reveals an expensive shortcut before approval.",
       "speech": "Nikhil wants to accept a route because its arrows look short. Reva asks for a completed simulation with visited cells, total moves and total cost. Choose a check that reveals an expensive shortcut before approval.",
       "dialogue": "A drawn arrow has not spent any tokens yet.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 53.07,
       "duration": 16.296
@@ -71,7 +71,7 @@
       "caption": "A new floor notice raises one cell’s entry cost. The old route still reaches the desk, yet it may now exceed the battery budget. They preserve its earlier result and run a revised route under the new costs.",
       "speech": "A new floor notice raises one cell’s entry cost. The old route still reaches the desk, yet it may now exceed the battery budget. They preserve its earlier result and run a revised route under the new costs.",
       "dialogue": "Reaching the goal is only one requirement.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 70.016,
       "duration": 15.648
@@ -84,7 +84,7 @@
       "caption": "Different valid routes can meet the same limits. Their evidence sheet stores the actual moves and cost rather than a single preferred arrow pattern. Compare another working route and explain which expensive entries each avoids.",
       "speech": "Different valid routes can meet the same limits. Their evidence sheet stores the actual moves and cost rather than a single preferred arrow pattern. Compare another working route and explain which expensive entries each avoids.",
       "dialogue": "Validate the route you actually built.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 86.314,
       "duration": 16.392

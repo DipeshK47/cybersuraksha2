@@ -19,7 +19,7 @@
       "caption": "Reva and Nikhil model a lending queue using invented borrowers on paper cards. Every card carries a fixed borrower identifier, a name and a kit count. Queue order can change without changing who owns the information on each card.",
       "speech": "Reva and Nikhil model a lending queue using invented borrowers on paper cards. Every card carries a fixed borrower identifier, a name and a kit count. Queue order can change without changing who owns the information on each card.",
       "dialogue": "Move the card, not just its name.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 17.376
@@ -32,7 +32,7 @@
       "caption": "Their list uses zero based positions: the front card is at position zero. Removing that card shifts later positions towards the front. Nikhil marks positions outside the cards because a position describes the current arrangement rather than a permanent identity.",
       "speech": "Their list uses zero based positions: the front card is at position zero. Removing that card shifts later positions towards the front. Nikhil marks positions outside the cards because a position describes the current arrangement rather than a permanent identity.",
       "dialogue": "An index can change while an ID stays fixed.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 18.026,
       "duration": 18.912
@@ -45,7 +45,7 @@
       "caption": "Sorting names separately from counts pairs people with someone else’s kits. Reva keeps complete records together and looks up the requested identifier before changing a field within its matching record.",
       "speech": "Sorting names separately from counts pairs people with someone else’s kits. Reva keeps complete records together and looks up the requested identifier before changing a field within its matching record.",
       "dialogue": "The association is part of the data.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 37.588,
       "duration": 14.4
@@ -58,7 +58,7 @@
       "caption": "After the front borrower leaves, a message requests an update to a specific identifier. Nikhil proposes using its old position. Choose the method that finds the record in the current queue, avoiding an accidental change to the next borrower’s count.",
       "speech": "After the front borrower leaves, a message requests an update to a specific identifier. Nikhil proposes using its old position. Choose the method that finds the record in the current queue, avoiding an accidental change to the next borrower’s count.",
       "dialogue": "Check identity before changing a field.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 52.638,
       "duration": 17.976
@@ -71,7 +71,7 @@
       "caption": "A new request joins at the back after the completed request is removed. They record both intermediate lists rather than jumping to the final queue. This makes it possible to explain which item moved and why the new borrower did not skip anyone.",
       "speech": "A new request joins at the back after the completed request is removed. They record both intermediate lists rather than jumping to the final queue. This makes it possible to explain which item moved and why the new borrower did not skip anyone.",
       "dialogue": "State whether insertion means front or back.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 71.264,
       "duration": 17.736
@@ -84,7 +84,7 @@
       "caption": "Their final check compares identifiers, names and counts before and after the update. Only the intended field should differ. Keep this trace: a believable count can still belong to the wrong person.",
       "speech": "Their final check compares identifiers, names and counts before and after the update. Only the intended field should differ. Keep this trace: a believable count can still belong to the wrong person.",
       "dialogue": "Show whose value changed, not only the number.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 89.65,
       "duration": 14.976

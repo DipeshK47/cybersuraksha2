@@ -19,7 +19,7 @@
       "caption": "Nikhil gives Reva imaginary parcel measurements for sorting. The ledger looks tidy, but lengths use centimetres, millimetres and an unspecified unit. Before training, they need a data card explaining where measurements came from and their meaning.",
       "speech": "Nikhil gives Reva imaginary parcel measurements for sorting. The ledger looks tidy, but lengths use centimetres, millimetres and an unspecified unit. Before training, they need a data card explaining where measurements came from and their meaning.",
       "dialogue": "A table needs a data card.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 17.568
@@ -32,7 +32,7 @@
       "caption": "Their teacher created A and B and permitted classroom training. C comes from an unnamed upload without a permission note. Reva holds C: appearing onscreen does not establish permission to reuse a record.",
       "speech": "Their teacher created A and B and permitted classroom training. C comes from an unnamed upload without a permission note. Reva holds C: appearing onscreen does not establish permission to reuse a record.",
       "dialogue": "Visible does not mean permitted.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 18.218,
       "duration": 15.912
@@ -45,7 +45,7 @@
       "caption": "A measures 4 centimetres; B measures 60 millimetres, equivalent to 6 centimetres. D has a blank length, meaning unknown rather than zero. Nikhil keeps original values beside corrections so learners can trace what changed.",
       "speech": "A measures 4 centimetres; B measures 60 millimetres, equivalent to 6 centimetres. D has a blank length, meaning unknown rather than zero. Nikhil keeps original values beside corrections so learners can trace what changed.",
       "dialogue": "Keep a correction trail.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.78,
       "duration": 17.832
@@ -58,7 +58,7 @@
       "caption": "E has a complete measurement and checked label, but its card reserves it for testing. Choose whether to move E into training to enlarge it. Reva needs an honest unseen check, rather than an answer sheet rehearsed beforehand.",
       "speech": "E has a complete measurement and checked label, but its card reserves it for testing. Choose whether to move E into training to enlarge it. Reva needs an honest unseen check, rather than an answer sheet rehearsed beforehand.",
       "dialogue": "A reserved test keeps its role.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 53.262,
       "duration": 16.416
@@ -71,7 +71,7 @@
       "caption": "The revised specification uses length in centimetres as input and a teacher checked parcel category as target. Row identifiers are bookkeeping, not measurements. Addresses and names are excluded because fictional parcel measurements need no information about senders.",
       "speech": "The revised specification uses length in centimetres as input and a teacher checked parcel category as target. Row identifiers are bookkeeping, not measurements. Addresses and names are excluded because fictional parcel measurements need no information about senders.",
       "dialogue": "Features must mean the same thing.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 70.328,
       "duration": 19.44
@@ -84,7 +84,7 @@
       "caption": "Only permitted, complete training rows enter the model. Unknown units and missing measurements wait for clarification, while E remains separate. In the lab, repair the ledger, choose consistent features and document roles before declaring readiness.",
       "speech": "Only permitted, complete training rows enter the model. Unknown units and missing measurements wait for clarification, while E remains separate. In the lab, repair the ledger, choose consistent features and document roles before declaring readiness.",
       "dialogue": "Document readiness, not appearances.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 90.418,
       "duration": 17.544

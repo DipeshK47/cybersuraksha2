@@ -19,7 +19,7 @@
       "caption": "Neel needs a printable craft template for the fair. An advert offers the template but asks him to install a repair program first. Tara compares that demand with the teacher’s approved resource folder, which already contains a simple document for the activity.",
       "speech": "Neel needs a printable craft template for the fair. An advert offers the template but asks him to install a repair program first. Tara compares that demand with the teacher’s approved resource folder, which already contains a simple document for the activity.",
       "dialogue": "Source and purpose",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.888
@@ -32,7 +32,7 @@
       "caption": "A download’s purpose matters as much as its appealing filename. Reading a document and installing an application are different actions. A familiar-looking icon or filename does not establish the source, contents or access a program might request after it is opened.",
       "speech": "A download’s purpose matters as much as its appealing filename. Reading a document and installing an application are different actions. A familiar-looking icon or filename does not establish the source, contents or access a program might request after it is opened.",
       "dialogue": "Document or application",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 19.538,
       "duration": 19.08
@@ -45,7 +45,7 @@
       "caption": "The class compares fictional file cards without downloading any software. They choose the known resource and ask the teacher about unexpected requests. Updates and installations use the school’s established process, not an advert’s promise that a new tool must be installed before ordinary learning can continue.",
       "speech": "The class compares fictional file cards without downloading any software. They choose the known resource and ask the teacher about unexpected requests. Updates and installations use the school’s established process, not an advert’s promise that a new tool must be installed before ordinary learning can continue.",
       "dialogue": "Unexpected access",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.268,
       "duration": 21.6
@@ -58,7 +58,7 @@
       "caption": "The task needs a printable document. A known teacher-approved folder supplies it; an advert demands an unrelated repair installation. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The task needs a printable document. A known teacher-approved folder supplies it; an advert demands an unrelated repair installation. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Which resource should Neel use first?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 61.518,
       "duration": 15.696
@@ -71,7 +71,7 @@
       "caption": "Use the approved document route and tell the teacher about the unrelated installation demand. The extra program is not justified by the stated craft task.",
       "speech": "Use the approved document route and tell the teacher about the unrelated installation demand. The extra program is not justified by the stated craft task.",
       "dialogue": "Identify an unrelated installation or access demand.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 77.864,
       "duration": 11.736
@@ -84,7 +84,7 @@
       "caption": "Investigate source and purpose, then document or application, then unexpected access. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate source and purpose, then document or application, then unexpected access. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Why does a familiar filename not establish that a file is appropriate?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 90.25,
       "duration": 15.216

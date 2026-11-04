@@ -19,7 +19,7 @@
       "caption": "Aditi places 20 fictional reading cards on the Decision Lab desk. Positive means needs a human reading check. Vihaan keeps the model’s prediction separate from the checked label; neither column describes a pupil or their ability.",
       "speech": "Aditi places 20 fictional reading cards on the Decision Lab desk. Positive means needs a human reading check. Vihaan keeps the model’s prediction separate from the checked label; neither column describes a pupil or their ability.",
       "dialogue": "Positive names the target condition.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 16.92
@@ -32,7 +32,7 @@
       "caption": "The headline says 16 correct out of 20. Vihaan asks whether every error creates the same work. Aditi reveals that some negative cards were flagged, while some positive cards were missed. Accuracy alone does not distinguish these mistakes.",
       "speech": "The headline says 16 correct out of 20. Vihaan asks whether every error creates the same work. Aditi reveals that some negative cards were flagged, while some positive cards were missed. Accuracy alone does not distinguish these mistakes.",
       "dialogue": "Open the error categories.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 17.57,
       "duration": 18.936
@@ -45,7 +45,7 @@
       "caption": "They sort every supplied pair: TP 6, FP 2, FN 2 and TN 10. Predicted positives occupy the TP and FP boxes; checked positives occupy TP and FN. Following those memberships prevents the denominator from changing unnoticed.",
       "speech": "They sort every supplied pair: T P 6, F P 2, F N 2 and T N 10. Predicted positives occupy the T P and F P boxes; checked positives occupy T P and F N. Following those memberships prevents the denominator from changing unnoticed.",
       "dialogue": "Which set does the question count?",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 37.156,
       "duration": 20.568
@@ -58,7 +58,7 @@
       "caption": "Choose between settings under a review capacity of 10 and at most 2 misses. Setting A sends 8 cards and misses 2; setting B sends 11 and misses 1. Fewer misses cannot cancel a capacity violation.",
       "speech": "Choose between settings under a review capacity of 10 and at most 2 misses. Setting A sends 8 cards and misses 2; setting B sends 11 and misses 1. Fewer misses cannot cancel a capacity violation.",
       "dialogue": "Both constraints must hold.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 58.374,
       "duration": 16.248
@@ -71,7 +71,7 @@
       "caption": "Accuracy is 80%; precision, recall and F1 are each 75%. Aditi traces each fraction to its boxes instead of memorising the headline. An empty required denominator would make that rate undefined, so this nonempty pack matters to the calculation.",
       "speech": "Accuracy is 80%; precision, recall and F one are each 75%. Aditi traces each fraction to its boxes instead of memorising the headline. An empty required denominator would make that rate undefined, so this nonempty pack matters to the calculation.",
       "dialogue": "A rate needs its counted set.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 75.272,
       "duration": 20.664
@@ -84,7 +84,7 @@
       "caption": "Their notebook recommends A only for the stated pack constraints. It records the remaining missed positives and the human reviewer, rather than promising perfect detection. Fresh independent evaluation after development would still be needed before considering a bounded pilot.",
       "speech": "Their notebook recommends A only for the stated pack constraints. It records the remaining missed positives and the human reviewer, rather than promising perfect detection. Fresh independent evaluation after development would still be needed before considering a bounded pilot.",
       "dialogue": "Keep the pack and limit in the claim.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 96.586,
       "duration": 19.08

@@ -19,7 +19,7 @@
       "caption": "A message says the makers-fair guide has moved. Its page repeats the school colours and puts the familiar name at the start of a longer host. Tara compares the complete address with the teacher’s printed reference instead of stopping at the first matching word.",
       "speech": "A message says the makers-fair guide has moved. Its page repeats the school colours and puts the familiar name at the start of a longer host. Tara compares the complete address with the teacher’s printed reference instead of stopping at the first matching word.",
       "dialogue": "The complete host",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 17.88
@@ -32,7 +32,7 @@
       "caption": "A host is the address part identifying the site being contacted. Added endings or changed words can point somewhere different. The class uses reserved example names on paper only, so nobody needs to open a suspicious page or enter a password to complete the comparison.",
       "speech": "A host is the address part identifying the site being contacted. Added endings or changed words can point somewhere different. The class uses reserved example names on paper only, so nobody needs to open a suspicious page or enter a password to complete the comparison.",
       "dialogue": "Connection versus trust",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.53,
       "duration": 20.184
@@ -45,7 +45,7 @@
       "caption": "A secure connection protects data travelling to the selected site; it does not confirm every claim made there. Neel returns through the established school bookmark and asks the teacher about the supposed change. Repeating the message’s own link would not be an independent check.",
       "speech": "A secure connection protects data travelling to the selected site; it does not confirm every claim made there. Neel returns through the established school bookmark and asks the teacher about the supposed change. Repeating the message’s own link would not be an independent check.",
       "dialogue": "A known independent route",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.364,
       "duration": 19.608
@@ -58,7 +58,7 @@
       "caption": "The host differs from the teacher’s exact reference. No change was announced through the known school channel. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The host differs from the teacher’s exact reference. No change was announced through the known school channel. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What should Tara do with the longer host?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 59.622,
       "duration": 13.32
@@ -71,7 +71,7 @@
       "caption": "Pause and return through the established school route, then ask about the change. A familiar prefix and connection icon do not establish that the new request is legitimate.",
       "speech": "Pause and return through the established school route, then ask about the change. A familiar prefix and connection icon do not establish that the new request is legitimate.",
       "dialogue": "Explain why encrypted connection does not prove an honest claim.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 73.592,
       "duration": 12.264
@@ -84,7 +84,7 @@
       "caption": "Investigate the complete host, then connection versus trust, then a known independent route. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate the complete host, then connection versus trust, then a known independent route. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "What does a secure connection fail to prove about a message?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 86.506,
       "duration": 15.192

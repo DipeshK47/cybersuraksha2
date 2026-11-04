@@ -19,7 +19,7 @@
       "caption": "The fictional club account lists an unfamiliar active device. Neel immediately guesses that a classmate used it. Tara records only what the supplied screen actually says: an additional session exists, but the person and reason are not established by that label.",
       "speech": "The fictional club account lists an unfamiliar active device. Neel immediately guesses that a classmate used it. Tara records only what the supplied screen actually says: an additional session exists, but the person and reason are not established by that label.",
       "dialogue": "Facts and assumptions",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.584
@@ -32,7 +32,7 @@
       "caption": "A session can remain after work on a shared computer, and an unfamiliar entry deserves checking. The learner should not ignore it or invent a culprit. The teacher compares known classroom use, checks current access and helps end sessions that are not needed.",
       "speech": "A session can remain after work on a shared computer, and an unfamiliar entry deserves checking. The learner should not ignore it or invent a culprit. The teacher compares known classroom use, checks current access and helps end sessions that are not needed.",
       "dialogue": "Sessions that remain open",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.234,
       "duration": 18.6
@@ -45,7 +45,7 @@
       "caption": "If the evidence remains uncertain, the note says unknown. The class practises through synthetic session cards, not real private histories. They stop sharing secrets and use the known account route for help, keeping the response focused on access rather than public accusations or arguments.",
       "speech": "If the evidence remains uncertain, the note says unknown. The class practises through synthetic session cards, not real private histories. They stop sharing secrets and use the known account route for help, keeping the response focused on access rather than public accusations or arguments.",
       "dialogue": "A calm response",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.484,
       "duration": 20.712
@@ -58,7 +58,7 @@
       "caption": "The supplied screen lists an additional active session, but gives no verified identity for the person who opened it. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The supplied screen lists an additional active session, but gives no verified identity for the person who opened it. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What can the unfamiliar-device entry establish?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 60.846,
       "duration": 13.512
@@ -71,7 +71,7 @@
       "caption": "Record the active session as a fact and the person as unknown, then get adult-guided review. A device label alone does not justify accusing a classmate.",
       "speech": "Record the active session as a fact and the person as unknown, then get adult-guided review. A device label alone does not justify accusing a classmate.",
       "dialogue": "Avoid assigning identity or blame without evidence.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 75.008,
       "duration": 11.928
@@ -84,7 +84,7 @@
       "caption": "Investigate facts and assumptions, then sessions that remain open, then a calm response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate facts and assumptions, then sessions that remain open, then a calm response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "What is the difference between an access warning and proof of who caused it?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 87.586,
       "duration": 15.48

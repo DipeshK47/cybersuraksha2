@@ -19,7 +19,7 @@
       "caption": "Vihaan receives a fictional payment image in the Decision Lab. It claims ₹750 under reference B22 and displays a success banner. Aditi records the claim; the picture gives no access to the recipient’s provider history.",
       "speech": "Vihaan receives a fictional payment image in the Decision Lab. It claims ₹750 under reference B22 and displays a success banner. Aditi records the claim; the picture gives no access to the recipient’s provider history.",
       "dialogue": "An image states a claim about a payment.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 17.64
@@ -32,7 +32,7 @@
       "caption": "The supplied provider ledger lists B22 as pending, not completed. Their teacher directs them to the known provider record. The class uses paper records only and makes no prediction about when that pending status will change.",
       "speech": "The supplied provider ledger lists B22 as pending, not completed. Their teacher directs them to the known provider record. The class uses paper records only and makes no prediction about when that pending status will change.",
       "dialogue": "Read the matching provider status.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 18.29,
       "duration": 17.352
@@ -45,7 +45,7 @@
       "caption": "Aditi aligns the image and ledger using the same reference and amount. Matching identifies the row; pending remains unconfirmed. Vihaan keeps the sender’s success claim beside the conflicting status instead of deleting the disagreement.",
       "speech": "Aditi aligns the image and ledger using the same reference and amount. Matching identifies the row; pending remains unconfirmed. Vihaan keeps the sender’s success claim beside the conflicting status instead of deleting the disagreement.",
       "dialogue": "Matching fields do not override status.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 36.292,
       "duration": 17.592
@@ -58,7 +58,7 @@
       "caption": "The learner chooses to check the recipient-side record with the teacher before releasing a fictional reservation. A request for clarification is useful even without proof of deliberate deception. Neither accusations nor another transfer resolve this evidence gap.",
       "speech": "The learner chooses to check the recipient-side record with the teacher before releasing a fictional reservation. A request for clarification is useful even without proof of deliberate deception. Neither accusations nor another transfer resolve this evidence gap.",
       "dialogue": "Check first; do not invent intent.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 54.534,
       "duration": 18.504
@@ -71,7 +71,7 @@
       "caption": "Other supplied rows show B21 completed at ₹480 and B24 completed at ₹220. B23 records a ₹320 credit followed by an equal ₹320 reversal. Aditi pairs reversal and reference, excluding that credit from retained money.",
       "speech": "Other supplied rows show B21 completed at ₹480 and B24 completed at ₹220. B23 records a ₹320 credit followed by an equal ₹320 reversal. Aditi pairs reversal and reference, excluding that credit from retained money.",
       "dialogue": "Retained credit requires the whole stated trail.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 73.688,
       "duration": 22.104
@@ -84,7 +84,7 @@
       "caption": "Vihaan totals the retained completed credits and records ₹700. The pending image claim contributes nothing to that confirmed total. Their reconciliation table preserves reference, status and arithmetic separately, ready for revision if a later supplied provider record changes the evidence.",
       "speech": "Vihaan totals the retained completed credits and records ₹700. The pending image claim contributes nothing to that confirmed total. Their reconciliation table preserves reference, status and arithmetic separately, ready for revision if a later supplied provider record changes the evidence.",
       "dialogue": "A later status needs a fresh calculation.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 96.442,
       "duration": 21.528

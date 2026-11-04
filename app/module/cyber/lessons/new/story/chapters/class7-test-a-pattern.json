@@ -19,7 +19,7 @@
       "caption": "The Connection Lab makes tile strips by starting with three tiles and adding two at every new stage. Tara records three, five and seven. Neel proposes doubling the previous count because growing patterns sometimes double, but their actual construction instructions say something different.",
       "speech": "The Connection Lab makes tile strips by starting with three tiles and adding two at every new stage. Tara records three, five and seven. Neel proposes doubling the previous count because growing patterns sometimes double, but their actual construction instructions say something different.",
       "dialogue": "A stated construction rule",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 20.304
@@ -32,7 +32,7 @@
       "caption": "A short list can fit many invented rules. These tasks provide the construction rule so the prediction has a clear basis. To find the next strip, add two to the previous count. To check a proposed explanation, compare it with every supplied stage, not just one convenient example.",
       "speech": "A short list can fit many invented rules. These tasks provide the construction rule so the prediction has a clear basis. To find the next strip, add two to the previous count. To check a proposed explanation, compare it with every supplied stage, not just one convenient example.",
       "dialogue": "Predict later cases",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.954,
       "duration": 21.024
@@ -45,7 +45,7 @@
       "caption": "The teacher shows a claimed stage of twelve after the strip of nine. That claim disagrees with the add-two instruction, which gives eleven. The team keeps the mismatch in its record and explains it. A counterexample is useful evidence, not an awkward value to erase so the rule looks successful.",
       "speech": "The teacher shows a claimed stage of twelve after the strip of nine. That claim disagrees with the add-two instruction, which gives eleven. The team keeps the mismatch in its record and explains it. A counterexample is useful evidence, not an awkward value to erase so the rule looks successful.",
       "dialogue": "Check counterexamples",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 42.628,
       "duration": 21.84
@@ -58,7 +58,7 @@
       "caption": "Construction: begin with three tiles and add two at each new stage. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Construction: begin with three tiles and add two at each new stage. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What follows seven under the supplied rule?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 65.118,
       "duration": 10.656
@@ -71,7 +71,7 @@
       "caption": "The next count is nine. It follows the stated add-two construction; doubling would contradict earlier stages as well as the instruction.",
       "speech": "The next count is nine. It follows the stated add-two construction; doubling would contradict earlier stages as well as the instruction.",
       "dialogue": "Calculate later counts under the rule.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 76.424,
       "duration": 10.032
@@ -84,7 +84,7 @@
       "caption": "Investigate a stated construction rule, then predict later cases, then check counterexamples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate a stated construction rule, then predict later cases, then check counterexamples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "How does an explicit construction rule make a prediction testable?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 87.106,
       "duration": 15.648

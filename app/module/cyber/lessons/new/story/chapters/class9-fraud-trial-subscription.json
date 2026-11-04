@@ -19,7 +19,7 @@
       "caption": "Nikhil finds a fictional drawing-library trial for the exhibition. Reva reads beyond free. The terms describe a trial followed by recurring charges. The class inspects the schedule before recommending it to an adult.",
       "speech": "Nikhil finds a fictional drawing-library trial for the exhibition. Reva reads beyond free. The terms describe a trial followed by recurring charges. The class inspects the schedule before recommending it to an adult.",
       "dialogue": "Free describes a period, not every future charge.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.728
@@ -32,7 +32,7 @@
       "caption": "The paper authorisation card names the merchant and repeating amount; it is no enrolment instruction. Nikhil separates permission for later charges from a single purchase because the schedule changes the commitment.",
       "speech": "The paper authorisation card names the merchant and repeating amount; it is no enrolment instruction. Nikhil separates permission for later charges from a single purchase because the schedule changes the commitment.",
       "dialogue": "Read what repeats and when.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.378,
       "duration": 14.76
@@ -45,7 +45,7 @@
       "caption": "Reva lists only the dates explicitly supplied in the terms and multiplies the charge by that count. She includes no imaginary tax, discount or missed month. A cost estimate states assumptions so others can reproduce the total.",
       "speech": "Reva lists only the dates explicitly supplied in the terms and multiplies the charge by that count. She includes no imaginary tax, discount or missed month. A cost estimate states assumptions so others can reproduce the total.",
       "dialogue": "Use the given dates, not a guessed calendar.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 32.788,
       "duration": 17.544
@@ -58,7 +58,7 @@
       "caption": "A cancellation card says request received. Nikhil wants to mark the trial cancelled immediately, but Reva asks for the service confirmation and the authorisation status. An acknowledgement shows that a request arrived; it does not state that every later charge has stopped.",
       "speech": "A cancellation card says request received. Nikhil wants to mark the trial cancelled immediately, but Reva asks for the service confirmation and the authorisation status. An acknowledgement shows that a request arrived; it does not state that every later charge has stopped.",
       "dialogue": "Requested and confirmed are different states.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 50.982,
       "duration": 19.896
@@ -71,7 +71,7 @@
       "caption": "Their teacher helps compare a later service cancellation confirmation with a separate provider record for recurring authorisation. They record exactly what each confirms and when it takes effect. Where a status is missing, they write unknown and seek clarification through known support.",
       "speech": "Their teacher helps compare a later service cancellation confirmation with a separate provider record for recurring authorisation. They record exactly what each confirms and when it takes effect. Where a status is missing, they write unknown and seek clarification through known support.",
       "dialogue": "Do not fill a missing status with hope.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 71.528,
       "duration": 19.92
@@ -84,7 +84,7 @@
       "caption": "The simulation changes the recurring amount on an offer. Reva and Nikhil recalculate before comparing it with the earlier plan. Their checklist keeps trial dates, repeating cost, cancellation evidence and authorisation evidence visible, without calling unclear terms proof of fraud.",
       "speech": "The simulation changes the recurring amount on an offer. Reva and Nikhil recalculate before comparing it with the earlier plan. Their checklist keeps trial dates, repeating cost, cancellation evidence and authorisation evidence visible, without calling unclear terms proof of fraud.",
       "dialogue": "Changed terms need another calculation.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 92.098,
       "duration": 20.52

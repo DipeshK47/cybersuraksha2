@@ -19,7 +19,7 @@
       "caption": "Tara builds a classroom signal board with eight lamps. Each lamp is either off or on, giving one bit of information. The lamps have different displayed weights, so turning on the one-unit lamp has a different numerical effect from turning on the eight-unit lamp.",
       "speech": "Tara builds a classroom signal board with eight lamps. Each lamp is either off or on, giving one bit of information. The lamps have different displayed weights, so turning on the one-unit lamp has a different numerical effect from turning on the eight-unit lamp.",
       "dialogue": "Two states",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.096
@@ -32,7 +32,7 @@
       "caption": "The represented number is the sum of the weights of the lamps that are on. Neel makes five using four and one, then makes ten using eight and two. The live practice labels supply every weight; learners can use those labels instead of relying on colour alone.",
       "speech": "The represented number is the sum of the weights of the lamps that are on. Neel makes five using four and one, then makes ten using eight and two. The live practice labels supply every weight; learners can use those labels instead of relying on colour alone.",
       "dialogue": "Weighted positions",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.746,
       "duration": 18.84
@@ -45,7 +45,7 @@
       "caption": "The team agrees on the encoding before sending a message. Anyone who knows that public rule can read the signal, so the arrangement does not make a private secret safe. The class sends invented numbers only and checks each representation by adding the selected weights back together.",
       "speech": "The team agrees on the encoding before sending a message. Anyone who knows that public rule can read the signal, so the arrangement does not make a private secret safe. The class sends invented numbers only and checks each representation by adding the selected weights back together.",
       "dialogue": "Encoding and privacy",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 38.236,
       "duration": 19.704
@@ -58,7 +58,7 @@
       "caption": "Anyone viewing the board can use the same published lamp weights to read the value. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Anyone viewing the board can use the same published lamp weights to read the value. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Does a publicly known bit encoding make a secret private?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 58.59,
       "duration": 10.896
@@ -71,7 +71,7 @@
       "caption": "No. This is a representation rule, not encryption. Use invented classroom values and do not treat a readable encoding as protection for private information.",
       "speech": "No. This is a representation rule, not encryption. Use invented classroom values and do not treat a readable encoding as protection for private information.",
       "dialogue": "Combine displayed place values to represent a target.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 70.136,
       "duration": 12.672
@@ -84,7 +84,7 @@
       "caption": "Investigate two states, then weighted positions, then encoding and privacy. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate two states, then weighted positions, then encoding and privacy. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "How can the receiver check that the selected bits represent the intended number?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 83.458,
       "duration": 14.28

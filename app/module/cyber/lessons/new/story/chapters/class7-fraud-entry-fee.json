@@ -19,7 +19,7 @@
       "caption": "The Connection Lab receives a fictional offer of a free art kit. Below the colourful prize picture, the message asks for a small entry fee and says the offer must be kept secret. Tara reads the requested action before deciding whether the reward matters.",
       "speech": "The Connection Lab receives a fictional offer of a free art kit. Below the colourful prize picture, the message asks for a small entry fee and says the offer must be kept secret. Tara reads the requested action before deciding whether the reward matters.",
       "dialogue": "Promise and demand",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.48
@@ -32,7 +32,7 @@
       "caption": "Neel thinks a small payment might be a harmless way to test the claim. The teacher explains that making the requested payment is already acting on an unverified demand. A short deadline and a secrecy request increase pressure; neither proves that the sender has authority to offer anything.",
       "speech": "Neel thinks a small payment might be a harmless way to test the claim. The teacher explains that making the requested payment is already acting on an unverified demand. A short deadline and a secrecy request increase pressure; neither proves that the sender has authority to offer anything.",
       "dialogue": "Pressure tactics",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 19.13,
       "duration": 20.784
@@ -45,7 +45,7 @@
       "caption": "The team pauses, keeps a minimal record and asks a trusted adult to check through an already known school contact. It does not use a new contact supplied by the same message as independent proof. Learners use pretend tokens only; real purchase decisions belong with responsible adults.",
       "speech": "The team pauses, keeps a minimal record and asks a trusted adult to check through an already known school contact. It does not use a new contact supplied by the same message as independent proof. Learners use pretend tokens only; real purchase decisions belong with responsible adults.",
       "dialogue": "Independent checking",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 40.564,
       "duration": 21.36
@@ -58,7 +58,7 @@
       "caption": "The unverified message promises a free kit but demands payment and secrecy. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The unverified message promises a free kit but demands payment and secrecy. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Should the club pay a small fee to test the offer?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 62.574,
       "duration": 11.376
@@ -71,7 +71,7 @@
       "caption": "Pause and verify through a trusted adult using a known route. Paying even a small amount would follow the unverified demand rather than independently check it.",
       "speech": "Pause and verify through a trusted adult using a known route. Paying even a small amount would follow the unverified demand rather than independently check it.",
       "dialogue": "Identify urgency and secrecy as reasons to pause.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 74.6,
       "duration": 11.256
@@ -84,7 +84,7 @@
       "caption": "Investigate promise and demand, then pressure tactics, then independent checking. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate promise and demand, then pressure tactics, then independent checking. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Why is paying a small amount different from independently verifying a claim?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 86.506,
       "duration": 14.424

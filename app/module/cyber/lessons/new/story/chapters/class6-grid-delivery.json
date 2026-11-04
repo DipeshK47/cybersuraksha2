@@ -19,7 +19,7 @@
       "caption": "The discovery club draws a delivery robot on a three-by-three paper grid. It starts in the top left and must reach the bottom right. The middle square is blocked, so a straight-looking shortcut through that square is not an allowed route.",
       "speech": "The discovery club draws a delivery robot on a three-by-three paper grid. It starts in the top left and must reach the bottom right. The middle square is blocked, so a straight-looking shortcut through that square is not an allowed route.",
       "dialogue": "Grid positions",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.416
@@ -32,7 +32,7 @@
       "caption": "The robot understands up, down, left and right, with one command moving one neighbouring square. Diagonal jumps and moves beyond the edge are not available. Meera records the position after each command so the plan can be checked before any route is approved.",
       "speech": "The robot understands up, down, left and right, with one command moving one neighbouring square. Diagonal jumps and moves beyond the edge are not available. Meera records the position after each command so the plan can be checked before any route is approved.",
       "dialogue": "Valid moves",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 17.066,
       "duration": 18.552
@@ -45,7 +45,7 @@
       "caption": "Kabir tests a four-step route around the outside. When the teacher blocks a different square, the old successful route may no longer work. The team changes the plan and tests again, rather than treating a previous success as permanent permission to ignore the new obstacle.",
       "speech": "Kabir tests a four-step route around the outside. When the teacher blocks a different square, the old successful route may no longer work. The team changes the plan and tests again, rather than treating a previous success as permanent permission to ignore the new obstacle.",
       "dialogue": "A changed obstacle",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 36.268,
       "duration": 19.2
@@ -58,7 +58,7 @@
       "caption": "Only up, down, left and right are available. The middle square is blocked in this supplied three-by-three grid. Compare the actions, then inspect the explanation before moving on.",
       "speech": "Only up, down, left and right are available. The middle square is blocked in this supplied three-by-three grid. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Can the robot move diagonally across the middle?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 56.118,
       "duration": 13.848
@@ -71,7 +71,7 @@
       "caption": "No. Use the allowed neighbouring moves and avoid the blocked square. A visually short path is not valid when it breaks the movement rules.",
       "speech": "No. Use the allowed neighbouring moves and avoid the blocked square. A visually short path is not valid when it breaks the movement rules.",
       "dialogue": "Reach a goal without entering blocked cells.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 70.616,
       "duration": 10.968
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through grid positions, then valid moves, then a changed obstacle. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through grid positions, then valid moves, then a changed obstacle. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "What changed when the second obstacle was added?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 82.234,
       "duration": 17.832

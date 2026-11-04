@@ -19,7 +19,7 @@
       "caption": "Reva and Nikhil are opening a school repair desk for torn book covers. Their fictional practice folder contains request slips, a volunteer rota and a public progress board. Each record helps someone do a different job.",
       "speech": "Reva and Nikhil are opening a school repair desk for torn book covers. Their fictional practice folder contains request slips, a volunteer rota and a public progress board. Each record helps someone do a different job.",
       "dialogue": "Start with the job each record serves.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.152
@@ -32,7 +32,7 @@
       "caption": "Nikhil draws arrows from the request form to the teacher, then from approved ticket numbers to volunteers. Reva adds the public board. It needs totals, while the teacher needs contact details for returning completed books.",
       "speech": "Nikhil draws arrows from the request form to the teacher, then from approved ticket numbers to volunteers. Reva adds the public board. It needs totals, while the teacher needs contact details for returning completed books.",
       "dialogue": "The same folder need not mean the same audience.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 16.802,
       "duration": 16.68
@@ -45,7 +45,7 @@
       "caption": "A volunteer copies the whole request sheet into a public link to save time. Another person forwards it. Nobody needs to break a password: the sharing setting already lets unintended readers see private practice records.",
       "speech": "A volunteer copies the whole request sheet into a public link to save time. Another person forwards it. Nobody needs to break a password: the sharing setting already lets unintended readers see private practice records.",
       "dialogue": "A mistake can open the door.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.132,
       "duration": 16.344
@@ -58,7 +58,7 @@
       "caption": "Reva suggests restricting the original sheet and publishing a separate total. Nikhil suggests renaming the link instead. The teacher asks which action changes who can open the records, rather than merely changing how the link looks.",
       "speech": "Reva suggests restricting the original sheet and publishing a separate total. Nikhil suggests renaming the link instead. The teacher asks which action changes who can open the records, rather than merely changing how the link looks.",
       "dialogue": "Test access, not the title.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 51.126,
       "duration": 16.608
@@ -71,7 +71,7 @@
       "caption": "The restricted sheet now refuses the visitor test account, while the public board still shows progress. That is useful evidence about current access. It does not prove that nobody copied the earlier public sheet before the setting changed.",
       "speech": "The restricted sheet now refuses the visitor test account, while the public board still shows progress. That is useful evidence about current access. It does not prove that nobody copied the earlier public sheet before the setting changed.",
       "dialogue": "Record what the test can show.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 68.384,
       "duration": 17.184
@@ -84,7 +84,7 @@
       "caption": "You will connect supplied records to their readers, test a draft sharing plan and repair it after another forwarded link. Explain the consequence each control addresses. Keep one remaining uncertainty beside the finished risk map.",
       "speech": "You will connect supplied records to their readers, test a draft sharing plan and repair it after another forwarded link. Explain the consequence each control addresses. Keep one remaining uncertainty beside the finished risk map.",
       "dialogue": "A control needs a reason.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 86.218,
       "duration": 16.536

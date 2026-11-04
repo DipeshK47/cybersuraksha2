@@ -19,7 +19,7 @@
       "caption": "A fictional message claims that the club trip has been cancelled and a refund is ready. It displays a teacher’s photo, sets a short deadline and supplies a pretend code. The destination card describes sending tokens out, contradicting the promise that tokens will be returned.",
       "speech": "A fictional message claims that the club trip has been cancelled and a refund is ready. It displays a teacher’s photo, sets a short deadline and supplies a pretend code. The destination card describes sending tokens out, contradicting the promise that tokens will be returned.",
       "dialogue": "Combine the clues",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.608
@@ -32,7 +32,7 @@
       "caption": "Tara separates four questions: who is claiming authority, what action is requested, what pressure is applied and what independent checking route is available. A familiar photo does not resolve the outgoing-action mismatch. Nor does a deadline remove the need to check whether the school actually sent this request.",
       "speech": "Tara separates four questions: who is claiming authority, what action is requested, what pressure is applied and what independent checking route is available. A familiar photo does not resolve the outgoing-action mismatch. Nor does a deadline remove the need to check whether the school actually sent this request.",
       "dialogue": "Choose a known route",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.258,
       "duration": 21.864
@@ -45,7 +45,7 @@
       "caption": "Neel pauses the action and asks a trusted adult to use the existing school contact, not the new number inside the message. The team keeps time, channel and demand in its fictional record without secret values or a public accusation. The capstone combines earlier checks into one explainable response.",
       "speech": "Neel pauses the action and asks a trusted adult to use the existing school contact, not the new number inside the message. The team keeps time, channel and demand in its fictional record without secret values or a public accusation. The capstone combines earlier checks into one explainable response.",
       "dialogue": "Explain a safe response",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 42.772,
       "duration": 21.888
@@ -58,7 +58,7 @@
       "caption": "Identity is unverified, the action is outgoing and a deadline pressures immediate approval. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Identity is unverified, the action is outgoing and a deadline pressures immediate approval. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Which response handles the whole case?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 65.31,
       "duration": 12.12
@@ -71,7 +71,7 @@
       "caption": "Pause, preserve minimal facts and ask an adult to check through the established school contact. This addresses identity, purpose and pressure without following the demand.",
       "speech": "Pause, preserve minimal facts and ask an adult to check through the established school contact. This addresses identity, purpose and pressure without following the demand.",
       "dialogue": "Choose an established school route rather than a contact inside the request.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 78.08,
       "duration": 12.144
@@ -84,7 +84,7 @@
       "caption": "Investigate combine the clues, then choose a known route, then explain a safe response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate combine the clues, then choose a known route, then explain a safe response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "How did checking identity and purpose together change your response?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 90.874,
       "duration": 15.216

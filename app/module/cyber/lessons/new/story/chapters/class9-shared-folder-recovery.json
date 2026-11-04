@@ -19,7 +19,7 @@
       "caption": "Reva finds renamed ticket files in the fictional repair folder. Nikhil sees a changed sharing setting too. They stop ordinary editing rather than trying random repairs that could overwrite useful evidence about the change.",
       "speech": "Reva finds renamed ticket files in the fictional repair folder. Nikhil sees a changed sharing setting too. They stop ordinary editing rather than trying random repairs that could overwrite useful evidence about the change.",
       "dialogue": "Unexpected change deserves a careful pause.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.104
@@ -32,7 +32,7 @@
       "caption": "The log records filenames, times and permission changes but does not identify who caused them. Reva writes observations and leaves the cause unknown. A suspicious pattern can justify reporting without proving a specific accusation.",
       "speech": "The log records filenames, times and permission changes but does not identify who caused them. Reva writes observations and leaves the cause unknown. A suspicious pattern can justify reporting without proving a specific accusation.",
       "dialogue": "Unknown is an honest entry.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 16.754,
       "duration": 17.448
@@ -45,7 +45,7 @@
       "caption": "They inform the teacher through the known school route and preserve the supplied change details. The teacher follows the school response to limit further sharing. Learners do not delete the folder, confront a suspected classmate or experiment on the affected account.",
       "speech": "They inform the teacher through the known school route and preserve the supplied change details. The teacher follows the school response to limit further sharing. Learners do not delete the folder, confront a suspected classmate or experiment on the affected account.",
       "dialogue": "Containment belongs in the school process.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.852,
       "duration": 18.48
@@ -58,7 +58,7 @@
       "caption": "Nikhil selects the newest backup because its date looks reassuring. Reva compares a checked earlier copy with the damaged version. Newness does not establish a good recovery point; records must be usable and match the expected ticket list.",
       "speech": "Nikhil selects the newest backup because its date looks reassuring. Reva compares a checked earlier copy with the damaged version. Newness does not establish a good recovery point; records must be usable and match the expected ticket list.",
       "dialogue": "Test contents, not just dates.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 53.982,
       "duration": 17.688
@@ -71,7 +71,7 @@
       "caption": "The teacher opens the candidate backup in a separate test location. Expected files open, ticket counts match and access is restricted before ordinary work resumes. The team records missing later edits for review instead of pretending the backup contains everything ever changed.",
       "speech": "The teacher opens the candidate backup in a separate test location. Expected files open, ticket counts match and access is restricted before ordinary work resumes. The team records missing later edits for review instead of pretending the backup contains everything ever changed.",
       "dialogue": "Recovery may leave a gap to reconcile.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 72.32,
       "duration": 20.088
@@ -84,7 +84,7 @@
       "caption": "Distinguish observation, containment and tested restoration in your recovery record. Use the backup cards and state one unresolved issue. Restoring readable records does not establish whether earlier copies were taken or replace the teacher’s incident review.",
       "speech": "Distinguish observation, containment and tested restoration in your recovery record. Use the backup cards and state one unresolved issue. Restoring readable records does not establish whether earlier copies were taken or replace the teacher’s incident review.",
       "dialogue": "A working folder is not the whole investigation.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 93.058,
       "duration": 18.84

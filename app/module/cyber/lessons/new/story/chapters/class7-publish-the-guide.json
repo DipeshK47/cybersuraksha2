@@ -19,7 +19,7 @@
       "caption": "The Connection Lab’s guide is almost ready. Its artwork is clean, but a former volunteer still has editing access and one photo lacks agreement for public use. Neel wants to publish because the privacy section passed yesterday; Tara checks the other conditions.",
       "speech": "The Connection Lab’s guide is almost ready. Its artwork is clean, but a former volunteer still has editing access and one photo lacks agreement for public use. Neel wants to publish because the privacy section passed yesterday; Tara checks the other conditions.",
       "dialogue": "A connected risk review",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.368
@@ -32,7 +32,7 @@
       "caption": "A release decision combines several kinds of evidence. Removing a location clue does not end an old session, and a correct permission does not supply photo consent. The team lists each remaining issue, its owner and the observation that would show a repair worked.",
       "speech": "A release decision combines several kinds of evidence. Removing a location clue does not end an old session, and a correct permission does not supply photo consent. The team lists each remaining issue, its owner and the observation that would show a repair worked.",
       "dialogue": "Evidence of each repair",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.018,
       "duration": 18.504
@@ -45,7 +45,7 @@
       "caption": "The teacher checks the final public preview, current role list and tested approved backup. An unapproved photo stays out. When a new editor or audience is proposed, the team reviews again instead of treating yesterday’s approval as permanent proof for a different plan.",
       "speech": "The teacher checks the final public preview, current role list and tested approved backup. An unapproved photo stays out. When a new editor or audience is proposed, the team reviews again instead of treating yesterday’s approval as permanent proof for a different plan.",
       "dialogue": "Changed release conditions",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.172,
       "duration": 19.368
@@ -58,7 +58,7 @@
       "caption": "Former-volunteer editing access and missing photo consent remain unresolved. The proposed audience is now public. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Former-volunteer editing access and missing photo consent remain unresolved. The proposed audience is now public. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Is yesterday’s privacy pass enough to publish today?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 59.19,
       "duration": 14.232
@@ -71,7 +71,7 @@
       "caption": "Complete and verify the remaining repairs with the teacher before release. A previous check of one issue does not establish readiness for a changed whole plan.",
       "speech": "Complete and verify the remaining repairs with the teacher before release. A previous check of one issue does not establish readiness for a changed whole plan.",
       "dialogue": "Connect each repair with an observable check.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 74.072,
       "duration": 11.136
@@ -84,7 +84,7 @@
       "caption": "Investigate a connected risk review, then evidence of each repair, then changed release conditions. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate a connected risk review, then evidence of each repair, then changed release conditions. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Name a risk, its repair and the evidence that would show the repair worked.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 85.858,
       "duration": 15.624

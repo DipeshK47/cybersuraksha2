@@ -9,7 +9,7 @@
       "mood": "thinking",
       "caption": "Meera tries a fictional homework scanner that turns a page drawing into a document. Before scanning, it asks for camera, all photos, contacts and location. Kabir suggests allowing everything because deciding permission by permission will take longer.",
       "dialogue": "What does this job actually need?",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 0,
       "duration": 16.32
@@ -21,7 +21,7 @@
       "mood": "surprise",
       "caption": "The feature card says this scan uses the camera, saves inside the app and needs neither contacts nor location. Asking for a permission is not proof of malware; unnecessary access still deserves a careful question.",
       "dialogue": "Need is more useful than a guess.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "trouble",
       "start": 16.97,
       "duration": 14.592
@@ -33,7 +33,7 @@
       "mood": "thinking",
       "caption": "They choose camera access while using the scanner. Least privilege means giving only the access needed. If one selected picture works instead, access to the entire photo library may be unnecessary.",
       "dialogue": "A smaller scope can still work.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 32.212,
       "duration": 13.675
@@ -45,7 +45,7 @@
       "mood": "thinking",
       "caption": "Decide whether to allow every request, reject the app as certainly malicious, or test a limited plan. The simulation shows a scan succeeding with camera access while contacts and location remain unavailable. The result supports this task, not every possible feature.",
       "dialogue": "Run the test before checking.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 46.537,
       "duration": 17.472
@@ -57,7 +57,7 @@
       "mood": "happy",
       "caption": "After the exhibition, the club no longer needs scanning. The teacher helps review and revoke the access. Removing permission limits future access; it does not establish what happened to information previously collected or automatically erase every existing copy.",
       "dialogue": "Review permissions over time.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 64.659,
       "duration": 16.747
@@ -69,7 +69,7 @@
       "mood": "happy",
       "caption": "Now the task is importing one prepared diagram instead of taking a photograph. Choose a selected-file route, test the changed feature and remove camera access. Keep a ledger showing the permission, its purpose and the observed result for each version.",
       "dialogue": "A new purpose needs a new test.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 82.055,
       "duration": 15.936

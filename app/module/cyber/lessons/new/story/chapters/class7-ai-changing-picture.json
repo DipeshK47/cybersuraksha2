@@ -19,7 +19,7 @@
       "caption": "The club’s fictional leaf helper succeeds on a pale table but struggles when the same leaf is placed on dark card. Tara asks whether the helper learned useful leaf features or merely followed a background that happened to appear in its training pictures.",
       "speech": "The club’s fictional leaf helper succeeds on a pale table but struggles when the same leaf is placed on dark card. Tara asks whether the helper learned useful leaf features or merely followed a background that happened to appear in its training pictures.",
       "dialogue": "Object and background",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 16.68
@@ -32,7 +32,7 @@
       "caption": "Background can be a shortcut that fails in a new setting. The class compares shape and edge information with table colour, then marks object cells in an explicitly described practice grid. The story illustration sets the scene; the numbered cell description supplies the exact task evidence.",
       "speech": "Background can be a shortcut that fails in a new setting. The class compares shape and edge information with table colour, then marks object cells in an explicitly described practice grid. The story illustration sets the scene; the numbered cell description supplies the exact task evidence.",
       "dialogue": "Mask the object",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 17.33,
       "duration": 21.096
@@ -45,7 +45,7 @@
       "caption": "The teacher moves the object to a different column while keeping its identity unchanged. Neel must update the selected mask rather than repeat old cell positions. Testing changed backgrounds and positions helps investigate the shortcut, but a few successful pictures still do not establish performance in every environment.",
       "speech": "The teacher moves the object to a different column while keeping its identity unchanged. Neel must update the selected mask rather than repeat old cell positions. Testing changed backgrounds and positions helps investigate the shortcut, but a few successful pictures still do not establish performance in every environment.",
       "dialogue": "Retest a changed position",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.076,
       "duration": 22.536
@@ -58,7 +58,7 @@
       "caption": "The same leaf was recognised on pale card but not dark card. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The same leaf was recognised on pale card but not dark card. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "What is the most useful next check?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 62.262,
       "duration": 10.368
@@ -71,7 +71,7 @@
       "caption": "Retest the same object with varied backgrounds and record the differences. This investigates a possible shortcut without changing the label to hide the error.",
       "speech": "Retest the same object with varied backgrounds and record the differences. This investigates a possible shortcut without changing the label to hide the error.",
       "dialogue": "Use a supplied cell map to select an object mask.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 73.28,
       "duration": 11.832
@@ -84,7 +84,7 @@
       "caption": "Investigate object and background, then mask the object, then retest a changed position. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate object and background, then mask the object, then retest a changed position. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "What changed between the two masks, and what stayed the same?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 85.762,
       "duration": 15.624

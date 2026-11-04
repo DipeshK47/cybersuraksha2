@@ -19,7 +19,7 @@
       "caption": "Kabir’s card counter should add two cards to a starting pile of one. His trace says one becomes two, then three becomes five. Meera writes the expected value beside each observed value instead of simply replacing the final answer with the desired number.",
       "speech": "Kabir’s card counter should add two cards to a starting pile of one. His trace says one becomes two, then three becomes five. Meera writes the expected value beside each observed value instead of simply replacing the final answer with the desired number.",
       "dialogue": "Expected and observed",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 18.816
@@ -32,7 +32,7 @@
       "caption": "Debugging means finding and repairing the cause of a problem. The first add-two action should change one into three, so the earliest mismatch is already at that step. A correct-looking final label cannot repair an incorrect action inside the method.",
       "speech": "Debugging means finding and repairing the cause of a problem. The first add-two action should change one into three, so the earliest mismatch is already at that step. A correct-looking final label cannot repair an incorrect action inside the method.",
       "dialogue": "The first mismatch",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 19.466,
       "duration": 17.808
@@ -45,7 +45,7 @@
       "caption": "The team changes the mistaken add-one instruction to add two, then runs the whole trace again. They also test a starting value of zero and an earlier successful example. A repair should fix the reported problem without silently breaking cases that used to work.",
       "speech": "The team changes the mistaken add-one instruction to add two, then runs the whole trace again. They also test a starting value of zero and an earlier successful example. A repair should fix the reported problem without silently breaking cases that used to work.",
       "dialogue": "Retesting repairs",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 37.924,
       "duration": 18.768
@@ -58,7 +58,7 @@
       "caption": "Task says add two. The first observed step changes one to two rather than three. Later results depend on that step. Compare the actions, then inspect the explanation before moving on.",
       "speech": "Task says add two. The first observed step changes one to two rather than three. Later results depend on that step. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "What should the team repair first?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 57.342,
       "duration": 15.504
@@ -71,7 +71,7 @@
       "caption": "Repair the first incorrect add action and rerun the trace. Editing only the final label would hide the cause and leave the method wrong for another input.",
       "speech": "Repair the first incorrect add action and rerun the trace. Editing only the final label would hide the cause and leave the method wrong for another input.",
       "dialogue": "Identify the earliest incorrect step in a trace.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 73.496,
       "duration": 10.944
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through expected and observed, then the first mismatch, then retesting repairs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through expected and observed, then the first mismatch, then retesting repairs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why is changing the final answer different from repairing the method?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 85.09,
       "duration": 18.312

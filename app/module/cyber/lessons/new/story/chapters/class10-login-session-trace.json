@@ -19,7 +19,7 @@
       "caption": "In the Decision Lab, Aditi signs into a fictional bulletin account on the school tablet. The password check succeeds, and the service issues a session card labelled Tablet. Vihaan records these as two different events.",
       "speech": "In the Decision Lab, Aditi signs into a fictional bulletin account on the school tablet. The password check succeeds, and the service issues a session card labelled Tablet. Vihaan records these as two different events.",
       "dialogue": "A successful password check can start continuing access.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 16.248
@@ -32,7 +32,7 @@
       "caption": "The tablet opens another bulletin page using its session. No new password is entered for this request. Their trace separates the original sign-in from the later page opening, so a password prompt is not their only evidence.",
       "speech": "The tablet opens another bulletin page using its session. No new password is entered for this request. Their trace separates the original sign-in from the later page opening, so a password prompt is not their only evidence.",
       "dialogue": "Follow the session on the later request.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 16.898,
       "duration": 16.152
@@ -45,7 +45,7 @@
       "caption": "A session named Spare appears beside Tablet. Aditi cannot match it to their planned work, but its label does not identify a person. When the school tablet goes missing, the teacher joins their review through the known school route.",
       "speech": "A session named Spare appears beside Tablet. Aditi cannot match it to their planned work, but its label does not identify a person. When the school tablet goes missing, the teacher joins their review through the known school route.",
       "dialogue": "Unfamiliar is a reason to investigate, not an identity.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 33.7,
       "duration": 16.608
@@ -58,7 +58,7 @@
       "caption": "The fictional policy says a password change prevents future password sign-ins using the old password but leaves existing sessions active. Vihaan proposes changing it alone. Aditi instead asks which verified control ends the missing tablet session now.",
       "speech": "The fictional policy says a password change prevents future password sign-ins using the old password but leaves existing sessions active. Vihaan proposes changing it alone. Aditi instead asks which verified control ends the missing tablet session now.",
       "dialogue": "Read the stated policy before predicting an effect.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 50.958,
       "duration": 18.744
@@ -71,7 +71,7 @@
       "caption": "With the teacher, they revoke Tablet through the verified session page and run its supplied request test. That lane is refused. Spare remains active under this policy; the team does not quietly treat one revoked session as every session.",
       "speech": "With the teacher, they revoke Tablet through the verified session page and run its supplied request test. That lane is refused. Spare remains active under this policy; the team does not quietly treat one revoked session as every session.",
       "dialogue": "Name the lane that the test actually closed.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 70.352,
       "duration": 17.856
@@ -84,7 +84,7 @@
       "caption": "Their evidence sheet records the lost device, the refusal and the remaining session review. Recovery contacts need checking separately with adult help. Your response trace must state both what the service demonstrated and what it still leaves uncertain.",
       "speech": "Their evidence sheet records the lost device, the refusal and the remaining session review. Recovery contacts need checking separately with adult help. Your response trace must state both what the service demonstrated and what it still leaves uncertain.",
       "dialogue": "A completed action can leave further work.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 88.858,
       "duration": 17.904

@@ -19,7 +19,7 @@
       "caption": "Meera finishes a story on the computer in the school library. The next learner is waiting. Closing the story tab looks tidy, but the browser still opens her account when Kabir checks the approved practice screen.",
       "speech": "Meera finishes a story on the computer in the school library. The next learner is waiting. Closing the story tab looks tidy, but the browser still opens her account when Kabir checks the approved practice screen.",
       "dialogue": "Shared sessions",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.056
@@ -32,7 +32,7 @@
       "caption": "A signed-in session remembers access for a while. Closing a tab may leave that session active. The next user could open private work or accidentally submit something under the previous learner’s name without knowing whose account is open.",
       "speech": "A signed-in session remembers access for a while. Closing a tab may leave that session active. The next user could open private work or accidentally submit something under the previous learner’s name without knowing whose account is open.",
       "dialogue": "Lock or sign out",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.706,
       "duration": 16.608
@@ -45,7 +45,7 @@
       "caption": "For a brief pause, the teacher may allow locking the device. For a handover, save approved work, sign out and check the account is closed. Do not save passwords on a shared machine or explore somebody else’s open account.",
       "speech": "For a brief pause, the teacher may allow locking the device. For a handover, save approved work, sign out and check the account is closed. Do not save passwords on a shared machine or explore somebody else’s open account.",
       "dialogue": "A handover check",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 33.964,
       "duration": 16.896
@@ -58,7 +58,7 @@
       "caption": "Meera has saved her work. The school browser is still signed into her account even after the document tab closes. Compare the actions, then inspect the explanation before moving on.",
       "speech": "Meera has saved her work. The school browser is still signed into her account even after the document tab closes. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "The next learner needs the computer. What now?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 51.51,
       "duration": 14.112
@@ -71,7 +71,7 @@
       "caption": "Sign out and check that account access has ended before handover. Closing a tab alone does not reliably end a session.",
       "speech": "Sign out and check that account access has ended before handover. Closing a tab alone does not reliably end a session.",
       "dialogue": "Choose locking for a brief approved pause and sign-out for handover.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 66.272,
       "duration": 9.288
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through shared sessions, then lock or sign out, then a handover check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through shared sessions, then lock or sign out, then a handover check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why is closing a document different from ending account access?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 76.21,
       "duration": 17.832

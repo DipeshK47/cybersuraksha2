@@ -19,7 +19,7 @@
       "caption": "Reva and Nikhil build a paper dispatch simulation. Queued requests have identifiers and required kit counts. A cart has limited capacity, and a route must pass its current checks before any request is marked dispatched.",
       "speech": "Reva and Nikhil build a paper dispatch simulation. Queued requests have identifiers and required kit counts. A cart has limited capacity, and a route must pass its current checks before any request is marked dispatched.",
       "dialogue": "Which facts must be confirmed first?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.68
@@ -32,7 +32,7 @@
       "caption": "Their draft marks requests dispatched before checking stock or testing the route. A later failure leaves the records claiming work that never happened. Reva circles the earliest invalid step and keeps the original trace as evidence.",
       "speech": "Their draft marks requests dispatched before checking stock or testing the route. A later failure leaves the records claiming work that never happened. Reva circles the earliest invalid step and keeps the original trace as evidence.",
       "dialogue": "Find the first unsupported state change.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.33,
       "duration": 16.8
@@ -45,7 +45,7 @@
       "caption": "They verify stock and capacity, reserve the selected kits, then remove only those selected identifiers from the pending queue. Recording intermediate states prevents a request from disappearing without reserved supplies. New arrivals join at the back rather than silently changing the selection.",
       "speech": "They verify stock and capacity, reserve the selected kits, then remove only those selected identifiers from the pending queue. Recording intermediate states prevents a request from disappearing without reserved supplies. New arrivals join at the back rather than silently changing the selection.",
       "dialogue": "A queue update needs evidence behind it.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.78,
       "duration": 21.336
@@ -58,7 +58,7 @@
       "caption": "Nikhil proposes changing the final status text alone. Reva wants to move the checks before the dependent updates. Repair the process so a rejected route leaves an honest waiting status.",
       "speech": "Nikhil proposes changing the final status text alone. Reva wants to move the checks before the dependent updates. Repair the process so a rejected route leaves an honest waiting status.",
       "dialogue": "Changing a label cannot reserve supplies.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 56.766,
       "duration": 14.448
@@ -71,7 +71,7 @@
       "caption": "A corridor closes after the first route test. Selected requests and reserved capacity remain known, but the route result is stale. They edit the arrows, rerun the simulation and check the new visited cells against both the closure and the resource budget.",
       "speech": "A corridor closes after the first route test. Selected requests and reserved capacity remain known, but the route result is stale. They edit the arrows, rerun the simulation and check the new visited cells against both the closure and the resource budget.",
       "dialogue": "Which evidence became outdated?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 71.864,
       "duration": 18.504
@@ -84,7 +84,7 @@
       "caption": "Their notebook links the original fault to a changed sequence, a capacity trace and a fresh route result. Another learner can explain the dispatch decision. Build your record with the fictional requests, preserving the failed assumption beside the retest.",
       "speech": "Their notebook links the original fault to a changed sequence, a capacity trace and a fresh route result. Another learner can explain the dispatch decision. Build your record with the fictional requests, preserving the failed assumption beside the retest.",
       "dialogue": "Show the fault, repair and new evidence.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 91.018,
       "duration": 18.048

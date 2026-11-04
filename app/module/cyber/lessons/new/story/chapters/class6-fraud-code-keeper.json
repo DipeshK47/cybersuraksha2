@@ -19,7 +19,7 @@
       "caption": "The message says use this code to sign in. A second sender calls it a prize ticket and asks Kabir to forward it. Meera reads the original purpose instead of accepting the label supplied by the person asking for it.",
       "speech": "The message says use this code to sign in. A second sender calls it a prize ticket and asks Kabir to forward it. Meera reads the original purpose instead of accepting the label supplied by the person asking for it.",
       "dialogue": "Code purpose",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.104
@@ -32,7 +32,7 @@
       "caption": "Some codes identify public events, while other codes approve access or actions. The word code alone cannot establish what is shareable. A login or approval code is a secret; forwarding it may allow someone else to complete the action it authorises.",
       "speech": "Some codes identify public events, while other codes approve access or actions. The word code alone cannot establish what is shareable. A login or approval code is a secret; forwarding it may allow someone else to complete the action it authorises.",
       "dialogue": "Secret requests",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.754,
       "duration": 19.176
@@ -45,7 +45,7 @@
       "caption": "The class uses labels instead of real numbers and never requests an actual one-time password. If a code arrives unexpectedly, students tell a trusted adult. If one was already shared, they seek help promptly rather than sending more codes or trusting a promise that the first request was harmless.",
       "speech": "The class uses labels instead of real numbers and never requests an actual one-time password. If a code arrives unexpectedly, students tell a trusted adult. If one was already shared, they seek help promptly rather than sending more codes or trusting a promise that the first request was harmless.",
       "dialogue": "Adult-guided response",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 36.58,
       "duration": 21.936
@@ -58,7 +58,7 @@
       "caption": "The original message says the code signs in to an account. A different sender claims it is needed for a prize. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The original message says the code signs in to an account. A different sender claims it is needed for a prize. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Should Kabir forward the sign-in code?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 59.166,
       "duration": 13.416
@@ -71,7 +71,7 @@
       "caption": "Keep the sign-in code private and ask a trusted adult about the unexpected request. The original authorisation purpose matters more than the sender’s new nickname for the code.",
       "speech": "Keep the sign-in code private and ask a trusted adult about the unexpected request. The original authorisation purpose matters more than the sender’s new nickname for the code.",
       "dialogue": "Distinguish a public event code from a private login secret.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 73.232,
       "duration": 12.504
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through code purpose, then secret requests, then adult-guided response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through code purpose, then secret requests, then adult-guided response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why does a code’s purpose matter more than someone calling it a prize ticket?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 86.386,
       "duration": 18.408

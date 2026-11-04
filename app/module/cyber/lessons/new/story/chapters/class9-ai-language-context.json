@@ -19,7 +19,7 @@
       "caption": "Reva edits an imaginary museum newsletter while Nikhil checks word cards. Two contain the English word bank: one describes a river, another describes saving money. Shared spelling alone cannot settle which meaning is intended.",
       "speech": "Reva edits an imaginary museum newsletter while Nikhil checks word cards. Two contain the English word bank: one describes a river, another describes saving money. Shared spelling alone cannot settle which meaning is intended.",
       "dialogue": "Read the surrounding sentence.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.92
@@ -32,7 +32,7 @@
       "caption": "They read “The heron stood on the bank beside the river” and “The club deposited savings at the bank.” River and savings provide different clues. Reva records interpretations with their sentences rather than guessing from words alone.",
       "speech": "They read “The heron stood on the bank beside the river” and “The club deposited savings at the bank.” River and savings provide different clues. Reva records interpretations with their sentences rather than guessing from words alone.",
       "dialogue": "The same word can change its role.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.57,
       "duration": 16.608
@@ -45,7 +45,7 @@
       "caption": "Their teacher supplies a fictional generated announcement. Language models generate text from learned patterns and supplied input; fluent wording does not guarantee a checked source for every sentence. Nikhil puts the reference sheet beside this draft before approval.",
       "speech": "Their teacher supplies a fictional generated announcement. Language models generate text from learned patterns and supplied input; fluent wording does not guarantee a checked source for every sentence. Nikhil puts the reference sheet beside this draft before approval.",
       "dialogue": "Fluency is not a source.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.828,
       "duration": 19.032
@@ -58,7 +58,7 @@
       "caption": "The reference names Friday, the library and opening at 10:00. The draft adds free tickets and step free entry, absent from the sheet. Choose whether that silence makes the additions true, false or unsupported by this source.",
       "speech": "The reference names Friday, the library and opening at 10:00. The draft adds free tickets and step free entry, absent from the sheet. Choose whether that silence makes the additions true, false or unsupported by this source.",
       "dialogue": "Unsupported is a precise finding.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 54.51,
       "duration": 17.184
@@ -71,7 +71,7 @@
       "caption": "Reva marks the additions for checking with the organising teacher. She avoids publishing an access promise without confirmation. An absent fact needs a suitable source; repeatedly generating another answer would not establish what this event provides.",
       "speech": "Reva marks the additions for checking with the organising teacher. She avoids publishing an access promise without confirmation. An absent fact needs a suitable source; repeatedly generating another answer would not establish what this event provides.",
       "dialogue": "Ask someone who can verify it.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 72.344,
       "duration": 18.384
@@ -84,7 +84,7 @@
       "caption": "In the lab, classify word meanings and annotate announcement claims. Keep supported details, flag absent facts and choose a reviewer. The audit records what the reference establishes, without treating a generated paragraph as independent evidence about the event.",
       "speech": "In the lab, classify word meanings and annotate announcement claims. Keep supported details, flag absent facts and choose a reviewer. The audit records what the reference establishes, without treating a generated paragraph as independent evidence about the event.",
       "dialogue": "Keep the source beside the claim.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 91.378,
       "duration": 19.392
