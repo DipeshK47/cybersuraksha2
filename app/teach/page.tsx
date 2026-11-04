@@ -164,13 +164,14 @@ export default function RosterPage() {
             <div className="slipGrid">
               {issuedAccounts.map((student) => (
                 <article className="loginSlip" key={student.id}>
-                  <b>CyberShiksha</b>
-                  <span>{student.name}</span>
+                  <header><b>CyberShiksha</b><small>Student login</small></header>
+                  <span className="slipName">{student.name}</span>
                   <dl>
                     <div><dt>Class</dt><dd>{student.className}</dd></div>
                     <div><dt>Roll</dt><dd>{student.rollNo}</dd></div>
-                    <div><dt>Password</dt><dd>{student.accessCode}</dd></div>
+                    <div className="slipPassword"><dt>Password</dt><dd>{student.accessCode}</dd></div>
                   </dl>
+                  <p>Sign in on the student login page: choose your school, then enter your class, roll number and password.</p>
                 </article>
               ))}
             </div>

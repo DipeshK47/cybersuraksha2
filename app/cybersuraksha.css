@@ -2231,7 +2231,6 @@ button {
   margin: 5px 0 0 !important;
 }
 
-.slipGrid,
 .metricGrid,
 .reportMetricGrid,
 .parentScoreGrid {
@@ -2257,16 +2256,101 @@ button {
   color: #171e19 !important;
 }
 
+/* Login slip: a card that wraps its content, so long names and passwords never spill out. */
+.slipGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)) !important;
+  gap: 16px !important;
+  margin-top: 22px;
+}
+
+.loginSlip {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.loginSlip > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.loginSlip > header b {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.loginSlip > header small {
+  padding: 3px 9px;
+  border: 1.5px solid #171e19;
+  border-radius: 999px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.loginSlip .slipName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
 .loginSlip dl {
-  margin: 18px 0 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 !important;
 }
 
 .loginSlip dl > div {
-  padding: 8px 0 !important;
-  border-top: 1.5px solid #171e19 !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
+  display: grid !important;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 12px !important;
+  border: 1.5px solid #171e19 !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.loginSlip dt {
+  color: #4a4a3a;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.loginSlip dd {
+  margin: 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 18px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.loginSlip dl > .slipPassword {
+  grid-column: 1 / -1;
+  background: #fff;
+}
+
+.loginSlip .slipPassword dd {
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  user-select: all;
+}
+
+.loginSlip > p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #3b3a2c;
 }
 
 .classFilters {
@@ -3435,6 +3519,16 @@ button {
     margin: 0 !important;
     border: 0 !important;
     box-shadow: none !important;
+  }
+
+  /* Two slips across, white with a dashed cut line, so a sheet can be cut up and handed out. */
+  .slipGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .loginSlip {
+    border: 1.5px dashed #171e19 !important;
+    background: #fff !important;
   }
 
   .teacherPanel,
