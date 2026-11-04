@@ -20,7 +20,7 @@ assert MODE in ('drag', 'tap')
 source = '''
 import {loadSource,solveTask,wrongAnswers} from './tests/class-9-helpers.mjs';
 const m=await loadSource(`import {class6Chapters} from './app/data/class6';import {class7Chapters} from './app/data/class7';import {class8Chapters} from './app/data/class8';import {class9Chapters} from './app/data/class9';import {class10Chapters} from './app/data/class10';export const grades=[class6Chapters,class7Chapters,class8Chapters,class9Chapters,class10Chapters];export {evaluateTask} from './app/module/cyber/lessons/class8/task-evaluation';export {diagnoseTask} from './app/module/cyber/lessons/class8/task-feedback';`);
-const KINDS=['select','match','order','choice','number'];
+const KINDS=['select','match','order','choice','number','route','grid','binary','model'];
 const out=[];
 m.grades.forEach((chapters,i)=>{
   const seen=new Set();
@@ -167,6 +167,14 @@ with sync_playwright() as p:
                 if task['kind'] in ('select', 'match', 'order', 'choice', 'number') and not (task.get('presentation') == 'redact'):
                     expect(board.locator(f'[data-band="{band}"]').first).to_be_visible()
                 check = board.get_by_role('button', name='Check my answer', exact=True)
+                # Classes 6-7 show the chapter picture beside the situation on the first and third challenge only.
+                scene = board.locator('[class*="sceneFigure"] img')
+                if case['grade'] <= 7 and stage in (0, 2):
+                    expect(scene).to_be_visible()
+                    expect(scene).to_have_js_property('complete', True)
+                    assert scene.evaluate('(img) => img.naturalWidth > 0'), f'{slug} stage {stage}: scene picture did not load'
+                else:
+                    expect(scene).to_have_count(0)
                 interactive = task['kind'] in ('select', 'match', 'order', 'choice', 'number') and task.get('presentation') != 'redact'
                 if entry['wrong'] is not None and interactive:
                     fill(page, board, task, entry['wrong'])

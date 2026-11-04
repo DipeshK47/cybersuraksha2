@@ -518,5 +518,10 @@
   "Pick the best choice.": "सबसे सही विकल्प चुनें।",
   "Steps to place": "रखने वाले कदम",
   "Tap to place here": "यहाँ रखने के लिए टैप करें",
-  "Use the buttons or the slider, or type a number.": "बटन या स्लाइडर इस्तेमाल करें, या संख्या लिखें।"
+  "Use the buttons or the slider, or type a number.": "बटन या स्लाइडर इस्तेमाल करें, या संख्या लिखें।",
+  "Switch lamps on or off so the total matches the target.": "लाइटें चालू या बंद करें ताकि कुल लक्ष्य नंबर के बराबर हो।",
+  "Tap the squares that belong in your answer. On a computer you can also drag across several.": "अपने जवाब के खाने टैप करें। कंप्यूटर पर कई खानों पर खींचकर भी चुन सकते हैं।",
+  "Build the robot's route with the arrow buttons, then run the test.": "तीर वाले बटनों से रोबोट का रास्ता बनाएँ, फिर टेस्ट चलाएँ।",
+  "Choose which examples the model learns from, then run the test.": "चुनें कि मॉडल किन उदाहरणों से सीखे, फिर टेस्ट चलाएँ।",
+  "steps used": "कदम इस्तेमाल हुए"
 }

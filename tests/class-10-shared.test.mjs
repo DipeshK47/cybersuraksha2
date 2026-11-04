@@ -92,11 +92,14 @@ const boardBundle=await build({stdin:{contents:`export { TaskBoard } from './app
  builder.onResolve({filter:/^react-dom$/},()=>({path:'dom',namespace:'dom-fixture'}));
  builder.onLoad({filter:/.*/,namespace:'dom-fixture'},()=>({contents:'export const createPortal=node=>node;',loader:'js'}));
  builder.onResolve({filter:/^lucide-react$/},()=>({path:'icons',namespace:'icons'}));
- builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon",Plus="icon",GripVertical="icon",Minus="icon",MousePointerClick="icon",X="icon";',loader:'js'}));
+ builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon",Plus="icon",GripVertical="icon",Minus="icon",MousePointerClick="icon",X="icon",Bot="icon",Flag="icon",Star="icon",Target="icon",Undo2="icon";',loader:'js'}));
  builder.onLoad({filter:/class8\/ui.ts$/},args=>({contents:readFileSync(args.path,'utf8').split('export function useEvidenceLanguage')[0]+'export function useEvidenceLanguage(){return "en";}',loader:'ts'}));
 }}]});
 const boardApi=await loadSource(boardBundle.outputFiles[0].text);
-function elements(tree){if(!tree||typeof tree!=='object')return [];if(Array.isArray(tree))return tree.flatMap(elements);return [tree,...elements(tree.props?.children)];}
+function elements(tree){if(!tree||typeof tree!=='object')return [];if(Array.isArray(tree))return tree.flatMap(elements);
+ // Child components (RouteBoard, ModelBoard) hold no hooks, so rendering them here shows the controls they draw.
+ if(typeof tree.type==='function')return [tree,...elements(tree.type(tree.props))];
+ return [tree,...elements(tree.props?.children)];}
 function containsText(tree,text){if(Array.isArray(tree))return tree.some(x=>containsText(x,text));if(typeof tree==='string')return tree===text;return tree&&typeof tree==='object'&&containsText(tree.props?.children,text);}
 test('TaskBoard exports only the current test and invalidates edits, configuration changes and keyed remounts',()=>{
  let answer=['right','right'],task=structuredClone(route),reports=[],checks=0,disabled=false,tree;
