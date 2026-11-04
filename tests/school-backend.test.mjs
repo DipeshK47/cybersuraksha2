@@ -49,7 +49,7 @@ test('school isolation, assignments, grading, marks and curriculum enforcement',
  const workspace = await json('/api/lms/assignments',admin);
  const classroom = workspace.classes.find(c=>c.name==='7A');
  const learner = workspace.students.find(s=>s.rollNo==='20'&&s.classId===classroom.id);
- const chapter = workspace.modules.find(m=>m.title==='Pattern Detective');
+ const chapter = workspace.modules.find(m=>m.grades.includes(7)); // any chapter Class 7 can use
  const db = await mf.getD1Database('DB');
  const hash = await hashPassword('SchoolTest@123');
  await db.prepare("INSERT INTO schools (id,name,slug) VALUES (200,'Second School','second-school')").run();
