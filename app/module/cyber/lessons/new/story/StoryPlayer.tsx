@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import type { ReactNode } from "react";
-import { useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { StoryCharacter } from "./StoryCharacter";
 import type { HindiAudio, StoryChapter, StoryMediaClock } from "./types";
 import hindiAudioManifest from "./hindi-audio.generated.json";
@@ -26,6 +26,15 @@ const serverLanguage = () => "en";
 // Native media seeks can truncate an authored boundary by one microsecond
 // (for example 65.526 becomes 65.525999). Keep that seek in its scene.
 const MEDIA_TIME_PRECISION = .000001;
+
+// Every narration leaves about 0.65s of silence after its scene. The decision gate pauses inside that
+// silence so the next scene's first word never leaks out, and never has to seek backwards to hold its place.
+const GATE_LEAD = .3;
+
+// Some hosts and proxies serve audio without byte ranges. The browser then reports nothing as seekable and
+// every seek (a scene button, a resume) snaps playback back to 0, which reads as "back to scene 1".
+const canSeek = (element: HTMLAudioElement, to: number) =>
+  element.seekable.length > 0 && element.seekable.end(element.seekable.length - 1) + MEDIA_TIME_PRECISION >= to;
 
 const sceneElapsed = (start: number, duration: number, time: number, limit: number) => Math.max(0, Math.min(duration, Math.min(time, limit) - start));
 
@@ -73,6 +82,13 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   const solvedRef = useRef(false);
   const [hint, setHint] = useState("");
   const [waiting, setWaiting] = useState(false);
+  // A downloaded copy of the narration, used only when the host cannot serve byte ranges (see canSeek).
+  const [local, setLocal] = useState<{ source: string; url: string }>();
+  const downloads = useRef(new Map<string, Promise<string>>());
+  const pending = useRef<{ time: number; play: boolean } | null>(null);
+  // True from asking for a copy until it loads, so the old audio's last events cannot move the story.
+  const switching = useRef(false);
+  useEffect(() => { const copies = downloads.current; return () => { copies.forEach(copy => void copy.then(URL.revokeObjectURL, () => undefined)); }; }, []);
   // Restart only this section in the new voice; keep the learner's decision and world state.
   if (activeNarration !== narration) {
     const previousScenes = activeNarration?.scenes ?? chapter.script.scenes;
@@ -98,21 +114,49 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     if (finished) { audio.current.currentTime = 0; setTime(0); setFinished(false); }
     await start();
   }
+  // Play a downloaded copy of this narration when the host cannot serve byte ranges, because a copy always seeks.
+  // `at` is where to resume; without it the swap keeps the current position and play/pause state.
+  async function playDownloadedCopy(at?: { time: number; play: boolean }) {
+    const requested = source;
+    let copy = downloads.current.get(requested);
+    if (!copy) {
+      copy = fetch(requested).then(response => { if (!response.ok) throw new Error(String(response.status)); return response.blob(); }).then(blob => URL.createObjectURL(blob));
+      downloads.current.set(requested, copy);
+    }
+    if (at) { switching.current = true; audio.current?.pause(); }
+    try {
+      const url = await copy;
+      const element = audio.current;
+      if (mediaState.current.source !== requested || !element) { switching.current = false; return true; }
+      pending.current = at ?? { time: element.currentTime, play: !element.paused };
+      switching.current = true;
+      setLocal({ source: requested, url });
+      return true;
+    } catch { downloads.current.delete(requested); switching.current = false; return false; }
+  }
+  // Move playback to `to` seconds. Seeking is only trusted once the audio is known to be seekable.
+  async function seek(to: number, play: boolean) {
+    setTime(to);
+    const element = audio.current;
+    if (!element || audioUnavailable) return;
+    if (!canSeek(element, to) && await playDownloadedCopy({ time: to, play })) return;
+    element.currentTime = to;
+    if (play) await start();
+  }
   // Scene buttons narrate that scene too; otherwise "Next scene" flips through the story in silence.
   async function jump(index: number) {
     if (index > gate && !solved) { index = gate; setHint(chapter.lockedHint); }
     onActivity?.("story_viewed", { scene: scenes[index].id, category: scenes[index].title });
-    setTime(scenes[index].start); setFinished(false); setWaiting(false);
-    if (!audio.current || audioUnavailable) return;
-    audio.current.currentTime = scenes[index].start;
-    await start();
+    setFinished(false); setWaiting(false);
+    await seek(scenes[index].start, true);
   }
   function trackAudio() {
-    if (!audio.current || audioUnavailable || audio.current.readyState === 0) return;
+    if (!audio.current || audioUnavailable || audio.current.readyState === 0 || switching.current) return;
     let next = audio.current.currentTime;
-    if (!solvedRef.current && next >= scenes[gate + 1].start) {
-      next = scenes[gate + 1].start - .05;
-      audio.current.pause(); audio.current.currentTime = next;
+    if (!solvedRef.current && next >= scenes[gate + 1].start - GATE_LEAD) {
+      // Hold the story here without seeking: the audio simply stays where it paused, inside the silence.
+      audio.current.pause();
+      next = Math.min(next, scenes[gate + 1].start - .05);
       setWaiting(true);
     }
     setTime(next);
@@ -123,13 +167,17 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
     const resume = playing || waiting;
     solvedRef.current = true;
     setSolved(true); setWaiting(false); setHint("");
-    if (audio.current) audio.current.currentTime = scenes[gate + 1].start;
-    setTime(scenes[gate + 1].start);
+    const target = scenes[gate + 1].start;
+    const offset = (audio.current?.currentTime ?? target) - target;
+    // Paused at the gate the audio is already in the silence before the next scene, so just carry on.
+    // Answering early (or after the audio drifted past the gate) seeks to the next scene instead.
+    if (!audioUnavailable && (offset < -GATE_LEAD - .1 || offset > .1)) { await seek(target, resume); return; }
+    setTime(target);
     if (resume && !audioUnavailable) await start();
   }
   // Read changing playback state through a ref so timeupdate does not replace the adapter.
-  const mediaState = useRef({ time, audioUnavailable, play, trackAudio });
-  useLayoutEffect(() => { mediaState.current = { time, audioUnavailable, play, trackAudio }; });
+  const mediaState = useRef({ time, source, audioUnavailable, play, trackAudio });
+  useLayoutEffect(() => { mediaState.current = { time, source, audioUnavailable, play, trackAudio }; });
   const gateStart = scenes[gate + 1].start;
   // Timing includes scene/voice identity even when two narrations share durations.
   const sceneStart = Number(current.start), sceneDuration = Number(current.duration);
@@ -148,8 +196,17 @@ export function StoryPlayer({ slug, chapter, onBegin, onActivity }: { slug: stri
   const Icon = chapter.icon;
 
   return <section className={`${s.intro} ${slug === "password-vault-builder" ? "" : s.polishedMotion}`} data-story-player={slug} data-scene={scene} data-gate={gate} data-playing={playing} data-waiting={waiting} data-solved={solved}>
-    <audio key={source} ref={audio} src={source} preload="metadata" muted={muted}
-      onLoadedMetadata={() => { if (audio.current) audio.current.currentTime = time; }}
+    <audio key={source} ref={audio} src={local?.source === source ? local.url : source} preload="metadata" muted={muted}
+      onLoadedMetadata={() => {
+        const element = audio.current;
+        if (!element) return;
+        const resume = pending.current;
+        pending.current = null; switching.current = false;
+        element.currentTime = resume?.time ?? time;
+        if (resume?.play) void start();
+        // Audio that cannot seek is swapped for a downloaded copy now, while the learner is still reading.
+        else if (local?.source !== source && !canSeek(element, element.duration - .5)) void playDownloadedCopy();
+      }}
       onTimeUpdate={trackAudio} onPlay={() => setPlaying(true)} onPause={() => { trackAudio(); setPlaying(false); }}
       onEnded={() => { setPlaying(false); setFinished(true); setTime(duration); }}
       onError={() => { setAudioUnavailable(true); setPlaying(false); }} />

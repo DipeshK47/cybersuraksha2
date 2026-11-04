@@ -60,7 +60,7 @@ test('story player provides a memoized audio clock and captures exact pause time
  const player=readFileSync(root+'app/module/cyber/lessons/new/story/StoryPlayer.tsx','utf8');
  const types=readFileSync(root+'app/module/cyber/lessons/new/story/types.ts','utf8');
  assert.match(types,/export type StoryMediaClock/); assert.match(types,/media\?: StoryMediaClock/);
- assert.match(player,/if \(!audio.current \|\| audioUnavailable \|\| audio.current.readyState === 0\) return/);
+ assert.match(player,/if \(!audio.current \|\| audioUnavailable \|\| audio.current.readyState === 0 \|\| switching.current\) return/);
  assert.match(player,/useMemo/); assert.match(player,/readElapsed/); assert.match(player,/media=\{audioUnavailable \? undefined : media\}/); assert.match(player,/onPause=\{[^}]*trackAudio\(\)/);
 });
 
@@ -150,7 +150,7 @@ test('native microsecond seek rounding does not cross scenes on timeupdate or im
  let tree;
  const render=()=>{for(let n=0;n<10;n++){playerApi.begin();tree=playerApi.StoryPlayer({slug:'rounding',chapter,onBegin:()=>assert.fail('advanced'),onActivity:type=>activity.push(type)});if(!playerApi.flush())return;}assert.fail('render loop');};
  const node=type=>elements(tree).find(n=>n.type===type);
- const audio={currentTime:0,readyState:4,play:async()=>{},pause:()=>{}};
+ const audio={currentTime:0,readyState:4,seekable:{length:1,end:()=>1e6},play:async()=>{},pause:()=>{}};
  render();node('audio').props.ref.current=audio;
  await elements(node('nav')).filter(n=>n.type==='button')[5].props.onClick();render();
  assert.equal(tree.props['data-scene'],3);assert.equal(tree.props['data-solved'],false);
@@ -167,9 +167,10 @@ test('native microsecond seek rounding does not cross scenes on timeupdate or im
   audio.currentTime=script.scenes[index].start+offset;node('audio').props.onTimeUpdate();render();
   assert.equal(tree.props['data-scene'],expected,`boundary ${index}, offset ${offset}`);
  }
- // Existing unsolved gate clamp still owns the actual media position.
+ // The unsolved gate holds the story on the decision scene. It only pauses: moving the audio backwards is a
+ // seek, and a seek on audio the browser cannot seek snaps the story back to scene 1.
  audio.currentTime=script.scenes[4].start+1;node('audio').props.onTimeUpdate();render();
  assert.equal(tree.props['data-scene'],3);assert.equal(tree.props['data-waiting'],true);
- assert.equal(audio.currentTime,script.scenes[4].start-.05);
+ assert.equal(audio.currentTime,script.scenes[4].start+1);
  playerApi.unmount();
 });
