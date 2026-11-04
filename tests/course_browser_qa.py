@@ -49,6 +49,14 @@ def fillAnswer(board, task, answer, language="en"):
     if kind == "choice":
         value = next(option["label"][language] for option in task["options"] if option["id"] == answer)
         board.get_by_role("button", name=value, exact=True).click()
+    elif kind == "select" and task.get("presentation") != "redact":
+        # Cards move into the answer tray; empty it first so a previous wrong attempt cannot linger.
+        tray, bank = board.locator('[data-drop-zone="tray"]'), board.locator('[data-drop-zone="bank"]')
+        while tray.get_by_role("button").count():
+            tray.get_by_role("button").first.click()
+        for item_id in answer:
+            value = next(item["label"][language] for item in task["items"] if item["id"] == item_id)
+            bank.get_by_role("button", name=value, exact=True).click()
     elif kind in ("select", "model"):
         rows = task["items"] if kind == "select" else task["examples"]
         # Rebuild click order as well as membership: evidence records the actual
@@ -59,17 +67,33 @@ def fillAnswer(board, task, answer, language="en"):
             index = next(index for index, item in enumerate(rows) if item["id"] == item_id)
             board.locator('input[type="checkbox"]').nth(index).set_checked(True)
     elif kind == "match":
-        for index, row in enumerate(task["rows"]):
-            board.locator("select").nth(index).select_option(answer.get(row["id"],""))
+        # Answers are placed by tapping the answer, then its row; clear earlier placements first.
+        remove, bank = board.locator("[data-remove]"), board.locator('[data-drop-zone="bank"]')
+        while remove.count():
+            remove.first.click()
+        for row in task["rows"]:
+            if row["id"] not in answer:
+                continue
+            value = next(option["label"][language] for option in task["options"] if option["id"] == answer[row["id"]])
+            bank.get_by_role("button", name=value, exact=True).click()
+            board.locator(f'[data-drop-zone="row:{row["id"]}"]').click()
     elif kind == "number":
         for index, field in enumerate(task["fields"]):
             board.locator('input[type="number"]').nth(index).fill(str(answer.get(field["id"],"")))
-    elif kind in ("order", "route"):
+    elif kind == "order":
+        # Steps are tapped from the bank into the plan; empty the plan first.
+        remove, bank = board.locator("[data-remove]"), board.locator('[data-drop-zone="bank"]')
+        while remove.count():
+            remove.first.click()
+        for item_id in answer:
+            value = next(item["label"][language] for item in task["items"] if item["id"] == item_id)
+            bank.get_by_role("button", name=value, exact=True).click()
+    elif kind == "route":
         undo = board.get_by_role("button", name=label(language,"Undo last step","पिछला कदम हटाएँ"), exact=True)
         while undo.is_enabled():
             undo.click()
         for item_id in answer:
-            value = next(item["label"][language] for item in task["items"] if item["id"] == item_id) if kind == "order" else label(language,item_id.title(),{"up":"ऊपर","right":"दाएँ","down":"नीचे","left":"बाएँ"}[item_id])
+            value = label(language,item_id.title(),{"up":"ऊपर","right":"दाएँ","down":"नीचे","left":"बाएँ"}[item_id])
             board.get_by_role("button", name=value, exact=True).click()
     elif kind == "binary":
         for index, bit in enumerate(answer):
@@ -95,7 +119,7 @@ def needs_test(task):
     return task["kind"] in ("route","model") or (task["kind"] == "match" and task.get("presentation") == "permissions")
 
 def checkAnswer(board, task, answer, language="en", require_untested=True):
-    check = board.get_by_role("button",name=label(language,"Check my evidence","मेरी जानकारी चेक करें"),exact=True)
+    check = board.get_by_role("button",name=label(language,"Check my answer","मेरा जवाब चेक करें"),exact=True)
     if needs_test(task):
         if require_untested:
             expect(check).to_be_disabled()
@@ -130,7 +154,7 @@ def wrong_then_edit(scope, board, task, wrong, diagnosis, replacement, language)
     fillAnswer(board,task,replacement,language)
     expect(scope.locator('[data-task-feedback]')).to_have_count(0)
     if needs_test(task):
-        expect(board.get_by_role("button",name=label(language,"Check my evidence","मेरी जानकारी चेक करें"),exact=True)).to_be_disabled()
+        expect(board.get_by_role("button",name=label(language,"Check my answer","मेरा जवाब चेक करें"),exact=True)).to_be_disabled()
 
 def scored_event_ids(page, events):
     queued = page.evaluate("""() => Object.keys(localStorage).filter(key=>key.startsWith('cyber-activity-')&&!key.endsWith('-attempt')).flatMap(key=>{try{return JSON.parse(localStorage.getItem(key))??[]}catch{return []}})""")

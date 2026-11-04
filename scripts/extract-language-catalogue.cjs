@@ -56,7 +56,7 @@ function walk(dir) {
         }
         ts.forEachChild(node,visit); return;
       }
-      if (ts.isJsxAttribute(node) && ['className','style','key','id','name','type','src','srcSet','sizes','loading','decoding','fetchPriority','href','target','rel','width','height','role','ref','data-testid','inputMode','step','transform'].includes(node.name.getText(ast))) return;
+      if (ts.isJsxAttribute(node) && (['className','style','key','id','name','type','src','srcSet','sizes','loading','decoding','fetchPriority','href','target','rel','width','height','role','ref','data-testid','inputMode','step','transform'].includes(node.name.getText(ast)) || node.name.getText(ast).startsWith('data-'))) return;
       if (ts.isTemplateExpression(node)) {
         const parts=[node.head.text,...node.templateSpans.map(span=>span.literal.text)];
         const text=parts.map((part,index)=>part+(index<parts.length-1?`{{${index}}}`:'')).join('').replace(/\s+/g,' ').trim();
@@ -72,6 +72,9 @@ function walk(dir) {
         if (ts.isCaseClause(p) && ts.isSwitchStatement(p.parent.parent) && ts.isPropertyAccessExpression(p.parent.parent.expression) && p.parent.parent.expression.name.text==='kind') return;
         if (ts.isBinaryExpression(p) && p.right===node && ((ts.isPropertyAccessExpression(p.left) && ['kind','presentation','sceneTheme','checkRole'].includes(p.left.name.text)) || (ts.isIdentifier(p.left) && p.left.text==='theme'))) return;
         if (ts.isArrayLiteralExpression(p) && ts.isPropertyAccessExpression(p.parent) && p.parent.name.text==='includes' && ts.isCallExpression(p.parent.parent) && p.parent.parent.arguments.some(argument=>(ts.isPropertyAccessExpression(argument)&&argument.name.text==='kind')||(ts.isIdentifier(argument)&&['theme','mood'].includes(argument.text)))) return;
+        // Event names, selectors and attribute reads are code, never rendered copy.
+        if (ts.isCallExpression(p) && p.arguments[0]===node && ts.isPropertyAccessExpression(p.expression) && ['addEventListener','removeEventListener','closest','querySelector','querySelectorAll','startsWith','getAttribute'].includes(p.expression.name.text)) return;
+        if (ts.isBinaryExpression(p) && p.right===node && ts.isPropertyAccessExpression(p.left) && p.left.name.text==='pointerType') return;
         if ((ts.isPropertyAssignment(p)&&p.name===node)||(ts.isElementAccessExpression(p)&&p.argumentExpression===node)) return;
         if (node.text!=='use client') add(node.text,file);
         return;

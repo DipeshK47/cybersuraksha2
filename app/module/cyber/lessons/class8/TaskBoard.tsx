@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Check, FlaskConical, RotateCcw, Plus } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Check, FlaskConical, Plus } from "lucide-react";
 import type { Class8Task, TaskAnswer } from "../../../../data/class8/types";
 import { buildTaskEvidence } from "./task-evidence";
 import { simulateRoute, testModel, testPermissions } from "./task-evaluation";
 import { makeTaskSimulation, type TaskSimulationSnapshot } from "./task-simulation";
+import type { TaskDiagnosis } from "./task-feedback";
+import { ChoiceBoard, MatchBoard, NumberBoard, OrderBoard, SortBoard, type Band } from "./boards";
 import { ui, useEvidenceLanguage } from "./ui";
 import s from "./class8.module.css";
 
@@ -16,10 +18,19 @@ export function initialAnswer(task: Class8Task): TaskAnswer {
   return task.kind === "choice" ? "" : {};
 }
 
-export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disabled = false, onSimulationChange }: {
+export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disabled = false, onSimulationChange, diagnosis = null, band = "senior" }: {
   task: Class8Task; answer: TaskAnswer; onChange: (answer: TaskAnswer) => void; onCheck: () => void; disabled?: boolean; onSimulationChange?: (snapshot: TaskSimulationSnapshot | null) => void;
+  /** After "Check my answer", each card shows its own result from this. */
+  diagnosis?: TaskDiagnosis | null;
+  /** Classes 6-7 get the playful look; Classes 8-10 the quieter one. */
+  band?: Band;
 }) {
   const evidenceLanguage = useEvidenceLanguage();
+  const marks = new Map<string, boolean>();
+  for (const item of diagnosis?.supported ?? []) marks.set(item.id, true);
+  for (const item of diagnosis?.issues ?? []) marks.set(item.id, false);
+  const status = (id: string) => diagnosis?.complete ? marks.get(id) : undefined;
+  const board = { language: evidenceLanguage, band, disabled, status };
   const [testRun, setTestRun] = useState<{ configuration: string; snapshot: TaskSimulationSnapshot } | null>(null);
   const configuration = JSON.stringify(task);
   const simulationListener = useRef(onSimulationChange);
@@ -44,8 +55,9 @@ export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disab
 
   return <div className={s.task} data-task-kind={task.kind} translate="no">
     <div className={s.case}><span>{ui.source[evidenceLanguage]}</span><p>{task.context[evidenceLanguage]}</p></div>
-    {task.kind === "choice" && <div className={s.choices}>{task.options.map(option => <button type="button" className={s.choice} aria-pressed={answer === option.id} disabled={disabled} key={option.id} onClick={() => onChange(option.id)}>{option.label[evidenceLanguage]}</button>)}</div>}
-    {task.kind === "select" && <>
+    {task.kind === "choice" && <ChoiceBoard {...board} task={task} answer={typeof answer === "string" ? answer : ""} onChange={onChange} />}
+    {task.kind === "select" && task.presentation !== "redact" && <SortBoard {...board} task={task} selected={selected} onChange={onChange} />}
+    {task.kind === "select" && task.presentation === "redact" && <>
       <div className={s.tileBank} aria-label={evidenceLanguage === "hi" ? "जवाब बनाने के लिए कार्ड चुनें" : "Choose cards to build your answer"}>
         {task.items.map(item => <label className={s.selection} key={item.id} data-selected={selected.includes(item.id)}>
           <input type="checkbox" disabled={disabled} checked={selected.includes(item.id)} onChange={() => toggle(item.id)} />
@@ -59,9 +71,9 @@ export function TaskBoard({ task, answer, onChange: changeAnswer, onCheck, disab
           : selected.length ? <ul>{selected.map(id => <li key={id}>{task.items.find(item => item.id === id)?.label[evidenceLanguage]}</li>)}</ul> : <p>{evidenceLanguage === "hi" ? "कार्ड चुनकर यहाँ रखें। हटाने के लिए उसी कार्ड को फिर चुनें।" : "Choose a card to place it here. Choose it again to take it back."}</p>}
       </figure>
     </>}
-    {task.kind === "match" && <div className={s.matches} data-presentation={task.presentation}>{task.rows.map(row => <label className={s.match} key={row.id}><span>{row.label[evidenceLanguage]}</span><select value={values[row.id] ?? ""} disabled={disabled} onChange={event => onChange({ ...values, [row.id]: event.target.value })}><option value="">{ui.choose[evidenceLanguage]}</option>{task.options.map(option => <option value={option.id} key={option.id}>{option.label[evidenceLanguage]}</option>)}</select></label>)}</div>}
-    {task.kind === "order" && <div className={s.sequence}><ol aria-label={ui.plan[evidenceLanguage]}>{task.expected.map((_, index) => <li key={index}><b>{index + 1}</b><span>{task.items.find(item => item.id === selected[index])?.label[evidenceLanguage] ?? "…"}</span></li>)}</ol><div className={s.choices}>{[...task.items].reverse().map(item => <button type="button" className={s.choice} key={item.id} disabled={disabled || selected.includes(item.id)} onClick={() => onChange([...selected, item.id])}>{item.label[evidenceLanguage]}</button>)}</div><button className={s.secondary} type="button" disabled={disabled || !selected.length} onClick={() => onChange(selected.slice(0, -1))}><RotateCcw aria-hidden="true" />{ui.undo[evidenceLanguage]}</button></div>}
-    {task.kind === "number" && <div className={s.matches}>{task.fields.map(field => <label className={s.match} key={field.id}><span>{field.label[evidenceLanguage]}</span><input type="number" inputMode="decimal" step="any" value={values[field.id] ?? ""} min={field.min} max={field.max} disabled={disabled} onChange={event => onChange({ ...values, [field.id]: event.target.value })} /></label>)}</div>}
+    {task.kind === "match" && <MatchBoard {...board} task={task} values={values as Record<string, string>} onChange={onChange} />}
+    {task.kind === "order" && <OrderBoard {...board} task={task} selected={selected} onChange={onChange} />}
+    {task.kind === "number" && <NumberBoard {...board} task={task} values={values as Record<string, string>} onChange={onChange} />}
     {task.kind === "binary" && <div className={s.signal}><p>{ui.target[evidenceLanguage]}: <strong>{task.target}</strong></p><div className={s.lamps} role="group" aria-label={ui.lamp[evidenceLanguage]}>{Array.from({ length: 8 }, (_, index) => {
       const bits = typeof answer === "string" && answer.length === 8 ? answer : "00000000";
       const on = bits[index] === "1";

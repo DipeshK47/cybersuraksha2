@@ -81,6 +81,7 @@ const hooks = `let slots=[],cursor=0,pending=[],dirty=false;
 export function begin(){cursor=0;pending=[];dirty=false;}
 export function useState(initial){const i=cursor++;if(!(i in slots))slots[i]=typeof initial==='function'?initial():initial;return [slots[i],value=>{const next=typeof value==='function'?value(slots[i]):value;if(!Object.is(next,slots[i])){slots[i]=next;dirty=true;}}];}
 export function useRef(initial){const i=cursor++;return slots[i]??(slots[i]={current:initial});}
+export function useCallback(callback){cursor++;return callback;}
 export function useEffect(effect,deps){const i=cursor++,old=slots[i];if(!old||!deps||deps.some((v,j)=>!Object.is(v,old.deps?.[j])))pending.push(()=>{old?.cleanup?.();slots[i]={deps,cleanup:effect()};});}
 export function flush(){if(dirty)return true;for(const effect of pending)effect();return dirty;}
 export function unmount(){for(const slot of slots)slot?.cleanup?.();slots=[];}
@@ -88,8 +89,10 @@ export const jsx=(type,props)=>({type,props});export const jsxs=jsx;export const
 const boardBundle=await build({stdin:{contents:`export { TaskBoard } from './app/module/cyber/lessons/class8/TaskBoard'; export {begin,flush,unmount} from 'test-hooks';`,resolveDir:root,loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,jsx:'automatic',loader:{'.module.css':'empty'},logLevel:'silent',plugins:[{name:'hook-host',setup(builder){
  builder.onResolve({filter:/^(react|react\/jsx-runtime|test-hooks)$/},()=>({path:'hooks',namespace:'fixture'}));
  builder.onLoad({filter:/.*/,namespace:'fixture'},()=>({contents:hooks,loader:'js'}));
+ builder.onResolve({filter:/^react-dom$/},()=>({path:'dom',namespace:'dom-fixture'}));
+ builder.onLoad({filter:/.*/,namespace:'dom-fixture'},()=>({contents:'export const createPortal=node=>node;',loader:'js'}));
  builder.onResolve({filter:/^lucide-react$/},()=>({path:'icons',namespace:'icons'}));
- builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon",Plus="icon";',loader:'js'}));
+ builder.onLoad({filter:/.*/,namespace:'icons'},()=>({contents:'export const ArrowDown="icon",ArrowLeft="icon",ArrowRight="icon",ArrowUp="icon",Check="icon",FlaskConical="icon",RotateCcw="icon",Plus="icon",GripVertical="icon",Minus="icon",MousePointerClick="icon",X="icon";',loader:'js'}));
  builder.onLoad({filter:/class8\/ui.ts$/},args=>({contents:readFileSync(args.path,'utf8').split('export function useEvidenceLanguage')[0]+'export function useEvidenceLanguage(){return "en";}',loader:'ts'}));
 }}]});
 const boardApi=await loadSource(boardBundle.outputFiles[0].text);
@@ -99,16 +102,16 @@ test('TaskBoard exports only the current test and invalidates edits, configurati
  let answer=['right','right'],task=structuredClone(route),reports=[],checks=0,disabled=false,tree;
  const render=()=>{for(let attempts=0;attempts<10;attempts++){boardApi.begin();tree=boardApi.TaskBoard({task,answer,disabled,onChange:value=>{answer=value;},onCheck:()=>checks++,onSimulationChange:value=>reports.push(value)});if(!boardApi.flush())return;}assert.fail('effect caused a render loop');};
  const button=text=>elements(tree).find(node=>node.type==='button'&&containsText(node,text));
- render(); assert.equal(reports.at(-1),null); assert.equal(button('Check my evidence').props.disabled,true);
- button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');assert.deepEqual(reports.at(-1).result,api.simulateRoute(task,answer));assert.equal(button('Check my evidence').props.disabled,false);
+ render(); assert.equal(reports.at(-1),null); assert.equal(button('Check my answer').props.disabled,true);
+ button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');assert.deepEqual(reports.at(-1).result,api.simulateRoute(task,answer));assert.equal(button('Check my answer').props.disabled,false);
  const count=reports.length;render();assert.equal(reports.length,count,'changing callback identity must not report repeatedly');
- button('Check my evidence').props.onClick();assert.equal(checks,1);
- disabled=true;render();assert.equal(reports.length,count,'ready/disabled and callback changes must preserve the tested snapshot');assert.equal(reports.at(-1).kind,'route');disabled=false;render();assert.equal(button('Check my evidence').props.disabled,false);
- button('Undo last step').props.onClick();render();assert.equal(reports.at(-1),null);assert.equal(button('Check my evidence').props.disabled,true);
- answer=['right','right'];render();assert.equal(button('Check my evidence').props.disabled,true,'restoring an old answer requires another test');
- button('Run the test').props.onClick();render();task={...task,maxCost:1};render();assert.equal(reports.at(-1),null);assert.equal(button('Check my evidence').props.disabled,true);
+ button('Check my answer').props.onClick();assert.equal(checks,1);
+ disabled=true;render();assert.equal(reports.length,count,'ready/disabled and callback changes must preserve the tested snapshot');assert.equal(reports.at(-1).kind,'route');disabled=false;render();assert.equal(button('Check my answer').props.disabled,false);
+ button('Undo last step').props.onClick();render();assert.equal(reports.at(-1),null);assert.equal(button('Check my answer').props.disabled,true);
+ answer=['right','right'];render();assert.equal(button('Check my answer').props.disabled,true,'restoring an old answer requires another test');
+ button('Run the test').props.onClick();render();task={...task,maxCost:1};render();assert.equal(reports.at(-1),null);assert.equal(button('Check my answer').props.disabled,true);
  button('Run the test').props.onClick();render();assert.equal(reports.at(-1).kind,'route');boardApi.unmount();assert.equal(reports.at(-1),null);
- render();assert.equal(button('Check my evidence').props.disabled,true);boardApi.unmount();
+ render();assert.equal(button('Check my answer').props.disabled,true);boardApi.unmount();
 });
 
 test('selection cards build a reversible answer and redaction shows the edited draft',()=>{

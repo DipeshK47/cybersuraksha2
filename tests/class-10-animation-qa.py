@@ -291,7 +291,7 @@ with sync_playwright() as p:
                 trace=practice.locator('[data-class10-trace]'); expect(trace).to_have_attribute('data-trace-state','tested')
                 fillAnswer(board,task,answer)
                 expect(trace).to_have_attribute('data-trace-state','outdated')
-                expect(board.get_by_role('button',name='Check my evidence',exact=True)).to_be_disabled()
+                expect(board.get_by_role('button',name='Check my answer',exact=True)).to_be_disabled()
                 board.get_by_role('button',name='Run the test',exact=True).click()
                 trace=practice.locator('[data-class10-trace]'); expect(trace).to_have_attribute('data-trace-state','tested')
                 expected=expected_snapshots([{'task':task,'answer':answer}])[0]

@@ -30,13 +30,19 @@ def fill(board, task, answer):
     kind = task['kind']
     if kind == 'choice':
         board.get_by_role('button', name=next(o['label']['en'] for o in task['options'] if o['id'] == answer), exact=True).click()
+    elif kind == 'select' and task.get('presentation') != 'redact':
+        bank = board.locator('[data-drop-zone="bank"]')
+        for item_id in answer:
+            bank.get_by_role('button', name=next(i['label']['en'] for i in task['items'] if i['id'] == item_id), exact=True).click()
     elif kind in ('select', 'model'):
         rows = task['items'] if kind == 'select' else task['examples']
         for i, row in enumerate(rows):
             board.locator('input[type=checkbox]').nth(i).set_checked(row['id'] in answer)
     elif kind == 'match':
-        for i, row in enumerate(task['rows']):
-            board.locator('select').nth(i).select_option(answer[row['id']])
+        bank = board.locator('[data-drop-zone="bank"]')
+        for row in task['rows']:
+            bank.get_by_role('button', name=next(o['label']['en'] for o in task['options'] if o['id'] == answer[row['id']]), exact=True).click()
+            board.locator(f'[data-drop-zone="row:{row["id"]}"]').click()
     elif kind == 'number':
         for i, field in enumerate(task['fields']):
             board.locator('input[type=number]').nth(i).fill(str(answer[field['id']]))
@@ -148,7 +154,7 @@ with sync_playwright() as p:
             fill(board, task, answer)
             if task['kind'] == 'select':
                 expect(board.locator('[data-answer-workspace]')).to_be_visible()
-            board.get_by_role('button', name='Check my evidence', exact=True).click()
+            board.get_by_role('button', name='Check my answer', exact=True).click()
             expect(page.locator('[data-task-feedback]')).to_have_attribute('data-result', 'correct')
             page.get_by_role('button', name='Review mission' if stage == 2 else 'Next challenge', exact=True).click()
         ready = page.locator('[data-mission-ready]')
