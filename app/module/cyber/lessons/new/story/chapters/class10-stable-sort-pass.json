@@ -19,7 +19,7 @@
       "caption": "Aditi brings four fictional priority cards into the Decision Lab. Vihaan gives each a stable letter identity as well as a numeric key. The pass moves complete cards.",
       "speech": "Aditi brings four fictional priority cards into the Decision Lab. Vihaan gives each a stable letter identity as well as a numeric key. The pass moves complete cards.",
       "dialogue": "A key and an identity are different fields.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 13.44
@@ -32,7 +32,7 @@
       "caption": "The supplied pass compares adjacent positions from left to right. After each comparison, the next pair uses the current row, not the untouched starting row. Aditi slides a window while keeping card identities visible.",
       "speech": "The supplied pass compares adjacent positions from left to right. After each comparison, the next pair uses the current row, not the untouched starting row. Aditi slides a window while keeping card identities visible.",
       "dialogue": "Read the row again after a swap.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 14.09,
       "duration": 16.968
@@ -45,7 +45,7 @@
       "caption": "A pair swaps only when its left key is strictly greater than its right key. The first comparison therefore changes the row. Vihaan writes one comparison and one swap as separate events, rather than treating those two counts as interchangeable measures.",
       "speech": "A pair swaps only when its left key is strictly greater than its right key. The first comparison therefore changes the row. Vihaan writes one comparison and one swap as separate events, rather than treating those two counts as interchangeable measures.",
       "dialogue": "A comparison can finish without a swap.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 31.708,
       "duration": 18.048
@@ -58,7 +58,7 @@
       "caption": "After the first swap, the window advances one position. Decide which named cards are now adjacent and whether their keys require movement. Looking only at the original row would compare the wrong cards and produce an unreproducible pass.",
       "speech": "After the first swap, the window advances one position. Decide which named cards are now adjacent and whether their keys require movement. Looking only at the original row would compare the wrong cards and produce an unreproducible pass.",
       "dialogue": "What occupies the positions now?",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 50.406,
       "duration": 17.448
@@ -71,7 +71,7 @@
       "caption": "The equal ranked cards meet inside the window. Since equality is not greater than, they stay in their original relative order. Aditi preserves the letters in the trace: seeing repeated numeric keys alone would hide an accidental reversal of tied records.",
       "speech": "The equal ranked cards meet inside the window. Since equality is not greater than, they stay in their original relative order. Aditi preserves the letters in the trace: seeing repeated numeric keys alone would hide an accidental reversal of tied records.",
       "dialogue": "Tie identities are evidence of stability.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 68.504,
       "duration": 18.864
@@ -84,7 +84,7 @@
       "caption": "They finish the final adjacent comparison and record the resulting row, comparison count and swap count. The row need not be fully sorted after one pass. Their test set includes named ties and a single-card boundary, checking different possible defects separately.",
       "speech": "They finish the final adjacent comparison and record the resulting row, comparison count and swap count. The row need not be fully sorted after one pass. Their test set includes named ties and a single-card boundary, checking different possible defects separately.",
       "dialogue": "Report what the pass actually guarantees.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 88.018,
       "duration": 19.248

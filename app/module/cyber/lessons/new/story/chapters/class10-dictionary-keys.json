@@ -19,7 +19,7 @@
       "caption": "Aditi opens a fictional exhibit ledger in the Decision Lab. Vihaan gives each exhibit a short key and a token count. The cards may move on screen, but their key and value associations must remain attached throughout the investigation.",
       "speech": "Aditi opens a fictional exhibit ledger in the Decision Lab. Vihaan gives each exhibit a short key and a token count. The cards may move on screen, but their key and value associations must remain attached throughout the investigation.",
       "dialogue": "A key identifies; position does not.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 17.28
@@ -32,7 +32,7 @@
       "caption": "The lookup card names BK. Aditi follows that exact key to its stored value, ignoring the order of the cards. Their stated rule treats uppercase and lowercase as different, so a similar looking lowercase key does not match.",
       "speech": "The lookup card names BK. Aditi follows that exact key to its stored value, ignoring the order of the cards. Their stated rule treats uppercase and lowercase as different, so a similar looking lowercase key does not match.",
       "dialogue": "Check case before returning a value.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 17.93,
       "duration": 16.704
@@ -45,7 +45,7 @@
       "caption": "Vihaan applies set to an existing exhibit key. Its old value is replaced. The ledger still has one entry for that key; updating a value does not preserve a duplicate historical entry.",
       "speech": "Vihaan applies set to an existing exhibit key. Its old value is replaced. The ledger still has one entry for that key; updating a value does not preserve a duplicate historical entry.",
       "dialogue": "Count keys separately from token totals.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 35.284,
       "duration": 14.952
@@ -58,7 +58,7 @@
       "caption": "A lookup asks for NX, which has no entry. Their explicit default rule returns 0 without insertion. Choose the response that reports the lookup result honestly while keeping the ledger unchanged.",
       "speech": "A lookup asks for NX, which has no entry. Their explicit default rule returns 0 without insertion. Choose the response that reports the lookup result honestly while keeping the ledger unchanged.",
       "dialogue": "Missing is not permission to invent data.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 50.886,
       "duration": 15.312
@@ -71,7 +71,7 @@
       "caption": "A separate set card explicitly inserts NX with its supplied value. Now the entry count increases, unlike the earlier lookup. Aditi records the before and after mappings so replacement, absence and insertion leave visibly different evidence for later checking.",
       "speech": "A separate set card explicitly inserts NX with its supplied value. Now the entry count increases, unlike the earlier lookup. Aditi records the before and after mappings so replacement, absence and insertion leave visibly different evidence for later checking.",
       "dialogue": "The operation determines whether the map changes.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 66.848,
       "duration": 19.296
@@ -84,7 +84,7 @@
       "caption": "They add only the values currently stored under distinct keys. Replaced values are not counted again, and a missing lookup result is not an extra entry. Their final evidence states the case rule, default rule and each accepted mapping change.",
       "speech": "They add only the values currently stored under distinct keys. Replaced values are not counted again, and a missing lookup result is not an extra entry. Their final evidence states the case rule, default rule and each accepted mapping change.",
       "dialogue": "Sum the final mapping, not its history.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 86.794,
       "duration": 18.456

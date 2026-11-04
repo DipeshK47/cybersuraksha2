@@ -19,7 +19,7 @@
       "caption": "A fictional helper promises a refund for Nikhil’s cancelled workshop kit. Reva brings the printed merchant-payment approval to the evidence table. The class uses paper records and opens no payment app.",
       "speech": "A fictional helper promises a refund for Nikhil’s cancelled workshop kit. Reva brings the printed merchant-payment approval to the evidence table. The class uses paper records and opens no payment app.",
       "dialogue": "Read the requested action first.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 14.88
@@ -32,7 +32,7 @@
       "caption": "The approval card says pay, identifies the learner account as payer and names a merchant as payee. Its status is awaiting approval. Reva draws an arrow away from the learner account, even though the chat calls the action a refund.",
       "speech": "The approval card says pay, identifies the learner account as payer and names a merchant as payee. Its status is awaiting approval. Reva draws an arrow away from the learner account, even though the chat calls the action a refund.",
       "dialogue": "A promise cannot reverse an arrow.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 15.53,
       "duration": 17.208
@@ -45,7 +45,7 @@
       "caption": "Another record says completed refund, with an arrow from the original shop into the learner account and a transaction reference. Nikhil keeps it separate from the approval card with its different direction and status.",
       "speech": "Another record says completed refund, with an arrow from the original shop into the learner account and a transaction reference. Nikhil keeps it separate from the approval card with its different direction and status.",
       "dialogue": "Direction and status both matter.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 33.388,
       "duration": 14.64
@@ -58,7 +58,7 @@
       "caption": "The helper asks for immediate approval so the refund can be released. Nikhil can approve, believe the chat label or pause. Reva asks which supplied record actually shows money arriving, and which one asks permission for money to leave.",
       "speech": "The helper asks for immediate approval so the refund can be released. Nikhil can approve, believe the chat label or pause. Reva asks which supplied record actually shows money arriving, and which one asks permission for money to leave.",
       "dialogue": "Check payer, payee, amount and status.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 48.678,
       "duration": 17.328
@@ -71,7 +71,7 @@
       "caption": "They decline the outgoing instruction and ask a trusted adult to check the original shop through its known route. Their classroom ledger calculates only the supplied hypothetical changes. An awaiting approval card does not itself prove that a debit occurred.",
       "speech": "They decline the outgoing instruction and ask a trusted adult to check the original shop through its known route. Their classroom ledger calculates only the supplied hypothetical changes. An awaiting approval card does not itself prove that a debit occurred.",
       "dialogue": "Requested is different from completed.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 66.656,
       "duration": 18.144
@@ -84,7 +84,7 @@
       "caption": "The simulation adds a completed outgoing record. Nikhil updates the ledger and the help plan: an adult should promptly contact the financial provider through a known route about an unauthorised payment. They preserve relevant facts privately and promise no recovery.",
       "speech": "The simulation adds a completed outgoing record. Nikhil updates the ledger and the help plan: an adult should promptly contact the financial provider through a known route about an unauthorised payment. They preserve relevant facts privately and promise no recovery.",
       "dialogue": "New evidence changes the response.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 85.45,
       "duration": 18.888

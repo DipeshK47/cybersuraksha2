@@ -19,7 +19,7 @@
       "caption": "Aditi brings invented club tables into the Decision Lab. One lists attendance by activity and time; another lists support requests using those categories. Neither contains names. Vihaan initially treats that as protection for every record.",
       "speech": "Aditi brings invented club tables into the Decision Lab. One lists attendance by activity and time; another lists support requests using those categories. Neither contains names. Vihaan initially treats that as protection for every record.",
       "dialogue": "No names does not mean no identifying combination.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 19.392
@@ -32,7 +32,7 @@
       "caption": "They align shared activity and time labels. The supplied audience already knows which fictional learner attended one small session. Linking categories connects attendance knowledge with support counts, despite the absent names.",
       "speech": "They align shared activity and time labels. The supplied audience already knows which fictional learner attended one small session. Linking categories connects attendance knowledge with support counts, despite the absent names.",
       "dialogue": "Consider the audience knowledge stated in the example.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 20.042,
       "duration": 16.944
@@ -45,7 +45,7 @@
       "caption": "One activity-time intersection contains a single invented attendee and a recorded support request. That combination singles out the record for this audience. Aditi marks the inference carefully; it establishes no unrelated facts or knowledge of other audiences.",
       "speech": "One activity-time intersection contains a single invented attendee and a recorded support request. That combination singles out the record for this audience. Aditi marks the inference carefully; it establishes no unrelated facts or knowledge of other audiences.",
       "dialogue": "State the specific inference and stop there.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 37.636,
       "duration": 19.488
@@ -58,7 +58,7 @@
       "caption": "Vihaan proposes publishing every row after removing names again. Aditi instead chooses an activity-only totals chart with no times, individual rows or support breakdown. The purpose is workshop participation; the extra detail is unnecessary.",
       "speech": "Vihaan proposes publishing every row after removing names again. Aditi instead chooses an activity-only totals chart with no times, individual rows or support breakdown. The purpose is workshop participation; the extra detail is unnecessary.",
       "dialogue": "Start with what the public chart needs to say.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 57.774,
       "duration": 18.624
@@ -71,7 +71,7 @@
       "caption": "Combining time categories increases displayed activity groups and removes the tiny time intersection from this chart. The team checks the resulting counts against the invented source totals. A broader label helps only when the export matches.",
       "speech": "Combining time categories increases displayed activity groups and removes the tiny time intersection from this chart. The team checks the resulting counts against the invented source totals. A broader label helps only when the export matches.",
       "dialogue": "Review the exported fields, not just the heading.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 77.048,
       "duration": 17.736
@@ -84,7 +84,7 @@
       "caption": "The teacher checks the public download and preview. It contains only the intended totals. Their review records reduced detail, the audience assumption and uncertainty about outside knowledge. Your export note must avoid promising guaranteed anonymity from grouping alone.",
       "speech": "The teacher checks the public download and preview. It contains only the intended totals. Their review records reduced detail, the audience assumption and uncertainty about outside knowledge. Your export note must avoid promising guaranteed anonymity from grouping alone.",
       "dialogue": "A privacy claim needs a stated limit.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 95.434,
       "duration": 20.304

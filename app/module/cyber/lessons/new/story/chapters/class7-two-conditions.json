@@ -19,7 +19,7 @@
       "caption": "The Connection Lab lends imaginary field kits only when a learner has permission and has completed training. Tara writes both checks separately. Neel sees permission on a practice card and approves the loan without reading the training field, which is marked no.",
       "speech": "The Connection Lab lends imaginary field kits only when a learner has permission and has completed training. Tara writes both checks separately. Neel sees permission on a practice card and approves the loan without reading the training field, which is marked no.",
       "dialogue": "Both conditions",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.288
@@ -32,7 +32,7 @@
       "caption": "The supplied AND rule requires both conditions to be true. One true condition does not compensate for a false one. The team traces complete yes-or-no cases first, then puts a card with missing training information aside for review rather than inventing a value to finish the table.",
       "speech": "The supplied AND rule requires both conditions to be true. One true condition does not compensate for a false one. The team traces complete yes-or-no cases first, then puts a card with missing training information aside for review rather than inventing a value to finish the table.",
       "dialogue": "Either condition",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.938,
       "duration": 19.752
@@ -45,7 +45,7 @@
       "caption": "The teacher introduces a separate pretend badge rule: a drawing or a poem is enough. This OR rule accepts either condition and also accepts both. Tara labels the changed rule clearly. A correct answer under one rule can become incorrect when the connecting word changes.",
       "speech": "The teacher introduces a separate pretend badge rule: a drawing or a poem is enough. This OR rule accepts either condition and also accepts both. Tara labels the changed rule clearly. A correct answer under one rule can become incorrect when the connecting word changes.",
       "dialogue": "Unknown inputs",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.34,
       "duration": 20.4
@@ -58,7 +58,7 @@
       "caption": "The kit rule requires permission AND completed training. Both values are known. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The kit rule requires permission AND completed training. Both values are known. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Permission is yes and training is no. Can the kit be lent?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 60.39,
       "duration": 12.12
@@ -71,7 +71,7 @@
       "caption": "No. The training condition is false, so the supplied AND rule is not satisfied even though permission is true.",
       "speech": "No. The training condition is false, so the supplied AND rule is not satisfied even though permission is true.",
       "dialogue": "Distinguish OR from AND under a changed rule.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 73.16,
       "duration": 8.4
@@ -84,7 +84,7 @@
       "caption": "Investigate both conditions, then either condition, then unknown inputs. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate both conditions, then either condition, then unknown inputs. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "How can changing AND to OR change the same case’s outcome?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 82.21,
       "duration": 14.184

@@ -3,8 +3,7 @@ import {compileStructuredCourse} from './build-structured-course.mjs';
 import {expandClass10Speech} from './class10-assets-lib.mjs';
 
 await compileStructuredCourse({grade:10,speech:expandClass10Speech,manualMessages:{
-  'Decision Lab':'डिसीज़न लैब',
-  'CyberShiksha Decision Lab · Class 10':'CyberShiksha डिसीज़न लैब · क्लास 10',
+  'Cyber Commanders':'साइबर कमांडर्स',
   'Trace access, requests and recovery before publishing shared work.':'साझा काम प्रकाशित करने से पहले एक्सेस, अनुरोध और रिकवरी की जाँच करें।',
   'Compare models, trace image and text processing, and explain evaluation evidence.':'मॉडल की तुलना करें, चित्र और शब्दों की प्रोसेसिंग देखें और मूल्यांकन के सबूत समझाएँ।',
   'Trace state, data and algorithms; test constraints and alternative plans.':'स्थिति, डेटा और एल्गोरिदम का क्रम देखें; शर्तें और वैकल्पिक प्लान जाँचें।',

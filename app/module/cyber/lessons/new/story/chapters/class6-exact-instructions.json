@@ -19,7 +19,7 @@
       "caption": "The club’s paper robot understands only exact commands. Kabir tells it to put things nicely and gets no useful result. Meera replaces the vague instruction with pick up the blue card, place it on the tray and close the lid.",
       "speech": "The club’s paper robot understands only exact commands. Kabir tells it to put things nicely and gets no useful result. Meera replaces the vague instruction with pick up the blue card, place it on the tray and close the lid.",
       "dialogue": "Precise actions",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.944
@@ -32,7 +32,7 @@
       "caption": "An algorithm is an ordered method for completing a task. Each instruction must be clear enough for the intended helper. Closing the lid before placing the card prevents the next action, even though the same words appear somewhere in both lists.",
       "speech": "An algorithm is an ordered method for completing a task. Each instruction must be clear enough for the intended helper. Closing the lid before placing the card prevents the next action, even though the same words appear somewhere in both lists.",
       "dialogue": "Sequence matters",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 17.594,
       "duration": 17.088
@@ -45,7 +45,7 @@
       "caption": "The team traces the commands on a pretend tray and records what changes after each action. They use small safe objects, not real machinery. When an instruction fails, they inspect the earliest failing step instead of adding more commands at random to the end.",
       "speech": "The team traces the commands on a pretend tray and records what changes after each action. They use small safe objects, not real machinery. When an instruction fails, they inspect the earliest failing step instead of adding more commands at random to the end.",
       "dialogue": "Trace the result",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 35.332,
       "duration": 18.744
@@ -58,7 +58,7 @@
       "caption": "The tray is open and the blue card is on the table. The helper has no rule for the word nicely. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The tray is open and the blue card is on the table. The helper has no rule for the word nicely. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Which instruction is precise enough to test?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 54.726,
       "duration": 12.744
@@ -71,7 +71,7 @@
       "caption": "Tell the helper to place the blue card in the open tray. The object, action and destination are stated, so another learner can test the instruction.",
       "speech": "Tell the helper to place the blue card in the open tray. The object, action and destination are stated, so another learner can test the instruction.",
       "dialogue": "Order steps with required dependencies.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 68.12,
       "duration": 10.656
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through precise actions, then sequence matters, then trace the result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through precise actions, then sequence matters, then trace the result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why can the same actions produce different results in a different order?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 79.426,
       "duration": 18.072

@@ -19,7 +19,7 @@
       "caption": "Reva needs to upload fictional repair totals from a shared network. Nikhil sees a secure connection message and calls the page trustworthy. The teacher asks them to separate the connection, destination and information being sent.",
       "speech": "Reva needs to upload fictional repair totals from a shared network. Nikhil sees a secure connection message and calls the page trustworthy. The teacher asks them to separate the connection, destination and information being sent.",
       "dialogue": "One observation cannot answer every question.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.8
@@ -32,7 +32,7 @@
       "caption": "The browser’s secure connection notice concerns protected transport to the displayed hostname. It does not establish that the school approved the page or that every claim on it is true. A misleading destination can also use an encrypted connection.",
       "speech": "The browser’s secure connection notice concerns protected transport to the displayed hostname. It does not establish that the school approved the page or that every claim on it is true. A misleading destination can also use an encrypted connection.",
       "dialogue": "Transport protection is a limited claim.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.45,
       "duration": 17.664
@@ -45,7 +45,7 @@
       "caption": "Their supplied school card names desk.school.example as the approved host. Another card shows desk.school.example.helper.example with a copied crest. Reva compares complete hostnames instead of familiar fragments. These are classroom examples, not addresses anyone needs to visit.",
       "speech": "Their supplied school card names desk.school.example as the approved host. Another card shows desk.school.example.helper.example with a copied crest. Reva compares complete hostnames instead of familiar fragments. These are classroom examples, not addresses anyone needs to visit.",
       "dialogue": "A copied crest does not change the host.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 35.764,
       "duration": 25.032
@@ -58,7 +58,7 @@
       "caption": "A third card includes a certificate warning. Nikhil proposes bypassing it because the totals are fictional. The teacher keeps the exercise on supplied cards and asks for the approved route to be checked before any upload.",
       "speech": "A third card includes a certificate warning. Nikhil proposes bypassing it because the totals are fictional. The teacher keeps the exercise on supplied cards and asks for the approved route to be checked before any upload.",
       "dialogue": "Pause at an unexplained warning.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 61.446,
       "duration": 15.888
@@ -71,7 +71,7 @@
       "caption": "Switching networks would not repair a wrong hostname or a bad sharing audience. The team instead uses the saved school route, checks the connection notice and sends only approved totals. The destination still receives whatever the team chooses to upload.",
       "speech": "Switching networks would not repair a wrong hostname or a bad sharing audience. The team instead uses the saved school route, checks the connection notice and sends only approved totals. The destination still receives whatever the team chooses to upload.",
       "dialogue": "Check destination and data together.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 77.984,
       "duration": 18.216
@@ -84,7 +84,7 @@
       "caption": "Inspect the fictional host cards, connect observations to justified claims and revise the upload plan. State what remains unproven, including page content and whether the recipient should receive personal records.",
       "speech": "Inspect the fictional host cards, connect observations to justified claims and revise the upload plan. State what remains unproven, including page content and whether the recipient should receive personal records.",
       "dialogue": "State the boundary of the evidence.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 96.85,
       "duration": 14.976

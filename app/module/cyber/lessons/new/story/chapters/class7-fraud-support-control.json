@@ -19,7 +19,7 @@
       "caption": "A fictional pop-up tells Neel that the Connection Lab laptop has a serious problem. It offers instant help if he installs a remote-control tool. Tara asks what evidence supports the diagnosis and why an unknown helper needs control of the device before anyone has checked the claim.",
       "speech": "A fictional pop-up tells Neel that the Connection Lab laptop has a serious problem. It offers instant help if he installs a remote-control tool. Tara asks what evidence supports the diagnosis and why an unknown helper needs control of the device before anyone has checked the claim.",
       "dialogue": "An unsolicited claim",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 20.136
@@ -32,7 +32,7 @@
       "caption": "A warning message is a claim, not automatically a verified diagnosis. Installing an unknown tool or granting access changes what the sender may be able to do. A helpful title, logo or urgent tone cannot establish that this is the school’s approved support process.",
       "speech": "A warning message is a claim, not automatically a verified diagnosis. Installing an unknown tool or granting access changes what the sender may be able to do. A helpful title, logo or urgent tone cannot establish that this is the school’s approved support process.",
       "dialogue": "Access being requested",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.786,
       "duration": 20.04
@@ -45,7 +45,7 @@
       "caption": "The class uses a static practice screen and installs nothing. Neel pauses, leaves the requested access unapproved and tells the teacher. The teacher uses the known school support route to check the device. If someone already followed a request, the response should be prompt trusted help rather than blame or secrecy.",
       "speech": "The class uses a static practice screen and installs nothing. Neel pauses, leaves the requested access unapproved and tells the teacher. The teacher uses the known school support route to check the device. If someone already followed a request, the response should be prompt trusted help rather than blame or secrecy.",
       "dialogue": "Known support routes",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 41.476,
       "duration": 23.16
@@ -58,7 +58,7 @@
       "caption": "The warning and control request come from the same unverified pop-up. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The warning and control request come from the same unverified pop-up. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Should Neel install the tool to find out whether the warning is true?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 65.286,
       "duration": 10.656
@@ -71,7 +71,7 @@
       "caption": "No. Pause and ask the teacher to use known school support. Installing the demanded tool would grant access before verifying the claim.",
       "speech": "No. Pause and ask the teacher to use known school support. Installing the demanded tool would grant access before verifying the claim.",
       "dialogue": "Identify an installation or remote-control demand.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 76.592,
       "duration": 10.8
@@ -84,7 +84,7 @@
       "caption": "Investigate an unsolicited claim, then access being requested, then known support routes. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate an unsolicited claim, then access being requested, then known support routes. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Why is installing a requested tool already an action, not an independent check?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 88.042,
       "duration": 15.432

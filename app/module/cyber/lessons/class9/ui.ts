@@ -1,6 +1,6 @@
 import {l} from '../../../../data/class9/types';
 export const class9Ui={
-  lab:l('Class 9 Signal Studio','क्लास 9 सिग्नल स्टूडियो'),
+  lab:l('Class 9 Cyber Guardians','क्लास 9 साइबर गार्डियन्स'),
   team:l('Reva & Nikhil','रेवा और निखिल'),
   characters:l('Reva and Nikhil, the Signal Studio team','रेवा और निखिल, सिग्नल स्टूडियो की टीम'),
   reva:l('Reva','रेवा'),nikhil:l('Nikhil','निखिल'),

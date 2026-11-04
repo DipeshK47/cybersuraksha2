@@ -19,7 +19,7 @@
       "caption": "The discovery club wants a display that helps visitors find three activity tables. Kabir writes make everything as the first instruction. Meera asks what a visitor should be able to do, and which smaller jobs would make that result possible.",
       "speech": "The discovery club wants a display that helps visitors find three activity tables. Kabir writes make everything as the first instruction. Meera asks what a visitor should be able to do, and which smaller jobs would make that result possible.",
       "dialogue": "Inputs and goals",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 18.216
@@ -32,7 +32,7 @@
       "caption": "The club already has card, markers and a room map. These are inputs, not the finished goal. The desired output is a set of readable signs in the right places. Choosing locations, writing labels and checking readability are smaller tasks within the larger job.",
       "speech": "The club already has card, markers and a room map. These are inputs, not the finished goal. The desired output is a set of readable signs in the right places. Choosing locations, writing labels and checking readability are smaller tasks within the larger job.",
       "dialogue": "Smaller tasks",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 18.866,
       "duration": 19.872
@@ -45,7 +45,7 @@
       "caption": "Decomposition means breaking a problem into manageable pieces. The team assigns each piece an observable result and tests the whole display with a fictional visitor route. A colourful sign is not enough if the visitor still cannot find the correct table without extra help.",
       "speech": "Decomposition means breaking a problem into manageable pieces. The team assigns each piece an observable result and tests the whole display with a fictional visitor route. A colourful sign is not enough if the visitor still cannot find the correct table without extra help.",
       "dialogue": "A success check",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 39.388,
       "duration": 19.224
@@ -58,7 +58,7 @@
       "caption": "The goal is helping a visitor find three tables, not simply using every marker or making the largest poster. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The goal is helping a visitor find three tables, not simply using every marker or making the largest poster. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Which first step makes the task clearer?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 59.262,
       "duration": 13.128
@@ -71,7 +71,7 @@
       "caption": "List sign locations, readable labels and a visitor check as smaller jobs. Each piece supports the same observable goal and can be checked before the display opens.",
       "speech": "List sign locations, readable labels and a visitor check as smaller jobs. Each piece supports the same observable goal and can be checked before the display opens.",
       "dialogue": "Split a display task into workable pieces.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 73.04,
       "duration": 12.048
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through inputs and goals, then smaller tasks, then a success check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through inputs and goals, then smaller tasks, then a success check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "How did the success check help choose smaller tasks?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 85.738,
       "duration": 17.88

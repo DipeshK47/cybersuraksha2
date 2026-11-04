@@ -19,7 +19,7 @@
       "caption": "Aditi brings fictional lamp times into the Decision Lab. The supplied readings are 6, 8, 10, 12 and 44 seconds. Vihaan places every value on a dot plot before choosing a representative summary.",
       "speech": "Aditi brings fictional lamp times into the Decision Lab. The supplied readings are 6, 8, 10, 12 and 44 seconds. Vihaan places every value on a dot plot before choosing a representative summary.",
       "dialogue": "Plot all the supplied readings.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 16.536
@@ -32,7 +32,7 @@
       "caption": "The reading at 44 stretches the horizontal scale. It might record a genuinely slow lamp or a recording problem. Its distance raises a question without establishing which explanation is correct.",
       "speech": "The reading at 44 stretches the horizontal scale. It might record a genuinely slow lamp or a recording problem. Its distance raises a question without establishing which explanation is correct.",
       "dialogue": "Unusual does not mean false.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 17.186,
       "duration": 14.64
@@ -45,7 +45,7 @@
       "caption": "The total is 80 seconds, giving a mean of 16. The middle sorted reading gives a median of 10. Aditi moves both markers onto the plot so their different answers can be explained from the same list of measurements.",
       "speech": "The total is 80 seconds, giving a mean of 16. The middle sorted reading gives a median of 10. Aditi moves both markers onto the plot so their different answers can be explained from the same list of measurements.",
       "dialogue": "Different summaries answer different questions.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 32.476,
       "duration": 15.816
@@ -58,7 +58,7 @@
       "caption": "Choose a headline that states the median and the wide spread while retaining the unusual observation for checking. Vihaan rejects quietly deleting the largest reading simply to make the batch appear faster. A source check must come before that decision.",
       "speech": "Choose a headline that states the median and the wide spread while retaining the unusual observation for checking. Vihaan rejects quietly deleting the largest reading simply to make the batch appear faster. A source check must come before that decision.",
       "dialogue": "Keep the reason in the record.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 48.942,
       "duration": 17.424
@@ -71,7 +71,7 @@
       "caption": "With 44 included, the range is 38 seconds. Without that questioned reading, the remaining mean and median are both 9 and the range is 6. This comparison measures sensitivity; it supplies no permission to replace the original evidence silently.",
       "speech": "With 44 included, the range is 38 seconds. Without that questioned reading, the remaining mean and median are both 9 and the range is 6. This comparison measures sensitivity; it supplies no permission to replace the original evidence silently.",
       "dialogue": "Label every changed scenario.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 67.016,
       "duration": 19.032
@@ -84,7 +84,7 @@
       "caption": "Their notebook retains the full list, both calculations and a request to inspect the original timer record. If the reading is verified, the slow lamp needs explanation. If corrected, the revision should preserve its source and reason for future readers.",
       "speech": "Their notebook retains the full list, both calculations and a request to inspect the original timer record. If the reading is verified, the slow lamp needs explanation. If corrected, the revision should preserve its source and reason for future readers.",
       "dialogue": "A correction needs a trace.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 86.698,
       "duration": 18.312

@@ -19,7 +19,7 @@
       "caption": "Reva finds a fictional scholarship poster beside the library display. It promises help with science materials. Nikhil notices a school crest, but their teacher asks them to inspect the actual request before entering anything.",
       "speech": "Reva finds a fictional scholarship poster beside the library display. It promises help with science materials. Nikhil notices a school crest, but their teacher asks them to inspect the actual request before entering anything.",
       "dialogue": "A crest is a claim to check.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 17.064
@@ -32,7 +32,7 @@
       "caption": "Their supplied school notice says the initial shortlist needs only a learner alias, class and project theme. A teacher handles later contact. The poster instead requests a home address, a password and a private family photograph.",
       "speech": "Their supplied school notice says the initial shortlist needs only a learner alias, class and project theme. A teacher handles later contact. The poster instead requests a home address, a password and a private family photograph.",
       "dialogue": "Compare each field with this stage.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.714,
       "duration": 17.376
@@ -45,7 +45,7 @@
       "caption": "Reva marks the project theme as relevant to selection. The password has no justified role in this shortlist. Nikhil leaves the address unfilled and records the mismatch, rather than inventing a reason that the organiser might need it.",
       "speech": "Reva marks the project theme as relevant to selection. The password has no justified role in this shortlist. Nikhil leaves the address unfilled and records the mismatch, rather than inventing a reason that the organiser might need it.",
       "dialogue": "Do not supply a missing justification.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 35.74,
       "duration": 16.776
@@ -58,7 +58,7 @@
       "caption": "The poster includes a chat button offering reassurance. Reva considers asking it whether the form is safe. Their teacher already has the school office contact from the diary, which gives them a route independent of the poster.",
       "speech": "The poster includes a chat button offering reassurance. Reva considers asking it whether the form is safe. Their teacher already has the school office contact from the diary, which gives them a route independent of the poster.",
       "dialogue": "The form cannot verify itself.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 53.166,
       "duration": 16.248
@@ -71,7 +71,7 @@
       "caption": "They pause submission and show the audit to the teacher. The office has not yet answered. That leaves the organiser unverified; it does not prove who made the poster. Nobody needs to disclose secrets while waiting for an answer.",
       "speech": "They pause submission and show the audit to the teacher. The office has not yet answered. That leaves the organiser unverified; it does not prove who made the poster. Nobody needs to disclose secrets while waiting for an answer.",
       "dialogue": "Unknown is different from proven fraud.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 70.064,
       "duration": 17.376
@@ -84,7 +84,7 @@
       "caption": "In the classroom simulation, the office supplies a corrected shortlist form. Reva and Nikhil compare its fields again. Their final evidence is a request audit, showing purpose, unnecessary fields, the independent contact and the answer still needed.",
       "speech": "In the classroom simulation, the office supplies a corrected shortlist form. Reva and Nikhil compare its fields again. Their final evidence is a request audit, showing purpose, unnecessary fields, the independent contact and the answer still needed.",
       "dialogue": "A changed form needs a fresh check.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 88.09,
       "duration": 18.528

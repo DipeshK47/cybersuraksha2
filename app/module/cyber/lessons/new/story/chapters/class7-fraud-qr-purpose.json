@@ -19,7 +19,7 @@
       "caption": "The Connection Lab studies a fictional message claiming to send a club refund. It includes a pretend code. The teacher shows the destination screen separately: it describes sending tokens out of the classroom wallet, even though the message promised that tokens would come in.",
       "speech": "The Connection Lab studies a fictional message claiming to send a club refund. It includes a pretend code. The teacher shows the destination screen separately: it describes sending tokens out of the classroom wallet, even though the message promised that tokens would come in.",
       "dialogue": "Claimed purpose",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.2
@@ -32,7 +32,7 @@
       "caption": "A code is a way to carry information or open a destination; its pattern does not verify a sender or explain every later action. Tara compares the displayed purpose with the original claim. The mismatch matters more than a polished code, familiar logo or promise of an easy refund.",
       "speech": "A code is a way to carry information or open a destination; its pattern does not verify a sender or explain every later action. Tara compares the displayed purpose with the original claim. The mismatch matters more than a polished code, familiar logo or promise of an easy refund.",
       "dialogue": "Displayed action",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 19.85,
       "duration": 20.76
@@ -45,7 +45,7 @@
       "caption": "The class does not scan a real code, use a payment service or enter a PIN. All tokens and screens are invented. Neel pauses and asks a trusted adult to review the request through a known route. Adult support is needed for real financial decisions, and no code should replace reading the action being authorised.",
       "speech": "The class does not scan a real code, use a payment service or enter a PIN. All tokens and screens are invented. Neel pauses and asks a trusted adult to review the request through a known route. Adult support is needed for real financial decisions, and no code should replace reading the action being authorised.",
       "dialogue": "Review a mismatch",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 41.26,
       "duration": 22.848
@@ -58,7 +58,7 @@
       "caption": "Claim: tokens come in. Fictional destination screen: send tokens out. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Claim: tokens come in. Fictional destination screen: send tokens out. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Does the displayed action match the refund claim?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 64.758,
       "duration": 12.216
@@ -71,7 +71,7 @@
       "caption": "No. Pause the outgoing action and ask a trusted adult to check through a known route. The code’s appearance cannot resolve the contradiction.",
       "speech": "No. Pause the outgoing action and ask a trusted adult to check through a known route. The code’s appearance cannot resolve the contradiction.",
       "dialogue": "Identify a mismatch between receiving and an outgoing classroom action.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 77.624,
       "duration": 11.04
@@ -84,7 +84,7 @@
       "caption": "Investigate claimed purpose, then displayed action, then review a mismatch. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate claimed purpose, then displayed action, then review a mismatch. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "What does a code fail to tell you about a later request?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 89.314,
       "duration": 14.592

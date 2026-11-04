@@ -1,8 +1,7 @@
 /** Compile the authored Class 6 course through the existing story/localisation pipeline. */
 import { compileStructuredCourse } from './build-structured-course.mjs';
 await compileStructuredCourse({ grade: 6, manualMessages: {
-  'Discovery Club': 'डिस्कवरी क्लब',
-  'CyberShiksha Discovery Club · Class 6': 'साइबरशिक्षा डिस्कवरी क्लब · क्लास 6',
+  'Cyber Sleuths': 'साइबर स्लूथ्स',
   'Build safe digital habits and solve everyday problems through 32 original chapters.': '32 नए चैप्टर से सुरक्षित डिजिटल आदतें बनाएँ और रोज़ की समस्याएँ सुलझाएँ।',
   'Protect private information, accounts and shared devices with safe everyday choices.': 'रोज़ के सुरक्षित फ़ैसलों से निजी जानकारी, अकाउंट और साझा डिवाइस की रक्षा करें।',
   'Explore examples, predictions and mistakes, and keep people responsible for AI-assisted work.': 'उदाहरण, अनुमान और गलतियाँ समझें और एआई की मदद वाले काम में लोगों की ज़िम्मेदारी रखें।',

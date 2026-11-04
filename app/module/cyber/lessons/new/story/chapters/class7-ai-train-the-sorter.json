@@ -19,7 +19,7 @@
       "caption": "Neel builds a tiny paper-strip sorter in the Connection Lab. Its visible rule predicts the label of the nearest selected length. This is a classroom model with invented numbers, not a claim that every AI system learns in exactly this way.",
       "speech": "Neel builds a tiny paper-strip sorter in the Connection Lab. Its visible rule predicts the label of the nearest selected length. This is a classroom model with invented numbers, not a claim that every A I system learns in exactly this way.",
       "dialogue": "Nearest-number predictions",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 17.448
@@ -32,7 +32,7 @@
       "caption": "At first, Neel selects only a short-strip example. The model then predicts short even for a much longer strip. Tara adds checked examples from both categories and compares predictions again. More copies of the first example would not supply the missing coverage of longer strips.",
       "speech": "At first, Neel selects only a short-strip example. The model then predicts short even for a much longer strip. Tara adds checked examples from both categories and compares predictions again. More copies of the first example would not supply the missing coverage of longer strips.",
       "dialogue": "Training coverage",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.098,
       "duration": 21.072
@@ -45,7 +45,7 @@
       "caption": "The check cards are separate from the selectable training cards. The team records both correct predictions and mistakes, then tries a changed set. Passing these few invented checks supports a narrow classroom result; unfamiliar lengths and different tasks still need review before any wider use.",
       "speech": "The check cards are separate from the selectable training cards. The team records both correct predictions and mistakes, then tries a changed set. Passing these few invented checks supports a narrow classroom result; unfamiliar lengths and different tasks still need review before any wider use.",
       "dialogue": "Changed examples",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.82,
       "duration": 20.712
@@ -58,7 +58,7 @@
       "caption": "Long check strips are being predicted as short because the selected training set contains no long example. Compare the actions, then explain which evidence supports your decision.",
       "speech": "Long check strips are being predicted as short because the selected training set contains no long example. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Only short examples were selected. What should change?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 61.182,
       "duration": 12.768
@@ -71,7 +71,7 @@
       "caption": "Add checked long examples and rerun the check. This supplies relevant coverage, while copying short examples would leave the same gap.",
       "speech": "Add checked long examples and rerun the check. This supplies relevant coverage, while copying short examples would leave the same gap.",
       "dialogue": "Improve a toy model by including examples from both labels.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 74.6,
       "duration": 9.96
@@ -84,7 +84,7 @@
       "caption": "Investigate nearest-number predictions, then training coverage, then changed examples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate nearest-number predictions, then training coverage, then changed examples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Which selected example changed a prediction, and why?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 85.21,
       "duration": 15

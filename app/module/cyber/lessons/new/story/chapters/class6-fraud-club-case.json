@@ -19,7 +19,7 @@
       "caption": "The club receives a message using the teacher’s picture. It promises a prize, demands a sign-in code within two minutes and supplies a new checking number. Meera and Kabir recognise earlier clues instead of trusting its picture.",
       "speech": "The club receives a message using the teacher’s picture. It promises a prize, demands a sign-in code within two minutes and supplies a new checking number. Meera and Kabir recognise earlier clues instead of trusting its picture.",
       "dialogue": "Connect the clues",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 16.32
@@ -32,7 +32,7 @@
       "caption": "The picture is an identity claim, the prize is a reward claim and the deadline creates pressure. The login code is the action being requested. None of these details independently confirms that the teacher sent the message, even though the whole story appears to fit together.",
       "speech": "The picture is an identity claim, the prize is a reward claim and the deadline creates pressure. The login code is the action being requested. None of these details independently confirms that the teacher sent the message, even though the whole story appears to fit together.",
       "dialogue": "Verify independently",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.97,
       "duration": 18.744
@@ -45,7 +45,7 @@
       "caption": "The team pauses, asks through the existing school channel and keeps a short fictional note of the request. If a classmate already shared something, they offer calm help. Their final explanation connects each clue to a response without making unsupported accusations or promising a guaranteed outcome.",
       "speech": "The team pauses, asks through the existing school channel and keeps a short fictional note of the request. If a classmate already shared something, they offer calm help. Their final explanation connects each clue to a response without making unsupported accusations or promising a guaranteed outcome.",
       "dialogue": "Explain the response",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 36.364,
       "duration": 20.976
@@ -58,7 +58,7 @@
       "caption": "The message combines a copied-looking picture, urgent reward, sign-in code demand and new contact number. No independent check exists. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The message combines a copied-looking picture, urgent reward, sign-in code demand and new contact number. No independent check exists. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Which response uses the full evidence?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 57.99,
       "duration": 15.816
@@ -71,7 +71,7 @@
       "caption": "Pause without sharing the code and ask the teacher through the existing school channel. Preserve the useful request details for help rather than treating the supplied number as verification.",
       "speech": "Pause without sharing the code and ask the teacher through the existing school channel. Preserve the useful request details for help rather than treating the supplied number as verification.",
       "dialogue": "Choose an independent checking route.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 74.456,
       "duration": 13.128
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through connect the clues, then verify independently, then explain the response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through connect the clues, then verify independently, then explain the response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Explain one clue, one action and why that action helps.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 88.234,
       "duration": 18.744

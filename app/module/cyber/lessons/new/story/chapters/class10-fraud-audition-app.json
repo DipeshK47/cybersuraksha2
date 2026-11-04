@@ -19,7 +19,7 @@
       "caption": "Aditi brings a fictional Lantern Stage audition card into the Decision Lab. It promises a creator showcase after installing an app. Vihaan separates opportunity from conditions. They review paper screens without downloads or profiles.",
       "speech": "Aditi brings a fictional Lantern Stage audition card into the Decision Lab. It promises a creator showcase after installing an app. Vihaan separates opportunity from conditions. They review paper screens without downloads or profiles.",
       "dialogue": "Read the requested access before the promise.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 17.856
@@ -32,7 +32,7 @@
       "caption": "The supplied audition brief requires only a teacher-submitted text idea. The installer requests contacts, microphone access and reading notifications. Aditi compares requests with purpose. Teacher-submitted text explains none of this access.",
       "speech": "The supplied audition brief requires only a teacher-submitted text idea. The installer requests contacts, microphone access and reading notifications. Aditi compares requests with purpose. Teacher-submitted text explains none of this access.",
       "dialogue": "A purpose must justify the particular capability.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 18.506,
       "duration": 19.824
@@ -45,7 +45,7 @@
       "caption": "Vihaan opens labelled windows on the fictional device diagram. Contacts can reveal the saved address book; microphone access can expose captured audio; notification access can expose notification contents. These capabilities do not establish what was already collected.",
       "speech": "Vihaan opens labelled windows on the fictional device diagram. Contacts can reveal the saved address book; microphone access can expose captured audio; notification access can expose notification contents. These capabilities do not establish what was already collected.",
       "dialogue": "Access granted is not proof of what was read.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 38.98,
       "duration": 20.64
@@ -58,7 +58,7 @@
       "caption": "The learner pauses the installation proposal and keeps the fictional profile empty. A testimonial inside the offer cannot independently verify the organiser. Their teacher already has a school arts coordinator contact, which can be used to ask about the claimed partnership separately.",
       "speech": "The learner pauses the installation proposal and keeps the fictional profile empty. A testimonial inside the offer cannot independently verify the organiser. Their teacher already has a school arts coordinator contact, which can be used to ask about the claimed partnership separately.",
       "dialogue": "The offer cannot supply its own independent witness.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 60.27,
       "duration": 20.808
@@ -71,7 +71,7 @@
       "caption": "The supplied coordinator reply says the partnership has not been verified. Vihaan records that limit rather than declaring who created the offer. Aditi requests organiser evidence and access explanations before considering a revised proposal with the teacher.",
       "speech": "The supplied coordinator reply says the partnership has not been verified. Vihaan records that limit rather than declaring who created the offer. Aditi requests organiser evidence and access explanations before considering a revised proposal with the teacher.",
       "dialogue": "Unverified partnership remains an open claim.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 81.728,
       "duration": 18.744
@@ -84,7 +84,7 @@
       "caption": "A separate supplied case says notification access was granted earlier. The teacher helps remove that access and seek known device or account support where relevant. Their checklist records the permission and uncertainty about exposure, without promising that revocation erases information already seen.",
       "speech": "A separate supplied case says notification access was granted earlier. The teacher helps remove that access and seek known device or account support where relevant. Their checklist records the permission and uncertainty about exposure, without promising that revocation erases information already seen.",
       "dialogue": "Contain access and check the specific concern.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 101.122,
       "duration": 21.408

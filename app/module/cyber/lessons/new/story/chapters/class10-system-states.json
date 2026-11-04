@@ -19,7 +19,7 @@
       "caption": "Aditi brings a fictional exhibition notice to the Decision Lab. Vihaan places its token at draft. They name the current state before choosing an event, because the same button can have different results from different starting states.",
       "speech": "Aditi brings a fictional exhibition notice to the Decision Lab. Vihaan places its token at draft. They name the current state before choosing an event, because the same button can have different results from different starting states.",
       "dialogue": "Where is the token now?",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 16.392
@@ -32,7 +32,7 @@
       "caption": "A check event moves draft to reviewed. The arrow records a permitted transition, not a promise that every event works everywhere. Vihaan keeps the previous state beside the event so another learner can reproduce the move.",
       "speech": "A check event moves draft to reviewed. The arrow records a permitted transition, not a promise that every event works everywhere. Vihaan keeps the previous state beside the event so another learner can reproduce the move.",
       "dialogue": "Read the arrow from its starting end.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 17.042,
       "duration": 15.912
@@ -45,7 +45,7 @@
       "caption": "The reviewer sends fail while the token is reviewed. It returns to revision rather than disappearing. A check from revision can reach reviewed again; this recovery is explicitly allowed and does not skip the review requirement.",
       "speech": "The reviewer sends fail while the token is reviewed. It returns to revision rather than disappearing. A check from revision can reach reviewed again; this recovery is explicitly allowed and does not skip the review requirement.",
       "dialogue": "A revision still needs another check.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 33.604,
       "duration": 16.008
@@ -58,7 +58,7 @@
       "caption": "At revision, Aditi considers pressing approve immediately. The rules allow approval only from reviewed. Decide which event can advance the token now, and explain why an unsupported event would leave its state unchanged instead of helping.",
       "speech": "At revision, Aditi considers pressing approve immediately. The rules allow approval only from reviewed. Decide which event can advance the token now, and explain why an unsupported event would leave its state unchanged instead of helping.",
       "dialogue": "Which precondition is missing?",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 50.262,
       "duration": 17.448
@@ -71,7 +71,7 @@
       "caption": "They send check, then approve. The token reaches approved through reviewed, with each accepted event written down. Vihaan also records a rejected publish attempt from revision, proving that the failed shortcut never silently changed the token.",
       "speech": "They send check, then approve. The token reaches approved through reviewed, with each accepted event written down. Vihaan also records a rejected publish attempt from revision, proving that the failed shortcut never silently changed the token.",
       "dialogue": "Keep failed attempts in the trace.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 68.36,
       "duration": 17.592
@@ -84,7 +84,7 @@
       "caption": "Publish moves approved to published. This final state has no outgoing transition in their model, so later checks leave it published. Their evidence includes starting states, events, results and reasons, making both recovery and blocked shortcuts visible.",
       "speech": "Publish moves approved to published. This final state has no outgoing transition in their model, so later checks leave it published. Their evidence includes starting states, events, results and reasons, making both recovery and blocked shortcuts visible.",
       "dialogue": "A final state cannot be undone here.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 86.602,
       "duration": 19.056

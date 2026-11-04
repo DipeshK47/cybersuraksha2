@@ -13,7 +13,7 @@ export const ui = {
   cellEntryCost: l("Entry cost", "खाने में जाने का खर्च"),
   startFree: l("Starting cell is free; every later entry costs again, including repeat visits.", "शुरुआती खाना मुफ़्त है; बाद में किसी खाने में जाने पर हर बार खर्च जुड़ता है, दोबारा जाने पर भी।"),
   supported: l("Parts supported by your evidence", "आपकी जानकारी से सही ठहरे हिस्से"),
-  lab: l("Class 8 Future Lab", "क्लास 8 फ़्यूचर लैब"),
+  lab: l("Class 8 Cyber Builders", "क्लास 8 साइबर बिल्डर्स"),
   check: l("Check my evidence", "मेरी जानकारी चेक करें"),
   test: l("Run the test", "टेस्ट चलाएँ"),
   choose: l("Choose an action…", "एक कदम चुनें…"),

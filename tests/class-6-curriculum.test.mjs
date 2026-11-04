@@ -16,7 +16,7 @@ export {getCyberLesson,getCyberLessonsForGrade} from './app/data/cyber-lessons';
 
 test('Class 6 exposes four eight-chapter modules with matching assignable routes', () => {
   const course = getGradeCurriculum(6);
-  assert.equal(course.title, 'Discovery Club');
+  assert.equal(course.title, 'Cyber Sleuths');
   assert.deepEqual(course.subjects.map(subject => subject.modules.length), [8,8,8,8]);
   const assignments = assignmentChapters.filter(row => row.grades.includes(6));
   assert.equal(assignments.length,32);

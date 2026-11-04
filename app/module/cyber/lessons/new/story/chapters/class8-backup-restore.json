@@ -9,7 +9,7 @@
       "mood": "thinking",
       "caption": "The group opens its comic: an empty page. Someone accidentally replaced the project, and the change reached the synchronised folder too. Kabir says there must be a backup because the file appears on two devices.",
       "dialogue": "Two matching copies may share one mistake.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 0,
       "duration": 14.336
@@ -21,7 +21,7 @@
       "mood": "surprise",
       "caption": "Synchronisation keeps locations aligned and may spread an accidental replacement. A useful backup preserves a recoverable copy separately; some services also keep earlier versions. The class must inspect the supplied history rather than assume that every synced folder offers recovery.",
       "dialogue": "What version does each copy contain?",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "trouble",
       "start": 14.986,
       "duration": 18.581
@@ -33,7 +33,7 @@
       "mood": "thinking",
       "caption": "The simulation offers an empty current copy, an unreadable snapshot and a checked yesterday version with six panels. Yesterday's version lacks today's new ending. A sensible recovery plan uses the best verified copy while acknowledging the work that may need rebuilding.",
       "dialogue": "A date alone is not enough.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 34.217,
       "duration": 17.472
@@ -45,7 +45,7 @@
       "mood": "thinking",
       "caption": "Decide whether to overwrite everything immediately, trust the backup label without opening it, or restore the checked version into a separate test location. Keeping the original state while testing avoids turning an uncertain recovery into another accidental replacement.",
       "dialogue": "Test separately before replacing.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 52.339,
       "duration": 16.917
@@ -57,7 +57,7 @@
       "mood": "happy",
       "caption": "Meera opens the restored project, checks the six panels and confirms the captions are readable. This demonstrates that this copy restored successfully in this test. It does not guarantee every future restore or recover the ending that was never captured.",
       "dialogue": "Name the missing work honestly.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 69.907,
       "duration": 16.085
@@ -69,7 +69,7 @@
       "mood": "happy",
       "caption": "Now a newer snapshot has two panels; an older one has the required six. Compare content and time. Record your selected version, verification checks and remaining limitations in a recovery log.",
       "dialogue": "Newest is not always most useful.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 86.642,
       "duration": 13.589

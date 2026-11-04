@@ -19,7 +19,7 @@
       "caption": "Nikhil keeps rewriting a calculation for the pretend lending desk: multiply group size by kits per person, then add reserve kits. Reva suggests naming this step so different desk cards can use the same calculation with their own supplied numbers.",
       "speech": "Nikhil keeps rewriting a calculation for the pretend lending desk: multiply group size by kits per person, then add reserve kits. Reva suggests naming this step so different desk cards can use the same calculation with their own supplied numbers.",
       "dialogue": "What must every caller supply?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 17.784
@@ -32,7 +32,7 @@
       "caption": "Their function accepts people, per_person and reserve as parameters. Each call supplies arguments in that stated order. The function uses only these values, so its rule does not depend on the previously opened desk card.",
       "speech": "Their function accepts people, per_person and reserve as parameters. Each call supplies arguments in that stated order. The function uses only these values, so its rule does not depend on the previously opened desk card.",
       "dialogue": "A parameter is a named input inside the function.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 18.434,
       "duration": 17.784
@@ -45,7 +45,7 @@
       "caption": "The function calculates a total and returns it. Returning does not automatically print a label or pack a box; the caller decides how to use the result. Reva draws a return arrow to the waiting instruction that will store the number.",
       "speech": "The function calculates a total and returns it. Returning does not automatically print a label or pack a box; the caller decides how to use the result. Reva draws a return arrow to the waiting instruction that will store the number.",
       "dialogue": "Where will the returned value be stored?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 36.868,
       "duration": 17.064
@@ -58,7 +58,7 @@
       "caption": "An alternative draft quietly adds the previous call’s total. Its first example looks correct because the remembered total starts empty. Choose a test that challenges hidden memory instead of repeatedly testing fresh calls.",
       "speech": "An alternative draft quietly adds the previous call’s total. Its first example looks correct because the remembered total starts empty. Choose a test that challenges hidden memory instead of repeatedly testing fresh calls.",
       "dialogue": "A later call is a different test condition.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 54.582,
       "duration": 16.752
@@ -71,7 +71,7 @@
       "caption": "They run a small request and then a larger request, reset the simulation, and reverse the order. Each input should keep its own output. If an unchanged request produces a different result, undeclared state is influencing the calculation.",
       "speech": "They run a small request and then a larger request, reset the simulation, and reverse the order. Each input should keep its own output. If an unchanged request produces a different result, undeclared state is influencing the calculation.",
       "dialogue": "Same arguments should give the same result here.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 71.984,
       "duration": 17.976
@@ -84,7 +84,7 @@
       "caption": "Their function card states argument order, permitted whole numbers and the returned formula. They keep tests for an ordinary group and an empty group with a reserve. A reusable step needs visible inputs and effects.",
       "speech": "Their function card states argument order, permitted whole numbers and the returned formula. They keep tests for an ordinary group and an empty group with a reserve. A reusable step needs visible inputs and effects.",
       "dialogue": "Write the contract beside the function name.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 90.61,
       "duration": 15.432

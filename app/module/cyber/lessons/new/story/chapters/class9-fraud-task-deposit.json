@@ -19,7 +19,7 @@
       "caption": "Nikhil brings a fictional task offer to the classroom help desk. It asks someone to rate pictures for a reward. Reva reads the supplied provider record: a small incoming transfer occurred, but the sender’s larger promises remain unverified.",
       "speech": "Nikhil brings a fictional task offer to the classroom help desk. It asks someone to rate pictures for a reward. Reva reads the supplied provider record: a small incoming transfer occurred, but the sender’s larger promises remain unverified.",
       "dialogue": "One transfer proves only that transfer.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 18.336
@@ -32,7 +32,7 @@
       "caption": "The next card demands a deposit to unlock tasks. A later card demands a larger deposit to release earnings. Each payment becomes the final obstacle, turning earlier effort into pressure to continue.",
       "speech": "The next card demands a deposit to unlock tasks. A later card demands a larger deposit to release earnings. Each payment becomes the final obstacle, turning earlier effort into pressure to continue.",
       "dialogue": "Trace each new commitment.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 18.986,
       "duration": 15.168
@@ -45,7 +45,7 @@
       "caption": "Reva compares the task dashboard with the supplied transaction sheet. The dashboard claims substantial earnings; the sheet contains no matching incoming transfer. Nikhil labels that amount as claimed, rather than money already available in the fictional account.",
       "speech": "Reva compares the task dashboard with the supplied transaction sheet. The dashboard claims substantial earnings; the sheet contains no matching incoming transfer. Nikhil labels that amount as claimed, rather than money already available in the fictional account.",
       "dialogue": "A displayed amount is not a receipt.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 34.804,
       "duration": 19.296
@@ -58,7 +58,7 @@
       "caption": "Nikhil worries that stopping wastes the work already done. Their teacher explains that another deposit creates a new exposure; it does not prove earlier earnings can be withdrawn. They can pause without first identifying everyone behind the offer.",
       "speech": "Nikhil worries that stopping wastes the work already done. Their teacher explains that another deposit creates a new exposure; it does not prove earlier earnings can be withdrawn. They can pause without first identifying everyone behind the offer.",
       "dialogue": "Past effort does not justify a new payment.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 54.75,
       "duration": 17.928
@@ -71,7 +71,7 @@
       "caption": "They choose no further payment and show the pressure chain privately to a trusted adult. If money had actually been sent, the adult would promptly contact the financial provider through a known route. Nobody promises that the funds will return.",
       "speech": "They choose no further payment and show the pressure chain privately to a trusted adult. If money had actually been sent, the adult would promptly contact the financial provider through a known route. Nobody promises that the funds will return.",
       "dialogue": "Seeking help is a useful action.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 73.328,
       "duration": 17.544
@@ -84,7 +84,7 @@
       "caption": "The simulation replaces the deposit with a refundable verification charge. Reva adds it to the same chain because it still asks for money before release. Their evidence map separates actions, screen claims and provider records instead of trusting reassuring labels.",
       "speech": "The simulation replaces the deposit with a refundable verification charge. Reva adds it to the same chain because it still asks for money before release. Their evidence map separates actions, screen claims and provider records instead of trusting reassuring labels.",
       "dialogue": "Check the action behind the new label.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 91.522,
       "duration": 19.056

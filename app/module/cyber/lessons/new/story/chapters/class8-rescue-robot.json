@@ -9,7 +9,7 @@
       "mood": "thinking",
       "caption": "A fictional flood-relief robot must collect supplies before delivery. This screen model teaches planning and testing. Real rescue decisions require trained people and different information; this activity provides no emergency advice.",
       "dialogue": "Our robot is only a simulation.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 0,
       "duration": 15.317
@@ -21,7 +21,7 @@
       "mood": "surprise",
       "caption": "The grid has a start, a goal, a collection stop and blocked cells. A move goes one cell up, down, left or right. Diagonal jumps are not allowed. The route must also fit a stated maximum number of moves.",
       "dialogue": "Reaching the goal is only one condition.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "trouble",
       "start": 15.967,
       "duration": 13.525
@@ -33,7 +33,7 @@
       "mood": "thinking",
       "caption": "Leela writes an expected result before pressing run: collect the box, avoid every wall and finish within the limit. She traces the route cell by cell. This creates a test that can reveal exactly where an instruction stops matching the plan.",
       "dialogue": "Expected results make failures useful.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 30.143,
       "duration": 15.957
@@ -45,7 +45,7 @@
       "mood": "thinking",
       "caption": "Her partner finds a shorter path that reaches the goal without visiting the box. Choose whether that counts as success. Comparing only the final square would miss the collection requirement, so their test record needs more than a finish photograph.",
       "dialogue": "Check the journey as well as the destination.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "normal",
       "start": 46.75,
       "duration": 14.784
@@ -57,7 +57,7 @@
       "mood": "happy",
       "caption": "A new blocked cell interrupts yesterday’s successful route. The team identifies the first affected move and searches for a detour. They keep the required collection stop and move budget visible, because fixing one obstacle can accidentally break a different condition.",
       "dialogue": "A repair needs a full retest.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 62.184,
       "duration": 16.043
@@ -69,7 +69,7 @@
       "mood": "happy",
       "caption": "Build a valid route, inspect a failing trace and revise after a closure. Record expected and observed outcomes. Explain why the final route passes; one successful run cannot prove every possible case.",
       "dialogue": "Tests support a claim; they have limits.",
-      "status": "Class 8 Future Lab",
+      "status": "Class 8 Cyber Builders",
       "tone": "resolved",
       "start": 78.877,
       "duration": 14.251

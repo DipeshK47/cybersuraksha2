@@ -19,7 +19,7 @@
       "caption": "The makers-fair guide has an early draft and a teacher-approved revision. After a pretend device failure, Neel finds a file with the right name but the old contents. Tara asks both where the copy survived and which version the team actually needs.",
       "speech": "The makers-fair guide has an early draft and a teacher-approved revision. After a pretend device failure, Neel finds a file with the right name but the old contents. Tara asks both where the copy survived and which version the team actually needs.",
       "dialogue": "Version and location",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 17.808
@@ -32,7 +32,7 @@
       "caption": "Version describes the contents at a particular stage; location describes where a copy is kept. Two versions on the same lost laptop may both become unavailable. A separate approved backup can survive that loss, but it still needs a check for completeness and the correct revision.",
       "speech": "Version describes the contents at a particular stage; location describes where a copy is kept. Two versions on the same lost laptop may both become unavailable. A separate approved backup can survive that loss, but it still needs a check for completeness and the correct revision.",
       "dialogue": "A separate backup",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 18.458,
       "duration": 20.28
@@ -45,7 +45,7 @@
       "caption": "The teacher restores a copy into a test location without overwriting the only original. The class opens it and compares the approved diagram and pages. A successful filename or progress bar is not enough: the recovered work must be usable and meet the stated requirement.",
       "speech": "The teacher restores a copy into a test location without overwriting the only original. The class opens it and compares the approved diagram and pages. A successful filename or progress bar is not enough: the recovered work must be usable and meet the stated requirement.",
       "dialogue": "A tested restoration",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.388,
       "duration": 19.752
@@ -58,7 +58,7 @@
       "caption": "The team needs the approved revision. One recovered copy opens but contains the old draft; another matches the teacher’s approved pages. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The team needs the approved revision. One recovered copy opens but contains the old draft; another matches the teacher’s approved pages. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Which recovered file meets the stated need?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 59.79,
       "duration": 15.864
@@ -71,7 +71,7 @@
       "caption": "Use the tested copy matching the approved revision and retain the recovery record. Being able to open an old draft does not mean the current work has been restored.",
       "speech": "Use the tested copy matching the approved revision and retain the recovery record. Being able to open an old draft does not mean the current work has been restored.",
       "dialogue": "Choose a backup surviving the stated loss.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 76.304,
       "duration": 11.832
@@ -84,7 +84,7 @@
       "caption": "Investigate version and location, then a separate backup, then a tested restoration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate version and location, then a separate backup, then a tested restoration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "How can a backup survive a lost device but still fail the recovery goal?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 88.786,
       "duration": 14.832

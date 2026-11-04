@@ -161,7 +161,7 @@ const cyberSubjectsForGrade = (grade: number): GradeSubject[] => {
 const sourceCurriculum: GradeCurriculum[] = [
   {
     grade: 3,
-    title: "Logic Explorers",
+    title: "Cyber Explorers",
     description:
       "Play through four modules on digital safety, smart machines, problem solving, and scam awareness.",
     tone: "mint",
@@ -187,7 +187,7 @@ const sourceCurriculum: GradeCurriculum[] = [
   },
   {
     grade: 4,
-    title: "Pattern Detectives",
+    title: "Cyber Trackers",
     description:
       "Protect private information, train simple machines, solve patterns, and practise safe responses.",
     tone: "cyan",
@@ -211,7 +211,7 @@ const sourceCurriculum: GradeCurriculum[] = [
   },
   {
     grade: 5,
-    title: "Puzzle Engineers",
+    title: "Cyber Rangers",
     description:
       "Investigate passwords, app permissions, AI training data, logic, and online fraud through play.",
     tone: "amber",
@@ -325,11 +325,11 @@ export const curriculum: GradeCurriculum[] = [
     .filter((entry) => entry.grade >= 3 && entry.grade <= 7)
     .map((entry) => {
       const grade = entry.grade + 3;
-      if (grade === 6) return { ...entry, grade, title: "Discovery Club", description: "Build safe digital habits and solve everyday problems through 32 original chapters.", modules: [], subjects: class6Subjects };
-      if (grade === 7) return { ...entry, grade, title: "Connection Lab", description: "Connect ideas, test evidence and explain decisions through 32 original chapters.", modules: [], subjects: class7Subjects };
-      if (grade === 8) return { ...entry, grade, title: "Future Lab", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
-      if (grade === 9) return { ...entry, grade, title: "Signal Studio", description: "Test systems, explain decisions and recognise pressure through 32 original chapters.", modules: [], subjects: class9Subjects };
-      if (grade === 10) return { ...entry, grade, title: "Decision Lab", description: "Compare alternatives, explain consequences and defend decisions through 32 original chapters.", modules: [], subjects: class10Subjects };
+      if (grade === 6) return { ...entry, grade, title: "Cyber Sleuths", description: "Build safe digital habits and solve everyday problems through 32 original chapters.", modules: [], subjects: class6Subjects };
+      if (grade === 7) return { ...entry, grade, title: "Cyber Analysts", description: "Connect ideas, test evidence and explain decisions through 32 original chapters.", modules: [], subjects: class7Subjects };
+      if (grade === 8) return { ...entry, grade, title: "Cyber Builders", description: "Build useful skills through 32 original chapters in computing, AI, cybersecurity and fraud awareness.", modules: [], subjects: class8Subjects };
+      if (grade === 9) return { ...entry, grade, title: "Cyber Guardians", description: "Test systems, explain decisions and recognise pressure through 32 original chapters.", modules: [], subjects: class9Subjects };
+      if (grade === 10) return { ...entry, grade, title: "Cyber Commanders", description: "Compare alternatives, explain consequences and defend decisions through 32 original chapters.", modules: [], subjects: class10Subjects };
       return {
         ...entry,
         grade,

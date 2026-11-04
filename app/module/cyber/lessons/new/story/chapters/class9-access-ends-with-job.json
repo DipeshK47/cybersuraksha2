@@ -19,7 +19,7 @@
       "caption": "Nikhil makes an access ledger for the repair desk. Reva notices that the volunteer role includes editing every folder. Visitors only need the display, while the teacher handles contacts and approves changes to the access list.",
       "speech": "Nikhil makes an access ledger for the repair desk. Reva notices that the volunteer role includes editing every folder. Visitors only need the display, while the teacher handles contacts and approves changes to the access list.",
       "dialogue": "A role should describe a job.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 16.8
@@ -32,7 +32,7 @@
       "caption": "The afternoon volunteer needs to edit assigned ticket statuses until the shift ends. Contact details are unnecessary for that work. Reva writes the resource, named person, permitted action and end point on the same ledger row.",
       "speech": "The afternoon volunteer needs to edit assigned ticket statuses until the shift ends. Contact details are unnecessary for that work. Reva writes the resource, named person, permitted action and end point on the same ledger row.",
       "dialogue": "Read and edit are different powers.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 17.45,
       "duration": 16.944
@@ -45,7 +45,7 @@
       "caption": "They try fictional accounts for a visitor, a volunteer and the teacher. A blocked contact sheet is expected for the first two. A blocked ticket list for the volunteer would instead prevent the job from being completed.",
       "speech": "They try fictional accounts for a visitor, a volunteer and the teacher. A blocked contact sheet is expected for the first two. A blocked ticket list for the volunteer would instead prevent the job from being completed.",
       "dialogue": "A useful plan permits necessary work.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 35.044,
       "duration": 15.288
@@ -58,7 +58,7 @@
       "caption": "Nikhil crosses the volunteer off the timetable and calls the work finished. Reva asks whether the account can still edit tickets. The teacher removes the temporary permission, then the team repeats the same account test to verify the boundary.",
       "speech": "Nikhil crosses the volunteer off the timetable and calls the work finished. Reva asks whether the account can still edit tickets. The teacher removes the temporary permission, then the team repeats the same account test to verify the boundary.",
       "dialogue": "An ended job needs an access change.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 50.982,
       "duration": 17.52
@@ -71,7 +71,7 @@
       "caption": "An extra helper arrives to sort ticket numbers for one afternoon. Copying the teacher role would be quick but unnecessary. The ledger instead records ticket viewing, an expiry point and the adult responsible for removing access after the task.",
       "speech": "An extra helper arrives to sort ticket numbers for one afternoon. Copying the teacher role would be quick but unnecessary. The ledger instead records ticket viewing, an expiry point and the adult responsible for removing access after the task.",
       "dialogue": "Temporary does not mean unrestricted.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 69.152,
       "duration": 17.928
@@ -84,7 +84,7 @@
       "caption": "Your lab ledger must show access before and after the shift, including a successful work test and a denied edit afterwards. Test the new helper separately. Explain why expiry still needs checking rather than simply trusting a label.",
       "speech": "Your lab ledger must show access before and after the shift, including a successful work test and a denied edit afterwards. Test the new helper separately. Explain why expiry still needs checking rather than simply trusting a label.",
       "dialogue": "Keep the result beside the permission.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 87.73,
       "duration": 17.52

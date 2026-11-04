@@ -19,7 +19,7 @@
       "caption": "The club’s imaginary garden helper stamps one paper label for each pot. Kabir writes stamp a label four times in a long list. Meera replaces the repeated list with repeat the stamp action four times, keeping the action and count clear.",
       "speech": "The club’s imaginary garden helper stamps one paper label for each pot. Kabir writes stamp a label four times in a long list. Meera replaces the repeated list with repeat the stamp action four times, keeping the action and count clear.",
       "dialogue": "Counted repetition",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 17.832
@@ -32,7 +32,7 @@
       "caption": "A counted loop repeats a specified action a known number of times. The counter records completed repetitions, not a guess about effort. After each stamp the completed count increases by one, and the helper stops when it has completed the requested number.",
       "speech": "A counted loop repeats a specified action a known number of times. The counter records completed repetitions, not a guess about effort. After each stamp the completed count increases by one, and the helper stops when it has completed the requested number.",
       "dialogue": "Changing state",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 18.482,
       "duration": 18.984
@@ -45,7 +45,7 @@
       "caption": "The teacher tests four pots, one pot and no pots. Zero pots should produce zero stamps, not one accidental first action. The team checks the stopping rule before running the paper simulation and uses no real water, electricity or automatic device in this activity.",
       "speech": "The teacher tests four pots, one pot and no pots. Zero pots should produce zero stamps, not one accidental first action. The team checks the stopping rule before running the paper simulation and uses no real water, electricity or automatic device in this activity.",
       "dialogue": "Stopping cases",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 38.116,
       "duration": 20.52
@@ -58,7 +58,7 @@
       "caption": "Rule: repeat once per pot. No pots have been supplied in this test. The helper starts with zero completed stamps. Compare the actions, then inspect the explanation before moving on.",
       "speech": "Rule: repeat once per pot. No pots have been supplied in this test. The helper starts with zero completed stamps. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "How many stamps for zero pots?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 59.286,
       "duration": 15.648
@@ -71,7 +71,7 @@
       "caption": "Make zero stamps because there are zero items. Checking the empty case prevents a loop that always performs one action before checking whether any item exists.",
       "speech": "Make zero stamps because there are zero items. Checking the empty case prevents a loop that always performs one action before checking whether any item exists.",
       "dialogue": "Trace a counter after each repetition.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 75.584,
       "duration": 12.24
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through counted repetition, then changing state, then stopping cases. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through counted repetition, then changing state, then stopping cases. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "Why is the zero-item case useful for finding a loop mistake?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 88.474,
       "duration": 18.096

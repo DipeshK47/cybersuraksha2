@@ -19,7 +19,7 @@
       "caption": "In the Decision Lab, Aditi lays out a small numbered display. Vihaan supplies a nested loop instead of an open code editor. The outer marker chooses a row; the inner marker will visit columns within that chosen row.",
       "speech": "In the Decision Lab, Aditi lays out a small numbered display. Vihaan supplies a nested loop instead of an open code editor. The outer marker chooses a row; the inner marker will visit columns within that chosen row.",
       "dialogue": "Keep the row fixed while columns change.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 16.32
@@ -32,7 +32,7 @@
       "caption": "Both ranges begin at zero and exclude their upper bounds. With r equal to 0, the column marker visits 0, 1 and 2. It does not visit column 3, even though that number appears as a range bound.",
       "speech": "Both ranges begin at zero and exclude their upper bounds. With r equal to 0, the column marker visits 0, 1 and 2. It does not visit column 3, even though that number appears as a range bound.",
       "dialogue": "A bound is not a visited value.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 16.97,
       "duration": 16.08
@@ -45,7 +45,7 @@
       "caption": "Each visit executes count = count + 1 once and adds its cell value to total. These are separate assignments. Their visit counter counts only the first assignment, so the changing total does not create an extra counted visit.",
       "speech": "Each visit executes count = count + 1 once and adds its cell value to total. These are separate assignments. Their visit counter counts only the first assignment, so the changing total does not create an extra counted visit.",
       "dialogue": "Write what your counter measures.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 33.7,
       "duration": 18.048
@@ -58,7 +58,7 @@
       "caption": "After the first row ends, Vihaan proposes keeping the last column. Aditi checks how a new inner range starts. Predict the next row and column together before advancing, rather than continuing the old column beyond its allowed bound.",
       "speech": "After the first row ends, Vihaan proposes keeping the last column. Aditi checks how a new inner range starts. Predict the next row and column together before advancing, rather than continuing the old column beyond its allowed bound.",
       "dialogue": "Does a fresh inner loop inherit its last column?",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 52.398,
       "duration": 16.944
@@ -71,7 +71,7 @@
       "caption": "The outer marker advances to r equal to 1 and the inner marker resets to c equal to 0. The next additions are 10, 11 and 12. They retain the running count and total instead of resetting those accumulators.",
       "speech": "The outer marker advances to r equal to 1 and the inner marker resets to c equal to 0. The next additions are 10, 11 and 12. They retain the running count and total instead of resetting those accumulators.",
       "dialogue": "The column resets; the accumulators continue.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 69.992,
       "duration": 16.824
@@ -84,7 +84,7 @@
       "caption": "Their final sheet lists every visited pair and the accumulators after each body execution. Anyone can reproduce this supplied trace without assuming an unseen runtime, extra iterations or a different counting convention.",
       "speech": "Their final sheet lists every visited pair and the accumulators after each body execution. Anyone can reproduce this supplied trace without assuming an unseen runtime, extra iterations or a different counting convention.",
       "dialogue": "Evidence includes intermediate values.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 87.466,
       "duration": 15.912

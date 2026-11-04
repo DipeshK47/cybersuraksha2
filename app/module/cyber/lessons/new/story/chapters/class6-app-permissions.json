@@ -19,7 +19,7 @@
       "caption": "Kabir tries a fictional drawing app on the club tablet. The teacher has approved saving drawings to the device. A new screen also asks to read contacts, which does not help draw a leaf or colour a picture.",
       "speech": "Kabir tries a fictional drawing app on the club tablet. The teacher has approved saving drawings to the device. A new screen also asks to read contacts, which does not help draw a leaf or colour a picture.",
       "dialogue": "Purpose and access",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 15.864
@@ -32,7 +32,7 @@
       "caption": "Permissions allow a program to use a device feature or information. A camera can support a photo task, but not every app needs it. Agreeing quickly may expose more information than the learner meant to share with the tool.",
       "speech": "Permissions allow a program to use a device feature or information. A camera can support a photo task, but not every app needs it. Agreeing quickly may expose more information than the learner meant to share with the tool.",
       "dialogue": "Necessary permissions",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.514,
       "duration": 16.128
@@ -45,7 +45,7 @@
       "caption": "Meera compares each request with the activity. If the request is unnecessary, deny it and ask an adult. If the purpose later changes, review again. A familiar app name does not make every new permission necessary or appropriate.",
       "speech": "Meera compares each request with the activity. If the request is unnecessary, deny it and ask an adult. If the purpose later changes, review again. A familiar app name does not make every new permission necessary or appropriate.",
       "dialogue": "Changed requests",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 33.292,
       "duration": 19.008
@@ -58,7 +58,7 @@
       "caption": "The task is drawing offline. Reading the address book is unrelated, and no adult has approved that access. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The task is drawing offline. Reading the address book is unrelated, and no adult has approved that access. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "What should happen to the contacts request?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 52.95,
       "duration": 13.728
@@ -71,7 +71,7 @@
       "caption": "Deny the unrelated contacts request and ask the teacher. The team can explain the app’s purpose without treating every permission as compulsory.",
       "speech": "Deny the unrelated contacts request and ask the teacher. The team can explain the app’s purpose without treating every permission as compulsory.",
       "dialogue": "Separate needed access from unrelated requests.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 67.328,
       "duration": 11.064
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through purpose and access, then necessary permissions, then changed requests. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through purpose and access, then necessary permissions, then changed requests. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "When might camera access be useful, and when is it unnecessary?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 79.042,
       "duration": 18.528

@@ -19,7 +19,7 @@
       "caption": "Reva opens a pretend fair lending desk. Nikhil brings a note asking for a small kit for each group. Before sorting paper tools, they ask what small means and what the desk should produce.",
       "speech": "Reva opens a pretend fair lending desk. Nikhil brings a note asking for a small kit for each group. Before sorting paper tools, they ask what small means and what the desk should produce.",
       "dialogue": "Could two volunteers pack different kits?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 14.496
@@ -32,7 +32,7 @@
       "caption": "The supplied list names each group and its requested tool counts. These are inputs, not promises about the result. Reva proposes an output card showing the packed counts and whether the request fits the available carrying box.",
       "speech": "The supplied list names each group and its requested tool counts. These are inputs, not promises about the result. Reva proposes an output card showing the packed counts and whether the request fits the available carrying box.",
       "dialogue": "An input starts the work; an output records it.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 15.146,
       "duration": 16.704
@@ -45,7 +45,7 @@
       "caption": "Their fictional box holds at most eight space tokens. Each paper clamp uses two tokens and each ruler uses one. A request for three clamps and two rulers fills the box exactly, so equality must count as fitting.",
       "speech": "Their fictional box holds at most eight space tokens. Each paper clamp uses two tokens and each ruler uses one. A request for three clamps and two rulers fills the box exactly, so equality must count as fitting.",
       "dialogue": "Write the unit beside the limit.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 32.5,
       "duration": 16.944
@@ -58,7 +58,7 @@
       "caption": "Nikhil suggests accepting anything that looks light. Reva wants the same token calculation for every request. Choose a specification that different volunteers can apply consistently, including a clear response when a request exceeds the box limit.",
       "speech": "Nikhil suggests accepting anything that looks light. Reva wants the same token calculation for every request. Choose a specification that different volunteers can apply consistently, including a clear response when a request exceeds the box limit.",
       "dialogue": "A rule needs an observable result.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 50.094,
       "duration": 18.696
@@ -71,7 +71,7 @@
       "caption": "They try an empty request, a box filled exactly and an oversized request. Those cases separate possible interpretations of small. An empty kit is allowed in this simulation; negative counts are outside the accepted input rules and need correction.",
       "speech": "They try an empty request, a box filled exactly and an oversized request. Those cases separate possible interpretations of small. An empty kit is allowed in this simulation; negative counts are outside the accepted input rules and need correction.",
       "dialogue": "Record the expected response before checking.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 69.44,
       "duration": 18.888
@@ -84,7 +84,7 @@
       "caption": "Their final card names the inputs, token formula, inclusive limit and possible outputs. Another volunteer can check new requests without guessing the writer’s intention. Keep passing and failing examples beside it.",
       "speech": "Their final card names the inputs, token formula, inclusive limit and possible outputs. Another volunteer can check new requests without guessing the writer’s intention. Keep passing and failing examples beside it.",
       "dialogue": "Can someone else repeat your test?",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 88.978,
       "duration": 16.776

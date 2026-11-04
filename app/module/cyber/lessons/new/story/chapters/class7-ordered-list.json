@@ -19,7 +19,7 @@
       "caption": "Tara arranges fictional book cards for the Connection Lab. One card is called A and has four pages, B has two, and C has six. Neel sorts the letters alphabetically, but the request was to sort by page count from smallest to largest.",
       "speech": "Tara arranges fictional book cards for the Connection Lab. One card is called A and has four pages, B has two, and C has six. Neel sorts the letters alphabetically, but the request was to sort by page count from smallest to largest.",
       "dialogue": "A sorting key",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.648
@@ -32,7 +32,7 @@
       "caption": "A sorting key is the field used for comparison. The key here is page count, so B comes before A, then C. A clear instruction also states the direction. Ascending moves from smaller to larger; descending reverses that numerical order rather than changing the meaning of the cards.",
       "speech": "A sorting key is the field used for comparison. The key here is page count, so B comes before A, then C. A clear instruction also states the direction. Ascending moves from smaller to larger; descending reverses that numerical order rather than changing the meaning of the cards.",
       "dialogue": "Equal values",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 19.298,
       "duration": 21.576
@@ -45,7 +45,7 @@
       "caption": "The teacher changes the data so A and B both have four pages. For this activity, equal page counts are ordered by letter, A before B. The team records that tie-break explicitly. Without a stated secondary rule, equally keyed cards could have more than one acceptable relative order.",
       "speech": "The teacher changes the data so A and B both have four pages. For this activity, equal page counts are ordered by letter, A before B. The team records that tie-break explicitly. Without a stated secondary rule, equally keyed cards could have more than one acceptable relative order.",
       "dialogue": "A changed order",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 41.524,
       "duration": 22.248
@@ -58,7 +58,7 @@
       "caption": "A has 4 pages, B has 2, C has 6. Sort by page count, smallest first. Compare the actions, then explain which evidence supports your decision.",
       "speech": "A has 4 pages, B has 2, C has 6. Sort by page count, smallest first. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "Which order follows ascending page count?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 64.422,
       "duration": 13.272
@@ -71,7 +71,7 @@
       "caption": "B, A, C follows two, four, six. Alphabetical order alone ignores the supplied primary key.",
       "speech": "B, A, C follows two, four, six. Alphabetical order alone ignores the supplied primary key.",
       "dialogue": "Use the specified tie-break when keys are equal.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 78.344,
       "duration": 9.408
@@ -84,7 +84,7 @@
       "caption": "Investigate a sorting key, then equal values, then a changed order. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate a sorting key, then equal values, then a changed order. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Why does a sorting instruction need a key and sometimes a tie-break?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 88.402,
       "duration": 14.136

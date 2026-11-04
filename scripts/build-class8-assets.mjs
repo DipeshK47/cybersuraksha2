@@ -20,10 +20,9 @@ try {
   }
   collect(class8Chapters); collect(ui);
   Object.assign(messages, {
-    "Class 8 Future Lab": "क्लास 8 फ़्यूचर लैब",
-    "Future Lab": "फ़्यूचर लैब",
+    "Class 8 Cyber Builders": "क्लास 8 साइबर बिल्डर्स",
+    "Cyber Builders": "साइबर बिल्डर्स",
     "Meera & Kabir": "मीरा और कबीर",
-    "CyberShiksha Future Lab · Class 8": "साइबरशिक्षा फ़्यूचर लैब · क्लास 8",
     "Reflection saved": "अपने शब्दों वाला जवाब सेव हो गया",
     "Save reflection": "अपने शब्दों वाला जवाब सेव करें",
     "Protect a digital trail, account, shared device and class magazine with tested choices.": "चेक किए हुए फ़ैसलों से डिजिटल ट्रेल, अकाउंट, साझा डिवाइस और क्लास मैगज़ीन की सुरक्षा करें।",

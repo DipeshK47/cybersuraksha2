@@ -19,7 +19,7 @@
       "caption": "The Connection Lab’s paper rover must deliver a pretend parcel across a four-by-four grid. Tara identifies the start and finish, then Neel adds a required stamp stop. Three blocked squares and an eight-move budget make reaching the finish only one part of the challenge.",
       "speech": "The Connection Lab’s paper rover must deliver a pretend parcel across a four-by-four grid. Tara identifies the start and finish, then Neel adds a required stamp stop. Three blocked squares and an eight-move budget make reaching the finish only one part of the challenge.",
       "dialogue": "The whole goal",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 18.816
@@ -32,7 +32,7 @@
       "caption": "The rover moves only between neighbouring squares, one row or column at a time. A diagonal jump is not allowed, and a blocked square cannot be entered. The team traces each move and checks whether the required stop was visited before approving the delivery as successful.",
       "speech": "The rover moves only between neighbouring squares, one row or column at a time. A diagonal jump is not allowed, and a blocked square cannot be entered. The team traces each move and checks whether the required stop was visited before approving the delivery as successful.",
       "dialogue": "Build a valid route",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 19.466,
       "duration": 19.032
@@ -45,7 +45,7 @@
       "caption": "After the first route works, the teacher blocks an additional square and moves the stamp to the bottom-left corner. Tara rechecks the new model instead of reusing old commands. This capstone combines modelling, conditions, sequences and testing; any route meeting every stated constraint is acceptable.",
       "speech": "After the first route works, the teacher blocks an additional square and moves the stamp to the bottom-left corner. Tara rechecks the new model instead of reusing old commands. This capstone combines modelling, conditions, sequences and testing; any route meeting every stated constraint is acceptable.",
       "dialogue": "Retest changed constraints",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 39.148,
       "duration": 21.792
@@ -58,7 +58,7 @@
       "caption": "The written goal requires the stamp, finish, valid neighbouring moves and at most eight moves. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The written goal requires the stamp, finish, valid neighbouring moves and at most eight moves. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "A route reaches the finish but misses the stamp. Is it complete?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 61.59,
       "duration": 12.312
@@ -71,7 +71,7 @@
       "caption": "No. Revise and retest the route against every condition, including the required stop. Reaching the finish cannot compensate for missing part of the goal.",
       "speech": "No. Revise and retest the route against every condition, including the required stop. Reaching the finish cannot compensate for missing part of the goal.",
       "dialogue": "Construct a valid four-by-four route with a required stop.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 74.552,
       "duration": 12.336
@@ -84,7 +84,7 @@
       "caption": "Investigate the whole goal, then build a valid route, then retest changed constraints. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate the whole goal, then build a valid route, then retest changed constraints. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "Which changed constraint forced you to revise the route, and how did you test the repair?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 87.538,
       "duration": 14.952

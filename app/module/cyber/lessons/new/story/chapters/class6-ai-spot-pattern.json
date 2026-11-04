@@ -19,7 +19,7 @@
       "caption": "The club has a toy fruit sorter with a visible rule: red cards are predicted apple and all other cards are predicted pear. It is a prepared classroom model, so everyone can follow exactly how its prediction is made.",
       "speech": "The club has a toy fruit sorter with a visible rule: red cards are predicted apple and all other cards are predicted pear. It is a prepared classroom model, so everyone can follow exactly how its prediction is made.",
       "dialogue": "A visible rule",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 15.696
@@ -32,7 +32,7 @@
       "caption": "The first red apple is correct, and the green pear is correct too. Kabir thinks the sorter must understand fruit. Meera adds a checked green apple card. The rule predicts pear because it uses colour, even though the supplied label says apple.",
       "speech": "The first red apple is correct, and the green pear is correct too. Kabir thinks the sorter must understand fruit. Meera adds a checked green apple card. The rule predicts pear because it uses colour, even though the supplied label says apple.",
       "dialogue": "Predictions and labels",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 16.346,
       "duration": 18.576
@@ -45,7 +45,7 @@
       "caption": "A prediction follows the model’s rule; it is not automatically the truth. One counterexample can disprove the claim that this rule is always correct. The team records the disagreement and asks which additional features or examples might support a better rule.",
       "speech": "A prediction follows the model’s rule; it is not automatically the truth. One counterexample can disprove the claim that this rule is always correct. The team records the disagreement and asks which additional features or examples might support a better rule.",
       "dialogue": "A counterexample",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 35.572,
       "duration": 18.912
@@ -58,7 +58,7 @@
       "caption": "Visible rule: red means apple; otherwise pear. Checked card: green apple. Prediction: pear. Compare the actions, then inspect the explanation before moving on.",
       "speech": "Visible rule: red means apple; otherwise pear. Checked card: green apple. Prediction: pear. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "What does the green apple reveal?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 55.134,
       "duration": 14.976
@@ -71,7 +71,7 @@
       "caption": "The model follows its colour rule but makes a wrong fruit prediction. Record both prediction and checked label instead of changing the truth to fit the model.",
       "speech": "The model follows its colour rule but makes a wrong fruit prediction. Record both prediction and checked label instead of changing the truth to fit the model.",
       "dialogue": "Compare predictions with supplied checked labels.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 70.76,
       "duration": 11.208
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through a visible rule, then predictions and labels, then a counterexample. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through a visible rule, then predictions and labels, then a counterexample. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "How can a model follow its rule and still be wrong?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 82.618,
       "duration": 18.24

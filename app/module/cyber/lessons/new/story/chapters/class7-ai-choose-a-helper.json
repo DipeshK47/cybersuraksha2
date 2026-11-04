@@ -19,7 +19,7 @@
       "caption": "Tara wants help organising the Connection Lab’s nature cards. Neel suggests using AI for every job, including adding two supply counts. Their teacher asks them to describe the job first: what result is needed, and how would they recognise useful help?",
       "speech": "Tara wants help organising the Connection Lab’s nature cards. Neel suggests using A I for every job, including adding two supply counts. Their teacher asks them to describe the job first: what result is needed, and how would they recognise useful help?",
       "dialogue": "Define the job",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 0,
       "duration": 19.488
@@ -32,7 +32,7 @@
       "caption": "Adding exact counts follows a fixed arithmetic rule. Sorting varied drawings might use patterns learned from labelled examples, but that model could make mistakes. A person sorting cards manually is another method. Calling a tool intelligent does not establish that it suits the job.",
       "speech": "Adding exact counts follows a fixed arithmetic rule. Sorting varied drawings might use patterns learned from labelled examples, but that model could make mistakes. A person sorting cards manually is another method. Calling a tool intelligent does not establish that it suits the job.",
       "dialogue": "Compare methods",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "trouble",
       "start": 20.138,
       "duration": 21.36
@@ -45,7 +45,7 @@
       "caption": "The team compares methods on the same fictional cards and records correct placements and time taken. It includes the simple manual method as a baseline. A complicated helper earns its place only if the measured benefit justifies its mistakes, effort and need for human review.",
       "speech": "The team compares methods on the same fictional cards and records correct placements and time taken. It includes the simple manual method as a baseline. A complicated helper earns its place only if the measured benefit justifies its mistakes, effort and need for human review.",
       "dialogue": "Measure useful help",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 42.148,
       "duration": 19.848
@@ -58,7 +58,7 @@
       "caption": "The inputs are known numbers and the required output is their exact sum. Compare the actions, then explain which evidence supports your decision.",
       "speech": "The inputs are known numbers and the required output is their exact sum. Compare the actions, then explain which evidence supports your decision.",
       "dialogue": "How should the club add two exact counts?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "normal",
       "start": 62.646,
       "duration": 10.464
@@ -71,7 +71,7 @@
       "caption": "Use the fixed addition rule. A learned guess adds uncertainty without helping this exact task. Compare tools against the stated need.",
       "speech": "Use the fixed addition rule. A learned guess adds uncertainty without helping this exact task. Compare tools against the stated need.",
       "dialogue": "Choose a fixed rule for an exact stated calculation.",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 73.76,
       "duration": 11.088
@@ -84,7 +84,7 @@
       "caption": "Investigate define the job, then compare methods, then measure useful help. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "speech": "Investigate define the job, then compare methods, then measure useful help. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
       "dialogue": "When would a simple rule be a better choice than a learned model?",
-      "status": "Class 7 Connection Lab",
+      "status": "Class 7 Cyber Analysts",
       "tone": "resolved",
       "start": 85.498,
       "duration": 14.52

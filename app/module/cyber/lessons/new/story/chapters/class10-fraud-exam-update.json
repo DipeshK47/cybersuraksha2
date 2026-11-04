@@ -19,7 +19,7 @@
       "caption": "Aditi opens the Decision Lab notice chain about a fictional practice examination. The earliest supplied card names Cedar Hall. Vihaan places later forwards beside it, keeping their source labels visible instead of treating repetition as confirmation.",
       "speech": "Aditi opens the Decision Lab notice chain about a fictional practice examination. The earliest supplied card names Cedar Hall. Vihaan places later forwards beside it, keeping their source labels visible instead of treating repetition as confirmation.",
       "dialogue": "A forward carries a claim, not extra authority.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 0,
       "duration": 18.552
@@ -32,7 +32,7 @@
       "caption": "One copy changes the venue to Maple Room and adds a registration link. Another repeats only the room change. Aditi marks both differences separately because a shared heading cannot establish who inserted either new instruction into the chain.",
       "speech": "One copy changes the venue to Maple Room and adds a registration link. Another repeats only the room change. Aditi marks both differences separately because a shared heading cannot establish who inserted either new instruction into the chain.",
       "dialogue": "Track the venue and link separately.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "trouble",
       "start": 19.202,
       "duration": 17.304
@@ -45,7 +45,7 @@
       "caption": "The original source card says Cedar Hall and contains no registration instruction. Vihaan records what each version actually says. The missing link on that card shows a difference; it cannot alone identify the author or purpose of the addition.",
       "speech": "The original source card says Cedar Hall and contains no registration instruction. Vihaan records what each version actually says. The missing link on that card shows a difference; it cannot alone identify the author or purpose of the addition.",
       "dialogue": "A difference is evidence to investigate.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 37.156,
       "duration": 17.976
@@ -58,7 +58,7 @@
       "caption": "A forwarded reply button promises immediate clarification. Their teacher instead uses the school office contact already printed in the classroom directory. The learners pause sharing while preparing separate questions about the venue and the newly added registration instruction.",
       "speech": "A forwarded reply button promises immediate clarification. Their teacher instead uses the school office contact already printed in the classroom directory. The learners pause sharing while preparing separate questions about the venue and the newly added registration instruction.",
       "dialogue": "Use the directory, not the forwarded button.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "normal",
       "start": 55.782,
       "duration": 19.296
@@ -71,7 +71,7 @@
       "caption": "The supplied office reply confirms Cedar Hall and says the practice date is unchanged. It gives no answer about who added the link. Aditi marks Maple Room contradicted but keeps the link question unresolved, without accusing a particular sender.",
       "speech": "The supplied office reply confirms Cedar Hall and says the practice date is unchanged. It gives no answer about who added the link. Aditi marks Maple Room contradicted but keeps the link question unresolved, without accusing a particular sender.",
       "dialogue": "The answer covers only its stated facts.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 75.728,
       "duration": 18.384
@@ -84,7 +84,7 @@
       "caption": "Vihaan drafts a correction quoting only the confirmed venue and unchanged date. The registration instruction stays outside that correction pending clarification. Their ledger pairs each claim with source and status, preventing blanket approval.",
       "speech": "Vihaan drafts a correction quoting only the confirmed venue and unchanged date. The registration instruction stays outside that correction pending clarification. Their ledger pairs each claim with source and status, preventing blanket approval.",
       "dialogue": "Share the confirmed correction with the teacher.",
-      "status": "Class 10 Decision Lab",
+      "status": "Class 10 Cyber Commanders",
       "tone": "resolved",
       "start": 94.762,
       "duration": 17.52

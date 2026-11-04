@@ -19,7 +19,7 @@
       "caption": "Reva signs into the fictional repair portal on the classroom tablet. A matching approval prompt appears. Nikhil checks the device and time details with her before they continue through the school’s usual sign-in process.",
       "speech": "Reva signs into the fictional repair portal on the classroom tablet. A matching approval prompt appears. Nikhil checks the device and time details with her before they continue through the school’s usual sign-in process.",
       "dialogue": "Match the request to an action you started.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 0,
       "duration": 15.408
@@ -32,7 +32,7 @@
       "caption": "Later, the tablet requests approval while neither learner is signing in. Its familiar logo cannot replace context. Reva refuses: repeated prompts are not a reason to approve an attempt she did not start.",
       "speech": "Later, the tablet requests approval while neither learner is signing in. Its familiar logo cannot replace context. Reva refuses: repeated prompts are not a reason to approve an attempt she did not start.",
       "dialogue": "Being interrupted does not create permission.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "trouble",
       "start": 16.058,
       "duration": 15.984
@@ -45,7 +45,7 @@
       "caption": "A supplied alert card lists a session they do not recognise. Nikhil wants to use its recovery link immediately. The teacher instead opens the portal through a saved school route, so the alert itself does not decide their destination.",
       "speech": "A supplied alert card lists a session they do not recognise. Nikhil wants to use its recovery link immediately. The teacher instead opens the portal through a saved school route, so the alert itself does not decide their destination.",
       "dialogue": "Reach recovery independently.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 32.692,
       "duration": 17.064
@@ -58,7 +58,7 @@
       "caption": "The team chooses between approving the unexpected prompt, ignoring every alert forever and refusing it while asking for adult help. They record what appeared and when. Those observations support a response without claiming to identify the person behind the attempt.",
       "speech": "The team chooses between approving the unexpected prompt, ignoring every alert forever and refusing it while asking for adult help. They record what appeared and when. Those observations support a response without claiming to identify the person behind the attempt.",
       "dialogue": "Record facts before making accusations.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "normal",
       "start": 50.406,
       "duration": 18.84
@@ -71,7 +71,7 @@
       "caption": "Through the verified account page, the teacher reviews the unfamiliar session and follows the school recovery process. Ending an unwanted session and checking account recovery settings address different concerns. Changing a password alone need not end every existing session.",
       "speech": "Through the verified account page, the teacher reviews the unfamiliar session and follows the school recovery process. Ending an unwanted session and checking account recovery settings address different concerns. Changing a password alone need not end every existing session.",
       "dialogue": "Check the actual session controls.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 69.896,
       "duration": 19.512
@@ -84,7 +84,7 @@
       "caption": "Now a fictional tablet is missing. Use supplied cards to plan session review, device reporting and recovery checks with the teacher. Do not enter real account information. Your response trace should explain what each action establishes and what remains uncertain.",
       "speech": "Now a fictional tablet is missing. Use supplied cards to plan session review, device reporting and recovery checks with the teacher. Do not enter real account information. Your response trace should explain what each action establishes and what remains uncertain.",
       "dialogue": "Protect the account through a known route.",
-      "status": "Class 9 Signal Studio",
+      "status": "Class 9 Cyber Guardians",
       "tone": "resolved",
       "start": 90.058,
       "duration": 20.04

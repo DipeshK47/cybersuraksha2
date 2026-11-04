@@ -19,7 +19,7 @@
       "caption": "A message tells Meera that her club homework has moved to a new site. The screen copies familiar colours and asks her to sign in again. Kabir compares it with the address printed on the teacher’s classroom card.",
       "speech": "A message tells Meera that her club homework has moved to a new site. The screen copies familiar colours and asks her to sign in again. Kabir compares it with the address printed on the teacher’s classroom card.",
       "dialogue": "Unexpected links",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 0,
       "duration": 15.24
@@ -32,7 +32,7 @@
       "caption": "A copied logo can make an unfamiliar page look convincing. Even a secure connection only protects the connection; it does not prove that a message or business is honest. The team needs a source beyond the message itself.",
       "speech": "A copied logo can make an unfamiliar page look convincing. Even a secure connection only protects the connection; it does not prove that a message or business is honest. The team needs a source beyond the message itself.",
       "dialogue": "Address evidence",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "trouble",
       "start": 15.89,
       "duration": 16.32
@@ -45,7 +45,7 @@
       "caption": "The reference card is a fictional classroom example, not a page to visit. Students compare the complete host names on paper. In real use, they return through the teacher’s known route and ask before entering account details anywhere unexpected.",
       "speech": "The reference card is a fictional classroom example, not a page to visit. Students compare the complete host names on paper. In real use, they return through the teacher’s known route and ask before entering account details anywhere unexpected.",
       "dialogue": "Independent routes",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 32.86,
       "duration": 18.072
@@ -58,7 +58,7 @@
       "caption": "The message demands a fresh login. Its address differs from the teacher’s reference, and the class did not announce a change. Compare the actions, then inspect the explanation before moving on.",
       "speech": "The message demands a fresh login. Its address differs from the teacher’s reference, and the class did not announce a change. Compare the actions, then inspect the explanation before moving on.",
       "dialogue": "Which route should Meera use?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "normal",
       "start": 51.582,
       "duration": 14.232
@@ -71,7 +71,7 @@
       "caption": "Return through the teacher-provided route and ask about the message. A copied appearance does not justify entering a password on an unexpected page.",
       "speech": "Return through the teacher-provided route and ask about the message. A copied appearance does not justify entering a password on an unexpected page.",
       "dialogue": "Compare an address with a supplied exact reference.",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 66.464,
       "duration": 10.68
@@ -84,7 +84,7 @@
       "caption": "Now open the practice lab. Work through unexpected links, then address evidence, then independent routes. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "speech": "Now open the practice lab. Work through unexpected links, then address evidence, then independent routes. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
       "dialogue": "What does a copied logo fail to tell you?",
-      "status": "Class 6 Discovery Club",
+      "status": "Class 6 Cyber Sleuths",
       "tone": "resolved",
       "start": 77.794,
       "duration": 18.168
