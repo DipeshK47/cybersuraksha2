@@ -1930,60 +1930,7 @@ a.missionCard:hover {
   font-size: 11px;
 }
 
-.slipGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 24px;
-}
-
-.loginSlip {
-  padding: 20px;
-  border: 1px dashed var(--accent);
-  border-radius: 16px;
-  background: var(--accent-soft);
-}
-
-.loginSlip > b {
-  display: block;
-  margin-bottom: 13px;
-  color: var(--accent);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.loginSlip > span {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 25px;
-}
-
-.loginSlip dl {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin: 18px 0 0;
-}
-
-.loginSlip dl div {
-  display: grid;
-  gap: 4px;
-}
-
-.loginSlip dt {
-  color: var(--muted);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 9px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.loginSlip dd {
-  margin: 0;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
-}
+/* Login slips are styled in cybersuraksha.css (.slipGrid / .loginSlip). */
 
 .classFilters {
   display: flex;
@@ -2721,13 +2668,8 @@ a.missionCard:hover {
     justify-content: flex-start;
   }
 
-  .slipGrid,
   .parentScoreGrid {
     grid-template-columns: 1fr;
-  }
-
-  .loginSlip dl {
-    grid-template-columns: 1fr 1fr;
   }
 
   .panelHeading {
@@ -2820,13 +2762,6 @@ a.missionCard:hover {
 
   .loginSlips {
     display: block;
-  }
-
-  .loginSlip {
-    break-inside: avoid;
-    border-color: #333;
-    background: white;
-    color: black;
   }
 
   .parentReportPaper {

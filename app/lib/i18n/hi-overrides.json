@@ -523,5 +523,6 @@
   "Tap the squares that belong in your answer. On a computer you can also drag across several.": "अपने जवाब के खाने टैप करें। कंप्यूटर पर कई खानों पर खींचकर भी चुन सकते हैं।",
   "Build the robot's route with the arrow buttons, then run the test.": "तीर वाले बटनों से रोबोट का रास्ता बनाएँ, फिर टेस्ट चलाएँ।",
   "Choose which examples the model learns from, then run the test.": "चुनें कि मॉडल किन उदाहरणों से सीखे, फिर टेस्ट चलाएँ।",
-  "steps used": "कदम इस्तेमाल हुए"
+  "steps used": "कदम इस्तेमाल हुए",
+  "Sign in on the student login page: choose your school, then enter your class, roll number and password.": "स्टूडेंट लॉगिन पेज पर अपना स्कूल चुनें, फिर अपनी क्लास, रोल नंबर और पासवर्ड डालें।"
 }
