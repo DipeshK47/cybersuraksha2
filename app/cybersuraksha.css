@@ -3680,3 +3680,188 @@ body:has(.teacherPage, .dashboardPage) .surakshaGuide:not(.surakshaGuideOpen):no
   width: min(1240px, calc(100% - 28px));
   margin: 0 auto 16px;
 }
+
+/* ── Top bars: one layout that holds at every screen size ───────────────────
+   Applies to every page header (dashboard, class, track, roster, results).
+   Wide screens: brand or back link on the left, controls on the right, always
+   one row. The school badge shrinks first (with an ellipsis), then the logo
+   scales. Below 900px the bar becomes two tidy tiers: the brand row, then a
+   controls row whose buttons share the width evenly, so nothing is left
+   hanging on a row of its own. The bar's edges line up with the page content. */
+.dashboardNav {
+  padding-inline: 0 !important;
+}
+
+.dashboardNavInner {
+  width: min(1320px, calc(100% - 40px)) !important;
+  padding: 0 !important;
+}
+
+.gradeNav,
+.teacherHeader,
+.studentReportNav,
+.resultsNav,
+.trackNav,
+.modulePreviewNav {
+  padding-inline: max(20px, calc((100% - 1240px) / 2)) !important;
+}
+
+.dashboardNavInner,
+.gradeNav,
+.teacherHeader,
+.studentReportNav,
+.resultsNav,
+.trackNav,
+.modulePreviewNav {
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+}
+
+.dashboardNavRight,
+.gradeNav > div,
+.trackNav > div,
+.teacherHeader nav,
+.studentReportNav nav,
+.resultsNav nav {
+  flex: 0 1 auto !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+
+.dashboardNavRight > *,
+.gradeNav > div > *,
+.trackNav > div > *,
+.teacherHeader nav > *,
+.studentReportNav nav > *,
+.resultsNav nav > * {
+  flex: 0 0 auto !important;
+}
+
+/* The school / class badge gives way first: it truncates instead of pushing the bar onto a second row. */
+.dashboardOrg {
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  max-width: clamp(110px, 16vw, 240px) !important;
+}
+
+.gradeNav > div > span {
+  flex: 0 1 auto !important;
+  display: block !important;
+  min-width: 0 !important;
+  max-width: clamp(140px, 32vw, 400px) !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.gradeNav > div > span a {
+  white-space: nowrap !important;
+}
+
+[data-language-slot] {
+  display: flex;
+  align-items: center;
+}
+
+/* The student "Assignments" bell is styled by its own module; match it to the other nav buttons. */
+.dashboardNavRight > a[href="/learn/assignments"] {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  border: 2px solid var(--sl-line) !important;
+  color: var(--sl-ink) !important;
+  background: var(--sl-surface) !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+/* The logo scales with the screen inside app headers (other pages keep their own size). */
+.dashboardBrand img,
+.teacherWordmark img {
+  width: clamp(160px, 19vw, 300px) !important;
+}
+
+@media (max-width: 899px) {
+  .dashboardNavInner,
+  .gradeNav,
+  .teacherHeader,
+  .studentReportNav,
+  .resultsNav,
+  .trackNav,
+  .modulePreviewNav {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  /* globals.css pins this row to 62px; with two tiers it has to grow, or the buttons spill onto the page. */
+  .dashboardNavInner {
+    height: auto !important;
+  }
+
+  .gradeNav > div > a,
+  .trackNav > div > a {
+    min-height: 38px !important;
+    padding: 0 13px !important;
+    border: 2px solid var(--sl-line) !important;
+    border-radius: 10px !important;
+    background: var(--sl-surface) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .dashboardNavRight,
+  .gradeNav > div,
+  .trackNav > div,
+  .teacherHeader nav,
+  .studentReportNav nav,
+  .resultsNav nav {
+    flex: 1 1 auto !important;
+    flex-wrap: wrap !important;
+    justify-content: stretch !important;
+    width: 100% !important;
+  }
+
+  /* Buttons share each row evenly, so every row is full width and tidy. */
+  .dashboardNavRight > *,
+  .gradeNav > div > *,
+  .trackNav > div > *,
+  .teacherHeader nav > *,
+  .studentReportNav nav > *,
+  .resultsNav nav > * {
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  [data-language-slot] {
+    flex: 2 1 auto !important;
+    justify-content: center !important;
+  }
+
+  .dashboardOrg,
+  .gradeNav > div > span {
+    flex: 1 1 100% !important;
+    max-width: none !important;
+    order: -1;
+    text-align: center !important;
+  }
+
+  .teacherHeader nav a,
+  .studentReportNav nav a,
+  .resultsNav nav a {
+    border-color: var(--sl-line) !important;
+    background: var(--sl-surface) !important;
+  }
+
+  .teacherHeader nav a.active,
+  .resultsNav nav a.active {
+    background: var(--sl-yellow) !important;
+  }
+}
