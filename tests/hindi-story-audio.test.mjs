@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import test from 'node:test';
 import { class11Missions } from '../app/data/class-11-missions.ts';
+import { newMissions } from '../app/data/new-missions.ts';
 import {
   AUDIO_LANGUAGE_KEY, LANGUAGE_KEY, audioLanguageOf, modeFrom, narrationLanguage, textLanguageOf,
 } from '../app/lib/i18n/language-mode.ts';
@@ -19,26 +20,19 @@ function ffprobeSeconds(path) {
   } catch { return null; }
 }
 
-test('Hindi story audio covers Classes 6-10 (153 lessons) and Classes 11-12 (63 chapters)', () => {
+test('Hindi story audio covers the Classes 3–12 curriculum', () => {
+  const younger = newMissions.filter(lesson => lesson.grades.some(grade => grade <= 5));
+  assert.equal(younger.length, 16, 'Classes 3 and 4 share their eight chapters');
+  for (const { slug } of younger) assert.ok(manifest[slug], slug);
   const classes = slugs.filter(slug => /^class(6|7|8|9|10)-/.test(slug));
-  assert.equal(classes.length, 153, 'Classes 6-10 lessons');
-  for (const [grade, count] of [[6, 32], [7, 32], [8, 32], [9, 32], [10, 25]]) {
-    assert.equal(classes.filter(slug => slug.startsWith(`class${grade}-`)).length, count, `Class ${grade}`);
+  for (const grade of [6, 7, 8, 9, 10]) {
+    assert.equal(classes.filter(slug => slug.startsWith(`class${grade}-`)).length, 32, `Class ${grade}`);
   }
-  assert.deepEqual(manifest['class10-fraud-exam-update'].englishScenes, [2, 3, 4, 5, 6]);
-  assert.ok(!manifest['class10-fraud-help-without-fees'], 'unrecorded chapters retain English audio');
-  assert.equal(slugs.length - classes.length, 63, 'Class 11 and 12 chapters in the manifest');
+  assert.equal(slugs.length - classes.length - younger.length, 63, 'Class 11 and 12 chapters in the manifest');
   // Class 11 Chapter 1 keeps the recording that ships inside its own chapter JSON.
   assert.ok(!slugs.includes('your-digital-risk-map'));
   for (const slug of ['ai-evaluation-review', 'a-familiar-voice-asks-for-money', 'the-evidence-hearing']) assert.ok(slugs.includes(slug), slug);
   assert.deepEqual(slugs, [...slugs].sort(), 'manifest is sorted so rebuilds give small diffs');
-});
-
-test('complete imported lessons have all six cues without English fallback', () => {
-  for (const slug of ['class8-ai-data-left-out', 'class8-ai-design-fair', 'class9-ai-language-context', 'class10-file-access-paths']) {
-    assert.equal(manifest[slug].scenes.length, 6, slug);
-    assert.equal(manifest[slug].englishScenes, undefined, slug);
-  }
 });
 
 test('the two new Class 11 recordings have six reviewed Hindi paragraphs each', () => {
@@ -65,6 +59,25 @@ test('the two new Class 11 recordings have six reviewed Hindi paragraphs each', 
   assert.doesNotMatch(departure.caption, /दिवंगत/);
 });
 
+test('Hinglish recording jobs use one narrator per chapter and match the source scenes', () => {
+  const { jobs, voices } = JSON.parse(read('scripts/hindi-voiceover/hinglish-gap-jobs.json'));
+  const chapterVoices = new Map();
+  assert.equal(jobs.length, 221);
+  assert.equal(new Set(jobs.map(job => job.file)).size, jobs.length);
+  for (const { slug, scene, file, voice, source, text } of jobs) {
+    const chapter = JSON.parse(read(`app/module/cyber/lessons/new/story/chapters/${slug}.json`));
+    assert.equal(source, chapter.scenes[scene - 1].caption.replace(/\s+/g, ' ').trim());
+    assert.equal(file, `${slug}-hi-${String(scene).padStart(2, '0')}.mp3`);
+    assert.ok(voices[voice]?.id, `${file}: narrator`);
+    assert.equal(chapterVoices.get(slug) ?? voice, voice, `${slug}: narrator changed`);
+    chapterVoices.set(slug, voice);
+    assert.match(text, /[\u0900-\u097f]/u, file);
+    assert.match(text, /[A-Za-z]{2}/, file);
+    assert.doesNotMatch(text, /\{\{\d+\}\}/, file);
+  }
+  assert.equal(chapterVoices.size, 102);
+});
+
 test('all 32 Class 11 lessons have six Hindi scenes and a local audio track', () => {
   assert.equal(class11Missions.length, 32);
   for (const lesson of class11Missions) {
@@ -81,6 +94,7 @@ test('every Hindi track has one cue per English scene, the house gap and a real 
   for (const [slug, hindi] of Object.entries(manifest)) {
     const chapter = JSON.parse(read(`app/module/cyber/lessons/new/story/chapters/${slug}.json`));
     assert.equal(hindi.scenes.length, chapter.scenes.length, `${slug}: cue count`);
+    assert.ok(!hindi.englishScenes?.length, `${slug}: all scenes are Hindi`);
     assert.equal(hindi.src, `/audio/cyber/${slug}/story-hi.mp3`, `${slug}: src`);
     assert.ok(existsSync(new URL(`public/audio/cyber/${slug}/story.mp3`, root)), `${slug}: English track stays`);
     const file = new URL(`public${hindi.src}`, root);

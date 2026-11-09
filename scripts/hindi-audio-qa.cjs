@@ -91,12 +91,12 @@ async function checks(browser, width) {
   await page.reload({ waitUntil: 'networkidle' });
   await ready(page, true);
   assert.equal(await page.locator('audio').evaluate(audio => audio.paused), true);
-  // Unchanged chapters continue to use their existing narration in Hindi text mode.
+  // Another chapter loads its own recording in Hindi text mode.
   await page.goto(`${base}/module/cyber/identity-beyond-a-password?grade=11`, { waitUntil: 'networkidle' });
-  await ready(page, false);
+  await ready(page, true);
   assert.equal(await page.locator('html').getAttribute('lang'), 'hi');
   await context.close();
-  console.log(`PASS ${width}px: six Hindi sections, navigation, decision gate/resume, language switching, mute, ending/replay, reload and other-chapter fallback`);
+  console.log(`PASS ${width}px: six Hindi sections, navigation, decision gate/resume, language switching, mute, ending/replay, reload and a second Hindi track`);
 }
 
 (async () => {

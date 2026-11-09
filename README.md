@@ -298,20 +298,18 @@ Also confirm that the browser is using the port printed in the terminal.
 
 ## Hindi story audio
 
-The November 1, 2026 recording import adds 445 Hindi clips across 75 lessons,
-using measured cue times and the existing English / हिन्दी / English + हिन्दी
-ऑडियो controls. Existing recordings are preserved.
+The Classes 3–12 catalogue has six recorded scenes in both languages for all
+248 chapter entries. Schools currently have access to Classes 6–12. Classes 3
+and 4 share eight stories. The November 9 Hinglish
+recording pass added 221 scenes across 102 distinct stories using ElevenLabs.
+Scenes added to an existing Hindi story use its original AJ or Pari M voice.
+The new narration mixes conversational Hindi with familiar English words. The
+source scripts and voice settings are in
+`scripts/hindi-voiceover/hinglish-gap-jobs.json`.
 
-- Classes 6–7: 32 Hindi story tracks each; the practice-lab scene remains English.
-- Class 8: all 32 story tracks; 18 have six Hindi scenes, while the earlier 14
-  retain an English practice-lab scene.
-- Class 9: all 32 lessons have six Hindi scenes.
-- Class 10: the first 24 lessons have six Hindi scenes. `class10-fraud-exam-update`
-  has Hindi scene 1 and English scenes 2–6. The remaining seven Cyber Fraud
-  lessons retain English audio because their recordings were not supplied.
-- Class 11: all 32 lessons have six Hindi scenes. The recovery and access lessons
-  use ElevenLabs Pari M narration; their reviewed scripts and generation settings
-  are in `scripts/hindi-voiceover/class11-recovery-access.json`.
+The English / हिन्दी / English + हिन्दी ऑडियो controls use measured cue
+times for each recording. Class 3 standalone Computational Thinking modules
+use their own interactive screens and browser read-aloud controls.
 
 To import an extracted recording archive with `index.csv`, install FFmpeg and run:
 

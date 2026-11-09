@@ -96,15 +96,15 @@ async function main() {
   assert.equal(await page.locator('html').getAttribute('data-audio-language'), 'en');
   console.log('PASS English changes text and audio back');
 
-  // 7. A lesson with no Hindi recording keeps its English audio in the split mode.
-  const missing = 'class10-fraud-help-without-fees';
-  assert.ok(!(missing in manifest));
+  // 7. A previously English-only chapter now switches to a complete Hindi track.
   await split(page).click();
-  await page.goto(url(missing, 10), { waitUntil: 'networkidle' });
-  await expectSrc(page, `/audio/cyber/${missing}/story.mp3`, 'English fallback where Hindi audio is missing');
-  console.log('PASS lessons without Hindi audio keep English audio');
+  const newlyRecorded = 'class10-fraud-help-without-fees';
+  await page.goto(url(newlyRecorded, 10), { waitUntil: 'networkidle' });
+  await expectSrc(page, manifest[newlyRecorded].src, `${newlyRecorded}: newly recorded Hindi audio`);
+  assert.ok(!manifest[newlyRecorded].englishScenes?.length);
+  console.log('PASS a previously English-only chapter now switches to Hindi audio');
 
-  // The new indexed export supplies all six scenes, plus one partially recorded chapter.
+  // The recorded scenes use the measured Hindi cues, including the completed Class 10 chapter.
   for (const [slug, grade] of [['class8-ai-data-left-out', 8], ['class9-ai-language-context', 9], ['class10-file-access-paths', 10], ['class10-fraud-exam-update', 10], ['identity-beyond-a-password', 11], ['who-should-have-access', 11]]) {
     await page.goto(url(slug, grade), { waitUntil: 'networkidle' });
     await expectSrc(page, manifest[slug].src, `${slug}: imported Hindi track`);

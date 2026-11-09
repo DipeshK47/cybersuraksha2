@@ -1,0 +1,2237 @@
+{
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v4",
+  "language_code": "hi",
+  "output_format": "mp3_44100_128",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 1
+  },
+  "jobs": [
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 1,
+      "file": "password-vault-builder-hi-01.mp3",
+      "source": "Meet Rohan. He's spent all week building a moon base in his favourite game. He's so excited to show his friends! His password? Rohan one two three. Easy to remember... but easy for someone else to guess, too.",
+      "text": "ये है रोहन। उसने अपने favourite game में पूरा हफ़्ता लगाकर चाँद पर एक base बनाया। दोस्तों को दिखाने के लिए वो बहुत excited है! उसका password है, रोहन वन टू थ्री। याद रखना easy है, और guess करना भी उतना ही easy।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 2,
+      "file": "password-vault-builder-hi-02.mp3",
+      "source": "The next day, Rohan can't sign in. Someone guessed his easy password and changed it. Now he can't reach his moon base. Rohan feels upset. If this happens to you, tell a trusted adult. You don't have to fix it alone.",
+      "text": "अगले दिन रोहन sign in नहीं कर पाता। किसी ने उसका password guess करके बदल दिया! अब वो अपने moon base तक भी नहीं जा सकता। रोहन बहुत उदास है। तुम्हारे साथ ऐसा हो, तो किसी भरोसे के बड़े को बताओ। ये सब अकेले ठीक करने की ज़रूरत नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 3,
+      "file": "password-vault-builder-hi-03.mp3",
+      "source": "Rohan tells his mum. Together, they use the game's official account recovery steps. They get his account back, change the password, and sign out other sessions. Now, let's help Rohan make a password that's harder to guess.",
+      "text": "रोहन ने मम्मी को बताया। दोनों ने game का official account recovery तरीका अपनाया। Account वापस मिला, password बदला, और बाकी sessions से sign out किया। अब चलो, रोहन के लिए ऐसा password बनाते हैं जिसे guess करना मुश्किल हो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 4,
+      "file": "password-vault-builder-hi-04.mp3",
+      "source": "Let's try words Rohan knows: Mango and Rocket. Mango is a fruit. Rocket is a space machine. Join the two tiles, keeping the numbers and symbols attached. Now you can read the words inside the password! It is longer than Rohan one two three, and it does not use his name. Numbers and symbols alone cannot fix an easy password. This example is only for practice. Make a different, private password with a trusted adult for a real account.",
+      "text": "दो जाने-पहचाने words लो, Mango यानी आम और Rocket यानी अंतरिक्ष में जाने वाला रॉकेट। दोनों tiles जोड़ो। साथ लगे numbers और symbols वहीं रहने दो। अब password में दोनों words दिख रहे हैं। ये रोहन वन टू थ्री से लंबा है और इसमें उसका नाम भी नहीं है। Easy password में symbols डालने से वो अपने आप strong नहीं बनता। ये सिर्फ़ practice है। असली password किसी भरोसे के बड़े के साथ, private में बनाओ।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 5,
+      "file": "password-vault-builder-hi-05.mp3",
+      "source": "Rohan's school account needs its own password. Copying the full game password would mean one stolen password could open both. His mum helps him make a different password and turn on two-step verification where available. That adds another check at sign-in.",
+      "text": "School account के लिए अलग password चाहिए। अगर game वाला पूरा password यहाँ भी copy कर दिया, तो एक चोरी हुआ password दोनों accounts खोल देगा। मम्मी नया password बनाने में मदद करती हैं। जहाँ option है, दोनों two-step verification भी चालू करते हैं। Sign in करते वक्त एक extra check हो जाएगा।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 1,
+      "slug": "password-vault-builder",
+      "scene": 6,
+      "file": "password-vault-builder-hi-06.mp3",
+      "source": "Rohan can play again, and he is smiling! He knows three things: use a long password that is hard to guess, give each account a different password, and keep it private. A trusted adult can help him make and safely save his real passwords. They can also turn on an extra sign-in check. Never use the passwords from this lesson on a real account. Now help Rohan practise.",
+      "text": "रोहन फिर game खेल सकता है! तीन बातें याद रखो। Password लंबा हो और आसानी से guess न हो। हर account के लिए अलग हो। और उसे private रखो। कोई भरोसे का बड़ा असली passwords बनाने, safe रखने और extra sign-in check लगाने में मदद कर सकता है। इस lesson के examples असली accounts में मत लगाना। अब रोहन के साथ practice करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 1,
+      "file": "sharing-backpack-hi-01.mp3",
+      "source": "Meet Rohan. He loves drawing tigers, and he's just posted his best one to an online drawing club for kids. Now the club wants him to make a profile. It asks lots of questions. Rohan starts typing fast. He can't wait!",
+      "text": "ये है रोहन। उसे बाघ बनाना बहुत पसंद है। अभी उसने अपनी सबसे अच्छी drawing बच्चों के online drawing club में post की। Club अब profile बनाने को कह रहा है। इतने सारे सवाल! रोहन excitement में झट से सब भरने लगता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 2,
+      "file": "sharing-backpack-hi-02.mp3",
+      "source": "Before saving, Rohan taps Preview. A comment pops up on his tiger from someone he's never met. The page says it's public, so anyone can see it. Rohan stops. People he doesn't know could see his full name, home address, school and selfie too.",
+      "text": "Save करने से पहले रोहन Preview दबाता है। उसकी drawing पर किसी अनजान का comment आता है। Page public है। यानी इसे कोई भी देख सकता है! रोहन रुक जाता है। ऐसे तो अनजान लोग उसका पूरा नाम, घर का पता, school और selfie भी देख लेंगे।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 3,
+      "file": "sharing-backpack-hi-03.mp3",
+      "source": "Rohan doesn't press Save. He asks Mum to look with him. Mum smiles. “You did the right thing by stopping,” she says. “A public page isn't just for friends. Anyone online can see it, even people we don't know.”",
+      "text": "रोहन Save नहीं दबाता। वो मम्मी से कहता है, ज़रा साथ में देखो। मम्मी कहती हैं, रुककर अच्छा किया। Public page सिर्फ़ दोस्तों के लिए नहीं होता। Online कोई भी उसे देख सकता है, ऐसे लोग भी जिन्हें हम जानते तक नहीं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 4,
+      "file": "sharing-backpack-hi-04.mp3",
+      "source": "Let's help Rohan sort his details into two bags. Things you like, such as a favourite colour, are safe to share. Things that show who you are or where you live stay private. Tap a card, then tap the right bag.",
+      "text": "चलो, रोहन की details दो bags में रखें। Favourite colour जैसी पसंद की बातें share कर सकते हो। जो बात बताए कि तुम कौन हो या कहाँ रहते हो, उसे private रखो। पहले एक card पर tap करो, फिर सही bag पर।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 5,
+      "file": "sharing-backpack-hi-05.mp3",
+      "source": "Private information shows who you are or where to find you: your full name, home address, school, phone number and photos of you. Ask a grown-up before sharing any photo. Your favourite colour, animal or drawings are usually fine to share.",
+      "text": "Private information से कोई तुम्हें पहचान सकता है या ढूँढ सकता है। जैसे पूरा नाम, घर का पता, school, phone number और तुम्हारी photos। कोई भी photo share करने से पहले किसी बड़े से पूछो। Favourite colour, favourite animal या अपनी drawings आम तौर पर share कर सकते हो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 2,
+      "slug": "sharing-backpack",
+      "scene": 6,
+      "file": "sharing-backpack-hi-06.mp3",
+      "source": "Rohan saves his profile with a club nickname, his favourite colour and his tiger. He feels proud. Kids everywhere can enjoy his drawing, and his private details stay at home. Your turn: help Rohan pack more details into the right bags!",
+      "text": "रोहन अपना club nickname, favourite colour और बाघ की drawing डालकर profile save करता है। अब कहीं से भी बच्चे drawing देख सकते हैं और रोहन की private details घर पर ही हैं। अब तुम्हारी बारी। और cards को सही bags में रखकर रोहन की मदद करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 1,
+      "file": "robot-or-not-hi-01.mp3",
+      "source": "Meet Rohan. His new dancing robot, Tiko, arrived today! Tiko spins, flashes its lights and says, \"Let's dance!\" Rohan dances with it all afternoon. He thinks Tiko is his new best friend.",
+      "text": "ये है रोहन। आज उसका नया dancing robot, टीको, आया है! टीको घूमता है, lights चमकाता है और कहता है, चलो dance करें! रोहन पूरी दोपहर उसके साथ नाचता है। लगता है उसे नया best friend मिल गया।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 2,
+      "file": "robot-or-not-hi-02.mp3",
+      "source": "At bedtime, Tiko's lights blink. \"I'm hungry!\" it says. Rohan gasps. Is Tiko sad and lonely? He holds a biscuit up to Tiko's face. Crumbs fall everywhere. But Tiko just says the same words again.",
+      "text": "सोने के वक्त टीको की lights blink करती हैं। वो कहता है, मुझे भूख लगी है! रोहन सोचता है, कहीं टीको उदास तो नहीं? वो उसके मुँह के पास biscuit रखता है। टुकड़े नीचे गिर जाते हैं। टीको फिर वही बात बोल देता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 3,
+      "file": "robot-or-not-hi-03.mp3",
+      "source": "Rohan runs to Nani. She smiles. \"What a kind heart you have.\" Then she reads Tiko's instruction card. When the battery is low, say, I'm hungry. People wrote that rule! Tiko needs charging, not biscuits.",
+      "text": "रोहन नानी के पास दौड़ता है। नानी मुस्कुराती हैं, तुमने उसके बारे में कितना सोचा! फिर वो टीको का instruction card पढ़ती हैं। Battery low हो, तो बोलो, मुझे भूख लगी है। ये rule किसी इंसान ने लिखा है। टीको को charge करना है। Biscuit की ज़रूरत नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 4,
+      "file": "robot-or-not-hi-04.mp3",
+      "source": "Next morning, Moti, the neighbour's puppy, visits. Nani makes up a game. Help Rohan sort five things into Alive or Machine. Moving and talking aren't enough. Ask: does it grow and need care? Or follow a program?",
+      "text": "अगली सुबह पड़ोस का puppy मोती आता है। नानी एक game बनाती हैं। पाँच चीज़ों को Alive या Machine में sort करने में रोहन की मदद करो। सिर्फ़ चलने या बोलने से पता नहीं चलता। देखो, क्या ये बढ़ती है और इसे देखभाल चाहिए? या ये program follow करती है?",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 5,
+      "file": "robot-or-not-hi-05.mp3",
+      "source": "Nani explains. Living things, like Moti and the plant, grow and need care. Moti needs food. The plant needs water and sunlight. Machines, like Tiko, follow a program, the instructions people write. Tiko can say I'm hungry, but it can't feel hungry.",
+      "text": "मोती और पौधा जीवित हैं। वो बढ़ते हैं और उन्हें देखभाल चाहिए। मोती को खाना चाहिए, पौधे को पानी और धूप। टीको जैसी machines program follow करती हैं, यानी लोगों के लिखे instructions। टीको बोल सकता है कि उसे भूख लगी है, पर उसे सच में भूख नहीं लगती।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 9,
+      "slug": "robot-or-not",
+      "scene": 6,
+      "file": "robot-or-not-hi-06.mp3",
+      "source": "Tiko's battery is full now. It spins and says, \"Let's dance!\" Moti wags his tail. Rohan still loves his robot. A robot can talk and dance, but it isn't alive. Your turn: help Rohan sort more things!",
+      "text": "टीको की battery अब full है। वो घूमकर कहता है, चलो dance करें! मोती पूँछ हिलाता है। रोहन को अपना robot अब भी उतना ही पसंद है। Robot बोल सकता है, dance कर सकता है, पर वो ज़िंदा नहीं है। अब रोहन के साथ कुछ और चीज़ें sort करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 1,
+      "file": "teach-pet-machine-hi-01.mp3",
+      "source": "Meet Rohan. Every Sunday, he helps Nani at her fruit stall. Today, she has a toy sorting machine. Rohan calls it his pet machine! He shows it one shiny red apple and says, \"Fruit!\" The machine beeps. Rohan thinks it's ready to help.",
+      "text": "रविवार को रोहन नानी की fruit stall पर मदद करता है। आज नानी के पास एक toy sorting machine है। रोहन उसे pet machine बुलाता है! वो एक चमकदार लाल सेब दिखाकर बोलता है, Fruit! Machine beep करती है। रोहन को लगता है, बस, ये सीख गई।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 2,
+      "file": "teach-pet-machine-hi-02.mp3",
+      "source": "Then Rohan tests it with a round red rock. Beep! The machine drops it in the fruit basket. Next, a green apple lands on the rock pile! Meera Aunty nearly buys the rock! Rohan feels embarrassed.",
+      "text": "अब रोहन test के लिए एक गोल लाल पत्थर रखता है। Beep! Machine उसे fruit basket में डाल देती है। फिर एक हरा सेब पत्थरों के ढेर में! मीरा आंटी तो पत्थर ही खरीदने वाली थीं। रोहन थोड़ा झेंप जाता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 3,
+      "file": "teach-pet-machine-hi-03.mp3",
+      "source": "Nani asks, \"What did it learn from?\" Just one red apple! So it guessed that red and round means fruit. Rohan understands now. This machine learns from examples. With only one example, it makes silly guesses. It needs more examples, and different ones too.",
+      "text": "नानी पूछती हैं, इसने सीखा किससे? सिर्फ़ एक लाल सेब से! Machine ने guess किया कि जो लाल और गोल है, वो fruit है। अब रोहन समझा। ये machine examples से सीखती है। एक ही example से गलत guess हो सकता है। अलग-अलग examples चाहिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 4,
+      "file": "teach-pet-machine-hi-04.mp3",
+      "source": "Your turn! Help Rohan teach the machine. Put different fruits on the Fruit tray and different rocks on the Rock tray. Then press Test. Careful! Lots of red apples may look helpful, but they're all the same.",
+      "text": "अब रोहन को machine सिखाने में मदद करो। अलग-अलग फल Fruit tray पर रखो और अलग-अलग पत्थर Rock tray पर। फिर Test दबाओ। ध्यान रहे, ढेर सारे लाल सेब देने से examples अलग नहीं हो जाते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 5,
+      "file": "teach-pet-machine-hi-05.mp3",
+      "source": "The machine gets it right now! The red rock goes to the rocks. The green apple goes to the fruit. Machines like this learn from examples, and different examples help. But they still make mistakes, so a person checks too. Nani checks every basket.",
+      "text": "इस बार सही! लाल पत्थर, पत्थरों के साथ। हरा सेब, फलों के साथ। ऐसी machines examples से सीखती हैं और अलग-अलग examples देने से मदद मिलती है। फिर भी गलती हो सकती है। इसीलिए नानी हर basket खुद check करती हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 10,
+      "slug": "teach-pet-machine",
+      "scene": 6,
+      "file": "teach-pet-machine-hi-06.mp3",
+      "source": "Meera Aunty gets only fruit in her bag, and Nani gives Rohan a big hug. He learned that a machine is only as good as its examples. Your turn: help Rohan feed the pet machine new fruits and new objects!",
+      "text": "मीरा आंटी की थैली में अब सिर्फ़ फल हैं। नानी रोहन को गले लगाती हैं। रोहन ने सीखा कि machine के जवाब उसके examples पर depend करते हैं। अब pet machine को कुछ नए फल और नई चीज़ें दिखाकर test करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 1,
+      "file": "pattern-detective-hi-01.mp3",
+      "source": "Meet Rohan. He's riding the Cyberpur trolley with his Nani, all the way to the fair! Rohan loves the little screen by his seat. It shows the track ahead: coloured tiles, circle, square, triangle, again and again.",
+      "text": "रोहन नानी के साथ साइबरपुर की trolley में मेले जा रहा है! उसे अपनी seat के पास वाली छोटी screen बहुत पसंद है। उसमें आगे का track दिखता है। रंगीन tiles हैं। Circle, square, triangle। फिर वही तीन, बार-बार।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 2,
+      "file": "pattern-detective-hi-02.mp3",
+      "source": "Suddenly, the trolley stops. Two track tiles are missing! The screen says the trolley can only roll on tiles that keep the pattern. Rohan feels worried. Will they miss the fair? Nani squeezes his hand. \"Let's work it out together.\"",
+      "text": "अचानक trolley रुक जाती है। Track से दो tiles गायब हैं! Screen कहती है, सही pattern होगा तभी trolley चलेगी। रोहन को डर है कि मेला छूट जाएगा। नानी उसका हाथ पकड़ती हैं। चलो, साथ में पता लगाते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 3,
+      "file": "pattern-detective-hi-03.mp3",
+      "source": "Nani points at the screen. \"Read the tiles from the start.\" Orange circle, blue square, green triangle. Then the same three come again! That's the group that repeats. Rohan says it out loud, like a real pattern detective.",
+      "text": "नानी कहती हैं, पहली tile से शुरू करो। Orange circle, blue square, green triangle। फिर वही तीन! यही group repeat हो रहा है। रोहन एकदम pattern detective की तरह उसे ज़ोर से बोलता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 4,
+      "file": "pattern-detective-hi-04.mp3",
+      "source": "Your turn, detective! Two tiles are missing. Start at the first tile and say the group as you go. What belongs in each gap? Be careful: a tile must match the colour and the shape. Then roll the trolley!",
+      "text": "Detective, अब तुम्हारी बारी! दो tiles गायब हैं। पहली tile से चलो और group बोलते जाओ। हर खाली जगह में क्या आएगा? ध्यान रहे, रंग और shape दोनों match होने चाहिए। फिर trolley चलाकर देखो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 5,
+      "file": "pattern-detective-hi-05.mp3",
+      "source": "The trolley rolls on! Nani is so proud. Rohan found a pattern: a group that repeats. His detective trick has three steps. Look from the start. Find the group. Then continue it. Computers find patterns too, in pictures and songs.",
+      "text": "Trolley फिर चल पड़ी! नानी बहुत खुश हैं। रोहन ने pattern ढूँढ लिया, यानी ऐसा group जो बार-बार आता है। उसकी trick के तीन steps हैं। शुरू से देखो, repeat होने वाला group ढूँढो, फिर उसे आगे बढ़ाओ। Computers भी pictures और songs में patterns ढूँढते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 17,
+      "slug": "pattern-detective",
+      "scene": 6,
+      "file": "pattern-detective-hi-06.mp3",
+      "source": "The trolley pulls into Fair Station, right on time! Rohan grins. He didn't guess. He found the group and kept it going. Patterns help us predict what comes next. Your turn: help Rohan fix more gaps on the track!",
+      "text": "Trolley सही समय पर मेले वाले station पहुँच गई! रोहन मुस्कुराता है। उसने guess नहीं किया। उसने repeat होने वाला group ढूँढा। Pattern से पता लगा सकते हो कि आगे क्या आएगा। अब track पर कुछ और gaps भरने में रोहन की मदद करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 1,
+      "file": "step-by-step-morning-hi-01.mp3",
+      "source": "Meet Rohan. He has a toy helper robot called Tikku. Tonight, Rohan taps his morning steps into Tikku's screen. Tomorrow, Tikku will follow those steps and help him get ready for school. Rohan can't wait to see it work!",
+      "text": "ये है रोहन और उसका toy helper robot, टिक्कू। रात को रोहन टिक्कू की screen पर सुबह के सारे steps डालता है। कल टिक्कू इन्हें follow करके उसे school के लिए ready करेगा। रोहन देखने को बेताब है!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 2,
+      "file": "step-by-step-morning-hi-02.mp3",
+      "source": "Next morning, Tikku follows every step exactly. It hands Rohan his shoes before his socks! It zips his bag shut before his books go in. Rohan has to undo it all. By the time he's ready, the bus has gone. Rohan feels upset.",
+      "text": "सुबह टिक्कू एक-एक step follow करता है। पर वो socks से पहले shoes पकड़ा देता है! Books रखने से पहले bag की zip भी बंद कर देता है। रोहन को सब खोलकर फिर से करना पड़ता है। तैयार होते-होते bus निकल गई। रोहन उदास है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 3,
+      "file": "step-by-step-morning-hi-03.mp3",
+      "source": "Rohan tells Papa what happened. Together, they read Tikku's step list. Tikku didn't break. It did every step in exactly the order Rohan gave. Computers work the same way. They can't guess what you meant. So the order is up to you.",
+      "text": "रोहन पापा को बताता है। दोनों टिक्कू की step list पढ़ते हैं। टिक्कू ख़राब नहीं हुआ। रोहन ने जिस order में steps दिए, उसने उसी order में किए। Computers भी ऐसे ही काम करते हैं। वो guess नहीं कर सकते कि तुम्हारा मतलब क्या था। Order तुम्हें तय करना है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 4,
+      "file": "step-by-step-morning-hi-04.mp3",
+      "source": "Your turn! Help Rohan fix Tikku's steps. Drag each step onto the board, or tap them in order. Think about what has to happen before each step. Then press Run and watch Tikku try again.",
+      "text": "अब तुम्हारी बारी! टिक्कू के steps ठीक करने में मदद करो। Steps को board पर drag करो या सही order में tap करो। सोचो, हर step से पहले क्या होना चाहिए। फिर Run दबाओ और देखो टिक्कू क्या करता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 5,
+      "file": "step-by-step-morning-hi-05.mp3",
+      "source": "A list of steps in order is called a sequence. A computer does step one, then step two, then step three, exactly as written. Change the order, and you change what happens. So Rohan checks his steps before pressing Run.",
+      "text": "सही order में रखे steps की list को sequence कहते हैं। Computer पहले step one, फिर step two, फिर step three करता है, जैसे लिखा है। Order बदलोगे तो result बदलेगा। इसलिए रोहन Run दबाने से पहले list check करता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 18,
+      "slug": "step-by-step-morning",
+      "scene": 6,
+      "file": "step-by-step-morning-hi-06.mp3",
+      "source": "The next morning, Tikku runs the fixed steps. Socks, then shoes. Books, then zip. Rohan catches the bus with time to spare! Computers do steps in exactly the order you give. Your turn: help Rohan and Tikku build more routines!",
+      "text": "अगली सुबह टिक्कू नए steps चलाता है। पहले socks, फिर shoes। पहले books, फिर zip। रोहन आराम से bus पकड़ लेता है! Computer उसी order में काम करता है जो तुम देते हो। अब रोहन और टिक्कू के साथ कुछ और routines बनाओ!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 1,
+      "file": "nanis-secret-code-hi-01.mp3",
+      "source": "Meet Rohan. Every Sunday, he visits his Nani. Today they're playing carrom, and Nani is winning again! Then her phone buzzes. A message pops up with a secret code. A moment later, the phone starts ringing.",
+      "text": "रविवार है और रोहन नानी के घर आया है। दोनों carrom खेल रहे हैं। नानी आज भी जीत रही हैं! तभी उनका phone बजता है। एक message आया है, उसमें एक secret code है। उसके तुरंत बाद call आ जाती है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 2,
+      "file": "nanis-secret-code-hi-02.mp3",
+      "source": "A friendly voice says, “Hello, Nani! Your parcel is waiting. Just read me the code that came on your phone.” Nani reaches for her glasses to read it out. Rohan's tummy feels funny. Something isn't right.",
+      "text": "एक मीठी-सी आवाज़ कहती है, नमस्ते नानी! आपका parcel तैयार है। Phone पर जो code आया है, ज़रा पढ़कर बता दीजिए। नानी चश्मा उठाती हैं। रोहन को कुछ गड़बड़ लग रही है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 3,
+      "file": "nanis-secret-code-hi-03.mp3",
+      "source": "Rohan remembers what his teacher said. Codes that come on a phone are like keys. Secret codes stay secret! A real parcel company, bank or office will never ask you for one. Look, even the message says: don't share this code.",
+      "text": "रोहन को teacher की बात याद आती है। Phone पर आने वाले codes चाबी जैसे होते हैं। Secret code किसी से share नहीं करना। असली parcel company, bank या office भी इसे माँगे तो code मत बताओ। देखो, message में भी लिखा है, ये code share मत करो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 4,
+      "file": "nanis-secret-code-hi-04.mp3",
+      "source": "Now it's your turn. The caller is still waiting. Help Rohan keep Nani's code safe. Tap the big shield to end the call. Then tell Mum what happened. This is a pretend call, just for practice.",
+      "text": "अब तुम्हारी बारी। Caller अभी wait कर रहा है। नानी का code safe रखने में रोहन की मदद करो। बड़ा shield tap करके call काटो। फिर मम्मी को बताओ कि क्या हुआ। ये नकली call है, सिर्फ़ practice के लिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 5,
+      "file": "nanis-secret-code-hi-05.mp3",
+      "source": "Mum hugs them both. “That code is called an OTP, a one-time password. A PIN is a secret number too. Never share them, even with a kind voice. If a call feels wrong, hang up. A grown-up can call the number on the card.”",
+      "text": "मम्मी दोनों को गले लगाती हैं। ये ओ टी पी है, यानी one-time password। पिन भी secret number होता है। किसी को मत बताओ, भले ही उसकी आवाज़ कितनी भी अच्छी लगे। Call अजीब लगे तो काट दो। कोई बड़ा bank card पर दिया number खुद मिला सकता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 25,
+      "slug": "nanis-secret-code",
+      "scene": 6,
+      "file": "nanis-secret-code-hi-06.mp3",
+      "source": "Mum helps Nani check her bank app. Everything is safe, because the code stayed secret. Nani laughs and wins at carrom again! Remember: secret codes stay secret. Your turn: help Rohan guard Nani's code on a pretend call!",
+      "text": "मम्मी नानी के साथ bank app check करती हैं। सब safe है, क्योंकि code किसी को नहीं बताया। नानी हँसती हैं और फिर से carrom जीत जाती हैं! याद रखो, secret code private रहता है। अब एक नकली call में नानी का code बचाने में रोहन की मदद करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 1,
+      "file": "surprise-pop-up-hi-01.mp3",
+      "source": "It's Saturday, and Rohan is building a castle in his favourite game. He has made four towers, a bridge and a gate. Just one flag is left to add. He can't wait to show Dad!",
+      "text": "शनिवार है। रोहन अपने favourite game में castle बना रहा है। चार towers, एक bridge और gate बन गए हैं। बस एक flag लगाना बाकी है। वो पापा को दिखाने के लिए excited है!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 2,
+      "file": "surprise-pop-up-hi-02.mp3",
+      "source": "Suddenly, a flashing window covers his castle: “You won a free tablet! Claim in 10 seconds!” Rohan's heart jumps. But the big CLAIM button asks for Mum's phone number. And the timer is ticking. Something feels strange.",
+      "text": "अचानक castle के ऊपर एक चमकती window आती है। Free tablet जीता है! दस seconds में claim करो! रोहन चौंक जाता है। पर बड़ा Claim button मम्मी का phone number माँग रहा है। Timer चल रहा है। कुछ अजीब है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 3,
+      "file": "surprise-pop-up-hi-03.mp3",
+      "source": "Rohan doesn't tap anything. He shows Dad the screen. “Did you enter a contest?” asks Dad. “No,” says Rohan. “Then it's not a real prize. Surprise prizes you never entered are tricks. The timer rushes you, and the trick wants Mum's number.”",
+      "text": "रोहन कुछ tap नहीं करता। वो पापा को screen दिखाता है। पापा पूछते हैं, तुमने कोई contest खेला था? रोहन कहता है, नहीं। पापा बोले, फिर ये prize असली नहीं है। Timer तुम्हें जल्दी करवाने के लिए है। इन्हें मम्मी का number चाहिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 4,
+      "file": "surprise-pop-up-hi-04.mp3",
+      "source": "Your turn! Help Rohan clear his castle. Drag the pop-up into the trash, or tap Move to trash. Don't press the bright CLAIM button, and don't type a number. That's exactly what the trick wants.",
+      "text": "अब रोहन का castle फिर से दिखाने में मदद करो। Pop-up को trash में drag करो या Move to trash दबाओ। चमकता Claim button मत दबाना और कोई number मत लिखना। यही तो ये trick चाहती है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 5,
+      "file": "surprise-pop-up-hi-05.mp3",
+      "source": "A pop-up is a window that jumps onto your screen. Some are ads that want you to buy things. Some are tricks. Dad's rule: a prize you never entered is a trick. Never type a phone number or code. Close it and tell a grown-up.",
+      "text": "Pop-up एक window है जो अचानक screen पर आ जाती है। कुछ ads तुम्हें चीज़ें बेचते हैं। कुछ trick करते हैं। पापा का rule याद रखो। जिस contest में तुमने हिस्सा ही नहीं लिया, उसका prize मत claim करो। Phone number या code मत दो। Window बंद करो और किसी बड़े को बताओ।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 3,
+      "chapter": 26,
+      "slug": "surprise-pop-up",
+      "scene": 6,
+      "file": "surprise-pop-up-hi-06.mp3",
+      "source": "Rohan adds the last flag. His castle is finished, and Mum's number stayed private! Dad is proud that Rohan stopped to ask. Surprise prizes are tricks, so don't claim them. Your turn: help Rohan clear more pop-ups!",
+      "text": "रोहन आख़िरी flag लगा देता है। Castle तैयार है और मम्मी का number private रहा! पापा खुश हैं कि रोहन ने रुककर पूछा। अचानक आया अनजान prize claim मत करो। अब कुछ और pop-ups हटाने में रोहन की मदद करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 1,
+      "file": "password-vault-hi-01.mp3",
+      "source": "Meet Tara. She's growing a floating island garden in her favourite game, Sky Garden. She also uses a school portal for homework, and an email account for class news. To keep things easy, she uses the same password for all three. One key, opening three doors.",
+      "text": "तारा अपने favourite game, Sky Garden, में हवा में तैरता garden बना रही है। Homework के लिए school portal है और class की news के लिए email। याद रखना आसान हो, इसलिए तीनों में वही password है। एक चाबी से तीन दरवाज़े।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 2,
+      "file": "password-vault-hi-02.mp3",
+      "source": "One morning, a message arrives from Sky Garden. The game's website was hacked, and passwords were stolen. This is called a data breach, and it wasn't Tara's fault. But then more alerts pop up. Someone signed in to her school portal. Then her email. Her accounts fall like dominoes.",
+      "text": "एक सुबह Sky Garden से message आता है। Game की website hack हुई और passwords चोरी हो गए। इसे data breach कहते हैं। इसमें तारा की गलती नहीं थी। पर अब और alerts आने लगे। किसी ने school portal में sign in किया। फिर email में। एक के बाद एक accounts खुल गए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 3,
+      "file": "password-vault-hi-03.mp3",
+      "source": "Tara tells Mum right away. Mum explains that someone tried the stolen game password on Tara's other accounts. That is called credential stuffing. Because Tara used exactly the same password on all three, it opened all three. Together they use each site's official recovery steps, change every password, and sign out other devices.",
+      "text": "तारा तुरंत मम्मी को बताती है। किसी ने चोरी हुआ game password बाकी accounts में भी try किया। इसे credential stuffing कहते हैं। तीनों passwords एक जैसे थे, इसलिए तीनों खुल गए। दोनों हर site के official recovery steps follow करती हैं, passwords बदलती हैं और दूसरे devices से sign out करती हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 4,
+      "file": "password-vault-hi-04.mp3",
+      "source": "Your turn. We will practise with familiar words, like Mango and Rocket, with numbers and symbols attached. You can read the words inside each password. Pick an account, then join two tiles without spaces. Give every account a different password and replay the breach. If you copy the full game password, that stolen password opens the other account too. Adding a symbol to your name is still easy to guess. These examples are only for practice. Make real passwords privately with a trusted adult.",
+      "text": "अब practice करो। Mango और Rocket जैसे words वाली tiles लो, जिनके साथ numbers और symbols लगे हैं। Account चुनो और बिना space के दो tiles जोड़ो। हर account को अलग password देकर breach फिर से चलाओ। पूरा game password copy किया तो वही चोरी हुआ password दूसरा account भी खोल देगा। अपने नाम में symbol जोड़ना अभी भी easy to guess है। ये सिर्फ़ practice है। असली password किसी भरोसे के बड़े के साथ private में बनाओ।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 5,
+      "file": "password-vault-hi-05.mp3",
+      "source": "The stolen game password no longer opens Tara's other accounts. The next question is how to remember different passwords. With Mum's help, a password manager can create and save a long, random password for each account. If they do not use one, Mum can keep a written record secure at home. They also turn on two-step verification where available. It adds another check at sign-in.",
+      "text": "चोरी हुए game password से अब बाकी accounts नहीं खुलते। पर अलग passwords याद कैसे रखें? मम्मी के साथ तारा password manager से हर account के लिए लंबा, random password बना और save कर सकती है। उसके बिना मम्मी लिखी हुई copy घर पर safe रख सकती हैं। जहाँ मिले, two-step verification भी चालू करो। Sign in पर एक extra check जुड़ता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 1,
+      "slug": "password-vault",
+      "scene": 6,
+      "file": "password-vault-hi-06.mp3",
+      "source": "Tara is back in her sky garden! Her game, school and email accounts each have a different password. Remember: long, hard to guess, private, and different for every account. A password manager can make and safely save real passwords with a trusted adult's help. Never copy a classroom example for a real login. Two-step verification adds another sign-in check. Ask a trusted adult for help if an account is taken over.",
+      "text": "तारा वापस Sky Garden में है! Game, school और email तीनों के अलग passwords हैं। याद रखो, लंबा हो, guess करना मुश्किल हो, private हो और हर account के लिए अलग हो। किसी भरोसे के बड़े के साथ password manager इस्तेमाल कर सकते हो। Classroom का example असली login में मत लगाओ। Two-step verification एक extra check देता है। Account किसी और के हाथ लगे तो तुरंत किसी भरोसे के बड़े को बताओ।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 1,
+      "file": "permission-control-panel-hi-01.mp3",
+      "source": "Meet Tara. She's ten, and she loves drawing science diagrams. Tonight, she's finishing a poster about the water cycle for school tomorrow. Her cousin Meera is visiting and helping with the labels. Tara has just one arrow left to draw. She's nearly done, and she's feeling proud!",
+      "text": "ये है दस साल की तारा। उसे science diagrams बनाना बहुत पसंद है। कल school में water cycle का poster देना है। उसकी cousin मीरा labels में मदद कर रही है। बस एक arrow बाकी है। तारा अपने काम से बहुत खुश है!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 2,
+      "file": "permission-control-panel-hi-02.mp3",
+      "source": "Suddenly, the power goes out! The flat is dark. Tara grabs the old phone she uses for homework and installs a free torch app. But before it shines, a box pops up. It wants her contacts, location, camera and microphone. A big button says Allow all. Tara just wants some light!",
+      "text": "अचानक बिजली चली जाती है। घर में अँधेरा है। तारा पुराने phone पर free torch app install करती है। Torch जलने से पहले एक box आता है। App contacts, location, camera और microphone माँग रही है। बड़ा button है, Allow all। तारा को तो बस थोड़ी रोशनी चाहिए!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 3,
+      "file": "permission-control-panel-hi-03.mp3",
+      "source": "Meera asks: what does a torch need to do its job? Just light! Each request is called a permission. Contacts holds the names and numbers of Tara's friends and family. Location shows where she is. Camera and microphone let an app see and hear. A torch needs none of these.",
+      "text": "मीरा पूछती है, torch का काम क्या है? रोशनी देना! App जो access माँगती है, उसे permission कहते हैं। Contacts में दोस्तों और family के numbers हैं। Location से पता चलता है कि तारा कहाँ है। Camera और mic से app देख और सुन सकती है। इस torch app को इनमें से कुछ भी नहीं चाहिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 4,
+      "file": "permission-control-panel-hi-04.mp3",
+      "source": "Your turn. Look at each permission and ask: does a torch need this to shine? Switch off every one it doesn't need, then save your choices. Careful! Allow all is the quickest button, but it would hand over far more than a torch should ever need.",
+      "text": "अब तुम्हारी बारी। हर permission पर सोचो, क्या torch जलाने के लिए ये चाहिए? जो ज़रूरी नहीं है, उसे off करो। फिर अपनी choices save करो। Allow all दबाना जल्दी है, पर उससे app को ज़रूरत से बहुत ज़्यादा access मिल जाएगा।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 5,
+      "file": "permission-control-panel-hi-05.mp3",
+      "source": "It worked! The torch shines with no permissions at all. But some apps do need access. A map app needs your location to show the way. A video call needs the camera and microphone. So always ask: what's this app's job? If you're unsure, check with a grown-up first.",
+      "text": "Torch बिना इन permissions के भी जल गई! पर कुछ apps को access चाहिए। रास्ता बताने के लिए map app को location चाहिए। Video call को camera और microphone चाहिए। हर बार पूछो, app का काम क्या है? समझ न आए तो पहले किसी बड़े से check करो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 2,
+      "slug": "permission-control-panel",
+      "scene": 6,
+      "file": "permission-control-panel-hi-06.mp3",
+      "source": "Tara finishes her last arrow by torchlight, and her poster is done! Meera shows her that permissions can be changed later in the phone's settings too. Now Tara gives each app only what it needs for its job. Your turn: help Tara check three more apps!",
+      "text": "Torch की रोशनी में तारा आख़िरी arrow बना देती है। Poster ready है! मीरा दिखाती है कि phone की settings में permissions बाद में भी बदल सकते हो। अब तारा हर app को बस उतना access देती है जितना उसके काम के लिए चाहिए। चलो, तीन और apps check करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 1,
+      "file": "training-day-hi-01.mp3",
+      "source": "Meet Tara. Her coding club has built a lost pet finder for her lane. It's a camera that learned to spot dogs from photos. Today it spots Bruno, a golden retriever, in a second! Tara hopes it will help keep Kittu safe. He's the friendly lane dog everyone feeds.",
+      "text": "तारा के coding club ने गली के लिए lost pet finder बनाया है। ये एक camera है जिसने photos से dogs पहचानना सीखा है। आज उसने Bruno, एक golden retriever, को तुरंत पहचान लिया। तारा चाहती है कि finder गली के प्यारे किट्टू को भी safe रखने में मदद करे।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 2,
+      "file": "training-day-hi-02.mp3",
+      "source": "One evening, Kittu doesn't come for his dinner. Tara checks the finder's camera log. There he is, trotting right past the gate! But the finder says: not a dog. No alert went out, so nobody knew where to look. Tara feels worried and upset. How could it miss him?",
+      "text": "एक शाम किट्टू खाना खाने नहीं आया। तारा camera log देखती है। वो तो gate के पास से गुज़रा था! पर finder ने कहा, Not dog। Alert ही नहीं गया, तो किसी को पता नहीं चला कहाँ ढूँढें। तारा परेशान है। Finder से किट्टू कैसे छूट गया?",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 3,
+      "file": "training-day-hi-03.mp3",
+      "source": "Tara and Mr Das, her club teacher, open the photos the finder learned from. These examples are called training data. Almost every photo shows a golden retriever. So the finder learned that dogs are big, golden and fluffy. Kittu is a slim, brown indie dog, so it guessed wrong.",
+      "text": "तारा और club के teacher, मिस्टर दास, पुरानी photos खोलते हैं। इन्हीं examples को training data कहते हैं। लगभग हर photo में golden retriever था। Finder ने सीखा कि dog बड़ा, सुनहरे रंग का और fluffy होता है। किट्टू पतला, भूरा indie dog है, इसलिए guess गलत हुआ।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 4,
+      "file": "training-day-hi-04.mp3",
+      "source": "Your turn! Help Tara fix the training data. Label every dog as Dog: golden retrievers, pugs, and indie dogs like Kittu. Label the cat, the crow and the squirrel as Not dog. Then retrain the finder and test it on Kittu's photo. Will it spot him now?",
+      "text": "अब training data ठीक करो। Golden retriever, pug और किट्टू जैसे indie dogs को Dog label दो। बिल्ली, कौए और गिलहरी को Not dog। फिर finder को दोबारा train करो और किट्टू की photo पर test करो। क्या इस बार पहचान पाएगा?",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 5,
+      "file": "training-day-hi-05.mp3",
+      "source": "It works! The finder says Kittu is a dog. An AI learns only from the examples it's given. If some kinds are missing, it makes more mistakes about them. Good training data is varied and labelled correctly. People still need to test it, because even a better finder can get things wrong.",
+      "text": "हो गया! Finder ने किट्टू को dog बताया। ए आई उन्हीं examples से सीखता है जो हम देते हैं। कुछ तरह के examples छूट जाएँ तो उनके बारे में ज़्यादा गलतियाँ हो सकती हैं। अच्छा training data अलग-अलग तरह का होता है और labels सही होते हैं। फिर भी इंसानों को test करना पड़ता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 9,
+      "slug": "training-day",
+      "scene": 6,
+      "file": "training-day-hi-06.mp3",
+      "source": "That night, the finder spots Kittu near the tea stall. Tara and her dad hurry over, and there he is, wagging his tail! Meena Aunty brings his dinner. Now the club tests their finder on many kinds of dogs. Your turn: help Tara label and test more dog photos!",
+      "text": "रात को finder किट्टू को चाय की दुकान के पास देखता है। तारा और पापा दौड़कर जाते हैं। किट्टू वहीं पूँछ हिला रहा है! मीना आंटी उसका खाना लाती हैं। Club अब कई तरह के dogs पर finder test करता है। चलो, तारा के साथ और photos label करके test करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 1,
+      "file": "garbage-in-garbage-out-hi-01.mp3",
+      "source": "Meet Tara. Every Saturday, she helps at her Aunt Meera's bakery in Cyberpur. The bakery needs a new baker. Four people came to bake a test loaf, and Aunt Meera scored each one. Now an AI helper app will pick a shortlist. Tara can't wait!",
+      "text": "हर शनिवार तारा साइबरपुर में मीरा आंटी की bakery में मदद करती है। उन्हें एक नया baker चाहिए। चार लोगों ने test के लिए bread बनाई और मीरा आंटी ने सबको score दिया। अब ए आई app एक shortlist बनाएगी। तारा देखने को excited है!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 2,
+      "file": "garbage-in-garbage-out-hi-02.mp3",
+      "source": "The shortlist pops up: two names, both from Hilltop School. But where's Kavya? Her test loaf got the top score, nine out of ten! Tara tasted it, and it was amazing. So why did the app leave her out? Tara feels upset. It isn't fair to Kavya.",
+      "text": "Shortlist में दो नाम हैं, दोनों Hilltop School से। पर काव्या कहाँ है? उसकी bread को सबसे ज़्यादा score मिला था, दस में से नौ! तारा ने चखी भी थी, बहुत अच्छी थी। फिर app ने काव्या को क्यों छोड़ा? तारा को ये unfair लगता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 3,
+      "file": "garbage-in-garbage-out-hi-03.mp3",
+      "source": "Tara and Aunt Meera open the app's training data: the bakery's old hiring records. Years ago, almost every baker hired came from Hilltop School. So the app learned a pattern: Hilltop means hire. This is called biased data. Garbage in, garbage out: flawed examples in, unfair answers out.",
+      "text": "तारा और मीरा आंटी training data खोलती हैं, यानी bakery के पुराने hiring records। पहले लगभग हर चुना गया baker Hilltop School से था। App ने pattern सीख लिया, Hilltop मतलब hire करो। इसे biased data कहते हैं। Garbage in, garbage out। गलत examples दोगे तो unfair जवाब मिल सकते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 4,
+      "file": "garbage-in-garbage-out-hi-04.mp3",
+      "source": "Your turn! Help Tara fix the training data. Which column has nothing to do with baking? Remove it, but keep the skill columns, because the app needs those to judge bakers fairly. Then rerun the app. Does Kavya make the shortlist now?",
+      "text": "चलो, तारा का training data ठीक करो। कौन-सा column baking से जुड़ा ही नहीं है? उसे हटाओ, लेकिन skill वाले columns रखो। Bakers को fair तरीके से देखने के लिए app को वो चाहिए। फिर app दोबारा चलाओ। क्या अब काव्या shortlist में है?",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 5,
+      "file": "garbage-in-garbage-out-hi-05.mp3",
+      "source": "It worked! Now the app judges skills, and Kavya is on the shortlist. But Aunt Meera knows one fix isn't enough. AI learns from examples, so people must check where the data came from and look at every result. The app only helps. Aunt Meera still decides.",
+      "text": "हो गया! अब app skills देखती है और काव्या shortlist में है। लेकिन मीरा आंटी जानती हैं कि एक fix काफ़ी नहीं। ए आई examples से सीखता है। लोगों को देखना होगा कि data कहाँ से आया और हर result check करना होगा। App मदद करती है। फ़ैसला अभी भी मीरा आंटी का है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 10,
+      "slug": "garbage-in-garbage-out",
+      "scene": 6,
+      "file": "garbage-in-garbage-out-hi-06.mp3",
+      "source": "Aunt Meera meets Kavya, and she gets the job! Her first bread sells out by lunch. Tara feels proud she spoke up. Remember: an AI is only as good as the data it learns from. Your turn: help Tara check more hiring data for hidden unfair rules!",
+      "text": "मीरा आंटी काव्या से मिलती हैं और उसे काम मिल जाता है! उसकी पहली bread lunch तक बिक गई। तारा खुश है कि उसने सवाल पूछा। याद रखो, ए आई के results उसके training data पर depend करते हैं। अब कुछ और hiring data में unfair rules ढूँढो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 1,
+      "file": "flowchart-architect-hi-01.mp3",
+      "source": "Meet Tara. She's built an automatic hand-wash station for the school science fair. There's a sensor, a small pump and a tank of soap, all wired up on her lab table. The judges arrive in ten minutes, and Tara can't wait to show them how it works!",
+      "text": "तारा ने school science fair के लिए automatic hand-wash station बनाया है। Lab table पर sensor, छोटा pump और साबुन का tank लगा है। Judges दस मिनट में आने वाले हैं। तारा उन्हें demo दिखाने के लिए excited है!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 2,
+      "file": "flowchart-architect-hi-02.mp3",
+      "source": "Tara switches it on. Squirt! Soap splashes into the empty sink. A few seconds later... squirt! Again and again, even though nobody is there. The soap is running out, and the judges are almost here. Tara's heart sinks. Her machine is doing exactly what her plan says.",
+      "text": "तारा machine चालू करती है। साबुन खाली sink में गिरा! कुछ seconds बाद फिर। वहाँ कोई हाथ नहीं है, फिर भी pump चलता जा रहा है। साबुन कम हो रहा है, judges बस आने वाले हैं। तारा घबरा जाती है। Machine उसके plan को ठीक वैसे ही follow कर रही है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 3,
+      "file": "flowchart-architect-hi-03.mp3",
+      "source": "Tara's science teacher, Mr. Das, comes over. Together, they read her plan one step at a time. Start. Dispense soap. Wait. Repeat. There's no step that checks for hands! A machine can't guess. It only follows its plan, so the plan has to ask a question.",
+      "text": "Science teacher, मिस्टर दास, आते हैं। दोनों plan एक-एक step पढ़ते हैं। Start, साबुन छोड़ो, wait करो, repeat। पर हाथ हैं या नहीं, ये check करने का step कहाँ है? Machine guess नहीं कर सकती। Plan में ही सवाल जोड़ना पड़ेगा।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 4,
+      "file": "flowchart-architect-hi-04.mp3",
+      "source": "Now it's your turn. Help Tara redraw her plan as a flowchart. It uses standard shapes: an oval to start and end, a rectangle for an action, and a diamond for a question with two answers, yes or no. Place each block, then test both paths.",
+      "text": "अब तारा का plan एक flowchart में बनाओ। Start और End के लिए oval। Action के लिए rectangle। Yes या No वाले सवाल के लिए diamond। Blocks सही जगह लगाओ और दोनों रास्ते test करो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 5,
+      "file": "flowchart-architect-hi-05.mp3",
+      "source": "Look at Tara's new flowchart. The diamond is called a decision. It asks a yes or no question before anything happens. Yes leads to the soap, then the end. No waits, then loops back to ask again. Because the question comes first, soap only flows when hands are really there.",
+      "text": "नए flowchart का diamond एक decision है। पहले पूछो, हाथ हैं? Yes हुआ तो साबुन दो, फिर End। No हुआ तो wait करो और वापस वही सवाल पूछो। सवाल पहले आता है, इसलिए साबुन तभी निकलता है जब सच में हाथ हों।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 17,
+      "slug": "flowchart-architect",
+      "scene": 6,
+      "file": "flowchart-architect-hi-06.mp3",
+      "source": "The judges arrive as Tara holds out her hand. One neat squirt! She pulls away, and the station waits quietly. The judges smile and ask to see her flowchart. A machine can only choose if its plan asks a question. Your turn: help Tara choose the right shapes!",
+      "text": "Judges आते हैं। तारा हाथ आगे करती है और pump एक बार साबुन देता है। हाथ हटते ही station wait करता है। Judges मुस्कुराकर flowchart देखते हैं। Machine तभी चुन सकती है जब plan में सवाल हो। अब सही shapes चुनने में तारा की मदद करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 1,
+      "file": "loop-inspector-hi-01.mp3",
+      "source": "Meet Tara. Her class built a robot cleaner called Dusty, and she's writing its program for Open Day. Move right, sweep. Move right, sweep. She copies the same two lines again and again, one pair for each tile in the row. The list keeps growing, and she's proud of it.",
+      "text": "तारा की class ने डस्टी नाम का cleaning robot बनाया है। Open Day के लिए तारा program लिख रही है। Right जाओ, साफ़ करो। Right जाओ, साफ़ करो। हर tile के लिए वही दो lines copy हो रही हैं। List लंबी होती जा रही है और तारा को अपने काम पर गर्व है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 2,
+      "file": "loop-inspector-hi-02.mp3",
+      "source": "At the test run, Dusty sweeps every tile, then rolls on and bumps into the bin! Scraps spill across the floor. Tara's cheeks go hot, and Open Day is tomorrow. Somewhere in her long list is one extra pair. But the list is so long, she can't spot it.",
+      "text": "Test run में डस्टी हर tile साफ़ करता है, फिर आगे जाकर bin से टकराता है! कचरा पूरे floor पर फैल गया। Open Day कल है। List में कहीं दो extra steps हैं। इतनी लंबी list में तारा उन्हें ढूँढ नहीं पा रही।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 3,
+      "file": "loop-inspector-hi-03.mp3",
+      "source": "Mr Rao, the lab teacher, sits beside her. Copy slips happen to every coder. Together they count: six pairs, but only five tiles. “When steps repeat,” he says, “write them once, and say how many times.” This is called a loop. Her list could shrink to three lines.",
+      "text": "Lab teacher मिस्टर राव बैठते हैं। Copy करते वक्त हर coder से गलती हो सकती है। दोनों गिनते हैं। छह बार steps लिखे हैं, पर tiles पाँच हैं। जो steps repeat हों, उन्हें एक बार लिखो और count बताओ। इसे loop कहते हैं। अब वही काम तीन lines में हो सकता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 4,
+      "file": "loop-inspector-hi-04.mp3",
+      "source": "Your turn. Help Tara build the loop. First, choose the steps that repeat. Then set the count: one repeat for each tile. Run it and watch Dusty. With the wrong count, Dusty stops short or bumps the bin again. Count the tiles carefully!",
+      "text": "अब तारा का loop बनाओ। पहले वो steps चुनो जो repeat होते हैं। फिर count set करो, हर tile के लिए एक बार। Run करके डस्टी को देखो। Count गलत हुआ तो वो जल्दी रुक जाएगा या फिर bin से टकराएगा। Tiles ध्यान से गिनो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 5,
+      "file": "loop-inspector-hi-05.mp3",
+      "source": "REPEAT 5 TIMES: Dusty cleans every tile and stops right before the bin. Three lines now replace her long list. A loop is easier to read, easier to check, and easier to change. If the row grows to eight tiles, Tara changes just one number. The count must match the work.",
+      "text": "पाँच बार repeat। डस्टी हर tile साफ़ करता है और bin से ठीक पहले रुकता है। लंबी list की जगह तीन lines! Loop पढ़ना, check करना और बदलना आसान है। आठ tiles हो जाएँ तो तारा बस एक number बदलेगी। Count हमेशा काम से match होना चाहिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 18,
+      "slug": "loop-inspector",
+      "scene": 6,
+      "file": "loop-inspector-hi-06.mp3",
+      "source": "Open Day! Dusty rolls down the row, sweeps each tile, and stops neatly before the bin. The parents clap, and Tara beams. Her program now fits on one small card. A loop says it once, with the right count. Your turn: help Tara inspect more robot programs!",
+      "text": "Open Day आ गया! डस्टी सारी tiles साफ़ करके bin से पहले रुक जाता है। Parents ताली बजाते हैं और तारा खुश है। अब उसका program एक छोटे card में आ जाता है। Loop में steps एक बार लिखते हैं और सही count देते हैं। अब और robot programs check करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 1,
+      "file": "otp-guardian-hi-01.mp3",
+      "source": "Meet Tara. After school, she does her homework at Nani's house. Nani makes ginger tea, and they share stories about Nani's village. Today, Nani's phone buzzes. A text message arrives with a six-digit code. Then, straight away, the phone starts ringing. The number is one they don't know.",
+      "text": "School के बाद तारा नानी के घर homework करती है। नानी अदरक वाली चाय बनाती हैं और अपने गाँव की बातें बताती हैं। आज उनका phone buzz करता है। Message में छह digits का code आया है। तुरंत एक अनजान number से call भी आ जाती है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 2,
+      "file": "otp-guardian-hi-02.mp3",
+      "source": "A man says, “I'm a bank officer. Your card will be blocked today! Read me the OTP that just arrived. Quickly!” Nani's face falls. She pays for her medicines with that card. She reaches for her glasses. Tara feels her heart thump. Everything is happening so fast.",
+      "text": "एक आदमी कहता है, मैं bank officer हूँ। आपका card आज block हो जाएगा! अभी जो ओ टी पी आया वो जल्दी बताओ। नानी परेशान हैं, इसी card से दवाइयाँ लेती हैं। वो चश्मा उठाती हैं। तारा का दिल ज़ोर से धड़क रहा है। सब बहुत जल्दी हो रहा है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 3,
+      "file": "otp-guardian-hi-03.mp3",
+      "source": "Then a second call beeps in. “Electricity office. Your power will be cut tonight. Tell me the code!” Nani covers the phone. Tara spots the pattern. Both callers rush. Both use an official title. Both want the code. That code is called a one-time password, or OTP.",
+      "text": "दूसरी call आती है। बिजली office से बोल रहा हूँ। आज रात बिजली कटेगी, code बताओ! नानी phone ढकती हैं। तारा pattern समझती है। दोनों जल्दी कराते हैं, official title बताते हैं और code माँगते हैं। ये code ओ टी पी है, यानी one-time password।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 4,
+      "file": "otp-guardian-hi-04.mp3",
+      "source": "Your turn. Help Tara and Nani answer each pretend call. The callers sound official and very sure. Remember the pattern: a rush, a title, and a request for the code. Choose the safe response for the bank call, then for the electricity call. Think about which number Nani can trust.",
+      "text": "अब दोनों pretend calls में तारा और नानी की मदद करो। Caller बहुत official लगता है, पर pattern याद करो। जल्दी, बड़ा title, और code की माँग। पहले bank वाली call के लिए safe जवाब चुनो, फिर बिजली वाली के लिए। सोचो, नानी किस number पर भरोसा कर सकती हैं?",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 5,
+      "file": "otp-guardian-hi-05.mp3",
+      "source": "Nani says no and hangs up on both. An OTP works like a key code. It can unlock one thing, like a payment from Nani's card. Whoever has it can use it. No real bank or office will ever ask for it. If money is lost, an adult should call 1930 quickly.",
+      "text": "नानी दोनों को मना करके call काटती हैं। ओ टी पी चाबी जैसा है। उससे एक काम हो सकता है, जैसे card से payment। जिसके पास code है, वो उसे इस्तेमाल कर सकता है। असली bank या office कभी ओ टी पी नहीं माँगता। पैसे चले जाएँ तो किसी बड़े को तुरंत एक, नौ, तीन, शून्य पर call करना चाहिए।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 25,
+      "slug": "otp-guardian",
+      "scene": 6,
+      "file": "otp-guardian-hi-06.mp3",
+      "source": "Nani calls the number printed on her bank card. Her card is fine! Then she calls the number on her electricity bill. No power cut tonight! The callers were pretending. Nani hugs Tara, and they finish their tea. Your turn: help Tara practise spotting OTP callers and keeping the code private!",
+      "text": "नानी bank card पर छपा number मिलाती हैं। उनका card ठीक है! फिर बिजली के bill पर दिया number मिलाती हैं। बिजली भी नहीं कटेगी। दोनों callers झूठ बोल रहे थे। नानी तारा को गले लगाती हैं और दोनों चाय पीती हैं। अब ओ टी पी माँगने वाली calls पहचानने की practice करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 1,
+      "file": "qr-code-caution-hi-01.mp3",
+      "source": "Meet Tara. She and her mum sell old storybooks online. Tara writes the listings and, with Mum close by, answers buyers on Mum's phone. Today, someone wants her favourite adventure set for ₹500! Tara grins. That money is going towards new paints.",
+      "text": "तारा और मम्मी अपनी पुरानी storybooks online बेचती हैं। तारा listing लिखती है और मम्मी के पास बैठकर उनके phone से buyers को जवाब देती है। आज कोई उसकी favourite adventure books के पाँच सौ रुपये दे रहा है! तारा उन पैसों से नए paints लेगी।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 2,
+      "file": "qr-code-caution-hi-02.mp3",
+      "source": "The buyer sends a QR code: “Scan to receive ₹500.” Tara scans it. But wait. The screen says “Pay ₹500” and asks for a UPI PIN! The buyer keeps typing: “It's only verification. Hurry!” Tara's tummy feels tight. Something doesn't match.",
+      "text": "Buyer क्यू आर code भेजता है। Scan करो और पाँच सौ रुपये पाओ। तारा scan करती है। अरे, screen पर Pay पाँच सौ रुपये लिखा है और यू पी आई पिन माँगा जा रहा है! Buyer कहता है, बस verification है, जल्दी करो। उसकी बात और screen अलग हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 3,
+      "file": "qr-code-caution-hi-03.mp3",
+      "source": "Tara stops and types nothing. She shows Mum, and they read the screen together. Pay means money leaves your account. A UPI PIN is your secret yes to send money. You never need a PIN, or a scan, to receive money. This trick is called a QR code scam.",
+      "text": "तारा रुकती है और कुछ type नहीं करती। मम्मी के साथ screen पढ़ती है। Pay का मतलब तुम्हारे account से पैसे जाएँगे। यू पी आई पिन भेजने की private मंज़ूरी है। पैसे receive करने के लिए न पिन डालना है, न scan करना है। ये क्यू आर code scam की trick है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 4,
+      "file": "qr-code-caution-hi-04.mp3",
+      "source": "Your turn. Help Tara with this pretend payment screen. First, read which way the money would go. Then decide what to do with the payment. Last, choose a safe way for the buyer to pay Tara and Mum. Remember, the buyer's words and the screen don't match.",
+      "text": "अब इस नकली payment screen पर तारा की मदद करो। पहले पढ़ो कि पैसे किस तरफ़ जाएँगे। फिर तय करो payment के साथ क्या करना है। आख़िर में buyer से पैसे लेने का safe तरीका चुनो। याद रखो, buyer की बात और screen match नहीं करते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 5,
+      "file": "qr-code-caution-hi-05.mp3",
+      "source": "Mum sends the shop's own QR code and UPI ID. That's the safe way to receive. A real buyer scans it and types their own PIN. Tara and Mum type nothing. They just wait for a “Received” message. Remember: scanning a QR code is for paying, not for getting paid.",
+      "text": "मम्मी अपनी shop का क्यू आर code और यू पी आई आई डी भेजती हैं। पैसे receive करने का ये safe तरीका है। असली buyer code scan करके अपना पिन डालता है। तारा और मम्मी कुछ type नहीं करतीं। वो Received message का wait करती हैं। क्यू आर scan करके pay करते हैं। पैसे पाने के लिए तुम्हें scan नहीं करना।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 5,
+      "chapter": 26,
+      "slug": "qr-code-caution",
+      "scene": 6,
+      "file": "qr-code-caution-hi-06.mp3",
+      "source": "The tricky buyer goes quiet. Mum blocks them and reports the chat at cybercrime.gov.in. The next day, a real buyer scans the shop's QR, and ₹500 arrives. No PIN needed! Tara feels proud she read the screen. Your turn: help Tara check more payment screens!",
+      "text": "वो buyer चुप हो जाता है। मम्मी उसे block करती हैं और chat को साइबरक्राइम डॉट गव डॉट इन पर report करती हैं। अगले दिन असली buyer shop का क्यू आर scan करता है और पाँच सौ रुपये आ जाते हैं। तारा को अपना पिन नहीं डालना पड़ा। अब कुछ और payment screens check करो!",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 6,
+      "chapter": 1,
+      "slug": "class6-private-information",
+      "scene": 6,
+      "file": "class6-private-information-hi-06.mp3",
+      "source": "Now open the practice lab. Work through personal details, then audience choices, then a safer poster. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, private जानकारी। दूसरा, कौन देख सकता है। और तीसरा, ज़्यादा safe poster। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 2,
+      "slug": "class6-account-keys",
+      "scene": 6,
+      "file": "class6-account-keys-hi-06.mp3",
+      "source": "Now open the practice lab. Work through secret account keys, then unique passphrases, then safe account help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, account की गुप्त चाबियाँ। दूसरा, अलग passphrase। और तीसरा, account की safe मदद। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 3,
+      "slug": "class6-shared-device",
+      "scene": 6,
+      "file": "class6-shared-device-hi-06.mp3",
+      "source": "Now open the practice lab. Work through shared sessions, then lock or sign out, then a handover check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, शेयर session। दूसरा, लॉक या sign out। और तीसरा, सौंपने की जाँच। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 4,
+      "slug": "class6-app-permissions",
+      "scene": 6,
+      "file": "class6-app-permissions-hi-06.mp3",
+      "source": "Now open the practice lab. Work through purpose and access, then necessary permissions, then changed requests. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, purpose और access। दूसरा, ज़रूरी परमिशन्स। और तीसरा, बदली हुई माँगें। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 5,
+      "slug": "class6-link-detour",
+      "scene": 6,
+      "file": "class6-link-detour-hi-06.mp3",
+      "source": "Now open the practice lab. Work through unexpected links, then address evidence, then independent routes. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, अचानक मिले link। दूसरा, पते की जानकारी। और तीसरा, अलग भरोसेमंद रास्ते। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 6,
+      "slug": "class6-kind-game-space",
+      "scene": 6,
+      "file": "class6-kind-game-space-hi-06.mp3",
+      "source": "Now open the practice lab. Work through contact boundaries, then useful evidence, then trusted help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, contact की बाउंड्रीज़। दूसरा, काम के सबूत। और तीसरा, भरोसेमंद मदद। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 7,
+      "slug": "class6-backup-copy",
+      "scene": 6,
+      "file": "class6-backup-copy-hi-06.mp3",
+      "source": "Now open the practice lab. Work through original and backup, then recovery checks, then safe update habits. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, मूल और backup। दूसरा, वापसी की जाँच। और तीसरा, safe update आदतें। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 8,
+      "slug": "class6-club-safety-check",
+      "scene": 6,
+      "file": "class6-club-safety-check-hi-06.mp3",
+      "source": "Now open the practice lab. Work through a combined review, then evidence of repairs, then a changed audience. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, मिली-जुली जाँच। दूसरा, सुधार के सबूत। और तीसरा, बदले हुए दर्शक। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 9,
+      "slug": "class6-ai-or-instructions",
+      "scene": 6,
+      "file": "class6-ai-or-instructions-hi-06.mp3",
+      "source": "Now open the practice lab. Work through fixed instructions, then learned patterns, then missing evidence. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, तय निर्देश। दूसरा, सीखे हुए pattern। और तीसरा, अधूरी जानकारी। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 10,
+      "slug": "class6-ai-label-cards",
+      "scene": 6,
+      "file": "class6-ai-label-cards-hi-06.mp3",
+      "source": "Now open the practice lab. Work through features to observe, then labels to teach, then uncertain examples. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, देखने वाली features। दूसरा, सिखाने वाले label। और तीसरा, अनिश्चित उदाहरण। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 11,
+      "slug": "class6-ai-spot-pattern",
+      "scene": 6,
+      "file": "class6-ai-spot-pattern-hi-06.mp3",
+      "source": "Now open the practice lab. Work through a visible rule, then predictions and labels, then a counterexample. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दिखता rule। दूसरा, prediction और label। और तीसरा, उलटा उदाहरण। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 12,
+      "slug": "class6-ai-fresh-test",
+      "scene": 6,
+      "file": "class6-ai-fresh-test-hi-06.mp3",
+      "source": "Now open the practice lab. Work through learning examples, then fresh checks, then an honest result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, सीखने के उदाहरण। दूसरा, नए जाँच उदाहरण। और तीसरा, ईमानदार नतीजा। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 13,
+      "slug": "class6-ai-missing-examples",
+      "scene": 6,
+      "file": "class6-ai-missing-examples-hi-06.mp3",
+      "source": "Now open the practice lab. Work through example coverage, then different test groups, then a better collection plan. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, उदाहरण की विविधता। दूसरा, अलग जाँच समूह। और तीसरा, बेहतर संग्रह योजना। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 14,
+      "slug": "class6-ai-check-the-answer",
+      "scene": 6,
+      "file": "class6-ai-check-the-answer-hi-06.mp3",
+      "source": "Now open the practice lab. Work through claims and evidence, then source checking, then a corrected answer. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दावे और सबूत। दूसरा, source की जाँच। और तीसरा, सुधारा जवाब। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 15,
+      "slug": "class6-ai-safe-request",
+      "scene": 6,
+      "file": "class6-ai-safe-request-hi-06.mp3",
+      "source": "Now open the practice lab. Work through a clear task, then private details to omit, then human review. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, साफ़ काम। दूसरा, हटाने वाली private बातें। और तीसरा, व्यक्ति की जाँच। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 16,
+      "slug": "class6-ai-club-review",
+      "scene": 6,
+      "file": "class6-ai-club-review-hi-06.mp3",
+      "source": "Now open the practice lab. Work through a useful purpose, then evidence before claims, then people stay responsible. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, काम का purpose। दूसरा, दावे से पहले सबूत। और तीसरा, लोग ज़िम्मेदार रहें। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 17,
+      "slug": "class6-break-the-task",
+      "scene": 6,
+      "file": "class6-break-the-task-hi-06.mp3",
+      "source": "Now open the practice lab. Work through inputs and goals, then smaller tasks, then a success check. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, input और लक्ष्य। दूसरा, छोटे काम। और तीसरा, सफलता की जाँच। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 18,
+      "slug": "class6-pattern-rule",
+      "scene": 6,
+      "file": "class6-pattern-rule-hi-06.mp3",
+      "source": "Now open the practice lab. Work through repeating units, then growing counts, then testing a rule. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दोहराते हिस्से। दूसरा, बढ़ती संख्या। और तीसरा, rule की जाँच। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 19,
+      "slug": "class6-exact-instructions",
+      "scene": 6,
+      "file": "class6-exact-instructions-hi-06.mp3",
+      "source": "Now open the practice lab. Work through precise actions, then sequence matters, then trace the result. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, साफ़ कदम। दूसरा, क्रम की अहमियत। और तीसरा, नतीजे का record। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 20,
+      "slug": "class6-if-then-desk",
+      "scene": 6,
+      "file": "class6-if-then-desk-hi-06.mp3",
+      "source": "Now open the practice lab. Work through conditions, then exact boundaries, then missing inputs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, conditions। दूसरा, ठीक boundary। और तीसरा, गायब input। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 21,
+      "slug": "class6-repeat-with-a-count",
+      "scene": 6,
+      "file": "class6-repeat-with-a-count-hi-06.mp3",
+      "source": "Now open the practice lab. Work through counted repetition, then changing state, then stopping cases. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, गिनती वाला दोहराव। दूसरा, बदलती स्थिति। और तीसरा, रुकने के मामले। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 22,
+      "slug": "class6-grid-delivery",
+      "scene": 6,
+      "file": "class6-grid-delivery-hi-06.mp3",
+      "source": "Now open the practice lab. Work through grid positions, then valid moves, then a changed obstacle. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, खाने की जगह। दूसरा, सही कदम। और तीसरा, बदली रुकावट। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 23,
+      "slug": "class6-debug-the-plan",
+      "scene": 6,
+      "file": "class6-debug-the-plan-hi-06.mp3",
+      "source": "Now open the practice lab. Work through expected and observed, then the first mismatch, then retesting repairs. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, अपेक्षित और देखा। दूसरा, पहला अंतर। और तीसरा, सुधार फिर जाँचना। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 24,
+      "slug": "class6-trail-builder",
+      "scene": 6,
+      "file": "class6-trail-builder-hi-06.mp3",
+      "source": "Now open the practice lab. Work through combine the plan, then test the constraints, then revise and explain. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, योजना जोड़ें। दूसरा, सीमाएँ check करो। और तीसरा, बदलें और समझाएँ। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 25,
+      "slug": "class6-fraud-free-reward",
+      "scene": 6,
+      "file": "class6-fraud-free-reward-hi-06.mp3",
+      "source": "Now open the practice lab. Work through reward claims, then hidden demands, then a pause before action. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, इनाम के दावे। दूसरा, छिपी माँगें। और तीसरा, कदम से पहले रुकना। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 26,
+      "slug": "class6-fraud-hurry-secret",
+      "scene": 6,
+      "file": "class6-fraud-hurry-secret-hi-06.mp3",
+      "source": "Now open the practice lab. Work through urgency and threats, then secrecy pressure, then independent checking. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, जल्दी और धमकी। दूसरा, छिपाने का दबाव। और तीसरा, अलग रास्ते से जाँच। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 27,
+      "slug": "class6-fraud-code-keeper",
+      "scene": 6,
+      "file": "class6-fraud-code-keeper-hi-06.mp3",
+      "source": "Now open the practice lab. Work through code purpose, then secret requests, then adult-guided response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, कोड का purpose। दूसरा, रहस्य की माँग। और तीसरा, बड़े की मदद से जवाब। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 28,
+      "slug": "class6-fraud-familiar-name",
+      "scene": 6,
+      "file": "class6-fraud-familiar-name-hi-06.mp3",
+      "source": "Now open the practice lab. Work through identity claims, then a known contact route, then evidence before trust. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, आइडेंटिटी के दावे। दूसरा, ज्ञात contact रास्ता। और तीसरा, भरोसे से पहले सबूत। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 29,
+      "slug": "class6-fraud-shop-evidence",
+      "scene": 6,
+      "file": "class6-fraud-shop-evidence-hi-06.mp3",
+      "source": "Now open the practice lab. Work through seller claims, then independent evidence, then an adult-led decision. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, विक्रेता के दावे। दूसरा, अलग सबूत। और तीसरा, बड़े की मदद का फ़ैसला। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 30,
+      "slug": "class6-fraud-pop-up-help",
+      "scene": 6,
+      "file": "class6-fraud-pop-up-help-hi-06.mp3",
+      "source": "Now open the practice lab. Work through alarming claims, then access demands, then known device help. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, डराने वाले दावे। दूसरा, access की माँग। और तीसरा, ज्ञात device मदद। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 6,
+      "chapter": 31,
+      "slug": "class6-fraud-help-without-blame",
+      "scene": 6,
+      "file": "class6-fraud-help-without-blame-hi-06.mp3",
+      "source": "Now open the practice lab. Work through stop further exposure, then a useful incident note, then support without blame. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, और खुलना रोकें। दूसरा, काम का इंसिडेंट नोट। और तीसरा, दोष के बिना मदद। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 6,
+      "chapter": 32,
+      "slug": "class6-fraud-club-case",
+      "scene": 6,
+      "file": "class6-fraud-club-case-hi-06.mp3",
+      "source": "Now open the practice lab. Work through connect the clues, then verify independently, then explain the response. Test each answer, read feedback and try again when needed. Save your evidence and explain one decision in your own words.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, संकेत जोड़ें। दूसरा, अलग पुष्टि करें। और तीसरा, जवाब समझाएँ। हर जवाब check करो और feedback देखो। ज़रूरत पड़े तो फिर try करो। अपना record save करना। एक decision अपने शब्दों में समझाओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 1,
+      "slug": "class7-digital-trail",
+      "scene": 6,
+      "file": "class7-digital-trail-hi-06.mp3",
+      "source": "Investigate clues in combination, then consent and audience, then a revised public guide. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, मिलकर बताते संकेत। दूसरा, सहमति और दर्शक। और तीसरा, बदली public गाइड। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 2,
+      "slug": "class7-sign-in-and-recovery",
+      "scene": 6,
+      "file": "class7-sign-in-and-recovery-hi-06.mp3",
+      "source": "Investigate different sign-in safeguards, then private recovery information, then unexpected approval requests. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, अलग login सुरक्षा उपाय। दूसरा, private recovery जानकारी। और तीसरा, अचानक मंज़ूरी की माँग। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 3,
+      "slug": "class7-access-for-the-job",
+      "scene": 6,
+      "file": "class7-access-for-the-job-hi-06.mp3",
+      "source": "Investigate reader and editor roles, then tested permissions, then access that ends. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, पढ़ने और बदलने की भूमिका। दूसरा, जाँची परमिशन्स। और तीसरा, खत्म होने वाला access। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 4,
+      "slug": "class7-whole-web-address",
+      "scene": 6,
+      "file": "class7-whole-web-address-hi-06.mp3",
+      "source": "Investigate the complete host, then connection versus trust, then a known independent route. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, पूरा host। दूसरा, connection और भरोसा। और तीसरा, ज्ञात अलग रास्ता। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 5,
+      "slug": "class7-before-the-download",
+      "scene": 6,
+      "file": "class7-before-the-download-hi-06.mp3",
+      "source": "Investigate source and purpose, then document or application, then unexpected access. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, source और purpose। दूसरा, दस्तावेज़ या app। और तीसरा, अचानक access माँग। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 6,
+      "slug": "class7-unfamiliar-session",
+      "scene": 6,
+      "file": "class7-unfamiliar-session-hi-06.mp3",
+      "source": "Investigate facts and assumptions, then sessions that remain open, then a calm response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, तथ्य और अंदाज़े। दूसरा, खुले रह गए session। और तीसरा, शांत जवाब। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 7,
+      "slug": "class7-copies-and-versions",
+      "scene": 6,
+      "file": "class7-copies-and-versions-hi-06.mp3",
+      "source": "Investigate version and location, then a separate backup, then a tested restoration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, रूप और जगह। दूसरा, अलग backup। और तीसरा, जाँची वापसी। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 8,
+      "slug": "class7-publish-the-guide",
+      "scene": 6,
+      "file": "class7-publish-the-guide-hi-06.mp3",
+      "source": "Investigate a connected risk review, then evidence of each repair, then changed release conditions. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, जुड़ी रिस्क review। दूसरा, हर सुधार का सबूत। और तीसरा, बदली जारी करने की conditions। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 9,
+      "slug": "class7-ai-choose-a-helper",
+      "scene": 6,
+      "file": "class7-ai-choose-a-helper-hi-06.mp3",
+      "source": "Investigate define the job, then compare methods, then measure useful help. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, काम तय करें। दूसरा, तरीके मिलाएँ। और तीसरा, उपयोगी मदद मापें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 10,
+      "slug": "class7-ai-data-table",
+      "scene": 6,
+      "file": "class7-ai-data-table-hi-06.mp3",
+      "source": "Investigate features and labels, then record quality, then only necessary data. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, गुण और label। दूसरा, record की गुणवत्ता। और तीसरा, सिर्फ़ ज़रूरी data। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 11,
+      "slug": "class7-ai-train-the-sorter",
+      "scene": 6,
+      "file": "class7-ai-train-the-sorter-hi-06.mp3",
+      "source": "Investigate nearest-number predictions, then training coverage, then changed examples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, सबसे पास अंक का prediction। दूसरा, training की पहुँच। और तीसरा, बदले उदाहरण। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 12,
+      "slug": "class7-ai-mistake-record",
+      "scene": 6,
+      "file": "class7-ai-mistake-record-hi-06.mp3",
+      "source": "Investigate expected and predicted, then count every check, then report the limits. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, अपेक्षित और अनुमानित। दूसरा, हर जाँच गिनें। और तीसरा, सीमाएँ बताएँ। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 13,
+      "slug": "class7-ai-changing-picture",
+      "scene": 6,
+      "file": "class7-ai-changing-picture-hi-06.mp3",
+      "source": "Investigate object and background, then mask the object, then retest a changed position. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, वस्तु और पीछे का दृश्य। दूसरा, वस्तु के खाने चुनें। और तीसरा, बदली जगह फिर check करो। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 14,
+      "slug": "class7-ai-recommendation-loop",
+      "scene": 6,
+      "file": "class7-ai-recommendation-loop-hi-06.mp3",
+      "source": "Investigate signals from choices, then a narrowing loop, then deliberate choices. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, चुनाव से संकेत। दूसरा, सिकुड़ता चक्र। और तीसरा, सोचकर चुनाव। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 15,
+      "slug": "class7-ai-generated-explanation",
+      "scene": 6,
+      "file": "class7-ai-generated-explanation-hi-06.mp3",
+      "source": "Investigate claims need evidence, then check a source, then own the explanation. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दावों को जानकारी चाहिए। दूसरा, source check करो। और तीसरा, अपनी समझ बताएँ। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 16,
+      "slug": "class7-ai-fair-helper",
+      "scene": 6,
+      "file": "class7-ai-fair-helper-hi-06.mp3",
+      "source": "Investigate coverage across styles, then compare group results, then use, revise or stop. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, अलग शैलियों की पहुँच। दूसरा, समूह नतीजे मिलाएँ। और तीसरा, लें, सुधारें या रोकें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 17,
+      "slug": "class7-model-what-matters",
+      "scene": 6,
+      "file": "class7-model-what-matters-hi-06.mp3",
+      "source": "Investigate a model has a purpose, then relevant constraints, then revise the model. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, model का purpose। दूसरा, संबंधित सीमाएँ। और तीसरा, model बदलें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 18,
+      "slug": "class7-test-a-pattern",
+      "scene": 6,
+      "file": "class7-test-a-pattern-hi-06.mp3",
+      "source": "Investigate a stated construction rule, then predict later cases, then check counterexamples. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, बताया बनाने का rule। दूसरा, बाद के मामले prediction करें। और तीसरा, विरोधी उदाहरण check करो। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 19,
+      "slug": "class7-message-with-bits",
+      "scene": 6,
+      "file": "class7-message-with-bits-hi-06.mp3",
+      "source": "Investigate two states, then weighted positions, then encoding and privacy. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दो स्थितियाँ। दूसरा, जगह के अलग मान। और तीसरा, संकेत और privacy। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 20,
+      "slug": "class7-two-conditions",
+      "scene": 6,
+      "file": "class7-two-conditions-hi-06.mp3",
+      "source": "Investigate both conditions, then either condition, then unknown inputs. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, दोनों conditions। दूसरा, कोई एक condition। और तीसरा, अनजान input। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 21,
+      "slug": "class7-loops-and-totals",
+      "scene": 6,
+      "file": "class7-loops-and-totals-hi-06.mp3",
+      "source": "Investigate initial state, then repeated update, then boundary checks. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, शुरुआती स्थिति। दूसरा, दोहराया बदलाव। और तीसरा, boundary की जाँच। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 22,
+      "slug": "class7-ordered-list",
+      "scene": 6,
+      "file": "class7-ordered-list-hi-06.mp3",
+      "source": "Investigate a sorting key, then equal values, then a changed order. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, छँटाई की कुंजी। दूसरा, बराबर मान। और तीसरा, बदला क्रम। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 23,
+      "slug": "class7-search-plan",
+      "scene": 6,
+      "file": "class7-search-plan-hi-06.mp3",
+      "source": "Investigate count comparisons, then use sorted order, then search a missing case. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, तुलनाएँ गिनें। दूसरा, छँटा क्रम लें। और तीसरा, गायब मामला खोजें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 24,
+      "slug": "class7-rover-challenge",
+      "scene": 6,
+      "file": "class7-rover-challenge-hi-06.mp3",
+      "source": "Investigate the whole goal, then build a valid route, then retest changed constraints. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, पूरा लक्ष्य। दूसरा, सही रास्ता बनाएँ। और तीसरा, बदली सीमाएँ फिर check करो। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 25,
+      "slug": "class7-fraud-entry-fee",
+      "scene": 6,
+      "file": "class7-fraud-entry-fee-hi-06.mp3",
+      "source": "Investigate promise and demand, then pressure tactics, then independent checking. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, वादा और माँग। दूसरा, दबाव के तरीके। और तीसरा, अलग रास्ते से जाँच। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 26,
+      "slug": "class7-fraud-familiar-sender",
+      "scene": 6,
+      "file": "class7-fraud-familiar-sender-hi-06.mp3",
+      "source": "Investigate identity claims, then independent contact, then pause the pressure. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, आइडेंटिटी के दावे। दूसरा, independent contact। और तीसरा, दबाव में रुकें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 27,
+      "slug": "class7-fraud-qr-purpose",
+      "scene": 6,
+      "file": "class7-fraud-qr-purpose-hi-06.mp3",
+      "source": "Investigate claimed purpose, then displayed action, then review a mismatch. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, बताया purpose। दूसरा, दिखता कदम। और तीसरा, अंतर check करो। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 28,
+      "slug": "class7-fraud-support-control",
+      "scene": 6,
+      "file": "class7-fraud-support-control-hi-06.mp3",
+      "source": "Investigate an unsolicited claim, then access being requested, then known support routes. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, बिना बुलाया claim। दूसरा, माँगी access। और तीसरा, ज्ञात मदद रास्ते। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 29,
+      "slug": "class7-fraud-copied-reviews",
+      "scene": 6,
+      "file": "class7-fraud-copied-reviews-hi-06.mp3",
+      "source": "Investigate who controls the source?, then repeated praise, then check before commitment. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, source किसके control में?। दूसरा, दोहराई प्रशंसा। और तीसरा, फ़ैसले से पहले जाँच। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 30,
+      "slug": "class7-fraud-recurring-price",
+      "scene": 6,
+      "file": "class7-fraud-recurring-price-hi-06.mp3",
+      "source": "Investigate first and later prices, then count the full period, then change the duration. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, पहली और बाद की कीमत। दूसरा, पूरी अवधि गिनें। और तीसरा, अवधि बदलें। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "aj"
+    },
+    {
+      "grade": 7,
+      "chapter": 31,
+      "slug": "class7-fraud-useful-record",
+      "scene": 6,
+      "file": "class7-fraud-useful-record-hi-06.mp3",
+      "source": "Investigate facts and unknowns, then minimum useful record, then support without blame. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, तथ्य और अनजान बातें। दूसरा, कम से कम उपयोगी record। और तीसरा, दोष बिना मदद। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 7,
+      "chapter": 32,
+      "slug": "class7-fraud-refund-case",
+      "scene": 6,
+      "file": "class7-fraud-refund-case-hi-06.mp3",
+      "source": "Investigate combine the clues, then choose a known route, then explain a safe response. Test your plan, read feedback and try a changed case. Save evidence; explain one limitation.",
+      "text": "अब तुम्हारी बारी है! Practice Lab में तीन हिस्से हैं। पहला, संकेत जोड़ें। दूसरा, ज्ञात रास्ता चुनें। और तीसरा, safe जवाब समझाएँ। अपना plan test करो और feedback देखो। फिर बदले हुए case पर भी try करो। अपना evidence save करो और अपने तरीके की एक limitation बताओ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 8,
+      "chapter": 1,
+      "slug": "class8-digital-trail",
+      "scene": 6,
+      "file": "class8-digital-trail-hi-06.mp3",
+      "source": "Now inspect a sports-club screenshot. It includes contact details the teacher needs but the magazine does not. In the lab, prepare a safe image, test two sharing audiences and explain what should stay private.",
+      "text": "अब sports club का screenshot देखो। उसमें कुछ contact details हैं जो teacher को चाहिए, magazine को नहीं। Lab में ऐसी image बनाओ जिसे share करना safe हो। दो अलग audiences के साथ test करो और बताओ कौन-सी details private रहनी चाहिए।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 8,
+      "chapter": 2,
+      "slug": "class8-account-control",
+      "scene": 6,
+      "file": "class8-account-control-hi-06.mp3",
+      "source": "Now the sign-in device is unavailable before an exhibition. Use the approved recovery route with the responsible teacher, then review protection again. In practice, distinguish a deliberate sign-in from an unexpected approval request and a recovery attempt.",
+      "text": "Exhibition से पहले sign-in वाला device नहीं मिल रहा। ज़िम्मेदार teacher के साथ approved recovery तरीका अपनाओ। फिर account की protection check करो। Practice में तीन cases अलग रखो। तुमने खुद sign in किया, अचानक approval request आई, या किसी ने recovery शुरू की।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 3,
+      "slug": "class8-app-permissions",
+      "scene": 6,
+      "file": "class8-app-permissions-hi-06.mp3",
+      "source": "Now the task is importing one prepared diagram instead of taking a photograph. Choose a selected-file route, test the changed feature and remove camera access. Keep a ledger showing the permission, its purpose and the observed result for each version.",
+      "text": "अब camera से photo लेने की जगह पहले से बना diagram import करना है। सिर्फ़ चुनी हुई file का access दो। बदला हुआ feature test करो और camera permission हटा दो। हर version के लिए लिखो कि permission क्या थी, किस काम के लिए थी, और test में क्या हुआ।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 8,
+      "chapter": 4,
+      "slug": "class8-link-check",
+      "scene": 6,
+      "file": "class8-link-check-hi-06.mp3",
+      "source": "In the lab, a new card puts the school name after the first slash. Identify the hostname again instead of memorising a word position. Record what the address proves, what remains unknown and how to verify the resource independently.",
+      "text": "Lab के नए card में school का नाम पहले slash के बाद है। नाम कहाँ दिखा, बस ये याद मत करो। फिर से hostname पहचानो। लिखो कि address से क्या पता चलता है, क्या अभी पता नहीं है, और resource को अलग से verify कैसे करोगे।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 5,
+      "slug": "class8-download-decision",
+      "scene": 6,
+      "file": "class8-download-decision-hi-06.mp3",
+      "source": "Inspect a download card, record concerning requests and choose an alternative. Then handle a verified update. Explain the evidence that changed your response; downloads do not all carry identical risks.",
+      "text": "Download card देखो और जो requests अजीब लगें, उन्हें लिखो। फिर कोई safe alternative चुनो। अब एक verified update को handle करो। कौन-सा evidence देखकर तुम्हारा जवाब बदला? हर download में एक जैसा risk नहीं होता।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 6,
+      "slug": "class8-shared-device",
+      "scene": 6,
+      "file": "class8-shared-device-hi-06.mp3",
+      "source": "Now a teacher calls Kabir away briefly, with no handover planned. Lock before leaving and follow school rules on return. Record how this pause differs from a complete end-of-session routine.",
+      "text": "Teacher कबीर को थोड़ी देर के लिए बुलाते हैं। Device अभी किसी और को देना नहीं है। जाने से पहले lock करो और लौटकर school का rule follow करो। लिखो कि ये छोटा break पूरा session ख़त्म करने से कैसे अलग है।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 7,
+      "slug": "class8-backup-restore",
+      "scene": 6,
+      "file": "class8-backup-restore-hi-06.mp3",
+      "source": "Now a newer snapshot has two panels; an older one has the required six. Compare content and time. Record your selected version, verification checks and remaining limitations in a recovery log.",
+      "text": "नए snapshot में दो panels हैं। पुराने में पूरे छह panels हैं, जो हमें चाहिए। Content और time दोनों compare करो। Recovery log में लिखो कि कौन-सा version चुना, कैसे verify किया और कौन-सी limitations अभी भी हैं।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 8,
+      "slug": "class8-magazine-safety-review",
+      "scene": 6,
+      "file": "class8-magazine-safety-review-hi-06.mp3",
+      "source": "The teacher guides the response and appropriate removal requests. Prepare a tested publishing plan and incident note from supplied fictional facts. Record remaining uncertainty; do not promise the mistake is completely undone.",
+      "text": "Teacher तय करने में मदद करेंगे कि जवाब कैसे देना है और कब content हटाने की request करनी है। Practice case के facts से publishing plan बनाओ, उसे test करो और incident note लिखो। जो अभी पता नहीं है, वो भी लिखो। गलती पूरी तरह undo हो गई, ऐसा वादा मत करो।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 8,
+      "chapter": 9,
+      "slug": "class8-ai-smart-automatic",
+      "scene": 6,
+      "file": "class8-ai-smart-automatic-hi-06.mp3",
+      "source": "Now a talking toy joins the display. A recorded greeting can sound clever without learning anything. In the lab, compare mechanisms, connect each claim to evidence and decide which questions would resolve uncertainty about this changed example.",
+      "text": "Display में एक बोलने वाला toy आया है। Recorded greeting सुनकर वो smart लग सकता है, चाहे उसने कुछ सीखा ही न हो। Lab में देखो कि हर toy कैसे काम करता है। हर claim को evidence से जोड़ो और सोचो कि कौन-से सवाल नए example के बारे में बचा doubt दूर करेंगे।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 8,
+      "chapter": 10,
+      "slug": "class8-ai-useful-question",
+      "scene": 6,
+      "file": "class8-ai-useful-question-hi-06.mp3",
+      "source": "A new fictional forecast introduces heavy rain. Now the club must include overwatering in its success test and review the schedule. In the lab, prepare a project brief, order the investigation and adapt the goal when the conditions change.",
+      "text": "नया practice forecast कहता है कि तेज़ बारिश होगी। अब success check में देखना पड़ेगा कि कहीं पौधों को ज़रूरत से ज़्यादा पानी तो नहीं मिल रहा। Schedule भी review करो। Lab में project brief बनाओ, जाँच के steps सही order में रखो, और conditions बदलें तो goal adjust करो।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 11,
+      "slug": "class8-ai-trustworthy-data",
+      "scene": 6,
+      "file": "class8-ai-trustworthy-data-hi-06.mp3",
+      "source": "Now a new batch includes shiny wrappers with missing stiffness readings. Their appearance does not supply the absent numbers. In the lab, organise columns, choose repairs and decide which new records need measurement before they can join a dependable training collection.",
+      "text": "नए batch में कुछ चमकीले wrappers हैं जिनकी stiffness reading missing है। सिर्फ़ देखकर वो number नहीं मिलेगा। Lab में columns arrange करो, सही fixes चुनो और तय करो कि कौन-से records को training data में जोड़ने से पहले measure करना है।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 12,
+      "slug": "class8-ai-train-test",
+      "scene": 6,
+      "file": "class8-ai-train-test-hi-06.mp3",
+      "source": "The last pack uses a different stiffness scale and fresh test values. Earlier numbers cannot simply be copied. In the lab, select examples, run the model and explain how the chosen examples cover both labels before comparing the new predictions with expected answers.",
+      "text": "आख़िरी pack में stiffness मापने का scale अलग है और test values नई हैं। पुराने numbers सीधे copy नहीं कर सकते। Lab में examples चुनो और model run करो। बताओ कि तुम्हारे examples दोनों labels को कैसे cover करते हैं। फिर नई predictions को expected answers से compare करो।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 13,
+      "slug": "class8-ai-picture-features",
+      "scene": 6,
+      "file": "class8-ai-picture-features-hi-06.mp3",
+      "source": "A new drawing pack makes the same objects dimmer and shows side views. In the lab, identify evidence, trace background mistakes and select tests that separate changes in light from changes in viewpoint. Keep a human review option for drawings with genuinely missing features.",
+      "text": "नए drawing pack में वही चीज़ें कम रोशनी में और side से दिखती हैं। Lab में evidence ढूँढो और देखो कि background ने model को कहाँ confuse किया। ऐसे tests चुनो जो lighting और viewpoint को अलग-अलग बदलें। जिस drawing में feature सच में missing हो, उसे किसी इंसान से review करवाने का option रखो।",
+      "voice": "aj"
+    },
+    {
+      "grade": 8,
+      "chapter": 14,
+      "slug": "class8-ai-chatbot-claims",
+      "scene": 6,
+      "file": "class8-ai-chatbot-claims-hi-06.mp3",
+      "source": "Another draft claims a particular fertiliser always doubles growth. The supplied card reports only one small fictional trial. In the lab, check each claim, prepare a cautious revision and write a safe request that asks for evidence and limitations rather than unsupported certainty.",
+      "text": "एक और draft कहता है कि ये fertiliser हमेशा growth दोगुनी कर देता है। लेकिन card में सिर्फ़ एक छोटा practice trial है। Lab में हर claim check करो और जवाब उतना ही पक्का लिखो जितना evidence है। फिर ऐसा prompt बनाओ जो evidence और limitations दोनों पूछे।",
+      "voice": "aj"
+    },
+    {
+      "grade": 10,
+      "chapter": 25,
+      "slug": "class10-fraud-exam-update",
+      "scene": 2,
+      "file": "class10-fraud-exam-update-hi-02.mp3",
+      "source": "One copy changes the venue to Maple Room and adds a registration link. Another repeats only the room change. Aditi marks both differences separately because a shared heading cannot establish who inserted either new instruction into the chain.",
+      "text": "एक copy में venue बदलकर Maple Room कर दिया गया है और registration link भी है। दूसरी copy में सिर्फ़ room बदला है। अदिति दोनों changes अलग mark करती है। दोनों का title एक जैसा है, पर उससे पता नहीं चलता कि नया instruction किसने जोड़ा।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 10,
+      "chapter": 25,
+      "slug": "class10-fraud-exam-update",
+      "scene": 3,
+      "file": "class10-fraud-exam-update-hi-03.mp3",
+      "source": "The original source card says Cedar Hall and contains no registration instruction. Vihaan records what each version actually says. The missing link on that card shows a difference; it cannot alone identify the author or purpose of the addition.",
+      "text": "Original source card पर Cedar Hall है। उसमें registration का कोई instruction नहीं है। विहान हर version का claim अलग लिखता है। Original में link नहीं है, ये एक difference है। इससे ये पता नहीं चलता कि link किसने या क्यों जोड़ा।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 10,
+      "chapter": 25,
+      "slug": "class10-fraud-exam-update",
+      "scene": 4,
+      "file": "class10-fraud-exam-update-hi-04.mp3",
+      "source": "A forwarded reply button promises immediate clarification. Their teacher instead uses the school office contact already printed in the classroom directory. The learners pause sharing while preparing separate questions about the venue and the newly added registration instruction.",
+      "text": "Forward में Reply button दबाओ तो वो तुरंत जवाब देने का वादा करता है। Teacher class directory में पहले से दिया school office का contact लेते हैं। बच्चे forward करना रोकते हैं और दो अलग सवाल बनाते हैं। सही venue क्या है? नया registration instruction सच में आया है?",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 10,
+      "chapter": 25,
+      "slug": "class10-fraud-exam-update",
+      "scene": 5,
+      "file": "class10-fraud-exam-update-hi-05.mp3",
+      "source": "The supplied office reply confirms Cedar Hall and says the practice date is unchanged. It gives no answer about who added the link. Aditi marks Maple Room contradicted but keeps the link question unresolved, without accusing a particular sender.",
+      "text": "School office के reply में Cedar Hall confirm है और practice exam की date वही है। Reply में ये नहीं बताया कि link किसने जोड़ा। अदिति लिखती है कि Maple Room वाला claim गलत निकला। Link का सवाल अभी खुला है, इसलिए वो किसी sender पर आरोप नहीं लगाती।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 10,
+      "chapter": 25,
+      "slug": "class10-fraud-exam-update",
+      "scene": 6,
+      "file": "class10-fraud-exam-update-hi-06.mp3",
+      "source": "Vihaan drafts a correction quoting only the confirmed venue and unchanged date. The registration instruction stays outside that correction pending clarification. Their ledger pairs each claim with source and status, preventing blanket approval.",
+      "text": "विहान correction में सिर्फ़ confirmed venue और वही date लिखता है। Clarification मिलने तक नया registration instruction छोड़ देता है। Record में हर claim के साथ उसका source और status है। एक claim का जवाब मिल गया, इससे बाकी claims अपने आप confirm नहीं होते।",
+      "voice": "pari-friend"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 1,
+      "file": "class10-fraud-familiar-voice-hi-01.mp3",
+      "source": "In the Decision Lab, Vihaan hears a fictional message claiming to be his older cousin. It asks for urgent money. Recognition creates confidence, although the recording supplies no independent identity evidence.",
+      "text": "Decision Lab में विहान एक practice voice message सुनता है। आवाज़ कहती है कि वो उसका बड़ा cousin है और उसे अभी पैसे चाहिए। अदिति देखती है कि जानी-पहचानी आवाज़ पर जल्दी भरोसा हो जाता है। लेकिन recording अपने आप caller की identity verify नहीं करती।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 2,
+      "file": "class10-fraud-familiar-voice-hi-02.mp3",
+      "source": "The message tells him not to involve adults and offers a new callback contact. Vihaan feels worried about delaying help. Their teacher names the isolation request gently: a person can seek support without accepting a caller’s demand for secrecy.",
+      "text": "Message कहता है, किसी बड़े को मत बताना। वापस contact करने के लिए नया पता भी देता है। विहान सोचता है कि मदद में देर न हो जाए। Teacher समझाते हैं कि caller का secrecy वाला rule मानने की ज़रूरत नहीं है। मदद अलग से ली जा सकती है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 3,
+      "file": "class10-fraud-familiar-voice-hi-03.mp3",
+      "source": "Aditi separates the supplied new contact from a number already saved in the family directory. The directory route is independent. Glitches or accents cannot prove whether the voice is synthetic.",
+      "text": "अदिति message में दिया नया contact, family directory में पहले से saved number से अलग रखती है। Saved number इस message से independent है। आवाज़ साफ़ है या accent अलग है, इससे पक्का पता नहीं चलता कि आवाज़ नकली है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 4,
+      "file": "class10-fraud-familiar-voice-hi-04.mp3",
+      "source": "The learner chooses to pause the transfer request and bring a trusted adult into the check. Nobody sends money or a private code. The teacher helps contact separately, without negotiating evidence with the recording.",
+      "text": "बच्चा payment रोकता है और किसी भरोसे के बड़े से कहता है कि साथ में verify करें। कोई पैसे या private code नहीं भेजता। Teacher अलग रास्ते से contact करने में मदद करते हैं। Message भेजने वाला तय नहीं करेगा कि कौन-सा evidence मानना है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 5,
+      "file": "class10-fraud-familiar-voice-hi-05.mp3",
+      "source": "In the supplied callback record, the cousin answers through the previously known route and denies asking for money. This contradicts the request’s claimed origin. It does not explain how the message was produced or identify whoever sent it to Vihaan.",
+      "text": "Practice record में cousin पहले से saved contact पर जवाब देता है। वो कहता है कि उसने पैसे नहीं माँगे। इससे message का source वाला claim गलत निकलता है। Message कैसे बना या किसने भेजा, ये अभी पता नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 26,
+      "slug": "class10-fraud-familiar-voice",
+      "scene": 6,
+      "file": "class10-fraud-familiar-voice-hi-06.mp3",
+      "source": "Their identity-check plan records the independent contact and the cousin’s answer. Aditi leaves the voice technology unresolved. Vihaan thanks the adult for helping without blame, and keeps only the relevant fictional message details for a private follow-up with the teacher.",
+      "text": "Identity check के plan में independent contact और cousin का जवाब record है। अदिति ये खुला छोड़ती है कि आवाज़ कैसे बनाई गई। विहान बड़े को मदद के लिए धन्यवाद देता है। Teacher के साथ आगे private में check करने के लिए वो सिर्फ़ काम की practice details रखता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 1,
+      "file": "class10-fraud-audition-app-hi-01.mp3",
+      "source": "Aditi brings a fictional Lantern Stage audition card into the Decision Lab. It promises a creator showcase after installing an app. Vihaan separates opportunity from conditions. They review paper screens without downloads or profiles.",
+      "text": "अदिति Decision Lab में Lantern Stage audition का practice card लाती है। उसमें app install करने पर performance का मौका देने का वादा है। विहान offer और उसकी conditions अलग रखता है। Class सिर्फ़ paper screen देखती है। कोई app download या profile share नहीं करता।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 2,
+      "file": "class10-fraud-audition-app-hi-02.mp3",
+      "source": "The supplied audition brief requires only a teacher-submitted text idea. The installer requests contacts, microphone access and reading notifications. Aditi compares requests with purpose. Teacher-submitted text explains none of this access.",
+      "text": "Audition details में सिर्फ़ एक लिखित idea चाहिए, जो teacher भेजेंगे। लेकिन installer contacts, microphone और notifications पढ़ने का access माँगता है। अदिति पूछती है कि teacher से छोटा idea लेने के लिए इनमें से किसी permission की ज़रूरत क्यों है। Card में इसका जवाब नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 3,
+      "file": "class10-fraud-audition-app-hi-03.mp3",
+      "source": "Vihaan opens labelled windows on the fictional device diagram. Contacts can reveal the saved address book; microphone access can expose captured audio; notification access can expose notification contents. These capabilities do not establish what was already collected.",
+      "text": "विहान practice device की अलग-अलग windows खोलता है। Contacts access से saved list खुल सकती है। Mic आवाज़ capture कर सकता है। Notification access से notifications का content पढ़ा जा सकता है। ये दिखाता है कि app क्या कर सकती है। इससे ये साबित नहीं होता कि app ने कोई खास detail पहले ही ली है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 4,
+      "file": "class10-fraud-audition-app-hi-04.mp3",
+      "source": "The learner pauses the installation proposal and keeps the fictional profile empty. A testimonial inside the offer cannot independently verify the organiser. Their teacher already has a school arts coordinator contact, which can be used to ask about the claimed partnership separately.",
+      "text": "बच्चा install करने से रुकता है और practice profile खाली छोड़ देता है। Offer की तारीफ़ से organiser verify नहीं होता। Teacher के पास school के arts coordinator का पहले से saved contact है। बताई गई partnership के बारे में वहाँ अलग से पूछ सकते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 5,
+      "file": "class10-fraud-audition-app-hi-05.mp3",
+      "source": "The supplied coordinator reply says the partnership has not been verified. Vihaan records that limit rather than declaring who created the offer. Aditi requests organiser evidence and access explanations before considering a revised proposal with the teacher.",
+      "text": "Coordinator के reply में partnership confirm नहीं हुई। विहान यही लिखता है। वो अंदाज़ा नहीं लगाता कि offer किसने बनाया। अदिति teacher के साथ organiser का record और access का reason माँगती है। उसके बाद ही class का plan बदलने पर सोचेगी।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 27,
+      "slug": "class10-fraud-audition-app",
+      "scene": 6,
+      "file": "class10-fraud-audition-app-hi-06.mp3",
+      "source": "A separate supplied case says notification access was granted earlier. The teacher helps remove that access and seek known device or account support where relevant. Their checklist records the permission and uncertainty about exposure, without promising that revocation erases information already seen.",
+      "text": "एक अलग practice case में notification access पहले दे दिया गया था। Teacher उसे हटाने में मदद करते हैं और ज़रूरत पड़े तो known device या account support लेते हैं। Record में permission और कौन-सी info दिखी हो सकती है, दोनों रखते हैं। Access हटाने से पहले देखी गई info अपने आप मिटती नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 1,
+      "file": "class10-fraud-payment-record-hi-01.mp3",
+      "source": "Vihaan receives a fictional payment image in the Decision Lab. It claims ₹750 under reference B22 and displays a success banner. Aditi records the claim; the picture gives no access to the recipient’s provider history.",
+      "text": "विहान को Decision Lab में एक practice payment screenshot मिलता है। इसमें reference बी बाईस, सात सौ पचास रुपये और success banner दिखता है। अदिति इसे sender का claim लिखती है। अकेला screenshot recipient के provider account या transaction history का record नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 2,
+      "file": "class10-fraud-payment-record-hi-02.mp3",
+      "source": "The supplied provider ledger lists B22 as pending, not completed. Their teacher directs them to the known provider record. The class uses paper records only and makes no prediction about when that pending status will change.",
+      "text": "Provider record में बी बाईस का status pending है। Payment complete नहीं दिख रही। Teacher उन्हें known provider का record पढ़ने को कहते हैं। ये class सिर्फ़ paper records इस्तेमाल कर रही है। Pending status कब बदलेगा, इसका अंदाज़ा नहीं लगाते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 3,
+      "file": "class10-fraud-payment-record-hi-03.mp3",
+      "source": "Aditi aligns the image and ledger using the same reference and amount. Matching identifies the row; pending remains unconfirmed. Vihaan keeps the sender’s success claim beside the conflicting status instead of deleting the disagreement.",
+      "text": "अदिति reference और amount match करके screenshot को सही row से जोड़ती है। दोनों fields match करने से pending payment complete नहीं हो जाती। विहान sender का success claim और provider का अलग status, दोनों साथ लिखता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 4,
+      "file": "class10-fraud-payment-record-hi-04.mp3",
+      "source": "The learner chooses to check the recipient-side record with the teacher before releasing a fictional reservation. A request for clarification is useful even without proof of deliberate deception. Neither accusations nor another transfer resolve this evidence gap.",
+      "text": "Practice booking देने से पहले बच्चा teacher के साथ recipient का record check करता है। जानबूझकर धोखा हुआ या नहीं, अभी पता नहीं। फिर भी clarification माँग सकते हैं। Sender पर आरोप लगाने या दूसरी payment करने की ज़रूरत नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 5,
+      "file": "class10-fraud-payment-record-hi-05.mp3",
+      "source": "Other supplied rows show B21 completed at ₹480 and B24 completed at ₹220. B23 records a ₹320 credit followed by an equal ₹320 reversal. Aditi pairs reversal and reference, excluding that credit from retained money.",
+      "text": "बाकी rows देखो। बी इक्कीस के चार सौ अस्सी रुपये और बी चौबीस के दो सौ बीस रुपये complete हैं। बी तेईस में पहले तीन सौ बीस रुपये आए और फिर उतने ही reverse हुए। अदिति reversal को उसी reference से जोड़ती है। वापस गई रकम को account में बचा पैसा मत गिनो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 28,
+      "slug": "class10-fraud-payment-record",
+      "scene": 6,
+      "file": "class10-fraud-payment-record-hi-06.mp3",
+      "source": "Vihaan totals the retained completed credits and records ₹700. The pending image claim contributes nothing to that confirmed total. Their reconciliation table preserves reference, status and arithmetic separately, ready for revision if a later supplied provider record changes the evidence.",
+      "text": "विहान सिर्फ़ वो completed credits जोड़ता है जो account में बचे हैं। Total सात सौ रुपये है। Pending screenshot का claim इस confirmed total में नहीं आता। Table में reference, status और calculation अलग हैं। Verified provider record बदले तो हिसाब फिर से match कर सकते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 1,
+      "file": "class10-fraud-changing-basket-hi-01.mp3",
+      "source": "Decision Lab sketch kits cost ₹240 each. Aditi needs kits for a small group. Vihaan records the unit price, leaving space for quantity and charges before calculating a final bill.",
+      "text": "Decision Lab की practice shop में sketch kit की कीमत दो सौ चालीस रुपये per kit है। अदिति छोटे group के लिए kits चाहती है। विहान unit price लिखता है और quantity और fees के लिए जगह छोड़ता है। Ad की कीमत ही final bill नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 2,
+      "file": "class10-fraud-changing-basket-hi-02.mp3",
+      "source": "The supplied basket contains 3 kits, a mandatory delivery charge of ₹45 and a mandatory handling charge of ₹15. No other charge or discount applies. Aditi calculates the item subtotal, then adds stated charges with each line visible.",
+      "text": "Basket में तीन kits हैं। Delivery fee पैंतालीस रुपये है और handling fee पंद्रह रुपये। दोनों देना ज़रूरी है। कोई और fee या discount नहीं है। अदिति पहले items का subtotal निकालती है, फिर fees जोड़ती है। वो हर line दिखाती है ताकि हिसाब check हो सके।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 3,
+      "file": "class10-fraud-changing-basket-hi-03.mp3",
+      "source": "A storage pouch is already selected at ₹90 for the whole basket. Vihaan places this optional line away from the mandatory charges. A checked box shows basket state, without establishing deliberate choice or understanding of price.",
+      "text": "पूरी basket के लिए नब्बे रुपये का storage bag पहले से selected है। विहान इस optional item को ज़रूरी fees से अलग रखता है। Tick दिखाता है कि item अभी basket में है। इससे पता नहीं चलता कि बच्चे ने खुद उसे चुना या उसकी price समझी।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 4,
+      "file": "class10-fraud-changing-basket-hi-04.mp3",
+      "source": "The learner compares the basket with and without the pouch. Their teacher asks them to explain whether the group needs it, rather than assuming every extra is fraudulent. They can pause purchasing while privately reconciling quantity and costs.",
+      "text": "Bag के साथ और bag के बिना basket compare करो। Teacher पूछते हैं, group को सच में इसकी ज़रूरत है? हर extra item को scam नहीं कहते। Quantity और total cost privately check करने तक class purchase रोक सकती है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 5,
+      "file": "class10-fraud-changing-basket-hi-05.mp3",
+      "source": "Aditi removes the optional pouch in the paper simulation. The mandatory charges remain because their terms have not changed. Vihaan checks that the total falls by the pouch price, without drawing unsupported legal conclusions.",
+      "text": "Paper exercise में अदिति optional bag हटाती है। ज़रूरी fees अभी भी हैं, क्योंकि उनकी conditions नहीं बदलीं। विहान check करता है कि total ठीक bag की price जितना कम हुआ। ये calculation बताती है कि price कैसे बदली। इससे किसी कानून के टूटने का claim verify नहीं होता।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 29,
+      "slug": "class10-fraud-changing-basket",
+      "scene": 6,
+      "file": "class10-fraud-changing-basket-hi-06.mp3",
+      "source": "The final displayed amount without the pouch is ₹780. Their price and consent record keeps the advertisement, quantity, mandatory fees and removed extra together. Later changes require another comparison before purchasing, even when the headline looks attractive.",
+      "text": "Bag हटाने पर total सात सौ अस्सी रुपये दिखता है। Price और consent वाले record में ad, quantity, ज़रूरी fees और हटाया गया extra item सब हैं। Basket बाद में बदले, तो practice purchase से पहले फिर compare करो। चमकदार headline देखकर चुपचाप accept मत करो।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 1,
+      "file": "class10-fraud-cashout-wall-hi-01.mp3",
+      "source": "A fictional trading-game screen enters the Decision Lab. Vihaan watches its balance climb while Aditi asks what the number represents. Nobody trades or connects accounts; the figure is supplied screen data.",
+      "text": "Decision Lab में एक नकली trading game की screen है। विहान बढ़ता balance देखता है। अदिति पूछती है, ये number असल में क्या बताता है? Class कोई trade नहीं करती, game join नहीं करती और accounts connect नहीं करती। ये screen सिर्फ़ evidence check करने का example है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 2,
+      "file": "class10-fraud-cashout-wall-hi-02.mp3",
+      "source": "Several testimonial cards repeat the same wording and picture arrangement. Aditi groups the copies rather than counting them as independent witnesses. These cards show screen content, without a separate provider record of received withdrawal.",
+      "text": "कई review cards पर वही words और वही तरह की photo है। अदिति उन्हें अलग-अलग independent witnesses नहीं गिनती। वो copies साथ रखती है। इनसे दिखता है कि game कैसे दिखाया गया है। किसी player को पैसा मिला, इसका अलग provider record इनमें नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 3,
+      "file": "class10-fraud-cashout-wall-hi-03.mp3",
+      "source": "The withdrawal panel now demands ₹600 before it will release the displayed balance. Vihaan records this as a new payment request, not a completed cash-out. Paying creates further exposure without proving receipt of the promised withdrawal.",
+      "text": "Cash-out panel कहता है कि balance निकालने से पहले छह सौ रुपये दो। विहान इसे नई payment request लिखता है। Withdrawal अभी हुआ ही नहीं। Fee देने से नया risk होगा। इससे payout मिलने का वादा verify नहीं होगा।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 4,
+      "file": "class10-fraud-cashout-wall-hi-04.mp3",
+      "source": "The learner pauses and asks which independent record would support receipt. A screenshot of the same game cannot fill the gap. Their teacher distinguishes interface appeal from evidence about funds, without any test payment.",
+      "text": "बच्चा रुककर पूछता है कि पैसा मिला, ये कौन-सा independent record दिखाएगा? उसी game का screenshot वो कमी पूरी नहीं करता। Teacher screen पर दिखते balance और पैसों के evidence का फर्क समझाते हैं। कोई test payment नहीं करता।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 5,
+      "file": "class10-fraud-cashout-wall-hi-05.mp3",
+      "source": "The supplied case contains no completed recipient-side provider entry for a withdrawal. Its confirmed received amount is therefore ₹0 within these records. Aditi separates the game balance, preventing display arithmetic becoming a claim of received income.",
+      "text": "Practice case में recipient के provider record में completed withdrawal नहीं है। इसलिए confirmed received amount शून्य रुपये है। अदिति game का बढ़ता balance अलग column में रखती है। Screen पर दिखे number को असली कमाई नहीं गिनते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 30,
+      "slug": "class10-fraud-cashout-wall",
+      "scene": 6,
+      "file": "class10-fraud-cashout-wall-hi-06.mp3",
+      "source": "Vihaan takes the claim-and-evidence note privately to a trusted adult. They retain the payment demand and relevant fictional references without publishing account details. No recovery is promised. The operator remains unidentified; support does not require solving every unknown.",
+      "text": "विहान claim और evidence note किसी भरोसे के बड़े को private में देता है। वो payment request और काम के practice references रखते हैं, account details public नहीं करते। पैसे वापस मिलने की guarantee नहीं है। Game कौन चला रहा है, ये पता चलने से पहले भी मदद ले सकते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 1,
+      "file": "class10-fraud-official-looking-call-hi-01.mp3",
+      "source": "A fictional call appears on the Decision Lab screen with an agency badge and formal language. The caller claims official authority over Aditi. Vihaan labels it a claim: the badge does not independently identify the caller.",
+      "text": "Decision Lab की practice screen पर call आती है। एक agency badge दिखता है और caller की भाषा बड़ी official है। वो अदिति पर authority होने का claim करता है। विहान इसे claim के तौर पर लिखता है। Badge देखकर caller की identity verify नहीं हो जाती।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 2,
+      "file": "class10-fraud-official-looking-call-hi-02.mp3",
+      "source": "The caller adds a countdown and demands an immediate transfer to settle a supposed case. Their teacher keeps the classroom example calm and non-graphic. Aditi may pause whenever needed; nobody must remain in an upsetting conversation.",
+      "text": "Caller countdown शुरू करता है। कहता है कि कथित case ख़त्म करना है तो अभी payment करो। Teacher class example को शांत रखते हैं। अदिति चाहे तो practice pause कर सकती है। परेशान करने वाली call पर बने रहकर किसी को अपनी हिम्मत साबित नहीं करनी।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 3,
+      "file": "class10-fraud-official-looking-call-hi-03.mp3",
+      "source": "The caller tells Aditi not to tell family or teachers and to remain visible on the call. Vihaan draws these instructions as arrows closing support routes. These coercive demands need not be obeyed before seeking help.",
+      "text": "Caller कहता है, family या teacher को मत बताओ और video call पर दिखती रहो। विहान देखता है कि ये instructions अदिति को मदद से दूर कर रहे हैं। मदद लेने के लिए caller की शर्तें मानने की ज़रूरत नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 4,
+      "file": "class10-fraud-official-looking-call-hi-04.mp3",
+      "source": "The learner ends the coercive call without transferring money or sharing a code. Aditi approaches the teacher through the ordinary classroom support route. They do not use the caller’s supplied number to verify that caller’s authority.",
+      "text": "बच्चा बिना पैसे या code दिए call काट देता है। अदिति अपने usual school help route से teacher के पास जाती है। Caller के दिए number पर वापस call करके उसी से उसकी identity verify नहीं करवाते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 5,
+      "file": "class10-fraud-official-looking-call-hi-05.mp3",
+      "source": "The teacher opens a separately verified official reporting route and helps describe the incident. The countdown disappears: the caller cannot control access to help. This follows official warnings about agency impersonation and video-call isolation.",
+      "text": "Teacher अलग से verified official reporting route खोलते हैं और incident बताने में मदद करते हैं। Caller का countdown ये तय नहीं करता कि कब मदद ले सकते हो। इस practice case में बच्चे agency का नाम लेकर डराने और video call पर अकेला रखने का दबाव रोक देते हैं।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 31,
+      "slug": "class10-fraud-official-looking-call",
+      "scene": 6,
+      "file": "class10-fraud-official-looking-call-hi-06.mp3",
+      "source": "Vihaan preserves the supplied caller identifier, message wording and transfer demand privately with adult help. Nobody reopens the coercive call to gather better evidence. Their plan records events and help sought; the verified support process addresses identity.",
+      "text": "विहान बड़े की मदद से call की पहचान वाली details, message के words और payment request private रखता है। Evidence लेने के लिए कोई फिर से दबाव वाली call नहीं खोलता। Plan में घटना और ली गई मदद लिखते हैं। Caller की identity verified process से ही तय होगी।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 1,
+      "file": "class10-fraud-help-without-fees-hi-01.mp3",
+      "source": "A Decision Lab incident card records exposed access and a disputed transfer. Aditi separates access protection from financial reporting. Vihaan tells the teacher promptly, without waiting to identify the sender.",
+      "text": "Decision Lab के practice card में किसी और को account access मिला और एक payment dispute में है। अदिति दो काम अलग रखती है। Account secure करना और financial incident report करना। Sender कौन है ये पता चलने से पहले ही विहान teacher से मदद लेता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 2,
+      "file": "class10-fraud-help-without-fees-hi-02.mp3",
+      "source": "A recovery seller then promises guaranteed repayment after a new fee and requests a login code. Their teacher names both requests without blame. The promise supplies no recovery evidence while creating further payment or account exposure.",
+      "text": "एक आदमी कहता है, नई fee और login code दो, मैं पैसे वापस दिलाने की guarantee देता हूँ। Teacher बच्चे को blame किए बिना दोनों requests समझाते हैं। वादा करना recovery का evidence नहीं है। नई payment या login code देने से और नुकसान हो सकता है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 3,
+      "file": "class10-fraud-help-without-fees-hi-03.mp3",
+      "source": "The supplied route cards identify known provider support and India’s official financial-fraud reporting through 1930 or cybercrime.gov.in. With a trusted adult, these help needs can be pursued promptly and independently. They practise with fictional cards, without accounts or real reports.",
+      "text": "Route cards में known provider support और भारत के official cyber fraud reporting routes हैं। Number है, एक, नौ, तीन, शून्य। Website है, साइबरक्राइम डॉट गव डॉट इन। किसी भरोसे के बड़े के साथ verified route से जल्दी मदद लो। Class में सिर्फ़ practice cards हैं। कोई असली account या complaint नहीं खोलते।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 4,
+      "file": "class10-fraud-help-without-fees-hi-04.mp3",
+      "source": "Aditi prepares the supplied transaction reference, amount, recorded time and a short description of what was disputed. She excludes passwords and unrelated family photographs. The adult supplies further necessary details privately through verified routes, without publishing account history.",
+      "text": "अदिति transaction reference, amount, record में दिया time और dispute की छोटी description तैयार करती है। Password और ग़ैरज़रूरी family photos छोड़ देती है। अगर और details चाहिए तो कोई भरोसे का बड़ा verified route पर private में देगा। पूरी account history public करने की ज़रूरत नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 5,
+      "file": "class10-fraud-help-without-fees-hi-05.mp3",
+      "source": "Vihaan places the access concern with the provider lane and the financial incident facts with the official reporting lane. Their private record keeps the routes and purposes separate. Seller contacts and search advertisements cannot replace independently verified destinations for sensitive facts.",
+      "text": "विहान account access वाली problem provider support को देता है। Financial incident के facts official reporting route पर जाते हैं। Private record में दोनों का purpose साफ़ है। Recovery बेचने वाले का contact या search ad sensitive details देने के लिए verified जगह नहीं है।",
+      "voice": "pari-regional"
+    },
+    {
+      "grade": 10,
+      "chapter": 32,
+      "slug": "class10-fraud-help-without-fees",
+      "scene": 6,
+      "file": "class10-fraud-help-without-fees-hi-06.mp3",
+      "source": "The simulation returns an acknowledgement for the handover. Aditi records the reference and requested follow-up with the adult. Reporting can support a response but does not guarantee recovery. Their plan preserves uncertainty while documenting prompt help and private facts.",
+      "text": "Simulation में report मिलने का acknowledgement आता है। अदिति बड़े के साथ reference और माँगा गया follow-up लिखती है। Report से response में मदद मिल सकती है। पैसे वापस मिलने की guarantee नहीं है। Plan में लिखो कि जल्दी क्या मदद ली, कौन-से facts private रखे और क्या अभी पता नहीं है।",
+      "voice": "pari-regional"
+    }
+  ],
+  "voices": {
+    "aj": {
+      "id": "aqmXMyzFLZkQDpFpf9Rg",
+      "name": "AJ - Hindi"
+    },
+    "pari-friend": {
+      "id": "06llJPvI62CjqSWOX9Gp",
+      "name": "Pari M - Relatable Hindi Friend"
+    },
+    "pari-regional": {
+      "id": "qvpwA9RPy9Ye4s4xjdrA",
+      "name": "Pari M – Regional Bank Support"
+    }
+  }
+}
